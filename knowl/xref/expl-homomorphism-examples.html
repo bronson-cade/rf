@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exploration project-like"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
+</h3>
+<div class="para">Determine whether the following functions are homomorphisms, monomorphisms, epimorphisms, isomorphisms, automorphisms, or none of these. Note that <span class="process-math">\(R\)</span> denotes an arbitrary ring and <span class="process-math">\(F\)</span> a field.</div> <ol class="decimal" id="expl-homomorphism-examples-1-2">
+<li><div class="para">
+<span class="process-math">\(\varphi\colon R\to R\)</span> defined by <span class="process-math">\(\varphi(x)=x\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\psi\colon R\to R\)</span> defined by <span class="process-math">\(\psi(x)=-x\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\alpha\colon \Z\to \Z\)</span> defined by <span class="process-math">\(\alpha(x)=5x\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(Fr\colon \Z_2[x]\to \Z_2[x]\)</span> defined by <span class="process-math">\(Fr(p) = p^2\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\iota\colon \mathbb{C}\to \mathbb{C}\)</span> defined by <span class="process-math">\(\iota(a+bi)=a-bi\text{,}\)</span> where <span class="process-math">\(a,b\in \R, i^2 = -1\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\beta\colon\Z\to \Z_{5}\)</span> defined by <span class="process-math">\(\beta(x) = \overline{x}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\epsilon_r\colon F[x] \to F\)</span> defined by <span class="process-math">\(\epsilon_r(p(x)) = p(r)\text{,}\)</span> where if <span class="process-math">\(p(x) = a_0 + a_1 x + \cdots + a_n x^n\text{,}\)</span> <span class="process-math">\(p(r)\)</span> is the expression obtained by “plugging <span class="process-math">\(r\)</span> into <span class="process-math">\(p\)</span>”: <span class="process-math">\(p(r) = a_0 + a_1 r + \cdots + a_n r^n\)</span> (this is known as the <span class="process-math">\(r\)</span>-evaluation map)</div></li>
+<li><div class="para">
+<span class="process-math">\(\xi\colon \Z_5 \to \Z_{10}\)</span> defined by <span class="process-math">\(\xi(\overline{x}) = \overline{5x}\)</span>
+</div></li>
+</ol>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="decimal" id="expl-homomorphism-examples-2-1">
+<li><div class="para">
+<span class="process-math">\(\varphi\colon R\to R\)</span> defined by <span class="process-math">\(\varphi(x)=x\)</span> is called the <dfn class="terminology">identity mapping</dfn>. We in particular have: <span class="process-math">\(\varphi(1_R) = 1_R\text{,}\)</span> <span class="process-math">\(\varphi(x+y) = x+y = \varphi(x)+\varphi(y)\text{,}\)</span> and <span class="process-math">\(\varphi(xy)=xy=\varphi(x)\varphi(y).\)</span> The identity mapping satisfies the criteria for being a ring homomorphism. It is an automorphism.</div></li>
+<li><div class="para">
+<span class="process-math">\(\psi\colon R\to R\)</span> defined by <span class="process-math">\(\psi(x)=-x\)</span> is the negation mapping. Although it is true that<div class="displaymath process-math">
+\begin{equation*}
+\psi(x+y) = -(x+y) = -x+(-y)=\psi(x)+\psi(y)
+\end{equation*}
+</div>it fails the other two properties of a ring homorphism in general (sometimes not though!). Namely, for a general ring <span class="process-math">\(1_R\neq -1_R\)</span> so that <span class="process-math">\(\psi(1_R) = -1_R\neq 1_R\)</span> and also <span class="process-math">\(\psi(xy) = -xy\)</span> but <span class="process-math">\(\psi(x)\psi(y) = (-x)(-y) = xy\text{.}\)</span> In general, <span class="process-math">\(xy\neq -xy\)</span> so <span class="process-math">\(\psi\)</span> is not compatible with multiplication or unity. However, sometimes <span class="process-math">\(-a = a\)</span> is true for every element of the ring, particularly Boolean rings. Examples include <span class="process-math">\(\Z/2, \Z/2[x]\text{.}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\alpha\colon \Z\to \Z\)</span> defined by <span class="process-math">\(\alpha(x)=5x\text{,}\)</span> or the multiplication by <span class="process-math">\(5\)</span> map. The map <span class="process-math">\(\alpha\)</span> does not preserve the unity nor does it preserve multiplication. Check! It is not a ring homomorphism.</div></li>
+<li><div class="para">
+<span class="process-math">\(Fr\colon \Z_2[x]\to \Z_2[x]\)</span> defined by <span class="process-math">\(Fr(p) = p^2\)</span> is sometimes called the Frobenius mapping. It is in fact a ring homomorphism in this case. For the unity and multiplicative compatibility we have <span class="process-math">\(Fr(1) = 1^2 = 1\)</span> and <span class="process-math">\(Fr(pq) = (pq)^2 = p^2q^2=Fr(p)Fr(q)\text{.}\)</span> For compatibility with addition we remind the reader that <span class="process-math">\(2\equiv_20\text{:}\)</span><div class="displaymath process-math">
+\begin{equation*}
+Fr(p+q) = (p+q)^2 = p^2+2pq+q^2 = p^2+q^2 = Fr(p)+Fr(q).
+\end{equation*}
+</div>It is not an automorphism; however, it is a homomorphism. Homomorphisms from a ring to itself are called <dfn class="terminology">endomorphisms</dfn>.</div></li>
+<li><div class="para">
+<span class="process-math">\(\iota\colon \mathbb{C}\to \mathbb{C}\)</span> defined by <span class="process-math">\(\iota(a+bi)=a-bi\text{,}\)</span> where <span class="process-math">\(a,b\in \R, i^2 = -1\)</span> TBD</div></li>
+<li><div class="para">
+<span class="process-math">\(\beta\colon\Z\to \Z_{5}\)</span> defined by <span class="process-math">\(\beta(x) = \overline{x}\)</span> TBD</div></li>
+<li><div class="para">
+<span class="process-math">\(\epsilon_r\colon F[x] \to F\)</span> defined by <span class="process-math">\(\epsilon_r(p(x)) = p(r)\text{,}\)</span> where if <span class="process-math">\(p(x) = a_0 + a_1 x + \cdots + a_n x^n\text{,}\)</span> <span class="process-math">\(p(r)\)</span> is the expression obtained by “plugging <span class="process-math">\(r\)</span> into <span class="process-math">\(p\)</span>”: <span class="process-math">\(p(r) = a_0 + a_1 r + \cdots + a_n r^n\)</span> (this is known as the <span class="process-math">\(r\)</span>-evaluation map) TBD</div></li>
+<li><div class="para">
+<span class="process-math">\(\xi\colon \Z_5 \to \Z_{10}\)</span> defined by <span class="process-math">\(\xi(\overline{x}) = \overline{5x}\)</span> TBD.</div></li>
+</ol></div></details></div></article><span class="incontext"><a class="internal" href="sec_homomorphisms.html#expl-homomorphism-examples">in-context</a></span>
+</body>
+</html>

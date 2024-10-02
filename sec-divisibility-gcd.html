@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Divisibility and GCDs in the Integers</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Rings First">
+<meta property="book:author" content="Bronson Lim">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#ssec_wellordering-8-1-3 { counter-set: ssec_wellordering-8-1-3 0; }
+#ssec_wellordering-8-1-3 > li::marker { content: ""counter(ssec_wellordering-8-1-3,decimal)"."; }
+#ssec_wellordering-8-1-3 > li { counter-increment: ssec_wellordering-8-1-3; }
+#ssec_wellordering-8-2-1 { counter-set: ssec_wellordering-8-2-1 0; }
+#ssec_wellordering-8-2-1 > li::marker { content: ""counter(ssec_wellordering-8-2-1,decimal)"."; }
+#ssec_wellordering-8-2-1 > li { counter-increment: ssec_wellordering-8-2-1; }
+#thm_mathematical_induction-2-3 { counter-set: thm_mathematical_induction-2-3 0; }
+#thm_mathematical_induction-2-3 > li::marker { content: ""counter(thm_mathematical_induction-2-3,decimal)"."; }
+#thm_mathematical_induction-2-3 > li { counter-increment: thm_mathematical_induction-2-3; }
+#sec-induction-tf-1-2 { counter-set: sec-induction-tf-1-2 0; }
+#sec-induction-tf-1-2 > li::marker { content: "("counter(sec-induction-tf-1-2,lower-alpha)")"; }
+#sec-induction-tf-1-2 > li { counter-increment: sec-induction-tf-1-2; }
+#sec-induction-smallest-elements1-1-2 { counter-set: sec-induction-smallest-elements1-1-2 0; }
+#sec-induction-smallest-elements1-1-2 > li::marker { content: "("counter(sec-induction-smallest-elements1-1-2,lower-alpha)")"; }
+#sec-induction-smallest-elements1-1-2 > li { counter-increment: sec-induction-smallest-elements1-1-2; }
+#sec-induction-smallest-elements2-1-2 { counter-set: sec-induction-smallest-elements2-1-2 0; }
+#sec-induction-smallest-elements2-1-2 > li::marker { content: "("counter(sec-induction-smallest-elements2-1-2,lower-alpha)")"; }
+#sec-induction-smallest-elements2-1-2 > li { counter-increment: sec-induction-smallest-elements2-1-2; }
+#sec-divisibility-gcd-3-5-1-1-2 { counter-set: sec-divisibility-gcd-3-5-1-1-2 0; }
+#sec-divisibility-gcd-3-5-1-1-2 > li::marker { content: ""counter(sec-divisibility-gcd-3-5-1-1-2,decimal)"."; }
+#sec-divisibility-gcd-3-5-1-1-2 > li { counter-increment: sec-divisibility-gcd-3-5-1-1-2; }
+#gcd-definition-2-1-9 { counter-set: gcd-definition-2-1-9 0; }
+#gcd-definition-2-1-9 > li::marker { content: ""counter(gcd-definition-2-1-9,decimal)"."; }
+#gcd-definition-2-1-9 > li { counter-increment: gcd-definition-2-1-9; }
+#act-gcdcomputations-1-1-2 { counter-set: act-gcdcomputations-1-1-2 0; }
+#act-gcdcomputations-1-1-2 > li::marker { content: ""counter(act-gcdcomputations-1-1-2,decimal)"."; }
+#act-gcdcomputations-1-1-2 > li { counter-increment: act-gcdcomputations-1-1-2; }
+#sec-divisibility-gcd-tf-1-2 { counter-set: sec-divisibility-gcd-tf-1-2 0; }
+#sec-divisibility-gcd-tf-1-2 > li::marker { content: "("counter(sec-divisibility-gcd-tf-1-2,lower-alpha)")"; }
+#sec-divisibility-gcd-tf-1-2 > li { counter-increment: sec-divisibility-gcd-tf-1-2; }
+#sec-divisibility-gcd-quorem-1-2 { counter-set: sec-divisibility-gcd-quorem-1-2 0; }
+#sec-divisibility-gcd-quorem-1-2 > li::marker { content: "("counter(sec-divisibility-gcd-quorem-1-2,lower-alpha)")"; }
+#sec-divisibility-gcd-quorem-1-2 > li { counter-increment: sec-divisibility-gcd-quorem-1-2; }
+#sec-primes-factorization-tf-1-2 { counter-set: sec-primes-factorization-tf-1-2 0; }
+#sec-primes-factorization-tf-1-2 > li::marker { content: "("counter(sec-primes-factorization-tf-1-2,lower-alpha)")"; }
+#sec-primes-factorization-tf-1-2 > li { counter-increment: sec-primes-factorization-tf-1-2; }
+#exer-primes-factorization-factorizations-1-2 { counter-set: exer-primes-factorization-factorizations-1-2 0; }
+#exer-primes-factorization-factorizations-1-2 > li::marker { content: "("counter(exer-primes-factorization-factorizations-1-2,lower-alpha)")"; }
+#exer-primes-factorization-factorizations-1-2 > li { counter-increment: exer-primes-factorization-factorizations-1-2; }
+#exer-primes-factorization-isprime-1-1-1 { counter-set: exer-primes-factorization-isprime-1-1-1 0; }
+#exer-primes-factorization-isprime-1-1-1 > li::marker { content: "("counter(exer-primes-factorization-isprime-1-1-1,lower-alpha)")"; }
+#exer-primes-factorization-isprime-1-1-1 > li { counter-increment: exer-primes-factorization-isprime-1-1-1; }
+#sec-integers-modulo-m-13-1-1-1 { counter-set: sec-integers-modulo-m-13-1-1-1 0; }
+#sec-integers-modulo-m-13-1-1-1 > li::marker { content: ""counter(sec-integers-modulo-m-13-1-1-1,decimal)"."; }
+#sec-integers-modulo-m-13-1-1-1 > li { counter-increment: sec-integers-modulo-m-13-1-1-1; }
+#def-arithemticmodm-1-1-3 { counter-set: def-arithemticmodm-1-1-3 0; }
+#def-arithemticmodm-1-1-3 > li::marker { content: ""counter(def-arithemticmodm-1-1-3,decimal)"."; }
+#def-arithemticmodm-1-1-3 > li { counter-increment: def-arithemticmodm-1-1-3; }
+#sec-integers-modulo-m-24-1-2 { counter-set: sec-integers-modulo-m-24-1-2 0; }
+#sec-integers-modulo-m-24-1-2 > li::marker { content: ""counter(sec-integers-modulo-m-24-1-2,decimal)"."; }
+#sec-integers-modulo-m-24-1-2 > li { counter-increment: sec-integers-modulo-m-24-1-2; }
+#theorem_cancelinZp-1-1-4 { counter-set: theorem_cancelinZp-1-1-4 0; }
+#theorem_cancelinZp-1-1-4 > li::marker { content: ""counter(theorem_cancelinZp-1-1-4,decimal)"."; }
+#theorem_cancelinZp-1-1-4 > li { counter-increment: theorem_cancelinZp-1-1-4; }
+#integers-mod-m-tf-1-2 { counter-set: integers-mod-m-tf-1-2 0; }
+#integers-mod-m-tf-1-2 > li::marker { content: "("counter(integers-mod-m-tf-1-2,lower-alpha)")"; }
+#integers-mod-m-tf-1-2 > li { counter-increment: integers-mod-m-tf-1-2; }
+#exers-integers-mod-m-4-1-2 { counter-set: exers-integers-mod-m-4-1-2 0; }
+#exers-integers-mod-m-4-1-2 > li::marker { content: "("counter(exers-integers-mod-m-4-1-2,lower-alpha)")"; }
+#exers-integers-mod-m-4-1-2 > li { counter-increment: exers-integers-mod-m-4-1-2; }
+#invest-binop-1-1-2 { counter-set: invest-binop-1-1-2 0; }
+#invest-binop-1-1-2 > li::marker { content: ""counter(invest-binop-1-1-2,decimal)"."; }
+#invest-binop-1-1-2 > li { counter-increment: invest-binop-1-1-2; }
+#def_field-2-1-7 { counter-set: def_field-2-1-7 0; }
+#def_field-2-1-7 > li::marker { content: ""counter(def_field-2-1-7,decimal)"."; }
+#def_field-2-1-7 > li { counter-increment: def_field-2-1-7; }
+#exer_fieldexamples-1-1-1 { counter-set: exer_fieldexamples-1-1-1 0; }
+#exer_fieldexamples-1-1-1 > li::marker { content: ""counter(exer_fieldexamples-1-1-1,decimal)"."; }
+#exer_fieldexamples-1-1-1 > li { counter-increment: exer_fieldexamples-1-1-1; }
+#exer_fieldexamples-2-1-1 { counter-set: exer_fieldexamples-2-1-1 0; }
+#exer_fieldexamples-2-1-1 > li::marker { content: ""counter(exer_fieldexamples-2-1-1,decimal)"."; }
+#exer_fieldexamples-2-1-1 > li { counter-increment: exer_fieldexamples-2-1-1; }
+#thm_fieldproperties-2-1-2 { counter-set: thm_fieldproperties-2-1-2 0; }
+#thm_fieldproperties-2-1-2 > li::marker { content: ""counter(thm_fieldproperties-2-1-2,decimal)"."; }
+#thm_fieldproperties-2-1-2 > li { counter-increment: thm_fieldproperties-2-1-2; }
+#subsec-propertiesOfFields-3-1 { counter-set: subsec-propertiesOfFields-3-1 0; }
+#subsec-propertiesOfFields-3-1 > li::marker { content: ""counter(subsec-propertiesOfFields-3-1,decimal)"."; }
+#subsec-propertiesOfFields-3-1 > li { counter-increment: subsec-propertiesOfFields-3-1; }
+#subsec-subfieldsAndExtensions-3-3-1-3 { counter-set: subsec-subfieldsAndExtensions-3-3-1-3 0; }
+#subsec-subfieldsAndExtensions-3-3-1-3 > li::marker { content: ""counter(subsec-subfieldsAndExtensions-3-3-1-3,decimal)"."; }
+#subsec-subfieldsAndExtensions-3-3-1-3 > li { counter-increment: subsec-subfieldsAndExtensions-3-3-1-3; }
+#def_ring-3-1-6 { counter-set: def_ring-3-1-6 0; }
+#def_ring-3-1-6 > li::marker { content: ""counter(def_ring-3-1-6,decimal)"."; }
+#def_ring-3-1-6 > li { counter-increment: def_ring-3-1-6; }
+#thm_subringTest-2-1-5 { counter-set: thm_subringTest-2-1-5 0; }
+#thm_subringTest-2-1-5 > li::marker { content: ""counter(thm_subringTest-2-1-5,decimal)"."; }
+#thm_subringTest-2-1-5 > li { counter-increment: thm_subringTest-2-1-5; }
+#sec_rings-24-1-1-3 { counter-set: sec_rings-24-1-1-3 0; }
+#sec_rings-24-1-1-3 > li::marker { content: ""counter(sec_rings-24-1-1-3,decimal)"."; }
+#sec_rings-24-1-1-3 > li { counter-increment: sec_rings-24-1-1-3; }
+#invest-tables-1-2 { counter-set: invest-tables-1-2 0; }
+#invest-tables-1-2 > li::marker { content: ""counter(invest-tables-1-2,decimal)"."; }
+#invest-tables-1-2 > li { counter-increment: invest-tables-1-2; }
+#sec_rings-48-1-1-1 { counter-set: sec_rings-48-1-1-1 0; }
+#sec_rings-48-1-1-1 > li::marker { content: ""counter(sec_rings-48-1-1-1,decimal)"."; }
+#sec_rings-48-1-1-1 > li { counter-increment: sec_rings-48-1-1-1; }
+#sec_divisibilityIntegralDomains-7-1-2 { counter-set: sec_divisibilityIntegralDomains-7-1-2 0; }
+#sec_divisibilityIntegralDomains-7-1-2 > li::marker { content: ""counter(sec_divisibilityIntegralDomains-7-1-2,decimal)"."; }
+#sec_divisibilityIntegralDomains-7-1-2 > li { counter-increment: sec_divisibilityIntegralDomains-7-1-2; }
+#expl-unit-prime-irred-1-2 { counter-set: expl-unit-prime-irred-1-2 0; }
+#expl-unit-prime-irred-1-2 > li::marker { content: ""counter(expl-unit-prime-irred-1-2,decimal)"."; }
+#expl-unit-prime-irred-1-2 > li { counter-increment: expl-unit-prime-irred-1-2; }
+#def-gcd-domain-2-1-7 { counter-set: def-gcd-domain-2-1-7 0; }
+#def-gcd-domain-2-1-7 > li::marker { content: ""counter(def-gcd-domain-2-1-7,decimal)"."; }
+#def-gcd-domain-2-1-7 > li { counter-increment: def-gcd-domain-2-1-7; }
+#def-ideal-1-1-4 { counter-set: def-ideal-1-1-4 0; }
+#def-ideal-1-1-4 > li::marker { content: ""counter(def-ideal-1-1-4,decimal)"."; }
+#def-ideal-1-1-4 > li { counter-increment: def-ideal-1-1-4; }
+#sec_principalIdealsEuclideanDomains-22-1-1-2 { counter-set: sec_principalIdealsEuclideanDomains-22-1-1-2 0; }
+#sec_principalIdealsEuclideanDomains-22-1-1-2 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-22-1-1-2,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-22-1-1-2 > li { counter-increment: sec_principalIdealsEuclideanDomains-22-1-1-2; }
+#sec_principalIdealsEuclideanDomains-22-2-1 { counter-set: sec_principalIdealsEuclideanDomains-22-2-1 0; }
+#sec_principalIdealsEuclideanDomains-22-2-1 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-22-2-1,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-22-2-1 > li { counter-increment: sec_principalIdealsEuclideanDomains-22-2-1; }
+#sec_principalIdealsEuclideanDomains-27-1-1-3 { counter-set: sec_principalIdealsEuclideanDomains-27-1-1-3 0; }
+#sec_principalIdealsEuclideanDomains-27-1-1-3 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-27-1-1-3,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-27-1-1-3 > li { counter-increment: sec_principalIdealsEuclideanDomains-27-1-1-3; }
+#sec_principalIdealsEuclideanDomains-27-2-1-1 { counter-set: sec_principalIdealsEuclideanDomains-27-2-1-1 0; }
+#sec_principalIdealsEuclideanDomains-27-2-1-1 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-27-2-1-1,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-27-2-1-1 > li { counter-increment: sec_principalIdealsEuclideanDomains-27-2-1-1; }
+#sec_principalIdealsEuclideanDomains-28-1-1-4 { counter-set: sec_principalIdealsEuclideanDomains-28-1-1-4 0; }
+#sec_principalIdealsEuclideanDomains-28-1-1-4 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-28-1-1-4,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-28-1-1-4 > li { counter-increment: sec_principalIdealsEuclideanDomains-28-1-1-4; }
+#sec_principalIdealsEuclideanDomains-32-1-1-6 { counter-set: sec_principalIdealsEuclideanDomains-32-1-1-6 0; }
+#sec_principalIdealsEuclideanDomains-32-1-1-6 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-32-1-1-6,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-32-1-1-6 > li { counter-increment: sec_principalIdealsEuclideanDomains-32-1-1-6; }
+#sec_factoringPolynomials-24-1-2 { counter-set: sec_factoringPolynomials-24-1-2 0; }
+#sec_factoringPolynomials-24-1-2 > li::marker { content: ""counter(sec_factoringPolynomials-24-1-2,decimal)"."; }
+#sec_factoringPolynomials-24-1-2 > li { counter-increment: sec_factoringPolynomials-24-1-2; }
+#sec_factoringPolynomials-24-1-2-1-2 { counter-set: sec_factoringPolynomials-24-1-2-1-2 0; }
+#sec_factoringPolynomials-24-1-2-1-2 > li::marker { content: "("counter(sec_factoringPolynomials-24-1-2-1-2,lower-alpha)")"; }
+#sec_factoringPolynomials-24-1-2-1-2 > li { counter-increment: sec_factoringPolynomials-24-1-2-1-2; }
+#sec_factoringPolynomials-24-1-2-2-2 { counter-set: sec_factoringPolynomials-24-1-2-2-2 0; }
+#sec_factoringPolynomials-24-1-2-2-2 > li::marker { content: "("counter(sec_factoringPolynomials-24-1-2-2-2,lower-alpha)")"; }
+#sec_factoringPolynomials-24-1-2-2-2 > li { counter-increment: sec_factoringPolynomials-24-1-2-2-2; }
+#def-ufd-2-1-4 { counter-set: def-ufd-2-1-4 0; }
+#def-ufd-2-1-4 > li::marker { content: ""counter(def-ufd-2-1-4,decimal)"."; }
+#def-ufd-2-1-4 > li { counter-increment: def-ufd-2-1-4; }
+#sec_nonuniqueFactorization-6-2-3 { counter-set: sec_nonuniqueFactorization-6-2-3 0; }
+#sec_nonuniqueFactorization-6-2-3 > li::marker { content: ""counter(sec_nonuniqueFactorization-6-2-3,decimal)"."; }
+#sec_nonuniqueFactorization-6-2-3 > li { counter-increment: sec_nonuniqueFactorization-6-2-3; }
+#thm_idealgeneratingset-1-1-4 { counter-set: thm_idealgeneratingset-1-1-4 0; }
+#thm_idealgeneratingset-1-1-4 > li::marker { content: ""counter(thm_idealgeneratingset-1-1-4,decimal)"."; }
+#thm_idealgeneratingset-1-1-4 > li { counter-increment: thm_idealgeneratingset-1-1-4; }
+#expl-homomorphism-examples-1-2 { counter-set: expl-homomorphism-examples-1-2 0; }
+#expl-homomorphism-examples-1-2 > li::marker { content: ""counter(expl-homomorphism-examples-1-2,decimal)"."; }
+#expl-homomorphism-examples-1-2 > li { counter-increment: expl-homomorphism-examples-1-2; }
+#expl-homomorphism-examples-2-1 { counter-set: expl-homomorphism-examples-2-1 0; }
+#expl-homomorphism-examples-2-1 > li::marker { content: ""counter(expl-homomorphism-examples-2-1,decimal)"."; }
+#expl-homomorphism-examples-2-1 > li { counter-increment: expl-homomorphism-examples-2-1; }
+#sec-homomorphisms-tf-1-2 { counter-set: sec-homomorphisms-tf-1-2 0; }
+#sec-homomorphisms-tf-1-2 > li::marker { content: "("counter(sec-homomorphisms-tf-1-2,lower-alpha)")"; }
+#sec-homomorphisms-tf-1-2 > li { counter-increment: sec-homomorphisms-tf-1-2; }
+#sec_quotientRings-4-4-1-2 { counter-set: sec_quotientRings-4-4-1-2 0; }
+#sec_quotientRings-4-4-1-2 > li::marker { content: ""counter(sec_quotientRings-4-4-1-2,decimal)"."; }
+#sec_quotientRings-4-4-1-2 > li { counter-increment: sec_quotientRings-4-4-1-2; }
+#sec_quotientRings-4-15-1-2 { counter-set: sec_quotientRings-4-15-1-2 0; }
+#sec_quotientRings-4-15-1-2 > li::marker { content: ""counter(sec_quotientRings-4-15-1-2,decimal)"."; }
+#sec_quotientRings-4-15-1-2 > li { counter-increment: sec_quotientRings-4-15-1-2; }
+#sec_quotientRings-4-17-1-2 { counter-set: sec_quotientRings-4-17-1-2 0; }
+#sec_quotientRings-4-17-1-2 > li::marker { content: ""counter(sec_quotientRings-4-17-1-2,decimal)"."; }
+#sec_quotientRings-4-17-1-2 > li { counter-increment: sec_quotientRings-4-17-1-2; }
+#sec_quotientRings-4-18-3-3 { counter-set: sec_quotientRings-4-18-3-3 0; }
+#sec_quotientRings-4-18-3-3 > li::marker { content: ""counter(sec_quotientRings-4-18-3-3,decimal)"."; }
+#sec_quotientRings-4-18-3-3 > li { counter-increment: sec_quotientRings-4-18-3-3; }
+#subsec-prime-maximal-ideal-5-1-1-1 { counter-set: subsec-prime-maximal-ideal-5-1-1-1 0; }
+#subsec-prime-maximal-ideal-5-1-1-1 > li::marker { content: ""counter(subsec-prime-maximal-ideal-5-1-1-1,decimal)"."; }
+#subsec-prime-maximal-ideal-5-1-1-1 > li { counter-increment: subsec-prime-maximal-ideal-5-1-1-1; }
+#subsec-prime-maximal-ideal-5-2-1-1 { counter-set: subsec-prime-maximal-ideal-5-2-1-1 0; }
+#subsec-prime-maximal-ideal-5-2-1-1 > li::marker { content: ""counter(subsec-prime-maximal-ideal-5-2-1-1,decimal)"."; }
+#subsec-prime-maximal-ideal-5-2-1-1 > li { counter-increment: subsec-prime-maximal-ideal-5-2-1-1; }
+#sec_quotientRings-6-19-1-1-1 { counter-set: sec_quotientRings-6-19-1-1-1 0; }
+#sec_quotientRings-6-19-1-1-1 > li::marker { content: ""counter(sec_quotientRings-6-19-1-1-1,decimal)"."; }
+#sec_quotientRings-6-19-1-1-1 > li { counter-increment: sec_quotientRings-6-19-1-1-1; }
+#sec_quotientRings-6-21-1-2 { counter-set: sec_quotientRings-6-21-1-2 0; }
+#sec_quotientRings-6-21-1-2 > li::marker { content: ""counter(sec_quotientRings-6-21-1-2,decimal)"."; }
+#sec_quotientRings-6-21-1-2 > li { counter-increment: sec_quotientRings-6-21-1-2; }
+</style>
+</head>
+<body id="ringsFirst" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Rings First:</span> <span class="subtitle">An Introduction to Abstract Algebra</span></a></h1>
+<p class="byline">Bronson Lim</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-induction-wellordering.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch1-integers.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-primes-factorization.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch1-integers.html" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-induction-wellordering.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Induction and the Well-Ordering Property</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-induction-wellordering.html#ssec_wellordering" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Well-Ordering Principle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-induction-wellordering.html#ssec_induction" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Principle of Mathematical Induction</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-induction-wellordering.html#sec-induction-wellordering-7" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec-divisibility-gcd.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Divisibility and GCDs in the Integers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-divisibility-gcd.html#sec-divisibility-gcd-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Divisibility and the Division Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-divisibility-gcd.html#sec-divisibility-gcd-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Greatest Common Divisors</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-divisibility-gcd.html#sec-divisibility-gcd-exercises" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-primes-factorization.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Primes and Factorization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-primes-factorization.html#exers-primes-factorization" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="sec-primes-factorization.html#sec-primes-factorization-23" class="internal"><span class="codenumber">1.3</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-integers-modulo-m.html" class="internal"><span class="codenumber">1.4</span> <span class="title">The Integers modulo <span class="process-math">\(m\)</span></span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-integers-modulo-m.html#exers-integers-mod-m" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch2-ringsAndFields.html" class="internal"><span class="codenumber">2</span> <span class="title">Rings and Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_fields.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-numberSystems" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Number Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-binaryOperations" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Binary Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-fields" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-propertiesOfFields" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Properties of Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-subfieldsAndExtensions" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Subfields and Extensions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_rings.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Rings</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_rings.html#sec_rings-63" class="internal"><span class="codenumber">2.2</span> <span class="title">References</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_divisibilityIntegralDomains.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Divisibility in Integral Domains</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_principalIdealsEuclideanDomains.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Principal Ideals and Euclidean Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch3-factorization.html" class="internal"><span class="codenumber">3</span> <span class="title">Factorization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_factoringPolynomials.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Factoring Polynomials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Factorization in Euclidean Domains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-4" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Unique Factorization Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-5" class="internal"><span class="codenumber">3.2.2</span> <span class="title">The Ascending Chain Condition and Noetherian Rings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-6" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Euclidean Domains are UFDs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_nonuniqueFactorization.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Principal Ideals and Euclidean Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch4-idealsAndHomomorphisms.html" class="internal"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_ideals.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Ideals</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_ideals.html#sec_ideals-32" class="internal"><span class="codenumber">4.1</span> <span class="title">References</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_homomorphisms.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Homomorphisms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_homomorphisms.html#exers-homomorphisms" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_quotientRings.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Quotient Rings</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#sec_quotientRings-4" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Congruence modulo <span class="process-math">\(I\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#subsec-prime-maximal-ideal" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Prime and Maximal Ideals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#sec_quotientRings-6" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Homomorphisms and Quotient Rings</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-divisibility-gcd"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Divisibility and GCDs in the Integers</span>
+</h2>
+<article class="objectives goal-like" id="obj_divisibility-gcd"><h3 class="heading">
+<span class="type">Objectives:</span><span class="space"> </span><span class="title">Guiding Questions</span>
+</h3>
+<div class="introduction" id="obj_divisibility-gcd-2"><div class="para" id="obj_divisibility-gcd-2-1">In this section, we’ll seek to answer the questions:</div></div>
+<ul class="disc" id="obj_divisibility-gcd-3">
+<li id="obj_divisibility-gcd-3-1"><div class="para" id="p-derived-obj_divisibility-gcd-3-1">What does it mean for one integer to divide another?</div></li>
+<li id="obj_divisibility-gcd-3-2"><div class="para" id="p-derived-obj_divisibility-gcd-3-2">What properties does divisibility enjoy in the integers?</div></li>
+<li id="obj_divisibility-gcd-3-3"><div class="para" id="p-derived-obj_divisibility-gcd-3-3">What is the greatest common divisor of two integers?</div></li>
+<li id="obj_divisibility-gcd-3-4"><div class="para" id="p-derived-obj_divisibility-gcd-3-4">How can we compute the greatest common divisor of two integers?</div></li>
+</ul></article><section class="subsection" id="sec-divisibility-gcd-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="space"> </span><span class="title">Divisibility and the Division Algorithm</span>
+</h3>
+<div class="para" id="sec-divisibility-gcd-3-2">In this section, we begin to explore some of the arithmetic and algebraic properties of <span class="process-math">\(\Z\text{.}\)</span> We focus specifically on the divisibility and factorization properties of the integers, as these are the main focus of the text as a whole. One of the primary goals of this section is to formalize definitions that you are likely already familiar with and of which you have an intuitive understanding. At first, this might seem to unnecessarily complicate matters. However, it will become clear as we move forward that formal mathematical language and notation are necessary to extend these properties to a more abstract setting. We begin with a familiar notion.</div>
+<article class="definition definition-like" id="sec-divisibility-gcd-3-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
+</h4> <div class="para" id="sec-divisibility-gcd-3-3-1-3">Let <span class="process-math">\(a,b\in \Z\text{.}\)</span> We say that <span class="process-math">\(a\)</span> <dfn class="terminology">divides</dfn> <span class="process-math">\(b\text{,}\)</span> and write <span class="process-math">\(a\mid b\text{,}\)</span> if there is an integer <span class="process-math">\(c\)</span> such that <span class="process-math">\(ac = b\text{.}\)</span> In this case, say that <span class="process-math">\(a\)</span> and <span class="process-math">\(c\)</span> are <dfn class="terminology">factors</dfn> of <span class="process-math">\(b\text{.}\)</span> If no such <span class="process-math">\(c\in \Z\)</span> exists, we write <span class="process-math">\(a\nmid b\text{.}\)</span>
+</div></article><div class="para" id="sec-divisibility-gcd-3-4">Note that the symbol <span class="process-math">\(|\)</span> is a <em class="emphasis">verb</em>; it is therefore correct to say, e.g., <span class="process-math">\(2|4\text{,}\)</span> as 2 <em class="emphasis">does</em> divide 4. However, it is an abuse of notation to say that <span class="process-math">\(2\mid 4 = 2\text{.}\)</span> Instead, we likely mean <span class="process-math">\(4\div 2 = 2\)</span> or <span class="process-math">\(\frac{4}{2} = 2\)</span> (though we will not deal in fractions just yet).</div>
+<article class="investigation project-like" id="sec-divisibility-gcd-3-5"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="sec-divisibility-gcd-3-5-1-1">
+<div class="para">Determine whether <span class="process-math">\(a\mid b\)</span> if:</div>
+<ol class="decimal" id="sec-divisibility-gcd-3-5-1-1-2">
+<li id="sec-divisibility-gcd-3-5-1-1-2-1"><div class="para" id="sec-divisibility-gcd-3-5-1-1-2-1-1">
+<span class="process-math">\(a = 3\text{,}\)</span> <span class="process-math">\(b = -15\)</span>
+</div></li>
+<li id="sec-divisibility-gcd-3-5-1-1-2-2"><div class="para" id="sec-divisibility-gcd-3-5-1-1-2-2-1">
+<span class="process-math">\(a = 4\text{,}\)</span> <span class="process-math">\(b = 18\)</span>
+</div></li>
+<li id="sec-divisibility-gcd-3-5-1-1-2-3"><div class="para" id="sec-divisibility-gcd-3-5-1-1-2-3-1">
+<span class="process-math">\(a = -7\text{,}\)</span> <span class="process-math">\(b = 0\)</span>
+</div></li>
+<li id="sec-divisibility-gcd-3-5-1-1-2-4"><div class="para" id="sec-divisibility-gcd-3-5-1-1-2-4-1">
+<span class="process-math">\(a = 0\text{,}\)</span> <span class="process-math">\(b = 0\)</span>
+</div></li>
+</ol>
+<div class="para">Comment briefly on the results of this investigation. What did you notice? What do you still wonder?</div>
+</div>
+<div class="solutions"><details id="sec-divisibility-gcd-3-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-divisibility-gcd-3-5-2-1">TBD.</div></div></details></div></article><div class="para" id="sec-divisibility-gcd-3-6">We next collect several standard results about divisibility in <span class="process-math">\(\Z\)</span> which will be used extensively in the remainder of this text.</div>
+<article class="theorem theorem-like" id="sec-divisibility-gcd-3-7"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
+</h4>
+<div class="para" id="sec-divisibility-gcd-3-7-1-1">Let <span class="process-math">\(a,b,c\in\Z\text{.}\)</span> If <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(a\mid c\text{,}\)</span> then <span class="process-math">\(a\mid (b+c)\text{.}\)</span>
+</div></article><details id="sec-divisibility-gcd-3-7-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="sec-divisibility-gcd-3-7-2-1">Our hypothesis means that there exist integers <span class="process-math">\(k_1\)</span> and <span class="process-math">\(k_2\)</span> such that <span class="process-math">\(b = a k_1\)</span> and <span class="process-math">\(c = a k_2\text{.}\)</span> Then <span class="process-math">\(b+c = a k_1 + a k_2 = a(k_1 + k_2)\text{.}\)</span> Let <span class="process-math">\(k' = k_1 + k_2\text{,}\)</span> and observe that <span class="process-math">\(k'\)</span> is an integer; then <span class="process-math">\(b+c = a k'\text{,}\)</span> so <span class="process-math">\(a\mid (b+c)\text{.}\)</span>
+</div></article></details><article class="theorem theorem-like" id="thm-divideproduct"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
+</h4>
+<div class="para" id="thm-divideproduct-1-1">Let <span class="process-math">\(a,b,c\in\Z\text{.}\)</span> If <span class="process-math">\(a\mid b\text{,}\)</span> then <span class="process-math">\(a\mid bc\text{.}\)</span>
+</div></article><details id="thm-divideproduct-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-divideproduct-2-1">Our hypotheses means there is an integer <span class="process-math">\(k\)</span> for which <span class="process-math">\(b = ak\text{.}\)</span> Then <span class="process-math">\(bc = (ak)c = a(kc)\text{.}\)</span> We observe that <span class="process-math">\(k' = kc\)</span> is an integer, so <span class="process-math">\(bc = ak'\text{,}\)</span> and therefore <span class="process-math">\(a\mid bc\text{.}\)</span>
+</div></article></details><article class="investigation project-like" id="invest-divideproduct"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
+</h4>
+<div class="para" id="invest-divideproduct-1-1">Consider the following partial converse to <a href="sec-divisibility-gcd.html#thm-divideproduct" class="xref" data-knowl="./knowl/xref/thm-divideproduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.2.3">Theorem 1.2.3</a>: If <span class="process-math">\(a,b,c\in\Z\)</span> with <span class="process-math">\(a|bc\text{,}\)</span> must <span class="process-math">\(a|b\)</span> or <span class="process-math">\(a|c\text{?}\)</span> Supply a proof or give a counterexample.</div>
+<div class="solutions"><details id="invest-divideproduct-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="invest-divideproduct-2-1">The converse is false: <span class="process-math">\(6| 3\cdot 4\text{,}\)</span> but <span class="process-math">\(6\nmid 3\)</span> and <span class="process-math">\(6\nmid 4\text{.}\)</span>
+</div></div></details></div></article><article class="theorem theorem-like" id="theorem_23lemmageneralization"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
+</h4>
+<div class="para" id="theorem_23lemmageneralization-1-1">Let <span class="process-math">\(a,b,c,d\in \Z\text{.}\)</span> If <span class="process-math">\(a = b+c\)</span> and <span class="process-math">\(d\)</span> divides any two of <span class="process-math">\(a,b,c\text{,}\)</span> then <span class="process-math">\(d\)</span> divides the third.</div></article><details id="theorem_23lemmageneralization-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="theorem_23lemmageneralization-2-1">We consider two cases.</div> <div class="para" id="theorem_23lemmageneralization-2-2">
+<em class="emphasis">Case 1:</em> Assume without loss of generality that <span class="process-math">\(d|a\)</span> and <span class="process-math">\(d|b\text{.}\)</span> Then there are integers <span class="process-math">\(k_1, k_2\)</span> such that <span class="process-math">\(d k_1 = a\)</span> and <span class="process-math">\(d k_2 = b\text{.}\)</span> We observe that <span class="process-math">\(c = a - b = d k_1 - d k_2 = d(k_1 - k_2)\text{,}\)</span> so <span class="process-math">\(d|c\text{.}\)</span>
+</div> <div class="para" id="theorem_23lemmageneralization-2-3">
+<em class="emphasis">Case 2:</em> Assume that <span class="process-math">\(d| b\)</span> and <span class="process-math">\(d|c\text{,}\)</span> so there are <span class="process-math">\(k_1,k_2\in \Z\)</span> such that <span class="process-math">\(d k_1 = b\)</span> and <span class="process-math">\(d k_2 = c\text{.}\)</span> Then <span class="process-math">\(a = b+ c = dk_1 + dk_2 = d(k_1 + k_2)\text{,}\)</span> so <span class="process-math">\(d|a\text{.}\)</span>
+</div></article></details><article class="investigation project-like" id="sec-divisibility-gcd-3-11"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
+</h4>
+<div class="para" id="sec-divisibility-gcd-3-11-1-1">Formulate a conjecture akin to the previous theorems about divisibility in <span class="process-math">\(\Z\text{,}\)</span> and then prove it.</div>
+<div class="solutions"><details id="sec-divisibility-gcd-3-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-divisibility-gcd-3-11-2-1">Answers vary.</div></div></details></div></article><div class="para" id="sec-divisibility-gcd-3-12">As we saw above, not all pairs of integers <span class="process-math">\(a,b\)</span> satisfy <span class="process-math">\(a\mid b\)</span> or <span class="process-math">\(b\mid a\text{.}\)</span> However, <a class="external" href="http://www.corestandards.org/Math/Content/4/NBT/B/6/" target="_blank">our experience in elementary mathematics does apply: there is often something left over (a remainder)</a><details class="ptx-footnote" aria-live="polite" id="sec-divisibility-gcd-3-12-5"><summary class="ptx-footnote__number" title="Footnote 1.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-divisibility-gcd-3-12-5"><code class="code-inline tex2jax_ignore">www.corestandards.org/Math/Content/4/NBT/B/6/</code></div></details>. The following theorem formalizes this idea for <span class="process-math">\(a,b\in \N\text{.}\)</span>
+</div>
+<article class="theorem theorem-like" id="thm_division-algorithm"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">The Division Algorithm for <span class="process-math">\(\N\)</span>.</span>
+</h4>
+<div class="para" id="thm_division-algorithm-3-1">Let <span class="process-math">\(a,b\in \N\text{.}\)</span> Then there exist unique integers <span class="process-math">\(q,r\)</span> such that <span class="process-math">\(a = bq + r\text{,}\)</span> where <span class="process-math">\(0 \le r \lt b\text{.}\)</span>
+</div>
+<details id="thm_division-algorithm-4" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="thm_division-algorithm-4-1">There are two parts to this theorem. First, you must establish that <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> exist. This is best done via <a href="sec-induction-wellordering.html#axiom_wellordering" class="xref" data-knowl="./knowl/xref/axiom_wellordering.html" data-reveal-label="Reveal" data-close-label="Close" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a>. If you’re stuck on that, check the second hint.</div> <div class="para" id="thm_division-algorithm-4-2">Once you have established that <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> exist, show that they are unique but assuming <span class="process-math">\(a = bq+r\)</span> and <span class="process-math">\(a = bq' + r'\text{,}\)</span> where <span class="process-math">\(r,r'\)</span> both satisfy the conditions of the theorem. Argue that <span class="process-math">\(q = q'\)</span> and <span class="process-math">\(r = r'\text{.}\)</span>
+</div>
+</div></details><details id="thm_division-algorithm-5" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="thm_division-algorithm-5-1">Let <span class="process-math">\(S = \setof{a-bs}{s\in \N_0, a-bs\ge 0}\text{.}\)</span>
+</div></div></details></article><details id="thm_division-algorithm-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_division-algorithm-6-1">First, assume that <span class="process-math">\(a \lt b\text{.}\)</span> Then <span class="process-math">\(q = 0\)</span> and <span class="process-math">\(r = a\)</span> are sufficient. If <span class="process-math">\(a = b\text{,}\)</span> then <span class="process-math">\(q = 1\)</span> and <span class="process-math">\(r = 0\)</span> will work.</div> <div class="para" id="thm_division-algorithm-6-2">Now, assume that <span class="process-math">\(a &gt; b\text{.}\)</span> Then the set <span class="process-math">\(S = \setof{s\in\N}{a-bs \ge 0}\)</span> is nonempty, as <span class="process-math">\(a-b\in S\text{.}\)</span> By <a href="sec-induction-wellordering.html#axiom_wellordering" class="xref" data-knowl="./knowl/xref/axiom_wellordering.html" data-reveal-label="Reveal" data-close-label="Close" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a>, <span class="process-math">\(S\)</span> has a least element, which we will call <span class="process-math">\(r\text{.}\)</span> Let <span class="process-math">\(q\in \N_0\)</span> be such that <span class="process-math">\(r = a-bq\text{;}\)</span> then <span class="process-math">\(a = bq + r\text{.}\)</span>
+</div> <div class="para" id="thm_division-algorithm-6-3">To finish the proof, it is enough to show that this choice of <span class="process-math">\(r\)</span> satisfies <span class="process-math">\(0\le r \le b-1\text{.}\)</span> Observe that <span class="process-math">\(r\in S\text{,}\)</span> so <span class="process-math">\(r\ge 0\text{.}\)</span> If <span class="process-math">\(r \ge b\text{,}\)</span> then <span class="process-math">\(a - b(q+1) = a-bq -b = r -b \ge 0\text{.}\)</span> Since <span class="process-math">\(q+1 &gt; q\text{,}\)</span> this is a contradiction to the assumption that <span class="process-math">\(q\)</span> was the largest element of <span class="process-math">\(S\text{.}\)</span> Thus, <span class="process-math">\(r \lt b\text{,}\)</span> i.e., <span class="process-math">\(r \le b-1\text{.}\)</span>
+</div> <div class="para" id="thm_division-algorithm-6-4">Let <span class="process-math">\(q,q',r,r'\)</span> be such that <span class="process-math">\(a = bq+r\)</span> and <span class="process-math">\(a=bq'+r'\text{.}\)</span> We see that <span class="process-math">\(bq+r = bq' + r'\text{,}\)</span> so <span class="process-math">\(b(q-q') = r'-r\text{,}\)</span> so <span class="process-math">\(b|r'-r\text{.}\)</span> If <span class="process-math">\(r'-r = 0\text{,}\)</span> we are done.</div> <div class="para" id="thm_division-algorithm-6-5">Otherwise, <span class="process-math">\(r'-r\)</span> is a nonzero multiple of <span class="process-math">\(n\text{.}\)</span> If <span class="process-math">\(r' \ge r\text{,}\)</span> then <span class="process-math">\(0\le b(q-q') = r' - r \le b-1 - r\text{,}\)</span> a contradiction. Similarly, if <span class="process-math">\(r' \le r\text{,}\)</span> write <span class="process-math">\(b(q'-q) = r-r' \ge 0\text{,}\)</span> and a symmetric argument leads to a contradiction.</div> <div class="para" id="thm_division-algorithm-6-6">Thus, <span class="process-math">\(r' = r\text{,}\)</span> so <span class="process-math">\(b(q-q') = 0\text{,}\)</span> and since <span class="process-math">\(b &gt; 0\text{,}\)</span> <span class="process-math">\(q - q'= 0\text{,}\)</span> i.e., <span class="process-math">\(q = q'\text{.}\)</span>
+</div></article></details><aside class="aside aside-like" id="sec-divisibility-gcd-3-14"><h4 class="heading"><span class="title">Warning!</span></h4>
+<div class="para" id="sec-divisibility-gcd-3-14-2">This theorem has two parts: existence and uniqueness. Do not try to prove them both at the same time.</div></aside><div class="para" id="sec-divisibility-gcd-3-15">Unsurprisingly, the Division Algorithm also holds in <span class="process-math">\(\Z\text{,}\)</span> though the existence of negative integers requires a careful restatement. </div>
+<article class="corollary theorem-like" id="sec-divisibility-gcd-3-16"><h4 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">The Division Algorithm for <span class="process-math">\(\Z\)</span>.</span>
+</h4>
+<div class="para" id="sec-divisibility-gcd-3-16-3-1">Let <span class="process-math">\(a,b\in \Z\)</span> with <span class="process-math">\(b\ne 0\text{.}\)</span> Then there exist unique integers <span class="process-math">\(q,r\)</span> such that <span class="process-math">\(a = bq + r\text{,}\)</span> where <span class="process-math">\(0 \le r \lt |b|\text{.}\)</span>
+</div>
+<details id="sec-divisibility-gcd-3-16-4" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="sec-divisibility-gcd-3-16-4-1">Consider cases, and apply <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_divalg" missing or not unique]</code> wherever possible.</div></div></details></article><details id="sec-divisibility-gcd-3-16-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="sec-divisibility-gcd-3-16-5-1">TBD.</div></article></details></section><section class="subsection" id="sec-divisibility-gcd-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="space"> </span><span class="title">Greatest Common Divisors</span>
+</h3>
+<div class="para" id="sec-divisibility-gcd-4-2">We next turn to another familiar property of the integers: the existence of greatest common divisors.</div>
+<article class="definition definition-like" id="gcd-definition"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
+</h4> <div class="para logical" id="gcd-definition-2-1">
+<div class="para">Let <span class="process-math">\(a,b\in \Z\)</span> such that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are not both 0. A <dfn class="terminology">greatest common divisor</dfn> of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> denoted <span class="process-math">\(\gcd(a,b)\text{,}\)</span> is a natural number <span class="process-math">\(d\)</span> satisfying</div>
+<ol class="decimal" id="gcd-definition-2-1-9">
+<li id="gcd-definition-2-1-9-1"><div class="para" id="gcd-definition-2-1-9-1-1">
+<span class="process-math">\(d\mid a\)</span> and <span class="process-math">\(d\mid b\)</span>
+</div></li>
+<li id="gcd-definition-2-1-9-2"><div class="para" id="gcd-definition-2-1-9-2-1">if <span class="process-math">\(e\in \N\)</span> and <span class="process-math">\(e\mid a\)</span> and <span class="process-math">\(e\mid b\text{,}\)</span> then <span class="process-math">\(e\mid d\text{.}\)</span>
+</div></li>
+</ol>
+</div> <div class="para" id="gcd-definition-2-2">If <span class="process-math">\(\gcd(a,b) = 1\text{,}\)</span> we say that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are <dfn class="terminology">relatively prime</dfn> or <dfn class="terminology">coprime</dfn>. <aside class="aside aside-like" id="gcd-definition-2-2-6"></aside>
+</div></article><div class="para" id="sec-divisibility-gcd-4-4">This definition may be different than the one you are used to, which likely stated that <span class="process-math">\(d \ge e\)</span> rather than condition 2 in <a href="sec-divisibility-gcd.html#gcd-definition" class="xref" data-knowl="./knowl/xref/gcd-definition.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.7">Definition 1.2.7</a>. It can be proved using the order relations of <span class="process-math">\(\Z\)</span> that the definition given here is equivalent to that one. However, we will prefer this definition, as it generalizes naturally to other number systems which do not have an order relation like <span class="process-math">\(\Z\text{.}\)</span>
+</div>
+<article class="activity project-like" id="act-gcdcomputations"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="act-gcdcomputations-1-1">
+<div class="para">Compute <span class="process-math">\(\gcd(a,b)\)</span> if:</div>
+<ol class="decimal" id="act-gcdcomputations-1-1-2">
+<li id="act-gcdcomputations-1-1-2-1"><div class="para" id="act-gcdcomputations-1-1-2-1-1">
+<span class="process-math">\(a = 123\text{,}\)</span> <span class="process-math">\(b = 141\)</span>
+</div></li>
+<li id="act-gcdcomputations-1-1-2-2"><div class="para" id="act-gcdcomputations-1-1-2-2-1">
+<span class="process-math">\(a = 0\text{,}\)</span> <span class="process-math">\(b = 169\)</span>
+</div></li>
+<li id="act-gcdcomputations-1-1-2-3"><div class="para" id="act-gcdcomputations-1-1-2-3-1">
+<span class="process-math">\(a= 85\text{,}\)</span> <span class="process-math">\(b = 48\)</span>
+</div></li>
+</ol>
+<div class="para">Now that you have had a bit of practice computing gcds, describe your method for finding them in a sentence or two.</div>
+</div>
+<div class="solutions"><details id="act-gcdcomputations-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="act-gcdcomputations-2-1">TBD.</div></div></details></div></article><div class="para" id="sec-divisibility-gcd-4-6">How did you answer the last question in <a href="sec-divisibility-gcd.html#act-gcdcomputations" class="xref" data-knowl="./knowl/xref/act-gcdcomputations.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.2.4">Activity 1.2.4</a>? If you are like the authors’ classes, the answers probably varied, though you have referred at some point to a "prime" (<a href="sec-primes-factorization.html#def-primeinteger" class="xref" data-knowl="./knowl/xref/def-primeinteger.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.3.1">whatever those are</a>), or possibly some other ad hoc method for finding the gcd. Most such methods rely in some form on our ability to factor integers. However, the problem of factoring arbitrary integers is actually surprisingly computationally intensive. Thankfully, there is another way to compute <span class="process-math">\(\gcd(a,b)\text{,}\)</span> to which we now turn.</div>
+<article class="theorem theorem-like" id="sec-divisibility-gcd-4-7"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span>
+</h4>
+<div class="para" id="sec-divisibility-gcd-4-7-1-1">Let <span class="process-math">\(a,b,c\in\Z\)</span> such that <span class="process-math">\(a = b+c\)</span> with <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> not both zero. Then <span class="process-math">\(\gcd(a,b) = \gcd(b,c)\text{.}\)</span>
+</div></article><details id="sec-divisibility-gcd-4-7-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="sec-divisibility-gcd-4-7-2-1">Let <span class="process-math">\(d = \gcd(a,b)\)</span> and <span class="process-math">\(e = \gcd(b,c)\text{.}\)</span> Since <span class="process-math">\(d|a\)</span> and <span class="process-math">\(d|b\text{,}\)</span> <span class="process-math">\(d|c\text{,}\)</span> and so <span class="process-math">\(d|e\)</span> by definition.</div> <div class="para" id="sec-divisibility-gcd-4-7-2-2">Similarly, since <span class="process-math">\(e|b\)</span> and <span class="process-math">\(e|c\text{,}\)</span> <span class="process-math">\(e|a\text{,}\)</span> so <span class="process-math">\(e|d\)</span> by definition.</div> <div class="para" id="sec-divisibility-gcd-4-7-2-3">Thus, <span class="process-math">\(e = d\text{.}\)</span>
+</div></article></details><article class="investigation project-like" id="invest_gcdremainder"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
+</h4>
+<div class="para" id="invest_gcdremainder-1-1">Suppose <span class="process-math">\(a,b,c\in\Z\)</span> such that there exists <span class="process-math">\(q\in\Z\)</span> with <span class="process-math">\(a = bq + c\)</span> and <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> not both zero. Prove or disprove: <span class="process-math">\(\gcd(a,b)=\gcd(b,c)\text{.}\)</span>
+</div>
+<div class="solutions"><details id="invest_gcdremainder-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">TBD.</div></details></div></article><article class="investigation project-like" id="invest-euclid-alg-integers"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">(Euclidean Algorithm).</span>
+</h4>
+<div class="para" id="invest-euclid-alg-integers-3-1">Let <span class="process-math">\(a,b\in \N\text{.}\)</span> Use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_divalg" missing or not unique]</code> and <a href="sec-divisibility-gcd.html#invest_gcdremainder" class="xref" data-knowl="./knowl/xref/invest_gcdremainder.html" data-reveal-label="Reveal" data-close-label="Close" title="Investigation 1.2.5">Investigation 1.2.5</a> to determine an algorithm for computing <span class="process-math">\(\gcd(a,b)\text{.}\)</span> How could your method be modified to compute <span class="process-math">\(\gcd(a,b)\)</span> for <span class="process-math">\(a,b\in\Z\text{?}\)</span>
+</div>
+<div class="solutions"><details id="invest-euclid-alg-integers-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="invest-euclid-alg-integers-4-1">Let <span class="process-math">\(a,b\in \N\text{.}\)</span> Write <span class="process-math">\(a = bq_1+r_1\text{.}\)</span> By <a href="sec-divisibility-gcd.html#invest_gcdremainder" class="xref" data-knowl="./knowl/xref/invest_gcdremainder.html" data-reveal-label="Reveal" data-close-label="Close" title="Investigation 1.2.5">Theorem 1.2.5</a>, <span class="process-math">\(\gcd(a,b) = \gcd(b,r_1)\text{.}\)</span>
+</div> <div class="para" id="invest-euclid-alg-integers-4-2">Then, write <span class="process-math">\(b = r_1 q_2 + r_2\)</span> using the Division algorithm. Observe <span class="process-math">\(\gcd(b,r_1) = \gcd(r_1,r_2)\text{.}\)</span> Continue until there is a <span class="process-math">\(k\)</span> for which <span class="process-math">\(r_k = 0\text{,}\)</span> so <span class="process-math">\(\gcd(r_k,r_{k-1}) = r_{k-1}\text{.}\)</span> Then <span class="process-math">\(r_{k-1}= \gcd(r_k, r_{k-1}) = \gcd(r_{k-1},r_{k-2}) = \cdots = \gcd(a,b)\text{.}\)</span>
+</div>
+</div></details></div></article><article class="activity project-like" id="sec-divisibility-gcd-4-10"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
+</h4>
+<div class="para" id="sec-divisibility-gcd-4-10-1-1">Use the Euclidean algorithm to compute <span class="process-math">\(\gcd(18489,17304)\text{.}\)</span>
+</div>
+<div class="solutions"><details id="sec-divisibility-gcd-4-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-divisibility-gcd-4-10-2-1">
+<div class="para">We write</div>
+<div class="displaymath process-math" id="sec-divisibility-gcd-4-10-2-1-1">
+\begin{align*}
+18489 \amp = 17304 \cdot 1 +1185\\
+17304 \amp = 1185\cdot 14 +714\\
+1185 \amp = 714 \cdot 1 + 471\\
+714 \amp = 471 \cdot 1+ 243\\
+471 \amp = 243\cdot 1 + 228\\
+243 \amp = 228 \cdot 1+ 15\\
+228 \amp = 15 \cdot 15 + 3\\
+15 \amp = 3\cdot 5 + 0\text{.}
+\end{align*}
+</div>
+</div> <div class="para" id="sec-divisibility-gcd-4-10-2-2">So <span class="process-math">\(\gcd(18489,17304)=3\text{.}\)</span>
+</div>
+</div></details></div></article><div class="para" id="sec-divisibility-gcd-4-11">The following identity provides a useful characterization of the greatest common divisor of two integers, not both zero. We will return to this idea several times, even after we have left the familiar realm of the integers.</div>
+<article class="theorem theorem-like" id="theorem_bezoutint"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Bézout’s Identity.</span>
+</h4>
+<div class="para logical" id="theorem_bezoutint-3-1">
+<div class="para">For any integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> not both 0, there are integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ax + by = \gcd(a,b)\text{.}
+\end{equation*}
+</div>
+</div>
+<details id="theorem_bezoutint-4" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="theorem_bezoutint-4-1">Apply <a href="sec-induction-wellordering.html#axiom_wellordering" class="xref" data-knowl="./knowl/xref/axiom_wellordering.html" data-reveal-label="Reveal" data-close-label="Close" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a> to a well-chosen set.</div></div></details><details id="theorem_bezoutint-5" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="theorem_bezoutint-5-1">Apply <a href="sec-induction-wellordering.html#axiom_wellordering" class="xref" data-knowl="./knowl/xref/axiom_wellordering.html" data-reveal-label="Reveal" data-close-label="Close" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a> to <span class="process-math">\(S = \setof{as+bt}{s,t\in\Z, \ as+bt \gt 0}\text{.}\)</span>
+</div></div></details></article><details id="theorem_bezoutint-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="theorem_bezoutint-6-1">Consider the set <span class="process-math">\(S = \setof{as+bt}{s,t\in\Z, \ as+bt \gt 0}\text{.}\)</span> We first show that <span class="process-math">\(S\ne \emptyset\text{.}\)</span>
+</div> <div class="para" id="theorem_bezoutint-6-2">Suppose without loss of generality that <span class="process-math">\(a\ne 0\text{,}\)</span> and consider <span class="process-math">\(a \gt 0\text{;}\)</span> then <span class="process-math">\(s=1, t = 0\)</span> is sufficient to guarantee <span class="process-math">\(as+bt\in S\text{.}\)</span> If <span class="process-math">\(a \lt 0\text{,}\)</span> then <span class="process-math">\(s = -1, t= 0\)</span> is sufficient. Regardless, <span class="process-math">\(S\ne \emptyset\text{,}\)</span> and by the Well-Ordering Principle, <span class="process-math">\(S\)</span> has a least element, <span class="process-math">\(d = ax+by\text{.}\)</span> We claim <span class="process-math">\(d = \gcd(a,b)\text{.}\)</span>
+</div> <div class="para" id="theorem_bezoutint-6-3">We first show that <span class="process-math">\(d|a\)</span> Use the division algorithm to write <span class="process-math">\(a = dq + r\text{,}\)</span> where <span class="process-math">\(r \lt d\text{.}\)</span> We find <span class="process-math">\(r = a - dq = a - (ax+by)q = a(1-xq) + by\text{,}\)</span> and if <span class="process-math">\(r\gt 0\text{,}\)</span> <span class="process-math">\(r\in S\text{,}\)</span> contradicting the status of <span class="process-math">\(d\)</span> as the least element of <span class="process-math">\(S\text{.}\)</span> Thus, <span class="process-math">\(r = 0\text{,}\)</span> and <span class="process-math">\(d|a\text{.}\)</span> By a symmetric proof, <span class="process-math">\(d|b\text{.}\)</span>
+</div> <div class="para" id="theorem_bezoutint-6-4">Suppose then that <span class="process-math">\(e\)</span> is a common divisor of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{;}\)</span> write <span class="process-math">\(a = e k_1\)</span> and <span class="process-math">\(b = e k_2\text{.}\)</span> Then <span class="process-math">\(d = ax + by = (ek_1)x + (ek_2)y = e(k_1x + k_2 y)\text{,}\)</span> whence <span class="process-math">\(e|d\text{.}\)</span> Therefore, <span class="process-math">\(d = \gcd(a,b)\text{.}\)</span>
+</div></article></details><div class="para" id="sec-divisibility-gcd-4-13">We conclude with an answer to the questions raised by <a href="sec-divisibility-gcd.html#invest-divideproduct" class="xref" data-knowl="./knowl/xref/invest-divideproduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Investigation 1.2.2">Investigation 1.2.2</a>.</div>
+<article class="theorem theorem-like" id="theorem_relprimecancel"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span>
+</h4>
+<div class="para" id="theorem_relprimecancel-1-1">Let <span class="process-math">\(a, b\text{,}\)</span> and <span class="process-math">\(c\)</span> be integers. If <span class="process-math">\(a|bc\)</span> and <span class="process-math">\(\gcd(a,b) = 1\text{,}\)</span> then <span class="process-math">\(a|c\text{.}\)</span>
+</div></article><details id="theorem_relprimecancel-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="theorem_relprimecancel-2-1">
+<div class="para">Suppose <span class="process-math">\(\gcd(a,b) = 1\text{.}\)</span> By <a href="sec-divisibility-gcd.html#theorem_bezoutint" class="xref" data-knowl="./knowl/xref/theorem_bezoutint.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.2.9: Bézout’s Identity">Theorem 1.2.9</a>, there are integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem_bezoutint.html">
+\begin{equation*}
+ax+by = 1\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="theorem_relprimecancel-2-2">
+<div class="para">Multiply by <span class="process-math">\(c\)</span> to get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+acx + bcy = c\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="theorem_relprimecancel-2-3">
+<div class="para">Since <span class="process-math">\(a|bc\)</span> by assumption, there is an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(ak = bc\text{,}\)</span> so we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+acx + bcy = acx + aky = a(cx+ky) = c\text{,}
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(a|c\text{.}\)</span>
+</div>
+</div></article></details></section><section class="conclusion" id="sec-divisibility-gcd-5"><div class="para" id="sec-divisibility-gcd-5-1">In this section, we have collected some initial results about divisibility in the integers. We’ll next explore the multiplicative building blocks of the integers, the primes, in preparation for a deeper exploration of factorization.</div></section><section class="exercises" id="sec-divisibility-gcd-exercises"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="sec-divisibility-gcd-tf"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="sec-divisibility-gcd-tf-1-1">Mark the following as true or false.</div> <ol class="lower-alpha" id="sec-divisibility-gcd-tf-1-2">
+<li id="sec-divisibility-gcd-tf-1-2-1"><div class="para" id="p-derived-sec-divisibility-gcd-tf-1-2-1">If <span class="process-math">\(a\mid b\text{,}\)</span> then <span class="process-math">\(b\mid a\text{.}\)</span>
+</div></li>
+<li id="sec-divisibility-gcd-tf-1-2-2"><div class="para" id="p-derived-sec-divisibility-gcd-tf-1-2-2">If <span class="process-math">\(a\mid bc\text{,}\)</span> then <span class="process-math">\(a\mid b\)</span> or <span class="process-math">\(a\mid c\text{.}\)</span>
+</div></li>
+<li id="sec-divisibility-gcd-tf-1-2-3"><div class="para" id="p-derived-sec-divisibility-gcd-tf-1-2-3">If <span class="process-math">\(a\mid b\text{,}\)</span> then <span class="process-math">\(a\mid(-b)\text{.}\)</span>
+</div></li>
+<li id="sec-divisibility-gcd-tf-1-2-4"><div class="para" id="p-derived-sec-divisibility-gcd-tf-1-2-4">There exists integers <span class="process-math">\(x,y\in\Z\)</span> such that <span class="process-math">\(2x+4y=1\text{.}\)</span>
+</div></li>
+<li id="sec-divisibility-gcd-tf-1-2-5"><div class="para" id="p-derived-sec-divisibility-gcd-tf-1-2-5">The greatest common divisor of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> is a divisor of both <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>
+</div></li>
+<li id="sec-divisibility-gcd-tf-1-2-6"><div class="para" id="p-derived-sec-divisibility-gcd-tf-1-2-6">The greatest common divisor of any two integers is always positive.</div></li>
+<li id="sec-divisibility-gcd-tf-1-2-7"><div class="para" id="p-derived-sec-divisibility-gcd-tf-1-2-7">It makes sense to define the greatest common divisor of any finite number of integers.</div></li>
+<li id="sec-divisibility-gcd-tf-1-2-8"><div class="para" id="p-derived-sec-divisibility-gcd-tf-1-2-8">The greatest common divisor of 0 and 0 is 0.</div></li>
+<li id="sec-divisibility-gcd-tf-1-2-9"><div class="para" id="p-derived-sec-divisibility-gcd-tf-1-2-9">For any pair of integers <span class="process-math">\(a,b\in\Z\text{,}\)</span> not both zero, there exists integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> so that <span class="process-math">\(ax+by = \mathrm{lcm}(a,b)\)</span> (the least common multiple).</div></li>
+</ol></article><article class="exercise exercise-like" id="sec-divisibility-gcd-quorem"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="sec-divisibility-gcd-quorem-1-1">Apply the <a href="sec-divisibility-gcd.html#thm_division-algorithm" class="xref" data-knowl="./knowl/xref/thm_division-algorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.2.5: The Division Algorithm for \N">Division Algorithm 1.2.5</a> to determine the quotient and remainder for the following pairs of integers:</div> <ol class="lower-alpha" id="sec-divisibility-gcd-quorem-1-2">
+<li id="sec-divisibility-gcd-quorem-1-2-1"><div class="para" id="p-derived-sec-divisibility-gcd-quorem-1-2-1"><span class="process-math">\(\displaystyle a = 56, b = 7\)</span></div></li>
+<li id="sec-divisibility-gcd-quorem-1-2-2"><div class="para" id="p-derived-sec-divisibility-gcd-quorem-1-2-2"><span class="process-math">\(\displaystyle a = 125, b = 15\)</span></div></li>
+<li id="sec-divisibility-gcd-quorem-1-2-3"><div class="para" id="p-derived-sec-divisibility-gcd-quorem-1-2-3"><span class="process-math">\(\displaystyle a = 12345, b = 67\)</span></div></li>
+<li id="sec-divisibility-gcd-quorem-1-2-4"><div class="para" id="p-derived-sec-divisibility-gcd-quorem-1-2-4"><span class="process-math">\(\displaystyle a = 0, b = 34\)</span></div></li>
+<li id="sec-divisibility-gcd-quorem-1-2-5"><div class="para" id="p-derived-sec-divisibility-gcd-quorem-1-2-5"><span class="process-math">\(\displaystyle a = 84, b = 12\)</span></div></li>
+<li id="sec-divisibility-gcd-quorem-1-2-6"><div class="para" id="p-derived-sec-divisibility-gcd-quorem-1-2-6"><span class="process-math">\(\displaystyle a = 96, b = 16\)</span></div></li>
+<li id="sec-divisibility-gcd-quorem-1-2-7"><div class="para" id="p-derived-sec-divisibility-gcd-quorem-1-2-7"><span class="process-math">\(\displaystyle a = 105, b = 5\)</span></div></li>
+</ol></article><article class="exercise exercise-like" id="sec-divisibility-gcd-gcds"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="sec-divisibility-gcd-gcds-1-1">For each of the pairs of integers in <a href="sec-divisibility-gcd.html#sec-divisibility-gcd-quorem" class="xref" data-knowl="./knowl/xref/sec-divisibility-gcd-quorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.2.3.2">Exercise 1.2.3.2</a> determine their greatest common divisor <span class="process-math">\(\gcd(a,b)\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="sec-divisibility-gcd-bezout-coeff"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para logical" id="sec-divisibility-gcd-bezout-coeff-1-1">
+<div class="para">For each of the pairs of integers in <a href="sec-divisibility-gcd.html#sec-divisibility-gcd-quorem" class="xref" data-knowl="./knowl/xref/sec-divisibility-gcd-quorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.2.3.2">Exercise 1.2.3.2</a> find Bézout coefficients. That is, find <span class="process-math">\(x,y\in \Z\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec-divisibility-gcd-quorem.html">
+\begin{equation*}
+ax+by = \gcd(a,b)\text{.}
+\end{equation*}
+</div>
+</div></article><article class="exercise exercise-like" id="sec-divisibility-gcd-exercises-6"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="introduction" id="sec-divisibility-gcd-exercises-6-1"><div class="para" id="sec-divisibility-gcd-exercises-6-1-1">Use induction to prove that for any <span class="process-math">\(n\geq 1\)</span> <span class="process-math">\(3\mid 2^{2n}-1\text{.}\)</span>
+</div></div></article><article class="exercise exercise-like" id="sec-divisibility-gcd-exercises-7"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="introduction" id="sec-divisibility-gcd-exercises-7-1"><div class="para" id="sec-divisibility-gcd-exercises-7-1-1">Use induction to prove that for any <span class="process-math">\(m\geq 1\)</span> <span class="process-math">\(8\mid 5^{2m}+7\text{.}\)</span>
+</div></div></article><article class="exercise exercise-like" id="sec-divisibility-gcd-exercises-8"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="sec-divisibility-gcd-exercises-8-1-1">Use induction to prove that for any <span class="process-math">\(k\geq 1\)</span> <span class="process-math">\(5\mid k^5-k\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="sec-divisibility-gcd-exercises-9"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="sec-divisibility-gcd-exercises-9-1-1">Suppose <span class="process-math">\(a,b,c\in \Z\)</span> are integers such taht <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(a\mid c\text{.}\)</span> Prove <span class="process-math">\(a\mid b^2+c^2\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="sec-divisibility-gcd-exercises-10"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="sec-divisibility-gcd-exercises-10-1-1">Prove for any integers <span class="process-math">\(n\geq 1\text{,}\)</span> <span class="process-math">\(5^n-1\)</span> is divisible by 4.</div></article><article class="exercise exercise-like" id="sec-divisibility-gcd-exercises-11"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="sec-divisibility-gcd-exercises-11-1-1">A perfect number is a positive integer <span class="process-math">\(n\)</span> that is the sum of its proper (non-equal) divisors. For example, <span class="process-math">\(6\)</span> is a perfect number as <span class="process-math">\(1+2+3 = 6\text{.}\)</span> Find the next perfect number.</div></article><article class="exercise exercise-like" id="sec-divisibility-gcd-exercises-12"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para" id="sec-divisibility-gcd-exercises-12-1-1">Let <span class="process-math">\(F_n\)</span> be the <span class="process-math">\(n\)</span>th Fibonacci Number, see <a href="sec-induction-wellordering.html#fibonacci-numbers" class="xref" data-knowl="./knowl/xref/fibonacci-numbers.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.1.3.12">Exercise 1.1.3.12</a>. Prove that <span class="process-math">\(F_{5n}\)</span> is divisible by <span class="process-math">\(5\)</span> for all <span class="process-math">\(n\geq 1\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="sec-divisibility-gcd-exercises-13"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="para logical" id="sec-divisibility-gcd-exercises-13-1-1">
+<div class="para">Prove that no partial sum of the harmonic series can be an integer for <span class="process-math">\(n&gt;1\text{.}\)</span> Here the <span class="process-math">\(n\)</span>th partial sum of the harmonic series is:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1+\frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{n}.
+\end{equation*}
+</div>
+</div></article><article class="exercise exercise-like" id="sec-divisibility-gcd-exercises-14"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="para" id="sec-divisibility-gcd-exercises-14-1-1">Show that Bézout coefficients are not unique. Can you find a formula for all of them?</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-induction-wellordering.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-primes-factorization.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

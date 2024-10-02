@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Principal Ideals and Euclidean Domains</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Rings First">
+<meta property="book:author" content="Bronson Lim">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#ssec_wellordering-8-1-3 { counter-set: ssec_wellordering-8-1-3 0; }
+#ssec_wellordering-8-1-3 > li::marker { content: ""counter(ssec_wellordering-8-1-3,decimal)"."; }
+#ssec_wellordering-8-1-3 > li { counter-increment: ssec_wellordering-8-1-3; }
+#ssec_wellordering-8-2-1 { counter-set: ssec_wellordering-8-2-1 0; }
+#ssec_wellordering-8-2-1 > li::marker { content: ""counter(ssec_wellordering-8-2-1,decimal)"."; }
+#ssec_wellordering-8-2-1 > li { counter-increment: ssec_wellordering-8-2-1; }
+#thm_mathematical_induction-2-3 { counter-set: thm_mathematical_induction-2-3 0; }
+#thm_mathematical_induction-2-3 > li::marker { content: ""counter(thm_mathematical_induction-2-3,decimal)"."; }
+#thm_mathematical_induction-2-3 > li { counter-increment: thm_mathematical_induction-2-3; }
+#sec-induction-tf-1-2 { counter-set: sec-induction-tf-1-2 0; }
+#sec-induction-tf-1-2 > li::marker { content: "("counter(sec-induction-tf-1-2,lower-alpha)")"; }
+#sec-induction-tf-1-2 > li { counter-increment: sec-induction-tf-1-2; }
+#sec-induction-smallest-elements1-1-2 { counter-set: sec-induction-smallest-elements1-1-2 0; }
+#sec-induction-smallest-elements1-1-2 > li::marker { content: "("counter(sec-induction-smallest-elements1-1-2,lower-alpha)")"; }
+#sec-induction-smallest-elements1-1-2 > li { counter-increment: sec-induction-smallest-elements1-1-2; }
+#sec-induction-smallest-elements2-1-2 { counter-set: sec-induction-smallest-elements2-1-2 0; }
+#sec-induction-smallest-elements2-1-2 > li::marker { content: "("counter(sec-induction-smallest-elements2-1-2,lower-alpha)")"; }
+#sec-induction-smallest-elements2-1-2 > li { counter-increment: sec-induction-smallest-elements2-1-2; }
+#sec-divisibility-gcd-3-5-1-1-2 { counter-set: sec-divisibility-gcd-3-5-1-1-2 0; }
+#sec-divisibility-gcd-3-5-1-1-2 > li::marker { content: ""counter(sec-divisibility-gcd-3-5-1-1-2,decimal)"."; }
+#sec-divisibility-gcd-3-5-1-1-2 > li { counter-increment: sec-divisibility-gcd-3-5-1-1-2; }
+#gcd-definition-2-1-9 { counter-set: gcd-definition-2-1-9 0; }
+#gcd-definition-2-1-9 > li::marker { content: ""counter(gcd-definition-2-1-9,decimal)"."; }
+#gcd-definition-2-1-9 > li { counter-increment: gcd-definition-2-1-9; }
+#act-gcdcomputations-1-1-2 { counter-set: act-gcdcomputations-1-1-2 0; }
+#act-gcdcomputations-1-1-2 > li::marker { content: ""counter(act-gcdcomputations-1-1-2,decimal)"."; }
+#act-gcdcomputations-1-1-2 > li { counter-increment: act-gcdcomputations-1-1-2; }
+#sec-divisibility-gcd-tf-1-2 { counter-set: sec-divisibility-gcd-tf-1-2 0; }
+#sec-divisibility-gcd-tf-1-2 > li::marker { content: "("counter(sec-divisibility-gcd-tf-1-2,lower-alpha)")"; }
+#sec-divisibility-gcd-tf-1-2 > li { counter-increment: sec-divisibility-gcd-tf-1-2; }
+#sec-divisibility-gcd-quorem-1-2 { counter-set: sec-divisibility-gcd-quorem-1-2 0; }
+#sec-divisibility-gcd-quorem-1-2 > li::marker { content: "("counter(sec-divisibility-gcd-quorem-1-2,lower-alpha)")"; }
+#sec-divisibility-gcd-quorem-1-2 > li { counter-increment: sec-divisibility-gcd-quorem-1-2; }
+#sec-primes-factorization-tf-1-2 { counter-set: sec-primes-factorization-tf-1-2 0; }
+#sec-primes-factorization-tf-1-2 > li::marker { content: "("counter(sec-primes-factorization-tf-1-2,lower-alpha)")"; }
+#sec-primes-factorization-tf-1-2 > li { counter-increment: sec-primes-factorization-tf-1-2; }
+#exer-primes-factorization-factorizations-1-2 { counter-set: exer-primes-factorization-factorizations-1-2 0; }
+#exer-primes-factorization-factorizations-1-2 > li::marker { content: "("counter(exer-primes-factorization-factorizations-1-2,lower-alpha)")"; }
+#exer-primes-factorization-factorizations-1-2 > li { counter-increment: exer-primes-factorization-factorizations-1-2; }
+#exer-primes-factorization-isprime-1-1-1 { counter-set: exer-primes-factorization-isprime-1-1-1 0; }
+#exer-primes-factorization-isprime-1-1-1 > li::marker { content: "("counter(exer-primes-factorization-isprime-1-1-1,lower-alpha)")"; }
+#exer-primes-factorization-isprime-1-1-1 > li { counter-increment: exer-primes-factorization-isprime-1-1-1; }
+#sec-integers-modulo-m-13-1-1-1 { counter-set: sec-integers-modulo-m-13-1-1-1 0; }
+#sec-integers-modulo-m-13-1-1-1 > li::marker { content: ""counter(sec-integers-modulo-m-13-1-1-1,decimal)"."; }
+#sec-integers-modulo-m-13-1-1-1 > li { counter-increment: sec-integers-modulo-m-13-1-1-1; }
+#def-arithemticmodm-1-1-3 { counter-set: def-arithemticmodm-1-1-3 0; }
+#def-arithemticmodm-1-1-3 > li::marker { content: ""counter(def-arithemticmodm-1-1-3,decimal)"."; }
+#def-arithemticmodm-1-1-3 > li { counter-increment: def-arithemticmodm-1-1-3; }
+#sec-integers-modulo-m-24-1-2 { counter-set: sec-integers-modulo-m-24-1-2 0; }
+#sec-integers-modulo-m-24-1-2 > li::marker { content: ""counter(sec-integers-modulo-m-24-1-2,decimal)"."; }
+#sec-integers-modulo-m-24-1-2 > li { counter-increment: sec-integers-modulo-m-24-1-2; }
+#theorem_cancelinZp-1-1-4 { counter-set: theorem_cancelinZp-1-1-4 0; }
+#theorem_cancelinZp-1-1-4 > li::marker { content: ""counter(theorem_cancelinZp-1-1-4,decimal)"."; }
+#theorem_cancelinZp-1-1-4 > li { counter-increment: theorem_cancelinZp-1-1-4; }
+#integers-mod-m-tf-1-2 { counter-set: integers-mod-m-tf-1-2 0; }
+#integers-mod-m-tf-1-2 > li::marker { content: "("counter(integers-mod-m-tf-1-2,lower-alpha)")"; }
+#integers-mod-m-tf-1-2 > li { counter-increment: integers-mod-m-tf-1-2; }
+#exers-integers-mod-m-4-1-2 { counter-set: exers-integers-mod-m-4-1-2 0; }
+#exers-integers-mod-m-4-1-2 > li::marker { content: "("counter(exers-integers-mod-m-4-1-2,lower-alpha)")"; }
+#exers-integers-mod-m-4-1-2 > li { counter-increment: exers-integers-mod-m-4-1-2; }
+#invest-binop-1-1-2 { counter-set: invest-binop-1-1-2 0; }
+#invest-binop-1-1-2 > li::marker { content: ""counter(invest-binop-1-1-2,decimal)"."; }
+#invest-binop-1-1-2 > li { counter-increment: invest-binop-1-1-2; }
+#def_field-2-1-7 { counter-set: def_field-2-1-7 0; }
+#def_field-2-1-7 > li::marker { content: ""counter(def_field-2-1-7,decimal)"."; }
+#def_field-2-1-7 > li { counter-increment: def_field-2-1-7; }
+#exer_fieldexamples-1-1-1 { counter-set: exer_fieldexamples-1-1-1 0; }
+#exer_fieldexamples-1-1-1 > li::marker { content: ""counter(exer_fieldexamples-1-1-1,decimal)"."; }
+#exer_fieldexamples-1-1-1 > li { counter-increment: exer_fieldexamples-1-1-1; }
+#exer_fieldexamples-2-1-1 { counter-set: exer_fieldexamples-2-1-1 0; }
+#exer_fieldexamples-2-1-1 > li::marker { content: ""counter(exer_fieldexamples-2-1-1,decimal)"."; }
+#exer_fieldexamples-2-1-1 > li { counter-increment: exer_fieldexamples-2-1-1; }
+#thm_fieldproperties-2-1-2 { counter-set: thm_fieldproperties-2-1-2 0; }
+#thm_fieldproperties-2-1-2 > li::marker { content: ""counter(thm_fieldproperties-2-1-2,decimal)"."; }
+#thm_fieldproperties-2-1-2 > li { counter-increment: thm_fieldproperties-2-1-2; }
+#subsec-propertiesOfFields-3-1 { counter-set: subsec-propertiesOfFields-3-1 0; }
+#subsec-propertiesOfFields-3-1 > li::marker { content: ""counter(subsec-propertiesOfFields-3-1,decimal)"."; }
+#subsec-propertiesOfFields-3-1 > li { counter-increment: subsec-propertiesOfFields-3-1; }
+#subsec-subfieldsAndExtensions-3-3-1-3 { counter-set: subsec-subfieldsAndExtensions-3-3-1-3 0; }
+#subsec-subfieldsAndExtensions-3-3-1-3 > li::marker { content: ""counter(subsec-subfieldsAndExtensions-3-3-1-3,decimal)"."; }
+#subsec-subfieldsAndExtensions-3-3-1-3 > li { counter-increment: subsec-subfieldsAndExtensions-3-3-1-3; }
+#def_ring-3-1-6 { counter-set: def_ring-3-1-6 0; }
+#def_ring-3-1-6 > li::marker { content: ""counter(def_ring-3-1-6,decimal)"."; }
+#def_ring-3-1-6 > li { counter-increment: def_ring-3-1-6; }
+#thm_subringTest-2-1-5 { counter-set: thm_subringTest-2-1-5 0; }
+#thm_subringTest-2-1-5 > li::marker { content: ""counter(thm_subringTest-2-1-5,decimal)"."; }
+#thm_subringTest-2-1-5 > li { counter-increment: thm_subringTest-2-1-5; }
+#sec_rings-24-1-1-3 { counter-set: sec_rings-24-1-1-3 0; }
+#sec_rings-24-1-1-3 > li::marker { content: ""counter(sec_rings-24-1-1-3,decimal)"."; }
+#sec_rings-24-1-1-3 > li { counter-increment: sec_rings-24-1-1-3; }
+#invest-tables-1-2 { counter-set: invest-tables-1-2 0; }
+#invest-tables-1-2 > li::marker { content: ""counter(invest-tables-1-2,decimal)"."; }
+#invest-tables-1-2 > li { counter-increment: invest-tables-1-2; }
+#sec_rings-48-1-1-1 { counter-set: sec_rings-48-1-1-1 0; }
+#sec_rings-48-1-1-1 > li::marker { content: ""counter(sec_rings-48-1-1-1,decimal)"."; }
+#sec_rings-48-1-1-1 > li { counter-increment: sec_rings-48-1-1-1; }
+#sec_divisibilityIntegralDomains-7-1-2 { counter-set: sec_divisibilityIntegralDomains-7-1-2 0; }
+#sec_divisibilityIntegralDomains-7-1-2 > li::marker { content: ""counter(sec_divisibilityIntegralDomains-7-1-2,decimal)"."; }
+#sec_divisibilityIntegralDomains-7-1-2 > li { counter-increment: sec_divisibilityIntegralDomains-7-1-2; }
+#expl-unit-prime-irred-1-2 { counter-set: expl-unit-prime-irred-1-2 0; }
+#expl-unit-prime-irred-1-2 > li::marker { content: ""counter(expl-unit-prime-irred-1-2,decimal)"."; }
+#expl-unit-prime-irred-1-2 > li { counter-increment: expl-unit-prime-irred-1-2; }
+#def-gcd-domain-2-1-7 { counter-set: def-gcd-domain-2-1-7 0; }
+#def-gcd-domain-2-1-7 > li::marker { content: ""counter(def-gcd-domain-2-1-7,decimal)"."; }
+#def-gcd-domain-2-1-7 > li { counter-increment: def-gcd-domain-2-1-7; }
+#def-ideal-1-1-4 { counter-set: def-ideal-1-1-4 0; }
+#def-ideal-1-1-4 > li::marker { content: ""counter(def-ideal-1-1-4,decimal)"."; }
+#def-ideal-1-1-4 > li { counter-increment: def-ideal-1-1-4; }
+#sec_principalIdealsEuclideanDomains-22-1-1-2 { counter-set: sec_principalIdealsEuclideanDomains-22-1-1-2 0; }
+#sec_principalIdealsEuclideanDomains-22-1-1-2 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-22-1-1-2,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-22-1-1-2 > li { counter-increment: sec_principalIdealsEuclideanDomains-22-1-1-2; }
+#sec_principalIdealsEuclideanDomains-22-2-1 { counter-set: sec_principalIdealsEuclideanDomains-22-2-1 0; }
+#sec_principalIdealsEuclideanDomains-22-2-1 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-22-2-1,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-22-2-1 > li { counter-increment: sec_principalIdealsEuclideanDomains-22-2-1; }
+#sec_principalIdealsEuclideanDomains-27-1-1-3 { counter-set: sec_principalIdealsEuclideanDomains-27-1-1-3 0; }
+#sec_principalIdealsEuclideanDomains-27-1-1-3 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-27-1-1-3,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-27-1-1-3 > li { counter-increment: sec_principalIdealsEuclideanDomains-27-1-1-3; }
+#sec_principalIdealsEuclideanDomains-27-2-1-1 { counter-set: sec_principalIdealsEuclideanDomains-27-2-1-1 0; }
+#sec_principalIdealsEuclideanDomains-27-2-1-1 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-27-2-1-1,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-27-2-1-1 > li { counter-increment: sec_principalIdealsEuclideanDomains-27-2-1-1; }
+#sec_principalIdealsEuclideanDomains-28-1-1-4 { counter-set: sec_principalIdealsEuclideanDomains-28-1-1-4 0; }
+#sec_principalIdealsEuclideanDomains-28-1-1-4 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-28-1-1-4,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-28-1-1-4 > li { counter-increment: sec_principalIdealsEuclideanDomains-28-1-1-4; }
+#sec_principalIdealsEuclideanDomains-32-1-1-6 { counter-set: sec_principalIdealsEuclideanDomains-32-1-1-6 0; }
+#sec_principalIdealsEuclideanDomains-32-1-1-6 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-32-1-1-6,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-32-1-1-6 > li { counter-increment: sec_principalIdealsEuclideanDomains-32-1-1-6; }
+#sec_factoringPolynomials-24-1-2 { counter-set: sec_factoringPolynomials-24-1-2 0; }
+#sec_factoringPolynomials-24-1-2 > li::marker { content: ""counter(sec_factoringPolynomials-24-1-2,decimal)"."; }
+#sec_factoringPolynomials-24-1-2 > li { counter-increment: sec_factoringPolynomials-24-1-2; }
+#sec_factoringPolynomials-24-1-2-1-2 { counter-set: sec_factoringPolynomials-24-1-2-1-2 0; }
+#sec_factoringPolynomials-24-1-2-1-2 > li::marker { content: "("counter(sec_factoringPolynomials-24-1-2-1-2,lower-alpha)")"; }
+#sec_factoringPolynomials-24-1-2-1-2 > li { counter-increment: sec_factoringPolynomials-24-1-2-1-2; }
+#sec_factoringPolynomials-24-1-2-2-2 { counter-set: sec_factoringPolynomials-24-1-2-2-2 0; }
+#sec_factoringPolynomials-24-1-2-2-2 > li::marker { content: "("counter(sec_factoringPolynomials-24-1-2-2-2,lower-alpha)")"; }
+#sec_factoringPolynomials-24-1-2-2-2 > li { counter-increment: sec_factoringPolynomials-24-1-2-2-2; }
+#def-ufd-2-1-4 { counter-set: def-ufd-2-1-4 0; }
+#def-ufd-2-1-4 > li::marker { content: ""counter(def-ufd-2-1-4,decimal)"."; }
+#def-ufd-2-1-4 > li { counter-increment: def-ufd-2-1-4; }
+#sec_nonuniqueFactorization-6-2-3 { counter-set: sec_nonuniqueFactorization-6-2-3 0; }
+#sec_nonuniqueFactorization-6-2-3 > li::marker { content: ""counter(sec_nonuniqueFactorization-6-2-3,decimal)"."; }
+#sec_nonuniqueFactorization-6-2-3 > li { counter-increment: sec_nonuniqueFactorization-6-2-3; }
+#thm_idealgeneratingset-1-1-4 { counter-set: thm_idealgeneratingset-1-1-4 0; }
+#thm_idealgeneratingset-1-1-4 > li::marker { content: ""counter(thm_idealgeneratingset-1-1-4,decimal)"."; }
+#thm_idealgeneratingset-1-1-4 > li { counter-increment: thm_idealgeneratingset-1-1-4; }
+#expl-homomorphism-examples-1-2 { counter-set: expl-homomorphism-examples-1-2 0; }
+#expl-homomorphism-examples-1-2 > li::marker { content: ""counter(expl-homomorphism-examples-1-2,decimal)"."; }
+#expl-homomorphism-examples-1-2 > li { counter-increment: expl-homomorphism-examples-1-2; }
+#expl-homomorphism-examples-2-1 { counter-set: expl-homomorphism-examples-2-1 0; }
+#expl-homomorphism-examples-2-1 > li::marker { content: ""counter(expl-homomorphism-examples-2-1,decimal)"."; }
+#expl-homomorphism-examples-2-1 > li { counter-increment: expl-homomorphism-examples-2-1; }
+#sec-homomorphisms-tf-1-2 { counter-set: sec-homomorphisms-tf-1-2 0; }
+#sec-homomorphisms-tf-1-2 > li::marker { content: "("counter(sec-homomorphisms-tf-1-2,lower-alpha)")"; }
+#sec-homomorphisms-tf-1-2 > li { counter-increment: sec-homomorphisms-tf-1-2; }
+#sec_quotientRings-4-4-1-2 { counter-set: sec_quotientRings-4-4-1-2 0; }
+#sec_quotientRings-4-4-1-2 > li::marker { content: ""counter(sec_quotientRings-4-4-1-2,decimal)"."; }
+#sec_quotientRings-4-4-1-2 > li { counter-increment: sec_quotientRings-4-4-1-2; }
+#sec_quotientRings-4-15-1-2 { counter-set: sec_quotientRings-4-15-1-2 0; }
+#sec_quotientRings-4-15-1-2 > li::marker { content: ""counter(sec_quotientRings-4-15-1-2,decimal)"."; }
+#sec_quotientRings-4-15-1-2 > li { counter-increment: sec_quotientRings-4-15-1-2; }
+#sec_quotientRings-4-17-1-2 { counter-set: sec_quotientRings-4-17-1-2 0; }
+#sec_quotientRings-4-17-1-2 > li::marker { content: ""counter(sec_quotientRings-4-17-1-2,decimal)"."; }
+#sec_quotientRings-4-17-1-2 > li { counter-increment: sec_quotientRings-4-17-1-2; }
+#sec_quotientRings-4-18-3-3 { counter-set: sec_quotientRings-4-18-3-3 0; }
+#sec_quotientRings-4-18-3-3 > li::marker { content: ""counter(sec_quotientRings-4-18-3-3,decimal)"."; }
+#sec_quotientRings-4-18-3-3 > li { counter-increment: sec_quotientRings-4-18-3-3; }
+#subsec-prime-maximal-ideal-5-1-1-1 { counter-set: subsec-prime-maximal-ideal-5-1-1-1 0; }
+#subsec-prime-maximal-ideal-5-1-1-1 > li::marker { content: ""counter(subsec-prime-maximal-ideal-5-1-1-1,decimal)"."; }
+#subsec-prime-maximal-ideal-5-1-1-1 > li { counter-increment: subsec-prime-maximal-ideal-5-1-1-1; }
+#subsec-prime-maximal-ideal-5-2-1-1 { counter-set: subsec-prime-maximal-ideal-5-2-1-1 0; }
+#subsec-prime-maximal-ideal-5-2-1-1 > li::marker { content: ""counter(subsec-prime-maximal-ideal-5-2-1-1,decimal)"."; }
+#subsec-prime-maximal-ideal-5-2-1-1 > li { counter-increment: subsec-prime-maximal-ideal-5-2-1-1; }
+#sec_quotientRings-6-19-1-1-1 { counter-set: sec_quotientRings-6-19-1-1-1 0; }
+#sec_quotientRings-6-19-1-1-1 > li::marker { content: ""counter(sec_quotientRings-6-19-1-1-1,decimal)"."; }
+#sec_quotientRings-6-19-1-1-1 > li { counter-increment: sec_quotientRings-6-19-1-1-1; }
+#sec_quotientRings-6-21-1-2 { counter-set: sec_quotientRings-6-21-1-2 0; }
+#sec_quotientRings-6-21-1-2 > li::marker { content: ""counter(sec_quotientRings-6-21-1-2,decimal)"."; }
+#sec_quotientRings-6-21-1-2 > li { counter-increment: sec_quotientRings-6-21-1-2; }
+</style>
+</head>
+<body id="ringsFirst" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Rings First:</span> <span class="subtitle">An Introduction to Abstract Algebra</span></a></h1>
+<p class="byline">Bronson Lim</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec_divisibilityIntegralDomains.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch2-ringsAndFields.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch3-factorization.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch1-integers.html" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-induction-wellordering.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Induction and the Well-Ordering Property</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-induction-wellordering.html#ssec_wellordering" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Well-Ordering Principle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-induction-wellordering.html#ssec_induction" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Principle of Mathematical Induction</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-induction-wellordering.html#sec-induction-wellordering-7" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-divisibility-gcd.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Divisibility and GCDs in the Integers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-divisibility-gcd.html#sec-divisibility-gcd-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Divisibility and the Division Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-divisibility-gcd.html#sec-divisibility-gcd-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Greatest Common Divisors</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-divisibility-gcd.html#sec-divisibility-gcd-exercises" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-primes-factorization.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Primes and Factorization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-primes-factorization.html#exers-primes-factorization" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="sec-primes-factorization.html#sec-primes-factorization-23" class="internal"><span class="codenumber">1.3</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-integers-modulo-m.html" class="internal"><span class="codenumber">1.4</span> <span class="title">The Integers modulo <span class="process-math">\(m\)</span></span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-integers-modulo-m.html#exers-integers-mod-m" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch2-ringsAndFields.html" class="internal"><span class="codenumber">2</span> <span class="title">Rings and Fields</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_fields.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-numberSystems" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Number Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-binaryOperations" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Binary Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-fields" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-propertiesOfFields" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Properties of Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-subfieldsAndExtensions" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Subfields and Extensions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_rings.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Rings</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_rings.html#sec_rings-63" class="internal"><span class="codenumber">2.2</span> <span class="title">References</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_divisibilityIntegralDomains.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Divisibility in Integral Domains</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec_principalIdealsEuclideanDomains.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Principal Ideals and Euclidean Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch3-factorization.html" class="internal"><span class="codenumber">3</span> <span class="title">Factorization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_factoringPolynomials.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Factoring Polynomials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Factorization in Euclidean Domains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-4" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Unique Factorization Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-5" class="internal"><span class="codenumber">3.2.2</span> <span class="title">The Ascending Chain Condition and Noetherian Rings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-6" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Euclidean Domains are UFDs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_nonuniqueFactorization.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Principal Ideals and Euclidean Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch4-idealsAndHomomorphisms.html" class="internal"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_ideals.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Ideals</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_ideals.html#sec_ideals-32" class="internal"><span class="codenumber">4.1</span> <span class="title">References</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_homomorphisms.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Homomorphisms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_homomorphisms.html#exers-homomorphisms" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_quotientRings.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Quotient Rings</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#sec_quotientRings-4" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Congruence modulo <span class="process-math">\(I\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#subsec-prime-maximal-ideal" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Prime and Maximal Ideals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#sec_quotientRings-6" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Homomorphisms and Quotient Rings</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_principalIdealsEuclideanDomains"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.4</span><span class="space"> </span><span class="title">Principal Ideals and Euclidean Domains</span>
+</h2>
+<article class="objectives goal-like" id="obj_principalIdealsEuclideanDomains"><h3 class="heading">
+<span class="type">Objectives:</span><span class="space"> </span><span class="title">Guiding Questions</span>
+</h3>
+<div class="introduction" id="obj_principalIdealsEuclideanDomains-2"><div class="para" id="obj_principalIdealsEuclideanDomains-2-1">In this section, we’ll seek to answer the questions:</div></div>
+<ul class="disc" id="obj_principalIdealsEuclideanDomains-3">
+<li id="obj_principalIdealsEuclideanDomains-3-1"><div class="para" id="p-derived-obj_principalIdealsEuclideanDomains-3-1">What are principal ideals, and what are principal ideal domains?</div></li>
+<li id="obj_principalIdealsEuclideanDomains-3-2"><div class="para" id="p-derived-obj_principalIdealsEuclideanDomains-3-2">What are Euclidean domains, and how are they related to PIDs?</div></li>
+</ul></article><div class="para" id="sec_principalIdealsEuclideanDomains-3">One of the ways in which mathematicians study the <em class="emphasis">structure</em> of an abstract object is by considering how it interacts with other (related) objects. This is especially true of its <em class="emphasis">sub</em>objects. Thus, in linear algebra, we are often concerned with <em class="emphasis">subspaces</em> of a vector space as a means of understanding the vector space, or even submatrices as a way of understanding a matrix (see, e.g., the cofactor expansion formula for the determinant). In real analysis and topology, the important subobjects are usually open sets, or subsequences, and the study of a graph’s subgraphs is an important approach to many questions in graph theory.</div>
+<div class="para" id="sec_principalIdealsEuclideanDomains-4">In this section, we begin a set-theoretic structural exploration of the notion of ring by considering a particularly important class of subring which will be integral to our understanding of factorization.</div>
+<div class="para" id="sec_principalIdealsEuclideanDomains-5">These subrings are called <em class="emphasis">ideals</em>. They arose in the work of Kummer and Dedekind as a way of trying to recover some notion of unique factorization in rings that do not have properties like the fundamental theorem of arithmetic in <span class="process-math">\(\Z\text{.}\)</span>
+</div>
+<article class="definition definition-like" id="def-ideal"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="def-ideal-1-1">
+<div class="para">A subset <span class="process-math">\(I\)</span> of a (not necessarily commutative) ring <span class="process-math">\(R\)</span> is called an <dfn class="terminology">ideal</dfn> if:</div>
+<ol class="decimal" id="def-ideal-1-1-4">
+<li id="def-ideal-1-1-4-1"><div class="para" id="def-ideal-1-1-4-1-1"><span class="process-math">\(\displaystyle 0\in I\)</span></div></li>
+<li id="def-ideal-1-1-4-2"><div class="para" id="def-ideal-1-1-4-2-1">for all <span class="process-math">\(x,y\in I\text{,}\)</span> <span class="process-math">\(x+y\in I\text{;}\)</span> and,</div></li>
+<li id="def-ideal-1-1-4-3"><div class="para" id="def-ideal-1-1-4-3-1">for all <span class="process-math">\(x\in I\)</span> and for all <span class="process-math">\(r\in R\text{,}\)</span> <span class="process-math">\(xr\in I\)</span> and <span class="process-math">\(rx\in I\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><div class="para" id="sec_principalIdealsEuclideanDomains-7">Observe that the third requirement for a set <span class="process-math">\(I\)</span> to be an ideal of <span class="process-math">\(R\)</span> is simplified slightly if <span class="process-math">\(R\)</span> is commutative (which, we recall, all of our rings are).</div>
+<div class="para" id="sec_principalIdealsEuclideanDomains-8">There are many important examples and types of ideals, but there are also some trivial ideals contained in every ring.</div>
+<article class="theorem theorem-like" id="sec_principalIdealsEuclideanDomains-9"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec_principalIdealsEuclideanDomains-9-1-1">Let <span class="process-math">\(R\)</span> be a ring. Then <span class="process-math">\(R\)</span> and <span class="process-math">\(\set{0}\)</span> are ideals of <span class="process-math">\(R\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="sec_principalIdealsEuclideanDomains-10"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec_principalIdealsEuclideanDomains-10-1-1">All ideals are subrings.</div></article><details id="sec_principalIdealsEuclideanDomains-11" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_principalIdealsEuclideanDomains-11-1">It is straightforward to check that all conditions of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "theorem_subringtest" missing or not unique]</code> are satisfied.</div></article></details><div class="para" id="sec_principalIdealsEuclideanDomains-12">The following theorem provides a useful characterization of when an ideal <span class="process-math">\(I\)</span> is in fact the whole ring.</div>
+<article class="theorem theorem-like" id="sec_principalIdealsEuclideanDomains-13"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec_principalIdealsEuclideanDomains-13-1-1">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> Then <span class="process-math">\(I = R\)</span> if and only if <span class="process-math">\(I\)</span> contains a unit of <span class="process-math">\(R\text{.}\)</span>
+</div></article><details id="sec_principalIdealsEuclideanDomains-14" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_principalIdealsEuclideanDomains-14-1">If <span class="process-math">\(I = R\text{,}\)</span> <span class="process-math">\(1\in R\)</span> will do.</div> <div class="para" id="sec_principalIdealsEuclideanDomains-14-2">If there is a unit <span class="process-math">\(u\in I\text{,}\)</span> then given any <span class="process-math">\(r\in R\text{,}\)</span> <span class="process-math">\(r = r u^{-1} u = (ru^{-1}) u \in I\text{,}\)</span> so <span class="process-math">\(I = R\text{.}\)</span>
+</div></article></details><div class="para" id="sec_principalIdealsEuclideanDomains-15">The most important type of ideals (for our work, at least), are those which are the sets of all multiples of a single element in the ring. Such ideals are called <em class="emphasis">principal ideals</em>.</div>
+<article class="theorem theorem-like" id="sec_principalIdealsEuclideanDomains-16"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec_principalIdealsEuclideanDomains-16-1-1">
+<div class="para">Let <span class="process-math">\(R\)</span> be commutative with identity and let <span class="process-math">\(a\in R\text{.}\)</span> The set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ideal{a} = \setof{ra}{r\in R}
+\end{equation*}
+</div>
+<div class="para">is an ideal (called the <em class="emphasis">principal ideal generated by <span class="process-math">\(a\)</span></em>).</div>
+</div></article><details id="sec_principalIdealsEuclideanDomains-17" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_principalIdealsEuclideanDomains-17-1">Observe that <span class="process-math">\(0 = 0\cdot a \in \ideal{a}\text{.}\)</span>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-17-2">Moreover, if <span class="process-math">\(r_1 a, r_2 a\in \ideal{a}\text{,}\)</span> <span class="process-math">\(r_1 a - r_2 a = (r_1 - r_2)a \in \ideal{a}\text{.}\)</span> Finally, if <span class="process-math">\(x\in R\)</span> and <span class="process-math">\(r a\in \ideal{a}\text{,}\)</span> <span class="process-math">\(x (ra) = (xr) a \in \ideal{a}\text{.}\)</span>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-17-3">Thus, <span class="process-math">\(\ideal{a}\)</span> is an ideal.</div></article></details><div class="para" id="sec_principalIdealsEuclideanDomains-18">The element <span class="process-math">\(a\)</span> in the theorem is known as a <em class="emphasis">generator</em> of <span class="process-math">\(\ideal{a}\text{.}\)</span>
+</div>
+<article class="investigation project-like" id="sec_principalIdealsEuclideanDomains-19"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec_principalIdealsEuclideanDomains-19-1-1">Let <span class="process-math">\(R\)</span> be commutative with identity, and let <span class="process-math">\(x,y,z\in R\text{.}\)</span> Give necessary and sufficient conditions for <span class="process-math">\(z\in \ideal{x}\)</span> and, separately, <span class="process-math">\(\ideal{x} \subseteq \ideal{y}\text{.}\)</span>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-19-1-2">That is, fill in the blanks: “<span class="process-math">\(z\in \ideal{x} \Leftrightarrow\)</span> _________” and “<span class="process-math">\(\ideal{x}\subseteq \ideal{y} \Leftrightarrow\)</span> _________.”</div> <div class="para" id="sec_principalIdealsEuclideanDomains-19-1-3">Justify your answers.</div>
+<div class="solutions"><details id="sec_principalIdealsEuclideanDomains-19-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="sec_principalIdealsEuclideanDomains-19-2-1">We have “<span class="process-math">\(z\in \ideal{x} \Leftrightarrow x|z\)</span>” and “<span class="process-math">\(\ideal{x}\subseteq \ideal{y} \Leftrightarrow y|x\)</span>”<details class="ptx-footnote" aria-live="polite" id="sec_principalIdealsEuclideanDomains-19-2-1-3"><summary class="ptx-footnote__number" title="Footnote 2.4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec_principalIdealsEuclideanDomains-19-2-1-3">An acceptable alternative would be: <span class="process-math">\(x\in \ideal{y}\text{.}\)</span> Make sure students are aware of this!</div></details>.</div> <div class="para" id="sec_principalIdealsEuclideanDomains-19-2-2">Note that <span class="process-math">\(z\in \ideal{x} \Leftrightarrow \exists r\in R, z = xr \Leftrightarrow x|z\text{.}\)</span>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-19-2-3">Similarly, suppose <span class="process-math">\(\ideal{x}\subseteq \ideal{y}\text{.}\)</span> Then <span class="process-math">\(x\in \ideal{y}\text{,}\)</span> so <span class="process-math">\(y|x\text{.}\)</span> Conversely, if <span class="process-math">\(y|x\text{,}\)</span> then there is some <span class="process-math">\(r\in R\)</span> such that <span class="process-math">\(x = yr\text{,}\)</span> and thus for all <span class="process-math">\(ax\in \ideal{x}\text{,}\)</span> <span class="process-math">\(ax = (ar)y \in \ideal{y}\text{.}\)</span>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-19-2-4">Note that this means that if we want to know if <span class="process-math">\(\ideal{x}\subseteq \ideal{y}\text{,}\)</span> it’s enough to check that <span class="process-math">\(x\in \ideal{y}\text{.}\)</span>
+</div>
+</div></details></div></article><div class="para" id="sec_principalIdealsEuclideanDomains-20">Principal ideals may have more than one generator.</div>
+<article class="theorem theorem-like" id="sec_principalIdealsEuclideanDomains-21"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec_principalIdealsEuclideanDomains-21-1-1">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(a\in R\text{.}\)</span> Then <span class="process-math">\(\ideal{a} = \ideal{ua}\text{,}\)</span> where <span class="process-math">\(u\)</span> is any unit of <span class="process-math">\(R\text{.}\)</span>
+</div></article><details id="sec_principalIdealsEuclideanDomains-21-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_principalIdealsEuclideanDomains-21-2-1">Apply the answer to the question.</div></article></details><article class="activity project-like" id="sec_principalIdealsEuclideanDomains-22"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec_principalIdealsEuclideanDomains-22-1-1">
+<div class="para">In <span class="process-math">\(R = \Z\text{,}\)</span> describe the principal ideals generated by</div>
+<ol class="decimal" id="sec_principalIdealsEuclideanDomains-22-1-1-2">
+<li id="sec_principalIdealsEuclideanDomains-22-1-1-2-1"><div class="para" id="sec_principalIdealsEuclideanDomains-22-1-1-2-1-1">2</div></li>
+<li id="sec_principalIdealsEuclideanDomains-22-1-1-2-2"><div class="para" id="sec_principalIdealsEuclideanDomains-22-1-1-2-2-1"><span class="process-math">\(\displaystyle -9\)</span></div></li>
+<li id="sec_principalIdealsEuclideanDomains-22-1-1-2-3"><div class="para" id="sec_principalIdealsEuclideanDomains-22-1-1-2-3-1">9</div></li>
+<li id="sec_principalIdealsEuclideanDomains-22-1-1-2-4"><div class="para" id="sec_principalIdealsEuclideanDomains-22-1-1-2-4-1">0</div></li>
+<li id="sec_principalIdealsEuclideanDomains-22-1-1-2-5"><div class="para" id="sec_principalIdealsEuclideanDomains-22-1-1-2-5-1">27</div></li>
+<li id="sec_principalIdealsEuclideanDomains-22-1-1-2-6"><div class="para" id="sec_principalIdealsEuclideanDomains-22-1-1-2-6-1">3</div></li>
+</ol>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-22-1-2">Determine the subset relations among the above ideals.</div>
+<div class="solutions"><details id="sec_principalIdealsEuclideanDomains-22-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<ol class="decimal" id="sec_principalIdealsEuclideanDomains-22-2-1">
+<li id="sec_principalIdealsEuclideanDomains-22-2-1-1"><div class="para" id="sec_principalIdealsEuclideanDomains-22-2-1-1-1">All multiples of 2</div></li>
+<li id="sec_principalIdealsEuclideanDomains-22-2-1-2"><div class="para" id="sec_principalIdealsEuclideanDomains-22-2-1-2-1">All multiples of <span class="process-math">\(-9\)</span>
+</div></li>
+<li id="sec_principalIdealsEuclideanDomains-22-2-1-3"><div class="para" id="sec_principalIdealsEuclideanDomains-22-2-1-3-1">All multiples of 9; same as the previous part.</div></li>
+<li id="sec_principalIdealsEuclideanDomains-22-2-1-4"><div class="para" id="sec_principalIdealsEuclideanDomains-22-2-1-4-1"><span class="process-math">\(\displaystyle \set{0}\)</span></div></li>
+<li id="sec_principalIdealsEuclideanDomains-22-2-1-5"><div class="para" id="sec_principalIdealsEuclideanDomains-22-2-1-5-1">All multiples of 27</div></li>
+<li id="sec_principalIdealsEuclideanDomains-22-2-1-6"><div class="para" id="sec_principalIdealsEuclideanDomains-22-2-1-6-1">All multiples of 3</div></li>
+</ol> <div class="para" id="sec_principalIdealsEuclideanDomains-22-2-2">We have <span class="process-math">\(\ideal{0}\subsetneq \ideal{27}\subsetneq \ideal{-9} = \ideal{9} \subsetneq \ideal{3}\text{.}\)</span> The ideal <span class="process-math">\(\ideal{2}\)</span> only contains <span class="process-math">\(\ideal{0}\text{,}\)</span> which is a subset of all ideals.</div>
+</div></details></div></article><div class="para" id="sec_principalIdealsEuclideanDomains-23">It is the case in many familiar settings that all ideals are principal. Such domains are given a special name.</div>
+<article class="definition definition-like" id="sec_principalIdealsEuclideanDomains-24"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.7</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec_principalIdealsEuclideanDomains-24-1-1">An integral domain <span class="process-math">\(R\)</span> in which every ideal is principal is known as a <dfn class="terminology">principal ideal domain (PID)</dfn>.</div></article><article class="theorem theorem-like" id="thm_ZisPID"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.8</span><span class="period">.</span>
+</h3>
+<div class="para" id="thm_ZisPID-1-1">The ring <span class="process-math">\(\Z\)</span> is a principal ideal domain.</div>
+<details id="thm_ZisPID-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="thm_ZisPID-2-1">Use properties specific to <span class="process-math">\(\Z\text{,}\)</span> perhaps from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "Sec-Integers" missing or not unique]</code>.</div></div></details></article><details id="sec_principalIdealsEuclideanDomains-26" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_principalIdealsEuclideanDomains-26-1">Let <span class="process-math">\(I\subseteq Z\)</span> be an ideal. If <span class="process-math">\(I = \set{0}\text{,}\)</span> then <span class="process-math">\(I = \ideal{0}\text{,}\)</span> so suppose there is some nonzero <span class="process-math">\(x\in I\text{.}\)</span> Define <span class="process-math">\(S = \setof{m\in \Z}{m &gt; 0}\text{.}\)</span> Note that <span class="process-math">\(S\ne \emptyset\text{,}\)</span> as if <span class="process-math">\(m\in I\text{,}\)</span> <span class="process-math">\((-1)m \in I\)</span> also.</div> <div class="para" id="sec_principalIdealsEuclideanDomains-26-2">By WOP, <span class="process-math">\(S\)</span> has a least element, call it <span class="process-math">\(d\text{.}\)</span>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-26-3">
+<em class="emphasis">Claim:</em> <span class="process-math">\(I = \ideal{d}\text{.}\)</span>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-26-4">It is clear that <span class="process-math">\(\ideal{d}\subseteq I\text{.}\)</span> Now let <span class="process-math">\(x\in I\)</span> be nonzero, and write <span class="process-math">\(x = dq + r\)</span> using the division algorithm. Observe that <span class="process-math">\(0 \le r = x - dq \lt d\text{,}\)</span> but as <span class="process-math">\(x\in I\)</span> and <span class="process-math">\(-dq \in I\text{,}\)</span> we must have <span class="process-math">\(r\in I\text{.}\)</span> To avoid contradicting the WOP, we must have <span class="process-math">\(r = 0\text{.}\)</span> Thus, <span class="process-math">\(x = dq\)</span> and <span class="process-math">\(x\in \ideal{d}\text{.}\)</span>
+</div></article></details><article class="activity project-like" id="sec_principalIdealsEuclideanDomains-27"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec_principalIdealsEuclideanDomains-27-1-1">
+<div class="para">Find an integer <span class="process-math">\(d\)</span> such that <span class="process-math">\(I = \ideal{d}\subseteq \Z\text{,}\)</span> if</div>
+<ol class="decimal" id="sec_principalIdealsEuclideanDomains-27-1-1-3">
+<li id="sec_principalIdealsEuclideanDomains-27-1-1-3-1"><div class="para" id="sec_principalIdealsEuclideanDomains-27-1-1-3-1-1"><span class="process-math">\(\displaystyle I = \setof{4x+10y}{x,y\in\Z}\)</span></div></li>
+<li id="sec_principalIdealsEuclideanDomains-27-1-1-3-2"><div class="para" id="sec_principalIdealsEuclideanDomains-27-1-1-3-2-1"><span class="process-math">\(\displaystyle I = \setof{6s+7t}{s,t\in\Z}\)</span></div></li>
+<li id="sec_principalIdealsEuclideanDomains-27-1-1-3-3"><div class="para" id="sec_principalIdealsEuclideanDomains-27-1-1-3-3-1"><span class="process-math">\(\displaystyle I = \setof{9w+12z}{w,z\in\Z}\)</span></div></li>
+<li id="sec_principalIdealsEuclideanDomains-27-1-1-3-4"><div class="para" id="sec_principalIdealsEuclideanDomains-27-1-1-3-4-1"><span class="process-math">\(\displaystyle I = \setof{am+bn}{m,n\in\Z}\)</span></div></li>
+</ol>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-27-1-2">You do not need to prove that each of the sets above are ideals (though you should make sure you can do it).</div>
+<div class="solutions"><details id="sec_principalIdealsEuclideanDomains-27-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec_principalIdealsEuclideanDomains-27-2-1">
+<div class="para">We see:</div>
+<ol class="decimal" id="sec_principalIdealsEuclideanDomains-27-2-1-1">
+<li id="sec_principalIdealsEuclideanDomains-27-2-1-1-1"><div class="para" id="sec_principalIdealsEuclideanDomains-27-2-1-1-1-1"><span class="process-math">\(\displaystyle I= \ideal{2}\)</span></div></li>
+<li id="sec_principalIdealsEuclideanDomains-27-2-1-1-2"><div class="para" id="sec_principalIdealsEuclideanDomains-27-2-1-1-2-1"><span class="process-math">\(\displaystyle I = \ideal{1} = \Z\)</span></div></li>
+<li id="sec_principalIdealsEuclideanDomains-27-2-1-1-3"><div class="para" id="sec_principalIdealsEuclideanDomains-27-2-1-1-3-1"><span class="process-math">\(\displaystyle I = \ideal{3}\)</span></div></li>
+<li id="sec_principalIdealsEuclideanDomains-27-2-1-1-4"><div class="para" id="sec_principalIdealsEuclideanDomains-27-2-1-1-4-1"><span class="process-math">\(\displaystyle I = \ideal{\gcd(a,b)}\)</span></div></li>
+</ol>
+</div></div></details></div></article><article class="theorem theorem-like" id="sec_principalIdealsEuclideanDomains-28"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.9</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec_principalIdealsEuclideanDomains-28-1-1">
+<div class="para">Let <span class="process-math">\(R\)</span> be a principal ideal domain and <span class="process-math">\(x,y\in R\)</span> be not both zero. Let <span class="process-math">\(I = \setof{xm+yn}{m,n\in R}\text{.}\)</span> Then:</div>
+<ol class="decimal" id="sec_principalIdealsEuclideanDomains-28-1-1-4">
+<li id="sec_principalIdealsEuclideanDomains-28-1-1-4-1"><div class="para" id="sec_principalIdealsEuclideanDomains-28-1-1-4-1-1">
+<span class="process-math">\(I\)</span> is an ideal, so there is some <span class="process-math">\(d\in R\)</span> for which <span class="process-math">\(I = \ideal{d}\text{;}\)</span>
+</div></li>
+<li id="sec_principalIdealsEuclideanDomains-28-1-1-4-2"><div class="para" id="sec_principalIdealsEuclideanDomains-28-1-1-4-2-1">
+<span class="process-math">\(d\)</span> is a <a href="sec_divisibilityIntegralDomains.html#def-gcd-domain" class="xref" data-knowl="./knowl/xref/def-gcd-domain.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.3.7">greatest common divisor</a> of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>
+</div></li>
+</ol>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-28-1-2">We conclude that there exist <span class="process-math">\(s,t\in R\)</span> such that <span class="process-math">\(d = xs + yt\text{.}\)</span>
+</div></article><details id="sec_principalIdealsEuclideanDomains-29" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_principalIdealsEuclideanDomains-29-1">Observe that <span class="process-math">\(0 = x0 + y0 \in I\text{.}\)</span> Additionally, if <span class="process-math">\(x m_1 + y n_1, x m_2 + y n_2\in I\text{,}\)</span> then <span class="process-math">\((x m_1 + y n_1) + (x m_2 + y n_2) = x (m_1 + m_2) + y (n_1 + n_2) \in I\text{,}\)</span> and <span class="process-math">\(r(x m_1 + y n_1) = x (rm_1) + y(rn_1) \in I\text{.}\)</span> Thus, <span class="process-math">\(I\)</span> is an ideal.</div> <div class="para" id="sec_principalIdealsEuclideanDomains-29-2">Since <span class="process-math">\(R\)</span> is a PID, there exists <span class="process-math">\(d\in R\)</span> such that <span class="process-math">\(I = \ideal{d}\text{.}\)</span> We claim that <span class="process-math">\(d\)</span> is a GCD of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-29-3">It is clear that <span class="process-math">\(d|x\text{,}\)</span> as <span class="process-math">\(x\cdot 1 + y\cdot 0\in I = \ideal{d}\text{.}\)</span> Similarly, <span class="process-math">\(d|y\text{.}\)</span>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-29-4">Now let <span class="process-math">\(e\in R\)</span> be a common divisor of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> We wish to show that <span class="process-math">\(e|d\text{.}\)</span> Write <span class="process-math">\(x = e k_1\)</span> and <span class="process-math">\(y = e k_2\text{.}\)</span> Since <span class="process-math">\(d\in \ideal{d}\text{,}\)</span> there exist <span class="process-math">\(s,t\in R\)</span> such that <span class="process-math">\(d = x s + yt = (e k_1) s + (e k_2)t = e(k_1 s + k_2 t)\text{,}\)</span> and thus <span class="process-math">\(e|d\text{.}\)</span>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-29-5">In particular, there exist <span class="process-math">\(s,t\in R\)</span> such that a GCD <span class="process-math">\(d\)</span> of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> can be written as <span class="process-math">\(d = xs + yt\text{.}\)</span>
+</div></article></details><div class="para" id="sec_principalIdealsEuclideanDomains-30">We have so far abstracted and axiomatized several important algebraic properties of <span class="process-math">\(\Z\)</span> that we discussed in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "Sec-Integers" missing or not unique]</code>. In particular, we have our usual operations of addition and multiplication, and their interactions; we have notions of divisibility/factorization, irreducibility, and primality; we also have cancellation and greatest common divisors.</div>
+<div class="para" id="sec_principalIdealsEuclideanDomains-31">Our last major abstraction from <span class="process-math">\(\Z\)</span> is the division algorithm. The main obstacle to postulating domains with a division algorithm is a clear notion of comparison relations. That is, if <span class="process-math">\(R\)</span> is an arbitrary domain with <span class="process-math">\(r,s\in R\text{,}\)</span> is it possible to clearly and sensibly say which of <span class="process-math">\(r\)</span> or <span class="process-math">\(s\)</span> is “bigger” ? (Recall that this was a requirement for the division algorithm with nonzero remainders.) However, if there is a way to relate elements of a domain <span class="process-math">\(R\)</span> to <span class="process-math">\(\N_0\text{,}\)</span> we can sensibly define a division algorithm.</div>
+<article class="definition definition-like" id="sec_principalIdealsEuclideanDomains-32"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.10</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec_principalIdealsEuclideanDomains-32-1-1">
+<div class="para">Let <span class="process-math">\(R\)</span> be an integral domain. We call <span class="process-math">\(R\)</span> a <dfn class="terminology">Euclidean domain</dfn> if there is a function <span class="process-math">\(\delta : R\setminus \set{0} \to \N_0\)</span> such that: <aside class="aside aside-like" id="sec_principalIdealsEuclideanDomains-32-1-1-5"></aside>
+</div>
+<ol class="decimal" id="sec_principalIdealsEuclideanDomains-32-1-1-6">
+<li id="sec_principalIdealsEuclideanDomains-32-1-1-6-1"><div class="para" id="sec_principalIdealsEuclideanDomains-32-1-1-6-1-1">If <span class="process-math">\(a,b\in R\setminus \set{0}\text{,}\)</span> then <span class="process-math">\(\delta(a) \le \delta(ab)\text{.}\)</span>
+</div></li>
+<li id="sec_principalIdealsEuclideanDomains-32-1-1-6-2"><div class="para" id="sec_principalIdealsEuclideanDomains-32-1-1-6-2-1">If <span class="process-math">\(a,b\in R\text{,}\)</span> <span class="process-math">\(b\ne 0\text{,}\)</span> then there exist <span class="process-math">\(q,r\in R\)</span> such that <span class="process-math">\(a = bq+r\text{,}\)</span> where either <span class="process-math">\(r = 0\)</span> or <span class="process-math">\(\delta(r) \lt \delta(b)\text{.}\)</span>
+</div></li>
+</ol>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-32-1-2">We call the function <span class="process-math">\(\delta\)</span> a <dfn class="terminology">norm</dfn> for <span class="process-math">\(R\text{.}\)</span>
+</div></article><div class="para" id="sec_principalIdealsEuclideanDomains-33">Thus, a Euclidean domain is an integral domain with a division algorithm that behaves in a familiar way. In the remainder of this section, we will investigate the properties of Euclidean domains. First, we consider some examples.</div>
+<article class="theorem theorem-like" id="sec_principalIdealsEuclideanDomains-34"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.11</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec_principalIdealsEuclideanDomains-34-1-1">The field <span class="process-math">\(\Q\)</span> is a Euclidean domain under ordinary addition and multiplication, with <span class="process-math">\(\delta(x) = 0\)</span> for all <span class="process-math">\(x\in \Q\text{.}\)</span>
+</div></article><details id="sec_principalIdealsEuclideanDomains-34-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content">TBD.</article></details><article class="investigation project-like" id="sec_principalIdealsEuclideanDomains-35"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec_principalIdealsEuclideanDomains-35-1-1">Is <span class="process-math">\(\Z\)</span> a Euclidean domain? If so, what is the norm function <span class="process-math">\(\delta\text{,}\)</span> and why does this function have the required properties of a norm?</div>
+<div class="solutions"><details id="sec_principalIdealsEuclideanDomains-35-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="sec_principalIdealsEuclideanDomains-35-2-1">Yes. The norm is the absolute value function.</div></div></details></div></article><article class="lemma theorem-like" id="lem_minimaldegreepoly"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.4.12</span><span class="period">.</span>
+</h3>
+<div class="para" id="lem_minimaldegreepoly-1-1">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(S\subseteq F[x]\)</span> a set containing a nonzero polynomial. Prove that <span class="process-math">\(S\)</span> contains a polynomial <span class="process-math">\(f\)</span> such that <span class="process-math">\(\deg(f) \le \deg(g)\)</span> for all nonzero <span class="process-math">\(g\in S\text{.}\)</span>
+</div></article><details id="sec_principalIdealsEuclideanDomains-37" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_principalIdealsEuclideanDomains-37-1">Let <span class="process-math">\(T = \setof{\deg g}{g\in S}\text{.}\)</span> Since <span class="process-math">\(S\)</span> contains a nonzero polynomial, <span class="process-math">\(T\ne \emptyset\text{.}\)</span> By WOP, <span class="process-math">\(T\)</span> contains a minimal element <span class="process-math">\(d \ge 0\text{,}\)</span> which must be the degree of some polynomial in <span class="process-math">\(S\text{.}\)</span>
+</div></article></details><article class="lemma theorem-like" id="lem_polydivalglem"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.4.13</span><span class="period">.</span>
+</h3>
+<div class="para" id="lem_polydivalglem-1-1">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(f(x),g(x)\in F[x]\)</span> with <span class="process-math">\(g(x)\ne 0\text{.}\)</span> If <span class="process-math">\(\deg f(x) \ge \deg g(x) &gt; 0\text{,}\)</span> and <span class="process-math">\(f(x) = a_0 + a_1 x + \cdots + a_m x^m\)</span> and <span class="process-math">\(g(x) = b_0 + b_1 x + \cdots + b_n x^n\text{,}\)</span> then <span class="process-math">\(h(x) = f(x) - a_m b_n^{-1} x^{m-n} g(x)\)</span> has degree strictly less than <span class="process-math">\(\deg f(x)\text{.}\)</span>
+</div></article><details id="sec_principalIdealsEuclideanDomains-39" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_principalIdealsEuclideanDomains-39-1">The leading term of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(a_m x^m\text{,}\)</span> while the leading term of <span class="process-math">\(a_m b_n^{-1} x^{m-n} g(x)\)</span> is <span class="process-math">\(a_m b_n^{-1} x^{m-n} (b_n x^n) = a_m x^m\text{.}\)</span> Thus, the leading term of <span class="process-math">\(h\)</span> has degree less than <span class="process-math">\(m\text{.}\)</span>
+</div></article></details><article class="theorem theorem-like" id="theorem_polydivalg"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.14</span><span class="period">.</span><span class="space"> </span><span class="title">(Polynomial Division Algorithm).</span>
+</h3>
+<aside class="aside aside-like" id="theorem_polydivalg-2"></aside><div class="para logical" id="theorem_polydivalg-3-1">
+<div class="para">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(f(x),g(x)\in F[x]\)</span> with <span class="process-math">\(g(x)\ne 0\text{.}\)</span> Then there exist unique <span class="process-math">\(q(x),
+r(x) \in F[x]\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x) = g(x) q(x) + r(x)\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\deg(r(x)) \lt  \deg g(x)\text{.}\)</span>
+</div>
+</div>
+<details id="theorem_polydivalg-4" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="theorem_polydivalg-4-1">For existence, consider three cases: <span class="process-math">\(f(x) = 0\text{;}\)</span> <span class="process-math">\(f(x) \ne 0\)</span> and <span class="process-math">\(\deg f \lt \deg g\text{;}\)</span> <span class="process-math">\(f(x) \ne 0\)</span> and <span class="process-math">\(\deg f \ge \deg g\text{.}\)</span> In the last case, use induction on <span class="process-math">\(m = \deg f(x)\text{.}\)</span> For uniqueness, mimic the uniqueness proof of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_divalg" missing or not unique]</code>.</div></div></details></article><details id="sec_principalIdealsEuclideanDomains-41" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_principalIdealsEuclideanDomains-41-1">
+<em class="emphasis">Existence:</em> If <span class="process-math">\(f(x) = 0\text{,}\)</span> then <span class="process-math">\(q(x) = 0\)</span> and <span class="process-math">\(r(x) = 0\)</span> will do. If <span class="process-math">\(f(x)\ne 0\)</span> and <span class="process-math">\(\deg f \lt \deg g\text{,}\)</span> then <span class="process-math">\(q(x) = 0\)</span> and <span class="process-math">\(r(x) = f(x)\)</span> will suffice. Thus, we need only consider the case in which <span class="process-math">\(f(x) \ne 0\)</span> and <span class="process-math">\(\deg f \ge \deg g\text{.}\)</span> We use induction on <span class="process-math">\(\deg f = m\text{.}\)</span>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-41-2">When <span class="process-math">\(m = 0\text{,}\)</span> <span class="process-math">\(\deg g \le 0 = \deg f\text{,}\)</span> and as <span class="process-math">\(g(x) \ne 0\text{,}\)</span> both <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are nonzero constants. Then <span class="process-math">\(r = 0\)</span> and <span class="process-math">\(q = fg^{-1}\)</span> will work.</div> <div class="para" id="sec_principalIdealsEuclideanDomains-41-3">Now assume <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> exist whenever <span class="process-math">\(\deg f \lt m\text{.}\)</span> Assume <span class="process-math">\(\deg f = m\)</span> and write <span class="process-math">\(f(x) = a_0 + a_1 x + \cdots + a_m x^m\)</span> and <span class="process-math">\(g(x) = b_0 + b_1 x + \cdots + b_n x^n\text{.}\)</span> Use <a href="sec_principalIdealsEuclideanDomains.html#lem_polydivalglem" class="xref" data-knowl="./knowl/xref/lem_polydivalglem.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 2.4.13">Lemma 2.4.13</a> and set <span class="process-math">\(h(x) = f(x) - a_m b_n^{-1} x^{m-n} g(x)\text{,}\)</span> which must have degree less than <span class="process-math">\(f\text{.}\)</span> Thus, by induction, there exist <span class="process-math">\(q_1, r_1\in F[x]\)</span> such that <span class="process-math">\(h = g q_1 + r_1\text{,}\)</span> with <span class="process-math">\(r_1 = 0\)</span> or <span class="process-math">\(\deg r_1 \lt \deg g\text{.}\)</span>
+</div> <div class="para logical" id="sec_principalIdealsEuclideanDomains-41-4">
+<div class="para">We therefore have</div>
+<div class="displaymath process-math" id="sec_principalIdealsEuclideanDomains-41-4-1">
+\begin{align*}
+f(x) \amp = a_m b_n^{-1} x^{m-n} g(x) + h(x)\\
+\amp = a_m b_n^{-1} x^{m-n} g(x) + g(x) q_1(x) + r_1(x)\\
+\amp = (a_m b_n^{-1} x^{m-n} + q_1(x)) g(x) + r_1(x)\text{,}
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(q = a_m b_n^{-1} x^{m-n} + q_1(x)\)</span> and <span class="process-math">\(r = r_1(x)\)</span> have the desired properties.</div>
+</div> <div class="para logical" id="sec_principalIdealsEuclideanDomains-41-5">
+<div class="para">
+<em class="emphasis">Uniqueness:</em> Suppose <span class="process-math">\(f = gq + r\)</span> and <span class="process-math">\(f = g\hat{q} + \hat{r}\text{,}\)</span> where <span class="process-math">\(r,\hat{r}\)</span> both have the desired properties. Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = g[q - \hat{q}] + [r - \hat{r}]\text{,}
+\end{equation*}
+</div>
+<div class="para">or <span class="process-math">\(\hat{r} - r = g [q - \hat{q}]\text{.}\)</span> Thus either <span class="process-math">\(\hat{r} - r = 0\text{,}\)</span> or <span class="process-math">\(\hat{r} - r\)</span> has degree at least <span class="process-math">\(\deg g\text{.}\)</span> The latter is clearly impossible, so <span class="process-math">\(\hat{r} = r\)</span> and <span class="process-math">\(\hat{q} = q\text{.}\)</span>
+</div>
+</div></article></details><article class="theorem theorem-like" id="sec_principalIdealsEuclideanDomains-42"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.15</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec_principalIdealsEuclideanDomains-42-1-1">Let <span class="process-math">\(F\)</span> be a field. Then the ring <span class="process-math">\(F[x]\)</span> is a principal ideal domain.</div>
+<details id="sec_principalIdealsEuclideanDomains-42-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="sec_principalIdealsEuclideanDomains-42-2-1">Mimic the proof of <a href="sec_principalIdealsEuclideanDomains.html#thm_ZisPID" class="xref" data-knowl="./knowl/xref/thm_ZisPID.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.4.8">Theorem 2.4.8</a> and use <a href="sec_principalIdealsEuclideanDomains.html#lem_minimaldegreepoly" class="xref" data-knowl="./knowl/xref/lem_minimaldegreepoly.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 2.4.12">Lemma 2.4.12</a>!</div></div></details></article><details id="sec_principalIdealsEuclideanDomains-43" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_principalIdealsEuclideanDomains-43-1">Let <span class="process-math">\(I\)</span> be a nonzero ideal of <span class="process-math">\(F[x]\)</span> and let <span class="process-math">\(f(x)\in I\)</span> be a polynomial of smallest degree. We claim <span class="process-math">\(I = \ideal{f(x)}\text{.}\)</span>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-43-2">Clearly <span class="process-math">\(\ideal{f(x)}\subseteq I\text{.}\)</span>
+</div> <div class="para" id="sec_principalIdealsEuclideanDomains-43-3">Let <span class="process-math">\(g(x)\in I\)</span> and use <a href="sec_principalIdealsEuclideanDomains.html#theorem_polydivalg" class="xref" data-knowl="./knowl/xref/theorem_polydivalg.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.4.14: (Polynomial Division Algorithm)">Theorem 2.4.14</a> to write <span class="process-math">\(g(x) = f(x) q(x) + r(x)\text{,}\)</span> where <span class="process-math">\(\deg r(x) \lt \deg f(x)\)</span> or <span class="process-math">\(r(x) = 0\text{.}\)</span> As in <a href="sec_principalIdealsEuclideanDomains.html#thm_ZisPID" class="xref" data-knowl="./knowl/xref/thm_ZisPID.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.4.8">Theorem 2.4.8</a>, write <span class="process-math">\(r(x) = g(x) - f(x) q(x) \in I\text{,}\)</span> so we must have that <span class="process-math">\(r(x) = 0\text{.}\)</span> Thus, <span class="process-math">\(f(x) | g(x)\)</span> and <span class="process-math">\(g(x)\in \ideal{f(x)}\text{.}\)</span>
+</div></article></details><article class="investigation project-like" id="sec_principalIdealsEuclideanDomains-44"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec_principalIdealsEuclideanDomains-44-1-1">Is <span class="process-math">\(F[x]\)</span> a Euclidean domain for all fields <span class="process-math">\(F\text{?}\)</span> If so, what is the norm function <span class="process-math">\(\delta\text{,}\)</span> and why does this function have the required properties of a norm? If not, why not? Prove your answer.</div>
+<div class="solutions"><details id="sec_principalIdealsEuclideanDomains-44-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="sec_principalIdealsEuclideanDomains-44-2-1">Yes. It’s the degree function.</div></div></details></div></article><div class="para" id="sec_principalIdealsEuclideanDomains-45">In fact, every Euclidean domain is a PID.</div>
+<article class="theorem theorem-like" id="thm_edispid"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.16</span><span class="period">.</span>
+</h3>
+<div class="para" id="thm_edispid-1-1">Every Euclidean domain is a principal ideal domain.</div>
+<details id="thm_edispid-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="thm_edispid-2-1">Mimic the proof of <a href="sec_principalIdealsEuclideanDomains.html#thm_ZisPID" class="xref" data-knowl="./knowl/xref/thm_ZisPID.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.4.8">Theorem 2.4.8</a>.</div></div></details></article><details id="thm_edispid-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_edispid-3-1">Let <span class="process-math">\(R\)</span> be a euclidean domain, and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> If <span class="process-math">\(I = \set{0}\text{,}\)</span> then <span class="process-math">\(I\)</span> is principal, so assume that <span class="process-math">\(I\ne \set{0}\text{.}\)</span>
+</div> <div class="para" id="thm_edispid-3-2">Define <span class="process-math">\(S = \setof{\delta(x)&gt;0}{x\in I}\text{.}\)</span> Then the Well-Ordering Principle guarantees that <span class="process-math">\(S\)</span> has a least element. Let <span class="process-math">\(d\in I\)</span> be such that <span class="process-math">\(\delta(d) &gt; 0\)</span> is minimal. We claim that <span class="process-math">\(I = \ideal{d}\text{.}\)</span>
+</div> <div class="para" id="thm_edispid-3-3">Clearly <span class="process-math">\(\ideal{d}\subseteq I\text{.}\)</span> Now assume that <span class="process-math">\(a\in I\text{,}\)</span> and write <span class="process-math">\(a = dq + r\text{,}\)</span> where either <span class="process-math">\(r = 0\)</span> or <span class="process-math">\(r\ne 0\)</span> and <span class="process-math">\(\delta(r) \lt \delta(d)\text{.}\)</span> If <span class="process-math">\(\delta(r) \lt \delta(d)\text{,}\)</span> then <span class="process-math">\(r = a - dq \in I\text{,}\)</span> contradicting the minimality of <span class="process-math">\(\delta(d)\text{.}\)</span> Thus, <span class="process-math">\(r = 0\text{,}\)</span> and <span class="process-math">\(a\in \ideal{d}\text{.}\)</span>
+</div> <div class="para" id="thm_edispid-3-4">Therefore, <span class="process-math">\(R\)</span> is a PID.</div></article></details><article class="exploration project-like" id="sec_principalIdealsEuclideanDomains-47"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec_principalIdealsEuclideanDomains-47-1-1">Where do Euclidean domains and PIDs fit in the hierarchy of abstraction found in <a href="sec_divisibilityIntegralDomains.html#exer_ringgeneralityone" class="xref" data-knowl="./knowl/xref/exer_ringgeneralityone.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 2.3.6">Question 2.3.6</a>?</div></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec_divisibilityIntegralDomains.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch3-factorization.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

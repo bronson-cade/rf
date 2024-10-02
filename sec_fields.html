@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Fields</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Rings First">
+<meta property="book:author" content="Bronson Lim">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#ssec_wellordering-8-1-3 { counter-set: ssec_wellordering-8-1-3 0; }
+#ssec_wellordering-8-1-3 > li::marker { content: ""counter(ssec_wellordering-8-1-3,decimal)"."; }
+#ssec_wellordering-8-1-3 > li { counter-increment: ssec_wellordering-8-1-3; }
+#ssec_wellordering-8-2-1 { counter-set: ssec_wellordering-8-2-1 0; }
+#ssec_wellordering-8-2-1 > li::marker { content: ""counter(ssec_wellordering-8-2-1,decimal)"."; }
+#ssec_wellordering-8-2-1 > li { counter-increment: ssec_wellordering-8-2-1; }
+#thm_mathematical_induction-2-3 { counter-set: thm_mathematical_induction-2-3 0; }
+#thm_mathematical_induction-2-3 > li::marker { content: ""counter(thm_mathematical_induction-2-3,decimal)"."; }
+#thm_mathematical_induction-2-3 > li { counter-increment: thm_mathematical_induction-2-3; }
+#sec-induction-tf-1-2 { counter-set: sec-induction-tf-1-2 0; }
+#sec-induction-tf-1-2 > li::marker { content: "("counter(sec-induction-tf-1-2,lower-alpha)")"; }
+#sec-induction-tf-1-2 > li { counter-increment: sec-induction-tf-1-2; }
+#sec-induction-smallest-elements1-1-2 { counter-set: sec-induction-smallest-elements1-1-2 0; }
+#sec-induction-smallest-elements1-1-2 > li::marker { content: "("counter(sec-induction-smallest-elements1-1-2,lower-alpha)")"; }
+#sec-induction-smallest-elements1-1-2 > li { counter-increment: sec-induction-smallest-elements1-1-2; }
+#sec-induction-smallest-elements2-1-2 { counter-set: sec-induction-smallest-elements2-1-2 0; }
+#sec-induction-smallest-elements2-1-2 > li::marker { content: "("counter(sec-induction-smallest-elements2-1-2,lower-alpha)")"; }
+#sec-induction-smallest-elements2-1-2 > li { counter-increment: sec-induction-smallest-elements2-1-2; }
+#sec-divisibility-gcd-3-5-1-1-2 { counter-set: sec-divisibility-gcd-3-5-1-1-2 0; }
+#sec-divisibility-gcd-3-5-1-1-2 > li::marker { content: ""counter(sec-divisibility-gcd-3-5-1-1-2,decimal)"."; }
+#sec-divisibility-gcd-3-5-1-1-2 > li { counter-increment: sec-divisibility-gcd-3-5-1-1-2; }
+#gcd-definition-2-1-9 { counter-set: gcd-definition-2-1-9 0; }
+#gcd-definition-2-1-9 > li::marker { content: ""counter(gcd-definition-2-1-9,decimal)"."; }
+#gcd-definition-2-1-9 > li { counter-increment: gcd-definition-2-1-9; }
+#act-gcdcomputations-1-1-2 { counter-set: act-gcdcomputations-1-1-2 0; }
+#act-gcdcomputations-1-1-2 > li::marker { content: ""counter(act-gcdcomputations-1-1-2,decimal)"."; }
+#act-gcdcomputations-1-1-2 > li { counter-increment: act-gcdcomputations-1-1-2; }
+#sec-divisibility-gcd-tf-1-2 { counter-set: sec-divisibility-gcd-tf-1-2 0; }
+#sec-divisibility-gcd-tf-1-2 > li::marker { content: "("counter(sec-divisibility-gcd-tf-1-2,lower-alpha)")"; }
+#sec-divisibility-gcd-tf-1-2 > li { counter-increment: sec-divisibility-gcd-tf-1-2; }
+#sec-divisibility-gcd-quorem-1-2 { counter-set: sec-divisibility-gcd-quorem-1-2 0; }
+#sec-divisibility-gcd-quorem-1-2 > li::marker { content: "("counter(sec-divisibility-gcd-quorem-1-2,lower-alpha)")"; }
+#sec-divisibility-gcd-quorem-1-2 > li { counter-increment: sec-divisibility-gcd-quorem-1-2; }
+#sec-primes-factorization-tf-1-2 { counter-set: sec-primes-factorization-tf-1-2 0; }
+#sec-primes-factorization-tf-1-2 > li::marker { content: "("counter(sec-primes-factorization-tf-1-2,lower-alpha)")"; }
+#sec-primes-factorization-tf-1-2 > li { counter-increment: sec-primes-factorization-tf-1-2; }
+#exer-primes-factorization-factorizations-1-2 { counter-set: exer-primes-factorization-factorizations-1-2 0; }
+#exer-primes-factorization-factorizations-1-2 > li::marker { content: "("counter(exer-primes-factorization-factorizations-1-2,lower-alpha)")"; }
+#exer-primes-factorization-factorizations-1-2 > li { counter-increment: exer-primes-factorization-factorizations-1-2; }
+#exer-primes-factorization-isprime-1-1-1 { counter-set: exer-primes-factorization-isprime-1-1-1 0; }
+#exer-primes-factorization-isprime-1-1-1 > li::marker { content: "("counter(exer-primes-factorization-isprime-1-1-1,lower-alpha)")"; }
+#exer-primes-factorization-isprime-1-1-1 > li { counter-increment: exer-primes-factorization-isprime-1-1-1; }
+#sec-integers-modulo-m-13-1-1-1 { counter-set: sec-integers-modulo-m-13-1-1-1 0; }
+#sec-integers-modulo-m-13-1-1-1 > li::marker { content: ""counter(sec-integers-modulo-m-13-1-1-1,decimal)"."; }
+#sec-integers-modulo-m-13-1-1-1 > li { counter-increment: sec-integers-modulo-m-13-1-1-1; }
+#def-arithemticmodm-1-1-3 { counter-set: def-arithemticmodm-1-1-3 0; }
+#def-arithemticmodm-1-1-3 > li::marker { content: ""counter(def-arithemticmodm-1-1-3,decimal)"."; }
+#def-arithemticmodm-1-1-3 > li { counter-increment: def-arithemticmodm-1-1-3; }
+#sec-integers-modulo-m-24-1-2 { counter-set: sec-integers-modulo-m-24-1-2 0; }
+#sec-integers-modulo-m-24-1-2 > li::marker { content: ""counter(sec-integers-modulo-m-24-1-2,decimal)"."; }
+#sec-integers-modulo-m-24-1-2 > li { counter-increment: sec-integers-modulo-m-24-1-2; }
+#theorem_cancelinZp-1-1-4 { counter-set: theorem_cancelinZp-1-1-4 0; }
+#theorem_cancelinZp-1-1-4 > li::marker { content: ""counter(theorem_cancelinZp-1-1-4,decimal)"."; }
+#theorem_cancelinZp-1-1-4 > li { counter-increment: theorem_cancelinZp-1-1-4; }
+#integers-mod-m-tf-1-2 { counter-set: integers-mod-m-tf-1-2 0; }
+#integers-mod-m-tf-1-2 > li::marker { content: "("counter(integers-mod-m-tf-1-2,lower-alpha)")"; }
+#integers-mod-m-tf-1-2 > li { counter-increment: integers-mod-m-tf-1-2; }
+#exers-integers-mod-m-4-1-2 { counter-set: exers-integers-mod-m-4-1-2 0; }
+#exers-integers-mod-m-4-1-2 > li::marker { content: "("counter(exers-integers-mod-m-4-1-2,lower-alpha)")"; }
+#exers-integers-mod-m-4-1-2 > li { counter-increment: exers-integers-mod-m-4-1-2; }
+#invest-binop-1-1-2 { counter-set: invest-binop-1-1-2 0; }
+#invest-binop-1-1-2 > li::marker { content: ""counter(invest-binop-1-1-2,decimal)"."; }
+#invest-binop-1-1-2 > li { counter-increment: invest-binop-1-1-2; }
+#def_field-2-1-7 { counter-set: def_field-2-1-7 0; }
+#def_field-2-1-7 > li::marker { content: ""counter(def_field-2-1-7,decimal)"."; }
+#def_field-2-1-7 > li { counter-increment: def_field-2-1-7; }
+#exer_fieldexamples-1-1-1 { counter-set: exer_fieldexamples-1-1-1 0; }
+#exer_fieldexamples-1-1-1 > li::marker { content: ""counter(exer_fieldexamples-1-1-1,decimal)"."; }
+#exer_fieldexamples-1-1-1 > li { counter-increment: exer_fieldexamples-1-1-1; }
+#exer_fieldexamples-2-1-1 { counter-set: exer_fieldexamples-2-1-1 0; }
+#exer_fieldexamples-2-1-1 > li::marker { content: ""counter(exer_fieldexamples-2-1-1,decimal)"."; }
+#exer_fieldexamples-2-1-1 > li { counter-increment: exer_fieldexamples-2-1-1; }
+#thm_fieldproperties-2-1-2 { counter-set: thm_fieldproperties-2-1-2 0; }
+#thm_fieldproperties-2-1-2 > li::marker { content: ""counter(thm_fieldproperties-2-1-2,decimal)"."; }
+#thm_fieldproperties-2-1-2 > li { counter-increment: thm_fieldproperties-2-1-2; }
+#subsec-propertiesOfFields-3-1 { counter-set: subsec-propertiesOfFields-3-1 0; }
+#subsec-propertiesOfFields-3-1 > li::marker { content: ""counter(subsec-propertiesOfFields-3-1,decimal)"."; }
+#subsec-propertiesOfFields-3-1 > li { counter-increment: subsec-propertiesOfFields-3-1; }
+#subsec-subfieldsAndExtensions-3-3-1-3 { counter-set: subsec-subfieldsAndExtensions-3-3-1-3 0; }
+#subsec-subfieldsAndExtensions-3-3-1-3 > li::marker { content: ""counter(subsec-subfieldsAndExtensions-3-3-1-3,decimal)"."; }
+#subsec-subfieldsAndExtensions-3-3-1-3 > li { counter-increment: subsec-subfieldsAndExtensions-3-3-1-3; }
+#def_ring-3-1-6 { counter-set: def_ring-3-1-6 0; }
+#def_ring-3-1-6 > li::marker { content: ""counter(def_ring-3-1-6,decimal)"."; }
+#def_ring-3-1-6 > li { counter-increment: def_ring-3-1-6; }
+#thm_subringTest-2-1-5 { counter-set: thm_subringTest-2-1-5 0; }
+#thm_subringTest-2-1-5 > li::marker { content: ""counter(thm_subringTest-2-1-5,decimal)"."; }
+#thm_subringTest-2-1-5 > li { counter-increment: thm_subringTest-2-1-5; }
+#sec_rings-24-1-1-3 { counter-set: sec_rings-24-1-1-3 0; }
+#sec_rings-24-1-1-3 > li::marker { content: ""counter(sec_rings-24-1-1-3,decimal)"."; }
+#sec_rings-24-1-1-3 > li { counter-increment: sec_rings-24-1-1-3; }
+#invest-tables-1-2 { counter-set: invest-tables-1-2 0; }
+#invest-tables-1-2 > li::marker { content: ""counter(invest-tables-1-2,decimal)"."; }
+#invest-tables-1-2 > li { counter-increment: invest-tables-1-2; }
+#sec_rings-48-1-1-1 { counter-set: sec_rings-48-1-1-1 0; }
+#sec_rings-48-1-1-1 > li::marker { content: ""counter(sec_rings-48-1-1-1,decimal)"."; }
+#sec_rings-48-1-1-1 > li { counter-increment: sec_rings-48-1-1-1; }
+#sec_divisibilityIntegralDomains-7-1-2 { counter-set: sec_divisibilityIntegralDomains-7-1-2 0; }
+#sec_divisibilityIntegralDomains-7-1-2 > li::marker { content: ""counter(sec_divisibilityIntegralDomains-7-1-2,decimal)"."; }
+#sec_divisibilityIntegralDomains-7-1-2 > li { counter-increment: sec_divisibilityIntegralDomains-7-1-2; }
+#expl-unit-prime-irred-1-2 { counter-set: expl-unit-prime-irred-1-2 0; }
+#expl-unit-prime-irred-1-2 > li::marker { content: ""counter(expl-unit-prime-irred-1-2,decimal)"."; }
+#expl-unit-prime-irred-1-2 > li { counter-increment: expl-unit-prime-irred-1-2; }
+#def-gcd-domain-2-1-7 { counter-set: def-gcd-domain-2-1-7 0; }
+#def-gcd-domain-2-1-7 > li::marker { content: ""counter(def-gcd-domain-2-1-7,decimal)"."; }
+#def-gcd-domain-2-1-7 > li { counter-increment: def-gcd-domain-2-1-7; }
+#def-ideal-1-1-4 { counter-set: def-ideal-1-1-4 0; }
+#def-ideal-1-1-4 > li::marker { content: ""counter(def-ideal-1-1-4,decimal)"."; }
+#def-ideal-1-1-4 > li { counter-increment: def-ideal-1-1-4; }
+#sec_principalIdealsEuclideanDomains-22-1-1-2 { counter-set: sec_principalIdealsEuclideanDomains-22-1-1-2 0; }
+#sec_principalIdealsEuclideanDomains-22-1-1-2 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-22-1-1-2,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-22-1-1-2 > li { counter-increment: sec_principalIdealsEuclideanDomains-22-1-1-2; }
+#sec_principalIdealsEuclideanDomains-22-2-1 { counter-set: sec_principalIdealsEuclideanDomains-22-2-1 0; }
+#sec_principalIdealsEuclideanDomains-22-2-1 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-22-2-1,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-22-2-1 > li { counter-increment: sec_principalIdealsEuclideanDomains-22-2-1; }
+#sec_principalIdealsEuclideanDomains-27-1-1-3 { counter-set: sec_principalIdealsEuclideanDomains-27-1-1-3 0; }
+#sec_principalIdealsEuclideanDomains-27-1-1-3 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-27-1-1-3,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-27-1-1-3 > li { counter-increment: sec_principalIdealsEuclideanDomains-27-1-1-3; }
+#sec_principalIdealsEuclideanDomains-27-2-1-1 { counter-set: sec_principalIdealsEuclideanDomains-27-2-1-1 0; }
+#sec_principalIdealsEuclideanDomains-27-2-1-1 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-27-2-1-1,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-27-2-1-1 > li { counter-increment: sec_principalIdealsEuclideanDomains-27-2-1-1; }
+#sec_principalIdealsEuclideanDomains-28-1-1-4 { counter-set: sec_principalIdealsEuclideanDomains-28-1-1-4 0; }
+#sec_principalIdealsEuclideanDomains-28-1-1-4 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-28-1-1-4,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-28-1-1-4 > li { counter-increment: sec_principalIdealsEuclideanDomains-28-1-1-4; }
+#sec_principalIdealsEuclideanDomains-32-1-1-6 { counter-set: sec_principalIdealsEuclideanDomains-32-1-1-6 0; }
+#sec_principalIdealsEuclideanDomains-32-1-1-6 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-32-1-1-6,decimal)"."; }
+#sec_principalIdealsEuclideanDomains-32-1-1-6 > li { counter-increment: sec_principalIdealsEuclideanDomains-32-1-1-6; }
+#sec_factoringPolynomials-24-1-2 { counter-set: sec_factoringPolynomials-24-1-2 0; }
+#sec_factoringPolynomials-24-1-2 > li::marker { content: ""counter(sec_factoringPolynomials-24-1-2,decimal)"."; }
+#sec_factoringPolynomials-24-1-2 > li { counter-increment: sec_factoringPolynomials-24-1-2; }
+#sec_factoringPolynomials-24-1-2-1-2 { counter-set: sec_factoringPolynomials-24-1-2-1-2 0; }
+#sec_factoringPolynomials-24-1-2-1-2 > li::marker { content: "("counter(sec_factoringPolynomials-24-1-2-1-2,lower-alpha)")"; }
+#sec_factoringPolynomials-24-1-2-1-2 > li { counter-increment: sec_factoringPolynomials-24-1-2-1-2; }
+#sec_factoringPolynomials-24-1-2-2-2 { counter-set: sec_factoringPolynomials-24-1-2-2-2 0; }
+#sec_factoringPolynomials-24-1-2-2-2 > li::marker { content: "("counter(sec_factoringPolynomials-24-1-2-2-2,lower-alpha)")"; }
+#sec_factoringPolynomials-24-1-2-2-2 > li { counter-increment: sec_factoringPolynomials-24-1-2-2-2; }
+#def-ufd-2-1-4 { counter-set: def-ufd-2-1-4 0; }
+#def-ufd-2-1-4 > li::marker { content: ""counter(def-ufd-2-1-4,decimal)"."; }
+#def-ufd-2-1-4 > li { counter-increment: def-ufd-2-1-4; }
+#sec_nonuniqueFactorization-6-2-3 { counter-set: sec_nonuniqueFactorization-6-2-3 0; }
+#sec_nonuniqueFactorization-6-2-3 > li::marker { content: ""counter(sec_nonuniqueFactorization-6-2-3,decimal)"."; }
+#sec_nonuniqueFactorization-6-2-3 > li { counter-increment: sec_nonuniqueFactorization-6-2-3; }
+#thm_idealgeneratingset-1-1-4 { counter-set: thm_idealgeneratingset-1-1-4 0; }
+#thm_idealgeneratingset-1-1-4 > li::marker { content: ""counter(thm_idealgeneratingset-1-1-4,decimal)"."; }
+#thm_idealgeneratingset-1-1-4 > li { counter-increment: thm_idealgeneratingset-1-1-4; }
+#expl-homomorphism-examples-1-2 { counter-set: expl-homomorphism-examples-1-2 0; }
+#expl-homomorphism-examples-1-2 > li::marker { content: ""counter(expl-homomorphism-examples-1-2,decimal)"."; }
+#expl-homomorphism-examples-1-2 > li { counter-increment: expl-homomorphism-examples-1-2; }
+#expl-homomorphism-examples-2-1 { counter-set: expl-homomorphism-examples-2-1 0; }
+#expl-homomorphism-examples-2-1 > li::marker { content: ""counter(expl-homomorphism-examples-2-1,decimal)"."; }
+#expl-homomorphism-examples-2-1 > li { counter-increment: expl-homomorphism-examples-2-1; }
+#sec-homomorphisms-tf-1-2 { counter-set: sec-homomorphisms-tf-1-2 0; }
+#sec-homomorphisms-tf-1-2 > li::marker { content: "("counter(sec-homomorphisms-tf-1-2,lower-alpha)")"; }
+#sec-homomorphisms-tf-1-2 > li { counter-increment: sec-homomorphisms-tf-1-2; }
+#sec_quotientRings-4-4-1-2 { counter-set: sec_quotientRings-4-4-1-2 0; }
+#sec_quotientRings-4-4-1-2 > li::marker { content: ""counter(sec_quotientRings-4-4-1-2,decimal)"."; }
+#sec_quotientRings-4-4-1-2 > li { counter-increment: sec_quotientRings-4-4-1-2; }
+#sec_quotientRings-4-15-1-2 { counter-set: sec_quotientRings-4-15-1-2 0; }
+#sec_quotientRings-4-15-1-2 > li::marker { content: ""counter(sec_quotientRings-4-15-1-2,decimal)"."; }
+#sec_quotientRings-4-15-1-2 > li { counter-increment: sec_quotientRings-4-15-1-2; }
+#sec_quotientRings-4-17-1-2 { counter-set: sec_quotientRings-4-17-1-2 0; }
+#sec_quotientRings-4-17-1-2 > li::marker { content: ""counter(sec_quotientRings-4-17-1-2,decimal)"."; }
+#sec_quotientRings-4-17-1-2 > li { counter-increment: sec_quotientRings-4-17-1-2; }
+#sec_quotientRings-4-18-3-3 { counter-set: sec_quotientRings-4-18-3-3 0; }
+#sec_quotientRings-4-18-3-3 > li::marker { content: ""counter(sec_quotientRings-4-18-3-3,decimal)"."; }
+#sec_quotientRings-4-18-3-3 > li { counter-increment: sec_quotientRings-4-18-3-3; }
+#subsec-prime-maximal-ideal-5-1-1-1 { counter-set: subsec-prime-maximal-ideal-5-1-1-1 0; }
+#subsec-prime-maximal-ideal-5-1-1-1 > li::marker { content: ""counter(subsec-prime-maximal-ideal-5-1-1-1,decimal)"."; }
+#subsec-prime-maximal-ideal-5-1-1-1 > li { counter-increment: subsec-prime-maximal-ideal-5-1-1-1; }
+#subsec-prime-maximal-ideal-5-2-1-1 { counter-set: subsec-prime-maximal-ideal-5-2-1-1 0; }
+#subsec-prime-maximal-ideal-5-2-1-1 > li::marker { content: ""counter(subsec-prime-maximal-ideal-5-2-1-1,decimal)"."; }
+#subsec-prime-maximal-ideal-5-2-1-1 > li { counter-increment: subsec-prime-maximal-ideal-5-2-1-1; }
+#sec_quotientRings-6-19-1-1-1 { counter-set: sec_quotientRings-6-19-1-1-1 0; }
+#sec_quotientRings-6-19-1-1-1 > li::marker { content: ""counter(sec_quotientRings-6-19-1-1-1,decimal)"."; }
+#sec_quotientRings-6-19-1-1-1 > li { counter-increment: sec_quotientRings-6-19-1-1-1; }
+#sec_quotientRings-6-21-1-2 { counter-set: sec_quotientRings-6-21-1-2 0; }
+#sec_quotientRings-6-21-1-2 > li::marker { content: ""counter(sec_quotientRings-6-21-1-2,decimal)"."; }
+#sec_quotientRings-6-21-1-2 > li { counter-increment: sec_quotientRings-6-21-1-2; }
+</style>
+</head>
+<body id="ringsFirst" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Rings First:</span> <span class="subtitle">An Introduction to Abstract Algebra</span></a></h1>
+<p class="byline">Bronson Lim</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch2-ringsAndFields.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch2-ringsAndFields.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_rings.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch1-integers.html" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-induction-wellordering.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Induction and the Well-Ordering Property</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-induction-wellordering.html#ssec_wellordering" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Well-Ordering Principle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-induction-wellordering.html#ssec_induction" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Principle of Mathematical Induction</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-induction-wellordering.html#sec-induction-wellordering-7" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-divisibility-gcd.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Divisibility and GCDs in the Integers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-divisibility-gcd.html#sec-divisibility-gcd-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Divisibility and the Division Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-divisibility-gcd.html#sec-divisibility-gcd-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Greatest Common Divisors</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-divisibility-gcd.html#sec-divisibility-gcd-exercises" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-primes-factorization.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Primes and Factorization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-primes-factorization.html#exers-primes-factorization" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="sec-primes-factorization.html#sec-primes-factorization-23" class="internal"><span class="codenumber">1.3</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-integers-modulo-m.html" class="internal"><span class="codenumber">1.4</span> <span class="title">The Integers modulo <span class="process-math">\(m\)</span></span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-integers-modulo-m.html#exers-integers-mod-m" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch2-ringsAndFields.html" class="internal"><span class="codenumber">2</span> <span class="title">Rings and Fields</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec_fields.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-numberSystems" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Number Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-binaryOperations" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Binary Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-fields" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-propertiesOfFields" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Properties of Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-subfieldsAndExtensions" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Subfields and Extensions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_rings.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Rings</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_rings.html#sec_rings-63" class="internal"><span class="codenumber">2.2</span> <span class="title">References</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_divisibilityIntegralDomains.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Divisibility in Integral Domains</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_principalIdealsEuclideanDomains.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Principal Ideals and Euclidean Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch3-factorization.html" class="internal"><span class="codenumber">3</span> <span class="title">Factorization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_factoringPolynomials.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Factoring Polynomials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Factorization in Euclidean Domains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-4" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Unique Factorization Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-5" class="internal"><span class="codenumber">3.2.2</span> <span class="title">The Ascending Chain Condition and Noetherian Rings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-6" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Euclidean Domains are UFDs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_nonuniqueFactorization.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Principal Ideals and Euclidean Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch4-idealsAndHomomorphisms.html" class="internal"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_ideals.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Ideals</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_ideals.html#sec_ideals-32" class="internal"><span class="codenumber">4.1</span> <span class="title">References</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_homomorphisms.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Homomorphisms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_homomorphisms.html#exers-homomorphisms" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_quotientRings.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Quotient Rings</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#sec_quotientRings-4" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Congruence modulo <span class="process-math">\(I\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#subsec-prime-maximal-ideal" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Prime and Maximal Ideals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#sec_quotientRings-6" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Homomorphisms and Quotient Rings</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_fields"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Fields</span>
+</h2>
+<article class="objectives goal-like" id="obj_fields"><h3 class="heading">
+<span class="type">Objectives:</span><span class="space"> </span><span class="title">Guiding Questions</span>
+</h3>
+<div class="introduction" id="obj_fields-2"><div class="para" id="obj_fields-2-1">In this section, we’ll seek to answer the questions:</div></div>
+<ul class="disc" id="obj_fields-3">
+<li id="obj_fields-3-1"><div class="para" id="p-derived-obj_fields-3-1">What are binary operations?</div></li>
+<li id="obj_fields-3-2"><div class="para" id="p-derived-obj_fields-3-2">What is a field? What sorts of things can one do in a field?</div></li>
+<li id="obj_fields-3-3"><div class="para" id="p-derived-obj_fields-3-3">What are examples of fields?</div></li>
+</ul></article><section class="subsection" id="subsec-numberSystems"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="space"> </span><span class="title">Number Systems</span>
+</h3>
+<div class="para" id="subsec-numberSystems-2">We now begin the process of abstraction. We will do this in stages, beginning with the concept of a <em class="emphasis">field</em>. First, we need to formally define some familiar sets of numbers.</div>
+<article class="definition definition-like" id="subsec-numberSystems-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="subsec-numberSystems-3-1-1">
+<div class="para">The rational numbers, denoted by <span class="process-math">\(\Q\text{,}\)</span> is the set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Q = \setof{\frac{a}{b}}{a,b\in \Z, \ b\ne 0}\text{.}
+\end{equation*}
+</div>
+</div></article><div class="para" id="subsec-numberSystems-4">Recall that in elementary school, you learned that two fractions <span class="process-math">\(\frac{a}{b}, \frac{c}{d}
+\in \Q\)</span> are equivalent if and only if <span class="process-math">\(ad=bc\text{.}\)</span>
+</div>
+<article class="activity project-like" id="subsec-numberSystems-5"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-numberSystems-5-1-1">Prove that our elementary school definition of equivalent fractions is an equivalence relation. Recall <a href="sec-integers-modulo-m.html#def-eqrel" class="xref" data-knowl="./knowl/xref/def-eqrel.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.4.2">Definition 1.4.2</a>.</div></article><div class="para" id="subsec-numberSystems-6"> We likely have an intuitive idea of what is meant by <span class="process-math">\(\R\text{,}\)</span> the set of real numbers. Defining <span class="process-math">\(\R\)</span> rigorously is actually quite difficult, and occupies a significant amount of time in a first course in real analysis. Thus, we will make use of your intuition.</div>
+<div class="para" id="subsec-numberSystems-7">It is worth noting that <span class="process-math">\(\N\subseteq \Z\subseteq \Q\subseteq \R\text{,}\)</span> but <span class="process-math">\(\R\)</span> also contains many irrational numbers, such as <span class="process-math">\(\pi\text{,}\)</span> <span class="process-math">\(e\text{,}\)</span> <span class="process-math">\(\sqrt{2}\text{,}\)</span> and so on.</div>
+<div class="para" id="subsec-numberSystems-8">Out of <span class="process-math">\(\R\)</span> we may build the complex numbers.</div>
+<article class="definition definition-like" id="subsec-numberSystems-9"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
+</h4> <div class="para" id="subsec-numberSystems-9-2-1">The <dfn class="terminology">complex numbers</dfn> consist of all expressions of the form <span class="process-math">\(a+bi\text{,}\)</span> where <span class="process-math">\(a,b\in
+\R\)</span> and <span class="process-math">\(i^2 = -1\text{.}\)</span> Given <span class="process-math">\(z = a+bi\text{,}\)</span> we say <span class="process-math">\(a\)</span> is the <dfn class="terminology">real part</dfn> of <span class="process-math">\(z\)</span> and <span class="process-math">\(b\)</span> is the <dfn class="terminology">imaginary part</dfn>. The set of complex numbers is denoted <span class="process-math">\(\C\text{.}\)</span>
+</div></article></section><section class="subsection" id="subsec-binaryOperations"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="space"> </span><span class="title">Binary Operations</span>
+</h3>
+<div class="para" id="subsec-binaryOperations-2">As was mentioned in the <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "Sec-Introduction" missing or not unique]</code>, <em class="emphasis">algebra</em> comes from an Arabic word meaning “the reunion of broken parts”. We therefore need a way of combining two elements of a set into one; we turn to a particular type of function, known as a binary operation, to accomplish this.</div>
+<article class="definition definition-like" id="def_binaryoperation"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
+</h4> <div class="para" id="def_binaryoperation-2-1"> Let <span class="process-math">\(X\)</span> be a nonempty set. A function <span class="process-math">\(\star \colon X \times X \to X\)</span> is called a <dfn class="terminology">binary operation</dfn>. If <span class="process-math">\(\star\)</span> is a binary operation on <span class="process-math">\(X\text{,}\)</span> we say that <span class="process-math">\(X\)</span> is <dfn class="terminology">closed under the operation <span class="process-math">\(\star\)</span></dfn>. [Given <span class="process-math">\(a,b\in X\text{,}\)</span> we usually write <span class="process-math">\(a\star b\)</span> in place of the typical function notation, <span class="process-math">\(\star(a,b)\text{.}\)</span>]</div></article><article class="investigation project-like" id="invest-binop"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="invest-binop-1-1">
+<div class="para">Which of <span class="process-math">\(+, -, \cdot, \div\)</span> are binary operations:</div>
+<ol class="decimal" id="invest-binop-1-1-2">
+<li id="invest-binop-1-1-2-1"><div class="para" id="invest-binop-1-1-2-1-1">on <span class="process-math">\(\R\text{?}\)</span>
+</div></li>
+<li id="invest-binop-1-1-2-2"><div class="para" id="invest-binop-1-1-2-2-1">on <span class="process-math">\(\Q\text{?}\)</span>
+</div></li>
+<li id="invest-binop-1-1-2-3"><div class="para" id="invest-binop-1-1-2-3-1">on <span class="process-math">\(\Z\text{?}\)</span>
+</div></li>
+<li id="invest-binop-1-1-2-4"><div class="para" id="invest-binop-1-1-2-4-1">on <span class="process-math">\(\N\text{?}\)</span>
+</div></li>
+<li id="invest-binop-1-1-2-5"><div class="para" id="invest-binop-1-1-2-5-1">on <span class="process-math">\(\C\text{?}\)</span> (Recall that for <span class="process-math">\(a_1 + b_1 i, a_2 + b_2 i \in \C\text{,}\)</span> <span class="process-math">\((a_1 + b_1
+i) + (a_2 + b_2 i) := (a_1 + a_2) + (b_1 + b_2)i\)</span> and <span class="process-math">\((a_1 + b_1 i)(a_2 + b_2 i) :=
+(a_1 a_2 - b_1 b_2) + (a_1 b_2 + b_1 a_2) i\text{.}\)</span>)</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="invest-binop-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="invest-binop-2-1">Division is never a binary operation. The others are binary operations on <span class="process-math">\(\C\text{,}\)</span> <span class="process-math">\(\R,
+\Q\text{,}\)</span> and <span class="process-math">\(\Z\text{.}\)</span> The only binary operation on <span class="process-math">\(\N\)</span> is addition.</div></div></details></div></article><article class="activity project-like" id="subsec-binaryOperations-5"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-binaryOperations-5-1-1">Choose your favorite nonempty set <span class="process-math">\(X\)</span> and describe a binary operation different than those in <a href="sec_fields.html#invest-binop" class="xref" data-knowl="./knowl/xref/invest-binop.html" data-reveal-label="Reveal" data-close-label="Close" title="Investigation 2.1.2">Investigation 2.1.2</a>.</div>
+<div class="solutions"><details id="subsec-binaryOperations-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-binaryOperations-5-2-1">Answers vary, but one option is to define <span class="process-math">\(\min : \Z\times \Z \to \Z\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\min(a,b) := \begin{cases} a \amp \text{if } a \le b\\ b \amp \text{if } b\le
+a\end{cases.}
+\end{equation*}
+</div>
+</div></details></div></article></section><section class="subsection" id="subsec-fields"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="space"> </span><span class="title">Fields</span>
+</h3>
+<div class="para" id="subsec-fields-2">The hallmark of modern pure mathematics is the use of <em class="emphasis">axioms</em>. An axiom is essentially an unproved assertion of truth. Our use of axioms serves several purposes.</div>
+<div class="para" id="subsec-fields-3">From a logical perspective, axioms help us avoid the problem of infinite regression (e.g., asking <em class="emphasis">How do you know?</em> over and over again). That is, axioms give us very clear starting points from which to make our deductions.</div>
+<div class="para" id="subsec-fields-4">To that end, our first abstract algebraic structure captures and axiomatizes familiar behavior about how numbers can be combined to produce other numbers of the same type.</div>
+<article class="definition definition-like" id="def_field"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
+</h4> <div class="para logical" id="def_field-2-1">
+<div class="para">A <dfn class="terminology">field</dfn> is a nonempty set <span class="process-math">\(F\)</span> with at least two elements and binary operations <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\text{,}\)</span> denoted <span class="process-math">\((F,+,\cdot)\text{,}\)</span> and satisfying the following <dfn class="terminology">field axioms</dfn>:</div>
+<ol class="decimal" id="def_field-2-1-7">
+<li id="def_field-2-1-7-1"><div class="para" id="def_field-2-1-7-1-1">Given any <span class="process-math">\(a,b,c\in F\text{,}\)</span> <span class="process-math">\((a+b)+c = a+(b+c)\text{.}\)</span> (Associativity of addition)</div></li>
+<li id="def_field-2-1-7-2"><div class="para" id="def_field-2-1-7-2-1">Given any <span class="process-math">\(a,b\in F\text{,}\)</span> <span class="process-math">\(a+b= b+a\text{.}\)</span> (Commutativity of addition)</div></li>
+<li id="def_field-2-1-7-3"><div class="para" id="def_field-2-1-7-3-1">There exists an element <span class="process-math">\(0_F\in F\)</span> such that for all <span class="process-math">\(a\in F\text{,}\)</span> <span class="process-math">\(a+0_F =
+0_F + a = a\text{.}\)</span> (Additive identity)</div></li>
+<li id="def_field-2-1-7-4"><div class="para" id="def_field-2-1-7-4-1">Given any <span class="process-math">\(a\in F\)</span> there exists a <span class="process-math">\(b\in F\)</span> such that <span class="process-math">\(a+b = b + a =0_F\text{.}\)</span> (Additive inverse)</div></li>
+<li id="def_field-2-1-7-5"><div class="para" id="def_field-2-1-7-5-1">Given any <span class="process-math">\(a,b,c\in F\text{,}\)</span> <span class="process-math">\((a\cdot b)\cdot c = a\cdot (b\cdot c)\text{.}\)</span> (Associativity of multiplication)</div></li>
+<li id="def_field-2-1-7-6"><div class="para" id="def_field-2-1-7-6-1">Given any <span class="process-math">\(a,b\in F\text{,}\)</span> <span class="process-math">\(a\cdot b = b\cdot a\text{.}\)</span> (Commutativity of multiplication)</div></li>
+<li id="def_field-2-1-7-7"><div class="para" id="def_field-2-1-7-7-1">There exists an element <span class="process-math">\(1_F\in F\)</span> such that for all <span class="process-math">\(a\in F\text{,}\)</span> <span class="process-math">\(1_F\cdot
+a = a\cdot 1_F = a\text{.}\)</span> (Multiplicative identity)</div></li>
+<li id="def_field-2-1-7-8"><div class="para" id="def_field-2-1-7-8-1">For all <span class="process-math">\(a\in F\text{,}\)</span> <span class="process-math">\(a\ne 0_F\text{,}\)</span> there exists a <span class="process-math">\(b\in F\)</span> such that <span class="process-math">\(a\cdot
+b = b\cdot a = 1_F\text{.}\)</span> (Multiplicative inverse)</div></li>
+<li id="def_field-2-1-7-9"><div class="para" id="def_field-2-1-7-9-1">For all <span class="process-math">\(a,b,c\in F\text{,}\)</span> <span class="process-math">\(a\cdot (b+c) = a\cdot b + a\cdot c\text{.}\)</span> (Distributive property I)</div></li>
+<li id="def_field-2-1-7-10"><div class="para" id="def_field-2-1-7-10-1">For all <span class="process-math">\(a,b,c\in F\text{,}\)</span> <span class="process-math">\((a+b)\cdot c = a\cdot c + b\cdot c\text{.}\)</span> (Distributive property II)</div></li>
+</ol>
+</div></article><div class="para" id="subsec-fields-6">We will usually write <span class="process-math">\(a\cdot b\)</span> as <span class="process-math">\(ab\text{.}\)</span> Additionally, we will usually drop the subscripts on <span class="process-math">\(0,1\)</span> unless we need to distinguish between fundamentally different identities in different fields.</div>
+<article class="investigation project-like" id="exer_fieldexamples"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="exer_fieldexamples-1-1">
+<div class="para">Which of the following are fields under the specified operations? For most, a short justification or counterexample is sufficient.</div>
+<ol class="decimal" id="exer_fieldexamples-1-1-1">
+<li id="exer_fieldexamples-1-1-1-1"><div class="para" id="exer_fieldexamples-1-1-1-1-1">
+<span class="process-math">\(\N\)</span> under the usual addition and multiplication operations</div></li>
+<li id="exer_fieldexamples-1-1-1-2"><div class="para" id="exer_fieldexamples-1-1-1-2-1">
+<span class="process-math">\(\Z\)</span> under the usual addition and multiplication operations</div></li>
+<li id="exer_fieldexamples-1-1-1-3"><div class="para" id="exer_fieldexamples-1-1-1-3-1">
+<span class="process-math">\(2\Z\text{,}\)</span> the set of even integers, under the usual addition and multiplication operations</div></li>
+<li id="exer_fieldexamples-1-1-1-4"><div class="para" id="exer_fieldexamples-1-1-1-4-1">
+<span class="process-math">\(\Q\)</span> under the usual addition and multiplication operations</div></li>
+<li id="exer_fieldexamples-1-1-1-5"><div class="para" id="exer_fieldexamples-1-1-1-5-1">
+<span class="process-math">\(\Z_{6}\)</span> under addition and multiplication modulo 6</div></li>
+<li id="exer_fieldexamples-1-1-1-6"><div class="para" id="exer_fieldexamples-1-1-1-6-1">
+<span class="process-math">\(\Z_{5}\)</span> under addition and multiplication modulo 5</div></li>
+<li id="exer_fieldexamples-1-1-1-7"><div class="para" id="exer_fieldexamples-1-1-1-7-1">
+<span class="process-math">\(\R\)</span> under the usual addition and multiplication operations</div></li>
+<li id="exer_fieldexamples-1-1-1-8"><div class="para" id="exer_fieldexamples-1-1-1-8-1">
+<span class="process-math">\(\C\)</span> under the complex addition and multiplication defined in <a href="sec_fields.html#invest-binop" class="xref" data-knowl="./knowl/xref/invest-binop.html" data-reveal-label="Reveal" data-close-label="Close" title="Investigation 2.1.2">Investigation 2.1.2</a>
+</div></li>
+<li id="exer_fieldexamples-1-1-1-9"><div class="para" id="exer_fieldexamples-1-1-1-9-1">
+<span class="process-math">\(\mathcal{M}_2(\R) := \setof{\left(\begin{matrix}a \amp b \\ c \amp d \end{matrix}
+\right)}{a,b,c,d\in\R}\)</span><details class="ptx-footnote" aria-live="polite" id="exer_fieldexamples-1-1-1-9-1-2"><summary class="ptx-footnote__number" title="Footnote 2.1.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="exer_fieldexamples-1-1-1-9-1-2">For students who have taken a linear algebra course.</div></details>, the set of <span class="process-math">\(2\times 2\)</span> matrices with real coefficients using the usual definition of matrix multiplication<details class="ptx-footnote" aria-live="polite" id="exer_fieldexamples-1-1-1-9-1-4"><summary class="ptx-footnote__number" title="Footnote 2.1.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="exer_fieldexamples-1-1-1-9-1-4">Recall that, if <span class="process-math">\(\left(\begin{matrix}a_1 \amp b_1 \\ c_1 \amp
+d_1 \end{matrix} \right), \left(\begin{matrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{matrix}
+\right)\in \mathcal{M}_2(\R)\text{,}\)</span> then <span class="process-math">\(\left(\begin{matrix}a_1 \amp b_1 \\ c_1 \amp d_1
+\end{matrix} \right) \cdot \left(\begin{matrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{matrix}
+\right) = \left(\begin{matrix}a_1 a_2 + b_1 c_2 \amp a_1 b_2 + b_1 d_2 \\ c_1 a_2 + d_1 c_2
+\amp c_1 b_2 + d_1 d_2 \end{matrix} \right)\text{.}\)</span>
+</div></details> and matrix addition.</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="exer_fieldexamples-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="exer_fieldexamples-2-1"><ol class="decimal" id="exer_fieldexamples-2-1-1">
+<li id="exer_fieldexamples-2-1-1-1"><div class="para" id="exer_fieldexamples-2-1-1-1-1">
+<span class="process-math">\(\N\)</span> is not closed under taking additive inverses, so is not a field.</div></li>
+<li id="exer_fieldexamples-2-1-1-2"><div class="para" id="exer_fieldexamples-2-1-1-2-1">
+<span class="process-math">\(\Z\)</span> is not a field, as there is no integer <span class="process-math">\(a\)</span> such that <span class="process-math">\(2a = 1\text{.}\)</span>
+</div></li>
+<li id="exer_fieldexamples-2-1-1-3"><div class="para" id="exer_fieldexamples-2-1-1-3-1">
+<span class="process-math">\(2\Z\)</span> is not a field for the same reason.</div></li>
+<li id="exer_fieldexamples-2-1-1-4"><div class="para" id="exer_fieldexamples-2-1-1-4-1">
+<span class="process-math">\(\Q\)</span> is a field.</div></li>
+<li id="exer_fieldexamples-2-1-1-5"><div class="para" id="exer_fieldexamples-2-1-1-5-1">
+<span class="process-math">\(\Z_{6}\)</span> is not a field; there is no <span class="process-math">\(\overline{a}\in \Z_{10}\)</span> for which <span class="process-math">\(\overline{2}\cdot
+\overline{a} = \overline{1}\)</span> (you can check them all; there are only 4 viable options).</div></li>
+<li id="exer_fieldexamples-2-1-1-6"><div class="para" id="exer_fieldexamples-2-1-1-6-1">
+<span class="process-math">\(\Z_{5}\)</span> <em class="emphasis">is</em> a field. The axioms pertaining to addition and multiplication were established earlier or rely on the same axioms holding for <span class="process-math">\(\Z\text{.}\)</span>
+</div></li>
+<li id="exer_fieldexamples-2-1-1-7"><div class="para" id="exer_fieldexamples-2-1-1-7-1">
+<span class="process-math">\(\R\)</span> is a field</div></li>
+<li id="exer_fieldexamples-2-1-1-8"><div class="para" id="exer_fieldexamples-2-1-1-8-1">
+<span class="process-math">\(\C\)</span> is a field. Given <span class="process-math">\(a+bi\ne 0\text{,}\)</span> <span class="process-math">\((a+bi)^{-1} = \frac{a}{a^2 + b^2} -
+\frac{b}{a^2 + b^2} i\text{.}\)</span>
+</div></li>
+<li id="exer_fieldexamples-2-1-1-9"><div class="para" id="exer_fieldexamples-2-1-1-9-1">
+<span class="process-math">\(\mathcal{M}_2(\R)\)</span> is not a field. Matrix multiplication is not commutative.</div></li>
+</ol></div></div></details></div></article><div class="para" id="subsec-fields-8">In the <a href="sec_fields.html#exer_fieldexamples" class="xref" data-knowl="./knowl/xref/exer_fieldexamples.html" data-reveal-label="Reveal" data-close-label="Close" title="Investigation 2.1.4">Investigation 2.1.4</a>, you determined which of sets of familiar mathematical objects are and are not fields. Notice that you have been working with fields for years and that our abstraction of language to that of fields is simply to allow us to explore the common features at the same time - it is inefficient to prove the same statement about every single field when we can prove it once and for all about fields in general.</div></section><section class="subsection" id="subsec-propertiesOfFields"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="space"> </span><span class="title">Properties of Fields</span>
+</h3>
+<article class="theorem theorem-like" id="thm_fieldproperties"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Fields.</span>
+</h4>
+<div class="para logical" id="thm_fieldproperties-2-1">
+<div class="para">Let <span class="process-math">\(F\)</span> be a field.</div>
+<ol class="decimal" id="thm_fieldproperties-2-1-2">
+<li id="thm_fieldproperties-2-1-2-1"><div class="para" id="thm_fieldproperties-2-1-2-1-1">The additive identity <span class="process-math">\(0\)</span> is unique.</div></li>
+<li id="thm_fieldproperties-2-1-2-2"><div class="para" id="thm_fieldproperties-2-1-2-2-1">For all <span class="process-math">\(a\in F\text{,}\)</span> <span class="process-math">\(a \cdot 0 = 0\cdot a = 0\text{.}\)</span>
+</div></li>
+<li id="thm_fieldproperties-2-1-2-3"><div class="para" id="thm_fieldproperties-2-1-2-3-1">Additive inverses are unique.</div></li>
+<li id="thm_fieldproperties-2-1-2-4"><div class="para" id="thm_fieldproperties-2-1-2-4-1">The multiplicative identity <span class="process-math">\(1\)</span> is unique.</div></li>
+<li id="thm_fieldproperties-2-1-2-5"><div class="para" id="thm_fieldproperties-2-1-2-5-1">Multiplicative inverses are unique.</div></li>
+<li id="thm_fieldproperties-2-1-2-6"><div class="para" id="thm_fieldproperties-2-1-2-6-1">
+<span class="process-math">\((-1)\cdot (-1) = 1\)</span> <details id="thm_fieldproperties-2-1-2-6-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="thm_fieldproperties-2-1-2-6-1-2-1">Note that we are saying that the additive inverse of the multiplicative identity times itself equals the multiplicative identity. You should use only the field axioms and the properties previously established in this theorem.</div></div></details> <aside class="aside aside-like" id="thm_fieldproperties-2-1-2-6-1-3"></aside>
+</div></li>
+</ol>
+</div></article><details id="subsec-propertiesOfFields-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><ol class="decimal" id="subsec-propertiesOfFields-3-1">
+<li id="subsec-propertiesOfFields-3-1-1"><div class="para" id="subsec-propertiesOfFields-3-1-1-1">Assume <span class="process-math">\(0, 0'\)</span> both satisfy the additive identity axiom. Observe that <span class="process-math">\(0 = 0 + 0'
+= 0'\text{.}\)</span>
+</div></li>
+<li id="subsec-propertiesOfFields-3-1-2"><div class="para" id="subsec-propertiesOfFields-3-1-2-1">As <span class="process-math">\(0 = 0 + 0\text{,}\)</span> we may write <span class="process-math">\(a\cdot 0 = a\cdot (0 + 0) = a\cdot 0 + a \cdot 0\text{.}\)</span> Now add the additive inverse of <span class="process-math">\(a\cdot 0\)</span> to both sides to obtain <span class="process-math">\(0 = a \cdot 0 =
+0\cdot a\text{.}\)</span>
+</div></li>
+<li id="subsec-propertiesOfFields-3-1-3"><div class="para" id="subsec-propertiesOfFields-3-1-3-1">Let <span class="process-math">\(a\in F\)</span> and suppose <span class="process-math">\(b\)</span> and <span class="process-math">\(c\)</span> are such that <span class="process-math">\(a+c = 0\)</span> and <span class="process-math">\(a+b
+= 0\text{.}\)</span> Then <span class="process-math">\(a+c = a+b\text{,}\)</span> and we may add <span class="process-math">\(b\)</span> (or <span class="process-math">\(c\)</span>) to both sides to obtain <span class="process-math">\(b+(a+b) = (b+a)+b = 0 + b = b\)</span> and <span class="process-math">\(c+(a+c) = (c+a)+c = 0 + c = c\text{.}\)</span> Thus <span class="process-math">\(b=c\text{.}\)</span>
+</div></li>
+<li id="subsec-propertiesOfFields-3-1-4"><div class="para" id="subsec-propertiesOfFields-3-1-4-1">Suppose <span class="process-math">\(1\)</span> and <span class="process-math">\(1'\)</span> are multiplicative identities. Then <span class="process-math">\(1 = 1 \cdot 1' =
+1'\text{.}\)</span>
+</div></li>
+<li id="subsec-propertiesOfFields-3-1-5"><div class="para" id="subsec-propertiesOfFields-3-1-5-1">Let <span class="process-math">\(a\in F\)</span> be nonzero and suppose <span class="process-math">\(b,c\)</span> are multiplicative inverses for <span class="process-math">\(a\text{.}\)</span> Then <span class="process-math">\(ab = 1 = ac\text{,}\)</span> and we may multiply by <span class="process-math">\(b\)</span> (or <span class="process-math">\(c\)</span>) to obtain <span class="process-math">\(b(ab)
+= (ba)b = 1\cdot b = b = b(ac) = (ba)c = 1\cdot c = c\text{.}\)</span>
+</div></li>
+<li id="subsec-propertiesOfFields-3-1-6"><div class="para" id="subsec-propertiesOfFields-3-1-6-1">Observe that <span class="process-math">\((-1) + 1 = 0\)</span> by the definition of additive inverses. Multiply both sides by <span class="process-math">\(-1\)</span> and distribute to obtain <span class="process-math">\((-1)(-1) + (-1)\cdot 1 = (-1)\cdot 0\text{.}\)</span> By part 2 of this theorem and the definition of a multiplicative identity, we obtain <span class="process-math">\((-1)(-1)
++ (-1) = 0\text{.}\)</span> We now add the multiplicative identity to obtain <span class="process-math">\((-1)(-1) + (-1) + 1 =
+0 + 1\text{,}\)</span> which simplifies to <span class="process-math">\((-1)(-1) = 1\text{.}\)</span>
+</div></li>
+</ol></article></details><div class="para" id="subsec-propertiesOfFields-4">One consequence of <a href="sec_fields.html#thm_fieldproperties" class="xref" data-knowl="./knowl/xref/thm_fieldproperties.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.1.5: Properties of Fields">Theorem 2.1.5</a> is that, given <span class="process-math">\(a\in F\text{,}\)</span> <span class="process-math">\(b\in
+F\setminus \set{0}\text{,}\)</span> we may refer to <span class="process-math">\(-a\)</span> as <em class="emphasis">the</em> additive inverse of <span class="process-math">\(a\text{,}\)</span> and <span class="process-math">\(b^{-1}\)</span> as <em class="emphasis">the</em> multiplicative inverse of <span class="process-math">\(b\text{.}\)</span> We will thus employ this familiar terminology henceforth. Moreover, we will define <dfn class="terminology">subtraction</dfn> in a field as <span class="process-math">\(a-b = a+(-b)\)</span> and division as <span class="process-math">\(a/b = a\cdot b^{-1}\text{.}\)</span>
+</div></section><section class="subsection" id="subsec-subfieldsAndExtensions"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="space"> </span><span class="title">Subfields and Extensions</span>
+</h3>
+<div class="para" id="subsec-subfieldsAndExtensions-2">One source for new fields is to look within the fields we already have. That is, we want to know when a subset of a field is a field in its own right.</div>
+<article class="definition definition-like" id="subsec-subfieldsAndExtensions-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.6</span><span class="period">.</span>
+</h4> <div class="para logical" id="subsec-subfieldsAndExtensions-3-3-1">
+<div class="para">Let <span class="process-math">\(K\)</span> be a field. If <span class="process-math">\(F\)</span> is a nonempty subset satisfying</div>
+<ol class="decimal" id="subsec-subfieldsAndExtensions-3-3-1-3">
+<li id="subsec-subfieldsAndExtensions-3-3-1-3-1"><div class="para" id="p-derived-subsec-subfieldsAndExtensions-3-3-1-3-1">
+<span class="process-math">\(F\subseteq K\)</span> and</div></li>
+<li id="subsec-subfieldsAndExtensions-3-3-1-3-2"><div class="para" id="p-derived-subsec-subfieldsAndExtensions-3-3-1-3-2">
+<span class="process-math">\(F\)</span> is a field under the same operations as <span class="process-math">\(K\text{,}\)</span>
+</div></li>
+</ol>
+</div> <div class="para" id="subsec-subfieldsAndExtensions-3-3-2">then we call <span class="process-math">\(F\)</span> a <dfn class="terminology">subfield</dfn> of <span class="process-math">\(K\text{,}\)</span> and <span class="process-math">\(K\)</span> an <dfn class="terminology">extension field</dfn> of <span class="process-math">\(F\text{,}\)</span> and say “<span class="process-math">\(K/F\)</span> is a <dfn class="terminology">field extension</dfn>.”</div></article><article class="theorem theorem-like" id="subsec-subfieldsAndExtensions-4"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.1.7</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-subfieldsAndExtensions-4-1-1">The set of complex numbers <span class="process-math">\(\mathbb{C}\)</span> is an extension field of <span class="process-math">\(\R\text{.}\)</span> Equivalently, <span class="process-math">\(\R\)</span> is a subfield of <span class="process-math">\(\mathbb{C}\)</span>
+</div></article><div class="para" id="subsec-subfieldsAndExtensions-5">The last theorem in this section gives us a technique for identifying subfields of a given field.</div>
+<article class="theorem theorem-like" id="thm-subfieldTest"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Subfield Test.</span>
+</h4>
+<div class="para logical" id="thm-subfieldTest-2-1">
+<div class="para">Let <span class="process-math">\(K\)</span> be a field and <span class="process-math">\(F\subseteq K\)</span> be a subset of <span class="process-math">\(K\)</span> such that:</div>
+<ul class="disc" id="thm-subfieldTest-2-1-4">
+<li id="thm-subfieldTest-2-1-4-1"><div class="para" id="thm-subfieldTest-2-1-4-1-1"><span class="process-math">\(\displaystyle 1_K\in F\)</span></div></li>
+<li id="thm-subfieldTest-2-1-4-2"><div class="para" id="thm-subfieldTest-2-1-4-2-1">For any <span class="process-math">\(a,b\in F\text{,}\)</span> we have <span class="process-math">\(a-b\in F\text{.}\)</span> (Closed under subtraction)</div></li>
+<li id="thm-subfieldTest-2-1-4-3"><div class="para" id="thm-subfieldTest-2-1-4-3-1">For any <span class="process-math">\(a,b\in F\text{,}\)</span> we have <span class="process-math">\(a/b\in F\text{.}\)</span> (Closed under division)</div></li>
+</ul>
+<div class="para">Then <span class="process-math">\(F\)</span> is a field under the addition and multiplication in <span class="process-math">\(K\text{.}\)</span> In particular, <span class="process-math">\(F\)</span> is a subfield of <span class="process-math">\(K\text{.}\)</span>
+</div>
+</div></article><details id="subsec-subfieldsAndExtensions-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="subsec-subfieldsAndExtensions-7-1">We check all of the axioms in <a href="sec_fields.html#def_field" class="xref" data-knowl="./knowl/xref/def_field.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.4">Definition 2.1.4</a>. Since <span class="process-math">\(F\)</span> is closed under subtraction, <span class="process-math">\(1_K-1_K=0_K\in F\text{.}\)</span> Since <span class="process-math">\(0_K\in F\)</span> and <span class="process-math">\(F\)</span> is closed under subtraction, we have <span class="process-math">\(-a=0_K-a\in F\)</span> for any <span class="process-math">\(a\in F\text{.}\)</span> Thus <span class="process-math">\(F\)</span> is closed under additive inverses. Since <span class="process-math">\(F\)</span> is closed under additive inverses and subtraction we have <span class="process-math">\(a+b = a-(-b)\in F\)</span> for any <span class="process-math">\(a,b\in F\text{.}\)</span> Thus <span class="process-math">\(F\)</span> is closed under addition.</div> <div class="para" id="subsec-subfieldsAndExtensions-7-2">We now turn to the associativity and commutative properties. For any <span class="process-math">\(a,b,c\in F\)</span> we know <span class="process-math">\(a,b,c\in K\text{.}\)</span> Since addition in <span class="process-math">\(K\)</span> is associative, we know <span class="process-math">\(a+(b+c) = (a+b)+c\text{.}\)</span> Thus addition in <span class="process-math">\(F\)</span> is associative. We say it is <em class="emphasis">inherited</em> from <span class="process-math">\(K\text{.}\)</span> Similarly addition in <span class="process-math">\(F\)</span> is commutative, <span class="process-math">\(0_K\)</span> is the additive identity, multiplication is associative and commutative, <span class="process-math">\(1_K\)</span> is the multiplicative identity, and the distributive laws hold.</div> <div class="para" id="subsec-subfieldsAndExtensions-7-3">Lastly, since <span class="process-math">\(F\)</span> is closed under division and <span class="process-math">\(1_K\in F\text{,}\)</span> for any <span class="process-math">\(b\in F\)</span> we have <span class="process-math">\(1_K/b\in F\)</span> and so the multiplicative inverse of <span class="process-math">\(b\)</span> is in <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(F\)</span> is closed under taking multiplicative inverses. This completes the checks of each of the 10 axioms.</div></article></details><article class="investigation project-like" id="subsec-subfieldsAndExtensions-8"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Quadratic Extensions of the Rationals.</span>
+</h4>
+<div class="para logical" id="subsec-subfieldsAndExtensions-8-2-1">
+<div class="para">Suppose <span class="process-math">\(d\in\mathbb{Q}\)</span> is any rational number such that <span class="process-math">\(\sqrt{d}\notin\Q\text{.}\)</span> Define the set of rationals <em class="emphasis">adjoin</em> <span class="process-math">\(\sqrt{d}\)</span> by:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Q(\sqrt{d}) = \{a+b\sqrt{d}\mid a,b\in\mathbb{Q}\}.
+\end{equation*}
+</div>
+<div class="para">This is a subset of <span class="process-math">\(\mathbb{C}\text{.}\)</span> We claim that <span class="process-math">\(\Q(\sqrt{d})\)</span> is a <em class="emphasis">subfield</em> of <span class="process-math">\(\mathbb{C}\)</span>
+</div>
+</div></article><article class="investigation project-like" id="subsec-subfieldsAndExtensions-9"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.1.6</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-subfieldsAndExtensions-9-1-1">For which <span class="process-math">\(n &gt; 1\)</span> is <span class="process-math">\(\Z_n\)</span> a field? Compute some examples, form a conjecture, and prove your conjecture.</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="ch2-ringsAndFields.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_rings.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

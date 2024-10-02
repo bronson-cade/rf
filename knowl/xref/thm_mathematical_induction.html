@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Principle of Mathematical Induction.</span>
+</h4>Let <span class="process-math">\(P(m)\)</span> be a statement for each <span class="process-math">\(m\in \N\text{.}\)</span> Suppose that <ol class="decimal" id="thm_mathematical_induction-2-3">
+<li><div class="para">
+<span class="process-math">\(P(1)\)</span> is true.</div></li>
+<li><div class="para">For all <span class="process-math">\(k\geq 0\text{,}\)</span> if <span class="process-math">\(P(k)\)</span> is true, then <span class="process-math">\(P(k+1)\)</span> is true.</div></li>
+</ol> Then <span class="process-math">\(P(m)\)</span> is true for all <span class="process-math">\(m\in\N_0\text{.}\)</span></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para">Suppose <span class="process-math">\(P(m)\)</span> is a statement for each <span class="process-math">\(m\in\N\)</span> satisfying both properties above. Suppose, for a contradiction, that there exists some <span class="process-math">\(m_0\in\N\)</span> such that <span class="process-math">\(P(m_0)\)</span> is not true. Let <span class="process-math">\(S = \{m\in\N\mid P(m)\text{ is not true}\}\text{.}\)</span> Then <span class="process-math">\(m_0\in S\)</span> by assumption so that <span class="process-math">\(S\)</span> is a nonempty subset of <span class="process-math">\(\N\text{.}\)</span> By the Well-Ordering Principle <a href="sec-induction-wellordering.html#axiom_wellordering" class="xref" data-knowl="./knowl/xref/axiom_wellordering.html" data-reveal-label="Reveal" data-close-label="Close" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a>, <span class="process-math">\(S\)</span> has a least element.</div> <div class="para">Let <span class="process-math">\(k_0\in S\)</span> be the least element. Since <span class="process-math">\(P(1)\)</span> is true, we know <span class="process-math">\(k_0&gt; 1\)</span> and so <span class="process-math">\(k_0-1\in\N\text{.}\)</span> Since <span class="process-math">\(k_0\)</span> was the least element we know that <span class="process-math">\(k_0-1\notin S\text{.}\)</span> Thus <span class="process-math">\(P(k_0-1)\)</span> is true. Since <span class="process-math">\(P(k_0-1)\)</span> is true, the second hypothesis tells us <span class="process-math">\(P(k_0)\)</span> is true. This contradicts that <span class="process-math">\(P(k_0)\)</span> is false. Since we have arrived at a contradiction, we conclude that <span class="process-math">\(P(m)\)</span> is true for all <span class="process-math">\(m\in\N\text{.}\)</span>
+</div></article></details><span class="incontext"><a class="internal" href="sec-induction-wellordering.html#thm_mathematical_induction">in-context</a></span>
+</body>
+</html>
