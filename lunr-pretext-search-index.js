@@ -808,7 +808,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.4",
   "title": "The Integers modulo <span class=\"process-math\">\\(m\\)<\/span>",
-  "body": " The Integers modulo   Guiding Questions   In this section, we'll seek to answer the questions:    What are equivalence relations?  What is congruence modulo ?  How does arithmetic in compare to arithmetic in ?    The foundation for our exploration of abstract algebra is nearly complete. We need the basics of one more \"number system\" in order to appreciate the abstract approach developed in subsequent chapters. To build that number system, a brief review of relations and equivalence relations is required. Recall that given sets and , the Cartesian product of with , denoted (\" cross \"), is the set of all possible ordered pairs whose first element is from and second element is from . Symbolically,    relation   Let be a nonempty set. A relation  on is a subset of . If such that , we usually write and say that and are related under . If is understand, we may simply write .    The notion of a relation as presented above is extremely open-ended. Any subset of ordered pairs of describes a relation on the set . Of course, some relations are more meaningful than others; the branch of mathematics known as order theory studies order relations (such as the familiar ). Our focus will be on equivalence relations , which isolate the important features of .   equivalence relation  equivalence class  equivalence class, representative of   Let be a nonempty set. We say a relation on is an equivalence relation if the following properties hold:    is reflexive : if , then .     is symmetric : if with , then .     is transitive : if with and , then .     Given , the set is called the equivalence class of . Any element is called a representative of the equivalence class.      Prove that has the same birthday as is an equivalence relation on the set of all people.    Given any , clearly has the same birthday as .  Moreover, if such that has the same birthday as , then it is clear that has the same birthday as .  Finally, if such that has the same birthday as and has the same birthday as , then must have the same birthday as .      What other relations can you think of? Write down one example and one non-example of an equivalence relation.      Prove that is not an equivalence relation on .    The relation fails the symmetry condition. As an example, note that , but .    For our purposes, a particularly important equivalence relation is congruence modulo on the set of integers.   congruence modulo   Let and , . We say is congruent to modulo if . We write .      Justify the following congruences.                       Given an integer , congruence modulo is an equivalence relation on .    Let . Then , so . Thus, is reflexive.  Let such that . This means that , so there is some such that . Then , so and . Thus, is symmetric.  Finally, let such that and . Then and , so there are integers such that and . Summing these equations yields , so and .       Integers modulo      The set of equivalence classes of under the equivalence relation congruence modulo is called the integers modulo , and is denoted (pronounced \"Z mod m\").     List the elements of and .    The equivalence classes of are Since every integer is in one of the above equivalence classes, we know we have found them all.      Let and such that and . Then .    Write and for some . Then , so .      Let and such that and . Then .     Write and for some . Observe .  Thus, and .    well-defined statement   Let be a set and an equivalence relation on . Then a statement about the equivalence classes of is well-defined if the representative of the equivalence class does not matter. That is, whenever , .    The previous exercises justify the following definitions.    Let and . Then the following are well-defined operations on the equivalence classes:    Addition modulo : . The symbol is often used to indicate that we are defining the expression on the left to equal the expression on the right.      Multiplication modulo : .       Most elementary propositions about can be recast as statements about . For instance, in proving you likely proved that if and that . However, as the statements become more complex, repeatedly reshaping statements about as statements about becomes cumbersome and unhelpful. Instead, you are encouraged to become comfortable doing arithmetic modulo or, put another way, arithmetic with the equivalence classes of as defined in .    Without passing back to , find the smallest nonnegative integer representative of the resulting equivalence classes.   in  in  in  in  in    TBD   In the remainder of this section, we investigate fundamental properties of arithmetic in .    Let with and . If , is it true that ? If so, prove it. If not, find an example of when the statement fails to hold.    It is not true. For example, in , , but .      Let , and be integers with and . Then there is some such that .  Conclude that if in that .    We know that , i.e., that . By Theorem , .      Let be prime and such that . Then   there is some such that ; and,    if , .       In , every nonzero equivalence class is represented by an for which . Apply .     Exercises   Mark the following as true or false.   For any integer , modulo .  If modulo , then modulo .  If modulo and modulo , then modulo .  If modulo , then modulo .  If modulo , then .  If , then for any .     List the elements in and . Use the convention that conjugacy class representatives start with .    Carry out the modular arithmetic. That is, find the smallest nonnegative integer representative of the resulting equivalence class.    in    in    in    in    in      Write out the addition and multiplication tables for .    Write out the addition and multiplication tables for . What do you notice here that isn't true in ?    Prove that if and . Then there exists such that .    Suppose is prime. Use the previous problem to prove that if in , then there is such that . In other words, show that all non-zero elements in have a multiplicative inverse.    For each non-zero element in , determine its multiplicative inverse in the sense of the previous exercise.    Show that if is not prime, then it is possible that in but neither term is zero: . Such are called zero-divisors.    Show that the function defined by is not well-defined.    Prove that addition and multiplication is commutative in . That is:     Prove that addition and multiplication is associative in . That is:     Prove that and in .    Prove that for any there is such that .    "
+  "body": " The Integers modulo   Guiding Questions   In this section, we'll seek to answer the questions:    What are equivalence relations?  What is congruence modulo ?  How does arithmetic in compare to arithmetic in ?     The foundation for our exploration of abstract algebra is nearly complete. We need the basics of one more \"number system\" in order to appreciate the abstract approach developed in subsequent chapters. To build that number system, a brief review of relations and equivalence relations is required. We then go on to define an algebraic structure for each . This is a process we will revisit in ???Polynomial Rings??? and ???Noether Isomorphism Theorem???    Equivalence Relations  Recall that given sets and , the Cartesian product of with , denoted (\" cross \"), is the set of all possible ordered pairs whose first element is from and second element is from . Symbolically,    relation   Let be a nonempty set. A relation  on is a subset of . If such that , we usually write and say that and are related under . If is understand, we may simply write .    The notion of a relation as presented above is extremely open-ended. Any subset of ordered pairs of describes a relation on the set . Of course, some relations are more meaningful than others; the branch of mathematics known as order theory studies order relations (such as the familiar ). Our focus will be on equivalence relations , which isolate the important features of .   equivalence relation  equivalence class  equivalence class, representative of   Let be a nonempty set. We say a relation on is an equivalence relation if the following properties hold:    is reflexive : if , then .     is symmetric : if with , then .     is transitive : if with and , then .     Given , the set is called the equivalence class of . Any element is called a representative of the equivalence class.      Prove that has the same birthday as is an equivalence relation on the set of all people.    Given any , clearly has the same birthday as .  Moreover, if such that has the same birthday as , then it is clear that has the same birthday as .  Finally, if such that has the same birthday as and has the same birthday as , then must have the same birthday as .      What other relations can you think of? Write down one example and one non-example of an equivalence relation.      Prove that is not an equivalence relation on .    The relation fails the symmetry condition. As an example, note that , but .      Congruence Modulo  For our purposes, a particularly important equivalence relation is congruence modulo on the set of integers.   congruence modulo   Let and , . We say is congruent to modulo if . We write or we write as shorthand.      Justify the following congruences.                       Given an integer , congruence modulo is an equivalence relation on .    Let . Then , so . Thus, is reflexive.  Let such that . This means that , so there is some such that . Then , so and . Thus, is symmetric.  Finally, let such that and . Then and , so there are integers such that and . Summing these equations yields , so and .      Integers Modulo     Integers modulo      The set of equivalence classes of under the equivalence relation congruence modulo is called the integers modulo , and is denoted (pronounced \"Z mod m\").     List the elements of and .    The equivalence classes of are Since every integer is in one of the above equivalence classes, we know we have found them all.      Let and such that and . Then .    Write and for some . Then , so .      Let and such that and . Then .     Write and for some . Observe .  Thus, and .    well-defined statement   Let be a set and an equivalence relation on . Then a statement about the equivalence classes of is well-defined if the representative of the equivalence class does not matter. That is, whenever , .    The previous exercises justify the following definitions.   Notation  In some textbooks, the set of integers modulo is denoted by . However, this notation often conflicts both with the -adic integers and the usual notation for quotienting discussed in ???Quotient Rings???. As such, we've opted for the more standard notation of .     Let and . Then the following are well-defined operations on the equivalence classes:    Addition modulo : . The symbol is often used to indicate that we are defining the expression on the left to equal the expression on the right.      Multiplication modulo : .       Most elementary propositions about can be recast as statements about . For instance, in proving you likely proved that if and that . However, as the statements become more complex, repeatedly reshaping statements about as statements about becomes cumbersome and unhelpful. Instead, you are encouraged to become comfortable doing arithmetic modulo or, put another way, arithmetic with the equivalence classes of as defined in .    Without passing back to , find the smallest nonnegative integer representative of the resulting equivalence classes.   in  in  in  in  in    TBD     Arithmetic in  In the remainder of this section, we investigate fundamental properties of arithmetic in .    Let with and . If , is it true that ? If so, prove it. If not, find an example of when the statement fails to hold.    It is not true. For example, in , , but .      Let , and be integers with and . Then there is some such that .  Conclude that if in that .    We know that , i.e., that . By Theorem , .      Let be prime and such that . Then   there is some such that ; and,    if , .       In , every nonzero equivalence class is represented by an for which . Apply .      Exercises   Mark the following as true or false.   For any integer , modulo .  If modulo , then modulo .  If modulo and modulo , then modulo .  If modulo , then modulo .  If modulo , then .  If , then for any .     List the elements in and . Use the convention that conjugacy class representatives start with .    Carry out the modular arithmetic. That is, find the smallest nonnegative integer representative of the resulting equivalence class.    in    in    in    in    in      Write out the addition and multiplication tables for .    Write out the addition and multiplication tables for . What do you notice here that isn't true in ?    Prove that if and . Then there exists such that .    Suppose is prime. Use the previous problem to prove that if in , then there is such that . In other words, show that all non-zero elements in have a multiplicative inverse.    For each non-zero element in , determine its multiplicative inverse in the sense of the previous exercise.    Show that if is not prime, then it is possible that in but neither term is zero: . Such are called zero-divisors.    Show that the function defined by is not well-defined.    Prove that addition and multiplication is commutative in . That is:     Prove that addition and multiplication is associative in . That is:     Prove that and in .    Prove that for any there is such that .    "
 },
 {
   "id": "obj_integers-modulo-m",
@@ -820,9 +820,9 @@ var ptx_lunr_docs = [
   "body": " Guiding Questions   In this section, we'll seek to answer the questions:    What are equivalence relations?  What is congruence modulo ?  How does arithmetic in compare to arithmetic in ?   "
 },
 {
-  "id": "sec-integers-modulo-m-5",
+  "id": "ssec_equivalenceRelations-4",
   "level": "2",
-  "url": "sec-integers-modulo-m.html#sec-integers-modulo-m-5",
+  "url": "sec-integers-modulo-m.html#ssec_equivalenceRelations-4",
   "type": "Definition",
   "number": "1.4.1",
   "title": "",
@@ -838,72 +838,72 @@ var ptx_lunr_docs = [
   "body": " equivalence relation  equivalence class  equivalence class, representative of   Let be a nonempty set. We say a relation on is an equivalence relation if the following properties hold:    is reflexive : if , then .     is symmetric : if with , then .     is transitive : if with and , then .     Given , the set is called the equivalence class of . Any element is called a representative of the equivalence class.   "
 },
 {
-  "id": "sec-integers-modulo-m-8",
+  "id": "ssec_equivalenceRelations-7",
   "level": "2",
-  "url": "sec-integers-modulo-m.html#sec-integers-modulo-m-8",
+  "url": "sec-integers-modulo-m.html#ssec_equivalenceRelations-7",
   "type": "Activity",
   "number": "1.4.1",
   "title": "",
   "body": "  Prove that has the same birthday as is an equivalence relation on the set of all people.    Given any , clearly has the same birthday as .  Moreover, if such that has the same birthday as , then it is clear that has the same birthday as .  Finally, if such that has the same birthday as and has the same birthday as , then must have the same birthday as .   "
 },
 {
-  "id": "sec-integers-modulo-m-9",
+  "id": "ssec_equivalenceRelations-8",
   "level": "2",
-  "url": "sec-integers-modulo-m.html#sec-integers-modulo-m-9",
+  "url": "sec-integers-modulo-m.html#ssec_equivalenceRelations-8",
   "type": "Exploration",
   "number": "1.4.2",
   "title": "",
   "body": "  What other relations can you think of? Write down one example and one non-example of an equivalence relation.   "
 },
 {
-  "id": "sec-integers-modulo-m-10",
+  "id": "ssec_equivalenceRelations-9",
   "level": "2",
-  "url": "sec-integers-modulo-m.html#sec-integers-modulo-m-10",
+  "url": "sec-integers-modulo-m.html#ssec_equivalenceRelations-9",
   "type": "Activity",
   "number": "1.4.3",
   "title": "",
   "body": "  Prove that is not an equivalence relation on .    The relation fails the symmetry condition. As an example, note that , but .   "
 },
 {
-  "id": "sec-integers-modulo-m-12",
+  "id": "ssec_congruenceModm-3",
   "level": "2",
-  "url": "sec-integers-modulo-m.html#sec-integers-modulo-m-12",
+  "url": "sec-integers-modulo-m.html#ssec_congruenceModm-3",
   "type": "Definition",
   "number": "1.4.3",
   "title": "",
-  "body": " congruence modulo   Let and , . We say is congruent to modulo if . We write .   "
+  "body": " congruence modulo   Let and , . We say is congruent to modulo if . We write or we write as shorthand.   "
 },
 {
-  "id": "sec-integers-modulo-m-13",
+  "id": "ssec_congruenceModm-4",
   "level": "2",
-  "url": "sec-integers-modulo-m.html#sec-integers-modulo-m-13",
+  "url": "sec-integers-modulo-m.html#ssec_congruenceModm-4",
   "type": "Activity",
   "number": "1.4.4",
   "title": "",
   "body": "  Justify the following congruences.                    "
 },
 {
-  "id": "sec-integers-modulo-m-14",
+  "id": "ssec_congruenceModm-5",
   "level": "2",
-  "url": "sec-integers-modulo-m.html#sec-integers-modulo-m-14",
+  "url": "sec-integers-modulo-m.html#ssec_congruenceModm-5",
   "type": "Theorem",
   "number": "1.4.4",
   "title": "",
   "body": "  Given an integer , congruence modulo is an equivalence relation on .    Let . Then , so . Thus, is reflexive.  Let such that . This means that , so there is some such that . Then , so and . Thus, is symmetric.  Finally, let such that and . Then and , so there are integers such that and . Summing these equations yields , so and .   "
 },
 {
-  "id": "sec-integers-modulo-m-15",
+  "id": "ssec_integersModm-2",
   "level": "2",
-  "url": "sec-integers-modulo-m.html#sec-integers-modulo-m-15",
+  "url": "sec-integers-modulo-m.html#ssec_integersModm-2",
   "type": "Definition",
   "number": "1.4.5",
   "title": "",
   "body": "   Integers modulo      The set of equivalence classes of under the equivalence relation congruence modulo is called the integers modulo , and is denoted (pronounced \"Z mod m\").  "
 },
 {
-  "id": "sec-integers-modulo-m-16",
+  "id": "ssec_integersModm-3",
   "level": "2",
-  "url": "sec-integers-modulo-m.html#sec-integers-modulo-m-16",
+  "url": "sec-integers-modulo-m.html#ssec_integersModm-3",
   "type": "Exploration",
   "number": "1.4.5",
   "title": "",
@@ -919,20 +919,20 @@ var ptx_lunr_docs = [
   "body": "  Let and such that and . Then .    Write and for some . Then , so .   "
 },
 {
-  "id": "sec-integers-modulo-m-18",
+  "id": "ssec_integersModm-5",
   "level": "2",
-  "url": "sec-integers-modulo-m.html#sec-integers-modulo-m-18",
+  "url": "sec-integers-modulo-m.html#ssec_integersModm-5",
   "type": "Theorem",
   "number": "1.4.7",
   "title": "",
   "body": "  Let and such that and . Then .   "
 },
 {
-  "id": "sec-integers-modulo-m-19",
+  "id": "ssec_integersModm-6",
   "level": "2",
-  "url": "sec-integers-modulo-m.html#sec-integers-modulo-m-19",
+  "url": "sec-integers-modulo-m.html#ssec_integersModm-6",
   "type": "Proof",
-  "number": "1.4.1",
+  "number": "1.4.3.1",
   "title": "",
   "body": " Write and for some . Observe .  Thus, and .  "
 },
@@ -955,9 +955,9 @@ var ptx_lunr_docs = [
   "body": "  Let and . Then the following are well-defined operations on the equivalence classes:    Addition modulo : . The symbol is often used to indicate that we are defining the expression on the left to equal the expression on the right.      Multiplication modulo : .      "
 },
 {
-  "id": "sec-integers-modulo-m-24",
+  "id": "ssec_integersModm-12",
   "level": "2",
-  "url": "sec-integers-modulo-m.html#sec-integers-modulo-m-24",
+  "url": "sec-integers-modulo-m.html#ssec_integersModm-12",
   "type": "Activity",
   "number": "1.4.6",
   "title": "",
@@ -995,7 +995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integers-modulo-m.html#integers-mod-m-tf",
   "type": "Exercise",
-  "number": "1.4.1",
+  "number": "1.4.5.1",
   "title": "",
   "body": " Mark the following as true or false.   For any integer , modulo .  If modulo , then modulo .  If modulo and modulo , then modulo .  If modulo , then modulo .  If modulo , then .  If , then for any .   "
 },
@@ -1004,7 +1004,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integers-modulo-m.html#exers-integers-mod-m-3",
   "type": "Exercise",
-  "number": "1.4.2",
+  "number": "1.4.5.2",
   "title": "",
   "body": " List the elements in and . Use the convention that conjugacy class representatives start with .  "
 },
@@ -1013,7 +1013,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integers-modulo-m.html#exers-integers-mod-m-4",
   "type": "Exercise",
-  "number": "1.4.3",
+  "number": "1.4.5.3",
   "title": "",
   "body": " Carry out the modular arithmetic. That is, find the smallest nonnegative integer representative of the resulting equivalence class.    in    in    in    in    in    "
 },
@@ -1022,7 +1022,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integers-modulo-m.html#exers-integers-mod-m-5",
   "type": "Exercise",
-  "number": "1.4.4",
+  "number": "1.4.5.4",
   "title": "",
   "body": " Write out the addition and multiplication tables for .  "
 },
@@ -1031,7 +1031,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integers-modulo-m.html#exers-integers-mod-m-6",
   "type": "Exercise",
-  "number": "1.4.5",
+  "number": "1.4.5.5",
   "title": "",
   "body": " Write out the addition and multiplication tables for . What do you notice here that isn't true in ?  "
 },
@@ -1040,7 +1040,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integers-modulo-m.html#exers-integers-mod-m-7",
   "type": "Exercise",
-  "number": "1.4.6",
+  "number": "1.4.5.6",
   "title": "",
   "body": " Prove that if and . Then there exists such that .  "
 },
@@ -1049,7 +1049,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integers-modulo-m.html#exers-integers-mod-m-8",
   "type": "Exercise",
-  "number": "1.4.7",
+  "number": "1.4.5.7",
   "title": "",
   "body": " Suppose is prime. Use the previous problem to prove that if in , then there is such that . In other words, show that all non-zero elements in have a multiplicative inverse.  "
 },
@@ -1058,7 +1058,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integers-modulo-m.html#exers-integers-mod-m-9",
   "type": "Exercise",
-  "number": "1.4.8",
+  "number": "1.4.5.8",
   "title": "",
   "body": " For each non-zero element in , determine its multiplicative inverse in the sense of the previous exercise.  "
 },
@@ -1067,7 +1067,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integers-modulo-m.html#exers-integers-mod-m-10",
   "type": "Exercise",
-  "number": "1.4.9",
+  "number": "1.4.5.9",
   "title": "",
   "body": " Show that if is not prime, then it is possible that in but neither term is zero: . Such are called zero-divisors.  "
 },
@@ -1076,7 +1076,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integers-modulo-m.html#exers-integers-mod-m-11",
   "type": "Exercise",
-  "number": "1.4.10",
+  "number": "1.4.5.10",
   "title": "",
   "body": " Show that the function defined by is not well-defined.  "
 },
@@ -1085,7 +1085,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integers-modulo-m.html#exers-integers-mod-m-12",
   "type": "Exercise",
-  "number": "1.4.11",
+  "number": "1.4.5.11",
   "title": "",
   "body": " Prove that addition and multiplication is commutative in . That is:   "
 },
@@ -1094,7 +1094,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integers-modulo-m.html#exers-integers-mod-m-13",
   "type": "Exercise",
-  "number": "1.4.12",
+  "number": "1.4.5.12",
   "title": "",
   "body": " Prove that addition and multiplication is associative in . That is:   "
 },
@@ -1103,7 +1103,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integers-modulo-m.html#exers-integers-mod-m-14",
   "type": "Exercise",
-  "number": "1.4.13",
+  "number": "1.4.5.13",
   "title": "",
   "body": " Prove that and in .  "
 },
@@ -1112,7 +1112,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integers-modulo-m.html#exers-integers-mod-m-15",
   "type": "Exercise",
-  "number": "1.4.14",
+  "number": "1.4.5.14",
   "title": "",
   "body": " Prove that for any there is such that .  "
 },
@@ -1294,7 +1294,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Rings",
-  "body": " Rings   Guiding Questions   In this section, we'll seek to answer the questions:    What are rings and integral domains, and how do they relate to fields?  What are subrings, and how can we tell if a given subset of a ring is a subring?  What special types of elements do rings have?     In the previous section, we observed that many familiar number systems are fields but that some are not. As we will see, these non-fields are often more structurally interesting, at least from the perspective of factorization; thus, in this section, we explore them in more detail. Before we proceed with that endeavor we will give a formal definition of polynomial so that we can include it in our work.     Let be a set with a well-defined addition operation and additive identity , and a variable. We define a polynomial in with coefficients in to be an expression of the form , where . We call the degree of the polynomial , denoted , and the coefficients of the polynomial. The coefficient is known as the leading coefficient of , and is the leading term of . By we denote the set of all polynomials with coefficients in . The additive identity of is , called the zero polynomial , and is the polynomial whose coefficients are all . The degree of the zero polynomial is .      Give some examples of polynomials in for various choices of number systems . Identify their coefficients, leading terms, and degrees.      In the following table, fill in a Y if the set has the property; fill in a N if it does not.   A list of properties and sets.                                           Closure under +                           Closure under                           is associative                           is associative                           + is commutative                           is commutative                           distributes over +                           There is an additive identity                           All elements have additive inverses                           There is a multiplicative identity                           All nonzero elements have mult. inverses                                Which of the field axioms in hold for , where is a field, and which fail to hold in general?    All the axioms hold, except F8. For instance, there is no polynomial for which .    As a result of the answer to and the completed Table , we make the following definition.   ring  unity   A ring  is a nonempty set, together with binary operations and , denoted , and satisfying the following axioms.   Given any , . (Associativity of addition)    Given any , . (Commutativity of addition)    There exists an element such that for all , . (Additive identity)    Given any there exists a such that . (Additive inverses)    Given any , . (Associativity of multiplication)    There exists an element , such that for all . (Multiplicative identity)    For all , . (Left-distributive property)    For all , . (Right-distributive property)   As with fields, when the ring is clear from context, we will often write in place of and in place of . The element is also referred to as the unity .     Non-Unital Rings  Most rings of interest in modern algebra, particularly commutative algebra, have a multiplicative identity. Algebraic structures that satisfy all the ring axioms except for the multiplicative identity are called non-unital rings and are sometimes referred to as rngs (without the i).     Compare and contrast Definitions and . What are the similarities? What are the differences?    While rings do not enjoy all the properties of fields, they are incredibly useful even in applied mathematics (see, e.g., for one recent example).    commutative ring  A ring is said to be commutative if, for all , .      Consider the sets given in Table . Which are rings? Which are commutative rings with identity?      Which properties of fields in Theorem hold for (commutative) rings?      Are all rings fields? Are all fields rings? Justify.     Emmy Noether  In the 1920s, Emmy Noether was the first to explicitly describe the ring axioms as we know them today, and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra, number theory, and geometry, including the (see for more on the historical development of the proof of Fermat's Last Theorem). Most modern definitions of ring agree with our Definition and allow for rings with noncommutative multiplication.     Portrait of Emmy Noether    The following theorem states that the set of polynomials with coefficients in a ring is itself a ring under the usual operations of polynomial addition of like terms, and multiplication via distribution. The proof is not tricky, but a rigorous justification (especially of, e.g., the associativity of polynomial multiplication) is tedious, and thus is omitted.   Theorem   If is a (commutative) ring , then is a (commutative) ring .     TBD.    subring  overring   Let be a ring and let . If is itself a ring under and , we say is a subring of . In this case, is often called an overring of .    The following theorem provides a easy-to-apply test to check if a given subset of a ring is in fact a subring of .   subring test   Let be a ring and a subset of . Then is a subring if and only if:    ;     is closed under multiplication; and     is closed under subtraction.       Suppose and is closed under multiplication and subtraction. We check each of the axioms in . Since and is closed under subtraction we have . For any , we know that so that Thus and are the additive and multiplicative identities, respectively, in .  For any , we know that . Thus is closed under additive inverses. If , then so that is closed under addition.  For any triple of elements , we know so that and . Thus associativity and commutativity of addition are inherited from . Similarly, , , and . That is, inherits associativity of multiplication as well as the left- and right-distributive properties from .  We conclude that is a ring under the multiplication and addition from .      Determine whether the following rings are subrings of the given rings .    ,      ,      is any ring,      ,           unit  associates   Let be a ring and let be nonzero. If there is a such that , we say is unit of . We denote the set of units of by . We say are associates if there exists some such that .      Explicitly describe the set . What are the associates of 7 in ?    In other words, a unit in a ring is a nonzero element with a multiplicative inverse. The existence of units is the primary difference between fields and commutative rings with identity: in a field, all nonzero elements are units, while in a commutative ring with identity, no nonzero elements need be units, as demonstrates.    A commutative ring with identity in which every nonzero element is a unit is a field.     Compare the axioms for a commutative ring with identity and a field. The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.   A useful tool for analyzing the structure of rings with finitely many elements are addition and multiplication tables. As an example, consider the addition and multiplication tables for shown in and .   Addition table for .                                                              Multiplication table for . >                                                              Calculate addition and multiplication tables for the following rings.        List 2-3 observations about your tables.    TBD.    One of the interesting side effects of our definition of ring is that it allows for behavior that may at first appear unintuitive or downright weird.   zero divisor   A zero divisor in a ring is a nonzero element such that there is a nonzero with or .    Notice that the reason the idea of zero divisors at first appears weird is that they are not something we encounter when working with our familiar sets of numbers, such as or . In fact, we specifically use the fact that there are no zero divisors in our familiar numbers systems to solve equations in high school algebra (e.g., if , then or ). The lack of zero divisors is one of the properties that does not persist in our abstraction from the integers to rings in general.    Find, with justification, all of the zero divisors in and . Make and prove a conjecture about the existence of zero divisors in , where .    The zero divisors in are . There are no zero divisors in .   conjecture.  is a zero divisor if and only if .      Are there any other rings in which you've seen zero divisors? Recall your answers to .    Matrix rings, if students have had linear algebra (and\/or completed ). Otherwise, this may be a new concept.      Let be a ring and suppose such that is a zero divisor. Then either or is a zero divisor.     Let such that is a zero divisor. Then (else ). Since is a zero divisor, there is some such that . If , then is a zero divisor, as . On the other hand, if , then is a zero divisor, as .     Let be a ring and . Then is not a zero divisor.     Let and suppose is a zero divisor. Then there is some such that . But then . \\Lightning     How can we reinterpret in light of our new language of units and zero divisors? State a theorem that uses this new language.    Answers may vary, but how about this: Let such that . Then if is not a zero divisor.    While there is a well-developed body of literature on (noncommutative) rings (possibly without identity), from this point on, and unless stated otherwise, when we use the word ring we mean commutative ring with identity .  Moreover, while even commutative rings with identity and zero divisors are of interest to mathematicians, we will focus our study on rings with no zero divisors. As these rings share many properties of the integers, they are known as integral domains .   integral domain  domain   A commutative ring with identity is an integral domain , or just domain , if has no zero divisors.    The next activities and theorems help us identify examples of domains, as well as situate the notion of a domain in its proper place relative to fields and rings in general.    Which of the following rings are domains? Justify your answers.                                 Every field is a domain.     If is a field, the nonzero elements of are units, which cannot be zero divisors. Thus, has no zero divisors.     Let and . Then is a field if and only if is a domain.     The forward direction holds by Theorem .  For the reverse, assume is a domain. Then has no zero divisors. If is composite, there exist integers satisfying such that . Then in , but . Thus, may not be composite, and is therefore prime. By an earlier theorem, is a field.     If is a domain and is a subring of with identity , then is a domain.     Any zero divisors in are also zero divisors in . Since has no zero divisors, neither does .     If is a domain, then so is .     Let and be nonzero polynomials in , where . Then the lowest-degree term in is . Since is a domain, , and thus is not the zero polynomial.     Is the converse of Theorem true? If so, give a short proof. If not, find a counterexample.    Yes. Apply Theorem .      Given a field , the set of polynomials is a domain.    When considering sets of polynomials, as we do in (particularly in ), the following results will be quite useful.    Let be a domain, and let be nonzero polynomials. Then .    Let the leading term of be and the leading term of be . Then the leading term of is . (Observe that since is a domain, .) Thus, .      Can the hypotheses of be relaxed? If so, provide more general hypotheses and adapt the proof. If not, give an illustrative example.    No; let . Observe that , but has degree 1.      Let be a domain. What are the units of ? Prove your answer.    The units are . Clearly, .  Suppose such that . Then . Thus , and consequently, .     C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes , Bull. Math. Bio. 75 (2013), 1571-1611, DOI 10.1007\/s11538-013-9860-3    "
+  "body": " Rings   Guiding Questions   In this section, we'll seek to answer the questions:    What are rings and how do they relate to fields?  What are subrings, and how can we tell if a given subset of a ring is a subring?     In the previous section, we observed that many familiar number systems are fields but that some are not. As we will see, these non-fields are often more structurally interesting, at least from the perspective of factorization. In this section, we explore them in more detail. We start that exploration with a rigorous definition of polynomials and their arithmetic operations.    Integral Polynomials    A polynomial in with coefficients in is an expression of the form , where and . We will sometimes omit the function notation and denote simply by . We call the degree of the polynomial , denoted , and the coefficients of the polynomial. The coefficient is known as the leading coefficient of , and is the leading term of . The set of all integral polynomials is:     We know from our experience with polynomials in calculus and other courses that when we add two polynomials we again get a polynomial. Also when we multiply two polynomials we again get a polynomial. However, in order to show that addition and multiplication are well-defined operations on , they must first be defined!  This is easier said than done. Let's remind ourselves with an example that addition of polynomials is combine like terms . For example: Let's do this computation slightly differently: Notice, that to properly combine like terms we need to artificially add 0's. This is a mental trick we tacitly do when we compute anyways but this idea of extending a polynomial by 0 is crucial to defining the addition and multiplication operations.   Alternatives to Extension by 0  An alternative (more rigorous) way of defining addition and multiplication is to not use the variable at all. But rather to think of polynomials as defined by their coefficients. In this case, we define a polynomial as a list of integers (indexed by ): such that only finitely many of the entries are non-zero. Or equivalently, that there exists such that for all .     Given two polynomials , we define their sum as follows. Write If , we extend by 0: where . If , we extend by 0: where . Then     The extra effort we've put in to defining polynomial addition will simplify proofs as the following proposition shows.    Addition of integral polynomials is commutative. That is, for any , we have      Suppose . Possibly by extending by 0, we can assume Then    Notice that in the proof of we did not need to go into cases based off of if the degree of is greater than or less than the degree of .    Mimic the proof of to prove that addition of integral polynomials is associative.      Rings    In the following table, fill in a Y if the set has the property; fill in a N if it does not.   A list of properties and sets.                                           Closure under +                           Closure under                           is associative                           is associative                           + is commutative                           is commutative                           distributes over +                           There is an additive identity                           All elements have additive inverses                           There is a multiplicative identity                           All nonzero elements have mult. inverses                                Which of the field axioms in hold for , where is a field, and which fail to hold in general?    All the axioms hold, except F8. For instance, there is no polynomial for which .    As a result of the answer to and the completed Table , we make the following definition.   ring  unity   A ring  is a nonempty set, together with binary operations and , denoted , and satisfying the following axioms.   Given any , . (Associativity of addition)    Given any , . (Commutativity of addition)    There exists an element such that for all , . (Additive identity)    Given any there exists a such that . (Additive inverses)    Given any , . (Associativity of multiplication)    There exists an element , such that for all . (Multiplicative identity)    For all , . (Left-distributive property)    For all , . (Right-distributive property)   As with fields, when the ring is clear from context, we will often write in place of and in place of . The element is also referred to as the unity .     Non-Unital Rings  Most rings of interest in modern algebra, particularly commutative algebra, have a multiplicative identity. Algebraic structures that satisfy all the ring axioms except for the multiplicative identity are called non-unital rings and are sometimes referred to as rngs (without the i).     Compare and contrast Definitions and . What are the similarities? What are the differences?    While rings do not enjoy all the properties of fields, they are incredibly useful even in applied mathematics (see, e.g., for one recent example).    commutative ring  A ring is said to be commutative if, for all , .      Consider the sets given in Table . Which are rings? Which are commutative rings with identity?      Which properties of fields in Theorem hold for (commutative) rings?      Are all rings fields? Are all fields rings? Justify.     Emmy Noether     Portrait of Emmy Noether   In the 1920s, Emmy Noether was the first to explicitly describe the ring axioms as we know them today, and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra, number theory, and geometry, including the (see for more on the historical development of the proof of Fermat's Last Theorem). Most modern definitions of ring agree with our Definition and allow for rings with noncommutative multiplication.   The following theorem states that the set of polynomials with coefficients in a ring is itself a ring under the usual operations of polynomial addition of like terms, and multiplication via distribution. The proof is not tricky, but a rigorous justification (especially of, e.g., the associativity of polynomial multiplication) is tedious, and thus is omitted.   Theorem   If is a (commutative) ring , then is a (commutative) ring .     TBD.     Subrings: New Rings from Old   subring  overring   Let be a ring and let . If is itself a ring under and , we say is a subring of . In this case, is often called an overring of .    The following theorem provides a easy-to-apply test to check if a given subset of a ring is in fact a subring of .   subring test   Let be a ring and a subset of . Then is a subring if and only if:    ;     is closed under multiplication; and     is closed under subtraction.       Suppose and is closed under multiplication and subtraction. We check each of the axioms in . Since and is closed under subtraction we have . For any , we know that so that Thus and are the additive and multiplicative identities, respectively, in .  For any , we know that . Thus is closed under additive inverses. If , then so that is closed under addition.  For any triple of elements , we know so that and . Thus associativity and commutativity of addition are inherited from . Similarly, , , and . That is, inherits associativity of multiplication as well as the left- and right-distributive properties from .  We conclude that is a ring under the multiplication and addition from .      Determine whether the following rings are subrings of the given rings .    ,      ,      is any ring,      ,            Units and Associates in a Ring   unit  associates   Let be a ring and let be nonzero. If there is a such that , we say is unit of . We denote the set of units of by . We say are associates if there exists some such that .      Explicitly describe the set . What are the associates of 7 in ?    In other words, a unit in a ring is a nonzero element with a multiplicative inverse. The existence of units is the primary difference between fields and commutative rings with identity: in a field, all nonzero elements are units, while in a commutative ring with identity, no nonzero elements need be units, as demonstrates.    A commutative ring with identity in which every nonzero element is a unit is a field.     Compare the axioms for a commutative ring with identity and a field. The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.   A useful tool for analyzing the structure of rings with finitely many elements are addition and multiplication tables. As an example, consider the addition and multiplication tables for shown in and .   Addition table for .                                                              Multiplication table for . >                                                              Calculate addition and multiplication tables for the following rings.        List 2-3 observations about your tables.    TBD.      C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes , Bull. Math. Bio. 75 (2013), 1571-1611, DOI 10.1007\/s11538-013-9860-3    "
 },
 {
   "id": "obj_rings",
@@ -1303,30 +1303,57 @@ var ptx_lunr_docs = [
   "type": "Objectives",
   "number": "2.2",
   "title": "Guiding Questions",
-  "body": " Guiding Questions   In this section, we'll seek to answer the questions:    What are rings and integral domains, and how do they relate to fields?  What are subrings, and how can we tell if a given subset of a ring is a subring?  What special types of elements do rings have?   "
+  "body": " Guiding Questions   In this section, we'll seek to answer the questions:    What are rings and how do they relate to fields?  What are subrings, and how can we tell if a given subset of a ring is a subring?   "
 },
 {
-  "id": "def-polynomial",
+  "id": "def_polynomial",
   "level": "2",
-  "url": "sec_rings.html#def-polynomial",
+  "url": "sec_rings.html#def_polynomial",
   "type": "Definition",
   "number": "2.2.1",
   "title": "",
-  "body": "  Let be a set with a well-defined addition operation and additive identity , and a variable. We define a polynomial in with coefficients in to be an expression of the form , where . We call the degree of the polynomial , denoted , and the coefficients of the polynomial. The coefficient is known as the leading coefficient of , and is the leading term of . By we denote the set of all polynomials with coefficients in . The additive identity of is , called the zero polynomial , and is the polynomial whose coefficients are all . The degree of the zero polynomial is .   "
+  "body": "  A polynomial in with coefficients in is an expression of the form , where and . We will sometimes omit the function notation and denote simply by . We call the degree of the polynomial , denoted , and the coefficients of the polynomial. The coefficient is known as the leading coefficient of , and is the leading term of . The set of all integral polynomials is:    "
 },
 {
-  "id": "sec_rings-5",
+  "id": "def_polynomialAddition",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-5",
+  "url": "sec_rings.html#def_polynomialAddition",
+  "type": "Definition",
+  "number": "2.2.2",
+  "title": "",
+  "body": "  Given two polynomials , we define their sum as follows. Write If , we extend by 0: where . If , we extend by 0: where . Then    "
+},
+{
+  "id": "prop_polynomialAdditionIsCommutative",
+  "level": "2",
+  "url": "sec_rings.html#prop_polynomialAdditionIsCommutative",
+  "type": "Proposition",
+  "number": "2.2.3",
+  "title": "",
+  "body": "  Addition of integral polynomials is commutative. That is, for any , we have    "
+},
+{
+  "id": "ssec_polynomialRing-9",
+  "level": "2",
+  "url": "sec_rings.html#ssec_polynomialRing-9",
+  "type": "Proof",
+  "number": "2.2.1.1",
+  "title": "",
+  "body": " Suppose . Possibly by extending by 0, we can assume Then   "
+},
+{
+  "id": "ssec_polynomialRing-11",
+  "level": "2",
+  "url": "sec_rings.html#ssec_polynomialRing-11",
   "type": "Exploration",
   "number": "2.2.1",
   "title": "",
-  "body": "  Give some examples of polynomials in for various choices of number systems . Identify their coefficients, leading terms, and degrees.   "
+  "body": "  Mimic the proof of to prove that addition of integral polynomials is associative.   "
 },
 {
-  "id": "sec_rings-6",
+  "id": "ssec_rings-2",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-6",
+  "url": "sec_rings.html#ssec_rings-2",
   "type": "Exploration",
   "number": "2.2.2",
   "title": "",
@@ -1346,25 +1373,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#def_ring",
   "type": "Definition",
-  "number": "2.2.3",
+  "number": "2.2.5",
   "title": "",
   "body": " ring  unity   A ring  is a nonempty set, together with binary operations and , denoted , and satisfying the following axioms.   Given any , . (Associativity of addition)    Given any , . (Commutativity of addition)    There exists an element such that for all , . (Additive identity)    Given any there exists a such that . (Additive inverses)    Given any , . (Associativity of multiplication)    There exists an element , such that for all . (Multiplicative identity)    For all , . (Left-distributive property)    For all , . (Right-distributive property)   As with fields, when the ring is clear from context, we will often write in place of and in place of . The element is also referred to as the unity .   "
 },
 {
-  "id": "sec_rings-11",
+  "id": "ssec_rings-7",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-11",
+  "url": "sec_rings.html#ssec_rings-7",
   "type": "Investigation",
   "number": "2.2.4",
   "title": "",
   "body": "  Compare and contrast Definitions and . What are the similarities? What are the differences?   "
 },
 {
-  "id": "sec_rings-13",
+  "id": "ssec_rings-9",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-13",
+  "url": "sec_rings.html#ssec_rings-9",
   "type": "Definition",
-  "number": "2.2.4",
+  "number": "2.2.6",
   "title": "",
   "body": "  commutative ring  A ring is said to be commutative if, for all , .   "
 },
@@ -1378,29 +1405,29 @@ var ptx_lunr_docs = [
   "body": "  Consider the sets given in Table . Which are rings? Which are commutative rings with identity?   "
 },
 {
-  "id": "sec_rings-15",
+  "id": "ssec_rings-11",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-15",
+  "url": "sec_rings.html#ssec_rings-11",
   "type": "Exploration",
   "number": "2.2.6",
   "title": "",
   "body": "  Which properties of fields in Theorem hold for (commutative) rings?   "
 },
 {
-  "id": "sec_rings-16",
+  "id": "ssec_rings-12",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-16",
+  "url": "sec_rings.html#ssec_rings-12",
   "type": "Investigation",
   "number": "2.2.7",
   "title": "",
   "body": "  Are all rings fields? Are all fields rings? Justify.   "
 },
 {
-  "id": "sec_rings-18",
+  "id": "ssec_rings-13-2-1",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-18",
+  "url": "sec_rings.html#ssec_rings-13-2-1",
   "type": "Figure",
-  "number": "2.2.5",
+  "number": "2.2.7",
   "title": "",
   "body": "  Portrait of Emmy Noether   "
 },
@@ -1409,25 +1436,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#thm_polynomialsFormRing",
   "type": "Theorem",
-  "number": "2.2.6",
+  "number": "2.2.8",
   "title": "Theorem.",
   "body": " Theorem   If is a (commutative) ring , then is a (commutative) ring .   "
 },
 {
-  "id": "sec_rings-21",
+  "id": "ssec_rings-16",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-21",
+  "url": "sec_rings.html#ssec_rings-16",
   "type": "Proof",
-  "number": "2.2.1",
+  "number": "2.2.2.1",
   "title": "",
   "body": " TBD.  "
 },
 {
-  "id": "sec_rings-22",
+  "id": "ssec_subrings-2",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-22",
+  "url": "sec_rings.html#ssec_subrings-2",
   "type": "Definition",
-  "number": "2.2.7",
+  "number": "2.2.9",
   "title": "",
   "body": " subring  overring   Let be a ring and let . If is itself a ring under and , we say is a subring of . In this case, is often called an overring of .   "
 },
@@ -1436,14 +1463,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#thm_subringTest",
   "type": "Theorem",
-  "number": "2.2.8",
+  "number": "2.2.10",
   "title": "",
   "body": " subring test   Let be a ring and a subset of . Then is a subring if and only if:    ;     is closed under multiplication; and     is closed under subtraction.       Suppose and is closed under multiplication and subtraction. We check each of the axioms in . Since and is closed under subtraction we have . For any , we know that so that Thus and are the additive and multiplicative identities, respectively, in .  For any , we know that . Thus is closed under additive inverses. If , then so that is closed under addition.  For any triple of elements , we know so that and . Thus associativity and commutativity of addition are inherited from . Similarly, , , and . That is, inherits associativity of multiplication as well as the left- and right-distributive properties from .  We conclude that is a ring under the multiplication and addition from .   "
 },
 {
-  "id": "sec_rings-25",
+  "id": "ssec_subrings-5",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-25",
+  "url": "sec_rings.html#ssec_subrings-5",
   "type": "Activity",
   "number": "2.2.8",
   "title": "",
@@ -1454,14 +1481,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#def-unit",
   "type": "Definition",
-  "number": "2.2.9",
+  "number": "2.2.11",
   "title": "",
   "body": " unit  associates   Let be a ring and let be nonzero. If there is a such that , we say is unit of . We denote the set of units of by . We say are associates if there exists some such that .   "
 },
 {
-  "id": "sec_rings-27",
+  "id": "ssec_unitsAndAssociates-3",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-27",
+  "url": "sec_rings.html#ssec_unitsAndAssociates-3",
   "type": "Exploration",
   "number": "2.2.9",
   "title": "",
@@ -1472,16 +1499,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#thm-cri-field",
   "type": "Theorem",
-  "number": "2.2.10",
+  "number": "2.2.12",
   "title": "",
   "body": "  A commutative ring with identity in which every nonzero element is a unit is a field.   "
 },
 {
-  "id": "sec_rings-30",
+  "id": "ssec_unitsAndAssociates-6",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-30",
+  "url": "sec_rings.html#ssec_unitsAndAssociates-6",
   "type": "Proof",
-  "number": "2.2.2",
+  "number": "2.2.4.1",
   "title": "",
   "body": " Compare the axioms for a commutative ring with identity and a field. The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.  "
 },
@@ -1490,7 +1517,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#table-z3addition",
   "type": "Table",
-  "number": "2.2.11",
+  "number": "2.2.13",
   "title": "Addition table for <span class=\"process-math\">\\(R=\\Z_3\\text{.}\\)<\/span>",
   "body": " Addition table for .                                                            "
 },
@@ -1499,7 +1526,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#table-z3multiplication",
   "type": "Table",
-  "number": "2.2.12",
+  "number": "2.2.14",
   "title": "Multiplication table for <span class=\"process-math\">\\(R=\\Z_3\\text{.}\\)<\/span>",
   "body": " Multiplication table for . >                                                           "
 },
@@ -1511,222 +1538,6 @@ var ptx_lunr_docs = [
   "number": "2.2.10",
   "title": "",
   "body": "  Calculate addition and multiplication tables for the following rings.        List 2-3 observations about your tables.    TBD.   "
-},
-{
-  "id": "sec_rings-36",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-36",
-  "type": "Definition",
-  "number": "2.2.13",
-  "title": "",
-  "body": " zero divisor   A zero divisor in a ring is a nonzero element such that there is a nonzero with or .   "
-},
-{
-  "id": "sec_rings-38",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-38",
-  "type": "Exploration",
-  "number": "2.2.11",
-  "title": "",
-  "body": "  Find, with justification, all of the zero divisors in and . Make and prove a conjecture about the existence of zero divisors in , where .    The zero divisors in are . There are no zero divisors in .   conjecture.  is a zero divisor if and only if .   "
-},
-{
-  "id": "sec_rings-39",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-39",
-  "type": "Investigation",
-  "number": "2.2.12",
-  "title": "",
-  "body": "  Are there any other rings in which you've seen zero divisors? Recall your answers to .    Matrix rings, if students have had linear algebra (and\/or completed ). Otherwise, this may be a new concept.   "
-},
-{
-  "id": "sec_rings-40",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-40",
-  "type": "Theorem",
-  "number": "2.2.14",
-  "title": "",
-  "body": "  Let be a ring and suppose such that is a zero divisor. Then either or is a zero divisor.   "
-},
-{
-  "id": "sec_rings-41",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-41",
-  "type": "Proof",
-  "number": "2.2.3",
-  "title": "",
-  "body": " Let such that is a zero divisor. Then (else ). Since is a zero divisor, there is some such that . If , then is a zero divisor, as . On the other hand, if , then is a zero divisor, as .  "
-},
-{
-  "id": "theorem_unitnotazd",
-  "level": "2",
-  "url": "sec_rings.html#theorem_unitnotazd",
-  "type": "Theorem",
-  "number": "2.2.15",
-  "title": "",
-  "body": "  Let be a ring and . Then is not a zero divisor.   "
-},
-{
-  "id": "sec_rings-43",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-43",
-  "type": "Proof",
-  "number": "2.2.4",
-  "title": "",
-  "body": " Let and suppose is a zero divisor. Then there is some such that . But then . \\Lightning  "
-},
-{
-  "id": "sec_rings-44",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-44",
-  "type": "Investigation",
-  "number": "2.2.13",
-  "title": "",
-  "body": "  How can we reinterpret in light of our new language of units and zero divisors? State a theorem that uses this new language.    Answers may vary, but how about this: Let such that . Then if is not a zero divisor.   "
-},
-{
-  "id": "sec_rings-46",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-46",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "integral domains "
-},
-{
-  "id": "sec_rings-47",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-47",
-  "type": "Definition",
-  "number": "2.2.16",
-  "title": "",
-  "body": " integral domain  domain   A commutative ring with identity is an integral domain , or just domain , if has no zero divisors.   "
-},
-{
-  "id": "sec_rings-49",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-49",
-  "type": "Activity",
-  "number": "2.2.14",
-  "title": "",
-  "body": "  Which of the following rings are domains? Justify your answers.                              "
-},
-{
-  "id": "theorem_everyfieldisadomain",
-  "level": "2",
-  "url": "sec_rings.html#theorem_everyfieldisadomain",
-  "type": "Theorem",
-  "number": "2.2.17",
-  "title": "",
-  "body": "  Every field is a domain.   "
-},
-{
-  "id": "sec_rings-51",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-51",
-  "type": "Proof",
-  "number": "2.2.5",
-  "title": "",
-  "body": " If is a field, the nonzero elements of are units, which cannot be zero divisors. Thus, has no zero divisors.  "
-},
-{
-  "id": "sec_rings-52",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-52",
-  "type": "Theorem",
-  "number": "2.2.18",
-  "title": "",
-  "body": "  Let and . Then is a field if and only if is a domain.   "
-},
-{
-  "id": "sec_rings-53",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-53",
-  "type": "Proof",
-  "number": "2.2.6",
-  "title": "",
-  "body": " The forward direction holds by Theorem .  For the reverse, assume is a domain. Then has no zero divisors. If is composite, there exist integers satisfying such that . Then in , but . Thus, may not be composite, and is therefore prime. By an earlier theorem, is a field.  "
-},
-{
-  "id": "theorem_subringsaredomains",
-  "level": "2",
-  "url": "sec_rings.html#theorem_subringsaredomains",
-  "type": "Theorem",
-  "number": "2.2.19",
-  "title": "",
-  "body": "  If is a domain and is a subring of with identity , then is a domain.   "
-},
-{
-  "id": "sec_rings-55",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-55",
-  "type": "Proof",
-  "number": "2.2.7",
-  "title": "",
-  "body": " Any zero divisors in are also zero divisors in . Since has no zero divisors, neither does .  "
-},
-{
-  "id": "theorem_domainimpliespolynomialdomain",
-  "level": "2",
-  "url": "sec_rings.html#theorem_domainimpliespolynomialdomain",
-  "type": "Theorem",
-  "number": "2.2.20",
-  "title": "",
-  "body": "  If is a domain, then so is .   "
-},
-{
-  "id": "sec_rings-57",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-57",
-  "type": "Proof",
-  "number": "2.2.8",
-  "title": "",
-  "body": " Let and be nonzero polynomials in , where . Then the lowest-degree term in is . Since is a domain, , and thus is not the zero polynomial.  "
-},
-{
-  "id": "sec_rings-58",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-58",
-  "type": "Investigation",
-  "number": "2.2.15",
-  "title": "",
-  "body": "  Is the converse of Theorem true? If so, give a short proof. If not, find a counterexample.    Yes. Apply Theorem .   "
-},
-{
-  "id": "sec_rings-59",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-59",
-  "type": "Corollary",
-  "number": "2.2.21",
-  "title": "",
-  "body": "  Given a field , the set of polynomials is a domain.   "
-},
-{
-  "id": "theorem_degreeofproductinfield",
-  "level": "2",
-  "url": "sec_rings.html#theorem_degreeofproductinfield",
-  "type": "Theorem",
-  "number": "2.2.22",
-  "title": "",
-  "body": "  Let be a domain, and let be nonzero polynomials. Then .    Let the leading term of be and the leading term of be . Then the leading term of is . (Observe that since is a domain, .) Thus, .   "
-},
-{
-  "id": "sec_rings-62",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-62",
-  "type": "Exploration",
-  "number": "2.2.16",
-  "title": "",
-  "body": "  Can the hypotheses of be relaxed? If so, provide more general hypotheses and adapt the proof. If not, give an illustrative example.    No; let . Observe that , but has degree 1.   "
-},
-{
-  "id": "sec_rings-63",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-63",
-  "type": "Investigation",
-  "number": "2.2.17",
-  "title": "",
-  "body": "  Let be a domain. What are the units of ? Prove your answer.    The units are . Clearly, .  Suppose such that . Then . Thus , and consequently, .   "
 },
 {
   "id": "sec_integralDomains",
