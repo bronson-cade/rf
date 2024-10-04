@@ -538,7 +538,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "Primes and Factorization",
-  "body": " Primes and Factorization   Guiding Questions   In this section, we'll seek to answer the questions:    What are primes? What properties do they have?  What does the Fundamental Theorem of Arithmetic say?  Why is the Fundamental Theorem of Arithmetic true?    As described in Section 1.1 , our main goal is to build a deep structural understanding of the notion of factorization . That is, splitting objects (e.g., numbers, polynomials, matrices) into products of other objects. One of the most familiar examples of this process involves factoring integers into products of primes.    prime (integers)  composite (integers)  Let be a natural number. We say is prime if whenever such that , either or .  A natural number is said to be composite if it is not prime.    This is almost certainly not the definition of prime that you are familiar with from your school days, which likely said something to the effect that a prime is a natural number only divisible by 1 and itself. However, is often more useful than the usual definition. And, as demonstrates, the two notions are equivalent.   Euclid's Lemma   Given any , , is prime if and only if whenever divides , either or .    Let be prime and suppose divides , so for some . By definition, or . If , then , so , and , which means and thus . If , then , so , and , so .  Conversely, assume has the property that whenever an integer exists with , then or . Suppose , so there exists a such that . Note that if , then , and so , and then . If , then by Bézout's Identity there are integers and such that , so we may multiply by to obtain , whence .      Using as a guide, give a biconditional characterization for composite numbers. That is, finish the sentence: A number is composite if and only if ....      A number is composite if and only if there exist natural numbers such that .      How does your definition treat the number 1? The primality of 1 has been the subject of much debate stretching back to the Greeks (most of whom did not consider 1 to be a number). Throughout history, mathematicians have at times viewed 1 as prime, and at other times, not prime. The main argument for the non-primality of 1 is that if 1 were taken to be prime, we would need to word theorems like the Fundamental Theorem of Arithmetic (below) in such a way that only prime factorizations not including 1 can be considered. For, if 1 is prime, we would have to consider, e.g., as three different factorizations of 6 into primes.  However, neither is 1 composite (your definition should rule this out in some way). Instead, we call 1 a unit , which we'll explore more fully in and the following; consequently, the opposite of \"prime\" is not \"composite\", but \"not prime\".     Let such that . Then there is a prime such that .     We proceed by mathematical induction. Note that when , the statement holds.  Assume that there is a such that for all , the statement holds. Consider . If is prime, we are done. If not, then is composite, and by the answer to Question , there are integers such that . By induction, there is a prime such that , so .     Suppose and are primes with . Then .   TBD.   Our first major theorem makes two claims: that positive integers greater than 1 can be factored into products of primes, and that this factorization can happen in only one way. As the semester progresses, we will see other theorems like this one, and catch glimpses of other ways to think about the unique factorization property .   Fundamental Theorem of Arithmetic   Every natural number greater than 1 is either a prime number or it can be expressed as a finite product of prime numbers where the expression is unique up to the order of the factors.    The proof is broken into two parts: existence ( ) and uniqueness ( ).   Fundamental Theorem of Arithmetic Existence Part This approach to the Fundamental Theorem of Arithmetic is adapted from .    Every natural number is either a prime number or it can be expressed as a finite product of prime numbers. That is, for every natural number , there exist primes and natural numbers such that .    Induction!     It is enough to show that, if , we may write , where the 's are not necessarily distinct primes. Then we can collect the common primes and write them with exponent notation.  Note that when , there is such an expression, so let be the least positive integer that fails to be expressed as above. We note that cannot be prime, or it could be expressed as above. Thus, by Theorem 2.1, there is a prime such that , where . Since was the least positive integer that cannot be factored as a product of primes, has a prime factorization. But then so does , a contradiction.     Let and all be primes and let be a natural number such that . Then for some .     We first state a claim that will be useful.   Claim 1: If are primes such that , then .   Proof of Claim 1: Since and both and are prime, by the definition of primality.   Now assume that . If , we're done by Claim 1. If not, the definition of a prime guarantees that . If , we're done by Claim 1. Otherwise, .  Repeating this process, we see that either for some , or . Now the definition of a prime guarantees that or , in which case Claim 1 requires that or .    Fundamental Theorem of Arithmetic Uniqueness Part   Let be a natural number. Let and be sets of primes with if and if . Let and be sets of natural numbers such that .  Then and . That is, the sets of primes are equal but their elements are not necessarily listed in the same order (i.e., may or may not equal ). Moreover, if , then . In other words, if we express the same natural number as a product of distinct primes, then the expressions are identical except for the ordering of the factors.    Argue that the two sets are equal (how do we do that?). Then argue that the exponents must also be equal.     Without loss of generality, assume and . Given a , we know that , which implies that for some by Claim 2 in the proof of Lemma 2.8. Further, Lemma 2.8 implies that , and similarly, given a , for some . Thus, , and by the ordering of the 's and 's, we have , . Therefore, .  Now, assume by way of contradiction, that for some . Without loss of generality, we may assume . Then , which implies that .  Since , we have that , from which for some by Lemma 2.8. This is a contradiction, so for .   Our first major result is in hand: we can factor natural numbers uniquely as a product of primes. Much of the rest of this book seeks to deduce a generalization of this result that relies on structural arithmetic properties enjoyed by and similar objects.   Exercises   Mark the following as true or false.   Every even number is composite.  The sum of two prime numbers is prime.  The product of two prime numbers is prime.  Every odd number is composite.  If a prime divides the product of two integers, it must divide at least one of the integers.  Every composite number has at least two distinct prime factors.  The product of two compposite numbers is always composite.  There are infinitely many composite numbers.     List the prime numbers between 50 and 100.    Compute the prime factorization of:          Determine if the following numbers are prime:            For each of the pairs of integers in find Bézout coefficients. That is, find such that .    Another way of computing the gcd is to compute the prime factorizations of two numbers and seeing what they share. Use this method to compute .    Find the prime factorization of 100!.    Prove that there are infinitely many prime numbers.    Suppose are such that . Prove .    Suppose are such that . Prove that .    Suppose is a prime number and is such that for some . Use the Fundamental Theorem of Arithmetic to prove . Show this is false if is not prime.    Find the smallest natural number that has exactly 10 distinct prime factors.    Using and matehmatical induction, prove that if is prime and for some , then . This is an alternate proof of .    Show that if , then it is not necessarily true that . However, prove that if , then .     D. Marshall, E. Odell, M. Starbird, Number Theory Through Inquiry , MAA Textbooks, Mathematical Association of America, 2007   "
+  "body": " Primes and Factorization   Guiding Questions   In this section, we'll seek to answer the questions:    What are primes? What properties do they have?  What does the Fundamental Theorem of Arithmetic say?  Why is the Fundamental Theorem of Arithmetic true?    As described in Section 1.1 , our main goal is to build a deep structural understanding of the notion of factorization . That is, splitting objects (e.g., numbers, polynomials, matrices) into products of other objects. One of the most familiar examples of this process involves factoring integers into products of primes.    prime (integers)  composite (integers)  Let be a natural number. We say is prime if whenever such that , either or .  A natural number is said to be composite if it is not prime.    This is almost certainly not the definition of prime that you are familiar with from your school days, which likely said something to the effect that a prime is a natural number only divisible by 1 and itself. However, is often more useful than the usual definition. And, as demonstrates, the two notions are equivalent.   Euclid's Lemma   Given any , , is prime if and only if whenever divides , either or .    Let be prime and suppose divides , so for some . By definition, or . If , then , so , and , which means and thus . If , then , so , and , so .  Conversely, assume has the property that whenever an integer exists with , then or . Suppose , so there exists a such that . Note that if , then , and so , and then . If , then by Bézout's Identity there are integers and such that , so we may multiply by to obtain , whence .      Using as a guide, give a biconditional characterization for composite numbers. That is, finish the sentence: A number is composite if and only if ....      A number is composite if and only if there exist natural numbers such that .      How does your definition treat the number 1? The primality of 1 has been the subject of much debate stretching back to the Greeks (most of whom did not consider 1 to be a number). Throughout history, mathematicians have at times viewed 1 as prime, and at other times, not prime. The main argument for the non-primality of 1 is that if 1 were taken to be prime, we would need to word theorems like the Fundamental Theorem of Arithmetic (below) in such a way that only prime factorizations not including 1 can be considered. For, if 1 is prime, we would have to consider, e.g., as three different factorizations of 6 into primes.  However, neither is 1 composite (your definition should rule this out in some way). Instead, we call 1 a unit , which we'll explore more fully in and the following; consequently, the opposite of \"prime\" is not \"composite\", but \"not prime\".     Let such that . Then there is a prime such that .     We proceed by mathematical induction. Note that when , the statement holds.  Assume that there is a such that for all , the statement holds. Consider . If is prime, we are done. If not, then is composite, and by the answer to Question , there are integers such that . By induction, there is a prime such that , so .     Suppose and are primes with . Then .   Since , we know . By Euclid's Lemma , the only possible divisors of are . It follows that .   Our first major theorem makes two claims: that positive integers greater than 1 can be factored into products of primes, and that this factorization can happen in only one way. As the semester progresses, we will see other theorems like this one, and catch glimpses of other ways to think about the unique factorization property .   Fundamental Theorem of Arithmetic   Every natural number greater than 1 is either a prime number or it can be expressed as a finite product of prime numbers where the expression is unique up to the order of the factors.    The proof is broken into two parts: existence ( ) and uniqueness ( ).   Fundamental Theorem of Arithmetic Existence Part This approach to the Fundamental Theorem of Arithmetic is adapted from .    Every natural number is either a prime number or it can be expressed as a finite product of prime numbers. That is, for every natural number , there exist primes and natural numbers such that .    Induction!     It is enough to show that, if , we may write , where the 's are not necessarily distinct primes. Then we can collect the common primes and write them with exponent notation.  Note that when , there is such an expression, so let be the least positive integer that fails to be expressed as above. We note that cannot be prime, or it could be expressed as above. Thus, by Theorem 2.1, there is a prime such that , where . Since was the least positive integer that cannot be factored as a product of primes, has a prime factorization. But then so does , a contradiction.     Let and all be primes and let be a natural number such that . Then for some .     We first state a claim that will be useful.   Claim 1: If are primes such that , then .   Proof of Claim 1: Since and both and are prime, by the definition of primality.   Now assume that . If , we're done by Claim 1. If not, the definition of a prime guarantees that . If , we're done by Claim 1. Otherwise, .  Repeating this process, we see that either for some , or . Now the definition of a prime guarantees that or , in which case Claim 1 requires that or .    Fundamental Theorem of Arithmetic Uniqueness Part   Let be a natural number. Let and be sets of primes with if and if . Let and be sets of natural numbers such that .  Then and . That is, the sets of primes are equal but their elements are not necessarily listed in the same order (i.e., may or may not equal ). Moreover, if , then . In other words, if we express the same natural number as a product of distinct primes, then the expressions are identical except for the ordering of the factors.    Argue that the two sets are equal (how do we do that?). Then argue that the exponents must also be equal.     Without loss of generality, assume and . Given a , we know that , which implies that for some by Claim 2 in the proof of Lemma 2.8. Further, Lemma 2.8 implies that , and similarly, given a , for some . Thus, , and by the ordering of the 's and 's, we have , . Therefore, .  Now, assume by way of contradiction, that for some . Without loss of generality, we may assume . Then , which implies that .  Since , we have that , from which for some by Lemma 2.8. This is a contradiction, so for .   Our first major result is in hand: we can factor natural numbers uniquely as a product of primes. Much of the rest of this book seeks to deduce a generalization of this result that relies on structural arithmetic properties enjoyed by and similar objects.   Exercises   Mark the following as true or false.   Every even number is composite.  The sum of two prime numbers is prime.  The product of two prime numbers is prime.  Every odd number is composite.  If a prime divides the product of two integers, it must divide at least one of the integers.  Every composite number has at least two distinct prime factors.  The product of two compposite numbers is always composite.  There are infinitely many composite numbers.     List the prime numbers between 50 and 100.    Compute the prime factorization of:          Determine if the following numbers are prime:            For each of the pairs of integers in find Bézout coefficients. That is, find such that .    Another way of computing the gcd is to compute the prime factorizations of two numbers and seeing what they share. Use this method to compute .    Find the prime factorization of 100!.    Prove that there are infinitely many prime numbers.    Suppose are such that . Prove .    Suppose are such that . Prove that .    Suppose is a prime number and is such that for some . Use the Fundamental Theorem of Arithmetic to prove . Show this is false if is not prime.    Find the smallest natural number that has exactly 10 distinct prime factors.    Using and matehmatical induction, prove that if is prime and for some , then . This is an alternate proof of .    Show that if , then it is not necessarily true that . However, prove that if , then .     D. Marshall, E. Odell, M. Starbird, Number Theory Through Inquiry , MAA Textbooks, Mathematical Association of America, 2007   "
 },
 {
   "id": "obj_primes-factorization",
@@ -550,18 +550,18 @@ var ptx_lunr_docs = [
   "body": " Guiding Questions   In this section, we'll seek to answer the questions:    What are primes? What properties do they have?  What does the Fundamental Theorem of Arithmetic say?  Why is the Fundamental Theorem of Arithmetic true?   "
 },
 {
-  "id": "def-primeinteger",
+  "id": "def_primeinteger",
   "level": "2",
-  "url": "sec-primes-factorization.html#def-primeinteger",
+  "url": "sec-primes-factorization.html#def_primeinteger",
   "type": "Definition",
   "number": "1.3.1",
   "title": "",
   "body": "  prime (integers)  composite (integers)  Let be a natural number. We say is prime if whenever such that , either or .  A natural number is said to be composite if it is not prime.   "
 },
 {
-  "id": "theorem_euclidslemma",
+  "id": "thm_euclidslemma",
   "level": "2",
-  "url": "sec-primes-factorization.html#theorem_euclidslemma",
+  "url": "sec-primes-factorization.html#thm_euclidslemma",
   "type": "Lemma",
   "number": "1.3.2",
   "title": "Euclid’s Lemma.",
@@ -610,14 +610,23 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.3.5",
   "title": "",
-  "body": "  Suppose and are primes with . Then .   TBD.  "
+  "body": "  Suppose and are primes with . Then .   Since , we know . By Euclid's Lemma , the only possible divisors of are . It follows that .  "
+},
+{
+  "id": "ftarith",
+  "level": "2",
+  "url": "sec-primes-factorization.html#ftarith",
+  "type": "Theorem",
+  "number": "1.3.6",
+  "title": "Fundamental Theorem of Arithmetic.",
+  "body": " Fundamental Theorem of Arithmetic   Every natural number greater than 1 is either a prime number or it can be expressed as a finite product of prime numbers where the expression is unique up to the order of the factors.   "
 },
 {
   "id": "theorem_FTAexistence",
   "level": "2",
   "url": "sec-primes-factorization.html#theorem_FTAexistence",
   "type": "Theorem",
-  "number": "1.3.6",
+  "number": "1.3.7",
   "title": "Fundamental Theorem of Arithmetic–Existence Part<details class=\"ptx-footnote\" aria-live=\"polite\" id=\"theorem_FTAexistence-1-2\"><summary class=\"ptx-footnote__number\" title=\"Footnote 1.3.1\"><sup> 1 <\/sup><\/summary><div class=\"ptx-footnote__contents\" id=\"theorem_FTAexistence-1-2\">This approach to the Fundamental Theorem of Arithmetic is adapted from [1.3.1].<\/div><\/details>.",
   "body": " Fundamental Theorem of Arithmetic Existence Part This approach to the Fundamental Theorem of Arithmetic is adapted from .    Every natural number is either a prime number or it can be expressed as a finite product of prime numbers. That is, for every natural number , there exist primes and natural numbers such that .    Induction!   "
 },
@@ -635,7 +644,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primes-factorization.html#sec-primes-factorization-17",
   "type": "Lemma",
-  "number": "1.3.7",
+  "number": "1.3.8",
   "title": "",
   "body": "  Let and all be primes and let be a natural number such that . Then for some .   "
 },
@@ -653,7 +662,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primes-factorization.html#theorem_FTAuniqueness",
   "type": "Theorem",
-  "number": "1.3.8",
+  "number": "1.3.9",
   "title": "Fundamental Theorem of Arithmetic–Uniqueness Part.",
   "body": " Fundamental Theorem of Arithmetic Uniqueness Part   Let be a natural number. Let and be sets of primes with if and if . Let and be sets of natural numbers such that .  Then and . That is, the sets of primes are equal but their elements are not necessarily listed in the same order (i.e., may or may not equal ). Moreover, if , then . In other words, if we express the same natural number as a product of distinct primes, then the expressions are identical except for the ordering of the factors.    Argue that the two sets are equal (how do we do that?). Then argue that the exponents must also be equal.   "
 },
@@ -757,9 +766,9 @@ var ptx_lunr_docs = [
   "body": " Suppose are such that . Prove that .  "
 },
 {
-  "id": "exer-primes-factorization-primeDividingPower",
+  "id": "exer_primes-factorization-primeDividingPower",
   "level": "2",
-  "url": "sec-primes-factorization.html#exer-primes-factorization-primeDividingPower",
+  "url": "sec-primes-factorization.html#exer_primes-factorization-primeDividingPower",
   "type": "Exercise",
   "number": "1.3.11",
   "title": "",
@@ -1285,7 +1294,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Rings",
-  "body": " Rings   Guiding Questions   In this section, we'll seek to answer the questions:    What are rings and integral domains, and how do they relate to fields?  What are subrings, and how can we tell if a given subset of a ring is a subring?  What special types of elements do rings have?     In the previous section, we observed that many familiar number systems are fields but that some are not. As we will see, these non-fields are often more structurally interesting, at least from the perspective of factorization; thus, in this section, we explore them in more detail. Before we proceed with that endeavor we will give a formal definition of polynomial so that we can include it in our work.     Let be a set with a well-defined addition operation and additive identity , and a variable. We define a polynomial in with coefficients in to be an expression of the form , where . We call the degree of the polynomial , denoted , and the coefficients of the polynomial. The coefficient is known as the leading coefficient of , and is the leading term of . By we denote the set of all polynomials with coefficients in . The additive identity of is , called the zero polynomial , and is the polynomial whose coefficients are all . The degree of the zero polynomial is .      Give some examples of polynomials in for various choices of number systems . Identify their coefficients, leading terms, and degrees.      In the following table, fill in a Y if the set has the property; fill in a N if it does not.   A list of properties and sets.                                           Closure under +                           Closure under                           is associative                           is associative                           + is commutative                           is commutative                           distributes over +                           There is an additive identity                           All elements have additive inverses                           There is a multiplicative identity                           All nonzero elements have mult. inverses                                Which of the field axioms in hold for , where is a field, and which fail to hold in general?    All the axioms hold, except F8. For instance, there is no polynomial for which .    As a result of the answer to and the completed Table , we make the following definition.   ring  unity   A ring  is a nonempty set, together with binary operations and , denoted , and satisfying the following axioms.   Given any , . (Associativity of addition)    Given any , . (Commutativity of addition)    There exists an element such that for all , . (Additive identity)    Given any there exists a such that . (Additive inverses)    Given any , . (Associativity of multiplication)    There exists an element , such that for all . (Multiplicative identity)    For all , . (Left-distributive property)    For all , . (Right-distributive property)   As with fields, when the ring is clear from context, we will often write in place of and in place of . The element is also referred to as the unity .     Non-Unital Rings  Most rings of interest in modern algebra, particularly commutative algebra, have a multiplicative identity. Algebraic structures that satisfy all the ring axioms except for the multiplicative identity are called non-unital rings and are sometimes referred to as rngs (without the i).     Compare and contrast Definitions and . What are the similarities? What are the differences?    While rings do not enjoy all the properties of fields, they are incredibly useful even in applied mathematics (see, e.g., for one recent example).    commutative ring  A ring is said to be commutative if, for all , .      Consider the sets given in Table . Which are rings? Which are commutative rings with identity?      Which properties of fields in Theorem hold for (commutative) rings?      Are all rings fields? Are all fields rings? Justify.     Emmy Noether  In the 1920s, Emmy Noether was the first to explicitly describe the ring axioms as we know them today, and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra, number theory, and geometry, including the (see for more on the historical development of the proof of Fermat's Last Theorem). Most modern definitions of ring agree with our Definition and allow for rings with noncommutative multiplication and no multiplicative identity.     Portrait of Emmy Noether    The following theorem states that the set of polynomials with coefficients in a ring is itself a ring under the usual operations of polynomial addition of like terms, and multiplication via distribution. The proof is not tricky, but a rigorous justification (especially of, e.g., the associativity of polynomial multiplication) is tedious, and thus is omitted.   Theorem   If is a (commutative) ring (with identity ), then is a (commutative) ring (with identity ).     subring  overring   Let be a ring and let . If is itself a ring under and , we say is a subring of . In this case, is often called an overring of .    The following theorem provides a easy-to-apply test to check if a given subset of a ring is in fact a subring of .   subring test   Let be a ring and a subset of . Then is a subring if and only if:    ;     is closed under multiplication; and     is closed under subtraction.       Suppose and is closed under multiplication and subtraction. We check each of the axioms in . Since and is closed under subtraction we have . For any , we know that so that Thus and are the additive and multiplicative identities, respectively, in .  For any , we know that . Thus is closed under additive inverses. If , then so that is closed under addition.  For any triple of elements , we know so that and . Thus associativity and commutativity of addition are inherited from . Similarly, , , and . That is, inherits associativity of multiplication as well as the left- and right-distributive properties from .  We conclude that is a ring under the multiplication and addition from .      Determine whether the following rings are subrings of the given rings .    ,      ,      is any ring,      ,           unit  associates   Let be a ring and let be nonzero. If there is a such that , we say is unit of . We denote the set of units of by . We say are associates if there exists some such that .      Explicitly describe the set . What are the associates of 7 in ?    In other words, a unit in a ring is a nonzero element with a multiplicative inverse. The existence of units is the primary difference between fields and commutative rings with identity: in a field, all nonzero elements are units, while in a commutative ring with identity, no nonzero elements need be units, as demonstrates.    A commutative ring with identity in which every nonzero element is a unit is a field.     Compare the axioms for a commutative ring with identity and a field. The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.   A useful tool for analyzing the structure of rings with finitely many elements are addition and multiplication tables. As an example, consider the addition and multiplication tables for shown in and .   Addition table for .                                                              Multiplication table for . >                                                              Calculate addition and multiplication tables for the following rings.        List 2-3 observations about your tables.    TBD.    One of the interesting side effects of our definition of ring is that it allows for behavior that may at first appear unintuitive or downright weird.   zero divisor   A zero divisor in a ring is a nonzero element such that there is a nonzero with or .    Notice that the reason the idea of zero divisors at first appears weird is that they are not something we encounter when working with our familiar sets of numbers, such as or . In fact, we specifically use the fact that there are no zero divisors in our familiar numbers systems to solve equations in high school algebra (e.g., if , then or ). The lack of zero divisors is one of the properties that does not persist in our abstraction from the integers to rings in general.    Find, with justification, all of the zero divisors in and . Make and prove a conjecture about the existence of zero divisors in , where .    The zero divisors in are . There are no zero divisors in .   conjecture.  is a zero divisor if and only if .      Are there any other rings in which you've seen zero divisors? Recall your answers to .    Matrix rings, if students have had linear algebra (and\/or completed ). Otherwise, this may be a new concept.      Let be a ring and suppose such that is a zero divisor. Then either or is a zero divisor.     Let such that is a zero divisor. Then (else ). Since is a zero divisor, there is some such that . If , then is a zero divisor, as . On the other hand, if , then is a zero divisor, as .     Let be a ring and . Then is not a zero divisor.     Let and suppose is a zero divisor. Then there is some such that . But then . \\Lightning     How can we reinterpret in light of our new language of units and zero divisors? State a theorem that uses this new language.    Answers may vary, but how about this: Let such that . Then if is not a zero divisor.    While there is a well-developed body of literature on (noncommutative) rings (possibly without identity), from this point on, and unless stated otherwise, when we use the word ring we mean commutative ring with identity .  Moreover, while even commutative rings with identity and zero divisors are of interest to mathematicians, we will focus our study on rings with no zero divisors. As these rings share many properties of the integers, they are known as integral domains .   integral domain  domain   A commutative ring with identity is an integral domain , or just domain , if has no zero divisors.    The next activities and theorems help us identify examples of domains, as well as situate the notion of a domain in its proper place relative to fields and rings in general.    Which of the following rings are domains? Justify your answers.                                 Every field is a domain.     If is a field, the nonzero elements of are units, which cannot be zero divisors. Thus, has no zero divisors.     Let and . Then is a field if and only if is a domain.     The forward direction holds by Theorem .  For the reverse, assume is a domain. Then has no zero divisors. If is composite, there exist integers satisfying such that . Then in , but . Thus, may not be composite, and is therefore prime. By an earlier theorem, is a field.     If is a domain and is a subring of with identity , then is a domain.     Any zero divisors in are also zero divisors in . Since has no zero divisors, neither does .     If is a domain, then so is .     Let and be nonzero polynomials in , where . Then the lowest-degree term in is . Since is a domain, , and thus is not the zero polynomial.     Is the converse of Theorem true? If so, give a short proof. If not, find a counterexample.    Yes. Apply Theorem .      Given a field , the set of polynomials is a domain.    When considering sets of polynomials, as we do in (particularly in ), the following results will be quite useful.    Let be a domain, and let be nonzero polynomials. Then .    Let the leading term of be and the leading term of be . Then the leading term of is . (Observe that since is a domain, .) Thus, .      Can the hypotheses of be relaxed? If so, provide more general hypotheses and adapt the proof. If not, give an illustrative example.    No; let . Observe that , but has degree 1.      Let be a domain. What are the units of ? Prove your answer.    The units are . Clearly, .  Suppose such that . Then . Thus , and consequently, .     C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes , Bull. Math. Bio. 75 (2013), 1571-1611, DOI 10.1007\/s11538-013-9860-3    "
+  "body": " Rings   Guiding Questions   In this section, we'll seek to answer the questions:    What are rings and integral domains, and how do they relate to fields?  What are subrings, and how can we tell if a given subset of a ring is a subring?  What special types of elements do rings have?     In the previous section, we observed that many familiar number systems are fields but that some are not. As we will see, these non-fields are often more structurally interesting, at least from the perspective of factorization; thus, in this section, we explore them in more detail. Before we proceed with that endeavor we will give a formal definition of polynomial so that we can include it in our work.     Let be a set with a well-defined addition operation and additive identity , and a variable. We define a polynomial in with coefficients in to be an expression of the form , where . We call the degree of the polynomial , denoted , and the coefficients of the polynomial. The coefficient is known as the leading coefficient of , and is the leading term of . By we denote the set of all polynomials with coefficients in . The additive identity of is , called the zero polynomial , and is the polynomial whose coefficients are all . The degree of the zero polynomial is .      Give some examples of polynomials in for various choices of number systems . Identify their coefficients, leading terms, and degrees.      In the following table, fill in a Y if the set has the property; fill in a N if it does not.   A list of properties and sets.                                           Closure under +                           Closure under                           is associative                           is associative                           + is commutative                           is commutative                           distributes over +                           There is an additive identity                           All elements have additive inverses                           There is a multiplicative identity                           All nonzero elements have mult. inverses                                Which of the field axioms in hold for , where is a field, and which fail to hold in general?    All the axioms hold, except F8. For instance, there is no polynomial for which .    As a result of the answer to and the completed Table , we make the following definition.   ring  unity   A ring  is a nonempty set, together with binary operations and , denoted , and satisfying the following axioms.   Given any , . (Associativity of addition)    Given any , . (Commutativity of addition)    There exists an element such that for all , . (Additive identity)    Given any there exists a such that . (Additive inverses)    Given any , . (Associativity of multiplication)    There exists an element , such that for all . (Multiplicative identity)    For all , . (Left-distributive property)    For all , . (Right-distributive property)   As with fields, when the ring is clear from context, we will often write in place of and in place of . The element is also referred to as the unity .     Non-Unital Rings  Most rings of interest in modern algebra, particularly commutative algebra, have a multiplicative identity. Algebraic structures that satisfy all the ring axioms except for the multiplicative identity are called non-unital rings and are sometimes referred to as rngs (without the i).     Compare and contrast Definitions and . What are the similarities? What are the differences?    While rings do not enjoy all the properties of fields, they are incredibly useful even in applied mathematics (see, e.g., for one recent example).    commutative ring  A ring is said to be commutative if, for all , .      Consider the sets given in Table . Which are rings? Which are commutative rings with identity?      Which properties of fields in Theorem hold for (commutative) rings?      Are all rings fields? Are all fields rings? Justify.     Emmy Noether  In the 1920s, Emmy Noether was the first to explicitly describe the ring axioms as we know them today, and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra, number theory, and geometry, including the (see for more on the historical development of the proof of Fermat's Last Theorem). Most modern definitions of ring agree with our Definition and allow for rings with noncommutative multiplication.     Portrait of Emmy Noether    The following theorem states that the set of polynomials with coefficients in a ring is itself a ring under the usual operations of polynomial addition of like terms, and multiplication via distribution. The proof is not tricky, but a rigorous justification (especially of, e.g., the associativity of polynomial multiplication) is tedious, and thus is omitted.   Theorem   If is a (commutative) ring , then is a (commutative) ring .     TBD.    subring  overring   Let be a ring and let . If is itself a ring under and , we say is a subring of . In this case, is often called an overring of .    The following theorem provides a easy-to-apply test to check if a given subset of a ring is in fact a subring of .   subring test   Let be a ring and a subset of . Then is a subring if and only if:    ;     is closed under multiplication; and     is closed under subtraction.       Suppose and is closed under multiplication and subtraction. We check each of the axioms in . Since and is closed under subtraction we have . For any , we know that so that Thus and are the additive and multiplicative identities, respectively, in .  For any , we know that . Thus is closed under additive inverses. If , then so that is closed under addition.  For any triple of elements , we know so that and . Thus associativity and commutativity of addition are inherited from . Similarly, , , and . That is, inherits associativity of multiplication as well as the left- and right-distributive properties from .  We conclude that is a ring under the multiplication and addition from .      Determine whether the following rings are subrings of the given rings .    ,      ,      is any ring,      ,           unit  associates   Let be a ring and let be nonzero. If there is a such that , we say is unit of . We denote the set of units of by . We say are associates if there exists some such that .      Explicitly describe the set . What are the associates of 7 in ?    In other words, a unit in a ring is a nonzero element with a multiplicative inverse. The existence of units is the primary difference between fields and commutative rings with identity: in a field, all nonzero elements are units, while in a commutative ring with identity, no nonzero elements need be units, as demonstrates.    A commutative ring with identity in which every nonzero element is a unit is a field.     Compare the axioms for a commutative ring with identity and a field. The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.   A useful tool for analyzing the structure of rings with finitely many elements are addition and multiplication tables. As an example, consider the addition and multiplication tables for shown in and .   Addition table for .                                                              Multiplication table for . >                                                              Calculate addition and multiplication tables for the following rings.        List 2-3 observations about your tables.    TBD.    One of the interesting side effects of our definition of ring is that it allows for behavior that may at first appear unintuitive or downright weird.   zero divisor   A zero divisor in a ring is a nonzero element such that there is a nonzero with or .    Notice that the reason the idea of zero divisors at first appears weird is that they are not something we encounter when working with our familiar sets of numbers, such as or . In fact, we specifically use the fact that there are no zero divisors in our familiar numbers systems to solve equations in high school algebra (e.g., if , then or ). The lack of zero divisors is one of the properties that does not persist in our abstraction from the integers to rings in general.    Find, with justification, all of the zero divisors in and . Make and prove a conjecture about the existence of zero divisors in , where .    The zero divisors in are . There are no zero divisors in .   conjecture.  is a zero divisor if and only if .      Are there any other rings in which you've seen zero divisors? Recall your answers to .    Matrix rings, if students have had linear algebra (and\/or completed ). Otherwise, this may be a new concept.      Let be a ring and suppose such that is a zero divisor. Then either or is a zero divisor.     Let such that is a zero divisor. Then (else ). Since is a zero divisor, there is some such that . If , then is a zero divisor, as . On the other hand, if , then is a zero divisor, as .     Let be a ring and . Then is not a zero divisor.     Let and suppose is a zero divisor. Then there is some such that . But then . \\Lightning     How can we reinterpret in light of our new language of units and zero divisors? State a theorem that uses this new language.    Answers may vary, but how about this: Let such that . Then if is not a zero divisor.    While there is a well-developed body of literature on (noncommutative) rings (possibly without identity), from this point on, and unless stated otherwise, when we use the word ring we mean commutative ring with identity .  Moreover, while even commutative rings with identity and zero divisors are of interest to mathematicians, we will focus our study on rings with no zero divisors. As these rings share many properties of the integers, they are known as integral domains .   integral domain  domain   A commutative ring with identity is an integral domain , or just domain , if has no zero divisors.    The next activities and theorems help us identify examples of domains, as well as situate the notion of a domain in its proper place relative to fields and rings in general.    Which of the following rings are domains? Justify your answers.                                 Every field is a domain.     If is a field, the nonzero elements of are units, which cannot be zero divisors. Thus, has no zero divisors.     Let and . Then is a field if and only if is a domain.     The forward direction holds by Theorem .  For the reverse, assume is a domain. Then has no zero divisors. If is composite, there exist integers satisfying such that . Then in , but . Thus, may not be composite, and is therefore prime. By an earlier theorem, is a field.     If is a domain and is a subring of with identity , then is a domain.     Any zero divisors in are also zero divisors in . Since has no zero divisors, neither does .     If is a domain, then so is .     Let and be nonzero polynomials in , where . Then the lowest-degree term in is . Since is a domain, , and thus is not the zero polynomial.     Is the converse of Theorem true? If so, give a short proof. If not, find a counterexample.    Yes. Apply Theorem .      Given a field , the set of polynomials is a domain.    When considering sets of polynomials, as we do in (particularly in ), the following results will be quite useful.    Let be a domain, and let be nonzero polynomials. Then .    Let the leading term of be and the leading term of be . Then the leading term of is . (Observe that since is a domain, .) Thus, .      Can the hypotheses of be relaxed? If so, provide more general hypotheses and adapt the proof. If not, give an illustrative example.    No; let . Observe that , but has degree 1.      Let be a domain. What are the units of ? Prove your answer.    The units are . Clearly, .  Suppose such that . Then . Thus , and consequently, .     C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes , Bull. Math. Bio. 75 (2013), 1571-1611, DOI 10.1007\/s11538-013-9860-3    "
 },
 {
   "id": "obj_rings",
@@ -1396,11 +1405,29 @@ var ptx_lunr_docs = [
   "body": "  Portrait of Emmy Noether   "
 },
 {
+  "id": "thm_polynomialsFormRing",
+  "level": "2",
+  "url": "sec_rings.html#thm_polynomialsFormRing",
+  "type": "Theorem",
+  "number": "2.2.6",
+  "title": "Theorem.",
+  "body": " Theorem   If is a (commutative) ring , then is a (commutative) ring .   "
+},
+{
   "id": "sec_rings-21",
   "level": "2",
   "url": "sec_rings.html#sec_rings-21",
+  "type": "Proof",
+  "number": "2.2.1",
+  "title": "",
+  "body": " TBD.  "
+},
+{
+  "id": "sec_rings-22",
+  "level": "2",
+  "url": "sec_rings.html#sec_rings-22",
   "type": "Definition",
-  "number": "2.2.6",
+  "number": "2.2.7",
   "title": "",
   "body": " subring  overring   Let be a ring and let . If is itself a ring under and , we say is a subring of . In this case, is often called an overring of .   "
 },
@@ -1409,14 +1436,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#thm_subringTest",
   "type": "Theorem",
-  "number": "2.2.7",
+  "number": "2.2.8",
   "title": "",
   "body": " subring test   Let be a ring and a subset of . Then is a subring if and only if:    ;     is closed under multiplication; and     is closed under subtraction.       Suppose and is closed under multiplication and subtraction. We check each of the axioms in . Since and is closed under subtraction we have . For any , we know that so that Thus and are the additive and multiplicative identities, respectively, in .  For any , we know that . Thus is closed under additive inverses. If , then so that is closed under addition.  For any triple of elements , we know so that and . Thus associativity and commutativity of addition are inherited from . Similarly, , , and . That is, inherits associativity of multiplication as well as the left- and right-distributive properties from .  We conclude that is a ring under the multiplication and addition from .   "
 },
 {
-  "id": "sec_rings-24",
+  "id": "sec_rings-25",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-24",
+  "url": "sec_rings.html#sec_rings-25",
   "type": "Activity",
   "number": "2.2.8",
   "title": "",
@@ -1427,14 +1454,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#def-unit",
   "type": "Definition",
-  "number": "2.2.8",
+  "number": "2.2.9",
   "title": "",
   "body": " unit  associates   Let be a ring and let be nonzero. If there is a such that , we say is unit of . We denote the set of units of by . We say are associates if there exists some such that .   "
 },
 {
-  "id": "sec_rings-26",
+  "id": "sec_rings-27",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-26",
+  "url": "sec_rings.html#sec_rings-27",
   "type": "Exploration",
   "number": "2.2.9",
   "title": "",
@@ -1445,16 +1472,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#thm-cri-field",
   "type": "Theorem",
-  "number": "2.2.9",
+  "number": "2.2.10",
   "title": "",
   "body": "  A commutative ring with identity in which every nonzero element is a unit is a field.   "
 },
 {
-  "id": "sec_rings-29",
+  "id": "sec_rings-30",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-29",
+  "url": "sec_rings.html#sec_rings-30",
   "type": "Proof",
-  "number": "2.2.1",
+  "number": "2.2.2",
   "title": "",
   "body": " Compare the axioms for a commutative ring with identity and a field. The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.  "
 },
@@ -1463,7 +1490,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#table-z3addition",
   "type": "Table",
-  "number": "2.2.10",
+  "number": "2.2.11",
   "title": "Addition table for <span class=\"process-math\">\\(R=\\Z_3\\text{.}\\)<\/span>",
   "body": " Addition table for .                                                            "
 },
@@ -1472,7 +1499,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#table-z3multiplication",
   "type": "Table",
-  "number": "2.2.11",
+  "number": "2.2.12",
   "title": "Multiplication table for <span class=\"process-math\">\\(R=\\Z_3\\text{.}\\)<\/span>",
   "body": " Multiplication table for . >                                                           "
 },
@@ -1486,47 +1513,47 @@ var ptx_lunr_docs = [
   "body": "  Calculate addition and multiplication tables for the following rings.        List 2-3 observations about your tables.    TBD.   "
 },
 {
-  "id": "sec_rings-35",
+  "id": "sec_rings-36",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-35",
+  "url": "sec_rings.html#sec_rings-36",
   "type": "Definition",
-  "number": "2.2.12",
+  "number": "2.2.13",
   "title": "",
   "body": " zero divisor   A zero divisor in a ring is a nonzero element such that there is a nonzero with or .   "
 },
 {
-  "id": "sec_rings-37",
+  "id": "sec_rings-38",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-37",
+  "url": "sec_rings.html#sec_rings-38",
   "type": "Exploration",
   "number": "2.2.11",
   "title": "",
   "body": "  Find, with justification, all of the zero divisors in and . Make and prove a conjecture about the existence of zero divisors in , where .    The zero divisors in are . There are no zero divisors in .   conjecture.  is a zero divisor if and only if .   "
 },
 {
-  "id": "sec_rings-38",
+  "id": "sec_rings-39",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-38",
+  "url": "sec_rings.html#sec_rings-39",
   "type": "Investigation",
   "number": "2.2.12",
   "title": "",
   "body": "  Are there any other rings in which you've seen zero divisors? Recall your answers to .    Matrix rings, if students have had linear algebra (and\/or completed ). Otherwise, this may be a new concept.   "
 },
 {
-  "id": "sec_rings-39",
+  "id": "sec_rings-40",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-39",
+  "url": "sec_rings.html#sec_rings-40",
   "type": "Theorem",
-  "number": "2.2.13",
+  "number": "2.2.14",
   "title": "",
   "body": "  Let be a ring and suppose such that is a zero divisor. Then either or is a zero divisor.   "
 },
 {
-  "id": "sec_rings-40",
+  "id": "sec_rings-41",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-40",
+  "url": "sec_rings.html#sec_rings-41",
   "type": "Proof",
-  "number": "2.2.2",
+  "number": "2.2.3",
   "title": "",
   "body": " Let such that is a zero divisor. Then (else ). Since is a zero divisor, there is some such that . If , then is a zero divisor, as . On the other hand, if , then is a zero divisor, as .  "
 },
@@ -1535,50 +1562,50 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#theorem_unitnotazd",
   "type": "Theorem",
-  "number": "2.2.14",
+  "number": "2.2.15",
   "title": "",
   "body": "  Let be a ring and . Then is not a zero divisor.   "
-},
-{
-  "id": "sec_rings-42",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-42",
-  "type": "Proof",
-  "number": "2.2.3",
-  "title": "",
-  "body": " Let and suppose is a zero divisor. Then there is some such that . But then . \\Lightning  "
 },
 {
   "id": "sec_rings-43",
   "level": "2",
   "url": "sec_rings.html#sec_rings-43",
+  "type": "Proof",
+  "number": "2.2.4",
+  "title": "",
+  "body": " Let and suppose is a zero divisor. Then there is some such that . But then . \\Lightning  "
+},
+{
+  "id": "sec_rings-44",
+  "level": "2",
+  "url": "sec_rings.html#sec_rings-44",
   "type": "Investigation",
   "number": "2.2.13",
   "title": "",
   "body": "  How can we reinterpret in light of our new language of units and zero divisors? State a theorem that uses this new language.    Answers may vary, but how about this: Let such that . Then if is not a zero divisor.   "
 },
 {
-  "id": "sec_rings-45",
+  "id": "sec_rings-46",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-45",
+  "url": "sec_rings.html#sec_rings-46",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "integral domains "
 },
 {
-  "id": "sec_rings-46",
+  "id": "sec_rings-47",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-46",
+  "url": "sec_rings.html#sec_rings-47",
   "type": "Definition",
-  "number": "2.2.15",
+  "number": "2.2.16",
   "title": "",
   "body": " integral domain  domain   A commutative ring with identity is an integral domain , or just domain , if has no zero divisors.   "
 },
 {
-  "id": "sec_rings-48",
+  "id": "sec_rings-49",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-48",
+  "url": "sec_rings.html#sec_rings-49",
   "type": "Activity",
   "number": "2.2.14",
   "title": "",
@@ -1589,34 +1616,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#theorem_everyfieldisadomain",
   "type": "Theorem",
-  "number": "2.2.16",
+  "number": "2.2.17",
   "title": "",
   "body": "  Every field is a domain.   "
-},
-{
-  "id": "sec_rings-50",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-50",
-  "type": "Proof",
-  "number": "2.2.4",
-  "title": "",
-  "body": " If is a field, the nonzero elements of are units, which cannot be zero divisors. Thus, has no zero divisors.  "
 },
 {
   "id": "sec_rings-51",
   "level": "2",
   "url": "sec_rings.html#sec_rings-51",
-  "type": "Theorem",
-  "number": "2.2.17",
+  "type": "Proof",
+  "number": "2.2.5",
   "title": "",
-  "body": "  Let and . Then is a field if and only if is a domain.   "
+  "body": " If is a field, the nonzero elements of are units, which cannot be zero divisors. Thus, has no zero divisors.  "
 },
 {
   "id": "sec_rings-52",
   "level": "2",
   "url": "sec_rings.html#sec_rings-52",
+  "type": "Theorem",
+  "number": "2.2.18",
+  "title": "",
+  "body": "  Let and . Then is a field if and only if is a domain.   "
+},
+{
+  "id": "sec_rings-53",
+  "level": "2",
+  "url": "sec_rings.html#sec_rings-53",
   "type": "Proof",
-  "number": "2.2.5",
+  "number": "2.2.6",
   "title": "",
   "body": " The forward direction holds by Theorem .  For the reverse, assume is a domain. Then has no zero divisors. If is composite, there exist integers satisfying such that . Then in , but . Thus, may not be composite, and is therefore prime. By an earlier theorem, is a field.  "
 },
@@ -1625,16 +1652,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#theorem_subringsaredomains",
   "type": "Theorem",
-  "number": "2.2.18",
+  "number": "2.2.19",
   "title": "",
   "body": "  If is a domain and is a subring of with identity , then is a domain.   "
 },
 {
-  "id": "sec_rings-54",
+  "id": "sec_rings-55",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-54",
+  "url": "sec_rings.html#sec_rings-55",
   "type": "Proof",
-  "number": "2.2.6",
+  "number": "2.2.7",
   "title": "",
   "body": " Any zero divisors in are also zero divisors in . Since has no zero divisors, neither does .  "
 },
@@ -1643,34 +1670,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#theorem_domainimpliespolynomialdomain",
   "type": "Theorem",
-  "number": "2.2.19",
+  "number": "2.2.20",
   "title": "",
   "body": "  If is a domain, then so is .   "
-},
-{
-  "id": "sec_rings-56",
-  "level": "2",
-  "url": "sec_rings.html#sec_rings-56",
-  "type": "Proof",
-  "number": "2.2.7",
-  "title": "",
-  "body": " Let and be nonzero polynomials in , where . Then the lowest-degree term in is . Since is a domain, , and thus is not the zero polynomial.  "
 },
 {
   "id": "sec_rings-57",
   "level": "2",
   "url": "sec_rings.html#sec_rings-57",
+  "type": "Proof",
+  "number": "2.2.8",
+  "title": "",
+  "body": " Let and be nonzero polynomials in , where . Then the lowest-degree term in is . Since is a domain, , and thus is not the zero polynomial.  "
+},
+{
+  "id": "sec_rings-58",
+  "level": "2",
+  "url": "sec_rings.html#sec_rings-58",
   "type": "Investigation",
   "number": "2.2.15",
   "title": "",
   "body": "  Is the converse of Theorem true? If so, give a short proof. If not, find a counterexample.    Yes. Apply Theorem .   "
 },
 {
-  "id": "sec_rings-58",
+  "id": "sec_rings-59",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-58",
+  "url": "sec_rings.html#sec_rings-59",
   "type": "Corollary",
-  "number": "2.2.20",
+  "number": "2.2.21",
   "title": "",
   "body": "  Given a field , the set of polynomials is a domain.   "
 },
@@ -1679,25 +1706,295 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#theorem_degreeofproductinfield",
   "type": "Theorem",
-  "number": "2.2.21",
+  "number": "2.2.22",
   "title": "",
   "body": "  Let be a domain, and let be nonzero polynomials. Then .    Let the leading term of be and the leading term of be . Then the leading term of is . (Observe that since is a domain, .) Thus, .   "
 },
 {
-  "id": "sec_rings-61",
+  "id": "sec_rings-62",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-61",
+  "url": "sec_rings.html#sec_rings-62",
   "type": "Exploration",
   "number": "2.2.16",
   "title": "",
   "body": "  Can the hypotheses of be relaxed? If so, provide more general hypotheses and adapt the proof. If not, give an illustrative example.    No; let . Observe that , but has degree 1.   "
 },
 {
-  "id": "sec_rings-62",
+  "id": "sec_rings-63",
   "level": "2",
-  "url": "sec_rings.html#sec_rings-62",
+  "url": "sec_rings.html#sec_rings-63",
   "type": "Investigation",
   "number": "2.2.17",
+  "title": "",
+  "body": "  Let be a domain. What are the units of ? Prove your answer.    The units are . Clearly, .  Suppose such that . Then . Thus , and consequently, .   "
+},
+{
+  "id": "sec_integralDomains",
+  "level": "1",
+  "url": "sec_integralDomains.html",
+  "type": "Section",
+  "number": "2.3",
+  "title": "Integral Domains",
+  "body": " Integral Domains   Guiding Questions   In this section, we'll seek to answer the questions:    What special types of elements do rings have?  What are integral domains, and how do they relate to rings and fields?     Integral Domain noises...    Units, Associates, and Zero Divisors   unit  associates   Let be a ring and let be nonzero. If there is a such that , we say is unit of . We denote the set of units of by . We say are associates if there exists some such that .      Explicitly describe the set . What are the associates of 7 in ?    In other words, a unit in a ring is a nonzero element with a multiplicative inverse. The existence of units is the primary difference between fields and commutative rings with identity: in a field, all nonzero elements are units, while in a commutative ring with identity, no nonzero elements need be units, as demonstrates.    A commutative ring with identity in which every nonzero element is a unit is a field.     Compare the axioms for a commutative ring with identity and a field. The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.   One of the interesting side effects of our definition of ring is that it allows for behavior that may at first appear unintuitive or downright weird.   zero divisor   A zero divisor in a ring is a nonzero element such that there is a nonzero with or .    Notice that the reason the idea of zero divisors at first appears weird is that they are not something we encounter when working with our familiar sets of numbers, such as or . In fact, we specifically use the fact that there are no zero divisors in our familiar numbers systems to solve equations in high school algebra (e.g., if , then or ). The lack of zero divisors is one of the properties that does not persist in our abstraction from the integers to rings in general.    Find, with justification, all of the zero divisors in and . Make and prove a conjecture about the existence of zero divisors in , where .    The zero divisors in are . There are no zero divisors in .   conjecture.  is a zero divisor if and only if .      Are there any other rings in which you've seen zero divisors? Recall your answers to .    Matrix rings, if students have had linear algebra (and\/or completed ). Otherwise, this may be a new concept.      Let be a ring and suppose such that is a zero divisor. Then either or is a zero divisor.     Let such that is a zero divisor. Then (else ). Since is a zero divisor, there is some such that . If , then is a zero divisor, as . On the other hand, if , then is a zero divisor, as .     Let be a ring and . Then is not a zero divisor.     Let and suppose is a zero divisor. Then there is some such that . But then . \\Lightning     How can we reinterpret in light of our new language of units and zero divisors? State a theorem that uses this new language.    Answers may vary, but how about this: Let such that . Then if is not a zero divisor.      Integral Domains  Moreover, while both commutative and non-commutative rings with identity and zero divisors are of interest to mathematicians, we will focus our study on rings with no zero divisors. As these rings share many properties of the integers, they are known as integral domains .   integral domain  domain   A commutative ring with identity is an integral domain , or just domain , if has no zero divisors.    The next activities and theorems help us identify examples of domains, as well as situate the notion of a domain in its proper place relative to fields and rings in general.    Which of the following rings are domains? Justify your answers.                                 Every field is a domain.     If is a field, the nonzero elements of are units, which cannot be zero divisors. Thus, has no zero divisors.     Let and . Then is a field if and only if is a domain.     The forward direction holds by Theorem .  For the reverse, assume is a domain. Then has no zero divisors. If is composite, there exist integers satisfying such that . Then in , but . Thus, may not be composite, and is therefore prime. By an earlier theorem, is a field.     If is a domain and is a subring of with identity , then is a domain.     Any zero divisors in are also zero divisors in . Since has no zero divisors, neither does .     If is a domain, then so is .     Let and be nonzero polynomials in , where . Then the lowest-degree term in is . Since is a domain, , and thus is not the zero polynomial.     Is the converse of Theorem true? If so, give a short proof. If not, find a counterexample.    Yes. Apply Theorem .      Given a field , the set of polynomials is a domain.    When considering sets of polynomials, as we do in (particularly in ), the following results will be quite useful.    Let be a domain, and let be nonzero polynomials. Then .    Let the leading term of be and the leading term of be . Then the leading term of is . (Observe that since is a domain, .) Thus, .      Can the hypotheses of be relaxed? If so, provide more general hypotheses and adapt the proof. If not, give an illustrative example.    No; let . Observe that , but has degree 1.      Let be a domain. What are the units of ? Prove your answer.    The units are . Clearly, .  Suppose such that . Then . Thus , and consequently, .      C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes , Bull. Math. Bio. 75 (2013), 1571-1611, DOI 10.1007\/s11538-013-9860-3    "
+},
+{
+  "id": "obj_integralDomains",
+  "level": "2",
+  "url": "sec_integralDomains.html#obj_integralDomains",
+  "type": "Objectives",
+  "number": "2.3",
+  "title": "Guiding Questions",
+  "body": " Guiding Questions   In this section, we'll seek to answer the questions:    What special types of elements do rings have?  What are integral domains, and how do they relate to rings and fields?   "
+},
+{
+  "id": "def-unit",
+  "level": "2",
+  "url": "sec_integralDomains.html#def-unit",
+  "type": "Definition",
+  "number": "2.3.1",
+  "title": "",
+  "body": " unit  associates   Let be a ring and let be nonzero. If there is a such that , we say is unit of . We denote the set of units of by . We say are associates if there exists some such that .   "
+},
+{
+  "id": "ssec_unitsAssociatesZeroDivisors-3",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_unitsAssociatesZeroDivisors-3",
+  "type": "Exploration",
+  "number": "2.3.1",
+  "title": "",
+  "body": "  Explicitly describe the set . What are the associates of 7 in ?   "
+},
+{
+  "id": "thm-cri-field",
+  "level": "2",
+  "url": "sec_integralDomains.html#thm-cri-field",
+  "type": "Theorem",
+  "number": "2.3.2",
+  "title": "",
+  "body": "  A commutative ring with identity in which every nonzero element is a unit is a field.   "
+},
+{
+  "id": "ssec_unitsAssociatesZeroDivisors-6",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_unitsAssociatesZeroDivisors-6",
+  "type": "Proof",
+  "number": "2.3.1.1",
+  "title": "",
+  "body": " Compare the axioms for a commutative ring with identity and a field. The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.  "
+},
+{
+  "id": "ssec_unitsAssociatesZeroDivisors-8",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_unitsAssociatesZeroDivisors-8",
+  "type": "Definition",
+  "number": "2.3.3",
+  "title": "",
+  "body": " zero divisor   A zero divisor in a ring is a nonzero element such that there is a nonzero with or .   "
+},
+{
+  "id": "ssec_unitsAssociatesZeroDivisors-10",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_unitsAssociatesZeroDivisors-10",
+  "type": "Exploration",
+  "number": "2.3.2",
+  "title": "",
+  "body": "  Find, with justification, all of the zero divisors in and . Make and prove a conjecture about the existence of zero divisors in , where .    The zero divisors in are . There are no zero divisors in .   conjecture.  is a zero divisor if and only if .   "
+},
+{
+  "id": "ssec_unitsAssociatesZeroDivisors-11",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_unitsAssociatesZeroDivisors-11",
+  "type": "Investigation",
+  "number": "2.3.3",
+  "title": "",
+  "body": "  Are there any other rings in which you've seen zero divisors? Recall your answers to .    Matrix rings, if students have had linear algebra (and\/or completed ). Otherwise, this may be a new concept.   "
+},
+{
+  "id": "ssec_unitsAssociatesZeroDivisors-12",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_unitsAssociatesZeroDivisors-12",
+  "type": "Theorem",
+  "number": "2.3.4",
+  "title": "",
+  "body": "  Let be a ring and suppose such that is a zero divisor. Then either or is a zero divisor.   "
+},
+{
+  "id": "ssec_unitsAssociatesZeroDivisors-13",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_unitsAssociatesZeroDivisors-13",
+  "type": "Proof",
+  "number": "2.3.1.2",
+  "title": "",
+  "body": " Let such that is a zero divisor. Then (else ). Since is a zero divisor, there is some such that . If , then is a zero divisor, as . On the other hand, if , then is a zero divisor, as .  "
+},
+{
+  "id": "theorem_unitnotazd",
+  "level": "2",
+  "url": "sec_integralDomains.html#theorem_unitnotazd",
+  "type": "Theorem",
+  "number": "2.3.5",
+  "title": "",
+  "body": "  Let be a ring and . Then is not a zero divisor.   "
+},
+{
+  "id": "ssec_unitsAssociatesZeroDivisors-15",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_unitsAssociatesZeroDivisors-15",
+  "type": "Proof",
+  "number": "2.3.1.3",
+  "title": "",
+  "body": " Let and suppose is a zero divisor. Then there is some such that . But then . \\Lightning  "
+},
+{
+  "id": "ssec_unitsAssociatesZeroDivisors-16",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_unitsAssociatesZeroDivisors-16",
+  "type": "Investigation",
+  "number": "2.3.4",
+  "title": "",
+  "body": "  How can we reinterpret in light of our new language of units and zero divisors? State a theorem that uses this new language.    Answers may vary, but how about this: Let such that . Then if is not a zero divisor.   "
+},
+{
+  "id": "ssec_integralDomains-2",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_integralDomains-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "integral domains "
+},
+{
+  "id": "ssec_integralDomains-3",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_integralDomains-3",
+  "type": "Definition",
+  "number": "2.3.6",
+  "title": "",
+  "body": " integral domain  domain   A commutative ring with identity is an integral domain , or just domain , if has no zero divisors.   "
+},
+{
+  "id": "ssec_integralDomains-5",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_integralDomains-5",
+  "type": "Activity",
+  "number": "2.3.5",
+  "title": "",
+  "body": "  Which of the following rings are domains? Justify your answers.                              "
+},
+{
+  "id": "theorem_everyfieldisadomain",
+  "level": "2",
+  "url": "sec_integralDomains.html#theorem_everyfieldisadomain",
+  "type": "Theorem",
+  "number": "2.3.7",
+  "title": "",
+  "body": "  Every field is a domain.   "
+},
+{
+  "id": "ssec_integralDomains-7",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_integralDomains-7",
+  "type": "Proof",
+  "number": "2.3.2.1",
+  "title": "",
+  "body": " If is a field, the nonzero elements of are units, which cannot be zero divisors. Thus, has no zero divisors.  "
+},
+{
+  "id": "ssec_integralDomains-8",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_integralDomains-8",
+  "type": "Theorem",
+  "number": "2.3.8",
+  "title": "",
+  "body": "  Let and . Then is a field if and only if is a domain.   "
+},
+{
+  "id": "ssec_integralDomains-9",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_integralDomains-9",
+  "type": "Proof",
+  "number": "2.3.2.2",
+  "title": "",
+  "body": " The forward direction holds by Theorem .  For the reverse, assume is a domain. Then has no zero divisors. If is composite, there exist integers satisfying such that . Then in , but . Thus, may not be composite, and is therefore prime. By an earlier theorem, is a field.  "
+},
+{
+  "id": "theorem_subringsaredomains",
+  "level": "2",
+  "url": "sec_integralDomains.html#theorem_subringsaredomains",
+  "type": "Theorem",
+  "number": "2.3.9",
+  "title": "",
+  "body": "  If is a domain and is a subring of with identity , then is a domain.   "
+},
+{
+  "id": "ssec_integralDomains-11",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_integralDomains-11",
+  "type": "Proof",
+  "number": "2.3.2.3",
+  "title": "",
+  "body": " Any zero divisors in are also zero divisors in . Since has no zero divisors, neither does .  "
+},
+{
+  "id": "theorem_domainimpliespolynomialdomain",
+  "level": "2",
+  "url": "sec_integralDomains.html#theorem_domainimpliespolynomialdomain",
+  "type": "Theorem",
+  "number": "2.3.10",
+  "title": "",
+  "body": "  If is a domain, then so is .   "
+},
+{
+  "id": "ssec_integralDomains-13",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_integralDomains-13",
+  "type": "Proof",
+  "number": "2.3.2.4",
+  "title": "",
+  "body": " Let and be nonzero polynomials in , where . Then the lowest-degree term in is . Since is a domain, , and thus is not the zero polynomial.  "
+},
+{
+  "id": "ssec_integralDomains-14",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_integralDomains-14",
+  "type": "Investigation",
+  "number": "2.3.6",
+  "title": "",
+  "body": "  Is the converse of Theorem true? If so, give a short proof. If not, find a counterexample.    Yes. Apply Theorem .   "
+},
+{
+  "id": "ssec_integralDomains-15",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_integralDomains-15",
+  "type": "Corollary",
+  "number": "2.3.11",
+  "title": "",
+  "body": "  Given a field , the set of polynomials is a domain.   "
+},
+{
+  "id": "theorem_degreeofproductinfield",
+  "level": "2",
+  "url": "sec_integralDomains.html#theorem_degreeofproductinfield",
+  "type": "Theorem",
+  "number": "2.3.12",
+  "title": "",
+  "body": "  Let be a domain, and let be nonzero polynomials. Then .    Let the leading term of be and the leading term of be . Then the leading term of is . (Observe that since is a domain, .) Thus, .   "
+},
+{
+  "id": "ssec_integralDomains-18",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_integralDomains-18",
+  "type": "Exploration",
+  "number": "2.3.7",
+  "title": "",
+  "body": "  Can the hypotheses of be relaxed? If so, provide more general hypotheses and adapt the proof. If not, give an illustrative example.    No; let . Observe that , but has degree 1.   "
+},
+{
+  "id": "ssec_integralDomains-19",
+  "level": "2",
+  "url": "sec_integralDomains.html#ssec_integralDomains-19",
+  "type": "Investigation",
+  "number": "2.3.8",
   "title": "",
   "body": "  Let be a domain. What are the units of ? Prove your answer.    The units are . Clearly, .  Suppose such that . Then . Thus , and consequently, .   "
 },
@@ -1706,7 +2003,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec_divisibilityIntegralDomains.html",
   "type": "Section",
-  "number": "2.3",
+  "number": "2.4",
   "title": "Divisibility in Integral Domains",
   "body": " Divisibility in Integral Domains   Guiding Questions   In this section, we'll seek to answer the questions:    What multiplicative properties can we generalize from to any integral domain?  What are the differences between a prime and irreducible element in a commutative ring?    When we introduced the notion of integral domain, we said that part of the reason for the definition was to capture some of the most essential properties of the integers. This is the heart of abstraction and generalization in mathematics: to distill the important properties of our objects of interest and explore the consequences of those properties. One such important property of is cancellation .    Let be a ring. Then is a domain if and only if for all with and , we have .    Assume is a domain and . Then , so . Since is a domain, it has no zero divisors, and therefore either or . The first possibility is ruled out by our assumptions on , so we must have , or .  Conversely, assume that is not a domain. Let be a zero divisor; then there is a nonzero such that . This implies that , a contradiction.    We may read as saying that the defining property of an integral domain is the ability to cancel common nonzero factors. Note that we have not divided ; division is not a binary operation, and nonzero elements of rings need not be units. However, as was the case in , there are notions of divisibility and factorization in rings.   divides (ring)  factor (ring)   Let be a commutative ring with identity, and let . We say  divides  and write if there is a such that . We then say that is a factor of .      Find all factors of in the following rings:         TBD.    Our definition of prime also extends nicely to commutative rings with identity. Indeed, the desire to extend the familiar notion of prime from to any ring is the reason for our less-familiar definition given in .    Let be commutative with identity. We say a nonzero nonunit element is prime if whenever for some , either or .    A notion related to primality is irreducibility. In fact, one might reasonably say that irreducibility is the natural generalization of the typical definition of prime one encounters in school mathematics.   irreducible (ring element)  atom   Let be commutative with identity. We say a nonzero nonunit element is irreducible if whenever for some , one of or is a unit. (Note that in some areas of the literature, the word atom is used interchangeably with irreducible.)      Find the units, primes, and irreducibles in the following rings.          TBD.    In domains, all primes are irreducible.    Let be a domain. If is prime, then is irreducible.     Compare to the proof of Theorem .  Let be prime, and suppose that for some . Then , so by definition either or . Without loss of generality, assume . Then there is a such that , so , and we may cancel to obtain . Thus, is a unit, making irreducible.   In familiar settings, the notion of prime and irreducible exactly coincide.    Every irreducible in is prime.     Let be irreducible, and suppose that . Then . Since is irreducible, either or is a unit. However, the only units are , so either one of or is or . In either case, is prime.   Despite their overlap in familiar settings, primes and irreducibles are distinct types of elements. As the next exploration demonstrates, not all primes are irreducible. What is more, will show that not all irreducibles are primes, even in domains!    Find an example of a ring and prime such that is not irreducible.    In , is prime by but not irreducible as and is not a unit.      Consider the set of all polynomials in for which the coefficient on the linear term is zero. That is, .  (You should convince yourself that is an integral domain, but do not need to prove it.) Then, find a polynomial of the form in that is irreducible, but not prime.    Consider . Then is irreducible, as it cannot be factored into a product of linear polynomials (there aren't any in ), so any factorization of is degree 2 times degree 0. Then the leading coefficients must be units, i.e., both 1 or both .  However, is not prime, as but .    Our last straightforward generalization from the multiplicative structure of is the notion of greatest common divisor. As our next definition again demonstrates, our careful work in the context of generalizes nicely to all domains. Indeed, we intentionally did not appeal to to define the greatest common divisor in , as not all rings have a natural order relation like does.   greatest common divisor (integral domain)   Let be a domain, and let . A nonzero element is a greatest common divisor of and if    and and,    if with and , then .         Let be a domain and and suppose is a greatest common divisor of and . Then any associate of is also a greatest common divisor of and . (Recall .)     Let be a gcd of and , let , and . We claim is also a gcd of and .  Since and there are such that and . Then and , so and .  Let be a common divisor of and . Since is a gcd, , i.e., . Then , so .  Thus, is a gcd of and .     In most familiar domains, GCDs exist. However, they don't always! Find an example of elements in the ring from Exercise which do not have a GCD. Justify your assertion.    Consider and . First note that is not a common divisor in .  Both and are divisible by and in . However, neither can be the gcd, as and .      Fill in the following blanks in order of increasing generality with the words ring , integral domain , field , and commutative ring .  __________ __________ __________ __________    "
 },
@@ -1715,7 +2012,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#obj_divisibilityIntegralDomains",
   "type": "Objectives",
-  "number": "2.3",
+  "number": "2.4",
   "title": "Guiding Questions",
   "body": " Guiding Questions   In this section, we'll seek to answer the questions:    What multiplicative properties can we generalize from to any integral domain?  What are the differences between a prime and irreducible element in a commutative ring?   "
 },
@@ -1724,7 +2021,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#thm-domaincancel",
   "type": "Theorem",
-  "number": "2.3.1",
+  "number": "2.4.1",
   "title": "",
   "body": "  Let be a ring. Then is a domain if and only if for all with and , we have .    Assume is a domain and . Then , so . Since is a domain, it has no zero divisors, and therefore either or . The first possibility is ruled out by our assumptions on , so we must have , or .  Conversely, assume that is not a domain. Let be a zero divisor; then there is a nonzero such that . This implies that , a contradiction.   "
 },
@@ -1733,7 +2030,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#sec_divisibilityIntegralDomains-6",
   "type": "Definition",
-  "number": "2.3.2",
+  "number": "2.4.2",
   "title": "",
   "body": " divides (ring)  factor (ring)   Let be a commutative ring with identity, and let . We say  divides  and write if there is a such that . We then say that is a factor of .   "
 },
@@ -1742,7 +2039,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#sec_divisibilityIntegralDomains-7",
   "type": "Investigation",
-  "number": "2.3.1",
+  "number": "2.4.1",
   "title": "",
   "body": "  Find all factors of in the following rings:         TBD.   "
 },
@@ -1751,7 +2048,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#sec_divisibilityIntegralDomains-9",
   "type": "Definition",
-  "number": "2.3.3",
+  "number": "2.4.3",
   "title": "",
   "body": "  Let be commutative with identity. We say a nonzero nonunit element is prime if whenever for some , either or .   "
 },
@@ -1760,7 +2057,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#def_irreducibleelement",
   "type": "Definition",
-  "number": "2.3.4",
+  "number": "2.4.4",
   "title": "",
   "body": " irreducible (ring element)  atom   Let be commutative with identity. We say a nonzero nonunit element is irreducible if whenever for some , one of or is a unit. (Note that in some areas of the literature, the word atom is used interchangeably with irreducible.)   "
 },
@@ -1769,7 +2066,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#expl-unit-prime-irred",
   "type": "Exploration",
-  "number": "2.3.2",
+  "number": "2.4.2",
   "title": "",
   "body": "  Find the units, primes, and irreducibles in the following rings.          TBD.   "
 },
@@ -1778,7 +2075,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#thm-primesareirredindomains",
   "type": "Theorem",
-  "number": "2.3.5",
+  "number": "2.4.5",
   "title": "",
   "body": "  Let be a domain. If is prime, then is irreducible.   "
 },
@@ -1787,7 +2084,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#sec_divisibilityIntegralDomains-15",
   "type": "Proof",
-  "number": "2.3.1",
+  "number": "2.4.1",
   "title": "",
   "body": " Compare to the proof of Theorem .  Let be prime, and suppose that for some . Then , so by definition either or . Without loss of generality, assume . Then there is a such that , so , and we may cancel to obtain . Thus, is a unit, making irreducible.  "
 },
@@ -1796,7 +2093,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#thm-irredisprimeinZ",
   "type": "Theorem",
-  "number": "2.3.6",
+  "number": "2.4.6",
   "title": "",
   "body": "  Every irreducible in is prime.   "
 },
@@ -1805,7 +2102,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#sec_divisibilityIntegralDomains-18",
   "type": "Proof",
-  "number": "2.3.2",
+  "number": "2.4.2",
   "title": "",
   "body": " Let be irreducible, and suppose that . Then . Since is irreducible, either or is a unit. However, the only units are , so either one of or is or . In either case, is prime.  "
 },
@@ -1814,7 +2111,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#expl-prime-not-irred",
   "type": "Exploration",
-  "number": "2.3.3",
+  "number": "2.4.3",
   "title": "",
   "body": "  Find an example of a ring and prime such that is not irreducible.    In , is prime by but not irreducible as and is not a unit.   "
 },
@@ -1823,7 +2120,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#exer_irreduciblenotprime",
   "type": "Exploration",
-  "number": "2.3.4",
+  "number": "2.4.4",
   "title": "",
   "body": "  Consider the set of all polynomials in for which the coefficient on the linear term is zero. That is, .  (You should convince yourself that is an integral domain, but do not need to prove it.) Then, find a polynomial of the form in that is irreducible, but not prime.    Consider . Then is irreducible, as it cannot be factored into a product of linear polynomials (there aren't any in ), so any factorization of is degree 2 times degree 0. Then the leading coefficients must be units, i.e., both 1 or both .  However, is not prime, as but .   "
 },
@@ -1832,7 +2129,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#def-gcd-domain",
   "type": "Definition",
-  "number": "2.3.7",
+  "number": "2.4.7",
   "title": "",
   "body": " greatest common divisor (integral domain)   Let be a domain, and let . A nonzero element is a greatest common divisor of and if    and and,    if with and , then .      "
 },
@@ -1841,7 +2138,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#sec_divisibilityIntegralDomains-24",
   "type": "Theorem",
-  "number": "2.3.8",
+  "number": "2.4.8",
   "title": "",
   "body": "  Let be a domain and and suppose is a greatest common divisor of and . Then any associate of is also a greatest common divisor of and . (Recall .)   "
 },
@@ -1850,7 +2147,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#sec_divisibilityIntegralDomains-25",
   "type": "Proof",
-  "number": "2.3.3",
+  "number": "2.4.3",
   "title": "",
   "body": " Let be a gcd of and , let , and . We claim is also a gcd of and .  Since and there are such that and . Then and , so and .  Let be a common divisor of and . Since is a gcd, , i.e., . Then , so .  Thus, is a gcd of and .  "
 },
@@ -1859,7 +2156,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#sec_divisibilityIntegralDomains-26",
   "type": "Exploration",
-  "number": "2.3.5",
+  "number": "2.4.5",
   "title": "",
   "body": "  In most familiar domains, GCDs exist. However, they don't always! Find an example of elements in the ring from Exercise which do not have a GCD. Justify your assertion.    Consider and . First note that is not a common divisor in .  Both and are divisible by and in . However, neither can be the gcd, as and .   "
 },
@@ -1868,7 +2165,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_divisibilityIntegralDomains.html#exer_ringgeneralityone",
   "type": "Exploration",
-  "number": "2.3.6",
+  "number": "2.4.6",
   "title": "",
   "body": "  Fill in the following blanks in order of increasing generality with the words ring , integral domain , field , and commutative ring .  __________ __________ __________ __________   "
 },
@@ -1877,7 +2174,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec_principalIdealsEuclideanDomains.html",
   "type": "Section",
-  "number": "2.4",
+  "number": "2.5",
   "title": "Principal Ideals and Euclidean Domains",
   "body": " Principal Ideals and Euclidean Domains   Guiding Questions   In this section, we'll seek to answer the questions:    What are principal ideals, and what are principal ideal domains?  What are Euclidean domains, and how are they related to PIDs?    One of the ways in which mathematicians study the structure of an abstract object is by considering how it interacts with other (related) objects. This is especially true of its sub objects. Thus, in linear algebra, we are often concerned with subspaces of a vector space as a means of understanding the vector space, or even submatrices as a way of understanding a matrix (see, e.g., the cofactor expansion formula for the determinant). In real analysis and topology, the important subobjects are usually open sets, or subsequences, and the study of a graph's subgraphs is an important approach to many questions in graph theory.  In this section, we begin a set-theoretic structural exploration of the notion of ring by considering a particularly important class of subring which will be integral to our understanding of factorization.  These subrings are called ideals . They arose in the work of Kummer and Dedekind as a way of trying to recover some notion of unique factorization in rings that do not have properties like the fundamental theorem of arithmetic in .    A subset of a (not necessarily commutative) ring is called an ideal if:        for all , ; and,    for all and for all , and .       Observe that the third requirement for a set to be an ideal of is simplified slightly if is commutative (which, we recall, all of our rings are).  There are many important examples and types of ideals, but there are also some trivial ideals contained in every ring.    Let be a ring. Then and are ideals of .      All ideals are subrings.     It is straightforward to check that all conditions of Theorem are satisfied.   The following theorem provides a useful characterization of when an ideal is in fact the whole ring.    Let be a ring and an ideal of . Then if and only if contains a unit of .     If , will do.  If there is a unit , then given any , , so .   The most important type of ideals (for our work, at least), are those which are the sets of all multiples of a single element in the ring. Such ideals are called principal ideals .    Let be commutative with identity and let . The set is an ideal (called the principal ideal generated by ).     Observe that .  Moreover, if , . Finally, if and , .  Thus, is an ideal.   The element in the theorem is known as a generator of .    Let be commutative with identity, and let . Give necessary and sufficient conditions for and, separately, .  That is, fill in the blanks: _________ and _________.   Justify your answers.    We have and An acceptable alternative would be: . Make sure students are aware of this! .  Note that .  Similarly, suppose . Then , so . Conversely, if , then there is some such that , and thus for all , .  Note that this means that if we want to know if , it's enough to check that .    Principal ideals may have more than one generator.    Let be a ring and . Then , where is any unit of .    Apply the answer to the question.      In , describe the principal ideals generated by   2         9    0    27    3     Determine the subset relations among the above ideals.      All multiples of 2    All multiples of     All multiples of 9; same as the previous part.         All multiples of 27    All multiples of 3    We have . The ideal only contains , which is a subset of all ideals.    It is the case in many familiar settings that all ideals are principal. Such domains are given a special name.    An integral domain in which every ideal is principal is known as a principal ideal domain (PID) .      The ring is a principal ideal domain.    Use properties specific to , perhaps from Section .     Let be an ideal. If , then , so suppose there is some nonzero . Define . Note that , as if , also.  By WOP, has a least element, call it .   Claim:  .  It is clear that . Now let be nonzero, and write using the division algorithm. Observe that , but as and , we must have . To avoid contradicting the WOP, we must have . Thus, and .     Find an integer such that , if                        You do not need to prove that each of the sets above are ideals (though you should make sure you can do it).    We see:                            Let be a principal ideal domain and be not both zero. Let . Then:    is an ideal, so there is some for which ;     is a greatest common divisor of and .     We conclude that there exist such that .     Observe that . Additionally, if , then , and . Thus, is an ideal.  Since is a PID, there exists such that . We claim that is a GCD of and .  It is clear that , as . Similarly, .  Now let be a common divisor of and . We wish to show that . Write and . Since , there exist such that , and thus .  In particular, there exist such that a GCD of and can be written as .   We have so far abstracted and axiomatized several important algebraic properties of that we discussed in § . In particular, we have our usual operations of addition and multiplication, and their interactions; we have notions of divisibility\/factorization, irreducibility, and primality; we also have cancellation and greatest common divisors.  Our last major abstraction from is the division algorithm. The main obstacle to postulating domains with a division algorithm is a clear notion of comparison relations. That is, if is an arbitrary domain with , is it possible to clearly and sensibly say which of or is bigger ? (Recall that this was a requirement for the division algorithm with nonzero remainders.) However, if there is a way to relate elements of a domain to , we can sensibly define a division algorithm.    Let be an integral domain. We call a Euclidean domain if there is a function such that: This is the lowercase Greek letter delta .    If , then .    If , , then there exist such that , where either or .     We call the function a norm for .    Thus, a Euclidean domain is an integral domain with a division algorithm that behaves in a familiar way. In the remainder of this section, we will investigate the properties of Euclidean domains. First, we consider some examples.    The field is a Euclidean domain under ordinary addition and multiplication, with for all .   TBD.     Is a Euclidean domain? If so, what is the norm function , and why does this function have the required properties of a norm?    Yes. The norm is the absolute value function.      Let be a field and a set containing a nonzero polynomial. Prove that contains a polynomial such that for all nonzero .     Let . Since contains a nonzero polynomial, . By WOP, contains a minimal element , which must be the degree of some polynomial in .     Let be a field and with . If , and and , then has degree strictly less than .     The leading term of is , while the leading term of is . Thus, the leading term of has degree less than .    (Polynomial Division Algorithm)  See the CCSS for more.   Let be a field and with . Then there exist unique such that , where .    For existence, consider three cases: ; and ; and . In the last case, use induction on . For uniqueness, mimic the uniqueness proof of Theorem .      Existence: If , then and will do. If and , then and will suffice. Thus, we need only consider the case in which and . We use induction on .  When , , and as , both and are nonzero constants. Then and will work.  Now assume and exist whenever . Assume and write and . Use Lemma and set , which must have degree less than . Thus, by induction, there exist such that , with or .  We therefore have , where and have the desired properties.   Uniqueness: Suppose and , where both have the desired properties. Then , or . Thus either , or has degree at least . The latter is clearly impossible, so and .     Let be a field. Then the ring is a principal ideal domain.    Mimic the proof of Theorem and use Lemma !     Let be a nonzero ideal of and let be a polynomial of smallest degree. We claim .  Clearly .  Let and use Theorem to write , where or . As in Theorem , write , so we must have that . Thus, and .     Is a Euclidean domain for all fields ? If so, what is the norm function , and why does this function have the required properties of a norm? If not, why not? Prove your answer.    Yes. It's the degree function.    In fact, every Euclidean domain is a PID.    Every Euclidean domain is a principal ideal domain.    Mimic the proof of Theorem .    Let be a euclidean domain, and an ideal of . If , then is principal, so assume that .  Define . Then the Well-Ordering Principle guarantees that has a least element. Let be such that is minimal. We claim that .  Clearly . Now assume that , and write , where either or and . If , then , contradicting the minimality of . Thus, , and .  Therefore, is a PID.      Where do Euclidean domains and PIDs fit in the hierarchy of abstraction found in Question ?    "
 },
@@ -1886,7 +2183,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#obj_principalIdealsEuclideanDomains",
   "type": "Objectives",
-  "number": "2.4",
+  "number": "2.5",
   "title": "Guiding Questions",
   "body": " Guiding Questions   In this section, we'll seek to answer the questions:    What are principal ideals, and what are principal ideal domains?  What are Euclidean domains, and how are they related to PIDs?   "
 },
@@ -1895,7 +2192,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#def-ideal",
   "type": "Definition",
-  "number": "2.4.1",
+  "number": "2.5.1",
   "title": "",
   "body": "  A subset of a (not necessarily commutative) ring is called an ideal if:        for all , ; and,    for all and for all , and .      "
 },
@@ -1904,7 +2201,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-9",
   "type": "Theorem",
-  "number": "2.4.2",
+  "number": "2.5.2",
   "title": "",
   "body": "  Let be a ring. Then and are ideals of .   "
 },
@@ -1913,7 +2210,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-10",
   "type": "Theorem",
-  "number": "2.4.3",
+  "number": "2.5.3",
   "title": "",
   "body": "  All ideals are subrings.   "
 },
@@ -1922,7 +2219,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-11",
   "type": "Proof",
-  "number": "2.4.1",
+  "number": "2.5.1",
   "title": "",
   "body": " It is straightforward to check that all conditions of Theorem are satisfied.  "
 },
@@ -1931,7 +2228,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-13",
   "type": "Theorem",
-  "number": "2.4.4",
+  "number": "2.5.4",
   "title": "",
   "body": "  Let be a ring and an ideal of . Then if and only if contains a unit of .   "
 },
@@ -1940,7 +2237,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-14",
   "type": "Proof",
-  "number": "2.4.2",
+  "number": "2.5.2",
   "title": "",
   "body": " If , will do.  If there is a unit , then given any , , so .  "
 },
@@ -1949,7 +2246,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-16",
   "type": "Theorem",
-  "number": "2.4.5",
+  "number": "2.5.5",
   "title": "",
   "body": "  Let be commutative with identity and let . The set is an ideal (called the principal ideal generated by ).   "
 },
@@ -1958,7 +2255,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-17",
   "type": "Proof",
-  "number": "2.4.3",
+  "number": "2.5.3",
   "title": "",
   "body": " Observe that .  Moreover, if , . Finally, if and , .  Thus, is an ideal.  "
 },
@@ -1967,7 +2264,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-19",
   "type": "Investigation",
-  "number": "2.4.1",
+  "number": "2.5.1",
   "title": "",
   "body": "  Let be commutative with identity, and let . Give necessary and sufficient conditions for and, separately, .  That is, fill in the blanks: _________ and _________.   Justify your answers.    We have and An acceptable alternative would be: . Make sure students are aware of this! .  Note that .  Similarly, suppose . Then , so . Conversely, if , then there is some such that , and thus for all , .  Note that this means that if we want to know if , it's enough to check that .   "
 },
@@ -1976,7 +2273,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-21",
   "type": "Theorem",
-  "number": "2.4.6",
+  "number": "2.5.6",
   "title": "",
   "body": "  Let be a ring and . Then , where is any unit of .    Apply the answer to the question.   "
 },
@@ -1985,7 +2282,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-22",
   "type": "Activity",
-  "number": "2.4.2",
+  "number": "2.5.2",
   "title": "",
   "body": "  In , describe the principal ideals generated by   2         9    0    27    3     Determine the subset relations among the above ideals.      All multiples of 2    All multiples of     All multiples of 9; same as the previous part.         All multiples of 27    All multiples of 3    We have . The ideal only contains , which is a subset of all ideals.   "
 },
@@ -1994,7 +2291,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-24",
   "type": "Definition",
-  "number": "2.4.7",
+  "number": "2.5.7",
   "title": "",
   "body": "  An integral domain in which every ideal is principal is known as a principal ideal domain (PID) .   "
 },
@@ -2003,7 +2300,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#thm_ZisPID",
   "type": "Theorem",
-  "number": "2.4.8",
+  "number": "2.5.8",
   "title": "",
   "body": "  The ring is a principal ideal domain.    Use properties specific to , perhaps from Section .   "
 },
@@ -2012,7 +2309,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-26",
   "type": "Proof",
-  "number": "2.4.4",
+  "number": "2.5.4",
   "title": "",
   "body": " Let be an ideal. If , then , so suppose there is some nonzero . Define . Note that , as if , also.  By WOP, has a least element, call it .   Claim:  .  It is clear that . Now let be nonzero, and write using the division algorithm. Observe that , but as and , we must have . To avoid contradicting the WOP, we must have . Thus, and .  "
 },
@@ -2021,7 +2318,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-27",
   "type": "Activity",
-  "number": "2.4.3",
+  "number": "2.5.3",
   "title": "",
   "body": "  Find an integer such that , if                        You do not need to prove that each of the sets above are ideals (though you should make sure you can do it).    We see:                         "
 },
@@ -2030,7 +2327,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-28",
   "type": "Theorem",
-  "number": "2.4.9",
+  "number": "2.5.9",
   "title": "",
   "body": "  Let be a principal ideal domain and be not both zero. Let . Then:    is an ideal, so there is some for which ;     is a greatest common divisor of and .     We conclude that there exist such that .   "
 },
@@ -2039,7 +2336,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-29",
   "type": "Proof",
-  "number": "2.4.5",
+  "number": "2.5.5",
   "title": "",
   "body": " Observe that . Additionally, if , then , and . Thus, is an ideal.  Since is a PID, there exists such that . We claim that is a GCD of and .  It is clear that , as . Similarly, .  Now let be a common divisor of and . We wish to show that . Write and . Since , there exist such that , and thus .  In particular, there exist such that a GCD of and can be written as .  "
 },
@@ -2048,7 +2345,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-32",
   "type": "Definition",
-  "number": "2.4.10",
+  "number": "2.5.10",
   "title": "",
   "body": "  Let be an integral domain. We call a Euclidean domain if there is a function such that: This is the lowercase Greek letter delta .    If , then .    If , , then there exist such that , where either or .     We call the function a norm for .   "
 },
@@ -2057,7 +2354,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-34",
   "type": "Theorem",
-  "number": "2.4.11",
+  "number": "2.5.11",
   "title": "",
   "body": "  The field is a Euclidean domain under ordinary addition and multiplication, with for all .   TBD.  "
 },
@@ -2066,7 +2363,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-35",
   "type": "Investigation",
-  "number": "2.4.4",
+  "number": "2.5.4",
   "title": "",
   "body": "  Is a Euclidean domain? If so, what is the norm function , and why does this function have the required properties of a norm?    Yes. The norm is the absolute value function.   "
 },
@@ -2075,7 +2372,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#lem_minimaldegreepoly",
   "type": "Lemma",
-  "number": "2.4.12",
+  "number": "2.5.12",
   "title": "",
   "body": "  Let be a field and a set containing a nonzero polynomial. Prove that contains a polynomial such that for all nonzero .   "
 },
@@ -2084,7 +2381,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-37",
   "type": "Proof",
-  "number": "2.4.6",
+  "number": "2.5.6",
   "title": "",
   "body": " Let . Since contains a nonzero polynomial, . By WOP, contains a minimal element , which must be the degree of some polynomial in .  "
 },
@@ -2093,7 +2390,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#lem_polydivalglem",
   "type": "Lemma",
-  "number": "2.4.13",
+  "number": "2.5.13",
   "title": "",
   "body": "  Let be a field and with . If , and and , then has degree strictly less than .   "
 },
@@ -2102,7 +2399,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-39",
   "type": "Proof",
-  "number": "2.4.7",
+  "number": "2.5.7",
   "title": "",
   "body": " The leading term of is , while the leading term of is . Thus, the leading term of has degree less than .  "
 },
@@ -2111,7 +2408,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#theorem_polydivalg",
   "type": "Theorem",
-  "number": "2.4.14",
+  "number": "2.5.14",
   "title": "(Polynomial Division Algorithm).",
   "body": " (Polynomial Division Algorithm)  See the CCSS for more.   Let be a field and with . Then there exist unique such that , where .    For existence, consider three cases: ; and ; and . In the last case, use induction on . For uniqueness, mimic the uniqueness proof of Theorem .   "
 },
@@ -2120,7 +2417,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-41",
   "type": "Proof",
-  "number": "2.4.8",
+  "number": "2.5.8",
   "title": "",
   "body": "  Existence: If , then and will do. If and , then and will suffice. Thus, we need only consider the case in which and . We use induction on .  When , , and as , both and are nonzero constants. Then and will work.  Now assume and exist whenever . Assume and write and . Use Lemma and set , which must have degree less than . Thus, by induction, there exist such that , with or .  We therefore have , where and have the desired properties.   Uniqueness: Suppose and , where both have the desired properties. Then , or . Thus either , or has degree at least . The latter is clearly impossible, so and .  "
 },
@@ -2129,7 +2426,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-42",
   "type": "Theorem",
-  "number": "2.4.15",
+  "number": "2.5.15",
   "title": "",
   "body": "  Let be a field. Then the ring is a principal ideal domain.    Mimic the proof of Theorem and use Lemma !   "
 },
@@ -2138,7 +2435,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-43",
   "type": "Proof",
-  "number": "2.4.9",
+  "number": "2.5.9",
   "title": "",
   "body": " Let be a nonzero ideal of and let be a polynomial of smallest degree. We claim .  Clearly .  Let and use Theorem to write , where or . As in Theorem , write , so we must have that . Thus, and .  "
 },
@@ -2147,7 +2444,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-44",
   "type": "Investigation",
-  "number": "2.4.5",
+  "number": "2.5.5",
   "title": "",
   "body": "  Is a Euclidean domain for all fields ? If so, what is the norm function , and why does this function have the required properties of a norm? If not, why not? Prove your answer.    Yes. It's the degree function.   "
 },
@@ -2156,7 +2453,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#thm_edispid",
   "type": "Theorem",
-  "number": "2.4.16",
+  "number": "2.5.16",
   "title": "",
   "body": "  Every Euclidean domain is a principal ideal domain.    Mimic the proof of Theorem .    Let be a euclidean domain, and an ideal of . If , then is principal, so assume that .  Define . Then the Well-Ordering Principle guarantees that has a least element. Let be such that is minimal. We claim that .  Clearly . Now assume that , and write , where either or and . If , then , contradicting the minimality of . Thus, , and .  Therefore, is a PID.   "
 },
@@ -2165,7 +2462,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_principalIdealsEuclideanDomains.html#sec_principalIdealsEuclideanDomains-47",
   "type": "Exploration",
-  "number": "2.4.6",
+  "number": "2.5.6",
   "title": "",
   "body": "  Where do Euclidean domains and PIDs fit in the hierarchy of abstraction found in Question ?   "
 },
