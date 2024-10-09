@@ -85,8 +85,8 @@ window.MathJax = {
 <link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_oscarlevin.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
 <style>
 #ssec_wellordering-8-1-3 { counter-set: ssec_wellordering-8-1-3 0; }
@@ -203,9 +203,18 @@ window.MathJax = {
 #sec-homomorphisms-tf-1-2 { counter-set: sec-homomorphisms-tf-1-2 0; }
 #sec-homomorphisms-tf-1-2 > li::marker { content: "("counter(sec-homomorphisms-tf-1-2,lower-alpha)")"; }
 #sec-homomorphisms-tf-1-2 > li { counter-increment: sec-homomorphisms-tf-1-2; }
-#thm_idealgeneratingset-1-1-4 { counter-set: thm_idealgeneratingset-1-1-4 0; }
-#thm_idealgeneratingset-1-1-4 > li::marker { content: ""counter(thm_idealgeneratingset-1-1-4,decimal)"."; }
-#thm_idealgeneratingset-1-1-4 > li { counter-increment: thm_idealgeneratingset-1-1-4; }
+#prop_kernelIsIdeal-1-1-5 { counter-set: prop_kernelIsIdeal-1-1-5 0; }
+#prop_kernelIsIdeal-1-1-5 > li::marker { content: ""counter(prop_kernelIsIdeal-1-1-5,decimal)"."; }
+#prop_kernelIsIdeal-1-1-5 > li { counter-increment: prop_kernelIsIdeal-1-1-5; }
+#def_ideal-1-1-4 { counter-set: def_ideal-1-1-4 0; }
+#def_ideal-1-1-4 > li::marker { content: ""counter(def_ideal-1-1-4,decimal)"."; }
+#def_ideal-1-1-4 > li { counter-increment: def_ideal-1-1-4; }
+#ssec_principalIdeals-8-1-1-2 { counter-set: ssec_principalIdeals-8-1-1-2 0; }
+#ssec_principalIdeals-8-1-1-2 > li::marker { content: ""counter(ssec_principalIdeals-8-1-1-2,decimal)"."; }
+#ssec_principalIdeals-8-1-1-2 > li { counter-increment: ssec_principalIdeals-8-1-1-2; }
+#ssec_principalIdeals-8-2-1 { counter-set: ssec_principalIdeals-8-2-1 0; }
+#ssec_principalIdeals-8-2-1 > li::marker { content: ""counter(ssec_principalIdeals-8-2-1,decimal)"."; }
+#ssec_principalIdeals-8-2-1 > li { counter-increment: ssec_principalIdeals-8-2-1; }
 #sec_quotientRings-4-4-1-2 { counter-set: sec_quotientRings-4-4-1-2 0; }
 #sec_quotientRings-4-4-1-2 > li::marker { content: ""counter(sec_quotientRings-4-4-1-2,decimal)"."; }
 #sec_quotientRings-4-4-1-2 > li { counter-increment: sec_quotientRings-4-4-1-2; }
@@ -249,7 +258,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-divisibility-gcd.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch1-integers.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-integers-modulo-m.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-divisibility-gcd.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch1-integers.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_integersModuloM.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -263,11 +272,11 @@ window.MathJax = {
 <div class="toc-title-box"><a href="ch1-integers.html" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-induction-wellordering.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Induction and the Well-Ordering Property</span></a></div>
+<div class="toc-title-box"><a href="sec_inductionWellOrdering.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Induction and the Well-Ordering Property</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-induction-wellordering.html#ssec_wellordering" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Well-Ordering Principle</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-induction-wellordering.html#ssec_induction" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Principle of Mathematical Induction</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-induction-wellordering.html#sec-induction-wellordering-7" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#ssec_wellordering" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Well-Ordering Principle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#ssec_induction" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Principle of Mathematical Induction</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#sec_inductionWellOrdering-7" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -286,14 +295,14 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-integers-modulo-m.html" class="internal"><span class="codenumber">1.4</span> <span class="title">The Integers modulo <span class="process-math">\(m\)</span></span></a></div>
+<div class="toc-title-box"><a href="sec_integersModuloM.html" class="internal"><span class="codenumber">1.4</span> <span class="title">The Integers modulo <span class="process-math">\(m\)</span></span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-integers-modulo-m.html#ssec_equivalenceRelations" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Equivalence Relations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-integers-modulo-m.html#ssec_congruenceModm" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Congruence Modulo <span class="process-math">\(m\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-integers-modulo-m.html#ssec_integersModm" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Integers Modulo <span class="process-math">\(m\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-integers-modulo-m.html#ssec_additionMultiplicationTablesZm" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Addition and Multiplication Tables in <span class="process-math">\(\Z/m\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-integers-modulo-m.html#ssec_propertiesOfZm" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Arithmetic Properties of <span class="process-math">\(\Z/m\)</span></span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-integers-modulo-m.html#exers-integers-mod-m" class="internal"><span class="codenumber">1.4.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integersModuloM.html#ssec_equivalenceRelations" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Equivalence Relations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integersModuloM.html#ssec_congruenceModm" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Congruence Modulo <span class="process-math">\(m\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integersModuloM.html#ssec_integersModm" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Integers Modulo <span class="process-math">\(m\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integersModuloM.html#ssec_additionMultiplicationTablesZm" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Addition and Multiplication Tables in <span class="process-math">\(\Z/m\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integersModuloM.html#ssec_propertiesOfZm" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Arithmetic Properties of <span class="process-math">\(\Z/m\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_integersModuloM.html#exers-integers-mod-m" class="internal"><span class="codenumber">1.4.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -353,7 +362,12 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec_ideals.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Ideals</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_ideals.html#sec_ideals-32" class="internal"><span class="codenumber">3.2</span> <span class="title">References</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_ideals.html#ssec_kernelIsAnIdeal" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Kernel Is An Ideal</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_ideals.html#ssec_ideals" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Ideals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_ideals.html#ssec_idealsFromReductionModuloM" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Ideals from Reduction Modulo m</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_ideals.html#ssec_principalIdeals" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Principal Ideals</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec_quotientRings.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Rings</span></a></div>
@@ -378,14 +392,14 @@ window.MathJax = {
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.3</span><span class="space"> </span><span class="title">Primes and Factorization</span>
 </h2>
 <article class="objectives goal-like" id="obj_primes-factorization"><h3 class="heading">
-<span class="type">Objectives:</span><span class="space"> </span><span class="title">Guiding Questions</span>
+<span class="type">Guiding Questions:</span><span class="space"> </span><span class="title">Guiding Questions</span>
 </h3>
 <div class="introduction" id="obj_primes-factorization-2"><div class="para" id="obj_primes-factorization-2-1">In this section, we’ll seek to answer the questions:</div></div>
 <ul class="disc" id="obj_primes-factorization-3">
 <li id="obj_primes-factorization-3-1"><div class="para" id="p-derived-obj_primes-factorization-3-1">What are primes? What properties do they have?</div></li>
 <li id="obj_primes-factorization-3-2"><div class="para" id="p-derived-obj_primes-factorization-3-2">What does the Fundamental Theorem of Arithmetic say?</div></li>
 <li id="obj_primes-factorization-3-3"><div class="para" id="p-derived-obj_primes-factorization-3-3">Why is the Fundamental Theorem of Arithmetic true?</div></li>
-</ul></article><div class="para" id="sec-primes-factorization-3">As described in <a href="sec-induction-wellordering.html" class="internal" title="Section 1.1: Induction and the Well-Ordering Property">Section 1.1</a>, our main goal is to build a deep structural understanding of the notion of <em class="emphasis">factorization</em>. That is, splitting objects (e.g., numbers, polynomials, matrices) into products of other objects. One of the most familiar examples of this process involves factoring integers into products of primes.</div>
+</ul></article><div class="para" id="sec-primes-factorization-3">As described in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "sec-induction-wellordering" missing or not unique]</code>, our main goal is to build a deep structural understanding of the notion of <em class="emphasis">factorization</em>. That is, splitting objects (e.g., numbers, polynomials, matrices) into products of other objects. One of the most familiar examples of this process involves factoring integers into products of primes.</div>
 <article class="definition definition-like" id="def_primeInteger"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span>
 </h3> <div class="para" id="def_primeInteger-1-3">Let <span class="process-math">\(p &gt; 1\)</span> be a natural number. We say <span class="process-math">\(p\)</span> is <dfn class="terminology">prime</dfn> if whenever <span class="process-math">\(a,b\in \Z\)</span> such that <span class="process-math">\(p\mid ab\text{,}\)</span> either <span class="process-math">\(p\mid a\)</span> or <span class="process-math">\(p\mid b\text{.}\)</span>
@@ -535,7 +549,7 @@ ax+by = \gcd(a,b)\text{.}
 <article class="bib" id="NTI"><div class="bibitem">[1]</div>
 <div class="bibentry">D. Marshall, E. Odell, M. Starbird, <em class="emphasis">Number Theory Through Inquiry</em>, MAA Textbooks, Mathematical Association of America, 2007</div></article></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-divisibility-gcd.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-integers-modulo-m.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-divisibility-gcd.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_integersModuloM.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
