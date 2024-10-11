@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Adjoining <span class="process-math">\(\sqrt{-5}\)</span> to the Rationals.</span>
+</h4>
+<div class="para logical">
+<div class="para">Define the set of rationals <em class="emphasis">adjoin</em> <span class="process-math">\(\sqrt{-5}\)</span> by:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Q(\sqrt{-5}) = \{a+b\sqrt{-5}\mid a,b\in\mathbb{Q}\}.
+\end{equation*}
+</div>
+<div class="para">This is a subset of <span class="process-math">\(\mathbb{C}\text{.}\)</span> We claim that <span class="process-math">\(\Q(\sqrt{d})\)</span> is a <em class="emphasis">subfield</em> of <span class="process-math">\(\mathbb{C}\)</span>
+</div>
+</div> <div class="para">We apply the <a href="sec_fields.html#thm_subfieldTest" class="xref" data-knowl="./knowl/xref/thm_subfieldTest.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.1.14: Subfield Test">Subfield Test</a>. In particular, <span class="process-math">\(\mathbb{Q}(\sqrt{-5})\subset \C\)</span> and the latter is a field. We first show that <span class="process-math">\(1+0i\in\Q(\sqrt{-5})\)</span> but this is just the element <span class="process-math">\(1+0\sqrt{d}\in\Q(\sqrt{-5})\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">We now show closure under subtraction. Take <span class="process-math">\(a+b\sqrt{-5},c+d\sqrt{-5}\in\Q\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a+b\sqrt{-5}) - (c+d\sqrt{-5}) = (a-c) + (b-d)\sqrt{-5}.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\((a-c),(b-d)\in \Q\text{,}\)</span> we conclude that <span class="process-math">\(\Q(\sqrt{-5})\)</span> is closed under subtraction.</div>
+</div> <div class="para logical">
+<div class="para">We now show closure under division. Suppose <span class="process-math">\(a+b\sqrt{-5},c+d\sqrt{-5}\in\Q(\sqrt{-5})\text{.}\)</span> Writing <span class="process-math">\(c+d\sqrt{-5} = c+d\sqrt{5}i\text{,}\)</span> we know that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(c+d\sqrt{5}i)^{-1} = \frac{c}{c^2+5d^2} + \frac{-d\sqrt{5}}{c^2+5d^2}i
+\end{equation*}
+</div>
+<div class="para">which we can recombine the <span class="process-math">\(i\)</span> and <span class="process-math">\(\sqrt{5}\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(c+d\sqrt{5}i)^{-1} = \frac{c}{c^2+5d^2} + \frac{-d}{c^2+5d^2}\sqrt{-5}.
+\end{equation*}
+</div>
+<div class="para">Note that <span class="process-math">\(c^2+5d^2=0\)</span> would say <span class="process-math">\((c/d)^2 = -5\)</span> which is absurd so the inverse is well-defined.</div>
+</div> <div class="para logical">
+<div class="para">Now we divide:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp(a+b\sqrt{-5})\cdot (c+d\sqrt{-5})^{-1} \\
+=\amp(a+b\sqrt{-5})\cdot \left(\frac{c}{c^2+5d^2} + \frac{-d}{c^2+5d^2}\sqrt{-5} \right) \\
+=\amp \left(\frac{ac}{c^2+5d^2} + \frac{5bd}{c^2+5d^2}\right) + \left(\frac{-ad}{c^2+5d^2}+ \frac{bc}{c^2+5d^2}\right)\sqrt{-5}\\
+=\amp \frac{ac+5bd}{c^2+5d^2} + \frac{-ad+bc}{c^2+5d^2}\sqrt{-5}
+\end{align*}
+</div>
+<div class="para">and since <span class="process-math">\(\Q\)</span> is a field it is closed under arithmetic. In particular <span class="process-math">\(\frac{ac+5bd}{c^2+5d^2}, \frac{-ad+bc}{c^2+5d^2}\in \Q\text{.}\)</span> Thus <span class="process-math">\(\Q(\sqrt{-5})\)</span> is closed under division.</div>
+</div> <div class="para">We conclude, by the Subfield Test, that <span class="process-math">\(\Q(\sqrt{-5})\)</span> is a subfield of <span class="process-math">\(\C\text{.}\)</span>
+</div></article><span class="incontext"><a class="internal" href="sec_fields.html#ex_qAdjoinNegative5">in-context</a></span>
+</body>
+</html>

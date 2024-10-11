@@ -397,9 +397,9 @@ var ptx_lunr_docs = [
   "body": "  Use the Euclidean algorithm to compute .    We write .  So .   "
 },
 {
-  "id": "theorem_bezoutint",
+  "id": "thm_bezoutIdentity",
   "level": "2",
-  "url": "sec-divisibility-gcd.html#theorem_bezoutint",
+  "url": "sec-divisibility-gcd.html#thm_bezoutIdentity",
   "type": "Theorem",
   "number": "1.2.9",
   "title": "Bézout’s Identity.",
@@ -883,9 +883,9 @@ var ptx_lunr_docs = [
   "body": "  Given an integer , congruence modulo is an equivalence relation on .    Let . Then , so . Thus, is reflexive.  Let such that . This means that , so there is some such that . Then , so and . Thus, is symmetric.  Finally, let such that and . Then and , so there are integers such that and . Summing these equations yields , so and .   "
 },
 {
-  "id": "ssec_integersModm-2",
+  "id": "def_integersModm",
   "level": "2",
-  "url": "sec_integersModuloM.html#ssec_integersModm-2",
+  "url": "sec_integersModuloM.html#def_integersModm",
   "type": "Definition",
   "number": "1.4.5",
   "title": "",
@@ -1141,7 +1141,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Fields",
-  "body": " Fields   Guiding Questions   In this section, we'll seek to answer the questions:    What are binary operations?  What is a field? What sorts of things can one do in a field?  What are examples of fields?     Number Systems  We now begin the process of abstraction. We will do this in stages, beginning with the concept of a field . First, we need to formally define some familiar sets of numbers.     Rational Numbers   Rational Numbers   The rational numbers, denoted by , is the set .    Recall that in elementary school, you learned that two fractions are equivalent if and only if .    Prove that our elementary school definition of equivalent fractions is an equivalence relation. Recall .     real numbers We likely have an intuitive idea of what is meant by , the set of real numbers. Defining rigorously is actually quite difficult, and occupies a significant amount of time in a first course in real analysis. Thus, we will make use of your intuition.  It is worth noting that , but also contains many irrational numbers, such as , , , and so on.  Out of we may build the complex numbers.     Complex Numbers   Complex Numbers   The complex numbers consist of all expressions of the form , where and . Given , we say is the real part of and is the imaginary part . The set of complex numbers is denoted .      Binary Operations   Algebra comes from an Arabic word meaning the reunion of broken parts . We therefore need a way of combining two elements of a set into one; we turn to a particular type of function, known as a binary operation, to accomplish this.   Binary Operation  Closure   Let be a nonempty set. A function is called a binary operation . If is a binary operation on , we say that is closed under the operation . [Given , we usually write in place of the typical function notation, .]      Which of are binary operations:   on ?    on ?    on ?    on ?    on ? (Recall that for , and .)       Division is never a binary operation. The others are binary operations on , , and . The only binary operation on is addition.      Choose your favorite nonempty set and describe a binary operation different than those in .    Answers vary, but one option is to define by       Fields  The hallmark of modern pure mathematics is the use of axioms . An axiom is essentially an unproved assertion of truth. Our use of axioms serves several purposes.  From a logical perspective, axioms help us avoid the problem of infinite regression (e.g., asking How do you know? over and over again). That is, axioms give us very clear starting points from which to make our deductions.   To that end, our first abstract algebraic structure captures and axiomatizes familiar behavior about how numbers can be combined to produce other numbers of the same type.   Heinrich Martin Weber     Portrait of Heinrich Martin Weber   The first whispers of a field were known to Lagrange in 1770. However, it was not until 1893 that a formal definition of an abstract field was given. This definition is due to Heinrich Martin Weber in the paper Die allgemeinen Grundlagen der Galois'schen Gleichungstheorie . Weber was a German mathematician known for contributions to the fields of algebra, number theory, and analysis.    field   A field is a nonempty set with at least two elements and binary operations and , denoted , and satisfying the following field axioms :   Given any , . (Associativity of addition)    Given any , . (Commutativity of addition)    There exists an element such that for all , . (Additive identity)    Given any there exists a such that . (Additive inverse)    Given any , . (Associativity of multiplication)    Given any , . (Commutativity of multiplication)    There exists an element such that for all , . (Multiplicative identity)    For all , , there exists a such that . (Multiplicative inverse)    For all , . (Distributive property I)    For all , . (Distributive property II)       We will usually write as . Additionally, we will usually drop the subscripts on unless we need to distinguish between fundamentally different identities in different fields.    Which of the following are fields under the specified operations? For most, a short justification or counterexample is sufficient.    under the usual addition and multiplication operations     under the usual addition and multiplication operations     , the set of even integers, under the usual addition and multiplication operations     under the usual addition and multiplication operations     under addition and multiplication modulo 6     under addition and multiplication modulo 5     under the usual addition and multiplication operations     under the complex addition and multiplication defined in      For students who have taken a linear algebra course. , the set of matrices with real coefficients using the usual definition of matrix multiplication Recall that, if , then . and matrix addition.           is not closed under taking additive inverses, so is not a field.     is not a field, as there is no integer such that .     is not a field for the same reason.     is a field.     is not a field; there is no for which (you can check them all; there are only 4 viable options).      is a field. The axioms pertaining to addition and multiplication were established earlier or rely on the same axioms holding for .     is a field     is a field. Given , .     is not a field. Matrix multiplication is not commutative.       In the , you determined which of sets of familiar mathematical objects are and are not fields. Notice that you have been working with fields for years and that our abstraction of language to that of fields is simply to allow us to explore the common features at the same time - it is inefficient to prove the same statement about every single field when we can prove it once and for all about fields in general.    Properties of Fields   Properties of Fields   Let be a field.   The additive identity is unique.    For all , .    Additive inverses are unique.    The multiplicative identity is unique.    Multiplicative inverses are unique.       Note that we are saying that the additive inverse of the multiplicative identity times itself equals the multiplicative identity. You should use only the field axioms and the properties previously established in this theorem.   Minus times Minus equals Plus: The reason for this we need not discuss. -W.H. Auden           Assume both satisfy the additive identity axiom. Observe that .    As , we may write . Now add the additive inverse of to both sides to obtain .    Let and suppose and are such that and . Then , and we may add (or ) to both sides to obtain and . Thus .    Suppose and are multiplicative identities. Then .    Let be nonzero and suppose are multiplicative inverses for . Then , and we may multiply by (or ) to obtain .    Observe that by the definition of additive inverses. Multiply both sides by and distribute to obtain . By part 2 of this theorem and the definition of a multiplicative identity, we obtain . We now add the multiplicative identity to obtain , which simplifies to .     One consequence of is that, given , , we may refer to as the additive inverse of , and as the multiplicative inverse of . We will thus employ this familiar terminology henceforth. Moreover, we will define subtraction in a field as and division as .    Subfields and Extensions  One source for new fields is to look within the fields we already have. That is, we want to know when a subset of a field is a field in its own right.    subfield    field extension    Let be a field. If is a nonempty subset satisfying   and   is a field under the same operations as ,    then we call a subfield of , and an extension field of , and say is a field extension .    Many of the number sets with which you are familiar are fields.   The set of complex numbers is an extension field of . Equivalently, is a subfield of     The last theorem in this section gives us a technique for identifying subfields of a given field.   Subfield Test   Let be a field and be a subset of such that:        For any , we have . (Closed under subtraction)    For any , we have . (Closed under division)   Then is a field under the addition and multiplication in . In particular, is a subfield of .     We check all of the axioms in . Since is closed under subtraction, . Since and is closed under subtraction, we have for any . Thus is closed under additive inverses. Since is closed under additive inverses and subtraction we have for any . Thus is closed under addition.  We now turn to the associativity and commutative properties. For any we know . Since addition in is associative, we know . Thus addition in is associative. We say it is inherited from . Similarly addition in is commutative, is the additive identity, multiplication is associative and commutative, is the multiplicative identity, and the distributive laws hold.  Lastly, since is closed under division and , for any we have and so the multiplicative inverse of is in . Thus is closed under taking multiplicative inverses. This completes the checks of each of the 10 axioms.    Quadratic Extensions of the Rationals   Suppose is any rational number such that . Define the set of rationals adjoin  by: This is a subset of . We claim that is a subfield of       For which is a field? Compute some examples, form a conjecture, and prove your conjecture.     "
+  "body": " Fields    In this section, we'll seek to answer the questions:    What are binary operations?  What is a field? What sorts of things can one do in a field?  What are examples of fields?     Number Systems  We now begin the process of abstraction. We will do this in stages, beginning with the concept of a field . First, we need to formally define some familiar sets of numbers.     Rational Numbers   Rational Numbers   The rational numbers , denoted by , is the set . The symbol is is a fraction and we regard two symbols as defining the same element if and only if .      Prove that the relation defined in is an equivalence relation. Recall .      For , the sum and product: is well-defined.    We only show the product is well-defined, while the sum is left as an exercise. To be well-defined, we need to argue that for any equivalent ways of representing both fractions in the product, the result is unchanged. To that end, take . Suppose that and .  Then and we need to show that is equivalent to or that .  We have as desired.     real numbers We likely have an intuitive idea of what is meant by , the set of real numbers. Defining rigorously is actually quite difficult, and occupies a significant amount of time in a first course in real analysis. Thus, we will make use of your intuition.  It is worth noting that , but also contains many irrational numbers, such as , , , and so on.  Out of we may build the complex numbers.     Complex Numbers   Complex Numbers   The complex numbers consist of all expressions of the form , where and . Given , we say is the real part of and is the imaginary part . The set of complex numbers is denoted .  Addition and multiplication in is defined in the usual way:     Unlike , the elements of are not equivalence classes and so we do not need an analogue of here.    Binary Operations   Algebra comes from an Arabic word meaning the reunion of broken parts . We therefore need a way of combining two elements of a set into one; we turn to a particular type of function, known as a binary operation, to accomplish this.   Binary Operation  Closure   Let be a nonempty set. A function is called a binary operation . If is a binary operation on , we say that is closed under the operation . [Given , we usually write in place of the typical function notation, .]      Which of are binary operations:   on ?    on ?    on ?    on ?    on ? (Recall that for , and .)       Division is never a binary operation. The others are binary operations on , , and . The only binary operation on is addition.      Choose your favorite nonempty set and describe a binary operation different than those in .    Answers vary, but one option is to define by       Fields  The hallmark of modern pure mathematics is the use of axioms . An axiom is essentially an unproved assertion of truth. Our use of axioms serves several purposes.  From a logical perspective, axioms help us avoid the problem of infinite regression (e.g., asking How do you know? over and over again). That is, axioms give us very clear starting points from which to make our deductions.   To that end, our first abstract algebraic structure captures and axiomatizes familiar behavior about how numbers can be combined to produce other numbers of the same type.   Heinrich Martin Weber     Portrait of Heinrich Martin Weber   The first whispers of a field were known to Lagrange in 1770. However, it was not until 1893 that a formal definition of an abstract field was given. This definition is due to Heinrich Martin Weber in the paper Die allgemeinen Grundlagen der Galois'schen Gleichungstheorie . Weber was a German mathematician known for contributions to the fields of algebra, number theory, and analysis.    field   A field is a nonempty set with at least two elements and binary operations and , denoted , and satisfying the following field axioms :   Given any , . (Associativity of addition)    Given any , . (Commutativity of addition)    There exists an element such that for all , . (Additive identity)    Given any there exists a such that . (Additive inverse)    Given any , . (Associativity of multiplication)    Given any , . (Commutativity of multiplication)    There exists an element such that for all , . (Multiplicative identity)    For all , , there exists a such that . (Multiplicative inverse)    For all , . (Distributive property I)    For all , . (Distributive property II)       We will usually write as . Additionally, we will usually drop the subscripts on unless we need to distinguish between fundamentally different identities in different fields.    Which of the following are fields under the specified operations? For most, a short justification or counterexample is sufficient.    under the usual addition and multiplication operations     under the usual addition and multiplication operations     , the set of even integers, under the usual addition and multiplication operations     under the usual addition and multiplication operations defined in     under addition and multiplication modulo 6     under addition and multiplication modulo 5     under the usual addition and multiplication operations     under the complex addition and multiplication defined in      For students who have taken a linear algebra course. , the set of matrices with real coefficients using the usual definition of matrix multiplication Recall that, if , then . and matrix addition.           is not closed under taking additive inverses, so is not a field.     is not a field, as there is no integer such that .     is not a field for the same reason.     is a field.     is not a field; there is no for which (you can check them all; there are only 4 viable options).      is a field. The axioms pertaining to addition and multiplication were established earlier or rely on the same axioms holding for .     is a field     is a field. Given , .     is not a field. Matrix multiplication is not commutative.       In the , you determined which of sets of familiar mathematical objects are and are not fields. Notice that you have been working with fields for years and that our abstraction of language to that of fields is simply to allow us to explore the common features at the same time - it is inefficient to prove the same statement about every single field when we can prove it once and for all about fields in general.    Examples of Fields  We will now provide more rigorous arguments that the fields investigated are in fact fields. We will do so by checking, for a handful of the fields investigated, each of the axioms hold. At the end of the section we will introduce a way of simplyfying some of our work.   Rational Numbers are a Field   Having already shown that addition and multiplication are well-defined in . We show that, equipped with these binary operations, forms a field. Take .  We start with the additive checks: associativity, commutativity, additive identity, and additive inverses. For associativity we have: where we have dropped the parentheses in the numerator as multiplication in is associative. We also have and this is the same as the other association.  For commutativity we have: But in we know that and .  The element is the additive identity as .  The additive inverse of is as: And as .  We now turn to the multiplicative axioms: associativity, commutativity, identity, inverses of non-zero elements. For associativity: where the last line uses associativity of multiplication in .  For commutativity we again use that the property holds in :   The multiplicative identity is as   Lastly we have the left and right-distributive axioms. For the left-distributive axiom we have: Now notice that as   It is a consequence of the axioms that left and right-distributivity are equivalent, see exercise ????. We show how to prove this exercise in this example: where the first and third equality is commutativity of multiplication and the second is the left-distributive property.    This was quite involved but we managed it. This was our first check that a set with one or more binary operations satisfied a sequence of axioms. These types of checks will continue throughout the course and so we will spend quite some time developing procedural fluency in carrying out definition checks.   Complex Numbers Form a Field   The Complex Numbers form a field under their usual multiplication and addition. The operations are well-defined and so now we need to check all ten axioms. We leave a handful of them to the reader as they are not necessarily difficult but they are tedious. Take .  We leave the proof of associativity as an exercise, as well as the proof that the additive identity is and the additive inverse of is . We will prove that addition is commutative: as and addition of real numbers is commutative.  We leave the proof of associativity as a worthy yet tedious exercise. We will prove the remaining axioms. For commutativity: where have used the multiplication of real numbers is commutative.  The multiplicative identity is :   The multiplicative inverse of a non-zero is . Since , and so this complex number is well-defined. We leave it as an exercise to verify:   We've already seen an instance of the left-distributive property implying the right-distributive property. Since you will prove this in Exer???? we only show the left-distributive property: and These agree and completes the proof of the left-distributive property and that is a field.    The next example is a finite example. In particular, we will return to and prove that the integers modulo form a field if and only if is prime.  Before the proof, we recall that addition and multiplication is associative and commutative was done in exercises ????. The additive identity is as . The additive inverse of is . The multiplicative identity is as . That multiplication distributes over addition was also done in exercise???.  In particular, satisfies all the axioms of being a field with the exception of multiplicative inverses for non-zero elements. In the proof that follows we show this happens if and only if is prime.    Fix in . Then , with modular addition and multiplication, is a field if and only if is prime.    By the discussion preceeding the theorem statement, we need only check that multiplicative inverses exist to see that is a field. To that end, suppose is prime. Take . Since is prime, . If , then which isn't true. Thus . By , there exists with   Since , after reducing modulo we have and in particular is the multiplicative inverse of .  If is not prime, then there exists with and . Then . And since , we have . If was a field, then has a multiplicative inverse, say . Then which contradicts . We conclude the non-zero element does not have a multiplicative inverse and so when is not prime is not a field.    Notice that when is prime is a field and it has only finitely many elements. This is such an important field, we will give a proper definition.     Finite Field of Order    For a prime, we denote by the finite field and call it the finite field of order  .    The symbol means the same as in terms of field arithmetic. The notation is often used to emphasize that we are thinking about as a field.    Properties of Fields   Properties of Fields   Let be a field.   The additive identity is unique.    For all , .    Additive inverses are unique.    The multiplicative identity is unique.    Multiplicative inverses are unique.       Note that we are saying that the additive inverse of the multiplicative identity times itself equals the multiplicative identity. You should use only the field axioms and the properties previously established in this theorem.   Minus times Minus equals Plus: The reason for this we need not discuss. -W.H. Auden           Assume both satisfy the additive identity axiom. Observe that .    As , we may write . Now add the additive inverse of to both sides to obtain .    Let and suppose and are such that and . Then , and we may add (or ) to both sides to obtain and . Thus .    Suppose and are multiplicative identities. Then .    Let be nonzero and suppose are multiplicative inverses for . Then , and we may multiply by (or ) to obtain .    Observe that by the definition of additive inverses. Multiply both sides by and distribute to obtain . By part 2 of this theorem and the definition of a multiplicative identity, we obtain . We now add the multiplicative identity to obtain , which simplifies to .     One consequence of is that, given , , we may refer to as the additive inverse of , and as the multiplicative inverse of . We will thus employ this familiar terminology henceforth. Moreover, we will define subtraction in a field as and division as .    Subfields and Extensions  One source for new fields is to look within the fields we already have. That is, we want to know when a subset of a field is a field in its own right.    subfield    field extension    Let be a field. If is a nonempty subset satisfying   and   is a field under the same operations as ,    then we call a subfield of , and an extension field of , and say is a field extension .    Many of the number sets with which you are familiar are fields.   The set of complex numbers is an extension field of . Equivalently, is a subfield of     The last theorem in this section gives us a technique for identifying subfields of a given field.   Subfield Test   Let be a field and be a subset of such that:        For any , we have . (Closed under subtraction)    For any , we have . (Closed under division)   Then is a field under the addition and multiplication in . In particular, is a subfield of .     We check all of the axioms in . Since is closed under subtraction, . Since and is closed under subtraction, we have for any . Thus is closed under additive inverses. Since is closed under additive inverses and subtraction we have for any . Thus is closed under addition.  We now turn to the associativity and commutative properties. For any we know . Since addition in is associative, we know . Thus addition in is associative. We say it is inherited from . Similarly addition in is commutative, is the additive identity, multiplication is associative and commutative, is the multiplicative identity, and the distributive laws hold.  Lastly, since is closed under division and , for any we have and so the multiplicative inverse of is in . Thus is closed under taking multiplicative inverses. This completes the checks of each of the 10 axioms.   We end this section with another interesting example of a field. We also illustrate how to use the Subfield Test.   Adjoining to the Rationals   Define the set of rationals adjoin  by: This is a subset of . We claim that is a subfield of   We apply the . In particular, and the latter is a field. We first show that but this is just the element .  We now show closure under subtraction. Take , then Since , we conclude that is closed under subtraction.  We now show closure under division. Suppose . Writing , we know that which we can recombine the and : Note that would say which is absurd so the inverse is well-defined.  Now we divide: and since is a field it is closed under arithmetic. In particular . Thus is closed under division.  We conclude, by the Subfield Test, that is a subfield of .    The reader should take note that the importance of using under the radical was only that . In particular, for any such that the proof will go through exactly the same. You will carry this out in Exercise????   "
 },
 {
   "id": "obj_fields",
@@ -1149,42 +1149,51 @@ var ptx_lunr_docs = [
   "url": "sec_fields.html#obj_fields",
   "type": "Guiding Questions",
   "number": "2.1",
-  "title": "Guiding Questions",
-  "body": " Guiding Questions   In this section, we'll seek to answer the questions:    What are binary operations?  What is a field? What sorts of things can one do in a field?  What are examples of fields?   "
+  "title": "",
+  "body": "  In this section, we'll seek to answer the questions:    What are binary operations?  What is a field? What sorts of things can one do in a field?  What are examples of fields?   "
 },
 {
-  "id": "subsec-numberSystems-3",
+  "id": "def_rationalNumbers",
   "level": "2",
-  "url": "sec_fields.html#subsec-numberSystems-3",
+  "url": "sec_fields.html#def_rationalNumbers",
   "type": "Definition",
   "number": "2.1.1",
   "title": "",
-  "body": "   Rational Numbers   Rational Numbers   The rational numbers, denoted by , is the set .   "
+  "body": "   Rational Numbers   Rational Numbers   The rational numbers , denoted by , is the set . The symbol is is a fraction and we regard two symbols as defining the same element if and only if .   "
 },
 {
-  "id": "subsec-numberSystems-5",
+  "id": "subsec-numberSystems-4",
   "level": "2",
-  "url": "sec_fields.html#subsec-numberSystems-5",
+  "url": "sec_fields.html#subsec-numberSystems-4",
   "type": "Activity",
   "number": "2.1.1",
   "title": "",
-  "body": "  Prove that our elementary school definition of equivalent fractions is an equivalence relation. Recall .   "
+  "body": "  Prove that the relation defined in is an equivalence relation. Recall .   "
 },
 {
-  "id": "subsec-numberSystems-9",
+  "id": "prop_arithmeticInQ",
   "level": "2",
-  "url": "sec_fields.html#subsec-numberSystems-9",
-  "type": "Definition",
+  "url": "sec_fields.html#prop_arithmeticInQ",
+  "type": "Proposition",
   "number": "2.1.2",
   "title": "",
-  "body": "   Complex Numbers   Complex Numbers   The complex numbers consist of all expressions of the form , where and . Given , we say is the real part of and is the imaginary part . The set of complex numbers is denoted .   "
+  "body": "  For , the sum and product: is well-defined.    We only show the product is well-defined, while the sum is left as an exercise. To be well-defined, we need to argue that for any equivalent ways of representing both fractions in the product, the result is unchanged. To that end, take . Suppose that and .  Then and we need to show that is equivalent to or that .  We have as desired.   "
+},
+{
+  "id": "def_complexNumbers",
+  "level": "2",
+  "url": "sec_fields.html#def_complexNumbers",
+  "type": "Definition",
+  "number": "2.1.3",
+  "title": "",
+  "body": "   Complex Numbers   Complex Numbers   The complex numbers consist of all expressions of the form , where and . Given , we say is the real part of and is the imaginary part . The set of complex numbers is denoted .  Addition and multiplication in is defined in the usual way:    "
 },
 {
   "id": "def_binaryOperation",
   "level": "2",
   "url": "sec_fields.html#def_binaryOperation",
   "type": "Definition",
-  "number": "2.1.3",
+  "number": "2.1.4",
   "title": "",
   "body": " Binary Operation  Closure   Let be a nonempty set. A function is called a binary operation . If is a binary operation on , we say that is closed under the operation . [Given , we usually write in place of the typical function notation, .]   "
 },
@@ -1207,11 +1216,11 @@ var ptx_lunr_docs = [
   "body": "  Choose your favorite nonempty set and describe a binary operation different than those in .    Answers vary, but one option is to define by    "
 },
 {
-  "id": "subsec-fields-5-2-1",
+  "id": "ssec_fields-5-2-1",
   "level": "2",
-  "url": "sec_fields.html#subsec-fields-5-2-1",
+  "url": "sec_fields.html#ssec_fields-5-2-1",
   "type": "Figure",
-  "number": "2.1.4",
+  "number": "2.1.5",
   "title": "",
   "body": "  Portrait of Heinrich Martin Weber   "
 },
@@ -1220,7 +1229,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_fields.html#def_field",
   "type": "Definition",
-  "number": "2.1.5",
+  "number": "2.1.6",
   "title": "",
   "body": " field   A field is a nonempty set with at least two elements and binary operations and , denoted , and satisfying the following field axioms :   Given any , . (Associativity of addition)    Given any , . (Commutativity of addition)    There exists an element such that for all , . (Additive identity)    Given any there exists a such that . (Additive inverse)    Given any , . (Associativity of multiplication)    Given any , . (Commutativity of multiplication)    There exists an element such that for all , . (Multiplicative identity)    For all , , there exists a such that . (Multiplicative inverse)    For all , . (Distributive property I)    For all , . (Distributive property II)      "
 },
@@ -1231,14 +1240,50 @@ var ptx_lunr_docs = [
   "type": "Investigation",
   "number": "2.1.4",
   "title": "",
-  "body": "  Which of the following are fields under the specified operations? For most, a short justification or counterexample is sufficient.    under the usual addition and multiplication operations     under the usual addition and multiplication operations     , the set of even integers, under the usual addition and multiplication operations     under the usual addition and multiplication operations     under addition and multiplication modulo 6     under addition and multiplication modulo 5     under the usual addition and multiplication operations     under the complex addition and multiplication defined in      For students who have taken a linear algebra course. , the set of matrices with real coefficients using the usual definition of matrix multiplication Recall that, if , then . and matrix addition.           is not closed under taking additive inverses, so is not a field.     is not a field, as there is no integer such that .     is not a field for the same reason.     is a field.     is not a field; there is no for which (you can check them all; there are only 4 viable options).      is a field. The axioms pertaining to addition and multiplication were established earlier or rely on the same axioms holding for .     is a field     is a field. Given , .     is not a field. Matrix multiplication is not commutative.      "
+  "body": "  Which of the following are fields under the specified operations? For most, a short justification or counterexample is sufficient.    under the usual addition and multiplication operations     under the usual addition and multiplication operations     , the set of even integers, under the usual addition and multiplication operations     under the usual addition and multiplication operations defined in     under addition and multiplication modulo 6     under addition and multiplication modulo 5     under the usual addition and multiplication operations     under the complex addition and multiplication defined in      For students who have taken a linear algebra course. , the set of matrices with real coefficients using the usual definition of matrix multiplication Recall that, if , then . and matrix addition.           is not closed under taking additive inverses, so is not a field.     is not a field, as there is no integer such that .     is not a field for the same reason.     is a field.     is not a field; there is no for which (you can check them all; there are only 4 viable options).      is a field. The axioms pertaining to addition and multiplication were established earlier or rely on the same axioms holding for .     is a field     is a field. Given , .     is not a field. Matrix multiplication is not commutative.      "
+},
+{
+  "id": "ssec_examplesOfFields-3",
+  "level": "2",
+  "url": "sec_fields.html#ssec_examplesOfFields-3",
+  "type": "Example",
+  "number": "2.1.7",
+  "title": "Rational Numbers are a Field.",
+  "body": " Rational Numbers are a Field   Having already shown that addition and multiplication are well-defined in . We show that, equipped with these binary operations, forms a field. Take .  We start with the additive checks: associativity, commutativity, additive identity, and additive inverses. For associativity we have: where we have dropped the parentheses in the numerator as multiplication in is associative. We also have and this is the same as the other association.  For commutativity we have: But in we know that and .  The element is the additive identity as .  The additive inverse of is as: And as .  We now turn to the multiplicative axioms: associativity, commutativity, identity, inverses of non-zero elements. For associativity: where the last line uses associativity of multiplication in .  For commutativity we again use that the property holds in :   The multiplicative identity is as   Lastly we have the left and right-distributive axioms. For the left-distributive axiom we have: Now notice that as   It is a consequence of the axioms that left and right-distributivity are equivalent, see exercise ????. We show how to prove this exercise in this example: where the first and third equality is commutativity of multiplication and the second is the left-distributive property.   "
+},
+{
+  "id": "ssec_examplesOfFields-5",
+  "level": "2",
+  "url": "sec_fields.html#ssec_examplesOfFields-5",
+  "type": "Example",
+  "number": "2.1.8",
+  "title": "Complex Numbers Form a Field.",
+  "body": " Complex Numbers Form a Field   The Complex Numbers form a field under their usual multiplication and addition. The operations are well-defined and so now we need to check all ten axioms. We leave a handful of them to the reader as they are not necessarily difficult but they are tedious. Take .  We leave the proof of associativity as an exercise, as well as the proof that the additive identity is and the additive inverse of is . We will prove that addition is commutative: as and addition of real numbers is commutative.  We leave the proof of associativity as a worthy yet tedious exercise. We will prove the remaining axioms. For commutativity: where have used the multiplication of real numbers is commutative.  The multiplicative identity is :   The multiplicative inverse of a non-zero is . Since , and so this complex number is well-defined. We leave it as an exercise to verify:   We've already seen an instance of the left-distributive property implying the right-distributive property. Since you will prove this in Exer???? we only show the left-distributive property: and These agree and completes the proof of the left-distributive property and that is a field.   "
+},
+{
+  "id": "thm-integersModmField",
+  "level": "2",
+  "url": "sec_fields.html#thm-integersModmField",
+  "type": "Theorem",
+  "number": "2.1.9",
+  "title": "",
+  "body": "  Fix in . Then , with modular addition and multiplication, is a field if and only if is prime.    By the discussion preceeding the theorem statement, we need only check that multiplicative inverses exist to see that is a field. To that end, suppose is prime. Take . Since is prime, . If , then which isn't true. Thus . By , there exists with   Since , after reducing modulo we have and in particular is the multiplicative inverse of .  If is not prime, then there exists with and . Then . And since , we have . If was a field, then has a multiplicative inverse, say . Then which contradicts . We conclude the non-zero element does not have a multiplicative inverse and so when is not prime is not a field.   "
+},
+{
+  "id": "def_Fp",
+  "level": "2",
+  "url": "sec_fields.html#def_Fp",
+  "type": "Definition",
+  "number": "2.1.10",
+  "title": "",
+  "body": "   Finite Field of Order    For a prime, we denote by the finite field and call it the finite field of order  .   "
 },
 {
   "id": "thm_fieldproperties",
   "level": "2",
   "url": "sec_fields.html#thm_fieldproperties",
   "type": "Theorem",
-  "number": "2.1.6",
+  "number": "2.1.11",
   "title": "Properties of Fields.",
   "body": " Properties of Fields   Let be a field.   The additive identity is unique.    For all , .    Additive inverses are unique.    The multiplicative identity is unique.    Multiplicative inverses are unique.       Note that we are saying that the additive inverse of the multiplicative identity times itself equals the multiplicative identity. You should use only the field axioms and the properties previously established in this theorem.   Minus times Minus equals Plus: The reason for this we need not discuss. -W.H. Auden       "
 },
@@ -1247,7 +1292,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_fields.html#subsec-propertiesOfFields-3",
   "type": "Proof",
-  "number": "2.1.4.1",
+  "number": "2.1.5.1",
   "title": "",
   "body": "   Assume both satisfy the additive identity axiom. Observe that .    As , we may write . Now add the additive inverse of to both sides to obtain .    Let and suppose and are such that and . Then , and we may add (or ) to both sides to obtain and . Thus .    Suppose and are multiplicative identities. Then .    Let be nonzero and suppose are multiplicative inverses for . Then , and we may multiply by (or ) to obtain .    Observe that by the definition of additive inverses. Multiply both sides by and distribute to obtain . By part 2 of this theorem and the definition of a multiplicative identity, we obtain . We now add the multiplicative identity to obtain , which simplifies to .    "
 },
@@ -1265,7 +1310,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_fields.html#subsec-subfieldsAndExtensions-3",
   "type": "Definition",
-  "number": "2.1.7",
+  "number": "2.1.12",
   "title": "",
   "body": "  subfield    field extension    Let be a field. If is a nonempty subset satisfying   and   is a field under the same operations as ,    then we call a subfield of , and an extension field of , and say is a field extension .    "
 },
@@ -1274,16 +1319,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_fields.html#subsec-subfieldsAndExtensions-4",
   "type": "Theorem",
-  "number": "2.1.8",
+  "number": "2.1.13",
   "title": "",
   "body": "  The set of complex numbers is an extension field of . Equivalently, is a subfield of    "
 },
 {
-  "id": "thm-subfieldTest",
+  "id": "thm_subfieldTest",
   "level": "2",
-  "url": "sec_fields.html#thm-subfieldTest",
+  "url": "sec_fields.html#thm_subfieldTest",
   "type": "Theorem",
-  "number": "2.1.9",
+  "number": "2.1.14",
   "title": "Subfield Test.",
   "body": " Subfield Test   Let be a field and be a subset of such that:        For any , we have . (Closed under subtraction)    For any , we have . (Closed under division)   Then is a field under the addition and multiplication in . In particular, is a subfield of .   "
 },
@@ -1292,27 +1337,18 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_fields.html#subsec-subfieldsAndExtensions-7",
   "type": "Proof",
-  "number": "2.1.5.1",
+  "number": "2.1.6.1",
   "title": "",
   "body": " We check all of the axioms in . Since is closed under subtraction, . Since and is closed under subtraction, we have for any . Thus is closed under additive inverses. Since is closed under additive inverses and subtraction we have for any . Thus is closed under addition.  We now turn to the associativity and commutative properties. For any we know . Since addition in is associative, we know . Thus addition in is associative. We say it is inherited from . Similarly addition in is commutative, is the additive identity, multiplication is associative and commutative, is the multiplicative identity, and the distributive laws hold.  Lastly, since is closed under division and , for any we have and so the multiplicative inverse of is in . Thus is closed under taking multiplicative inverses. This completes the checks of each of the 10 axioms.  "
 },
 {
-  "id": "subsec-subfieldsAndExtensions-8",
+  "id": "ex_qAdjoinNegative5",
   "level": "2",
-  "url": "sec_fields.html#subsec-subfieldsAndExtensions-8",
-  "type": "Investigation",
-  "number": "2.1.5",
-  "title": "Quadratic Extensions of the Rationals.",
-  "body": " Quadratic Extensions of the Rationals   Suppose is any rational number such that . Define the set of rationals adjoin  by: This is a subset of . We claim that is a subfield of    "
-},
-{
-  "id": "subsec-subfieldsAndExtensions-9",
-  "level": "2",
-  "url": "sec_fields.html#subsec-subfieldsAndExtensions-9",
-  "type": "Investigation",
-  "number": "2.1.6",
-  "title": "",
-  "body": "  For which is a field? Compute some examples, form a conjecture, and prove your conjecture.   "
+  "url": "sec_fields.html#ex_qAdjoinNegative5",
+  "type": "Example",
+  "number": "2.1.15",
+  "title": "Adjoining <span class=\"process-math\">\\(\\sqrt{-5}\\)<\/span> to the Rationals.",
+  "body": " Adjoining to the Rationals   Define the set of rationals adjoin  by: This is a subset of . We claim that is a subfield of   We apply the . In particular, and the latter is a field. We first show that but this is just the element .  We now show closure under subtraction. Take , then Since , we conclude that is closed under subtraction.  We now show closure under division. Suppose . Writing , we know that which we can recombine the and : Note that would say which is absurd so the inverse is well-defined.  Now we divide: and since is a field it is closed under arithmetic. In particular . Thus is closed under division.  We conclude, by the Subfield Test, that is a subfield of .   "
 },
 {
   "id": "sec_rings",
@@ -1321,7 +1357,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Rings",
-  "body": " Rings   Guiding Questions   In this section, we'll seek to answer the questions:    What are rings and how do they relate to fields?  What are subrings, and how can we tell if a given subset of a ring is a subring?     In the previous section, we observed that many familiar number systems are fields but that some are not. As we will see, these non-fields are often more structurally interesting, at least from the perspective of factorization. In this section, we explore them in more detail. We start that exploration with a rigorous definition of polynomials and their arithmetic operations.    Integral Polynomials    A polynomial in with coefficients in is an expression of the form , where and . We will sometimes omit the function notation and denote simply by . We call the degree of the polynomial , denoted , and the coefficients of the polynomial. The coefficient is known as the leading coefficient of , and is the leading term of . The set of all integral polynomials is:     We know from our experience with polynomials in calculus and other courses that when we add two polynomials we again get a polynomial. Also when we multiply two polynomials we again get a polynomial. However, in order to show that addition and multiplication are well-defined operations on , they must first be defined!  This is easier said than done. Let's remind ourselves with an example that addition of polynomials is combine like terms . For example: Let's do this computation slightly differently: Notice, that to properly combine like terms we need to artificially add 0's. This is a mental trick we tacitly do when we compute anyways but this idea of extending a polynomial by 0 is crucial to defining the addition and multiplication operations.   Alternatives to Extension by 0  An alternative (more rigorous) way of defining addition and multiplication is to not use the variable at all. But rather to think of polynomials as defined by their coefficients. In this case, we define a polynomial as a list of integers (indexed by ): such that only finitely many of the entries are non-zero. Or equivalently, that there exists such that for all .     Given two polynomials , we define their sum as follows. Write If , we extend by 0: where . If , we extend by 0: where . Then     The extra effort we've put in to defining polynomial addition will simplify proofs as the following proposition shows.    Addition of integral polynomials is commutative. That is, for any , we have      Suppose . Possibly by extending by 0, we can assume Then    Notice that in the proof of we did not need to go into cases based off of if the degree of is greater than or less than the degree of .    Mimic the proof of to prove that addition of integral polynomials is associative.      Rings    In the following table, fill in a Y if the set has the property; fill in a N if it does not.   A list of properties and sets.                                           Closure under +                           Closure under                           is associative                           is associative                           + is commutative                           is commutative                           distributes over +                           There is an additive identity                           All elements have additive inverses                           There is a multiplicative identity                           All nonzero elements have mult. inverses                                Which of the field axioms in hold for , where is a field, and which fail to hold in general?    All the axioms hold, except F8. For instance, there is no polynomial for which .    As a result of the answer to and the completed Table , we make the following definition.   ring  unity   A ring  is a nonempty set, together with binary operations and , denoted , and satisfying the following axioms.   Given any , . (Associativity of addition)    Given any , . (Commutativity of addition)    There exists an element such that for all , . (Additive identity)    Given any there exists a such that . (Additive inverses)    Given any , . (Associativity of multiplication)    There exists an element , such that for all . (Multiplicative identity)    For all , . (Left-distributive property)    For all , . (Right-distributive property)   As with fields, when the ring is clear from context, we will often write in place of and in place of . The element is also referred to as the unity .     Non-Unital Rings  Most rings of interest in modern algebra, particularly commutative algebra, have a multiplicative identity. Algebraic structures that satisfy all the ring axioms except for the multiplicative identity are called non-unital rings and are sometimes referred to as rngs (without the i).     Compare and contrast Definitions and . What are the similarities? What are the differences?    While rings do not enjoy all the properties of fields, they are incredibly useful even in applied mathematics (see, e.g., for one recent example).    commutative ring  A ring is said to be commutative if, for all , .      Consider the sets given in Table . Which are rings? Which are commutative rings?      Which properties of fields in Theorem hold for (commutative) rings?      Are all rings fields? Are all fields rings? Justify.     Emmy Noether     Portrait of Emmy Noether   In the 1920s, Emmy Noether was the first to explicitly describe the ring axioms as we know them today, and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra, number theory, and geometry, including the (see for more on the historical development of the proof of Fermat's Last Theorem). Most modern definitions of ring agree with our Definition and allow for rings with noncommutative multiplication.   The following theorem states that the set of polynomials with coefficients in a ring is itself a ring under the usual operations of polynomial addition of like terms, and multiplication via distribution. The proof is not tricky, but a rigorous justification (especially of, e.g., the associativity of polynomial multiplication) is tedious, and thus is omitted.   Theorem   If is a (commutative) ring , then is a (commutative) ring .     TBD.     Subrings: New Rings from Old   subring  overring   Let be a ring and let . If is itself a ring under and , we say is a subring of . In this case, is often called an overring of .    The following theorem provides a easy-to-apply test to check if a given subset of a ring is in fact a subring of .   subring test   Let be a ring and a subset of . Then is a subring if and only if:    ;     is closed under multiplication; and     is closed under subtraction.       Suppose and is closed under multiplication and subtraction. We check each of the axioms in . Since and is closed under subtraction we have . For any , we know that so that Thus and are the additive and multiplicative identities, respectively, in .  For any , we know that . Thus is closed under additive inverses. If , then so that is closed under addition.  For any triple of elements , we know so that and . Thus associativity and commutativity of addition are inherited from . Similarly, , , and . That is, inherits associativity of multiplication as well as the left- and right-distributive properties from .  We conclude that is a ring under the multiplication and addition from .      Determine whether the following rings are subrings of the given rings .    ,      ,      is any ring,      ,            Units and Associates in a Ring   unit  associates   Let be a ring and let be nonzero. If there is a such that , we say is unit of . We denote the set of units of by . We say are associates if there exists some such that .      Explicitly describe the set . What are the associates of 7 in ?    In other words, a unit in a ring is a nonzero element with a multiplicative inverse. The existence of units is the primary difference between fields and commutative rings: in a field, all nonzero elements are units, while in a commutative ring, no nonzero elements need be units, as demonstrates.    A commutative ring in which every nonzero element is a unit is a field.     Compare the axioms for a commutative ring and a field. The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.     C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes , Bull. Math. Bio. 75 (2013), 1571-1611, DOI 10.1007\/s11538-013-9860-3    "
+  "body": " Rings   Guiding Questions   In this section, we'll seek to answer the questions:    What are rings and how do they relate to fields?  What are subrings, and how can we tell if a given subset of a ring is a subring?     In the previous section, we observed that many familiar number systems are fields but that some are not. As we will see, these non-fields are often more structurally interesting, at least from the perspective of factorization. In this section, we explore them in more detail. We start that exploration with a rigorous definition of polynomials and their arithmetic operations.    Integral Polynomials    A polynomial in with coefficients in is an expression of the form , where and . We will sometimes omit the function notation and denote simply by . We call the degree of the polynomial , denoted , and the coefficients of the polynomial. The coefficient is known as the leading coefficient of , and is the leading term of . The set of all integral polynomials is: Lastly, two polynomials are equal if and only if they have the same coefficients.    We know from our experience with polynomials in calculus and other courses that when we add two polynomials we again get a polynomial. Also when we multiply two polynomials we again get a polynomial. However, in order to show that addition and multiplication are well-defined operations on , they must first be defined!  This is easier said than done. Let's remind ourselves with an example that addition of polynomials is combine like terms . For example: Let's do this computation slightly differently: Notice, that to properly combine like terms we need to artificially add 0's. This is a mental trick we tacitly do when we compute anyways but this idea of extending a polynomial by 0 is crucial to defining the addition and multiplication operations.   Alternatives to Extension by 0  An alternative (more rigorous) way of defining addition and multiplication is to not use the variable at all. But rather to think of polynomials as defined by their coefficients. In this case, we define a polynomial as a list of integers (indexed by ): such that only finitely many of the entries are non-zero. Or equivalently, that there exists such that for all .     Given two polynomials , we define their sum as follows. Write If , we extend by 0: where . If , we extend by 0: where . Then     The extra effort we've put in to defining polynomial addition will simplify proofs as the following proposition shows.    Addition of integral polynomials is commutative. That is, for any , we have      Suppose . Possibly by extending by 0, we can assume Then    Notice that in the proof of we did not need to go into cases based off of if the degree of is greater than or less than the degree of .    Mimic the proof of to prove that addition of integral polynomials is associative.    We now handle polynomial multiplication. We first recall how polynomial multiplication works with the goal of writing a definition down.    Consider the integral polynomials and . Let's compute their product using distribution:     In particular, to compute the produce we needed to be able to: compute all pairwise products between terms of and terms of and then combine like terms. The following definition will be a formalization of this and in particular is somewhat involved due to the nature of poynomial multiplication.    Given two polynomials , we define their sum as follows. Write Extend both and by so that: where . Then where and where     As was the case with polynomial addition, this definition is aimed to make proving statements about polynomial muliplication easier.    Multplication of integral polynomials is commutative. That is, for any , we have .    Take of degrees , respectively. Extend both by zero so that where and .  Then where We also have where We need to show .  To that end, recall that addition in is commutative and multiplication is commutative too: Since the coefficients of and agreee they are equal polynomials.    The preceeding proof was necessarily long and somewhat complicated because polynomial multiplication is long and complicated. It's also worth noting that we very much relied on arithmetic properties of , particular commutative multiplication.  We leave our discussion of integral polynomials to introduce the main course: rings . We will then return to them as important examples or rings.    Rings   ring  unity   A ring  is a nonempty set, together with binary operations and , denoted , and satisfying the following axioms.   Given any , . (Associativity of addition)    Given any , . (Commutativity of addition)    There exists an element such that for all , . (Additive identity)    Given any there exists a such that . (Additive inverses)    Given any , . (Associativity of multiplication)    There exists an element , such that for all . (Multiplicative identity)    For all , . (Left-distributive property)    For all , . (Right-distributive property)   As with fields, when the ring is clear from context, we will often write in place of and in place of . The element is also referred to as the unity .     Non-Unital Rings  Most rings of interest in modern algebra, particularly commutative algebra, have a multiplicative identity. Algebraic structures that satisfy all the ring axioms except for the multiplicative identity are called non-unital rings and are sometimes referred to as rngs (without the i).     Compare and contrast Definitions and . What are the similarities? What are the differences?    While rings do not enjoy all the properties of fields, they are incredibly useful even in applied mathematics (see, e.g., for one recent example).    commutative ring  A ring is said to be commutative if, for all , .      The integers form a ring. We have actually assumed all the ring axioms for the majority of this text and will continue to assume them. A proof of the ring axioms requires a deeper dive on the natural numbers and is more suited to an introduction to proof course. Nevertheless, we will continue to freely use that is a commutative ring. The unity is and the additive identity is .      All fields are rings. Fields satisfy all eight rings axioms plus an additional two: commutative multiplication and every non-zero element has a multiplicative inverse.    We now return to polynomials. First, we will define polynomials over general rings.    Let be a ring. A polynomial in with coefficients in is an expression of the form , where and . We will sometimes omit the function notation and denote simply by . The set of all polynomials over is: The general definitions of equality, degree, terms, coefficients, extension by 0, addition, and multiplication carry over directly to polynomials over .    Unlike fields, rings need not be commutative. In fact, an important class of examples of non-commutative rings are matrix rings. We'll see a first example in .     Which properties of fields in Theorem hold for (commutative) rings?      Are all rings fields? Are all fields rings? Justify.     Emmy Noether     Portrait of Emmy Noether   In the 1920s, Emmy Noether was the first to explicitly describe the ring axioms as we know them today, and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra, number theory, and geometry, including the (see for more on the historical development of the proof of Fermat's Last Theorem). Most modern definitions of ring agree with our Definition and allow for rings with noncommutative multiplication.   The following theorem states that the set of polynomials with coefficients in a ring is itself a ring under the usual operations of polynomial addition of like terms, and multiplication via distribution. The proof is not tricky, but a rigorous justification (especially of, e.g., the associativity of polynomial multiplication) is tedious, and thus is omitted.   Theorem   If is a (commutative) ring, then is a (commutative) ring.    As in the proof of , we see that if is a ring and is commutative, then must also be commutative. The proof carries over mutatis mutandis .  To see that is a ring, we need to check all eight axioms. Before we do that, recall in that we have already seen polynomial addition is commutative provided the addition of coefficients is commutative. That proof therefore carries over mutatis mutandis .  We check associativity. Take and, by extending by 0, we can assume where for . Then the coefficient of in is . The coefficient of in is . Since is a ring and addition is associative in we have . Since the coefficients of and are equal, they are equal polynomials.  We claim is the additive identity. Take and write Then extend by zero: The sum is then: as is the additive identity in so that for all . Similarly, .  For additive inverses, suppose is as before. Then define by: where is the additive inverse of the coefficient in . Then Similarly .  The proof that multiplication is associative is particularly notationally dense and we leave it as an exercise. For the multiplicative identity, set . Take a polynomial as before. We extend by zero via: where and for . Then the product where However, for so for we have by Exercise???? In particular, . Since the coefficients of and are equal, the polynomials are equal: . Similarly .  The remaining two proofs are left- and right-distributive properties. As they are similar, we only prove the left-distributive property. TBD.    The preceeding theorem says that whenever we have a ring, polynomials with coefficients in that ring again form a ring. In particular, if is a ring, then so is , and hence so is and so on. This leads us to the corollary:    Let be a (commutative) ring and be indeterminates. Then the set of polynomials in with coefficients in , , is a (commutative) ring.    We proceed by induction. The base case is . This is the content of .  For the inductive step, suppose is a (commutative) ring. By , is again a (commutative) ring. But the latter is the .     We now have some great examples of commutative rings. Namely polynomial rings in some number of variables over any of or . As we have yet to see an example of a non-commutative ring we remedy this now.   Square Matrices   Consider the set of square matrices over (or whatever ring or field you like to work with). We recall matrix addition and multiplication: and   In Exercise???? you will check this is a ring. We show that multiplication is not commutative. To that end, consider: Then In particular, and so matrix multiplication is not commutative.    In the previous example, we observed that matrix multiplication failed to be commutative for matrices with real entries. What about for entries in a general ring? If you review that example, you will notice the only reason the products did not agree is because in . The next example shows that the multiplicative identity and additive identity sometimes agree.   The Zero Ring   Let . That is, a set with one element. Define addition and multiplication by and . We claim that addition and multiplication define a ring structure on .  Almost all of the checks are straightforward. For example, to check associativity of addition we only have one element so we just check . But there is only one thing both sides can be: . So addition is associative.  The only property that warrants inspection is the multiplicative identity. We claim that in this ring . Indeed, we need to show that for every that . But there's only element to check this on: where it is true.  We conclude that the zero ring is a ring!      Subrings: New Rings from Old   subring  overring   Let be a ring and let . If is itself a ring under and , we say is a subring of . In this case, is often called an overring of .    The following theorem provides a easy-to-apply test to check if a given subset of a ring is in fact a subring of .   Subring Test  subring test   Let be a ring and a subset of . Then is a subring if and only if:    ;     is closed under multiplication; and     is closed under subtraction.       Suppose and is closed under multiplication and subtraction. We check each of the axioms in . Since and is closed under subtraction we have . For any , we know that so that Thus and are the additive and multiplicative identities, respectively, in .  For any , we know that . Thus is closed under additive inverses. If , then so that is closed under addition.  For any triple of elements , we know so that and . Thus associativity and commutativity of addition are inherited from . Similarly, , , and . That is, inherits associativity of multiplication as well as the left- and right-distributive properties from .  We conclude that is a ring under the multiplication and addition from .      In , we saw that was a field and so it is a commutative ring. Let's define a subset of this field by taking those elements with integral real and imaginary part: We claim that is a subring of . To that end we apply the subring test. That is, , it is closed under subtraction and multiplication.  We see that and so our subset has the multiplicative identity.  For closure under subtraction, take . Then and . We conclude is closed under subtraction.  For closure under multiplication we compute: and again .  By the , we conclude is a subring of . In particular, it is a ring.      Determine whether the following rings are subrings of the given rings .    ,      ,      is any ring,      ,            Units and Associates in a Ring   unit  associates   Let be a ring and let be nonzero. If there is a such that , we say is unit of . We denote the set of units of by . We say are associates if there exists some such that .      Explicitly describe the set . What are the associates of 7 in ?    In other words, a unit in a ring is a nonzero element with a multiplicative inverse. The existence of units is the primary difference between fields and commutative rings: in a field, all nonzero elements are units, while in a commutative ring, no nonzero elements need be units, as demonstrates.    We describe the units in . Notice that for the leading coefficient of is       A commutative ring in which every nonzero element is a unit is a field.     Compare the axioms for a commutative ring and a field. The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.     C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes , Bull. Math. Bio. 75 (2013), 1571-1611, DOI 10.1007\/s11538-013-9860-3    "
 },
 {
   "id": "obj_rings",
@@ -1339,7 +1375,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "2.2.1",
   "title": "",
-  "body": "  A polynomial in with coefficients in is an expression of the form , where and . We will sometimes omit the function notation and denote simply by . We call the degree of the polynomial , denoted , and the coefficients of the polynomial. The coefficient is known as the leading coefficient of , and is the leading term of . The set of all integral polynomials is:    "
+  "body": "  A polynomial in with coefficients in is an expression of the form , where and . We will sometimes omit the function notation and denote simply by . We call the degree of the polynomial , denoted , and the coefficients of the polynomial. The coefficient is known as the leading coefficient of , and is the leading term of . The set of all integral polynomials is: Lastly, two polynomials are equal if and only if they have the same coefficients.   "
 },
 {
   "id": "def_polynomialAddition",
@@ -1378,83 +1414,110 @@ var ptx_lunr_docs = [
   "body": "  Mimic the proof of to prove that addition of integral polynomials is associative.   "
 },
 {
-  "id": "ssec_rings-2",
+  "id": "ssec_polynomialRing-13",
   "level": "2",
-  "url": "sec_rings.html#ssec_rings-2",
-  "type": "Exploration",
-  "number": "2.2.2",
+  "url": "sec_rings.html#ssec_polynomialRing-13",
+  "type": "Example",
+  "number": "2.2.4",
   "title": "",
-  "body": "  In the following table, fill in a Y if the set has the property; fill in a N if it does not.   A list of properties and sets.                                           Closure under +                           Closure under                           is associative                           is associative                           + is commutative                           is commutative                           distributes over +                           There is an additive identity                           All elements have additive inverses                           There is a multiplicative identity                           All nonzero elements have mult. inverses                             "
+  "body": "  Consider the integral polynomials and . Let's compute their product using distribution:    "
 },
 {
-  "id": "q_fieldaxiomspolyring",
+  "id": "def_polynomialMultiplication",
   "level": "2",
-  "url": "sec_rings.html#q_fieldaxiomspolyring",
-  "type": "Exploration",
-  "number": "2.2.3",
+  "url": "sec_rings.html#def_polynomialMultiplication",
+  "type": "Definition",
+  "number": "2.2.5",
   "title": "",
-  "body": "  Which of the field axioms in hold for , where is a field, and which fail to hold in general?    All the axioms hold, except F8. For instance, there is no polynomial for which .   "
+  "body": "  Given two polynomials , we define their sum as follows. Write Extend both and by so that: where . Then where and where    "
+},
+{
+  "id": "prop_polynomialMultiplicationIsCommutative",
+  "level": "2",
+  "url": "sec_rings.html#prop_polynomialMultiplicationIsCommutative",
+  "type": "Proposition",
+  "number": "2.2.6",
+  "title": "",
+  "body": "  Multplication of integral polynomials is commutative. That is, for any , we have .    Take of degrees , respectively. Extend both by zero so that where and .  Then where We also have where We need to show .  To that end, recall that addition in is commutative and multiplication is commutative too: Since the coefficients of and agreee they are equal polynomials.   "
 },
 {
   "id": "def_ring",
   "level": "2",
   "url": "sec_rings.html#def_ring",
   "type": "Definition",
-  "number": "2.2.5",
+  "number": "2.2.7",
   "title": "",
   "body": " ring  unity   A ring  is a nonempty set, together with binary operations and , denoted , and satisfying the following axioms.   Given any , . (Associativity of addition)    Given any , . (Commutativity of addition)    There exists an element such that for all , . (Additive identity)    Given any there exists a such that . (Additive inverses)    Given any , . (Associativity of multiplication)    There exists an element , such that for all . (Multiplicative identity)    For all , . (Left-distributive property)    For all , . (Right-distributive property)   As with fields, when the ring is clear from context, we will often write in place of and in place of . The element is also referred to as the unity .   "
+},
+{
+  "id": "ssec_rings-4",
+  "level": "2",
+  "url": "sec_rings.html#ssec_rings-4",
+  "type": "Investigation",
+  "number": "2.2.2",
+  "title": "",
+  "body": "  Compare and contrast Definitions and . What are the similarities? What are the differences?   "
+},
+{
+  "id": "ssec_rings-6",
+  "level": "2",
+  "url": "sec_rings.html#ssec_rings-6",
+  "type": "Definition",
+  "number": "2.2.8",
+  "title": "",
+  "body": "  commutative ring  A ring is said to be commutative if, for all , .   "
 },
 {
   "id": "ssec_rings-7",
   "level": "2",
   "url": "sec_rings.html#ssec_rings-7",
-  "type": "Investigation",
-  "number": "2.2.4",
+  "type": "Example",
+  "number": "2.2.9",
   "title": "",
-  "body": "  Compare and contrast Definitions and . What are the similarities? What are the differences?   "
+  "body": "  The integers form a ring. We have actually assumed all the ring axioms for the majority of this text and will continue to assume them. A proof of the ring axioms requires a deeper dive on the natural numbers and is more suited to an introduction to proof course. Nevertheless, we will continue to freely use that is a commutative ring. The unity is and the additive identity is .   "
 },
 {
-  "id": "ssec_rings-9",
+  "id": "ssec_rings-8",
   "level": "2",
-  "url": "sec_rings.html#ssec_rings-9",
+  "url": "sec_rings.html#ssec_rings-8",
+  "type": "Example",
+  "number": "2.2.10",
+  "title": "",
+  "body": "  All fields are rings. Fields satisfy all eight rings axioms plus an additional two: commutative multiplication and every non-zero element has a multiplicative inverse.   "
+},
+{
+  "id": "def_polynomialGeneralRing",
+  "level": "2",
+  "url": "sec_rings.html#def_polynomialGeneralRing",
   "type": "Definition",
-  "number": "2.2.6",
+  "number": "2.2.11",
   "title": "",
-  "body": "  commutative ring  A ring is said to be commutative if, for all , .   "
-},
-{
-  "id": "expl-rings-examples",
-  "level": "2",
-  "url": "sec_rings.html#expl-rings-examples",
-  "type": "Exploration",
-  "number": "2.2.5",
-  "title": "",
-  "body": "  Consider the sets given in Table . Which are rings? Which are commutative rings?   "
-},
-{
-  "id": "ssec_rings-11",
-  "level": "2",
-  "url": "sec_rings.html#ssec_rings-11",
-  "type": "Exploration",
-  "number": "2.2.6",
-  "title": "",
-  "body": "  Which properties of fields in Theorem hold for (commutative) rings?   "
+  "body": "  Let be a ring. A polynomial in with coefficients in is an expression of the form , where and . We will sometimes omit the function notation and denote simply by . The set of all polynomials over is: The general definitions of equality, degree, terms, coefficients, extension by 0, addition, and multiplication carry over directly to polynomials over .   "
 },
 {
   "id": "ssec_rings-12",
   "level": "2",
   "url": "sec_rings.html#ssec_rings-12",
+  "type": "Exploration",
+  "number": "2.2.3",
+  "title": "",
+  "body": "  Which properties of fields in Theorem hold for (commutative) rings?   "
+},
+{
+  "id": "ssec_rings-13",
+  "level": "2",
+  "url": "sec_rings.html#ssec_rings-13",
   "type": "Investigation",
-  "number": "2.2.7",
+  "number": "2.2.4",
   "title": "",
   "body": "  Are all rings fields? Are all fields rings? Justify.   "
 },
 {
-  "id": "ssec_rings-13-2-1",
+  "id": "ssec_rings-14-2-1",
   "level": "2",
-  "url": "sec_rings.html#ssec_rings-13-2-1",
+  "url": "sec_rings.html#ssec_rings-14-2-1",
   "type": "Figure",
-  "number": "2.2.7",
+  "number": "2.2.12",
   "title": "",
   "body": "  Portrait of Emmy Noether   "
 },
@@ -1463,25 +1526,43 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#thm_polynomialsFormRing",
   "type": "Theorem",
-  "number": "2.2.8",
+  "number": "2.2.13",
   "title": "Theorem.",
-  "body": " Theorem   If is a (commutative) ring , then is a (commutative) ring .   "
+  "body": " Theorem   If is a (commutative) ring, then is a (commutative) ring.    As in the proof of , we see that if is a ring and is commutative, then must also be commutative. The proof carries over mutatis mutandis .  To see that is a ring, we need to check all eight axioms. Before we do that, recall in that we have already seen polynomial addition is commutative provided the addition of coefficients is commutative. That proof therefore carries over mutatis mutandis .  We check associativity. Take and, by extending by 0, we can assume where for . Then the coefficient of in is . The coefficient of in is . Since is a ring and addition is associative in we have . Since the coefficients of and are equal, they are equal polynomials.  We claim is the additive identity. Take and write Then extend by zero: The sum is then: as is the additive identity in so that for all . Similarly, .  For additive inverses, suppose is as before. Then define by: where is the additive inverse of the coefficient in . Then Similarly .  The proof that multiplication is associative is particularly notationally dense and we leave it as an exercise. For the multiplicative identity, set . Take a polynomial as before. We extend by zero via: where and for . Then the product where However, for so for we have by Exercise???? In particular, . Since the coefficients of and are equal, the polynomials are equal: . Similarly .  The remaining two proofs are left- and right-distributive properties. As they are similar, we only prove the left-distributive property. TBD.   "
 },
 {
-  "id": "ssec_rings-16",
+  "id": "cor_multivariatePolynomialRingIsARing",
   "level": "2",
-  "url": "sec_rings.html#ssec_rings-16",
-  "type": "Proof",
-  "number": "2.2.2.1",
+  "url": "sec_rings.html#cor_multivariatePolynomialRingIsARing",
+  "type": "Corollary",
+  "number": "2.2.14",
   "title": "",
-  "body": " TBD.  "
+  "body": "  Let be a (commutative) ring and be indeterminates. Then the set of polynomials in with coefficients in , , is a (commutative) ring.    We proceed by induction. The base case is . This is the content of .  For the inductive step, suppose is a (commutative) ring. By , is again a (commutative) ring. But the latter is the .   "
+},
+{
+  "id": "ex_M2R",
+  "level": "2",
+  "url": "sec_rings.html#ex_M2R",
+  "type": "Example",
+  "number": "2.2.15",
+  "title": "Square Matrices.",
+  "body": " Square Matrices   Consider the set of square matrices over (or whatever ring or field you like to work with). We recall matrix addition and multiplication: and   In Exercise???? you will check this is a ring. We show that multiplication is not commutative. To that end, consider: Then In particular, and so matrix multiplication is not commutative.   "
+},
+{
+  "id": "ssec_rings-22",
+  "level": "2",
+  "url": "sec_rings.html#ssec_rings-22",
+  "type": "Example",
+  "number": "2.2.16",
+  "title": "The Zero Ring.",
+  "body": " The Zero Ring   Let . That is, a set with one element. Define addition and multiplication by and . We claim that addition and multiplication define a ring structure on .  Almost all of the checks are straightforward. For example, to check associativity of addition we only have one element so we just check . But there is only one thing both sides can be: . So addition is associative.  The only property that warrants inspection is the multiplicative identity. We claim that in this ring . Indeed, we need to show that for every that . But there's only element to check this on: where it is true.  We conclude that the zero ring is a ring!   "
 },
 {
   "id": "ssec_subrings-2",
   "level": "2",
   "url": "sec_rings.html#ssec_subrings-2",
   "type": "Definition",
-  "number": "2.2.9",
+  "number": "2.2.17",
   "title": "",
   "body": " subring  overring   Let be a ring and let . If is itself a ring under and , we say is a subring of . In this case, is often called an overring of .   "
 },
@@ -1490,16 +1571,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#thm_subringTest",
   "type": "Theorem",
-  "number": "2.2.10",
-  "title": "",
-  "body": " subring test   Let be a ring and a subset of . Then is a subring if and only if:    ;     is closed under multiplication; and     is closed under subtraction.       Suppose and is closed under multiplication and subtraction. We check each of the axioms in . Since and is closed under subtraction we have . For any , we know that so that Thus and are the additive and multiplicative identities, respectively, in .  For any , we know that . Thus is closed under additive inverses. If , then so that is closed under addition.  For any triple of elements , we know so that and . Thus associativity and commutativity of addition are inherited from . Similarly, , , and . That is, inherits associativity of multiplication as well as the left- and right-distributive properties from .  We conclude that is a ring under the multiplication and addition from .   "
+  "number": "2.2.18",
+  "title": "Subring Test.",
+  "body": " Subring Test  subring test   Let be a ring and a subset of . Then is a subring if and only if:    ;     is closed under multiplication; and     is closed under subtraction.       Suppose and is closed under multiplication and subtraction. We check each of the axioms in . Since and is closed under subtraction we have . For any , we know that so that Thus and are the additive and multiplicative identities, respectively, in .  For any , we know that . Thus is closed under additive inverses. If , then so that is closed under addition.  For any triple of elements , we know so that and . Thus associativity and commutativity of addition are inherited from . Similarly, , , and . That is, inherits associativity of multiplication as well as the left- and right-distributive properties from .  We conclude that is a ring under the multiplication and addition from .   "
 },
 {
   "id": "ssec_subrings-5",
   "level": "2",
   "url": "sec_rings.html#ssec_subrings-5",
+  "type": "Example",
+  "number": "2.2.19",
+  "title": "",
+  "body": "  In , we saw that was a field and so it is a commutative ring. Let's define a subset of this field by taking those elements with integral real and imaginary part: We claim that is a subring of . To that end we apply the subring test. That is, , it is closed under subtraction and multiplication.  We see that and so our subset has the multiplicative identity.  For closure under subtraction, take . Then and . We conclude is closed under subtraction.  For closure under multiplication we compute: and again .  By the , we conclude is a subring of . In particular, it is a ring.   "
+},
+{
+  "id": "ssec_subrings-6",
+  "level": "2",
+  "url": "sec_rings.html#ssec_subrings-6",
   "type": "Activity",
-  "number": "2.2.8",
+  "number": "2.2.5",
   "title": "",
   "body": "  Determine whether the following rings are subrings of the given rings .    ,      ,      is any ring,      ,         "
 },
@@ -1508,7 +1598,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#def_unit",
   "type": "Definition",
-  "number": "2.2.11",
+  "number": "2.2.20",
   "title": "",
   "body": " unit  associates   Let be a ring and let be nonzero. If there is a such that , we say is unit of . We denote the set of units of by . We say are associates if there exists some such that .   "
 },
@@ -1517,23 +1607,32 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_rings.html#ssec_unitsAndAssociates-3",
   "type": "Exploration",
-  "number": "2.2.9",
+  "number": "2.2.6",
   "title": "",
   "body": "  Explicitly describe the set . What are the associates of 7 in ?   "
+},
+{
+  "id": "ssec_unitsAndAssociates-5",
+  "level": "2",
+  "url": "sec_rings.html#ssec_unitsAndAssociates-5",
+  "type": "Example",
+  "number": "2.2.21",
+  "title": "",
+  "body": "  We describe the units in . Notice that for the leading coefficient of is    "
 },
 {
   "id": "thm-cri-field",
   "level": "2",
   "url": "sec_rings.html#thm-cri-field",
   "type": "Theorem",
-  "number": "2.2.12",
+  "number": "2.2.22",
   "title": "",
   "body": "  A commutative ring in which every nonzero element is a unit is a field.   "
 },
 {
-  "id": "ssec_unitsAndAssociates-6",
+  "id": "ssec_unitsAndAssociates-7",
   "level": "2",
-  "url": "sec_rings.html#ssec_unitsAndAssociates-6",
+  "url": "sec_rings.html#ssec_unitsAndAssociates-7",
   "type": "Proof",
   "number": "2.2.4.1",
   "title": "",
@@ -1546,7 +1645,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "Integral Domains",
-  "body": " Integral Domains   Guiding Questions   In this section, we'll seek to answer the questions:    What are zero divisors?  What are integral domains, and how do they relate to rings and fields?     In the realm of ring theory, certain rings behave similarly to : they are commutative and when we multiply any two non-zero integers it remains non-zero. Either (or both!) of these two properties are violated in general rings. We've already encountered commutative rings and so we begin by formalizing the latter property.    Zero Divisors  One of the interesting side effects of our definition of ring is that it allows for behavior that may at first appear unintuitive or downright weird.   zero divisor   A zero divisor in a ring is a nonzero element such that there is a nonzero with or .    Notice that the reason the idea of zero divisors at first appears weird is that they are not something we encounter when working with our familiar sets of numbers, such as or . In fact, we specifically use the fact that there are no zero divisors in our familiar numbers systems to solve equations in high school algebra (e.g., if , then or ). The lack of zero divisors is one of the properties that does not persist in our abstraction from the integers to rings in general.    Find, with justification, all of the zero divisors in and . Make and prove a conjecture about the existence of zero divisors in , where .    The zero divisors in are . There are no zero divisors in .   conjecture.  is a zero divisor if and only if .      Are there any other rings in which you've seen zero divisors? Recall your answers to .    Matrix rings, if students have had linear algebra (and\/or completed ). Otherwise, this may be a new concept.      Let be a ring and suppose such that is a zero divisor. Then either or is a zero divisor.     Let such that is a zero divisor. Then (else ). Since is a zero divisor, there is some such that . If , then is a zero divisor, as . On the other hand, if , then is a zero divisor, as .   In we defined units. Units are somehow opposite zero-divisors as the following theorem shows.    Let be a ring and . Then is not a zero divisor.     Let and suppose is a zero divisor. Then there is some such that . But then . \\Lightning     How can we reinterpret in light of our new language of units and zero divisors? State a theorem that uses this new language.    Answers may vary, but how about this: Let such that . Then if is not a zero divisor.      Integral Domains  While non-commutative rings and zero divisors are of interest to mathematicians, we will focus put our focus on commutative rings without zero divisors for now. As these rings share many properties of the integers, they are known as integral domains .   integral domain  domain   A commutative ring is an integral domain , or just domain , if has no zero divisors.    The next activities and theorems help us identify examples of domains, as well as situate the notion of a domain in its proper place relative to fields and rings in general.    Which of the following rings are domains? Justify your answers.                                 Every field is a domain.     If is a field, the nonzero elements of are units, which cannot be zero divisors by . Thus, has no zero divisors.     Let and . Then is a field if and only if is a domain.     The forward direction holds by Theorem .  For the reverse, assume is a domain. Then has no zero divisors. If is composite, there exist integers satisfying such that . Then in , but . Thus, may not be composite, and is therefore prime. By an earlier theorem, is a field.     If is a domain and is a subring of , then is a domain.     Any zero divisors in are also zero divisors in . Since has no zero divisors, neither does .   Note that the converse of is not true. Namely, the set of -matrices over , , is not a domain. Yet it contains a copy of as the scalar matrices . Since is a field, it is also a domain.    Fill in the following blanks in order of increasing generality with the words ring , integral domain , field , and commutative ring .  __________ __________ __________ __________      Polynomial Rings are Domains  We now show that the property of being a domain can be passed on to polynomial rings.    Suppose is a ring. Then is a domain if and only if is a domain.     For the forward direction, suppose that is a domain. Let and be nonzero polynomials in , where . Then the lowest-degree term in is . Since is a domain, , and thus is not the zero polynomial. Thus has no zero-divisors. Since is commutative, so is by . Thus is a domain as well.  For the reverse direction, suppose that is a domain. Then can be viewed as a subring of via constant polynomials. By , is a domain as well.     Is the converse of Theorem true? If so, give a short proof. If not, find a counterexample.    Yes. Apply Theorem .    Since every field is a domain, we have the following immediate corollary of .    Given a field , the set of polynomials is a domain.    When considering sets of polynomials, as we do in (particularly in ), the following results will be quite useful.    Let be a domain, and let be nonzero polynomials. Then .    Let the leading term of be and the leading term of be . Then the leading term of is . (Observe that since is a domain, .) Thus, .      Can the hypotheses of be relaxed? If so, provide more general hypotheses and adapt the proof. If not, give an illustrative example.    If we were to relax the property of a domain we have two choices: relax commutativity or relax zero-divisors. Relaxing commutativity means we are allowing for non-commutative coefficient rings, such as . Relaxing zero-divisors means allowing fro zero-divisors.  If we allow for zero-divisors, then the theorem fails: Let . Observe that , but has degree 1. This is because the leading coefficients are zero-divisors.  If we allow for non-commutative rings without zero-divisors (we have not encountered any of these yet), then the theorem remains true. Indeed, the leading coefficient of the product is the product of the leading coefficients. Since our ring has no zero-divisors, the same proof works!      Let be a domain. What are the units of ? Prove your answer.    The units are . Clearly, .  Suppose such that . Then . Thus , and consequently, .      C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes , Bull. Math. Bio. 75 (2013), 1571-1611, DOI 10.1007\/s11538-013-9860-3    "
+  "body": " Integral Domains   Guiding Questions   In this section, we'll seek to answer the questions:    What are zero divisors?  What are integral domains, and how do they relate to rings and fields?     In the realm of ring theory, certain rings behave similarly to : they are commutative and when we multiply any two non-zero integers it remains non-zero. Either (or both!) of these two properties are violated in general rings. We've already encountered commutative rings and so we begin by formalizing the latter property.    Zero Divisors  One of the interesting side effects of our definition of ring is that it allows for behavior that may at first appear unintuitive or downright weird.   zero divisor   A zero divisor in a ring is a nonzero element such that there is a nonzero with or .    Notice that the reason the idea of zero divisors at first appears weird is that they are not something we encounter when working with our familiar sets of numbers, such as or . In fact, we specifically use the fact that there are no zero divisors in our familiar numbers systems to solve equations in high school algebra (e.g., if , then or ). The lack of zero divisors is one of the properties that does not persist in our abstraction from the integers to rings in general.    Find, with justification, all of the zero divisors in and . Make and prove a conjecture about the existence of zero divisors in , where .    The zero divisors in are . There are no zero divisors in .   conjecture.  is a zero divisor if and only if .      Are there any other rings in which you've seen zero divisors? Recall your answers to .    Matrix rings, if students have had linear algebra (and\/or completed ). Otherwise, this may be a new concept.      Let be a ring and suppose such that is a zero divisor. Then either or is a zero divisor.     Let such that is a zero divisor. Then (else ). Since is a zero divisor, there is some such that . If , then is a zero divisor, as . On the other hand, if , then is a zero divisor, as .   In we defined units. Units are somehow opposite zero-divisors as the following theorem shows.    Let be a ring and . Then is not a zero divisor.     Let and suppose is a zero divisor. Then there is some such that . But then . \\Lightning     How can we reinterpret in light of our new language of units and zero divisors? State a theorem that uses this new language.    Answers may vary, but how about this: Let such that . Then if is not a zero divisor.      Integral Domains  While non-commutative rings and zero divisors are of interest to mathematicians, we will focus put our focus on commutative rings without zero divisors for now. As these rings share many properties of the integers, they are known as integral domains .   integral domain  domain   A non-zero commutative ring is an integral domain , or just domain , if has no zero divisors.    The next activities and theorems help us identify examples of domains, as well as situate the notion of a domain in its proper place relative to fields and rings in general.    Which of the following rings are domains? Justify your answers.                                 Every field is a domain.     If is a field, the nonzero elements of are units, which cannot be zero divisors by . Thus, has no zero divisors.     Let and . Then is a field if and only if is a domain.     The forward direction holds by Theorem .  For the reverse, assume is a domain. Then has no zero divisors. If is composite, there exist integers satisfying such that . Then in , but . Thus, may not be composite, and is therefore prime. By an earlier theorem, is a field.     If is a domain and is a subring of , then is a domain.     Any zero divisors in are also zero divisors in . Since has no zero divisors, neither does .   Note that the converse of is not true. Namely, the set of -matrices over , , is not a domain. Yet it contains a copy of as the scalar matrices . Since is a field, it is also a domain.    Fill in the following blanks in order of increasing generality with the words ring , integral domain , field , and commutative ring .  __________ __________ __________ __________      Polynomial Rings are Domains  We now show that the property of being a domain can be passed on to polynomial rings.    Suppose is a ring. Then is a domain if and only if is a domain.     For the forward direction, suppose that is a domain. Let and be nonzero polynomials in , where . Then the lowest-degree term in is . Since is a domain, , and thus is not the zero polynomial. Thus has no zero-divisors. Since is commutative, so is by . Thus is a domain as well.  For the reverse direction, suppose that is a domain. Then can be viewed as a subring of via constant polynomials. By , is a domain as well.     Is the converse of Theorem true? If so, give a short proof. If not, find a counterexample.    Yes. Apply Theorem .    Since every field is a domain, we have the following immediate corollary of .    Given a field , the set of polynomials is a domain.    When considering sets of polynomials, as we do in (particularly in ), the following results will be quite useful.    Let be a domain, and let be nonzero polynomials. Then .    Let the leading term of be and the leading term of be . Then the leading term of is . (Observe that since is a domain, .) Thus, .      Can the hypotheses of be relaxed? If so, provide more general hypotheses and adapt the proof. If not, give an illustrative example.    If we were to relax the property of a domain we have two choices: relax commutativity or relax zero-divisors. Relaxing commutativity means we are allowing for non-commutative coefficient rings, such as . Relaxing zero-divisors means allowing fro zero-divisors.  If we allow for zero-divisors, then the theorem fails: Let . Observe that , but has degree 1. This is because the leading coefficients are zero-divisors.  If we allow for non-commutative rings without zero-divisors (we have not encountered any of these yet), then the theorem remains true. Indeed, the leading coefficient of the product is the product of the leading coefficients. Since our ring has no zero-divisors, the same proof works!      Let be a domain. What are the units of ? Prove your answer.    The units are . Clearly, .  Suppose such that . Then . Thus , and consequently, .      C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes , Bull. Math. Bio. 75 (2013), 1571-1611, DOI 10.1007\/s11538-013-9860-3    "
 },
 {
   "id": "obj_integralDomains",
@@ -1645,7 +1744,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "2.3.4",
   "title": "",
-  "body": " integral domain  domain   A commutative ring is an integral domain , or just domain , if has no zero divisors.   "
+  "body": " integral domain  domain   A non-zero commutative ring is an integral domain , or just domain , if has no zero divisors.   "
 },
 {
   "id": "ssec_integralDomains-5",

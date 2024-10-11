@@ -176,12 +176,12 @@ window.MathJax = {
 #def_ring-3-1-6 { counter-set: def_ring-3-1-6 0; }
 #def_ring-3-1-6 > li::marker { content: ""counter(def_ring-3-1-6,decimal)"."; }
 #def_ring-3-1-6 > li { counter-increment: def_ring-3-1-6; }
-#thm_subringTest-2-1-5 { counter-set: thm_subringTest-2-1-5 0; }
-#thm_subringTest-2-1-5 > li::marker { content: ""counter(thm_subringTest-2-1-5,decimal)"."; }
-#thm_subringTest-2-1-5 > li { counter-increment: thm_subringTest-2-1-5; }
-#ssec_subrings-5-1-1-3 { counter-set: ssec_subrings-5-1-1-3 0; }
-#ssec_subrings-5-1-1-3 > li::marker { content: ""counter(ssec_subrings-5-1-1-3,decimal)"."; }
-#ssec_subrings-5-1-1-3 > li { counter-increment: ssec_subrings-5-1-1-3; }
+#thm_subringTest-3-1-5 { counter-set: thm_subringTest-3-1-5 0; }
+#thm_subringTest-3-1-5 > li::marker { content: ""counter(thm_subringTest-3-1-5,decimal)"."; }
+#thm_subringTest-3-1-5 > li { counter-increment: thm_subringTest-3-1-5; }
+#ssec_subrings-6-1-1-3 { counter-set: ssec_subrings-6-1-1-3 0; }
+#ssec_subrings-6-1-1-3 > li::marker { content: ""counter(ssec_subrings-6-1-1-3,decimal)"."; }
+#ssec_subrings-6-1-1-3 > li { counter-increment: ssec_subrings-6-1-1-3; }
 #ssec_integralDomains-5-1-1-1 { counter-set: ssec_integralDomains-5-1-1-1 0; }
 #ssec_integralDomains-5-1-1-1 > li::marker { content: ""counter(ssec_integralDomains-5-1-1-1,decimal)"."; }
 #ssec_integralDomains-5-1-1-1 > li { counter-increment: ssec_integralDomains-5-1-1-1; }
@@ -317,9 +317,10 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-numberSystems" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Number Systems</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#ssec_binaryOperations" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Binary Operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-fields" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Fields</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-propertiesOfFields" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Properties of Fields</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-subfieldsAndExtensions" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Subfields and Extensions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#ssec_fields" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#ssec_examplesOfFields" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Examples of Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-propertiesOfFields" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Properties of Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-subfieldsAndExtensions" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Subfields and Extensions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section active">
@@ -420,6 +421,7 @@ a_n\)</span> the <dfn class="terminology">coefficients</dfn> of the polynomial. 
 \Z[x] := \{a_0 + a_1 x + a_2 x + \cdots + a_n x^n\mid n\in \N_0, \ a_i\in \mathbb{Z}\}.
 \end{equation*}
 </div>
+<div class="para">Lastly, two polynomials are <em class="emphasis">equal</em> if and only if they have the same coefficients.</div>
 </div></article><div class="para" id="ssec_polynomialRing-3">We know from our experience with polynomials in calculus and other courses that when we add two polynomials we again get a polynomial. Also when we multiply two polynomials we again get a polynomial. However, in order to show that addition and multiplication are well-defined operations on <span class="process-math">\(\Z[x]\text{,}\)</span> they must first be defined!</div>
 <div class="para logical" id="ssec_polynomialRing-4">
 <div class="para">This is easier said than done. Let’s remind ourselves with an example that addition of polynomials is <em class="emphasis">combine like terms</em>. For example:</div>
@@ -492,10 +494,12 @@ q(x)\amp= b_0+b_1x+b_2x^2+\cdots + b_nx^n.
 <div class="para">Then</div>
 <div class="displaymath process-math" id="ssec_polynomialRing-9-1-3">
 \begin{align*}
-p(x)+q(x)\amp= (a_0+a_1x+a_2x^2+\cdots + a_nx^n) + (b_0+b_1x+b_2x^2+\cdots + b_nx^n)\\
+p(x)+q(x)\amp= (a_0+a_1x+a_2x^2+\cdots + a_nx^n) \\
+\amp+ (b_0+b_1x+b_2x^2+\cdots + b_nx^n)\\
 \amp= (a_0+b_0)+(a_1+b_1)x+(a_2+b_2)x^2+\cdots + (a_n+b_n)x^n \\
 \amp= (b_0+a_0)+(b_1+a_1)x+(b_2+a_2)x^2+\cdots + (b_n+a_n)x^n \\
-\amp= (b_0+b_1x+b_2x^2+\cdots + b_nx^n) + (a_0+a_1x+a_2x^2+\cdots + a_nx^n)\\
+\amp= (b_0+b_1x+b_2x^2+\cdots + b_nx^n) \\
+\amp+ (a_0+a_1x+a_2x^2+\cdots + a_nx^n)\\
 \amp = q(x)+p(x)
 \end{align*}
 </div>
@@ -504,351 +508,118 @@ p(x)+q(x)\amp= (a_0+a_1x+a_2x^2+\cdots + a_nx^n) + (b_0+b_1x+b_2x^2+\cdots + b_n
 <article class="exploration project-like" id="ssec_polynomialRing-11"><h4 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
 </h4>
-<div class="para" id="ssec_polynomialRing-11-1-1">Mimic the proof of <a href="sec_rings.html#prop_polynomialAdditionIsCommutative" class="xref" data-knowl="./knowl/xref/prop_polynomialAdditionIsCommutative.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.2.3">Proposition 2.2.3</a> to prove that addition of integral polynomials is associative.</div></article></section><section class="subsection" id="ssec_rings"><h3 class="heading hide-type">
+<div class="para" id="ssec_polynomialRing-11-1-1">Mimic the proof of <a href="sec_rings.html#prop_polynomialAdditionIsCommutative" class="xref" data-knowl="./knowl/xref/prop_polynomialAdditionIsCommutative.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.2.3">Proposition 2.2.3</a> to prove that addition of integral polynomials is associative.</div></article><div class="para" id="ssec_polynomialRing-12">We now handle polynomial multiplication. We first recall how polynomial multiplication works with the goal of writing a definition down.</div>
+<article class="example example-like" id="ssec_polynomialRing-13"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="ssec_polynomialRing-13-1-1">
+<div class="para">Consider the integral polynomials <span class="process-math">\(p(x) = 1+x+2x^2+3x^3\)</span> and <span class="process-math">\(q(x) = 3+2x+x^2\text{.}\)</span> Let’s compute their product using distribution:</div>
+<div class="displaymath process-math" id="ssec_polynomialRing-13-1-1-3">
+\begin{align*}
+p(x)\cdot q(x)\amp=(1+x+2x^2+3x^3)\cdot(3+2x+x^2) \\
+\amp= 3+2x+x^2 \\
+\amp+ 3x+2x^2+x^3 \\
+\amp+ 6x^2+4x^3+2x^4 \\
+\amp+ 9x^3+6x^4+3x^5 \\
+\amp=3+5x+7x^2+14x^3+8x^4+3x^5 
+\end{align*}
+</div>
+</div></article><div class="para" id="ssec_polynomialRing-14">In particular, to compute the produce we needed to be able to: compute all pairwise products between terms of <span class="process-math">\(p(x)\)</span> and terms of <span class="process-math">\(q(x)\)</span> and then combine like terms. The following definition will be a formalization of this and in particular is somewhat involved due to the nature of poynomial multiplication.</div>
+<article class="definition definition-like" id="def_polynomialMultiplication"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="def_polynomialMultiplication-1-1">
+<div class="para">Given two polynomials <span class="process-math">\(p(x),q(x)\in\Z[x]\text{,}\)</span> we define their sum <span class="process-math">\(p(x)+q(x)\in\Z[x]\)</span> as follows. Write</div>
+<div class="displaymath process-math" id="def_polynomialMultiplication-1-1-3">
+\begin{align*}
+p(x)\amp= a_0+a_1x+a_2x^2+\cdots + a_nx^n\\
+q(x)\amp= b_0+b_1x+b_2x^2+\cdots + b_mx^m.
+\end{align*}
+</div>
+<div class="para">Extend both <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\)</span> by <span class="process-math">\(0\)</span> so that:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(x) = a_0+a_1x+a_2x^2+\cdots + a_nx^n + a_{n+1}x^{n+1}+\cdots + a_{n+m}x^{n+m},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(a_{n+1} = \cdots = a_{n+m} = 0\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+q(x) = b_0+b_1x+b_2x^2+\cdots + b_mx^m + b_{m+1}x^{m+1}+\cdots + b_{m+n}x^{m+n}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(b_{m+1}=\cdots = b_{m+n} = 0\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(x)\cdot q(x) = c_0+c_1x+\cdots +c_ix^i+\cdots + c_{m+n}x^{n+m}
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math" id="def_polynomialMultiplication-1-1-12">
+\begin{align*}
+c_i \amp= \sum_{k=0}^ia_kb_{i-k}\\
+\amp= a_0b_i + a_1b_{i-1}+\cdots + a_{i-1}b_1 + a_ib_0.
+\end{align*}
+</div>
+</div></article><div class="para" id="ssec_polynomialRing-16">As was the case with polynomial addition, this definition is aimed to make proving statements about polynomial muliplication easier.</div>
+<article class="proposition theorem-like" id="prop_polynomialMultiplicationIsCommutative"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
+</h4>
+<div class="para" id="prop_polynomialMultiplicationIsCommutative-1-1">Multplication of integral polynomials is commutative. That is, for any <span class="process-math">\(p(x),q(x)\in\Z[x]\text{,}\)</span> we have <span class="process-math">\(p(x)\cdot q(x) = q(x)\cdot p(x)\text{.}\)</span>
+</div></article><details id="prop_polynomialMultiplicationIsCommutative-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop_polynomialMultiplicationIsCommutative-2-1">
+<div class="para">Take <span class="process-math">\(p(x),q(x)\in\Z[x]\)</span> of degrees <span class="process-math">\(m,n\text{,}\)</span> respectively. Extend both by zero so that</div>
+<div class="displaymath process-math" id="prop_polynomialMultiplicationIsCommutative-2-1-3">
+\begin{align*}
+p(x) \amp= a_0+a_1x+\cdots +a_{m+n}x^{m+n} \\
+q(x) \amp= b_0+b_1x+\cdots +b_{m+n}x^{m+n} 
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(a_{m+1} = \cdots = a_{m+n} = 0\)</span> and <span class="process-math">\(b_{n+1} = \cdots = b_{m+n} = 0\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="prop_polynomialMultiplicationIsCommutative-2-2">
+<div class="para">Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(x)\cdot q(x) = c_0+c_1x+\cdots + c_{m+n}x^{m+n} 
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_i = a_0b_i+a_1b_{i-1}+\cdots + a_{i-1}b_1+a_ib_0.
+\end{equation*}
+</div>
+<div class="para">We also have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+q(x)\cdot p(x) = d_0 + d_1x + \cdots + d_{m+n}x^{m+n}
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d_i = b_0a_i + b_1a_{i-1}+\cdots + b_{i-1}a_1+b_ia_0.
+\end{equation*}
+</div>
+<div class="para">We need to show <span class="process-math">\(c_i=d_i\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="prop_polynomialMultiplicationIsCommutative-2-3">
+<div class="para">To that end, recall that addition in <span class="process-math">\(\Z\)</span> is commutative and multiplication is commutative too:</div>
+<div class="displaymath process-math" id="prop_polynomialMultiplicationIsCommutative-2-3-2">
+\begin{align*}
+c_i \amp= a_0b_i+a_1b_{i-1}+\cdots + a_{i-1}b_1+a_ib_0 \\
+\amp= b_ia_0 + b_{i-1}a_1+\cdots + b_1a_{i-1}+b_0a_i \\
+\amp= b_0a_i + b_1a_{i-1}+\cdots + b_{i-1}a_1+b_ia_0\\
+\amp= d_i 
+\end{align*}
+</div>
+<div class="para">Since the coefficients of <span class="process-math">\(p(x)\cdot q(x)\)</span> and <span class="process-math">\(q(x)\cdot p(x)\)</span> agreee they are equal polynomials.</div>
+</div></article></details><div class="para" id="ssec_polynomialRing-18">The preceeding proof was necessarily long and somewhat complicated because polynomial multiplication is long and complicated. It’s also worth noting that we very much relied on arithmetic properties of <span class="process-math">\(\Z\text{,}\)</span> particular commutative multiplication.</div>
+<div class="para" id="ssec_polynomialRing-19">We leave our discussion of integral polynomials to introduce the main course: <em class="emphasis">rings</em>. We will then return to them as important examples or rings.</div></section><section class="subsection" id="ssec_rings"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="space"> </span><span class="title">Rings</span>
 </h3>
-<article class="exploration project-like" id="ssec_rings-2"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
-</h4>
-<div class="para" id="ssec_rings-2-1-1">In the following table, fill in a <em class="emphasis">Y</em> if the set has the property; fill in a <em class="emphasis">N</em> if it does not.</div> <figure class="table table-like" id="table_propertiessandsets"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.4<span class="period">.</span></span><span class="space"> </span>A list of properties and sets.</figcaption><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\N\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\Z\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\Z\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\Q\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\Q[x]\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\Z_{8}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\Z_{2}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\R\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\C\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\mathcal{M}_2(\R)\)</span></td>
-</tr>
-<tr>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">Closure under +</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">Closure under <span class="process-math">\(\cdot\)</span>
-</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(+\)</span> is associative</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(\cdot\)</span> is associative</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">+ is commutative</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(\cdot\)</span> is commutative</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(\cdot\)</span> distributes over +</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">There is an additive identity</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">All elements have additive inverses</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">There is a multiplicative identity</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">All nonzero elements have mult. inverses</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
-</tr>
-</table></div></figure></article><article class="exploration project-like" id="q_fieldaxiomspolyring"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span>
-</h4>
-<div class="para" id="q_fieldaxiomspolyring-1-1">Which of the field axioms in <a href="sec_fields.html#def_field" class="xref" data-knowl="./knowl/xref/def_field.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.5">Definition 2.1.5</a> hold for <span class="process-math">\(F[x]\text{,}\)</span> where <span class="process-math">\(F\)</span> is a field, and which fail to hold in general?</div>
-<div class="solutions"><details id="q_fieldaxiomspolyring-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="q_fieldaxiomspolyring-2-1">All the axioms hold, except F8. For instance, there is no polynomial <span class="process-math">\(f(x)\in \Q[x]\)</span> for which <span class="process-math">\(x f(x) = 1\text{.}\)</span>
-</div></div></details></div></article><div class="para" id="ssec_rings-4">As a result of the answer to <a href="sec_rings.html#q_fieldaxiomspolyring" class="xref" data-knowl="./knowl/xref/q_fieldaxiomspolyring.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 2.2.3">Exploration 2.2.3</a> and the completed <a href="sec_rings.html#table_propertiessandsets" class="xref" data-knowl="./knowl/xref/table_propertiessandsets.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.4: A list of properties and sets.">Table 2.2.4</a>, we make the following definition.</div>
 <article class="definition definition-like" id="def_ring"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span>
 </h4> <div class="para logical" id="def_ring-3-1">
 <div class="para">A <dfn class="terminology">ring</dfn> <span class="process-math">\(R\)</span> is a nonempty set, together with binary operations <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\text{,}\)</span> denoted <span class="process-math">\((R,+,\cdot)\text{,}\)</span> and satisfying the following axioms.</div>
 <ol class="decimal" id="def_ring-3-1-6">
@@ -862,53 +633,189 @@ p(x)+q(x)\amp= (a_0+a_1x+a_2x^2+\cdots + a_nx^n) + (b_0+b_1x+b_2x^2+\cdots + b_n
 <li id="def_ring-3-1-6-8"><div class="para" id="def_ring-3-1-6-8-1">For all <span class="process-math">\(a,b,c\in R\text{,}\)</span> <span class="process-math">\((a+b)\cdot c = a\cdot c + b\cdot c\text{.}\)</span> (Right-distributive property)</div></li>
 </ol>
 <div class="para">As with fields, when the ring <span class="process-math">\(R\)</span> is clear from context, we will often write <span class="process-math">\(0\)</span> in place of <span class="process-math">\(0_R\)</span> and <span class="process-math">\(1\)</span> in place of <span class="process-math">\(1_R\text{.}\)</span> The element <span class="process-math">\(1_R\)</span> is also referred to as the <em class="emphasis">unity</em>.</div>
-</div></article><aside class="aside aside-like" id="ssec_rings-6"><h4 class="heading"><span class="title">Non-Unital Rings.</span></h4>
-<div class="para" id="ssec_rings-6-2">Most rings of interest in modern algebra, particularly commutative algebra, have a multiplicative identity. Algebraic structures that satisfy all the ring axioms except for the multiplicative identity are called <em class="emphasis">non-unital rings</em> and are sometimes referred to as rngs (without the i).</div></aside><article class="investigation project-like" id="ssec_rings-7"><h4 class="heading">
+</div></article><aside class="aside aside-like" id="ssec_rings-3"><h4 class="heading"><span class="title">Non-Unital Rings.</span></h4>
+<div class="para" id="ssec_rings-3-2">Most rings of interest in modern algebra, particularly commutative algebra, have a multiplicative identity. Algebraic structures that satisfy all the ring axioms except for the multiplicative identity are called <em class="emphasis">non-unital rings</em> and are sometimes referred to as rngs (without the i).</div></aside><article class="investigation project-like" id="ssec_rings-4"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
+</h4>
+<div class="para" id="ssec_rings-4-1-1">Compare and contrast <a href="sec_fields.html#def_field" class="xref" data-knowl="./knowl/xref/def_field.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.6">Definitions 2.1.6</a> and <a href="sec_rings.html#def_ring" class="xref" data-knowl="./knowl/xref/def_ring.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.7">Definition 2.2.7</a>. What are the similarities? What are the differences?</div></article><div class="para" id="ssec_rings-5">While rings do not enjoy all the properties of fields, they are incredibly useful even in applied mathematics (see, e.g., <a href="sec_rings.html#Curto2013" class="xref" data-knowl="./knowl/xref/Curto2013.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 2.2.5.1">[2.2.5.1]</a> for one recent example).</div>
+<article class="definition definition-like" id="ssec_rings-6"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span>
+</h4> <div class="para" id="ssec_rings-6-1-2">A ring <span class="process-math">\(R\)</span> is said to be <dfn class="terminology">commutative</dfn> if, for all <span class="process-math">\(a,b\in R\text{,}\)</span> <span class="process-math">\(ab = ba\text{.}\)</span>
+</div></article><article class="example example-like" id="ssec_rings-7"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.9</span><span class="period">.</span>
+</h4>
+<div class="para" id="ssec_rings-7-1-1">The integers form a ring. We have actually assumed all the ring axioms for the majority of this text and will continue to assume them. A proof of the ring axioms requires a deeper dive on the natural numbers and is more suited to an introduction to proof course. Nevertheless, we will continue to freely use that <span class="process-math">\(\Z\)</span> is a commutative ring. The unity is <span class="process-math">\(1_{\mathbb{Z}} = 1\)</span> and the additive identity is <span class="process-math">\(0_{\Z} = 0\text{.}\)</span>
+</div></article><article class="example example-like" id="ssec_rings-8"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.10</span><span class="period">.</span>
+</h4>
+<div class="para" id="ssec_rings-8-1-1">All fields are rings. Fields satisfy all eight rings axioms plus an additional two: commutative multiplication and every non-zero element has a multiplicative inverse.</div></article><div class="para" id="ssec_rings-9">We now return to polynomials. First, we will define polynomials over general rings.</div>
+<article class="definition definition-like" id="def_polynomialGeneralRing"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.11</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="def_polynomialGeneralRing-1-1">
+<div class="para">Let <span class="process-math">\(R\)</span> be a ring. A <dfn class="terminology">polynomial in <span class="process-math">\(x\)</span> with coefficients in <span class="process-math">\(R\)</span></dfn> is an expression of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(a_0,a_1,a_1,\ldots,a_n\in R\)</span> and <span class="process-math">\(a_n\ne 0\text{.}\)</span> We will sometimes omit the function notation and denote <span class="process-math">\(p(x)\)</span> simply by <span class="process-math">\(p\text{.}\)</span> The set of all polynomials over <span class="process-math">\(R\)</span> is:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R[x] := \{a_0 + a_1 x + a_2 x + \cdots + a_n x^n\mid n\in \N_0, \ a_i\in R\}.
+\end{equation*}
+</div>
+<div class="para">The general definitions of equality, degree, terms, coefficients, extension by 0, addition, and multiplication carry over directly to polynomials over <span class="process-math">\(R\text{.}\)</span>
+</div>
+</div></article><div class="para" id="ssec_rings-11">Unlike fields, rings need not be commutative. In fact, an important class of examples of non-commutative rings are matrix rings. We’ll see a first example in <a href="sec_rings.html#ex_M2R" class="xref" data-knowl="./knowl/xref/ex_M2R.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.15: Square Matrices">Example 2.2.15</a>.</div>
+<article class="exploration project-like" id="ssec_rings-12"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span>
+</h4>
+<div class="para" id="ssec_rings-12-1-1">Which properties of fields in <a href="sec_fields.html#thm_fieldproperties" class="xref" data-knowl="./knowl/xref/thm_fieldproperties.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.1.11: Properties of Fields">Theorem 2.1.11</a> hold for (commutative) rings?</div></article><article class="investigation project-like" id="ssec_rings-13"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span>
 </h4>
-<div class="para" id="ssec_rings-7-1-1">Compare and contrast <a href="sec_fields.html#def_field" class="xref" data-knowl="./knowl/xref/def_field.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.5">Definitions 2.1.5</a> and <a href="sec_rings.html#def_ring" class="xref" data-knowl="./knowl/xref/def_ring.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.5">Definition 2.2.5</a>. What are the similarities? What are the differences?</div></article><div class="para" id="ssec_rings-8">While rings do not enjoy all the properties of fields, they are incredibly useful even in applied mathematics (see, e.g., <a href="sec_rings.html#Curto2013" class="xref" data-knowl="./knowl/xref/Curto2013.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 2.2.5.1">[2.2.5.1]</a> for one recent example).</div>
-<article class="definition definition-like" id="ssec_rings-9"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
-</h4> <div class="para" id="ssec_rings-9-1-2">A ring <span class="process-math">\(R\)</span> is said to be <dfn class="terminology">commutative</dfn> if, for all <span class="process-math">\(a,b\in R\text{,}\)</span> <span class="process-math">\(ab = ba\text{.}\)</span>
-</div></article><article class="exploration project-like" id="expl-rings-examples"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
-</h4>
-<div class="para" id="expl-rings-examples-1-1">Consider the sets given in <a href="sec_rings.html#table_propertiessandsets" class="xref" data-knowl="./knowl/xref/table_propertiessandsets.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.4: A list of properties and sets.">Table 2.2.4</a>. Which are rings? Which are commutative rings?</div></article><article class="exploration project-like" id="ssec_rings-11"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
-</h4>
-<div class="para" id="ssec_rings-11-1-1">Which properties of fields in <a href="sec_fields.html#thm_fieldproperties" class="xref" data-knowl="./knowl/xref/thm_fieldproperties.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.1.6: Properties of Fields">Theorem 2.1.6</a> hold for (commutative) rings?</div></article><article class="investigation project-like" id="ssec_rings-12"><h4 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span>
-</h4>
-<div class="para" id="ssec_rings-12-1-1">Are all rings fields? Are all fields rings? Justify.</div></article><aside class="historical aside-like" id="ssec_rings-13"><h4 class="heading"><span class="title">Emmy Noether.</span></h4>
-<div class="para" id="ssec_rings-13-2">
-<figure class="figure figure-like" id="ssec_rings-13-2-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/../../images/Noether.jpg" class="contained" alt="Portrait of Emmy Noether"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure> In the 1920s, Emmy Noether was the first to explicitly describe the ring axioms as we know them today, and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra, number theory, and geometry, including the (see <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SubSec-Nonunique-Factorization" missing or not unique]</code> for more on the historical development of the proof of Fermat’s Last Theorem). Most modern definitions of <em class="emphasis">ring</em> agree with our <a href="sec_rings.html#def_ring" class="xref" data-knowl="./knowl/xref/def_ring.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.5">Definition 2.2.5</a> and allow for rings with noncommutative multiplication.</div></aside><div class="para" id="ssec_rings-14">The following theorem states that the set of polynomials with coefficients in a ring <span class="process-math">\(R\)</span> is itself a ring under the usual operations of polynomial addition of like terms, and multiplication via distribution. The proof is not tricky, but a rigorous justification (especially of, e.g., the associativity of polynomial multiplication) is tedious, and thus is omitted.</div>
+<div class="para" id="ssec_rings-13-1-1">Are all rings fields? Are all fields rings? Justify.</div></article><aside class="historical aside-like" id="ssec_rings-14"><h4 class="heading"><span class="title">Emmy Noether.</span></h4>
+<div class="para" id="ssec_rings-14-2">
+<figure class="figure figure-like" id="ssec_rings-14-2-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/../images/Noether.jpg" class="contained" alt="Portrait of Emmy Noether"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.12<span class="period">.</span></span><span class="space"> </span></figcaption></figure> In the 1920s, Emmy Noether was the first to explicitly describe the ring axioms as we know them today, and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra, number theory, and geometry, including the (see <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SubSec-Nonunique-Factorization" missing or not unique]</code> for more on the historical development of the proof of Fermat’s Last Theorem). Most modern definitions of <em class="emphasis">ring</em> agree with our <a href="sec_rings.html#def_ring" class="xref" data-knowl="./knowl/xref/def_ring.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.7">Definition 2.2.7</a> and allow for rings with noncommutative multiplication.</div></aside><div class="para" id="ssec_rings-15">The following theorem states that the set of polynomials with coefficients in a ring <span class="process-math">\(R\)</span> is itself a ring under the usual operations of polynomial addition of like terms, and multiplication via distribution. The proof is not tricky, but a rigorous justification (especially of, e.g., the associativity of polynomial multiplication) is tedious, and thus is omitted.</div>
 <article class="theorem theorem-like" id="thm_polynomialsFormRing"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem.</span>
 </h4>
-<div class="para" id="thm_polynomialsFormRing-2-1">If <span class="process-math">\(R\)</span> is a (commutative) ring<span class="process-math">\(1_R\text{,}\)</span> then <span class="process-math">\(R[x]\)</span> is a (commutative) ring <span class="process-math">\(1_{R[x]} = 1_R\text{.}\)</span>
-</div></article><details id="ssec_rings-16" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_rings-16-1">TBD.</div></article></details></section><section class="subsection" id="ssec_subrings"><h3 class="heading hide-type">
+<div class="para" id="thm_polynomialsFormRing-2-1">If <span class="process-math">\(R\)</span> is a (commutative) ring, then <span class="process-math">\(R[x]\)</span> is a (commutative) ring.</div></article><details id="thm_polynomialsFormRing-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_polynomialsFormRing-3-1">As in the proof of <a href="sec_rings.html#prop_polynomialMultiplicationIsCommutative" class="xref" data-knowl="./knowl/xref/prop_polynomialMultiplicationIsCommutative.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.2.6">Proposition 2.2.6</a>, we see that if <span class="process-math">\(R[x]\)</span> is a ring and <span class="process-math">\(R\)</span> is commutative, then <span class="process-math">\(R[x]\)</span> must also be commutative. The proof carries over <em class="emphasis">mutatis mutandis</em>.</div> <div class="para" id="thm_polynomialsFormRing-3-2">To see that <span class="process-math">\(R[x]\)</span> is a ring, we need to check all eight axioms. Before we do that, recall in <a href="sec_rings.html#prop_polynomialAdditionIsCommutative" class="xref" data-knowl="./knowl/xref/prop_polynomialAdditionIsCommutative.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.2.3">Proposition 2.2.3</a> that we have already seen polynomial addition is commutative provided the addition of coefficients is commutative. That proof therefore carries over <em class="emphasis">mutatis mutandis</em>.</div> <div class="para logical" id="thm_polynomialsFormRing-3-3">
+<div class="para">We check associativity. Take <span class="process-math">\(p(x),q(x),r(x)\in R[x]\)</span> and, by extending by 0, we can assume</div>
+<div class="displaymath process-math" id="thm_polynomialsFormRing-3-3-2">
+\begin{align*}
+p(x)\amp= a_0+a_1x+\cdots +a_nx^n \\
+q(x)\amp= b_0+b_1x+\cdots +b_nx^n \\
+r(x)\amp= c_0+r_1x+\cdots +r_nx^n 
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(a_i,b_i,c_i\in R\)</span> for <span class="process-math">\(i=0,\ldots,n\text{.}\)</span> Then the coefficient of <span class="process-math">\(x^i\)</span> in <span class="process-math">\(p(x)+(q(x)+r(x))\)</span> is <span class="process-math">\(a_i+(b_i+c_i)\text{.}\)</span> The coefficient of <span class="process-math">\(x^i\)</span> in <span class="process-math">\((p(x)+q(x)) + r(x)\)</span> is <span class="process-math">\((a_i+b_i)+c_i\text{.}\)</span> Since <span class="process-math">\(R\)</span> is a ring and addition is associative in <span class="process-math">\(R\)</span> we have <span class="process-math">\(a_i+(b_i+c_i) = (a_i+b_i) + c_i\text{.}\)</span> Since the coefficients of <span class="process-math">\(p(x)+(q(x)+r(x))\)</span> and <span class="process-math">\((p(x)+q(x)) + r(x)\)</span> are equal, they are equal polynomials.</div>
+</div> <div class="para logical" id="thm_polynomialsFormRing-3-4">
+<div class="para">We claim <span class="process-math">\(z(x) = 0_R\)</span> is the additive identity. Take <span class="process-math">\(p(x)\in R[x]\)</span> and write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(x)=a_0+a_1x+\cdots +a_nx^n.
+\end{equation*}
+</div>
+<div class="para">Then extend <span class="process-math">\(z(x)\)</span> by zero:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z(x) = 0_R + 0_Rx+\cdots + 0_Rx^n.
+\end{equation*}
+</div>
+<div class="para">The sum is then:</div>
+<div class="displaymath process-math" id="thm_polynomialsFormRing-3-4-6">
+\begin{align*}
+z(x)+p(x)\amp= (0_R+a_0) + (0_R+a_1)x+\cdots + (0_R+a_n)x^n \\
+\amp= a_0 + a_1x+\cdots + a_nx^n \\
+\amp= p(x) 
+\end{align*}
+</div>
+<div class="para">as <span class="process-math">\(0_R\)</span> is the additive identity in <span class="process-math">\(R\)</span> so that <span class="process-math">\(0_R+a_i = a_i\)</span> for all <span class="process-math">\(i\text{.}\)</span> Similarly, <span class="process-math">\(p(x) + z(x) = p(x)\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="thm_polynomialsFormRing-3-5">
+<div class="para">For additive inverses, suppose <span class="process-math">\(p(x)\)</span> is as before. Then define <span class="process-math">\(-p(x)\in R[x]\)</span> by: <span class="process-math">\(-p(x) = (-a_0) + (-a_1)x + \cdots + (-a_n)x^n\)</span> where <span class="process-math">\(-a_i\)</span> is the additive inverse of the coefficient <span class="process-math">\(a_i\)</span> in <span class="process-math">\(p(x)\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="thm_polynomialsFormRing-3-5-7">
+\begin{align*}
+\amp p(x)+(-p)(x)\\
+\amp= (a_0+(-a_0)) + (a_1+(-a_1))x + \cdots + (a_n+(-a_n))x^n \\
+\amp= 0_R + 0_Rx + \cdots + 0_Rx^n \\
+\amp= z(x) 
+\end{align*}
+</div>
+<div class="para">Similarly <span class="process-math">\((-p)(x)+p(x) = z(x)\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="thm_polynomialsFormRing-3-6">
+<div class="para">The proof that multiplication is associative is particularly notationally dense and we leave it as an exercise. For the multiplicative identity, set <span class="process-math">\(i(x) = 1_R\text{.}\)</span> Take a polynomial <span class="process-math">\(p(x)\)</span> as before. We extend <span class="process-math">\(i(x)\)</span> by zero via:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+i(x) = b_0+\cdots +b_nx^n
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(b_0=1_R\)</span> and <span class="process-math">\(b_i=0_R\)</span> for <span class="process-math">\(i&gt;0\text{.}\)</span> Then the product</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(x)\cdot i(x)= c_0+c_1x+\cdots +c_nx^n
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_i = a_0b_i+\cdots + a_ib_0.
+\end{equation*}
+</div>
+<div class="para">However, <span class="process-math">\(b_j=0\)</span> for <span class="process-math">\(j&gt;0\)</span> so for <span class="process-math">\(k\neq i\)</span> we have <span class="process-math">\(a_kb_{i-k}=0_R\)</span> by Exercise???? In particular, <span class="process-math">\(c_i = a_ib_0 = a_i\cdot 1_R = a_i\text{.}\)</span> Since the coefficients of <span class="process-math">\(p(x)\cdot i(x)\)</span> and <span class="process-math">\(p(x)\)</span> are equal, the polynomials are equal: <span class="process-math">\(p(x)\cdot i(x) = p(x)\text{.}\)</span> Similarly <span class="process-math">\(i(x)\cdot p(x)= p(x)\text{.}\)</span>
+</div>
+</div> <div class="para" id="thm_polynomialsFormRing-3-7">The remaining two proofs are left- and right-distributive properties. As they are similar, we only prove the left-distributive property. TBD.</div></article></details><div class="para" id="ssec_rings-17">The preceeding theorem says that whenever we have a ring, polynomials with coefficients in that ring again form a ring. In particular, if <span class="process-math">\(R\)</span> is a ring, then so is <span class="process-math">\(R[x]\text{,}\)</span> and hence so is <span class="process-math">\((R[x])[y]\)</span> and so on. This leads us to the corollary:</div>
+<article class="corollary theorem-like" id="cor_multivariatePolynomialRingIsARing"><h4 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.2.14</span><span class="period">.</span>
+</h4>
+<div class="para" id="cor_multivariatePolynomialRingIsARing-1-1">Let <span class="process-math">\(R\)</span> be a (commutative) ring and <span class="process-math">\(x_1,\ldots,x_n\)</span> be indeterminates. Then the set of polynomials in <span class="process-math">\(x_1,\ldots,x_n\)</span> with coefficients in <span class="process-math">\(R\text{,}\)</span> <span class="process-math">\(R[x_1,\ldots,x_n]\text{,}\)</span> is a (commutative) ring.</div></article><details id="cor_multivariatePolynomialRingIsARing-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="cor_multivariatePolynomialRingIsARing-2-1">We proceed by induction. The base case is <span class="process-math">\(n=1\text{.}\)</span> This is the content of <a href="sec_rings.html#thm_polynomialsFormRing" class="xref" data-knowl="./knowl/xref/thm_polynomialsFormRing.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.2.13: Theorem">Theorem 2.2.13</a>.</div> <div class="para" id="cor_multivariatePolynomialRingIsARing-2-2">For the inductive step, suppose <span class="process-math">\(R[x_1,\ldots,x_n]\)</span> is a (commutative) ring. By <a href="sec_rings.html#thm_polynomialsFormRing" class="xref" data-knowl="./knowl/xref/thm_polynomialsFormRing.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.2.13: Theorem">Theorem 2.2.13</a>, <span class="process-math">\(R[x_1,\ldots,x_n][x_{n+1}]\)</span> is again a (commutative) ring. But the latter is the <span class="process-math">\(R[x_1,\ldots,x_{n+1}]\text{.}\)</span>
+</div></article></details><div class="para" id="ssec_rings-19">We now have some great examples of commutative rings. Namely polynomial rings in some number of variables over any of <span class="process-math">\(\Z,\Q,\R,\)</span> or <span class="process-math">\(\C\text{.}\)</span> As we have yet to see an example of a non-commutative ring we remedy this now.</div>
+<article class="example example-like" id="ex_M2R"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.15</span><span class="period">.</span><span class="space"> </span><span class="title">Square Matrices.</span>
+</h4>
+<div class="para logical" id="ex_M2R-2-1">
+<div class="para">Consider the set <span class="process-math">\(M_2(\R)\)</span> of square <span class="process-math">\(2\times 2\)</span> matrices over <span class="process-math">\(\R\)</span> (or whatever ring or field you like to work with). We recall matrix addition and multiplication:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}a_1 \amp b_1 \\ c_1 \amp d_1 \end{bmatrix} 
++ \begin{bmatrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{bmatrix}
+= \begin{bmatrix}(a_1+a_2) \amp (b_1+b_2) \\ (c_1+c_2) \amp (d_1+d_2) \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}a_1 \amp b_1 \\ c_1 \amp d_1 \end{bmatrix} 
+\cdot \begin{bmatrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{bmatrix}
+= \begin{bmatrix} a_1a_2+b_1c_2 \amp a_1b_2+b_1d_2 \\ c_1a_2+d_1c_2 \amp c_1b_2+d_1d_2 \end{bmatrix}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="ex_M2R-2-2">
+<div class="para">In Exercise???? you will check this is a ring. We show that multiplication is not commutative. To that end, consider:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{bmatrix}1 \amp 1 \\ 1 \amp 1 \end{bmatrix},
+B =\begin{bmatrix}0 \amp 1 \\ 0 \amp 0 \end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\cdot B = \begin{bmatrix}0 \amp 1 \\ 0 \amp 1 \end{bmatrix},
+B\cdot A = \begin{bmatrix}1 \amp 1 \\ 0 \amp 0 \end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">In particular, <span class="process-math">\(A\cdot B\ne B\cdot A\)</span> and so matrix multiplication is not commutative.</div>
+</div></article><div class="para" id="ssec_rings-21">In the previous example, we observed that matrix multiplication failed to be commutative for matrices with real entries. What about for entries in a general ring? If you review that example, you will notice the only reason the products did not agree is because <span class="process-math">\(0\ne 1\)</span> in <span class="process-math">\(\R\text{.}\)</span> The next example shows that the multiplicative identity and additive identity sometimes agree.</div>
+<article class="example example-like" id="ssec_rings-22"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">The Zero Ring.</span>
+</h4>
+<div class="para" id="ssec_rings-22-2-1">Let <span class="process-math">\(R=\{0\}\text{.}\)</span> That is, a set with one element. Define addition and multiplication by <span class="process-math">\(0+0 = 0\)</span> and <span class="process-math">\(0\cdot 0 = 0\text{.}\)</span> We claim that addition and multiplication define a ring structure on <span class="process-math">\(R\text{.}\)</span>
+</div> <div class="para" id="ssec_rings-22-2-2">Almost all of the checks are straightforward. For example, to check associativity of addition we only have one element so we just check <span class="process-math">\(0+(0+0) = (0+0)+0\text{.}\)</span> But there is only one thing both sides can be: <span class="process-math">\(0\text{.}\)</span> So addition is associative.</div> <div class="para" id="ssec_rings-22-2-3">The only property that warrants inspection is the multiplicative identity. We claim that in this ring <span class="process-math">\(1_R = 0\text{.}\)</span> Indeed, we need to show that for every <span class="process-math">\(r\in R = \{0\}\)</span> that <span class="process-math">\(0\cdot r= r\text{.}\)</span> But there’s only element to check this on: <span class="process-math">\(r=0\)</span> where it is true.</div> <div class="para" id="ssec_rings-22-2-4">We conclude that the zero ring is a ring!</div></article></section><section class="subsection" id="ssec_subrings"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="space"> </span><span class="title">Subrings: New Rings from Old</span>
 </h3>
 <article class="definition definition-like" id="ssec_subrings-2"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.9</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.17</span><span class="period">.</span>
 </h4> <div class="para" id="ssec_subrings-2-3-1">Let <span class="process-math">\((R,+,\cdot)\)</span> be a ring and let <span class="process-math">\(S\subseteq R\text{.}\)</span> If <span class="process-math">\(S\)</span> is itself a ring under <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\text{,}\)</span> we say <span class="process-math">\(S\)</span> is a <dfn class="terminology">subring</dfn> of <span class="process-math">\(R\text{.}\)</span> In this case, <span class="process-math">\(R\)</span> is often called an <dfn class="terminology">overring</dfn> of <span class="process-math">\(S\text{.}\)</span>
 </div></article><div class="para" id="ssec_subrings-3">The following theorem provides a easy-to-apply test to check if a given subset <span class="process-math">\(S\)</span> of a ring <span class="process-math">\(R\)</span> is in fact a subring of <span class="process-math">\(R\text{.}\)</span>
 </div>
 <article class="theorem theorem-like" id="thm_subringTest"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.10</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.18</span><span class="period">.</span><span class="space"> </span><span class="title">Subring Test.</span>
 </h4>
-<div class="para logical" id="thm_subringTest-2-1">
+<div class="para logical" id="thm_subringTest-3-1">
 <div class="para">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(S\)</span> a subset of <span class="process-math">\(R\text{.}\)</span> Then <span class="process-math">\(S\)</span> is a subring if and only if:</div>
-<ol class="decimal" id="thm_subringTest-2-1-5">
-<li id="thm_subringTest-2-1-5-1"><div class="para" id="thm_subringTest-2-1-5-1-1"><span class="process-math">\(1_R\in S\text{;}\)</span></div></li>
-<li id="thm_subringTest-2-1-5-2"><div class="para" id="thm_subringTest-2-1-5-2-1">
+<ol class="decimal" id="thm_subringTest-3-1-5">
+<li id="thm_subringTest-3-1-5-1"><div class="para" id="thm_subringTest-3-1-5-1-1"><span class="process-math">\(1_R\in S\text{;}\)</span></div></li>
+<li id="thm_subringTest-3-1-5-2"><div class="para" id="thm_subringTest-3-1-5-2-1">
 <span class="process-math">\(S\)</span> is closed under multiplication; and</div></li>
-<li id="thm_subringTest-2-1-5-3"><div class="para" id="thm_subringTest-2-1-5-3-1">
+<li id="thm_subringTest-3-1-5-3"><div class="para" id="thm_subringTest-3-1-5-3-1">
 <span class="process-math">\(S\)</span> is closed under subtraction.</div></li>
 </ol>
-</div></article><details id="thm_subringTest-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_subringTest-3-1">
-<div class="para">Suppose <span class="process-math">\(1_R\in S\)</span> and <span class="process-math">\(S\)</span> is closed under multiplication and subtraction. We check each of the axioms in <a href="sec_rings.html#def_ring" class="xref" data-knowl="./knowl/xref/def_ring.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.5">Definition 2.2.5</a>. Since <span class="process-math">\(1_R\in S\)</span> and <span class="process-math">\(S\)</span> is closed under subtraction we have <span class="process-math">\(0_R = 1_R-1_R\in S\text{.}\)</span> For any <span class="process-math">\(a\in S\text{,}\)</span> we know that <span class="process-math">\(a\in R\)</span> so that</div>
+</div></article><details id="thm_subringTest-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_subringTest-4-1">
+<div class="para">Suppose <span class="process-math">\(1_R\in S\)</span> and <span class="process-math">\(S\)</span> is closed under multiplication and subtraction. We check each of the axioms in <a href="sec_rings.html#def_ring" class="xref" data-knowl="./knowl/xref/def_ring.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.7">Definition 2.2.7</a>. Since <span class="process-math">\(1_R\in S\)</span> and <span class="process-math">\(S\)</span> is closed under subtraction we have <span class="process-math">\(0_R = 1_R-1_R\in S\text{.}\)</span> For any <span class="process-math">\(a\in S\text{,}\)</span> we know that <span class="process-math">\(a\in R\)</span> so that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def_ring.html">
 \begin{equation*}
 a+0_R = 0_R+a=a\text{ and }a\cdot 1_R = 1_R\cdot a = a.
@@ -916,44 +823,76 @@ a+0_R = 0_R+a=a\text{ and }a\cdot 1_R = 1_R\cdot a = a.
 </div>
 <div class="para">Thus <span class="process-math">\(0_R\)</span> and <span class="process-math">\(1_R\)</span> are the additive and multiplicative identities, respectively, in <span class="process-math">\(S\text{.}\)</span>
 </div>
-</div> <div class="para" id="thm_subringTest-3-2">For any <span class="process-math">\(b\in S\text{,}\)</span> we know that <span class="process-math">\(-b=0_R-b\in S\text{.}\)</span> Thus <span class="process-math">\(S\)</span> is closed under additive inverses. If <span class="process-math">\(a,b\in S\text{,}\)</span> then <span class="process-math">\(a+b=a-(-b)\in S\)</span> so that <span class="process-math">\(S\)</span> is closed under addition.</div> <div class="para" id="thm_subringTest-3-3">For any triple of elements <span class="process-math">\(a,b,c\in S\text{,}\)</span> we know <span class="process-math">\(a,b,c\in R\)</span> so that <span class="process-math">\(a+(b+c) = (a+b)+c\)</span> and <span class="process-math">\(a+b=b+a\text{.}\)</span> Thus associativity and commutativity of addition are inherited from <span class="process-math">\(R\text{.}\)</span> Similarly, <span class="process-math">\(a\cdot(b\cdot c) = (a\cdot b)\cdot c\text{,}\)</span> <span class="process-math">\(a\cdot(b+c) = a\cdot b + a\cdot c\text{,}\)</span> and <span class="process-math">\((a+b)\cdot c = a\cdot c + b\cdot c\text{.}\)</span> That is, <span class="process-math">\(S\)</span> inherits associativity of multiplication as well as the left- and right-distributive properties from <span class="process-math">\(R\text{.}\)</span>
-</div> <div class="para" id="thm_subringTest-3-4">We conclude that <span class="process-math">\(S\)</span> is a ring under the multiplication and addition from <span class="process-math">\(R\text{.}\)</span>
-</div></article></details><article class="activity project-like" id="ssec_subrings-5"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span>
+</div> <div class="para" id="thm_subringTest-4-2">For any <span class="process-math">\(b\in S\text{,}\)</span> we know that <span class="process-math">\(-b=0_R-b\in S\text{.}\)</span> Thus <span class="process-math">\(S\)</span> is closed under additive inverses. If <span class="process-math">\(a,b\in S\text{,}\)</span> then <span class="process-math">\(a+b=a-(-b)\in S\)</span> so that <span class="process-math">\(S\)</span> is closed under addition.</div> <div class="para" id="thm_subringTest-4-3">For any triple of elements <span class="process-math">\(a,b,c\in S\text{,}\)</span> we know <span class="process-math">\(a,b,c\in R\)</span> so that <span class="process-math">\(a+(b+c) = (a+b)+c\)</span> and <span class="process-math">\(a+b=b+a\text{.}\)</span> Thus associativity and commutativity of addition are inherited from <span class="process-math">\(R\text{.}\)</span> Similarly, <span class="process-math">\(a\cdot(b\cdot c) = (a\cdot b)\cdot c\text{,}\)</span> <span class="process-math">\(a\cdot(b+c) = a\cdot b + a\cdot c\text{,}\)</span> and <span class="process-math">\((a+b)\cdot c = a\cdot c + b\cdot c\text{.}\)</span> That is, <span class="process-math">\(S\)</span> inherits associativity of multiplication as well as the left- and right-distributive properties from <span class="process-math">\(R\text{.}\)</span>
+</div> <div class="para" id="thm_subringTest-4-4">We conclude that <span class="process-math">\(S\)</span> is a ring under the multiplication and addition from <span class="process-math">\(R\text{.}\)</span>
+</div></article></details><article class="example example-like" id="ssec_subrings-5"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.19</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="ssec_subrings-5-1-1">
+<div class="para">In <a href="sec_fields.html#ex_qAdjoinNegative5" class="xref" data-knowl="./knowl/xref/ex_qAdjoinNegative5.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.1.15: Adjoining \sqrt{-5} to the Rationals">Example 2.1.15</a>, we saw that <span class="process-math">\(\Q(\sqrt{-5})\)</span> was a field and so it is a commutative ring. Let’s define a subset of this field by taking those elements with integral real and imaginary part:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex_qAdjoinNegative5.html">
+\begin{equation*}
+\Z[\sqrt{-5}] = \{a+b\sqrt{-5}\mid a,b\in\Z\}.
+\end{equation*}
+</div>
+<div class="para">We claim that <span class="process-math">\(\Z[\sqrt{-5}]\)</span> is a subring of <span class="process-math">\(\Q(\sqrt{-5})\text{.}\)</span> To that end we apply the subring test. That is, <span class="process-math">\(1_{\Q(\sqrt{-5})}\in\Z[\sqrt{-5}]\text{,}\)</span> it is closed under subtraction and multiplication.</div>
+</div> <div class="para" id="ssec_subrings-5-1-2">We see that <span class="process-math">\(1+0\sqrt{-5}\in\Z[\sqrt{-5}]\)</span> and so our subset has the multiplicative identity.</div> <div class="para logical" id="ssec_subrings-5-1-3">
+<div class="para">For closure under subtraction, take <span class="process-math">\(a+b\sqrt{-5}, c+d\sqrt{-5}\in\Z[\sqrt{-5}]\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a+b\sqrt{-5})-(c+d\sqrt{-5}) = (a-c) + (b-d)\sqrt{-5}
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(a-c,b-d\in\Z\text{.}\)</span> We conclude <span class="process-math">\(\Z[\sqrt{-5}]\)</span> is closed under subtraction.</div>
+</div> <div class="para logical" id="ssec_subrings-5-1-4">
+<div class="para">For closure under multiplication we compute:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a+b\sqrt{-5})\cdot (c+d\sqrt{-5}) = (ac+5bd) + (ad+bc)\sqrt{-5}
+\end{equation*}
+</div>
+<div class="para">and again <span class="process-math">\(ac+5bd,ad+bc\in\Z\text{.}\)</span>
+</div>
+</div> <div class="para" id="ssec_subrings-5-1-5">By the <a href="sec_rings.html#thm_subringTest" class="xref" data-knowl="./knowl/xref/thm_subringTest.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.2.18: Subring Test">Subring Test</a>, we conclude <span class="process-math">\(\Z[\sqrt{-5}]\)</span> is a subring of <span class="process-math">\(\Q(\sqrt{-5})\text{.}\)</span> In particular, it is a ring.</div></article><article class="activity project-like" id="ssec_subrings-6"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="ssec_subrings-6-1-1">
 <div class="para">Determine whether the following rings <span class="process-math">\(S\)</span> are subrings of the given rings <span class="process-math">\(R\text{.}\)</span>
 </div>
-<ol class="decimal" id="ssec_subrings-5-1-1-3">
-<li id="ssec_subrings-5-1-1-3-1"><div class="para" id="ssec_subrings-5-1-1-3-1-1">
+<ol class="decimal" id="ssec_subrings-6-1-1-3">
+<li id="ssec_subrings-6-1-1-3-1"><div class="para" id="ssec_subrings-6-1-1-3-1-1">
 <span class="process-math">\(S = \Z\text{,}\)</span> <span class="process-math">\(R = \Q\)</span>
 </div></li>
-<li id="ssec_subrings-5-1-1-3-2"><div class="para" id="ssec_subrings-5-1-1-3-2-1">
+<li id="ssec_subrings-6-1-1-3-2"><div class="para" id="ssec_subrings-6-1-1-3-2-1">
 <span class="process-math">\(S = \Z/5\text{,}\)</span> <span class="process-math">\(R = \Z/7\)</span>
 </div></li>
-<li id="ssec_subrings-5-1-1-3-3"><div class="para" id="ssec_subrings-5-1-1-3-3-1">
+<li id="ssec_subrings-6-1-1-3-3"><div class="para" id="ssec_subrings-6-1-1-3-3-1">
 <span class="process-math">\(S\)</span> is any ring, <span class="process-math">\(R = S[x]\)</span>
 </div></li>
-<li id="ssec_subrings-5-1-1-3-4"><div class="para" id="ssec_subrings-5-1-1-3-4-1">
+<li id="ssec_subrings-6-1-1-3-4"><div class="para" id="ssec_subrings-6-1-1-3-4-1">
 <span class="process-math">\(S = \R\text{,}\)</span> <span class="process-math">\(R = \mathbb{C}\)</span>
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="ssec_subrings-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"></div></details></div></article></section><section class="subsection" id="ssec_unitsAndAssociates"><h3 class="heading hide-type">
+<div class="solutions"><details id="ssec_subrings-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"></div></details></div></article></section><section class="subsection" id="ssec_unitsAndAssociates"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="space"> </span><span class="title">Units and Associates in a Ring</span>
 </h3>
 <article class="definition definition-like" id="def_unit"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.11</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.20</span><span class="period">.</span>
 </h4> <div class="para" id="def_unit-3-1">Let <span class="process-math">\(R\)</span> be a ring and let <span class="process-math">\(u\in R\)</span> be nonzero. If there is a <span class="process-math">\(v\in R\)</span> such that <span class="process-math">\(uv = vu = 1\text{,}\)</span> we say <span class="process-math">\(u\)</span> is <dfn class="terminology">unit</dfn> of <span class="process-math">\(R\text{.}\)</span> We denote the set of units of <span class="process-math">\(R\)</span> by <span class="process-math">\(R^\times\text{.}\)</span> We say <span class="process-math">\(x,y\in R\)</span> are <dfn class="terminology">associates</dfn> if there exists some <span class="process-math">\(u\in R^\times\)</span> such that <span class="process-math">\(x = uy\text{.}\)</span>
 </div></article><article class="exploration project-like" id="ssec_unitsAndAssociates-3"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.9</span><span class="period">.</span>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
 </h4>
 <div class="para" id="ssec_unitsAndAssociates-3-1-1">Explicitly describe the set <span class="process-math">\(\Z^\times\text{.}\)</span> What are the associates of 7 in <span class="process-math">\(\Z\text{?}\)</span>
-</div></article><div class="para" id="ssec_unitsAndAssociates-4">In other words, a unit in a ring is a nonzero element with a multiplicative inverse. The existence of units is the primary difference between fields and commutative rings: in a field, all nonzero elements are units, while in a commutative ring, no nonzero elements need be units, as <a href="sec_rings.html#thm-cri-field" class="xref" data-knowl="./knowl/xref/thm-cri-field.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.2.12">Theorem 2.2.12</a> demonstrates.</div>
-<article class="theorem theorem-like" id="thm-cri-field"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.12</span><span class="period">.</span>
+</div></article><div class="para" id="ssec_unitsAndAssociates-4">In other words, a unit in a ring is a nonzero element with a multiplicative inverse. The existence of units is the primary difference between fields and commutative rings: in a field, all nonzero elements are units, while in a commutative ring, no nonzero elements need be units, as <a href="sec_rings.html#thm-cri-field" class="xref" data-knowl="./knowl/xref/thm-cri-field.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.2.22">Theorem 2.2.22</a> demonstrates.</div>
+<article class="example example-like" id="ssec_unitsAndAssociates-5"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.21</span><span class="period">.</span>
 </h4>
-<div class="para" id="thm-cri-field-1-1">A commutative ring <span class="process-math">\(R\)</span> in which every nonzero element is a unit is a field.</div></article><details id="ssec_unitsAndAssociates-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_unitsAndAssociates-6-1">Compare the axioms for a commutative ring and a field. The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.</div></article></details></section><section class="references" id="sec_rings-8"><h3 class="heading hide-type">
+<div class="para" id="ssec_unitsAndAssociates-5-1-1">We describe the units in <span class="process-math">\(\Z[x]\text{.}\)</span> Notice that for <span class="process-math">\(p(x)q(x)\in\Z[x]\)</span> the leading coefficient of <span class="process-math">\(p(x)\cdot q(x)\)</span> is <span class="process-math">\(c_{m+n} = a_0b_{m+n} +a_1b_{m+n-1}+\dots + a_nb_m\)</span>
+</div></article><article class="theorem theorem-like" id="thm-cri-field"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.22</span><span class="period">.</span>
+</h4>
+<div class="para" id="thm-cri-field-1-1">A commutative ring <span class="process-math">\(R\)</span> in which every nonzero element is a unit is a field.</div></article><details id="ssec_unitsAndAssociates-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_unitsAndAssociates-7-1">Compare the axioms for a commutative ring and a field. The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.</div></article></details></section><section class="references" id="sec_rings-8"><h3 class="heading hide-type">
 <span class="type">References</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="space"> </span><span class="title">References</span>
 </h3>
 <article class="bib" id="Curto2013"><div class="bibitem">[1]</div>

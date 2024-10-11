@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
+</h4>
+<div class="para">Multplication of integral polynomials is commutative. That is, for any <span class="process-math">\(p(x),q(x)\in\Z[x]\text{,}\)</span> we have <span class="process-math">\(p(x)\cdot q(x) = q(x)\cdot p(x)\text{.}\)</span>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">Take <span class="process-math">\(p(x),q(x)\in\Z[x]\)</span> of degrees <span class="process-math">\(m,n\text{,}\)</span> respectively. Extend both by zero so that</div>
+<div class="displaymath process-math">
+\begin{align*}
+p(x) \amp= a_0+a_1x+\cdots +a_{m+n}x^{m+n} \\
+q(x) \amp= b_0+b_1x+\cdots +b_{m+n}x^{m+n} 
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(a_{m+1} = \cdots = a_{m+n} = 0\)</span> and <span class="process-math">\(b_{n+1} = \cdots = b_{m+n} = 0\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(x)\cdot q(x) = c_0+c_1x+\cdots + c_{m+n}x^{m+n} 
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_i = a_0b_i+a_1b_{i-1}+\cdots + a_{i-1}b_1+a_ib_0.
+\end{equation*}
+</div>
+<div class="para">We also have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+q(x)\cdot p(x) = d_0 + d_1x + \cdots + d_{m+n}x^{m+n}
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d_i = b_0a_i + b_1a_{i-1}+\cdots + b_{i-1}a_1+b_ia_0.
+\end{equation*}
+</div>
+<div class="para">We need to show <span class="process-math">\(c_i=d_i\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">To that end, recall that addition in <span class="process-math">\(\Z\)</span> is commutative and multiplication is commutative too:</div>
+<div class="displaymath process-math">
+\begin{align*}
+c_i \amp= a_0b_i+a_1b_{i-1}+\cdots + a_{i-1}b_1+a_ib_0 \\
+\amp= b_ia_0 + b_{i-1}a_1+\cdots + b_1a_{i-1}+b_0a_i \\
+\amp= b_0a_i + b_1a_{i-1}+\cdots + b_{i-1}a_1+b_ia_0\\
+\amp= d_i 
+\end{align*}
+</div>
+<div class="para">Since the coefficients of <span class="process-math">\(p(x)\cdot q(x)\)</span> and <span class="process-math">\(q(x)\cdot p(x)\)</span> agreee they are equal polynomials.</div>
+</div></article></details><span class="incontext"><a class="internal" href="sec_rings.html#prop_polynomialMultiplicationIsCommutative">in-context</a></span>
+</body>
+</html>

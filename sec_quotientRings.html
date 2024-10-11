@@ -176,12 +176,12 @@ window.MathJax = {
 #def_ring-3-1-6 { counter-set: def_ring-3-1-6 0; }
 #def_ring-3-1-6 > li::marker { content: ""counter(def_ring-3-1-6,decimal)"."; }
 #def_ring-3-1-6 > li { counter-increment: def_ring-3-1-6; }
-#thm_subringTest-2-1-5 { counter-set: thm_subringTest-2-1-5 0; }
-#thm_subringTest-2-1-5 > li::marker { content: ""counter(thm_subringTest-2-1-5,decimal)"."; }
-#thm_subringTest-2-1-5 > li { counter-increment: thm_subringTest-2-1-5; }
-#ssec_subrings-5-1-1-3 { counter-set: ssec_subrings-5-1-1-3 0; }
-#ssec_subrings-5-1-1-3 > li::marker { content: ""counter(ssec_subrings-5-1-1-3,decimal)"."; }
-#ssec_subrings-5-1-1-3 > li { counter-increment: ssec_subrings-5-1-1-3; }
+#thm_subringTest-3-1-5 { counter-set: thm_subringTest-3-1-5 0; }
+#thm_subringTest-3-1-5 > li::marker { content: ""counter(thm_subringTest-3-1-5,decimal)"."; }
+#thm_subringTest-3-1-5 > li { counter-increment: thm_subringTest-3-1-5; }
+#ssec_subrings-6-1-1-3 { counter-set: ssec_subrings-6-1-1-3 0; }
+#ssec_subrings-6-1-1-3 > li::marker { content: ""counter(ssec_subrings-6-1-1-3,decimal)"."; }
+#ssec_subrings-6-1-1-3 > li { counter-increment: ssec_subrings-6-1-1-3; }
 #ssec_integralDomains-5-1-1-1 { counter-set: ssec_integralDomains-5-1-1-1 0; }
 #ssec_integralDomains-5-1-1-1 > li::marker { content: ""counter(ssec_integralDomains-5-1-1-1,decimal)"."; }
 #ssec_integralDomains-5-1-1-1 > li { counter-increment: ssec_integralDomains-5-1-1-1; }
@@ -317,9 +317,10 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-numberSystems" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Number Systems</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#ssec_binaryOperations" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Binary Operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-fields" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Fields</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-propertiesOfFields" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Properties of Fields</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-subfieldsAndExtensions" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Subfields and Extensions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#ssec_fields" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#ssec_examplesOfFields" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Examples of Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-propertiesOfFields" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Properties of Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-subfieldsAndExtensions" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Subfields and Extensions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -455,7 +456,7 @@ window.MathJax = {
 </h4>
 <div class="para" id="thm-multiplication-mod-I-1-1">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> If <span class="process-math">\(a,b,c,d\in R\)</span> such that <span class="process-math">\(a+I = b+I\)</span> and <span class="process-math">\(c+I = d+I\text{,}\)</span> then <span class="process-math">\(ac + I = bd + I\text{.}\)</span>
 </div></article><details id="thm-multiplication-mod-I-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-multiplication-mod-I-2-1">As before, we observe that <span class="process-math">\(b-a = x\in I\)</span> and <span class="process-math">\(d-c = y\in I\text{.}\)</span> Write <span class="process-math">\(b = x+a\)</span> and <span class="process-math">\(d = c+y\text{.}\)</span> Then <span class="process-math">\(bd = (x+a)(c+y) = xc + xy + ac + ay = ac + \underbrace{(xc+xy+ay)}_{\in I}\text{,}\)</span> so <span class="process-math">\(bd - ac \in I\text{,}\)</span> and thus <span class="process-math">\(bd + I = ac + I\text{.}\)</span>
-</div></article></details><div class="para" id="sec_quotientRings-4-12">The previous two theorems together show that addition and multiplication on the set <span class="process-math">\(R/I\)</span> is well-defined. As these operations are built on the operations of <span class="process-math">\(R\text{,}\)</span> it will likely not surprise you to learn that the usual <a href="sec_rings.html#def_ring" class="xref" data-knowl="./knowl/xref/def_ring.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.5">axioms defining a ring</a> also hold.</div>
+</div></article></details><div class="para" id="sec_quotientRings-4-12">The previous two theorems together show that addition and multiplication on the set <span class="process-math">\(R/I\)</span> is well-defined. As these operations are built on the operations of <span class="process-math">\(R\text{,}\)</span> it will likely not surprise you to learn that the usual <a href="sec_rings.html#def_ring" class="xref" data-knowl="./knowl/xref/def_ring.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.7">axioms defining a ring</a> also hold.</div>
 <article class="theorem theorem-like" id="sec_quotientRings-4-13"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span>
 </h4>
