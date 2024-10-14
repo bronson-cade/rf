@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.8</span><span class="period">.</span>
+</h4>
+<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring, <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{,}\)</span> and <span class="process-math">\(a,b\in R\text{.}\)</span> The set of cosets of <span class="process-math">\(I\text{,}\)</span> denoted <span class="process-math">\(\bar{R} = R/I\text{,}\)</span> is a commutative ring (called the <dfn class="terminology">quotient ring</dfn> of <span class="process-math">\(R\)</span> by <span class="process-math">\(I\)</span>) with additive identity <span class="process-math">\(0_R+I\)</span> and multiplicative identity <span class="process-math">\(1_R + I\)</span> under the following operations:</div>
+<div class="displaymath process-math">
+\begin{align*}
+(a+I) + (b+I) &amp; := (a+b) + I\\
+(a+I) \cdot (b+I) &amp; := (ab) + I.
+\end{align*}
+</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para">These operations were shown to be well-defined in <a href="sec_quotientRings.html#thm_additionModI" class="xref" data-knowl="./knowl/xref/thm_additionModI.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.6">Theorem 3.3.6</a> and <a href="sec_quotientRings.html#thm_multiplicationModI" class="xref" data-knowl="./knowl/xref/thm_multiplicationModI.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.7">Theorem 3.3.7</a>. We need to show that, with these operations, all eight ring axioms hold and that multiplication is commutative. Take <span class="process-math">\(a+I,b+I,c+I\in R/I\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">We begin with the additive axioms. For associativity:</div>
+<div class="displaymath process-math">
+\begin{align*}
+(a+I) + ((b+I)+(c+I)) \amp= (a+I) + ((b+c)+I) \\
+\amp= (a+(b+c))+I\\
+((a+I) + (b+I))+(c+I) \amp= ((a+b)+I) + (c+I) \\
+\amp= ((a+b)+c)+I.
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(R\)</span> has associative addition we have <span class="process-math">\(a+(b+c) = (a+b)+c\)</span> and so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a+(b+c) +I = (a+b)+c + I
+\end{equation*}
+</div>
+<div class="para">the cosets are equal.</div>
+</div> <div class="para logical">
+<div class="para">For commutativity:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a+I) + (b+I) = (a+b) + I = (b+a)+I = (b+I)+(a+I).
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">For identity:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(0_R+I)+(a+I) = (0_R+a) + I = a+I
+\end{equation*}
+</div>
+<div class="para">as <span class="process-math">\(0_R\)</span> is the additive identity in <span class="process-math">\(R\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">For inverses:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a+I) + ((-a)+I) = (a+(-a)) + I = 0_R + I
+\end{equation*}
+</div>
+<div class="para">and so the additive inverse of <span class="process-math">\(a+I\)</span> is <span class="process-math">\(-a+I\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">We now turn to the multiplicative axioms plus commutativity. For associativity:</div>
+<div class="displaymath process-math">
+\begin{align*}
+(a+I)((b+I)(c+I))\amp= (a+I)(bc+I) \\
+\amp= a(bc) + I \\
+((a+I)(b+I))(c+I) \amp= (ab+I)(c+I) \\
+\amp= (ab)c+I 
+\end{align*}
+</div>
+<div class="para">But multiplication in <span class="process-math">\(R\)</span> is associative so that <span class="process-math">\(a(bc) = (ab)c\text{.}\)</span> Hence,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a(bc)+I = (ab)c+I.
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">For commutativity:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a+I)(b+I) = (ab)+I = (ba)+I = (b+I)(a+I).
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">For identity:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(1_R+I)(a+I) = (1_R\cdot a)+I = a+I
+\end{equation*}
+</div>
+<div class="para">as <span class="process-math">\(1_R\)</span> is the multiplicative identity in <span class="process-math">\(R\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Since <span class="process-math">\(R/I\)</span> has commutative multiplication we only need to check the left-distributive axiom.</div>
+<div class="displaymath process-math">
+\begin{align*}
+(a+I)( (b+I) + (c+I)) \amp= (a+I)( (b+c) + I) \\
+\amp= (a(b+c)) + I \\
+\amp= (ab+ac) + I\\
+(a+I)(b+I)+ (a+I)(c+I) \amp= (ab)+I + (ac)+I \\
+\amp= (ab+ac) + I 
+\end{align*}
+</div>
+<div class="para">where we have used that multiplication in <span class="process-math">\(R\)</span> has the left-distributive property in line 3.</div>
+</div> <div class="para">We conclude that <span class="process-math">\(R/I\)</span> is a commutative ring.</div></article></details><span class="incontext"><a class="internal" href="sec_quotientRings.html#ssec_quotientRings-9">in-context</a></span>
+</body>
+</html>

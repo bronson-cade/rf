@@ -2185,7 +2185,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.4",
   "title": "Divisibility in Integral Domains",
-  "body": " Divisibility in Integral Domains   Guiding Questions   In this section, we'll seek to answer the questions:    What multiplicative properties can we generalize from to any integral domain?  What are the differences between a prime and irreducible element in a commutative ring?     When we introduced the notion of integral domain, we said that part of the reason for the definition was to capture some of the most essential properties of the integers. This is the heart of abstraction and generalization in mathematics: to distill the important properties of our objects of interest and explore the consequences of those properties. One such important property of is cancellation .    Divisibility in Domains   Cancellation Law   Let be a commutative ring. Then is a domain if and only if for all with and , we have .     Assume is a domain and . Then , so . Since is a domain, it has no zero divisors, and therefore either or . The first possibility cannot happen as . We therefore must have , or .  Conversely, by contrapositive, assume that is not a domain. Let be a zero divisor; then there is a nonzero such that . Since as zero-divisors are non-zero, this implies that as we can cancel the 's, a contradiction.   We may read as saying that the defining property of an integral domain is the ability to cancel common nonzero factors. Note that we have not divided ; division is not a binary operation, and nonzero elements of rings need not be units. However, as was the case in , there are notions of divisibility and factorization in rings.   divides (ring)  factor (ring)   Let be a commutative ring with identity, and let . We say  divides  and write if there is a such that . We then say that is a factor of .      Find all factors of in the following rings:         In , every non-zero element is a unit. Thus any element is a factor of as . This is a general property: units are always factors of every element.  In , the factors of are as .      Prime and Irreducible Elements  Our definition of prime also extends nicely to commutative rings. Indeed, the desire to extend the familiar notion of prime from to any ring is the reason for our less-familiar definition given in .   prime (ring element)   Let be commutative. We say a nonzero nonunit element is prime if whenever for some , either or .    A notion related to primality is irreducibility. In fact, one might reasonably say that irreducibility is the natural generalization of the typical definition of prime one encounters in school mathematics. However, we will see that the notions differ in general.   irreducible (ring element)  atom   Let be commutative with identity. We say a nonzero nonunit element is irreducible if whenever for some , one of or is a unit. (Note that in some areas of the literature, the word atom is used interchangeably with irreducible.)      Find the units, primes, and irreducibles in the following rings.          TBD.    In domains, all primes are irreducible.    Let be a domain. If is prime, then is irreducible.     Compare to the proof of Theorem .  Let be prime, and suppose that for some . We show that either or is a unit.  Since , we have . By definition either or . Without loss of generality, assume . Then there is a such that , so , and we use the Cancellation Law to cancel to obtain . Thus, is a unit, making irreducible.   In familiar settings, the notion of prime and irreducible exactly coincide.    Every irreducible in is prime.     Let be irreducible, and suppose that . Then . Since is irreducible, either or is a unit. However, the only units are , so either one of or is or . In either case, is prime.   Despite their overlap in familiar settings, primes and irreducibles are distinct types of elements. As the next exploration demonstrates, not all primes are irreducible. What is more, will show that not all irreducibles are primes, even in domains!    Find an example of a ring and prime such that is not irreducible.    In , is prime by but not irreducible as and is not a unit.      Consider the set of all polynomials in for which the coefficient on the linear term is zero. That is, .  (You should convince yourself that is an integral domain, but do not need to prove it.) Then, find a polynomial of the form in that is irreducible, but not prime.    Consider . Then is irreducible, as it cannot be factored into a product of linear polynomials (there aren't any in ), so any factorization of is degree 2 times degree 0. Then the leading coefficients must be units, i.e., both 1 or both .  However, is not prime, as but .      Greatest Common Divisors  Our last straightforward generalization from the multiplicative structure of is the notion of greatest common divisor. As our next definition again demonstrates, our careful work in the context of generalizes nicely to all domains. Indeed, we intentionally did not appeal to to define the greatest common divisor in , as not all rings have a natural order relation like does.   greatest common divisor (integral domain)   Let be a domain, and let . A nonzero element is a greatest common divisor of and if    and and,    if with and , then .         Let be a domain and and suppose is a greatest common divisor of and . Then any associate of is also a greatest common divisor of and . (Recall .)     Let be a gcd of and , let , and . We claim is also a gcd of and .  Since and there are such that and . Then and , so and .  Let be a common divisor of and . Since is a gcd, , i.e., . Then , so .  Thus, is a gcd of and .     In most familiar domains, GCDs exist. However, they don't always! Find an example of elements in the ring from Exercise which do not have a GCD. Justify your assertion.    Consider and . First note that is not a common divisor in .  Both and are divisible by and in . However, neither can be the gcd, as and .       Mark the following as true or false.    In a domain, the cancellation law holds.    In a ring, the cancellation law holds.    In a , the cancellation law holds.     is a factor of in .     is a factor of in .     is a prime element of .     is a prime element of .    In a domain, the greatest common divisor of two non-zero elements is unique.    In a domain, the greatest common divisor of two non-zero elements is unique up to associates.    A domain is a commutative ring where the cancellation law holds.    If is a zero-divisor in a commutative ring, then is a factor of .    In a domain every irreducible element is prime.      Find two factorizations of into products of irreducibles. Why does this not contradict the ?    Let's investigate prime and irreducible elements of the .    Prove that is a prime element.    Prove that is a prime element.      Find all the units in the Gaussian Integers. THat is, compute .    Square matrices over a ring are never an integral domain (unless the coefficient rings is and ). Prove for a general ring that is not a domain for .    The is a convenient way to test if a subring is a ring. Formulate and prove a sub-domain test.    In the Gaussian Integers, we can factor in at least two ways: Clearly and . Use the definition of units and associates to explain what is happening here.    Verify that is a subring of . Is it a sub-domain?    Verify that is a subring of . Is it a sub-domain?    Prove that any subring of an integral domain is an integral domain.   Nilpotent Elements Nilpotent Elements  An element is called nilpotent if there exists such that .    Verify that is a nilpotent element (of whatever coefficient ring you want).    Verify that is a nilpotent element of .    Prove that a non-zero nilpotent element is a zero-divisor.    Show that is a zero-divisor but not nilpotent. That is, the converse to the previous part is false in general.      Prove that if is nilpotent, then .    "
+  "body": " Divisibility in Integral Domains   Guiding Questions   In this section, we'll seek to answer the questions:    What multiplicative properties can we generalize from to any integral domain?  What are the differences between a prime and irreducible element in a commutative ring?     When we introduced the notion of integral domain, we said that part of the reason for the definition was to capture some of the most essential properties of the integers. This is the heart of abstraction and generalization in mathematics: to distill the important properties of our objects of interest and explore the consequences of those properties. One such important property of is cancellation .    Divisibility in Domains   Cancellation Law   Let be a commutative ring. Then is a domain if and only if for all with and , we have .     Assume is a domain and . Then , so . Since is a domain, it has no zero divisors, and therefore either or . The first possibility cannot happen as . We therefore must have , or .  Conversely, by contrapositive, assume that is not a domain. Let be a zero divisor; then there is a nonzero such that . Since as zero-divisors are non-zero, this implies that as we can cancel the 's, a contradiction.   We may read as saying that the defining property of an integral domain is the ability to cancel common nonzero factors. Note that we have not divided ; division is not a binary operation, and nonzero elements of rings need not be units. However, as was the case in , there are notions of divisibility and factorization in rings.   divides (ring)  factor (ring)   Let be a commutative ring with identity, and let . We say  divides  and write if there is a such that . We then say that is a factor of .      Find all factors of in the following rings:         In , every non-zero element is a unit. Thus any element is a factor of as . This is a general property: units are always factors of every element.  In , the factors of are as .      Prime and Irreducible Elements  Our definition of prime also extends nicely to commutative rings. Indeed, the desire to extend the familiar notion of prime from to any ring is the reason for our less-familiar definition given in .   prime (ring element)   Let be commutative. We say a nonzero nonunit element is prime if whenever for some , either or .    A notion related to primality is irreducibility. In fact, one might reasonably say that irreducibility is the natural generalization of the typical definition of prime one encounters in school mathematics. However, we will see that the notions differ in general.   irreducible (ring element)  atom   Let be commutative with identity. We say a nonzero nonunit element is irreducible if whenever for some , one of or is a unit. (Note that in some areas of the literature, the word atom is used interchangeably with irreducible.)      Find the units, primes, and irreducibles in the following rings.          TBD.    In domains, all primes are irreducible.    Let be a domain. If is prime, then is irreducible.     Compare to the proof of Theorem .  Let be prime, and suppose that for some . We show that either or is a unit.  Since , we have . By definition either or . Without loss of generality, assume . Then there is a such that , so , and we use the Cancellation Law to cancel to obtain . Thus, is a unit, making irreducible.   In familiar settings, the notion of prime and irreducible exactly coincide.    Every irreducible in is prime.     Let be irreducible, and suppose that . Then . Since is irreducible, either or is a unit. However, the only units are , so either one of or is or . In either case, is prime.   Despite their overlap in familiar settings, primes and irreducibles are distinct types of elements. As the next exploration demonstrates, not all primes are irreducible. What is more, will show that not all irreducibles are primes, even in domains!    Find an example of a ring and prime such that is not irreducible.    In , is prime by but not irreducible as and is not a unit.      Consider the set of all polynomials in for which the coefficient on the linear term is zero. That is, .  (You should convince yourself that is an integral domain, but do not need to prove it.) Then, find a polynomial of the form in that is irreducible, but not prime.    Consider . Then is irreducible, as it cannot be factored into a product of linear polynomials (there aren't any in ), so any factorization of is degree 2 times degree 0. Then the leading coefficients must be units, i.e., both 1 or both .  However, is not prime, as but .      Greatest Common Divisors  Our last straightforward generalization from the multiplicative structure of is the notion of greatest common divisor. As our next definition again demonstrates, our careful work in the context of generalizes nicely to all domains. Indeed, we intentionally did not appeal to to define the greatest common divisor in , as not all rings have a natural order relation like does.   greatest common divisor (integral domain)   Let be a domain, and let . A nonzero element is a greatest common divisor of and if    and and,    if with and , then .         Let be a domain and and suppose is a greatest common divisor of and . Then any associate of is also a greatest common divisor of and . (Recall .)     Let be a gcd of and , let , and . We claim is also a gcd of and .  Since and there are such that and . Then and , so and .  Let be a common divisor of and . Since is a gcd, , i.e., . Then , so .  Thus, is a gcd of and .     In most familiar domains, GCDs exist. However, they don't always! Find an example of elements in the ring from Exercise which do not have a GCD. Justify your assertion.    Consider and . First note that is not a common divisor in .  Both and are divisible by and in . However, neither can be the gcd, as and .       Mark the following as true or false.    In a domain, the cancellation law holds.    In a ring, the cancellation law holds.    In a , the cancellation law holds.     is a factor of in .     is a factor of in .     is a prime element of .     is a prime element of .    In a domain, the greatest common divisor of two non-zero elements is unique.    In a domain, the greatest common divisor of two non-zero elements is unique up to associates.    A domain is a commutative ring where the cancellation law holds.    If is a zero-divisor in a commutative ring, then is a factor of .    In a domain every irreducible element is prime.      Find two factorizations of into products of prime elements. Why does this not contradict the ?    Let's investigate prime and irreducible elements of the .    Prove that is a prime element.    Prove that is a prime element.      Consider the polynomial ring over .    Show that is irreducible.    Show that is not irreducible.    Show that is irreducible.      Consider the polynomial ring over . Which of the following polynomials are irreducible?                          Another interesting example where irreducibles need not be prime are in the ring . We will revisit this idea in Section ????    Define a norm on , i.e. by  Prove that is multiplicative, i.e. .   Verify that in we have the equality .    Use the norm to prove that does not divide nor does it divide . In particular, this tells us is not a prime element.    Use the norm to prove that is irreducible.      "
 },
 {
   "id": "obj_divisibilityIntegralDomains",
@@ -2365,7 +2365,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.4.2",
   "title": "",
-  "body": " Find two factorizations of into products of irreducibles. Why does this not contradict the ?  "
+  "body": " Find two factorizations of into products of prime elements. Why does this not contradict the ?  "
 },
 {
   "id": "exers_divisibilityIntegralDomains-3",
@@ -2383,7 +2383,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.4.4",
   "title": "",
-  "body": " Find all the units in the Gaussian Integers. THat is, compute .  "
+  "body": " Consider the polynomial ring over .    Show that is irreducible.    Show that is not irreducible.    Show that is irreducible.    "
 },
 {
   "id": "exers_divisibilityIntegralDomains-5",
@@ -2392,7 +2392,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.4.5",
   "title": "",
-  "body": " Square matrices over a ring are never an integral domain (unless the coefficient rings is and ). Prove for a general ring that is not a domain for .  "
+  "body": " Consider the polynomial ring over . Which of the following polynomials are irreducible?                        "
 },
 {
   "id": "exers_divisibilityIntegralDomains-6",
@@ -2401,61 +2401,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.4.6",
   "title": "",
-  "body": " The is a convenient way to test if a subring is a ring. Formulate and prove a sub-domain test.  "
-},
-{
-  "id": "exers_divisibilityIntegralDomains-7",
-  "level": "2",
-  "url": "sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains-7",
-  "type": "Exercise",
-  "number": "2.4.4.7",
-  "title": "",
-  "body": " In the Gaussian Integers, we can factor in at least two ways: Clearly and . Use the definition of units and associates to explain what is happening here.  "
-},
-{
-  "id": "exers_divisibilityIntegralDomains-8",
-  "level": "2",
-  "url": "sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains-8",
-  "type": "Exercise",
-  "number": "2.4.4.8",
-  "title": "",
-  "body": " Verify that is a subring of . Is it a sub-domain?  "
-},
-{
-  "id": "exers_divisibilityIntegralDomains-9",
-  "level": "2",
-  "url": "sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains-9",
-  "type": "Exercise",
-  "number": "2.4.4.9",
-  "title": "",
-  "body": " Verify that is a subring of . Is it a sub-domain?  "
-},
-{
-  "id": "exers_divisibilityIntegralDomains-10",
-  "level": "2",
-  "url": "sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains-10",
-  "type": "Exercise",
-  "number": "2.4.4.10",
-  "title": "",
-  "body": " Prove that any subring of an integral domain is an integral domain.  "
-},
-{
-  "id": "exer_nilpotent",
-  "level": "2",
-  "url": "sec_divisibilityIntegralDomains.html#exer_nilpotent",
-  "type": "Exercise",
-  "number": "2.4.4.11",
-  "title": "Nilpotent Elements.",
-  "body": "Nilpotent Elements Nilpotent Elements  An element is called nilpotent if there exists such that .    Verify that is a nilpotent element (of whatever coefficient ring you want).    Verify that is a nilpotent element of .    Prove that a non-zero nilpotent element is a zero-divisor.    Show that is a zero-divisor but not nilpotent. That is, the converse to the previous part is false in general.    "
-},
-{
-  "id": "exers_divisibilityIntegralDomains-12",
-  "level": "2",
-  "url": "sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains-12",
-  "type": "Exercise",
-  "number": "2.4.4.12",
-  "title": "",
-  "body": " Prove that if is nilpotent, then .  "
+  "body": " Another interesting example where irreducibles need not be prime are in the ring . We will revisit this idea in Section ????    Define a norm on , i.e. by  Prove that is multiplicative, i.e. .   Verify that in we have the equality .    Use the norm to prove that does not divide nor does it divide . In particular, this tells us is not a prime element.    Use the norm to prove that is irreducible.    "
 },
 {
   "id": "sec_homomorphisms",
@@ -2977,7 +2923,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.3",
   "title": "Quotient Rings",
-  "body": " Quotient Rings   Guiding Questions   In this section, we'll seek to answer the questions:    How can we use ideals to build new rings out of old?  What sorts of ideals allow us to build domains? Fields?  What is the First Isomorphism Theorem?     If the only rings that existed were polynomial rings, familiar systems of numbers like , and matrix rings, there would still be enough to justify defining the concept of a ring and exploring its properties. However, these are not the only rings that exist. In this section, we explore a way of building new rings from old by means of ideals. To better understand these new rings, we will also define two new classes of ideals: prime ideals, and maximal ideals. We end by briefly connecting these rings to a familiar problem from high school algebra.    Congruence modulo  The major concept of this section is the notion of congruence modulo . One can reasonably think of this idea as a generalization of congruence modulo in .   congruence mod   Let be a ring, an ideal of , and . We say is congruent to modulo if . If this is the case, we write .      Determine (with brief justification) whether in the following rings .   , , ,  , , ,  , , ,  , , ,  ( Challenge. ) , , ,    TBD last one: .     Given a ring , ideal , and , when is it the case that ?    When .    Observe that if , then there is some such that , and so .  As was the case in , congruence modulo is an equivalence relation.    Let be a ring and an ideal of . Then congruence modulo is an equivalence relation on .    Since , for all , so and the relation is reflexive.  Moreover, if , then , so the relation is symmetric.  If and , then , so the relation is transitive.    The set of equivalence classes under this relation is denoted . What is more, this is not merely a set of equivalence classes. As the next two theorems demonstrate, this set possesses two algebraic operations that extend naturally from those of .    Let be a ring and an ideal of . If such that and , then .    Suppose and . Then and . Adding, we have . Thus, .      Let be a ring and an ideal of . If such that and , then .    As before, we observe that and . Write and . Then , so , and thus .    The previous two theorems together show that addition and multiplication on the set is well-defined. As these operations are built on the operations of , it will likely not surprise you to learn that the usual axioms defining a ring also hold.   quotient ring   Let be a commutative ring with identity , an ideal of , and . The set of equivalence classes modulo , denoted , is a commutative ring (called the quotient ring of by ) with identity under the following operations:     These operations were shown to be well-defined in and .   Thus, given a ring and ideal of , we may build the quotient ring .    Answer the questions below. Be prepared to give an information justification of your thinking.   Suppose and . Calculate and .  Let and . List all elements of (there should be 9 in total).  Set and . Find an element such that .     In , we will explore the question of when possesses some of the properties we've previously explored, e.g., when is a domain? A field? First, we conclude with two explorations. The first gives us a sense of what these rings can look like. The second connects quotient rings to solution sets of polynomial equations.    Consider the ring and the ideals and .   List the elements of and .  What happens to in when you pass to the quotient ring ? How about as you pass from to ?  In view of your answer to the previous question, how does behave as you mod out by and ?  Build addition and multiplication tables for each of and .    TBD    graph (of a function)  zero set   One of the most useful connections made in high school algebra is the connection between a function (in particular, a polynomial function) and its graph . We may extend this notion to ideals via the concept of a zero set as follows.  Let be a field and with a nonzero ideal. We define the zero set of , denoted , as the set of all points for which for all .   Suppose . Prove that if and only if for each . Thus, can be determined entirely by examining the generators of .  Describe given .  (Challenge) Given and , describe and .  Given , describe the relationship between the variables and in the quotient . In what way have we restricted our polynomial inputs to the parabola ?    TBD.      Prime and Maximal Ideals  In this section, we continue our exploration of quotient rings by looking more closely at properties of ideals. We focus on particular properties of ideals that ensure that the quotient is either a domain or a field.   prime ideal  ideal (prime)   Let be commutative with identity and a nonzero ideal. We say is prime if whenever such that , we have or .      Let be a domain and be prime. Then is a prime ideal.   TBD     Which of the following ideals are prime?    in      in      in      in      in           Not prime. , but .    Prime. If , then and 11 is prime.    Prime. Easy explanation is that is isomorphic to . For now, though, we know that is irreducible, and is a PID, so irreducibles are prime.    Not prime. , but for degree reasons.    One may use the EA to show that , so . This is prime.       It is this precise condition that guarantees that the resulting quotient is a domain.    Let be commutative with identity and an ideal of . Then is prime if and only if is an integral domain.     Begin by assuming that is prime, and suppose . Then , and since is prime, either or . Thus either or .  Now assume that is a domain. Further, let be such that . Then , and since is a domain, or , i.e., or . Thus, is prime.   We now consider another important class of ideals: the maximal ideals.   maximal ideal  ideal (maximal)   Let be commutative with identity and let be a nonzero ideal. We say that is a maximal ideal if no proper ideal of properly contains . That is, if is an ideal satisfying , either or .    In other words, an ideal is maximal if no larger ideal (with respect to inclusion) properly contains it. As we will see later, rings can have many maximal ideals.  It is a fact that any ring with has a maximal ideal. This follows from Zorn's Lemma ; a rigorous exploration of Zorn's Lemma lies outside of the scope of this text, but suffice it to say that Zorn's Lemma is incredibly useful in all areas of algebra for proving existence theorems. For example, a proof that every vector space has a basis relies on Zorn's Lemma.  Rings with only one maximal ideal are said to be local rings , and are actively studied in modern research in commutative algebra (the study of commutative rings and their properties).  The next two results demonstrate that the maximality of is precisely the condition that guarantees that is a field.    Let be commutative with identity and a maximal ideal of . Let , and set . Then: is an ideal of ; ; and thus there exist , such that .   TBD     Let be commutative with identity and an ideal of . Then is maximal if and only if is a field.    For the forward direction, apply the previous lemma to construct an inverse for given any .    If is a field, assume is an ideal of that properly contains . Let ; then is a nonzero element of , and since is a field, there is some such that . Since , . As , we have , and thus , which means . Thus, is maximal.  Now, suppose that is maximal and let . Apply the previous lemma to obtain , where . Then       Every maximal ideal is prime.    All fields are integral domains. Thus, if is maximal, is a field, thus a domain, and thus is prime.    In general, the converse is not true (see the Challenge below). However, it holds in sufficiently nice rings.    In a principal ideal domain, every prime ideal is maximal.    Let be a PID and a prime ideal. By previous work, is prime. Suppose that . Thus, , so . That is, . Since is prime and is a domain, it is irreducible. Thus, either or is a unit. If is a unit, then . If is a unit, then , and thus , which means that .  Thus, is maximal.      Describe the prime and maximal ideals of and .   For which ideals is a domain? A field? Similarly for . Or, use .  TBD    Challenge   Find a commutative ring with identity, , and a nonmaximal prime ideal of .    In , it is straightforward to see that is prime ( ). Moreover, , and thus is not maximal.      Homomorphisms and Quotient Rings  As quotient rings provide fertile soil for building new examples of rings, it should not surprise us to find that homomorphisms interact with quotient rings in interesting and useful ways. Chief among them are the isomorphism theorems . In this subsection, we focus primarily on the First Isomorphism Theorem.  We have seen that any homomorphism gives rise to an ideal of , namely . Our next theorem demonstrates that, given a commutative ring with identity , every ideal is the kernel of some homomorphism defined on .    Let be commutative with identity and an ideal of . Define by . Then is a homomorphism with .    In what follows, we work toward a proof of the First Isomorphism Theorem for Rings.  Throughout, let and be commutative rings with identity, and let be a homomorphism. Recall that .  Define by .    Using the notation from above, is a well-defined function.     Suppose that . Then , so , and thus . Therefore, , and is well-defined.     Using the notation above, is a homomorphism.     We show that preserves addition. That it preserves multiplication will follow similarly. Observe that .     Using the notation above, is one-to-one.     Suppose that . That is, . Then , so , and therefore . Thus, is one-to-one.     Using the notation above, is onto.     Since is onto by definition, given any there is some such that . Then .   We thus obtain the following, due to Emmy Noether:   First Isomorphism Theorem  Noether's Isomorphism Theorem  E. Noether   Let be a homomorphism of commutative rings. Then .  In particular, if is onto, .    The First Isomorphism Theorem gives a useful way of establishing an isomorphism between a quotient ring and another ring : find an onto homomorphism with kernel .    We have the following isomorphisms of rings.                     TBD Define by . We saw earlier that this evaluation map is a homomorphism. It is easy to see that is onto as for any . Thus, by the First Isomorphism Theorem.  We claim that . Clearly, . Moreover, . Finally, is prime and thus maximal, as is a PID. Thus, .     Let and define by . That is, sends an equivalence class represented by to the equivalence class represented by in .   Show that is a well-defined function.  Prove that is a homomorphism.  Is onto? Justify.  Compute (that is, list the elements in the set). Is one-to-one?  Without appealing to the definition, is prime? Maximal? Explain.    TBD    "
+  "body": " Quotient Rings   Guiding Questions   In this section, we'll seek to answer the questions:    How can we use ideals to build new rings out of old?  What sorts of ideals allow us to build domains? Fields?  What is the First Isomorphism Theorem?     If the only rings that existed were polynomial rings, familiar systems of numbers like , polynomial rings, and matrix rings, there would still be enough to justify defining the concept of a ring and exploring its properties. However, these are not the only rings that exist. In this section, we explore a way of building new rings from old by means of ideals. To better understand these new rings, we will also define two new classes of ideals: prime ideals, and maximal ideals. We end by briefly connecting these rings to a familiar problem from high school algebra.    Congruence modulo  The major concept of this section is the notion of congruence modulo . One can reasonably think of this idea as a generalization of congruence modulo in .   congruence mod   Let be a ring, an ideal of , and . We say is congruent to modulo if . If this is the case, we write .      Determine (with brief justification) whether in the following rings .   , , ,  , , ,  , , ,  , , ,  ( Challenge. ) , , ,       We have so in .    We have as for any . Thus in .     . Thus in .     . Thus in .     . Thus in .        Given a ring , ideal , and , when is it the case that ?    When .    Observe that if , then there is some such that , and so .  The notation is more than just notation. It is an equality of sets. Given any ideal and any , define to be the set of all translates of under .    Let be an ideal and . Then is congruent to modulo if and only if we have equality of sets .    Suppose is congruent to modulo . Then so that for some . Take any , then as . Thus . Using instead we have, similarly, that . Thus .  Suppose . Since , we know that . Since , we have that . Thus for some . Equivalently . Thus is congruent to modulo .       Coset (ideal)   coset (ideal)   Given an ideal in a commutative ring . A coset of is a set of the form The collection of all cosets is denoted or if is understood:       We take a minute to observe that in the notion of congruence: modulo is equivalent to the definition here. Indeed, any defines a principal ideal . If , then for some . Hence, . And conversely, if , then . Thus there exists with and so .  In particular, this is a successful generalization of the notion of congruence modulo .    As was the case in , congruence modulo is an equivalence relation.    Let be a ring and an ideal of . Then congruence modulo is an equivalence relation on .    Since , for all , so and the relation is reflexive.  Moreover, if , then , so the relation is symmetric.  If and , then , so the relation is transitive.      Quotient Rings   Notation for Integers Modulo  It's standard practice to identify the principal ideal with when no confusion can arise. In , the set of equivalence classes modulo is denoted by instead of .   The set of equivalence classes under this relation is denoted . In particular, What is more, this is not merely a set of equivalence classes. As the next two theorems demonstrate, this set possesses two algebraic operations that extend naturally from those of .    Let be a ring and an ideal of . If such that and , then .    Suppose and . Then and . Adding, we have Thus, .    Note that the only requirement in the proof of this theorem is that is closed under addition.    Let be a commutative ring and an ideal of . If such that and , then .    As before, we observe that and . Write and . Then , so . Therefore .    The preceeding proof used two properties of : closure under addition and closure under multiplication by .  The previous two theorems together show that addition and multiplication on the set is well-defined. As these operations are built on the operations of , it will likely not surprise you to learn that the usual axioms defining a ring also hold.   quotient ring   Let be a commutative ring, an ideal of , and . The set of cosets of , denoted , is a commutative ring (called the quotient ring of by ) with additive identity and multiplicative identity under the following operations:     These operations were shown to be well-defined in and . We need to show that, with these operations, all eight ring axioms hold and that multiplication is commutative. Take .  We begin with the additive axioms. For associativity: Since has associative addition we have and so the cosets are equal.  For commutativity:   For identity: as is the additive identity in .  For inverses: and so the additive inverse of is .  We now turn to the multiplicative axioms plus commutativity. For associativity: But multiplication in is associative so that . Hence,   For commutativity:   For identity: as is the multiplicative identity in .  Since has commutative multiplication we only need to check the left-distributive axiom. where we have used that multiplication in has the left-distributive property in line 3.  We conclude that is a commutative ring.    Thus, given a ring and ideal of , we may build the quotient ring .    Answer the questions below. Be prepared to give an information justification of your thinking.   Suppose and . Calculate and .  Let and . List all elements of (there should be 9 in total).  Set and . Find an element such that .     In , we will explore the question of when possesses some of the properties we've previously explored, e.g., when is a domain? A field? First, we conclude with two explorations. The first gives us a sense of what these rings can look like. The second connects quotient rings to solution sets of polynomial equations.    Consider the ring and the ideals and .   List the elements of and .  What happens to in when you pass to the quotient ring ? How about as you pass from to ?  In view of your answer to the previous question, how does behave as you mod out by and ?  Build addition and multiplication tables for each of and .    TBD    graph (of a function)  zero set   One of the most useful connections made in high school algebra is the connection between a function (in particular, a polynomial function) and its graph . We may extend this notion to ideals via the concept of a zero set as follows.  Let be a field and with a nonzero ideal. We define the zero set of , denoted , as the set of all points for which for all .   Suppose . Prove that if and only if for each . Thus, can be determined entirely by examining the generators of .  Describe given .  (Challenge) Given and , describe and .  Given , describe the relationship between the variables and in the quotient . In what way have we restricted our polynomial inputs to the parabola ?    TBD.      Prime and Maximal Ideals  In this section, we continue our exploration of quotient rings by looking more closely at properties of ideals. We focus on particular properties of ideals that ensure that the quotient is either a domain or a field.   Fraktur Font  The Fraktur font is a German typeface from the 16th century. It was long known as the German typeface . In 1941 it was banned by the Nazi government. It is usually used when denoting prime ( ) and maximal ( ) ideals. TBD    prime ideal  ideal (prime)   Let be commutative with identity and a non-zero proper ideal. We say is prime if whenever such that , we have or .    This definition arises by replacing divides with is contained in in the usual definition of prime element??? The following theorem shows that these definitions agree to the extent they can: prime elements generate prime ideals.    Let be a domain and be prime. Then is a prime ideal.    Suppose is a prime element of a domain and . Suppose a product is in , say . Then there exists with . Thus . Since is prime, either or .  Without loss of generality assume . Then there exists with . Hence, .      Which of the following ideals are prime?    in      in      in      in      in           Not prime. , but .    Prime. If , then and 11 is prime.    Prime. Easy explanation is that is isomorphic to . For now, though, we know that is irreducible, and is a PID, so irreducibles are prime.    Not prime. , but for degree reasons.    One may use the EA to show that , so . This is prime.       It is this precise condition that guarantees that the resulting quotient is a domain.    Let be commutative with identity and an ideal of . Then is prime if and only if is an integral domain.     Begin by assuming that is prime, and suppose . Then , and since is prime, either or . Thus either or .  Now assume that is a domain. Further, let be such that . Then , and since is a domain, or , i.e., or . Thus, is prime.   We now consider another important class of ideals: the maximal ideals.     Maximal ideal   maximal ideal  ideal (maximal)   Let be commutative with identity and let be a non-zero proper ideal. We say that is a maximal ideal if no proper ideal of properly contains . That is, if is an ideal satisfying , either or .    In other words, an ideal is maximal if no larger ideal (with respect to inclusion) properly contains it. As we will see later, rings can have many maximal ideals.  It is a fact that any ring with has a maximal ideal. This follows from Zorn's Lemma ; a rigorous exploration of Zorn's Lemma lies outside of the scope of this text, but suffice it to say that Zorn's Lemma is incredibly useful in all areas of algebra for proving existence theorems. For example, a proof that every vector space has a basis relies on Zorn's Lemma.  Rings with only one maximal ideal are said to be local rings , and are actively studied in modern research in commutative algebra (the study of commutative rings and their properties).  The next two results demonstrate that the maximality of is precisely the condition that guarantees that is a field.    Let be commutative with identity and a maximal ideal of . Let , and set . Then: is an ideal of ; ; and thus there exist , such that .   TBD     Let be commutative with identity and an ideal of . Then is maximal if and only if is a field.    For the forward direction, apply the previous lemma to construct an inverse for given any .    If is a field, assume is an ideal of that properly contains . Let ; then is a nonzero element of , and since is a field, there is some such that . Since , . As , we have , and thus , which means . Thus, is maximal.  Now, suppose that is maximal and let . Apply the previous lemma to obtain , where . Then       Every maximal ideal is prime.    All fields are integral domains. Thus, if is maximal, is a field, thus a domain, and thus is prime.    In general, the converse is not true (see the Challenge below). However, it holds in sufficiently nice rings.    In a principal ideal domain, every prime ideal is maximal.    Let be a PID and a prime ideal. By previous work, is prime. Suppose that . Thus, , so . That is, . Since is prime and is a domain, it is irreducible. Thus, either or is a unit. If is a unit, then . If is a unit, then , and thus , which means that .  Thus, is maximal.      Describe the prime and maximal ideals of and .   For which ideals is a domain? A field? Similarly for . Or, use .  TBD    Challenge   Find a commutative ring with identity, , and a nonmaximal prime ideal of .    In , it is straightforward to see that is prime ( ). Moreover, , and thus is not maximal.      Homomorphisms and Quotient Rings  As quotient rings provide fertile soil for building new examples of rings, it should not surprise us to find that homomorphisms interact with quotient rings in interesting and useful ways. Chief among them are the isomorphism theorems . In this subsection, we focus primarily on the First Isomorphism Theorem.  We have seen that any homomorphism gives rise to an ideal of , namely . Our next theorem demonstrates that, given a commutative ring with identity , every ideal is the kernel of some homomorphism defined on .    Let be commutative with identity and an ideal of . Define by . Then is a homomorphism with .    In what follows, we work toward a proof of the First Isomorphism Theorem for Rings.  Throughout, let and be commutative rings with identity, and let be a homomorphism. Recall that .  Define by .    Using the notation from above, is a well-defined function.     Suppose that . Then , so , and thus . Therefore, , and is well-defined.     Using the notation above, is a homomorphism.     We show that preserves addition. That it preserves multiplication will follow similarly. Observe that .     Using the notation above, is one-to-one.     Suppose that . That is, . Then , so , and therefore . Thus, is one-to-one.     Using the notation above, is onto.     Since is onto by definition, given any there is some such that . Then .   We thus obtain the following, due to Emmy Noether:   First Isomorphism Theorem  Noether's Isomorphism Theorem  E. Noether   Let be a homomorphism of commutative rings. Then .  In particular, if is onto, .    The First Isomorphism Theorem gives a useful way of establishing an isomorphism between a quotient ring and another ring : find an onto homomorphism with kernel .    We have the following isomorphisms of rings.                     TBD Define by . We saw earlier that this evaluation map is a homomorphism. It is easy to see that is onto as for any . Thus, by the First Isomorphism Theorem.  We claim that . Clearly, . Moreover, . Finally, is prime and thus maximal, as is a PID. Thus, .     Let and define by . That is, sends an equivalence class represented by to the equivalence class represented by in .   Show that is a well-defined function.  Prove that is a homomorphism.  Is onto? Justify.  Compute (that is, list the elements in the set). Is one-to-one?  Without appealing to the definition, is prime? Maximal? Explain.    TBD    "
 },
 {
   "id": "obj_quotientRings",
@@ -2989,173 +2935,200 @@ var ptx_lunr_docs = [
   "body": " Guiding Questions   In this section, we'll seek to answer the questions:    How can we use ideals to build new rings out of old?  What sorts of ideals allow us to build domains? Fields?  What is the First Isomorphism Theorem?   "
 },
 {
-  "id": "sec_quotientRings-4-3",
+  "id": "ssec_congruenceModuloI-3",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-4-3",
+  "url": "sec_quotientRings.html#ssec_congruenceModuloI-3",
   "type": "Definition",
   "number": "3.3.1",
   "title": "",
   "body": " congruence mod   Let be a ring, an ideal of , and . We say is congruent to modulo if . If this is the case, we write .   "
 },
 {
-  "id": "sec_quotientRings-4-4",
+  "id": "ssec_congruenceModuloI-4",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-4-4",
+  "url": "sec_quotientRings.html#ssec_congruenceModuloI-4",
   "type": "Activity",
   "number": "3.3.1",
   "title": "",
-  "body": "  Determine (with brief justification) whether in the following rings .   , , ,  , , ,  , , ,  , , ,  ( Challenge. ) , , ,    TBD last one: .  "
+  "body": "  Determine (with brief justification) whether in the following rings .   , , ,  , , ,  , , ,  , , ,  ( Challenge. ) , , ,       We have so in .    We have as for any . Thus in .     . Thus in .     . Thus in .     . Thus in .     "
 },
 {
-  "id": "sec_quotientRings-4-5",
+  "id": "ssec_congruenceModuloI-5",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-4-5",
+  "url": "sec_quotientRings.html#ssec_congruenceModuloI-5",
   "type": "Exploration",
   "number": "3.3.2",
   "title": "",
   "body": "  Given a ring , ideal , and , when is it the case that ?    When .   "
 },
 {
-  "id": "sec_quotientRings-4-8",
+  "id": "thm_congruenceIsEquality",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-4-8",
+  "url": "sec_quotientRings.html#thm_congruenceIsEquality",
   "type": "Theorem",
   "number": "3.3.2",
+  "title": "",
+  "body": "  Let be an ideal and . Then is congruent to modulo if and only if we have equality of sets .    Suppose is congruent to modulo . Then so that for some . Take any , then as . Thus . Using instead we have, similarly, that . Thus .  Suppose . Since , we know that . Since , we have that . Thus for some . Equivalently . Thus is congruent to modulo .   "
+},
+{
+  "id": "def_cosetsIdeal",
+  "level": "2",
+  "url": "sec_quotientRings.html#def_cosetsIdeal",
+  "type": "Definition",
+  "number": "3.3.3",
+  "title": "",
+  "body": "   Coset (ideal)   coset (ideal)   Given an ideal in a commutative ring . A coset of is a set of the form The collection of all cosets is denoted or if is understood:    "
+},
+{
+  "id": "ssec_congruenceModuloI-10",
+  "level": "2",
+  "url": "sec_quotientRings.html#ssec_congruenceModuloI-10",
+  "type": "Example",
+  "number": "3.3.4",
+  "title": "",
+  "body": "  We take a minute to observe that in the notion of congruence: modulo is equivalent to the definition here. Indeed, any defines a principal ideal . If , then for some . Hence, . And conversely, if , then . Thus there exists with and so .  In particular, this is a successful generalization of the notion of congruence modulo .   "
+},
+{
+  "id": "ssec_congruenceModuloI-12",
+  "level": "2",
+  "url": "sec_quotientRings.html#ssec_congruenceModuloI-12",
+  "type": "Theorem",
+  "number": "3.3.5",
   "title": "",
   "body": "  Let be a ring and an ideal of . Then congruence modulo is an equivalence relation on .    Since , for all , so and the relation is reflexive.  Moreover, if , then , so the relation is symmetric.  If and , then , so the relation is transitive.   "
 },
 {
-  "id": "thm-addition-mod-I",
+  "id": "thm_additionModI",
   "level": "2",
-  "url": "sec_quotientRings.html#thm-addition-mod-I",
+  "url": "sec_quotientRings.html#thm_additionModI",
   "type": "Theorem",
-  "number": "3.3.3",
+  "number": "3.3.6",
   "title": "",
-  "body": "  Let be a ring and an ideal of . If such that and , then .    Suppose and . Then and . Adding, we have . Thus, .   "
+  "body": "  Let be a ring and an ideal of . If such that and , then .    Suppose and . Then and . Adding, we have Thus, .   "
 },
 {
-  "id": "thm-multiplication-mod-I",
+  "id": "thm_multiplicationModI",
   "level": "2",
-  "url": "sec_quotientRings.html#thm-multiplication-mod-I",
+  "url": "sec_quotientRings.html#thm_multiplicationModI",
   "type": "Theorem",
-  "number": "3.3.4",
+  "number": "3.3.7",
   "title": "",
-  "body": "  Let be a ring and an ideal of . If such that and , then .    As before, we observe that and . Write and . Then , so , and thus .   "
+  "body": "  Let be a commutative ring and an ideal of . If such that and , then .    As before, we observe that and . Write and . Then , so . Therefore .   "
 },
 {
-  "id": "sec_quotientRings-4-13",
+  "id": "ssec_quotientRings-9",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-4-13",
+  "url": "sec_quotientRings.html#ssec_quotientRings-9",
   "type": "Theorem",
-  "number": "3.3.5",
+  "number": "3.3.8",
   "title": "",
-  "body": " quotient ring   Let be a commutative ring with identity , an ideal of , and . The set of equivalence classes modulo , denoted , is a commutative ring (called the quotient ring of by ) with identity under the following operations:     These operations were shown to be well-defined in and .  "
+  "body": " quotient ring   Let be a commutative ring, an ideal of , and . The set of cosets of , denoted , is a commutative ring (called the quotient ring of by ) with additive identity and multiplicative identity under the following operations:     These operations were shown to be well-defined in and . We need to show that, with these operations, all eight ring axioms hold and that multiplication is commutative. Take .  We begin with the additive axioms. For associativity: Since has associative addition we have and so the cosets are equal.  For commutativity:   For identity: as is the additive identity in .  For inverses: and so the additive inverse of is .  We now turn to the multiplicative axioms plus commutativity. For associativity: But multiplication in is associative so that . Hence,   For commutativity:   For identity: as is the multiplicative identity in .  Since has commutative multiplication we only need to check the left-distributive axiom. where we have used that multiplication in has the left-distributive property in line 3.  We conclude that is a commutative ring.   "
 },
 {
-  "id": "sec_quotientRings-4-15",
+  "id": "ssec_quotientRings-11",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-4-15",
+  "url": "sec_quotientRings.html#ssec_quotientRings-11",
   "type": "Activity",
   "number": "3.3.3",
   "title": "",
   "body": "  Answer the questions below. Be prepared to give an information justification of your thinking.   Suppose and . Calculate and .  Let and . List all elements of (there should be 9 in total).  Set and . Find an element such that .    "
 },
 {
-  "id": "sec_quotientRings-4-17",
+  "id": "ssec_quotientRings-13",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-4-17",
+  "url": "sec_quotientRings.html#ssec_quotientRings-13",
   "type": "Exploration",
   "number": "3.3.4",
   "title": "",
   "body": "  Consider the ring and the ideals and .   List the elements of and .  What happens to in when you pass to the quotient ring ? How about as you pass from to ?  In view of your answer to the previous question, how does behave as you mod out by and ?  Build addition and multiplication tables for each of and .    TBD  "
 },
 {
-  "id": "sec_quotientRings-4-18",
+  "id": "ssec_quotientRings-14",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-4-18",
+  "url": "sec_quotientRings.html#ssec_quotientRings-14",
   "type": "Exploration",
   "number": "3.3.5",
   "title": "",
   "body": " graph (of a function)  zero set   One of the most useful connections made in high school algebra is the connection between a function (in particular, a polynomial function) and its graph . We may extend this notion to ideals via the concept of a zero set as follows.  Let be a field and with a nonzero ideal. We define the zero set of , denoted , as the set of all points for which for all .   Suppose . Prove that if and only if for each . Thus, can be determined entirely by examining the generators of .  Describe given .  (Challenge) Given and , describe and .  Given , describe the relationship between the variables and in the quotient . In what way have we restricted our polynomial inputs to the parabola ?    TBD.  "
 },
 {
-  "id": "subsec-prime-maximal-ideal-3",
-  "level": "2",
-  "url": "sec_quotientRings.html#subsec-prime-maximal-ideal-3",
-  "type": "Definition",
-  "number": "3.3.6",
-  "title": "",
-  "body": " prime ideal  ideal (prime)   Let be commutative with identity and a nonzero ideal. We say is prime if whenever such that , we have or .   "
-},
-{
   "id": "subsec-prime-maximal-ideal-4",
   "level": "2",
   "url": "sec_quotientRings.html#subsec-prime-maximal-ideal-4",
-  "type": "Theorem",
-  "number": "3.3.7",
+  "type": "Definition",
+  "number": "3.3.9",
   "title": "",
-  "body": "  Let be a domain and be prime. Then is a prime ideal.   TBD  "
+  "body": " prime ideal  ideal (prime)   Let be commutative with identity and a non-zero proper ideal. We say is prime if whenever such that , we have or .   "
 },
 {
-  "id": "subsec-prime-maximal-ideal-5",
+  "id": "thm_primeElementGeneratesPrimeIdeal",
   "level": "2",
-  "url": "sec_quotientRings.html#subsec-prime-maximal-ideal-5",
+  "url": "sec_quotientRings.html#thm_primeElementGeneratesPrimeIdeal",
+  "type": "Theorem",
+  "number": "3.3.10",
+  "title": "",
+  "body": "  Let be a domain and be prime. Then is a prime ideal.    Suppose is a prime element of a domain and . Suppose a product is in , say . Then there exists with . Thus . Since is prime, either or .  Without loss of generality assume . Then there exists with . Hence, .   "
+},
+{
+  "id": "subsec-prime-maximal-ideal-7",
+  "level": "2",
+  "url": "sec_quotientRings.html#subsec-prime-maximal-ideal-7",
   "type": "Activity",
   "number": "3.3.6",
   "title": "",
   "body": "  Which of the following ideals are prime?    in      in      in      in      in           Not prime. , but .    Prime. If , then and 11 is prime.    Prime. Easy explanation is that is isomorphic to . For now, though, we know that is irreducible, and is a PID, so irreducibles are prime.    Not prime. , but for degree reasons.    One may use the EA to show that , so . This is prime.      "
 },
 {
-  "id": "subsec-prime-maximal-ideal-7",
+  "id": "subsec-prime-maximal-ideal-9",
   "level": "2",
-  "url": "sec_quotientRings.html#subsec-prime-maximal-ideal-7",
+  "url": "sec_quotientRings.html#subsec-prime-maximal-ideal-9",
   "type": "Theorem",
-  "number": "3.3.8",
+  "number": "3.3.11",
   "title": "",
   "body": "  Let be commutative with identity and an ideal of . Then is prime if and only if is an integral domain.   "
-},
-{
-  "id": "subsec-prime-maximal-ideal-8",
-  "level": "2",
-  "url": "sec_quotientRings.html#subsec-prime-maximal-ideal-8",
-  "type": "Proof",
-  "number": "3.3.2.1",
-  "title": "",
-  "body": " Begin by assuming that is prime, and suppose . Then , and since is prime, either or . Thus either or .  Now assume that is a domain. Further, let be such that . Then , and since is a domain, or , i.e., or . Thus, is prime.  "
 },
 {
   "id": "subsec-prime-maximal-ideal-10",
   "level": "2",
   "url": "sec_quotientRings.html#subsec-prime-maximal-ideal-10",
+  "type": "Proof",
+  "number": "3.3.3.1",
+  "title": "",
+  "body": " Begin by assuming that is prime, and suppose . Then , and since is prime, either or . Thus either or .  Now assume that is a domain. Further, let be such that . Then , and since is a domain, or , i.e., or . Thus, is prime.  "
+},
+{
+  "id": "subsec-prime-maximal-ideal-12",
+  "level": "2",
+  "url": "sec_quotientRings.html#subsec-prime-maximal-ideal-12",
   "type": "Definition",
-  "number": "3.3.9",
+  "number": "3.3.12",
   "title": "",
-  "body": " maximal ideal  ideal (maximal)   Let be commutative with identity and let be a nonzero ideal. We say that is a maximal ideal if no proper ideal of properly contains . That is, if is an ideal satisfying , either or .   "
-},
-{
-  "id": "subsec-prime-maximal-ideal-15",
-  "level": "2",
-  "url": "sec_quotientRings.html#subsec-prime-maximal-ideal-15",
-  "type": "Lemma",
-  "number": "3.3.10",
-  "title": "",
-  "body": "  Let be commutative with identity and a maximal ideal of . Let , and set . Then: is an ideal of ; ; and thus there exist , such that .   TBD  "
-},
-{
-  "id": "subsec-prime-maximal-ideal-16",
-  "level": "2",
-  "url": "sec_quotientRings.html#subsec-prime-maximal-ideal-16",
-  "type": "Theorem",
-  "number": "3.3.11",
-  "title": "",
-  "body": "  Let be commutative with identity and an ideal of . Then is maximal if and only if is a field.    For the forward direction, apply the previous lemma to construct an inverse for given any .    If is a field, assume is an ideal of that properly contains . Let ; then is a nonzero element of , and since is a field, there is some such that . Since , . As , we have , and thus , which means . Thus, is maximal.  Now, suppose that is maximal and let . Apply the previous lemma to obtain , where . Then    "
+  "body": "   Maximal ideal   maximal ideal  ideal (maximal)   Let be commutative with identity and let be a non-zero proper ideal. We say that is a maximal ideal if no proper ideal of properly contains . That is, if is an ideal satisfying , either or .   "
 },
 {
   "id": "subsec-prime-maximal-ideal-17",
   "level": "2",
   "url": "sec_quotientRings.html#subsec-prime-maximal-ideal-17",
+  "type": "Lemma",
+  "number": "3.3.13",
+  "title": "",
+  "body": "  Let be commutative with identity and a maximal ideal of . Let , and set . Then: is an ideal of ; ; and thus there exist , such that .   TBD  "
+},
+{
+  "id": "subsec-prime-maximal-ideal-18",
+  "level": "2",
+  "url": "sec_quotientRings.html#subsec-prime-maximal-ideal-18",
   "type": "Theorem",
-  "number": "3.3.12",
+  "number": "3.3.14",
+  "title": "",
+  "body": "  Let be commutative with identity and an ideal of . Then is maximal if and only if is a field.    For the forward direction, apply the previous lemma to construct an inverse for given any .    If is a field, assume is an ideal of that properly contains . Let ; then is a nonzero element of , and since is a field, there is some such that . Since , . As , we have , and thus , which means . Thus, is maximal.  Now, suppose that is maximal and let . Apply the previous lemma to obtain , where . Then    "
+},
+{
+  "id": "subsec-prime-maximal-ideal-19",
+  "level": "2",
+  "url": "sec_quotientRings.html#subsec-prime-maximal-ideal-19",
+  "type": "Theorem",
+  "number": "3.3.15",
   "title": "",
   "body": "  Every maximal ideal is prime.    All fields are integral domains. Thus, if is maximal, is a field, thus a domain, and thus is prime.   "
 },
@@ -3164,131 +3137,131 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_quotientRings.html#thm-pid-primes-are-maximal",
   "type": "Theorem",
-  "number": "3.3.13",
+  "number": "3.3.16",
   "title": "",
   "body": "  In a principal ideal domain, every prime ideal is maximal.    Let be a PID and a prime ideal. By previous work, is prime. Suppose that . Thus, , so . That is, . Since is prime and is a domain, it is irreducible. Thus, either or is a unit. If is a unit, then . If is a unit, then , and thus , which means that .  Thus, is maximal.   "
 },
 {
-  "id": "subsec-prime-maximal-ideal-20",
+  "id": "subsec-prime-maximal-ideal-22",
   "level": "2",
-  "url": "sec_quotientRings.html#subsec-prime-maximal-ideal-20",
+  "url": "sec_quotientRings.html#subsec-prime-maximal-ideal-22",
   "type": "Exploration",
   "number": "3.3.7",
   "title": "",
   "body": "  Describe the prime and maximal ideals of and .   For which ideals is a domain? A field? Similarly for . Or, use .  TBD  "
 },
 {
-  "id": "sec_quotientRings-6-4",
+  "id": "sec_quotientRings-7-4",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-6-4",
+  "url": "sec_quotientRings.html#sec_quotientRings-7-4",
   "type": "Theorem",
-  "number": "3.3.14",
+  "number": "3.3.17",
   "title": "",
   "body": "  Let be commutative with identity and an ideal of . Define by . Then is a homomorphism with .   "
 },
 {
-  "id": "sec_quotientRings-6-8",
+  "id": "sec_quotientRings-7-8",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-6-8",
+  "url": "sec_quotientRings.html#sec_quotientRings-7-8",
   "type": "Lemma",
-  "number": "3.3.15",
+  "number": "3.3.18",
   "title": "",
   "body": "  Using the notation from above, is a well-defined function.   "
 },
 {
-  "id": "sec_quotientRings-6-9",
+  "id": "sec_quotientRings-7-9",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-6-9",
+  "url": "sec_quotientRings.html#sec_quotientRings-7-9",
   "type": "Proof",
-  "number": "3.3.3.1",
+  "number": "3.3.4.1",
   "title": "",
   "body": " Suppose that . Then , so , and thus . Therefore, , and is well-defined.  "
 },
 {
-  "id": "sec_quotientRings-6-10",
+  "id": "sec_quotientRings-7-10",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-6-10",
+  "url": "sec_quotientRings.html#sec_quotientRings-7-10",
   "type": "Lemma",
-  "number": "3.3.16",
+  "number": "3.3.19",
   "title": "",
   "body": "  Using the notation above, is a homomorphism.   "
 },
 {
-  "id": "sec_quotientRings-6-11",
+  "id": "sec_quotientRings-7-11",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-6-11",
+  "url": "sec_quotientRings.html#sec_quotientRings-7-11",
   "type": "Proof",
-  "number": "3.3.3.2",
+  "number": "3.3.4.2",
   "title": "",
   "body": " We show that preserves addition. That it preserves multiplication will follow similarly. Observe that .  "
 },
 {
-  "id": "sec_quotientRings-6-12",
+  "id": "sec_quotientRings-7-12",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-6-12",
+  "url": "sec_quotientRings.html#sec_quotientRings-7-12",
   "type": "Lemma",
-  "number": "3.3.17",
+  "number": "3.3.20",
   "title": "",
   "body": "  Using the notation above, is one-to-one.   "
 },
 {
-  "id": "sec_quotientRings-6-13",
+  "id": "sec_quotientRings-7-13",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-6-13",
+  "url": "sec_quotientRings.html#sec_quotientRings-7-13",
   "type": "Proof",
-  "number": "3.3.3.3",
+  "number": "3.3.4.3",
   "title": "",
   "body": " Suppose that . That is, . Then , so , and therefore . Thus, is one-to-one.  "
 },
 {
-  "id": "sec_quotientRings-6-14",
+  "id": "sec_quotientRings-7-14",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-6-14",
+  "url": "sec_quotientRings.html#sec_quotientRings-7-14",
   "type": "Lemma",
-  "number": "3.3.18",
+  "number": "3.3.21",
   "title": "",
   "body": "  Using the notation above, is onto.   "
 },
 {
-  "id": "sec_quotientRings-6-15",
+  "id": "sec_quotientRings-7-15",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-6-15",
+  "url": "sec_quotientRings.html#sec_quotientRings-7-15",
   "type": "Proof",
-  "number": "3.3.3.4",
+  "number": "3.3.4.4",
   "title": "",
   "body": " Since is onto by definition, given any there is some such that . Then .  "
 },
 {
-  "id": "sec_quotientRings-6-17",
+  "id": "sec_quotientRings-7-17",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-6-17",
+  "url": "sec_quotientRings.html#sec_quotientRings-7-17",
   "type": "Theorem",
-  "number": "3.3.19",
+  "number": "3.3.22",
   "title": "Noether’s Isomorphism Theorem.",
   "body": " First Isomorphism Theorem  Noether's Isomorphism Theorem  E. Noether   Let be a homomorphism of commutative rings. Then .  In particular, if is onto, .   "
 },
 {
-  "id": "sec_quotientRings-6-19",
+  "id": "sec_quotientRings-7-19",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-6-19",
+  "url": "sec_quotientRings.html#sec_quotientRings-7-19",
   "type": "Theorem",
-  "number": "3.3.20",
+  "number": "3.3.23",
   "title": "",
   "body": "  We have the following isomorphisms of rings.                    "
 },
 {
-  "id": "sec_quotientRings-6-20",
+  "id": "sec_quotientRings-7-20",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-6-20",
+  "url": "sec_quotientRings.html#sec_quotientRings-7-20",
   "type": "Proof",
-  "number": "3.3.3.5",
+  "number": "3.3.4.5",
   "title": "",
   "body": "TBD Define by . We saw earlier that this evaluation map is a homomorphism. It is easy to see that is onto as for any . Thus, by the First Isomorphism Theorem.  We claim that . Clearly, . Moreover, . Finally, is prime and thus maximal, as is a PID. Thus, .  "
 },
 {
-  "id": "sec_quotientRings-6-21",
+  "id": "sec_quotientRings-7-21",
   "level": "2",
-  "url": "sec_quotientRings.html#sec_quotientRings-6-21",
+  "url": "sec_quotientRings.html#sec_quotientRings-7-21",
   "type": "Activity",
   "number": "3.3.8",
   "title": "",
