@@ -1843,7 +1843,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "Integral Domains",
-  "body": " Integral Domains   Guiding Questions   In this section, we'll seek to answer the questions:    What are zero divisors?  What are integral domains, and how do they relate to rings and fields?     In the realm of ring theory, certain rings behave similarly to : they are commutative and when we multiply any two non-zero integers it remains non-zero. Either (or both!) of these two properties are violated in general rings. We've already encountered commutative rings and so we begin by formalizing the latter property.    Zero Divisors  One of the interesting side effects of our definition of ring is that it allows for behavior that may at first appear unintuitive or downright weird.   zero divisor   A zero divisor in a ring is a nonzero element such that there is a nonzero with or .    Notice that the reason the idea of zero divisors at first appears weird is that they are not something we encounter when working with our familiar sets of numbers, such as or . In fact, we specifically use the fact that there are no zero divisors in our familiar numbers systems to solve equations in high school algebra (e.g., if , then or ). The lack of zero divisors is one of the properties that does not persist in our abstraction from the integers to rings in general.    Find, with justification, all of the zero divisors in and . Make and prove a conjecture about the existence of zero divisors in , where .    The zero divisors in are . There are no zero divisors in .   conjecture.  is a zero divisor if and only if .       Let be a ring and suppose such that is a zero divisor. Then either or is a zero divisor.     Let such that is a zero divisor. Then (else ). Since is a zero divisor, there is some such that . If , then is a zero divisor, as . On the other hand, if , then is a zero divisor, as .   In we defined units. Units are somehow opposite zero-divisors as the following theorem shows.    Let be a ring and . Then is not a zero divisor.     Let and suppose is a zero divisor. Then there is some such that . But then . \\Lightning     How can we reinterpret in light of our new language of units and zero divisors? State a theorem that uses this new language.    Answers may vary, but how about this: Let such that . Then if is not a zero divisor.      Integral Domains  While non-commutative rings and zero divisors are of interest to mathematicians, we will focus put our focus on commutative rings without zero divisors for now. As these rings share many properties of the integers, they are known as integral domains .   integral domain  domain   A non-zero commutative ring is an integral domain , or just domain , if has no zero divisors.    The next activities and theorems help us identify examples of domains, as well as situate the notion of a domain in its proper place relative to fields and rings in general.    Which of the following rings are domains? Justify your answers.                                Gaussian Integers are a Domain   The Gaussian Integers are a domain. Indeed, they are a subring of the field . We will see in that this is sufficient to deduce they are a domain.  For now, we know that as a subring of a commutative ring, the multiplication in is commutative. Suppose there are such that their product is zero: which tells us and .  Let's look at . One of two cases happend: or . If , then either or as is a domain. If , then as desired. If , then tells us . Again, or . If , then and we are finished. Otherwise and and we are finished.  If , then a similar analysis shows that none of can be zero. Multiply through by and multiply through by we get: and . Hence, and since we can cancel it to get . The left hand side is positive while the right hand side is negative, a contradiction. We conclude that does not have zero-divisors and it is therefore a domain.      Every field is a domain.     If is a field, the nonzero elements of are units, which cannot be zero divisors by . Thus, has no zero divisors.     Let and . Then is a field if and only if is a domain.     The forward direction holds by Theorem .  For the reverse, assume is a domain. Then has no zero divisors. If is composite, there exist integers satisfying such that . Then in , but . Thus, may not be composite, and is therefore prime. By an earlier theorem, is a field.     If is a domain and is a subring of , then is a domain.     Any zero divisors in are also zero divisors in . Since has no zero divisors, neither does .   Note that the converse of is not true. Namely, the set of -matrices over , , is not a domain. Yet it contains a copy of as the scalar matrices . Since is a field, it is also a domain.    Fill in the following blanks in order of increasing generality with the words ring , integral domain , field , and commutative ring .  __________ __________ __________ __________      Polynomial Rings are Domains  We now show that the property of being a domain can be passed on to polynomial rings.    Suppose is a ring. Then is a domain if and only if is a domain.     For the forward direction, suppose that is a domain. Let and be nonzero polynomials in , where . Then the lowest-degree term in is . Since is a domain, , and thus is not the zero polynomial. Thus has no zero-divisors. Since is commutative, so is by . Thus is a domain as well.  For the reverse direction, suppose that is a domain. Then can be viewed as a subring of via constant polynomials. By , is a domain as well.     Is the converse of Theorem true? If so, give a short proof. If not, find a counterexample.    Yes. Apply Theorem .    Since every field is a domain, we have the following immediate corollary of .    Given a field , the set of polynomials is a domain.    When considering sets of polynomials, as we do in (particularly in ), the following results will be quite useful.    Let be a domain, and let be nonzero polynomials. Then .    Let the leading term of be and the leading term of be . Then the leading term of is . (Observe that since is a domain, .) Thus, .      Can the hypotheses of be relaxed? If so, provide more general hypotheses and adapt the proof. If not, give an illustrative example.    If we were to relax the property of a domain we have two choices: relax commutativity or relax zero-divisors. Relaxing commutativity means we are allowing for non-commutative coefficient rings, such as . Relaxing zero-divisors means allowing fro zero-divisors.  If we allow for zero-divisors, then the theorem fails: Let . Observe that , but has degree 1. This is because the leading coefficients are zero-divisors.  If we allow for non-commutative rings without zero-divisors (we have not encountered any of these yet), then the theorem remains true. Indeed, the leading coefficient of the product is the product of the leading coefficients. Since our ring has no zero-divisors, the same proof works!      Let be a domain. What are the units of ? Prove your answer.    The units are . Clearly, .  Suppose such that . Then . Thus , and consequently, .       Mark the following as true or false.    All fields are integral domains.    All rings are domains.    All domains are fields    All integral domains are rings    All integral domains are commutative.    In an integral domain, there are no zero divisors.     is an integral domain.     is an integral domain.     is an integral domain     is a domain.      Find two factorizations of into products of irreducibles. Why does this not contradict the ?    Prove that the are a domain.    Find all the units in the Gaussian Integers. THat is, compute .    Square matrices over a ring are never an integral domain (unless the coefficient rings is and ). Prove for a general ring that is not a domain for .    The is a convenient way to test if a subring is a ring. Formulate and prove a sub-domain test.    In the Gaussian Integers, we can factor in at least two ways: Clearly and . Use the definition of units and associates to explain what is happening here.    Verify that is a subring of . Is it a sub-domain?    Verify that is a subring of . Is it a sub-domain?    Prove that any subring of an integral domain is an integral domain.   Nilpotent Elements Nilpotent Elements  An element is called nilpotent if there exists such that .    Verify that is a nilpotent element (of whatever coefficient ring you want).    Verify that is a nilpotent element of .    Prove that a non-zero nilpotent element is a zero-divisor.    Show that is a zero-divisor but not nilpotent. That is, the converse to the previous part is false in general.      Prove that if is nilpotent, then .     C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes , Bull. Math. Bio. 75 (2013), 1571-1611, DOI 10.1007\/s11538-013-9860-3    "
+  "body": " Integral Domains   Guiding Questions   In this section, we'll seek to answer the questions:    What are zero divisors?  What are integral domains, and how do they relate to rings and fields?     In the realm of ring theory, certain rings behave similarly to : they are commutative and when we multiply any two non-zero integers it remains non-zero. Either (or both!) of these two properties are violated in general rings. We've already encountered commutative rings and so we begin by formalizing the latter property.    Zero Divisors  One of the interesting side effects of our definition of ring is that it allows for behavior that may at first appear unintuitive or downright weird.   zero divisor   A zero divisor in a ring is a nonzero element such that there is a nonzero with or .    Notice that the reason the idea of zero divisors at first appears weird is that they are not something we encounter when working with our familiar sets of numbers, such as or . In fact, we specifically use the fact that there are no zero divisors in our familiar numbers systems to solve equations in high school algebra (e.g., if , then or ). The lack of zero divisors is one of the properties that does not persist in our abstraction from the integers to rings in general.    Find, with justification, all of the zero divisors in and . Make and prove a conjecture about the existence of zero divisors in , where .    The zero divisors in are . There are no zero divisors in .   conjecture.  is a zero divisor if and only if .       Let be a ring and suppose such that is a zero divisor. Then either or is a zero divisor.     Let such that is a zero divisor. Then (else ). Since is a zero divisor, there is some such that . If , then is a zero divisor, as . On the other hand, if , then is a zero divisor, as .   In we defined units. Units are somehow opposite zero-divisors as the following theorem shows.    Let be a ring and . Then is not a zero divisor.     Let and suppose is a zero divisor. Then there is some such that . But then . \\Lightning     How can we reinterpret in light of our new language of units and zero divisors? State a theorem that uses this new language.    Answers may vary, but how about this: Let such that . Then if is not a zero divisor.      Integral Domains  While non-commutative rings and zero divisors are of interest to mathematicians, we will focus put our focus on commutative rings without zero divisors for now. As these rings share many properties of the integers, they are known as integral domains .   integral domain  domain   A non-zero commutative ring is an integral domain , or just domain , if has no zero divisors.    The next activities and theorems help us identify examples of domains, as well as situate the notion of a domain in its proper place relative to fields and rings in general.    Which of the following rings are domains? Justify your answers.                                Gaussian Integers are a Domain   The Gaussian Integers are a domain. Indeed, they are a subring of the field . We will see in that this is sufficient to deduce they are a domain.  For now, we know that as a subring of a commutative ring, the multiplication in is commutative. Suppose there are such that their product is zero: which tells us and .  Let's look at . One of two cases happend: or . If , then either or as is a domain. If , then as desired. If , then tells us . Again, or . If , then and we are finished. Otherwise and and we are finished.  If , then a similar analysis shows that none of can be zero. Multiply through by and multiply through by we get: and . Hence, and since we can cancel it to get . The left hand side is positive while the right hand side is negative, a contradiction. We conclude that does not have zero-divisors and it is therefore a domain.      Every field is a domain.     If is a field, the nonzero elements of are units, which cannot be zero divisors by . Thus, has no zero divisors.     Let and . Then is a field if and only if is a domain.     The forward direction holds by Theorem .  For the reverse, assume is a domain. Then has no zero divisors. If is composite, there exist integers satisfying such that . Then in , but . Thus, may not be composite, and is therefore prime. By an earlier theorem, is a field.     If is a domain and is a subring of , then is a domain.     Any zero divisors in are also zero divisors in . Since has no zero divisors, neither does .   Note that the converse of is not true. Namely, the set of -matrices over , , is not a domain. Yet it contains a copy of as the scalar matrices . Since is a field, it is also a domain.    Fill in the following blanks in order of increasing generality with the words ring , integral domain , field , and commutative ring .  __________ __________ __________ __________      Polynomial Rings are Domains  We now show that the property of being a domain can be passed on to polynomial rings.    Suppose is a ring. Then is a domain if and only if is a domain.     For the forward direction, suppose that is a domain. Let and be nonzero polynomials in , where . Then the lowest-degree term in is . Since is a domain, , and thus is not the zero polynomial. Thus has no zero-divisors. Since is commutative, so is by . Thus is a domain as well.  For the reverse direction, suppose that is a domain. Then can be viewed as a subring of via constant polynomials. By , is a domain as well.     Is the converse of Theorem true? If so, give a short proof. If not, find a counterexample.    Yes. Apply Theorem .    Since every field is a domain, we have the following immediate corollary of .    Given a field , the set of polynomials is a domain.    When considering sets of polynomials, as we do in (particularly in ), the following results will be quite useful.    Let be a domain, and let be nonzero polynomials. Then .    Let the leading term of be and the leading term of be . Then the leading term of is . (Observe that since is a domain, .) Thus, .      Can the hypotheses of be relaxed? If so, provide more general hypotheses and adapt the proof. If not, give an illustrative example.    If we were to relax the property of a domain we have two choices: relax commutativity or relax zero-divisors. Relaxing commutativity means we are allowing for non-commutative coefficient rings, such as . Relaxing zero-divisors means allowing fro zero-divisors.  If we allow for zero-divisors, then the theorem fails: Let . Observe that , but has degree 1. This is because the leading coefficients are zero-divisors.  If we allow for non-commutative rings without zero-divisors (we have not encountered any of these yet), then the theorem remains true. Indeed, the leading coefficient of the product is the product of the leading coefficients. Since our ring has no zero-divisors, the same proof works!      Let be a domain. What are the units of ? Prove your answer.    The units are . Clearly, .  Suppose such that . Then . Thus , and consequently, .       Mark the following as true or false.    All fields are integral domains.    All rings are domains.    All domains are fields    All integral domains are rings    All integral domains are commutative.    In an integral domain, there are no zero divisors.     is an integral domain.     is an integral domain.     is an integral domain     is a domain.      Prove that the are a domain.    Find all the units in the Gaussian Integers. THat is, compute .    Square matrices over a ring are never an integral domain (unless the coefficient rings is and ). Prove for a general ring that is not a domain for .    The is a convenient way to test if a subring is a ring. Formulate and prove a sub-domain test.    In the Gaussian Integers, we can factor in at least two ways: Clearly and . Use the definition of units and associates to explain what is happening here.    Verify that is a subring of . Is it a sub-domain?    Verify that is a subring of . Is it a sub-domain?    Prove that any subring of an integral domain is an integral domain.   Nilpotent Elements Nilpotent Elements  An element is called nilpotent if there exists such that .    Verify that is a nilpotent element (of whatever coefficient ring you want).    Verify that is a nilpotent element of .    Prove that a non-zero nilpotent element is a zero-divisor.    Show that is a zero-divisor but not nilpotent. That is, the converse to the previous part is false in general.      Prove that if is nilpotent, then .     C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes , Bull. Math. Bio. 75 (2013), 1571-1611, DOI 10.1007\/s11538-013-9860-3    "
 },
 {
   "id": "obj_integralDomains",
@@ -2095,7 +2095,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.3.4.2",
   "title": "",
-  "body": " Find two factorizations of into products of irreducibles. Why does this not contradict the ?  "
+  "body": " Prove that the are a domain.  "
 },
 {
   "id": "exers_integralDomains-3",
@@ -2104,7 +2104,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.3.4.3",
   "title": "",
-  "body": " Prove that the are a domain.  "
+  "body": " Find all the units in the Gaussian Integers. THat is, compute .  "
 },
 {
   "id": "exers_integralDomains-4",
@@ -2113,7 +2113,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.3.4.4",
   "title": "",
-  "body": " Find all the units in the Gaussian Integers. THat is, compute .  "
+  "body": " Square matrices over a ring are never an integral domain (unless the coefficient rings is and ). Prove for a general ring that is not a domain for .  "
 },
 {
   "id": "exers_integralDomains-5",
@@ -2122,7 +2122,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.3.4.5",
   "title": "",
-  "body": " Square matrices over a ring are never an integral domain (unless the coefficient rings is and ). Prove for a general ring that is not a domain for .  "
+  "body": " The is a convenient way to test if a subring is a ring. Formulate and prove a sub-domain test.  "
 },
 {
   "id": "exers_integralDomains-6",
@@ -2131,7 +2131,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.3.4.6",
   "title": "",
-  "body": " The is a convenient way to test if a subring is a ring. Formulate and prove a sub-domain test.  "
+  "body": " In the Gaussian Integers, we can factor in at least two ways: Clearly and . Use the definition of units and associates to explain what is happening here.  "
 },
 {
   "id": "exers_integralDomains-7",
@@ -2140,7 +2140,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.3.4.7",
   "title": "",
-  "body": " In the Gaussian Integers, we can factor in at least two ways: Clearly and . Use the definition of units and associates to explain what is happening here.  "
+  "body": " Verify that is a subring of . Is it a sub-domain?  "
 },
 {
   "id": "exers_integralDomains-8",
@@ -2158,15 +2158,6 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.3.4.9",
   "title": "",
-  "body": " Verify that is a subring of . Is it a sub-domain?  "
-},
-{
-  "id": "exers_integralDomains-10",
-  "level": "2",
-  "url": "sec_integralDomains.html#exers_integralDomains-10",
-  "type": "Exercise",
-  "number": "2.3.4.10",
-  "title": "",
   "body": " Prove that any subring of an integral domain is an integral domain.  "
 },
 {
@@ -2174,16 +2165,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_integralDomains.html#exer_nilpotent",
   "type": "Exercise",
-  "number": "2.3.4.11",
+  "number": "2.3.4.10",
   "title": "Nilpotent Elements.",
   "body": "Nilpotent Elements Nilpotent Elements  An element is called nilpotent if there exists such that .    Verify that is a nilpotent element (of whatever coefficient ring you want).    Verify that is a nilpotent element of .    Prove that a non-zero nilpotent element is a zero-divisor.    Show that is a zero-divisor but not nilpotent. That is, the converse to the previous part is false in general.    "
 },
 {
-  "id": "exers_integralDomains-12",
+  "id": "exers_integralDomains-11",
   "level": "2",
-  "url": "sec_integralDomains.html#exers_integralDomains-12",
+  "url": "sec_integralDomains.html#exers_integralDomains-11",
   "type": "Exercise",
-  "number": "2.3.4.12",
+  "number": "2.3.4.11",
   "title": "",
   "body": " Prove that if is nilpotent, then .  "
 },
@@ -2194,7 +2185,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.4",
   "title": "Divisibility in Integral Domains",
-  "body": " Divisibility in Integral Domains   Guiding Questions   In this section, we'll seek to answer the questions:    What multiplicative properties can we generalize from to any integral domain?  What are the differences between a prime and irreducible element in a commutative ring?     When we introduced the notion of integral domain, we said that part of the reason for the definition was to capture some of the most essential properties of the integers. This is the heart of abstraction and generalization in mathematics: to distill the important properties of our objects of interest and explore the consequences of those properties. One such important property of is cancellation .    Divisibility in Domains   Cancellation Law   Let be a commutative ring. Then is a domain if and only if for all with and , we have .     Assume is a domain and . Then , so . Since is a domain, it has no zero divisors, and therefore either or . The first possibility cannot happen as . We therefore must have , or .  Conversely, by contrapositive, assume that is not a domain. Let be a zero divisor; then there is a nonzero such that . Since as zero-divisors are non-zero, this implies that as we can cancel the 's, a contradiction.   We may read as saying that the defining property of an integral domain is the ability to cancel common nonzero factors. Note that we have not divided ; division is not a binary operation, and nonzero elements of rings need not be units. However, as was the case in , there are notions of divisibility and factorization in rings.   divides (ring)  factor (ring)   Let be a commutative ring with identity, and let . We say  divides  and write if there is a such that . We then say that is a factor of .      Find all factors of in the following rings:         In , every non-zero element is a unit. Thus any element is a factor of as . This is a general property: units are always factors of every element.  In , the factors of are as .      Prime and Irreducible Elements  Our definition of prime also extends nicely to commutative rings. Indeed, the desire to extend the familiar notion of prime from to any ring is the reason for our less-familiar definition given in .   prime (ring element)   Let be commutative. We say a nonzero nonunit element is prime if whenever for some , either or .    A notion related to primality is irreducibility. In fact, one might reasonably say that irreducibility is the natural generalization of the typical definition of prime one encounters in school mathematics. However, we will see that the notions differ in general.   irreducible (ring element)  atom   Let be commutative with identity. We say a nonzero nonunit element is irreducible if whenever for some , one of or is a unit. (Note that in some areas of the literature, the word atom is used interchangeably with irreducible.)      Find the units, primes, and irreducibles in the following rings.          TBD.    In domains, all primes are irreducible.    Let be a domain. If is prime, then is irreducible.     Compare to the proof of Theorem .  Let be prime, and suppose that for some . We show that either or is a unit.  Since , we have . By definition either or . Without loss of generality, assume . Then there is a such that , so , and we use the Cancellation Law to cancel to obtain . Thus, is a unit, making irreducible.   In familiar settings, the notion of prime and irreducible exactly coincide.    Every irreducible in is prime.     Let be irreducible, and suppose that . Then . Since is irreducible, either or is a unit. However, the only units are , so either one of or is or . In either case, is prime.   Despite their overlap in familiar settings, primes and irreducibles are distinct types of elements. As the next exploration demonstrates, not all primes are irreducible. What is more, will show that not all irreducibles are primes, even in domains!    Find an example of a ring and prime such that is not irreducible.    In , is prime by but not irreducible as and is not a unit.      Consider the set of all polynomials in for which the coefficient on the linear term is zero. That is, .  (You should convince yourself that is an integral domain, but do not need to prove it.) Then, find a polynomial of the form in that is irreducible, but not prime.    Consider . Then is irreducible, as it cannot be factored into a product of linear polynomials (there aren't any in ), so any factorization of is degree 2 times degree 0. Then the leading coefficients must be units, i.e., both 1 or both .  However, is not prime, as but .      Greatest Common Divisors  Our last straightforward generalization from the multiplicative structure of is the notion of greatest common divisor. As our next definition again demonstrates, our careful work in the context of generalizes nicely to all domains. Indeed, we intentionally did not appeal to to define the greatest common divisor in , as not all rings have a natural order relation like does.   greatest common divisor (integral domain)   Let be a domain, and let . A nonzero element is a greatest common divisor of and if    and and,    if with and , then .         Let be a domain and and suppose is a greatest common divisor of and . Then any associate of is also a greatest common divisor of and . (Recall .)     Let be a gcd of and , let , and . We claim is also a gcd of and .  Since and there are such that and . Then and , so and .  Let be a common divisor of and . Since is a gcd, , i.e., . Then , so .  Thus, is a gcd of and .     In most familiar domains, GCDs exist. However, they don't always! Find an example of elements in the ring from Exercise which do not have a GCD. Justify your assertion.    Consider and . First note that is not a common divisor in .  Both and are divisible by and in . However, neither can be the gcd, as and .     "
+  "body": " Divisibility in Integral Domains   Guiding Questions   In this section, we'll seek to answer the questions:    What multiplicative properties can we generalize from to any integral domain?  What are the differences between a prime and irreducible element in a commutative ring?     When we introduced the notion of integral domain, we said that part of the reason for the definition was to capture some of the most essential properties of the integers. This is the heart of abstraction and generalization in mathematics: to distill the important properties of our objects of interest and explore the consequences of those properties. One such important property of is cancellation .    Divisibility in Domains   Cancellation Law   Let be a commutative ring. Then is a domain if and only if for all with and , we have .     Assume is a domain and . Then , so . Since is a domain, it has no zero divisors, and therefore either or . The first possibility cannot happen as . We therefore must have , or .  Conversely, by contrapositive, assume that is not a domain. Let be a zero divisor; then there is a nonzero such that . Since as zero-divisors are non-zero, this implies that as we can cancel the 's, a contradiction.   We may read as saying that the defining property of an integral domain is the ability to cancel common nonzero factors. Note that we have not divided ; division is not a binary operation, and nonzero elements of rings need not be units. However, as was the case in , there are notions of divisibility and factorization in rings.   divides (ring)  factor (ring)   Let be a commutative ring with identity, and let . We say  divides  and write if there is a such that . We then say that is a factor of .      Find all factors of in the following rings:         In , every non-zero element is a unit. Thus any element is a factor of as . This is a general property: units are always factors of every element.  In , the factors of are as .      Prime and Irreducible Elements  Our definition of prime also extends nicely to commutative rings. Indeed, the desire to extend the familiar notion of prime from to any ring is the reason for our less-familiar definition given in .   prime (ring element)   Let be commutative. We say a nonzero nonunit element is prime if whenever for some , either or .    A notion related to primality is irreducibility. In fact, one might reasonably say that irreducibility is the natural generalization of the typical definition of prime one encounters in school mathematics. However, we will see that the notions differ in general.   irreducible (ring element)  atom   Let be commutative with identity. We say a nonzero nonunit element is irreducible if whenever for some , one of or is a unit. (Note that in some areas of the literature, the word atom is used interchangeably with irreducible.)      Find the units, primes, and irreducibles in the following rings.          TBD.    In domains, all primes are irreducible.    Let be a domain. If is prime, then is irreducible.     Compare to the proof of Theorem .  Let be prime, and suppose that for some . We show that either or is a unit.  Since , we have . By definition either or . Without loss of generality, assume . Then there is a such that , so , and we use the Cancellation Law to cancel to obtain . Thus, is a unit, making irreducible.   In familiar settings, the notion of prime and irreducible exactly coincide.    Every irreducible in is prime.     Let be irreducible, and suppose that . Then . Since is irreducible, either or is a unit. However, the only units are , so either one of or is or . In either case, is prime.   Despite their overlap in familiar settings, primes and irreducibles are distinct types of elements. As the next exploration demonstrates, not all primes are irreducible. What is more, will show that not all irreducibles are primes, even in domains!    Find an example of a ring and prime such that is not irreducible.    In , is prime by but not irreducible as and is not a unit.      Consider the set of all polynomials in for which the coefficient on the linear term is zero. That is, .  (You should convince yourself that is an integral domain, but do not need to prove it.) Then, find a polynomial of the form in that is irreducible, but not prime.    Consider . Then is irreducible, as it cannot be factored into a product of linear polynomials (there aren't any in ), so any factorization of is degree 2 times degree 0. Then the leading coefficients must be units, i.e., both 1 or both .  However, is not prime, as but .      Greatest Common Divisors  Our last straightforward generalization from the multiplicative structure of is the notion of greatest common divisor. As our next definition again demonstrates, our careful work in the context of generalizes nicely to all domains. Indeed, we intentionally did not appeal to to define the greatest common divisor in , as not all rings have a natural order relation like does.   greatest common divisor (integral domain)   Let be a domain, and let . A nonzero element is a greatest common divisor of and if    and and,    if with and , then .         Let be a domain and and suppose is a greatest common divisor of and . Then any associate of is also a greatest common divisor of and . (Recall .)     Let be a gcd of and , let , and . We claim is also a gcd of and .  Since and there are such that and . Then and , so and .  Let be a common divisor of and . Since is a gcd, , i.e., . Then , so .  Thus, is a gcd of and .     In most familiar domains, GCDs exist. However, they don't always! Find an example of elements in the ring from Exercise which do not have a GCD. Justify your assertion.    Consider and . First note that is not a common divisor in .  Both and are divisible by and in . However, neither can be the gcd, as and .       Mark the following as true or false.    In a domain, the cancellation law holds.    In a ring, the cancellation law holds.    In a , the cancellation law holds.     is a factor of in .     is a factor of in .     is a prime element of .     is a prime element of .    In a domain, the greatest common divisor of two non-zero elements is unique.    In a domain, the greatest common divisor of two non-zero elements is unique up to associates.    A domain is a commutative ring where the cancellation law holds.    If is a zero-divisor in a commutative ring, then is a factor of .    In a domain every irreducible element is prime.      Find two factorizations of into products of irreducibles. Why does this not contradict the ?    Let's investigate prime and irreducible elements of the .    Prove that is a prime element.    Prove that is a prime element.      Find all the units in the Gaussian Integers. THat is, compute .    Square matrices over a ring are never an integral domain (unless the coefficient rings is and ). Prove for a general ring that is not a domain for .    The is a convenient way to test if a subring is a ring. Formulate and prove a sub-domain test.    In the Gaussian Integers, we can factor in at least two ways: Clearly and . Use the definition of units and associates to explain what is happening here.    Verify that is a subring of . Is it a sub-domain?    Verify that is a subring of . Is it a sub-domain?    Prove that any subring of an integral domain is an integral domain.   Nilpotent Elements Nilpotent Elements  An element is called nilpotent if there exists such that .    Verify that is a nilpotent element (of whatever coefficient ring you want).    Verify that is a nilpotent element of .    Prove that a non-zero nilpotent element is a zero-divisor.    Show that is a zero-divisor but not nilpotent. That is, the converse to the previous part is false in general.      Prove that if is nilpotent, then .    "
 },
 {
   "id": "obj_divisibilityIntegralDomains",
@@ -2359,13 +2350,121 @@ var ptx_lunr_docs = [
   "body": "  In most familiar domains, GCDs exist. However, they don't always! Find an example of elements in the ring from Exercise which do not have a GCD. Justify your assertion.    Consider and . First note that is not a common divisor in .  Both and are divisible by and in . However, neither can be the gcd, as and .   "
 },
 {
+  "id": "exers_divisibilityIntegralDomains-1",
+  "level": "2",
+  "url": "sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains-1",
+  "type": "Exercise",
+  "number": "2.4.4.1",
+  "title": "",
+  "body": " Mark the following as true or false.    In a domain, the cancellation law holds.    In a ring, the cancellation law holds.    In a , the cancellation law holds.     is a factor of in .     is a factor of in .     is a prime element of .     is a prime element of .    In a domain, the greatest common divisor of two non-zero elements is unique.    In a domain, the greatest common divisor of two non-zero elements is unique up to associates.    A domain is a commutative ring where the cancellation law holds.    If is a zero-divisor in a commutative ring, then is a factor of .    In a domain every irreducible element is prime.    "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-2",
+  "level": "2",
+  "url": "sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains-2",
+  "type": "Exercise",
+  "number": "2.4.4.2",
+  "title": "",
+  "body": " Find two factorizations of into products of irreducibles. Why does this not contradict the ?  "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-3",
+  "level": "2",
+  "url": "sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains-3",
+  "type": "Exercise",
+  "number": "2.4.4.3",
+  "title": "",
+  "body": " Let's investigate prime and irreducible elements of the .    Prove that is a prime element.    Prove that is a prime element.    "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-4",
+  "level": "2",
+  "url": "sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains-4",
+  "type": "Exercise",
+  "number": "2.4.4.4",
+  "title": "",
+  "body": " Find all the units in the Gaussian Integers. THat is, compute .  "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-5",
+  "level": "2",
+  "url": "sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains-5",
+  "type": "Exercise",
+  "number": "2.4.4.5",
+  "title": "",
+  "body": " Square matrices over a ring are never an integral domain (unless the coefficient rings is and ). Prove for a general ring that is not a domain for .  "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-6",
+  "level": "2",
+  "url": "sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains-6",
+  "type": "Exercise",
+  "number": "2.4.4.6",
+  "title": "",
+  "body": " The is a convenient way to test if a subring is a ring. Formulate and prove a sub-domain test.  "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-7",
+  "level": "2",
+  "url": "sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains-7",
+  "type": "Exercise",
+  "number": "2.4.4.7",
+  "title": "",
+  "body": " In the Gaussian Integers, we can factor in at least two ways: Clearly and . Use the definition of units and associates to explain what is happening here.  "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-8",
+  "level": "2",
+  "url": "sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains-8",
+  "type": "Exercise",
+  "number": "2.4.4.8",
+  "title": "",
+  "body": " Verify that is a subring of . Is it a sub-domain?  "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-9",
+  "level": "2",
+  "url": "sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains-9",
+  "type": "Exercise",
+  "number": "2.4.4.9",
+  "title": "",
+  "body": " Verify that is a subring of . Is it a sub-domain?  "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-10",
+  "level": "2",
+  "url": "sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains-10",
+  "type": "Exercise",
+  "number": "2.4.4.10",
+  "title": "",
+  "body": " Prove that any subring of an integral domain is an integral domain.  "
+},
+{
+  "id": "exer_nilpotent",
+  "level": "2",
+  "url": "sec_divisibilityIntegralDomains.html#exer_nilpotent",
+  "type": "Exercise",
+  "number": "2.4.4.11",
+  "title": "Nilpotent Elements.",
+  "body": "Nilpotent Elements Nilpotent Elements  An element is called nilpotent if there exists such that .    Verify that is a nilpotent element (of whatever coefficient ring you want).    Verify that is a nilpotent element of .    Prove that a non-zero nilpotent element is a zero-divisor.    Show that is a zero-divisor but not nilpotent. That is, the converse to the previous part is false in general.    "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-12",
+  "level": "2",
+  "url": "sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains-12",
+  "type": "Exercise",
+  "number": "2.4.4.12",
+  "title": "",
+  "body": " Prove that if is nilpotent, then .  "
+},
+{
   "id": "sec_homomorphisms",
   "level": "1",
   "url": "sec_homomorphisms.html",
   "type": "Section",
   "number": "3.1",
   "title": "Homomorphisms",
-  "body": " Homomorphisms   Guiding Questions   In this section, we'll seek to answer the questions:    What is a ring homomorphism?  What are some examples of ring homomorphisms?     Central to modern mathematics is the notion of function . This section assumes a familiarity with the idea of function from a set-theoretic point of view, as well as the concepts of injective (one-to-one), surjective (onto), and bijective functions (one-to-one correspondences). . Functions arise in all areas of mathematics, each subdiscipline concerned with certain types of functions. In algebra, our concern is with operation-preserving functions, such as the linear transformations of vector spaces you have seen in a course in linear algebra. Those linear transformations had the properties that (addition is preserved) and (scalar multiplication is preserved).    Homomorphisms  We find something similar at work in the study of homomorphisms of rings, which we define to be functions that preserve both addition and multiplication.   homomorphism  monomorphism  epimorphism  isomorphism  automorphism   Let and be rings. A function is called a ring homomorphism if it preserves addition, multiplication, and sends the identity of to the identity of . That is, for all :  ,  , and  .  If is injective (one-to-one), we say that is a monomorphism . If is surjective (onto), we say that is an epimorphism . If is a bijection (both injective and surjective), we say that is an isomorphism and write . If is an isomorphism, we say is an automorphism of .    Our first job when glimpsing a new concept is to collect a stock of examples.    Determine whether the following functions are homomorphisms, monomorphisms, epimorphisms, isomorphisms, automorphisms, or none of these. Note that denotes an arbitrary ring and a field.   defined by  defined by  defined by  defined by  defined by , where  defined by  defined by , where if , is the expression obtained by plugging into : (this is known as the -evaluation map)  defined by      defined by is called the identity mapping . We in particular have: , , and The identity mapping satisfies the criteria for being a ring homomorphism. It is an automorphism.   defined by is the negation mapping. Although it is true that it fails the other two properties of a ring homorphism in general (sometimes not though!). Namely, for a general ring so that and also but . In general, so is not compatible with multiplication or unity. However, sometimes is true for every element of the ring, particularly Boolean rings. Examples include .   defined by , or the multiplication by map. The map does not preserve the unity nor does it preserve multiplication. Check! It is not a ring homomorphism.   defined by is sometimes called the Frobenius mapping. It is in fact a ring homomorphism in this case. For the unity and multiplicative compatibility we have and . For compatibility with addition we remind the reader that : It is not an automorphism; however, it is a homomorphism. Homomorphisms from a ring to itself are called endomorphisms .   defined by , where TBD   defined by TBD   defined by , where if , is the expression obtained by plugging into : (this is known as the -evaluation map) TBD   defined by TBD.      The sequence of results that follows shows that homomorphisms preserve several of our ring-theoretic notions. This means is the right . That is, of all the possible functions between rings we isolated a good class to call structure preserving. We begin by showing that homomorphisms preserve the additive identity.    Suppose is a ring homomorphism. Then .     Supppose is a ring homomorphism. Note that and in particular this tells us as desired.   We now show that homomorphisms preserve units.    Suppose is a ring homomorphism. If , then .     Suppose is a ring homomorphism and . Then there exists with . We compute: and hence .     Show that a homomorphism sends a zero-divisor to either zero or a zero-divisor.    Mimic the ideas in .   TBD   Since homomorphisms are compatible with multiplication, and powers of elements are defined with multiplication, they must preserve powers as the next theorem shows.    Suppose is a ring homomorphism. For any and , we have in .    Suppose is a ring homomorphism and . We now proceed by induction. The base case is which certainly true.  For the inductive step, suppose that . We show : as desired. This equality completes the proof.      Kernel of a Homomorphism  Homomorphisms give rise to a particularly important class of subsets: kernels.   kernel   Let be a ring homomorphism. Then is the kernel of .    Note that by we know always. In particular, the kernel of a ring homomorphism is always a non-empty subset.    For each homomorphism in , find (with justification), the kernel.   TBD    Kernels are a fundamental structure when studying rings. As a first glimpse of their importance, we show that they give a useful way of determining whether their defining homomorphisms are monomorphisms.    Let be a homomorphism. Then is a monomorphism if and only if .     Supppose is a monomomorphism. Since is a homomorphism we know . Suppose now that so that . Since is injective and , we conclude that . In particular, .  For the converse, suppose that . Suppose are such that . Then we have: and so . Since the only element here is , we conclude that or that . Thus is a monomorphism.   A nice application of this theorem is the following result that shows that homomorphisms from a field are always monomorphisms. They will never fail to be injective!    Suppose is a ring homomorphism where is a field. Then is a monomorphism.     Suppose is a ring homomorphism where is a field. We show is a monomorphism by applying . Suppose that there is , with . If , then there is a unit. By , is also a unit and in particular is not . Thus the only element of is .     Exercises   Mark the following as true or false.   Suppose are rings. Any function is a ring homomorphism.  Suppose is a ring homomorphism. Then is an ideal.  If is a ring homomorphism and is a field, then is a field.  If is a ring homomorphism and is a field, then is a field.  If is a ring homomorphism and is a finite ring, then is a finite ring.  If is a ring homomorphism and is a finite ring, then is a finite ring.  If is an injective ring homomorphism and is a finite ring, then is a finite ring.  The identity map on a ring is a ring homomorphism.  The zero map defined by is a ring homomorphism.     Fix . Let be defined by . Prove that is a ring homomorphism. Then show that is neither injective nor surjective.    Define by . Prove that is an injective ring homomorphism.    Let be any ring and be the set of matries with entries in . Define by , where is the identity matrix. Prove that is an injective ring homomorphism.    Suppose is a ring. Fix . Let be defined by . Prove that is a ring homomorphism. Is the evaluation homomorphism injective, surjective, and\/or bijective?    Gemini, Google's LLM, has claimed that for any ring , the trace map defined by where , is a ring homomorphism. This is true for exactly one . Find it, prove it is a homomorphism for that , then show it is not a homomorphism for any .    Consider the function defined by . Prove that this mapping is a homomorphism. Then show it is neither injective nor bijective. What is it's image?    Let be a ring homomorphism. Prove that . That is, ring homomorphisms also preserve the additive identity.    Let be a ring homomorphism. Prove that the image of is a subring of .    "
+  "body": " Homomorphisms   Guiding Questions   In this section, we'll seek to answer the questions:    What is a ring homomorphism?  What are some examples of ring homomorphisms?  What is the kernel and image of a homomorphism?  What are the initial and terminal rings?     Central to modern mathematics is the notion of function . This section assumes a familiarity with the idea of function from a set-theoretic point of view, as well as the concepts of injective (one-to-one), surjective (onto), and bijective functions (one-to-one correspondences). . Functions arise in all areas of mathematics, each subdiscipline concerned with certain types of functions. In algebra, our concern is with operation-preserving functions, such as the linear transformations of vector spaces you have seen in a course in linear algebra. Those linear transformations had the properties that (addition is preserved) and (scalar multiplication is preserved).    Homomorphisms  We find something similar at work in the study of homomorphisms of rings, which we define to be functions that preserve both addition and multiplication.   homomorphism  monomorphism  epimorphism  isomorphism  automorphism   Let and be rings. A function is called a ring homomorphism if it preserves addition, multiplication, and sends the identity of to the identity of . That is, for all :  ,  , and  .  If is injective (one-to-one), we say that is a monomorphism . If is surjective (onto), we say that is an epimorphism . If is a bijection (both injective and surjective), we say that is an isomorphism and write . If is an isomorphism, we say is an automorphism of .    Our first job when glimpsing a new concept is to collect a stock of examples.    Determine whether the following functions are homomorphisms, monomorphisms, epimorphisms, isomorphisms, automorphisms, or none of these. Note that denotes an arbitrary ring and a field.   defined by  defined by  defined by  defined by  defined by , where  defined by  defined by , where if , is the expression obtained by plugging into : (this is known as the -evaluation map)  defined by      defined by is called the identity mapping . We in particular have: , , and The identity mapping satisfies the criteria for being a ring homomorphism. It is an automorphism.   defined by is the negation mapping. Although it is true that it fails the other two properties of a ring homorphism in general (sometimes not though!). Namely, for a general ring so that and also but . In general, so is not compatible with multiplication or unity. However, sometimes is true for every element of the ring, particularly Boolean rings. Examples include .   defined by , or the multiplication by map. The map does not preserve the unity nor does it preserve multiplication. Check! It is not a ring homomorphism.   defined by is sometimes called the Frobenius mapping. It is in fact a ring homomorphism in this case. For the unity and multiplicative compatibility we have and . For compatibility with addition we remind the reader that : It is not an automorphism; however, it is a homomorphism. Homomorphisms from a ring to itself are called endomorphisms .   defined by , where TBD   defined by TBD   defined by , where if , is the expression obtained by plugging into : (this is known as the -evaluation map) TBD   defined by TBD.      Ferdinand Georg Frobenius     Portrait of Ferdinand Georg Frobenius   Ferdinand Georg Frobenius, a student of Weierstrass, (1849-1917) was a German mathematician known for contributions to number theory, group theory, differential equations, and elliptic functions.    The Frobenius Homomorphism  Frobenius Homomorphism   The Frobenius Homomorphism (or just Frobenius) is a homomorphism that exists whenever we are working with a prime. In this example, we look at the Frobenius on a polynomial ring.  Let be a prime. Consider the function: defined by .  Before we prove that the Frobenius is a homomorphism, let's recall that whenever the binomial coefficient is divisible by . Indeed, using the usual formula: All of the terms in the denominator are strictly less than provided . Thus there is no term in the denominator that will cancel the in the numerator. In particular, the binomial coefficients are in whenever .  With that done, let's show is a homomorphism. It preserves unity: .  For compatibility with addition, suppose : as the cross terms are zero.  For compatibility with multiplication: We conclude that the Frobenius is a homomorphism.  The following checks will be left as an exercise: The Frobenius is a monomorphism, it is not an epimorphism, and hence not an automorphism.       Properties of Homomorphisms  The sequence of results that follows shows that homomorphisms preserve several of our ring-theoretic notions. This means is the right definition. That is, of all the possible functions between rings we isolated a good class to call structure preserving. We begin by showing that homomorphisms preserve the additive identity.    Suppose is a ring homomorphism. Then .    Supppose is a ring homomorphism. Note that and in particular this tells us as desired.    We now show that homomorphisms preserve units.    Suppose is a ring homomorphism. If , then .    Suppose is a ring homomorphism and . Then there exists with . We compute: and hence .      Show that a homomorphism sends a zero-divisor to either zero or a zero-divisor.    Mimic the ideas in .   TBD   Since homomorphisms are compatible with multiplication, and powers of elements are defined with multiplication, they must preserve powers as the next theorem shows.    Suppose is a ring homomorphism. For any and , we have in .    Suppose is a ring homomorphism and . We now proceed by induction. The base case is which certainly true.  For the inductive step, suppose that . We show : as desired. This equality completes the proof.      Kernel of a Homomorphism  Homomorphisms give rise to a particularly important class of subsets: kernels.   kernel   Let be a ring homomorphism. Then is the kernel of .    Note that by we know always. In particular, the kernel of a ring homomorphism is always a non-empty subset.    For each homomorphism in , find (with justification), the kernel.   TBD    Kernels are a fundamental structure when studying rings. As a first glimpse of their importance, we show that they give a useful way of determining whether their defining homomorphisms are monomorphisms.    Let be a homomorphism. Then is a monomorphism if and only if .     Supppose is a monomomorphism. Since is a homomorphism we know . Suppose now that so that . Since is injective and , we conclude that . In particular, .  For the converse, suppose that . Suppose are such that . Then we have: and so . Since the only element here is , we conclude that or that . Thus is a monomorphism.   A nice application of this theorem is the following result that shows that homomorphisms from a field are always monomorphisms. They will never fail to be injective!    Suppose is a ring homomorphism where is a field. Then is a monomorphism.     Suppose is a ring homomorphism where is a field. We show is a monomorphism by applying . Suppose that there is , with . If , then there is a unit. By , is also a unit and in particular is not . Thus the only element of is .     Image of a Homomorphism  The image of a homomorphism is just different terminology for the range. One reason to use different language is that we will see the image is not just a subset of , it is a subring of !    Suppose , the image of the , denoted is the range of :       Compute the image of the homomorphisms .    Before we prove that the image of a homomorphism is a subring, let's note that homomorphisms preserve most ring-axioms. In particular, we have defined subtraction of two ring elements as , where is the additive inverse of . In you will prove that homorphisms preserve additive inverses, namely: . In particular,     Suppose is a homomorphism. Then is a subring of .    Since , we know that . We just need to show it is closed under subtraction and multiplication:  For subtraction, take . Then   For multiplication, we have We conclude that is a subring of .      The Initial Ring   Initial Ring We now return to and investigate homomorphisms , where is an arbitrary ring. We will prove that there is one and only one homomorphism. This shows that is the initial ring . It is the unique ring (up to isomorphism) that has this property.     Action of Integers  Before we prove this, let's introduce some notation. Take a ring element . For we can define where the right hand sum has terms. Similarly, where the right hand sum has terms. And . We leave it to the reader to check that this is well-defined.    For any ring , there is a unique homomorphism .    Let be an arbitrary homomorphism. Since the image of unity is unity we have . Since the image of the additive identity is the additive identity, we have . By induction, we conclude that for any . Similarly for any .  Since was arbitrary, we have seen that any homomorphism is the homomorphism . This proves uniqueness.      The Terminal Ring   Terminal Ring In this last part of the section, we ask the question: Is there a ring such that for any ring , there exists one and only one homomorphism . That is to say, is there a ? One guess might be . It turns out this is not the case!    Verify the terminal ring, if it exists, cannot be . Do so by showing there is no homomorphism . What about ? Can it be terminal?    The right choice happens to be zero!    For any ring , there is one and only one homomorphism .    This is an exercise. There is only one set-theoretic mapping: the zero map. In this case, we just need to see that the zero map is a homomorphism. This is the case if and only if the codomain is .    We now have two very special rings: and . A natural question is to ask how they interact with each other. In particular, we know there exists a unique homomorphism . What about the other way around?    How many homomorphisms are there ?      Exercises   Mark the following as true or false.   Suppose are rings. Any function is a ring homomorphism.  Suppose is a ring homomorphism. Then is an ideal.  If is a ring homomorphism and is a field, then is a field.  If is a ring homomorphism and is a field, then is a field.  If is a ring homomorphism and is a finite ring, then is a finite ring.  If is a ring homomorphism and is a finite ring, then is a finite ring.  If is an injective ring homomorphism and is a finite ring, then is a finite ring.  The identity map on a ring is a ring homomorphism.  The zero map defined by is a ring homomorphism.     Fix . Let be defined by . Prove that is a ring homomorphism. Then show that is neither injective nor surjective.    Define by . Prove that is an injective ring homomorphism.    Let be any ring and be the set of matries with entries in . Define by , where is the identity matrix. Prove that is an injective ring homomorphism.    Suppose is a ring. Fix . Let be defined by . Prove that is a ring homomorphism. Is the evaluation homomorphism injective, surjective, and\/or bijective?    Gemini, Google's LLM, has claimed that for any ring , the trace map defined by where , is a ring homomorphism. This is true for exactly one . Find it, prove it is a homomorphism for that , then show it is not a homomorphism for any .    Consider the function defined by . Prove that this mapping is a homomorphism. Then show it is neither injective nor bijective. What is it's image?    Let be the Frobenius of . Show that is a monomorphism. Show it is not an epimorphism. Describe as a subring of .    Let be a ring homomorphism. Prove that . That is, ring homomorphisms also preserve the additive identity.    Let is a homomorphism, prove that . That is, the additive inverse of the image is the image of the additive inverse.    Suppose is a ring satisfying the initial property: For all rings , there is a unique homomorphism . Prove is isomorphic to as follows.    Show that there are unique homomorphisms and     Use to prove that .    Use that satisfies the initial property to prove .    Deduce that . How might your proof change if you were to show that there is a unique terminal ring instead?      Prove that the zero map is a homomorphism if and only is the zero ring.    "
 },
 {
   "id": "obj_homomorphisms",
@@ -2374,7 +2473,7 @@ var ptx_lunr_docs = [
   "type": "Guiding Questions",
   "number": "3.1",
   "title": "Guiding Questions",
-  "body": " Guiding Questions   In this section, we'll seek to answer the questions:    What is a ring homomorphism?  What are some examples of ring homomorphisms?   "
+  "body": " Guiding Questions   In this section, we'll seek to answer the questions:    What is a ring homomorphism?  What are some examples of ring homomorphisms?  What is the kernel and image of a homomorphism?  What are the initial and terminal rings?   "
 },
 {
   "id": "def_ringHomomorphism",
@@ -2395,45 +2494,45 @@ var ptx_lunr_docs = [
   "body": "  Determine whether the following functions are homomorphisms, monomorphisms, epimorphisms, isomorphisms, automorphisms, or none of these. Note that denotes an arbitrary ring and a field.   defined by  defined by  defined by  defined by  defined by , where  defined by  defined by , where if , is the expression obtained by plugging into : (this is known as the -evaluation map)  defined by      defined by is called the identity mapping . We in particular have: , , and The identity mapping satisfies the criteria for being a ring homomorphism. It is an automorphism.   defined by is the negation mapping. Although it is true that it fails the other two properties of a ring homorphism in general (sometimes not though!). Namely, for a general ring so that and also but . In general, so is not compatible with multiplication or unity. However, sometimes is true for every element of the ring, particularly Boolean rings. Examples include .   defined by , or the multiplication by map. The map does not preserve the unity nor does it preserve multiplication. Check! It is not a ring homomorphism.   defined by is sometimes called the Frobenius mapping. It is in fact a ring homomorphism in this case. For the unity and multiplicative compatibility we have and . For compatibility with addition we remind the reader that : It is not an automorphism; however, it is a homomorphism. Homomorphisms from a ring to itself are called endomorphisms .   defined by , where TBD   defined by TBD   defined by , where if , is the expression obtained by plugging into : (this is known as the -evaluation map) TBD   defined by TBD.    "
 },
 {
+  "id": "subsec-homomorphisms-6-2-1",
+  "level": "2",
+  "url": "sec_homomorphisms.html#subsec-homomorphisms-6-2-1",
+  "type": "Figure",
+  "number": "3.1.2",
+  "title": "",
+  "body": "  Portrait of Ferdinand Georg Frobenius   "
+},
+{
+  "id": "ex_frobeniusAffineLine",
+  "level": "2",
+  "url": "sec_homomorphisms.html#ex_frobeniusAffineLine",
+  "type": "Example",
+  "number": "3.1.3",
+  "title": "The Frobenius Homomorphism.",
+  "body": " The Frobenius Homomorphism  Frobenius Homomorphism   The Frobenius Homomorphism (or just Frobenius) is a homomorphism that exists whenever we are working with a prime. In this example, we look at the Frobenius on a polynomial ring.  Let be a prime. Consider the function: defined by .  Before we prove that the Frobenius is a homomorphism, let's recall that whenever the binomial coefficient is divisible by . Indeed, using the usual formula: All of the terms in the denominator are strictly less than provided . Thus there is no term in the denominator that will cancel the in the numerator. In particular, the binomial coefficients are in whenever .  With that done, let's show is a homomorphism. It preserves unity: .  For compatibility with addition, suppose : as the cross terms are zero.  For compatibility with multiplication: We conclude that the Frobenius is a homomorphism.  The following checks will be left as an exercise: The Frobenius is a monomorphism, it is not an epimorphism, and hence not an automorphism.   "
+},
+{
   "id": "thm_homomorphismsPreserveZero",
   "level": "2",
   "url": "sec_homomorphisms.html#thm_homomorphismsPreserveZero",
   "type": "Theorem",
-  "number": "3.1.2",
+  "number": "3.1.4",
   "title": "",
-  "body": "  Suppose is a ring homomorphism. Then .   "
-},
-{
-  "id": "subsec-homomorphisms-8",
-  "level": "2",
-  "url": "sec_homomorphisms.html#subsec-homomorphisms-8",
-  "type": "Proof",
-  "number": "3.1.1.1",
-  "title": "",
-  "body": " Supppose is a ring homomorphism. Note that and in particular this tells us as desired.  "
+  "body": "  Suppose is a ring homomorphism. Then .    Supppose is a ring homomorphism. Note that and in particular this tells us as desired.   "
 },
 {
   "id": "thm_homomorphismsPreserveUnits",
   "level": "2",
   "url": "sec_homomorphisms.html#thm_homomorphismsPreserveUnits",
   "type": "Theorem",
-  "number": "3.1.3",
+  "number": "3.1.5",
   "title": "",
-  "body": "  Suppose is a ring homomorphism. If , then .   "
+  "body": "  Suppose is a ring homomorphism. If , then .    Suppose is a ring homomorphism and . Then there exists with . We compute: and hence .   "
 },
 {
-  "id": "subsec-homomorphisms-11",
+  "id": "ssec_propertiesOfHomomorphisms-6",
   "level": "2",
-  "url": "sec_homomorphisms.html#subsec-homomorphisms-11",
-  "type": "Proof",
-  "number": "3.1.1.2",
-  "title": "",
-  "body": " Suppose is a ring homomorphism and . Then there exists with . We compute: and hence .  "
-},
-{
-  "id": "subsec-homomorphisms-12",
-  "level": "2",
-  "url": "sec_homomorphisms.html#subsec-homomorphisms-12",
+  "url": "sec_homomorphisms.html#ssec_propertiesOfHomomorphisms-6",
   "type": "Activity",
   "number": "3.1.2",
   "title": "",
@@ -2444,7 +2543,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_homomorphisms.html#thm_homomorphismsPreservePowers",
   "type": "Theorem",
-  "number": "3.1.4",
+  "number": "3.1.6",
   "title": "",
   "body": "  Suppose is a ring homomorphism. For any and , we have in .    Suppose is a ring homomorphism and . We now proceed by induction. The base case is which certainly true.  For the inductive step, suppose that . We show : as desired. This equality completes the proof.   "
 },
@@ -2453,7 +2552,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_homomorphisms.html#ssec_kernelOfAHomomorphism-3",
   "type": "Definition",
-  "number": "3.1.5",
+  "number": "3.1.7",
   "title": "",
   "body": " kernel   Let be a ring homomorphism. Then is the kernel of .   "
 },
@@ -2471,7 +2570,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_homomorphisms.html#thm_zeroKernelIsInto",
   "type": "Theorem",
-  "number": "3.1.6",
+  "number": "3.1.8",
   "title": "",
   "body": "  Let be a homomorphism. Then is a monomorphism if and only if .   "
 },
@@ -2480,7 +2579,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_homomorphisms.html#ssec_kernelOfAHomomorphism-8",
   "type": "Proof",
-  "number": "3.1.2.1",
+  "number": "3.1.3.1",
   "title": "",
   "body": " Supppose is a monomomorphism. Since is a homomorphism we know . Suppose now that so that . Since is injective and , we conclude that . In particular, .  For the converse, suppose that . Suppose are such that . Then we have: and so . Since the only element here is , we conclude that or that . Thus is a monomorphism.  "
 },
@@ -2489,7 +2588,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_homomorphisms.html#thm-homomorphismsFromFieldsInjective",
   "type": "Theorem",
-  "number": "3.1.7",
+  "number": "3.1.9",
   "title": "",
   "body": "  Suppose is a ring homomorphism where is a field. Then is a monomorphism.   "
 },
@@ -2498,16 +2597,88 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_homomorphisms.html#ssec_kernelOfAHomomorphism-11",
   "type": "Proof",
-  "number": "3.1.2.2",
+  "number": "3.1.3.2",
   "title": "",
   "body": " Suppose is a ring homomorphism where is a field. We show is a monomorphism by applying . Suppose that there is , with . If , then there is a unit. By , is also a unit and in particular is not . Thus the only element of is .  "
+},
+{
+  "id": "def_imageOfAHomomorphism",
+  "level": "2",
+  "url": "sec_homomorphisms.html#def_imageOfAHomomorphism",
+  "type": "Definition",
+  "number": "3.1.10",
+  "title": "",
+  "body": "  Suppose , the image of the , denoted is the range of :    "
+},
+{
+  "id": "ssec_imageOfAHomomorphism-4",
+  "level": "2",
+  "url": "sec_homomorphisms.html#ssec_imageOfAHomomorphism-4",
+  "type": "Activity",
+  "number": "3.1.4",
+  "title": "",
+  "body": "  Compute the image of the homomorphisms .   "
+},
+{
+  "id": "thm_imageIsASubring",
+  "level": "2",
+  "url": "sec_homomorphisms.html#thm_imageIsASubring",
+  "type": "Theorem",
+  "number": "3.1.11",
+  "title": "",
+  "body": "  Suppose is a homomorphism. Then is a subring of .    Since , we know that . We just need to show it is closed under subtraction and multiplication:  For subtraction, take . Then   For multiplication, we have We conclude that is a subring of .   "
+},
+{
+  "id": "ssec_initialRing-2",
+  "level": "2",
+  "url": "sec_homomorphisms.html#ssec_initialRing-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "initial ring "
+},
+{
+  "id": "thm_initialRing",
+  "level": "2",
+  "url": "sec_homomorphisms.html#thm_initialRing",
+  "type": "Theorem",
+  "number": "3.1.12",
+  "title": "",
+  "body": "  For any ring , there is a unique homomorphism .    Let be an arbitrary homomorphism. Since the image of unity is unity we have . Since the image of the additive identity is the additive identity, we have . By induction, we conclude that for any . Similarly for any .  Since was arbitrary, we have seen that any homomorphism is the homomorphism . This proves uniqueness.   "
+},
+{
+  "id": "ssec_terminalRing-3",
+  "level": "2",
+  "url": "sec_homomorphisms.html#ssec_terminalRing-3",
+  "type": "Activity",
+  "number": "3.1.5",
+  "title": "",
+  "body": "  Verify the terminal ring, if it exists, cannot be . Do so by showing there is no homomorphism . What about ? Can it be terminal?   "
+},
+{
+  "id": "thm_terminalRing",
+  "level": "2",
+  "url": "sec_homomorphisms.html#thm_terminalRing",
+  "type": "Theorem",
+  "number": "3.1.13",
+  "title": "",
+  "body": "  For any ring , there is one and only one homomorphism .    This is an exercise. There is only one set-theoretic mapping: the zero map. In this case, we just need to see that the zero map is a homomorphism. This is the case if and only if the codomain is .   "
+},
+{
+  "id": "ssec_terminalRing-7",
+  "level": "2",
+  "url": "sec_homomorphisms.html#ssec_terminalRing-7",
+  "type": "Exploration",
+  "number": "3.1.6",
+  "title": "",
+  "body": "  How many homomorphisms are there ?   "
 },
 {
   "id": "sec-homomorphisms-tf",
   "level": "2",
   "url": "sec_homomorphisms.html#sec-homomorphisms-tf",
   "type": "Exercise",
-  "number": "3.1.3.1",
+  "number": "3.1.7.1",
   "title": "",
   "body": " Mark the following as true or false.   Suppose are rings. Any function is a ring homomorphism.  Suppose is a ring homomorphism. Then is an ideal.  If is a ring homomorphism and is a field, then is a field.  If is a ring homomorphism and is a field, then is a field.  If is a ring homomorphism and is a finite ring, then is a finite ring.  If is a ring homomorphism and is a finite ring, then is a finite ring.  If is an injective ring homomorphism and is a finite ring, then is a finite ring.  The identity map on a ring is a ring homomorphism.  The zero map defined by is a ring homomorphism.   "
 },
@@ -2516,7 +2687,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_homomorphisms.html#evaluationHomomorphismIntegral",
   "type": "Exercise",
-  "number": "3.1.3.2",
+  "number": "3.1.7.2",
   "title": "",
   "body": " Fix . Let be defined by . Prove that is a ring homomorphism. Then show that is neither injective nor surjective.  "
 },
@@ -2525,7 +2696,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_homomorphisms.html#exers-homomorphisms-4",
   "type": "Exercise",
-  "number": "3.1.3.3",
+  "number": "3.1.7.3",
   "title": "",
   "body": " Define by . Prove that is an injective ring homomorphism.  "
 },
@@ -2534,7 +2705,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_homomorphisms.html#exers-homomorphisms-5",
   "type": "Exercise",
-  "number": "3.1.3.4",
+  "number": "3.1.7.4",
   "title": "",
   "body": " Let be any ring and be the set of matries with entries in . Define by , where is the identity matrix. Prove that is an injective ring homomorphism.  "
 },
@@ -2543,7 +2714,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_homomorphisms.html#evaluationHomomorphismGeneralR",
   "type": "Exercise",
-  "number": "3.1.3.5",
+  "number": "3.1.7.5",
   "title": "",
   "body": " Suppose is a ring. Fix . Let be defined by . Prove that is a ring homomorphism. Is the evaluation homomorphism injective, surjective, and\/or bijective?  "
 },
@@ -2552,7 +2723,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_homomorphisms.html#exers-homomorphisms-7",
   "type": "Exercise",
-  "number": "3.1.3.6",
+  "number": "3.1.7.6",
   "title": "",
   "body": " Gemini, Google's LLM, has claimed that for any ring , the trace map defined by where , is a ring homomorphism. This is true for exactly one . Find it, prove it is a homomorphism for that , then show it is not a homomorphism for any .  "
 },
@@ -2561,7 +2732,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_homomorphisms.html#exers-homomorphisms-8",
   "type": "Exercise",
-  "number": "3.1.3.7",
+  "number": "3.1.7.7",
   "title": "",
   "body": " Consider the function defined by . Prove that this mapping is a homomorphism. Then show it is neither injective nor bijective. What is it's image?  "
 },
@@ -2570,18 +2741,45 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_homomorphisms.html#exers-homomorphisms-9",
   "type": "Exercise",
-  "number": "3.1.3.8",
+  "number": "3.1.7.8",
   "title": "",
-  "body": " Let be a ring homomorphism. Prove that . That is, ring homomorphisms also preserve the additive identity.  "
+  "body": " Let be the Frobenius of . Show that is a monomorphism. Show it is not an epimorphism. Describe as a subring of .  "
 },
 {
   "id": "exers-homomorphisms-10",
   "level": "2",
   "url": "sec_homomorphisms.html#exers-homomorphisms-10",
   "type": "Exercise",
-  "number": "3.1.3.9",
+  "number": "3.1.7.9",
   "title": "",
-  "body": " Let be a ring homomorphism. Prove that the image of is a subring of .  "
+  "body": " Let be a ring homomorphism. Prove that . That is, ring homomorphisms also preserve the additive identity.  "
+},
+{
+  "id": "exer_homomorphismPreserveAdditiveInverse",
+  "level": "2",
+  "url": "sec_homomorphisms.html#exer_homomorphismPreserveAdditiveInverse",
+  "type": "Exercise",
+  "number": "3.1.7.10",
+  "title": "",
+  "body": " Let is a homomorphism, prove that . That is, the additive inverse of the image is the image of the additive inverse.  "
+},
+{
+  "id": "exers-homomorphisms-12",
+  "level": "2",
+  "url": "sec_homomorphisms.html#exers-homomorphisms-12",
+  "type": "Exercise",
+  "number": "3.1.7.11",
+  "title": "",
+  "body": " Suppose is a ring satisfying the initial property: For all rings , there is a unique homomorphism . Prove is isomorphic to as follows.    Show that there are unique homomorphisms and     Use to prove that .    Use that satisfies the initial property to prove .    Deduce that . How might your proof change if you were to show that there is a unique terminal ring instead?    "
+},
+{
+  "id": "exers-homomorphisms-13",
+  "level": "2",
+  "url": "sec_homomorphisms.html#exers-homomorphisms-13",
+  "type": "Exercise",
+  "number": "3.1.7.12",
+  "title": "",
+  "body": " Prove that the zero map is a homomorphism if and only is the zero ring.  "
 },
 {
   "id": "sec_ideals",
@@ -2590,7 +2788,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.2",
   "title": "Ideals",
-  "body": " Ideals   Guiding Questions   In this section, we'll seek to answer the questions:    What are ideals?  How do ideals generalize divisibility?     One of the ways in which mathematicians study the structure of an abstract object is by considering how it interacts with other (related) objects. This is especially true of its sub objects. Thus, in linear algebra, we are often concerned with subspaces of a vector space as a means of understanding the vector space, or even submatrices as a way of understanding a matrix (see, e.g., the cofactor expansion formula for the determinant). In real analysis and topology, the important subobjects are usually open sets, or subsequences, and the study of a graph's subgraphs is an important approach to many questions in graph theory.  In this section, we begin a set-theoretic structural exploration of the notion of ring by considering a particularly important class of subsets which will be integral to our understanding of factorization.  These subsets are called ideals . They arose in the work of Kummer and Dedekind as a way of trying to recover some notion of unique factorization in rings that do not have properties like the fundamental theorem of arithmetic in .    Kernel Is An Ideal  We first return to the kernel of a ring homomorphism introduced in . While the following proposition might seem odd, it will lead us to the definition of an ideal.    Let be a ring homomorphism and be its kernel. For any and , we have:    and             Pick and so that . Then Thus . The proof of is similar and is left as an activity.  For the second claim, take so that . Then we have Thus .      Mimic the proof of to show that whenever is a ring homomorphism and and , then       Ideals  The following definition of an ideal is an attempt to generalize the properties that kernels have.    A subset of a (not necessarily commutative) ring is called an ideal if:        for all , ; and,    for all and for all , and .       Observe that the third requirement for a set to be an ideal of is simplified slightly if is commutative. Namely, we need only check one of the conditions.  There are many important examples and types of ideals, but there are also some trivial ideals contained in every ring.    Let be a ring. Then and are ideals of .    Note that is a subset of containing 0, closed under addition, and closed under multiplication. Therefore is an ideal in .  The zero ideal has . The only element in is and . Lastly, for any , we know so that . Thus is an ideal of .    The following theorem provides a useful characterization of when an ideal is in fact the whole ring.    Let be a ring and an ideal of . Then if and only if contains a unit of .    If , will do.  We know that . If there is a unit , then given any , , so that and hence .      Ideals from Reduction Modulo m  We now illustrate how ideals and kernels are related by revisiting .    Pick with . Then the reduction modulo map is a ring homomorphism with kernel given by     We need to show that satisfies . To that end we first show it is compatible with addition. Take . Then: But this is of course just the definition of addition in which is why we spent so long checking that addition was well-defined. We were really proving this fact.  Similarly, for multiplication:   We also have and so satisfies all three propertis of being a ring homomorphism.  Lastly, suppose . That is, . Then . But and so .   By we know that is an ideal. We could have; however, proved this directly. We do this now as a prelude to the more general result in Here it is    Principal Ideals  The most important type of ideals (for our work, at least), are those which are the sets of all multiples of a single element in the ring. Such ideals are called principal ideals .    Let be commutative with identity and let . The set is an ideal (called the principal ideal generated by ).    Observe that .  Moreover, if , . Finally, if and , .  Thus, is an ideal.    The element in the theorem is known as a generator of .    Let be commutative with identity, and let . Give necessary and sufficient conditions for and, separately, .  That is, fill in the blanks: _________ and _________.   Justify your answers.    We have and An acceptable alternative would be: . Make sure students are aware of this! .  Note that .  Similarly, suppose . Then , so . Conversely, if , then there is some such that , and thus for all , .  Note that this means that if we want to know if , it's enough to check that .    Principal ideals may have more than one generator.    Let be a ring and . Then , where is any unit of .    Apply the answer to the question.      In , describe the principal ideals generated by   2         9    0    27    3     Determine the subset relations among the above ideals.      All multiples of 2    All multiples of     All multiples of 9; same as the previous part.         All multiples of 27    All multiples of 3    We have . The ideal only contains , which is a subset of all ideals.     "
+  "body": " Ideals   Guiding Questions   In this section, we'll seek to answer the questions:    What are ideals?  How do ideals generalize divisibility?     One of the ways in which mathematicians study the structure of an abstract object is by considering how it interacts with other (related) objects. This is especially true of its sub objects. Thus, in linear algebra, we are often concerned with subspaces of a vector space as a means of understanding the vector space, or even submatrices as a way of understanding a matrix (see, e.g., the cofactor expansion formula for the determinant). In real analysis and topology, the important subobjects are usually open sets, or subsequences, and the study of a graph's subgraphs is an important approach to many questions in graph theory.  In this section, we begin a set-theoretic structural exploration of the notion of ring by considering a particularly important class of subsets which will be integral to our understanding of factorization.  These subsets are called ideals . They arose in the work of Kummer and Dedekind as a way of trying to recover some notion of unique factorization in rings that do not have properties like the fundamental theorem of arithmetic in .    Ideals  We first return to the kernel of a ring homomorphism introduced in . While the following proposition might seem odd, it will lead us to the definition of an ideal.    Let be a ring homomorphism and be its kernel. For any and , we have:    and             Pick and so that . Then Thus . The proof of is similar and is left as an activity.  For the second claim, take so that . Then we have Thus .      Mimic the proof of to show that whenever is a ring homomorphism and and , then     The following definition of an ideal is an attempt to generalize the properties that kernels have.   Two-Sided Ideals  Our definition is that of a two-sided ideal. There are left and right ideals; however, we will not need this generality.    Ideal   A subset of a (not necessarily commutative) ring is called an ideal if:        for all , ; and,    for all and for all , and .       Observe that the third requirement for a set to be an ideal of is simplified slightly if is commutative. Namely, we need only check one of the conditions.  There are many important examples and types of ideals, but there are also some trivial ideals contained in every ring.    Let be a ring. Then and are ideals of .    Note that is a subset of containing 0, closed under addition, and closed under multiplication. Therefore is an ideal in .  The zero ideal has . The only element in is and . Lastly, for any , we know so that . Thus is an ideal of .     ideal (proper)  ideal (trivial)  ideal (non-trivial) An ideal is called proper if . The ideals are called trivial ideals . If is not equal to , it is called non-trivial .  The following theorem provides a useful characterization of when an ideal is in fact the whole ring.    Let be a ring and an ideal of . Then if and only if contains a unit of .    If , will do.  We know that . If there is a unit , then given any , , so that and hence .      Ideals of the Integers Modulo m  We collect some examples of ideals. Let's first investigate the relationship between and .    Pick with . Then the reduction modulo map is a ring homomorphism with kernel given by     We need to show that satisfies . To that end we first show it is compatible with addition. Take . Then: But this is of course just the definition of addition in which is why we spent so long checking that addition was well-defined. We were really proving this fact.  Similarly, for multiplication:   We also have and so satisfies all three propertis of being a ring homomorphism.  Lastly, suppose . That is, . Then . But and so .    By we know that is an ideal. We could have proved this directly. We do this now as it is an important skill to develop.    Fix any , then the set of multiples of is an ideal. That is, is an ideal. We prove this directly from the definition.  We have . For closure under addition, take for some . Then   Since is commutative, we just have to show absorbs left-multiplication. For that, take and arbitrary . Then Thus we have reproved : is an ideal of .  If , then is the zero ideal. If , then is the other extreme. For , the ideals are proper.      Let's consider our non-commutative example: . What are the ideals here? It turns out, that this ring is simple in that it only has trivial ideals.  Recall, the standard basis for consists of the sparse matrices which have a in row and column and zero elsewhere. For any matrix we have:   Similarly is the matrix with in the entry and zero elsewhere. Likewise for and .  Now take any ideal . We know that are two ideals. What we want to show is that if , then . To that end, suppose so there is a non-zero .  At least one of the entries of is non-zero, say . Then is the matrix with in the spot and zero elsehwere. Multiply by the scalar matrix so that we know has a matrix with in exactly one entry and zero elsewhere. That is, we know that one of the standard basis elements is in .  We now show that if one of the standard basis elements is in , then has all of the standard basis elements. The proof for each case is similar so we assume that has . Since absorbs multiplication, every product we compute will be an element of . We have: and and lastly . Thus has all of the elements in the standard basis.  To see now that has any matrix, we take a random . We can write Each one of the terms in this sum is in since absorbs multiplication. Since is closed under addition, . But was arbitrary so that .      Let's now consider the polynomial ring over : . Define the homomorphism given by . We've already see that is a homomorphism. From , the kernel of this mapping is an ideal.  Suppose or equivalently . We will revisit evaluation later but for now recall that this means that is a factor of . That is, there exists such that .  On the other hand, suppose , then . We can therefore describe the kernel of the multiplication map as the multiples of :       Principal Ideals  The most important type of ideals (for our work, at least), are those which are the sets of all multiples of a single element in the ring. We saw this with . Such ideals are called principal ideals .  For the following theorem\/definition, we require commutative rings. The interested reader is invited to formalize a definition for non-commutative rings.     Principal Ideal Generated by   Principal Ideal   Let be commutative with identity and let . The set is an ideal (called the principal ideal generated by ).    Observe that .  Moreover, if , . Finally, if and , .  Thus, is an ideal.    The element in the theorem is known as a generator of .    Let be commutative with identity, and let . Give necessary and sufficient conditions for and, separately, .  That is, fill in the blanks: _________ and _________.   Justify your answers.    We have and An acceptable alternative would be: . Make sure students are aware of this! .  Note that .  Similarly, suppose . Then , so . Conversely, if , then there is some such that , and thus for all , .  Note that this means that if we want to know if , it's enough to check that .    Principal ideals may have more than one generator.    Let be a ring and . Then , where is any unit of .    Apply the answer to the question.      In , describe the principal ideals generated by   2         9    0    27    3     Determine the subset relations among the above ideals.      All multiples of 2    All multiples of     All multiples of 9; same as the previous part.         All multiples of 27    All multiples of 3    We have . The ideal only contains , which is a subset of all ideals.      Ideals Generated by a Set  A good chunk of rings of interest are infinite and so their ideals are also usually infinite. We saw that in some cases ideals can be described by a single element, a principal generator. Ideals that are always generated by a single elements are called principal ideal rings . We will return to those later when we discuss factorization in general rings.  Although we will primarily focus on such principal ideal rings. It is important to understand what happens when you cannot generate the whole ideal with a single element. We introduce ideals generated by finitel many elements now. Note, ideals that are always guaranteed to be generated by finitely many elements are called Noetherian rings .     Ideal Generated by    Let be a commutative ring and . The ideal generated by  is the subset:     Let's verify it is an ideal.    Suppose is a commutative ring and . Then is an ideal.    Set . Then   For closure under addition: which is in .  For closure under left-multiplication: which is in . We conclude that is an ideal.     A Non-Principal Ideal   Take . We claim that cannot be generated by a single element. Indeed, suppose for some polynomial .  Since , we know that . Hence, for some polynomial . By comparing degrees, . In particular, is a constant that is divides . This means that or .  It cannot be that (Exercise???). There will be an easier way to prove this when we learn the Noether Isomorphism Theorem. It follows then that . This means that . But this is impossible. Indeed, notice that but every element of has even coefficients. This contradiction shows that is not a principal ideal. In particular, is not a principal ideal domain.    It turns out that any ideal in can be generated by at most two elements. The proof of this is beyond the scope of this textbook.   "
 },
 {
   "id": "obj_ideals",
@@ -2611,9 +2809,9 @@ var ptx_lunr_docs = [
   "body": "  Let be a ring homomorphism and be its kernel. For any and , we have:    and             Pick and so that . Then Thus . The proof of is similar and is left as an activity.  For the second claim, take so that . Then we have Thus .   "
 },
 {
-  "id": "ssec_kernelIsAnIdeal-4",
+  "id": "ssec_ideals-4",
   "level": "2",
-  "url": "sec_ideals.html#ssec_kernelIsAnIdeal-4",
+  "url": "sec_ideals.html#ssec_ideals-4",
   "type": "Activity",
   "number": "3.2.1",
   "title": "",
@@ -2626,79 +2824,151 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "3.2.2",
   "title": "",
-  "body": "  A subset of a (not necessarily commutative) ring is called an ideal if:        for all , ; and,    for all and for all , and .      "
+  "body": " Ideal   A subset of a (not necessarily commutative) ring is called an ideal if:        for all , ; and,    for all and for all , and .      "
 },
 {
-  "id": "ssec_ideals-6",
+  "id": "ssec_ideals-10",
   "level": "2",
-  "url": "sec_ideals.html#ssec_ideals-6",
+  "url": "sec_ideals.html#ssec_ideals-10",
   "type": "Theorem",
   "number": "3.2.3",
   "title": "",
   "body": "  Let be a ring. Then and are ideals of .    Note that is a subset of containing 0, closed under addition, and closed under multiplication. Therefore is an ideal in .  The zero ideal has . The only element in is and . Lastly, for any , we know so that . Thus is an ideal of .   "
 },
 {
-  "id": "ssec_ideals-8",
+  "id": "ssec_ideals-11",
   "level": "2",
-  "url": "sec_ideals.html#ssec_ideals-8",
+  "url": "sec_ideals.html#ssec_ideals-11",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "proper trivial ideals non-trivial "
+},
+{
+  "id": "ssec_ideals-13",
+  "level": "2",
+  "url": "sec_ideals.html#ssec_ideals-13",
   "type": "Theorem",
   "number": "3.2.4",
   "title": "",
   "body": "  Let be a ring and an ideal of . Then if and only if contains a unit of .    If , will do.  We know that . If there is a unit , then given any , , so that and hence .   "
 },
 {
-  "id": "prop_reductionModuloMIsHomomorphism",
+  "id": "thm_reductionModuloMIsHomomorphism",
   "level": "2",
-  "url": "sec_ideals.html#prop_reductionModuloMIsHomomorphism",
-  "type": "Proposition",
+  "url": "sec_ideals.html#thm_reductionModuloMIsHomomorphism",
+  "type": "Theorem",
   "number": "3.2.5",
   "title": "",
   "body": "  Pick with . Then the reduction modulo map is a ring homomorphism with kernel given by     We need to show that satisfies . To that end we first show it is compatible with addition. Take . Then: But this is of course just the definition of addition in which is why we spent so long checking that addition was well-defined. We were really proving this fact.  Similarly, for multiplication:   We also have and so satisfies all three propertis of being a ring homomorphism.  Lastly, suppose . That is, . Then . But and so .   "
 },
 {
-  "id": "ssec_idealsFromReductionModuloM-6",
+  "id": "ssec_examplesOfIdeals-5",
   "level": "2",
-  "url": "sec_ideals.html#ssec_idealsFromReductionModuloM-6",
+  "url": "sec_ideals.html#ssec_examplesOfIdeals-5",
   "type": "Example",
   "number": "3.2.6",
   "title": "",
-  "body": "Here it is "
+  "body": "  Fix any , then the set of multiples of is an ideal. That is, is an ideal. We prove this directly from the definition.  We have . For closure under addition, take for some . Then   Since is commutative, we just have to show absorbs left-multiplication. For that, take and arbitrary . Then Thus we have reproved : is an ideal of .  If , then is the zero ideal. If , then is the other extreme. For , the ideals are proper.   "
 },
 {
-  "id": "ssec_principalIdeals-3",
+  "id": "ssec_examplesOfIdeals-6",
   "level": "2",
-  "url": "sec_ideals.html#ssec_principalIdeals-3",
-  "type": "Theorem",
+  "url": "sec_ideals.html#ssec_examplesOfIdeals-6",
+  "type": "Example",
   "number": "3.2.7",
   "title": "",
-  "body": "  Let be commutative with identity and let . The set is an ideal (called the principal ideal generated by ).    Observe that .  Moreover, if , . Finally, if and , .  Thus, is an ideal.   "
+  "body": "  Let's consider our non-commutative example: . What are the ideals here? It turns out, that this ring is simple in that it only has trivial ideals.  Recall, the standard basis for consists of the sparse matrices which have a in row and column and zero elsewhere. For any matrix we have:   Similarly is the matrix with in the entry and zero elsewhere. Likewise for and .  Now take any ideal . We know that are two ideals. What we want to show is that if , then . To that end, suppose so there is a non-zero .  At least one of the entries of is non-zero, say . Then is the matrix with in the spot and zero elsehwere. Multiply by the scalar matrix so that we know has a matrix with in exactly one entry and zero elsewhere. That is, we know that one of the standard basis elements is in .  We now show that if one of the standard basis elements is in , then has all of the standard basis elements. The proof for each case is similar so we assume that has . Since absorbs multiplication, every product we compute will be an element of . We have: and and lastly . Thus has all of the elements in the standard basis.  To see now that has any matrix, we take a random . We can write Each one of the terms in this sum is in since absorbs multiplication. Since is closed under addition, . But was arbitrary so that .   "
 },
 {
-  "id": "ssec_principalIdeals-5",
+  "id": "ssec_examplesOfIdeals-7",
   "level": "2",
-  "url": "sec_ideals.html#ssec_principalIdeals-5",
+  "url": "sec_ideals.html#ssec_examplesOfIdeals-7",
+  "type": "Example",
+  "number": "3.2.8",
+  "title": "",
+  "body": "  Let's now consider the polynomial ring over : . Define the homomorphism given by . We've already see that is a homomorphism. From , the kernel of this mapping is an ideal.  Suppose or equivalently . We will revisit evaluation later but for now recall that this means that is a factor of . That is, there exists such that .  On the other hand, suppose , then . We can therefore describe the kernel of the multiplication map as the multiples of :    "
+},
+{
+  "id": "thm_principalIdealsAreIdeals",
+  "level": "2",
+  "url": "sec_ideals.html#thm_principalIdealsAreIdeals",
+  "type": "Theorem",
+  "number": "3.2.9",
+  "title": "",
+  "body": "   Principal Ideal Generated by   Principal Ideal   Let be commutative with identity and let . The set is an ideal (called the principal ideal generated by ).    Observe that .  Moreover, if , . Finally, if and , .  Thus, is an ideal.   "
+},
+{
+  "id": "ssec_principalIdeals-6",
+  "level": "2",
+  "url": "sec_ideals.html#ssec_principalIdeals-6",
   "type": "Investigation",
   "number": "3.2.2",
   "title": "",
   "body": "  Let be commutative with identity, and let . Give necessary and sufficient conditions for and, separately, .  That is, fill in the blanks: _________ and _________.   Justify your answers.    We have and An acceptable alternative would be: . Make sure students are aware of this! .  Note that .  Similarly, suppose . Then , so . Conversely, if , then there is some such that , and thus for all , .  Note that this means that if we want to know if , it's enough to check that .   "
 },
 {
-  "id": "ssec_principalIdeals-7",
+  "id": "ssec_principalIdeals-8",
   "level": "2",
-  "url": "sec_ideals.html#ssec_principalIdeals-7",
+  "url": "sec_ideals.html#ssec_principalIdeals-8",
   "type": "Theorem",
-  "number": "3.2.8",
+  "number": "3.2.10",
   "title": "",
   "body": "  Let be a ring and . Then , where is any unit of .    Apply the answer to the question.   "
 },
 {
-  "id": "ssec_principalIdeals-8",
+  "id": "ssec_principalIdeals-9",
   "level": "2",
-  "url": "sec_ideals.html#ssec_principalIdeals-8",
+  "url": "sec_ideals.html#ssec_principalIdeals-9",
   "type": "Activity",
   "number": "3.2.3",
   "title": "",
   "body": "  In , describe the principal ideals generated by   2         9    0    27    3     Determine the subset relations among the above ideals.      All multiples of 2    All multiples of     All multiples of 9; same as the previous part.         All multiples of 27    All multiples of 3    We have . The ideal only contains , which is a subset of all ideals.   "
+},
+{
+  "id": "ssec_idealsGeneratedByASet-2",
+  "level": "2",
+  "url": "sec_ideals.html#ssec_idealsGeneratedByASet-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "principal ideal rings "
+},
+{
+  "id": "ssec_idealsGeneratedByASet-3",
+  "level": "2",
+  "url": "sec_ideals.html#ssec_idealsGeneratedByASet-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Noetherian rings "
+},
+{
+  "id": "def_idealGeneratedByFinitelyManyElements",
+  "level": "2",
+  "url": "sec_ideals.html#def_idealGeneratedByFinitelyManyElements",
+  "type": "Definition",
+  "number": "3.2.11",
+  "title": "",
+  "body": "   Ideal Generated by    Let be a commutative ring and . The ideal generated by  is the subset:    "
+},
+{
+  "id": "thm_idealGeneratedByFinitelyManyElementsIsIdeal",
+  "level": "2",
+  "url": "sec_ideals.html#thm_idealGeneratedByFinitelyManyElementsIsIdeal",
+  "type": "Theorem",
+  "number": "3.2.12",
+  "title": "",
+  "body": "  Suppose is a commutative ring and . Then is an ideal.    Set . Then   For closure under addition: which is in .  For closure under left-multiplication: which is in . We conclude that is an ideal.   "
+},
+{
+  "id": "ex_nonPrincipalIdeal",
+  "level": "2",
+  "url": "sec_ideals.html#ex_nonPrincipalIdeal",
+  "type": "Example",
+  "number": "3.2.13",
+  "title": "A Non-Principal Ideal.",
+  "body": " A Non-Principal Ideal   Take . We claim that cannot be generated by a single element. Indeed, suppose for some polynomial .  Since , we know that . Hence, for some polynomial . By comparing degrees, . In particular, is a constant that is divides . This means that or .  It cannot be that (Exercise???). There will be an easier way to prove this when we learn the Noether Isomorphism Theorem. It follows then that . This means that . But this is impossible. Indeed, notice that but every element of has even coefficients. This contradiction shows that is not a principal ideal. In particular, is not a principal ideal domain.   "
 },
 {
   "id": "sec_quotientRings",

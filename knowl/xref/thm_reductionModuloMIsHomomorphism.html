@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Pick <span class="process-math">\(m\in\mathbb{N}\)</span> with <span class="process-math">\(m&gt;1\text{.}\)</span> Then the reduction modulo <span class="process-math">\(m\)</span> map</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\varphi\colon \mathbb{Z}\to\mathbb{Z}/m
+\end{equation*}
+</div>
+<div class="para">is a ring homomorphism with kernel given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+m\mathbb{Z} = \{mk\mid k\in\mathbb{Z}\}.
+\end{equation*}
+</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">We need to show that <span class="process-math">\(\varphi\)</span> satisfies <a href="sec_homomorphisms.html#def_ringHomomorphism" class="xref" data-knowl="./knowl/xref/def_ringHomomorphism.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1.1">Definition 3.1.1</a>. To that end we first show it is compatible with addition. Take <span class="process-math">\(a,b\in\Z\text{.}\)</span> Then:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def_ringHomomorphism.html">
+\begin{equation*}
+\varphi(a+b) = \overline{a+b} = \bar{a}+\bar{b} = \varphi(a)+\varphi(b).
+\end{equation*}
+</div>
+<div class="para">But this is of course just the definition of addition in <span class="process-math">\(\Z/m\)</span> which is why we spent so long checking that addition was well-defined. We were really proving this fact.</div>
+</div> <div class="para logical">
+<div class="para">Similarly, for multiplication:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\varphi(ab) = \overline{ab} = \bar{a}\bar{b} = \varphi(a)\varphi(b).
+\end{equation*}
+</div>
+</div> <div class="para">We also have <span class="process-math">\(\varphi(0) = \bar{0}\)</span> and so <span class="process-math">\(\varphi\)</span> satisfies all three propertis of being a ring homomorphism.</div> <div class="para">Lastly, suppose <span class="process-math">\(\varphi(a) = \bar{0}\text{.}\)</span> That is, <span class="process-math">\(a\in\ker\vaprhi\text{.}\)</span> Then <span class="process-math">\(\bar{a} = \bar{0}\text{.}\)</span> But <span class="process-math">\(\bar{0} = m\Z\)</span> and so <span class="process-math">\(\bar{a} = m\Z\text{.}\)</span>
+</div></article></details><span class="incontext"><a class="internal" href="sec_ideals.html#thm_reductionModuloMIsHomomorphism">in-context</a></span>
+</body>
+</html>

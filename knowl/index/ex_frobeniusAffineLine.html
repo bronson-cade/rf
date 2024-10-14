@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">The Frobenius Homomorphism.</span>
+</h4>
+<div class="para">The Frobenius Homomorphism (or just Frobenius) is a homomorphism that exists whenever we are working with a prime. In this example, we look at the Frobenius on a polynomial ring.</div> <div class="para logical">
+<div class="para">Let <span class="process-math">\(p\)</span> be a prime. Consider the function:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathrm{Fr}\colon \mathbb{F}_p[x]\to \mathbb{F}_p[x]
+\end{equation*}
+</div>
+<div class="para">defined by <span class="process-math">\(\mathrm{Fr}(f(x)) = (f(x))^2\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Before we prove that the Frobenius is a homomorphism, let’s recall that whenever <span class="process-math">\(k\neq 0,p\)</span> the binomial coefficient <span class="process-math">\({p\choose k}\)</span> is divisible by <span class="process-math">\(p\text{.}\)</span> Indeed, using the usual formula:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{p\choose k} = \frac{p!}{(p-k)!k!} = \frac{p(p-1)!}{(p-k)!k!}.
+\end{equation*}
+</div>
+<div class="para">All of the terms in the denominator are strictly less than <span class="process-math">\(p\)</span> provided <span class="process-math">\(k\ne 0,p\text{.}\)</span> Thus there is no term in the denominator that will cancel the <span class="process-math">\(p\)</span> in the numerator. In particular, the binomial coefficients <span class="process-math">\({p\choose k}\)</span> are <span class="process-math">\(0\)</span> in <span class="process-math">\(\mathbb{F}_p\)</span> whenever <span class="process-math">\(k\ne 0,p\text{.}\)</span>
+</div>
+</div> <div class="para">With that done, let’s show <span class="process-math">\(\mathrm{Fr}\)</span> is a homomorphism. It preserves unity: <span class="process-math">\(\mathrm{Fr}(1) = 1^p = 1\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">For compatibility with addition, suppose <span class="process-math">\(f(x),g(x)\in\mathbb{F}_2[x]\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp\mathrm{Fr}(f(x)+g(x)) \\
+\amp= (f(x)+g(x))^2 \\
+\amp= f(x)^p +{p\choose 1}f(x)^{p-1}g(x) + \cdots + {p\choose p-1}f(x)g(x)^{p-1} + g(x)^p\\
+\amp = f(x)^p + 0 + g(x)^p \\
+\amp = \mathrm{Fr}(f(x)) + \mathrm{Fr}(g(x)) 
+\end{align*}
+</div>
+<div class="para">as the cross terms are zero.</div>
+</div> <div class="para logical">
+<div class="para">For compatibility with multiplication:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathrm{Fr}(f(x)\cdot g(x)) = (f(x)\cdot g(x))^p = f(x)^p\cdot g(x)^p = \mathrm{Fr}(f(x))\cdot \mathrm{Fr}g(x).
+\end{equation*}
+</div>
+<div class="para">We conclude that the Frobenius is a homomorphism.</div>
+</div> <div class="para">The following checks will be left as an exercise: The Frobenius is a monomorphism, it is not an epimorphism, and hence not an automorphism.</div></article><span class="incontext"><a class="internal" href="sec_homomorphisms.html#ex_frobeniusAffineLine">in-context</a></span>
+</body>
+</html>
