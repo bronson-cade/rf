@@ -1396,9 +1396,9 @@ var ptx_lunr_docs = [
   "body": " Consider the set where and addition and multiplication are defined in the usual way:     Prove is a field only using .  Prove is a field using the .    "
 },
 {
-  "id": "exers_primesFactorization-4",
+  "id": "exer_complexNumbersAsMatrices",
   "level": "2",
-  "url": "sec_fields.html#exers_primesFactorization-4",
+  "url": "sec_fields.html#exer_complexNumbersAsMatrices",
   "type": "Exercise",
   "number": "2.1.7.3",
   "title": "",
@@ -2437,7 +2437,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.1",
   "title": "Homomorphisms",
-  "body": " Homomorphisms   Guiding Questions   In this section, we'll seek to answer the questions:    What is a ring homomorphism?  What are some examples of ring homomorphisms?  What is the kernel and image of a homomorphism?  What are the initial and terminal rings?     Central to modern mathematics is the notion of function . This section assumes a familiarity with the idea of function from a set-theoretic point of view, as well as the concepts of injective (one-to-one), surjective (onto), and bijective functions (one-to-one correspondences). . Functions arise in all areas of mathematics, each subdiscipline concerned with certain types of functions. In algebra, our concern is with operation-preserving functions, such as the linear transformations of vector spaces you have seen in a course in linear algebra. Those linear transformations had the properties that (addition is preserved) and (scalar multiplication is preserved).    Homomorphisms  We find something similar at work in the study of homomorphisms of rings, which we define to be functions that preserve both addition and multiplication.   homomorphism  monomorphism  epimorphism  isomorphism  automorphism   Let and be rings. A function is called a ring homomorphism if it preserves addition, multiplication, and sends the identity of to the identity of . That is, for all :  ,  , and  .  If is injective (one-to-one), we say that is a monomorphism . If is surjective (onto), we say that is an epimorphism . If is a bijection (both injective and surjective), we say that is an isomorphism and write . If is an isomorphism, we say is an automorphism of .    Our first job when glimpsing a new concept is to collect a stock of examples.    Determine whether the following functions are homomorphisms, monomorphisms, epimorphisms, isomorphisms, automorphisms, or none of these. Note that denotes an arbitrary ring and a field.   defined by  defined by  defined by  defined by  defined by , where  defined by  defined by , where if , is the expression obtained by plugging into : (this is known as the -evaluation map)  defined by      defined by is called the identity mapping . We in particular have: , , and The identity mapping satisfies the criteria for being a ring homomorphism. It is an automorphism.   defined by is the negation mapping. Although it is true that it fails the other two properties of a ring homorphism in general (sometimes not though!). Namely, for a general ring so that and also but . In general, so is not compatible with multiplication or unity. However, sometimes is true for every element of the ring, particularly Boolean rings. Examples include .   defined by , or the multiplication by map. The map does not preserve the unity nor does it preserve multiplication. Check! It is not a ring homomorphism.   defined by is sometimes called the Frobenius mapping. It is in fact a ring homomorphism in this case. For the unity and multiplicative compatibility we have and . For compatibility with addition we remind the reader that : It is not an automorphism; however, it is a homomorphism. Homomorphisms from a ring to itself are called endomorphisms .   defined by , where TBD   defined by TBD   defined by , where if , is the expression obtained by plugging into : (this is known as the -evaluation map) TBD   defined by TBD.      Ferdinand Georg Frobenius     Portrait of Ferdinand Georg Frobenius   Ferdinand Georg Frobenius, a student of Weierstrass, (1849-1917) was a German mathematician known for contributions to number theory, group theory, differential equations, and elliptic functions.    The Frobenius Homomorphism  Frobenius Homomorphism   The Frobenius Homomorphism (or just Frobenius) is a homomorphism that exists whenever we are working with a prime. In this example, we look at the Frobenius on a polynomial ring.  Let be a prime. Consider the function: defined by .  Before we prove that the Frobenius is a homomorphism, let's recall that whenever the binomial coefficient is divisible by . Indeed, using the usual formula: All of the terms in the denominator are strictly less than provided . Thus there is no term in the denominator that will cancel the in the numerator. In particular, the binomial coefficients are in whenever .  With that done, let's show is a homomorphism. It preserves unity: .  For compatibility with addition, suppose : as the cross terms are zero.  For compatibility with multiplication: We conclude that the Frobenius is a homomorphism.  The following checks will be left as an exercise: The Frobenius is a monomorphism, it is not an epimorphism, and hence not an automorphism.       Properties of Homomorphisms  The sequence of results that follows shows that homomorphisms preserve several of our ring-theoretic notions. This means is the right definition. That is, of all the possible functions between rings we isolated a good class to call structure preserving. We begin by showing that homomorphisms preserve the additive identity.    Suppose is a ring homomorphism. Then .    Supppose is a ring homomorphism. Note that and in particular this tells us as desired.    We now show that homomorphisms preserve units.    Suppose is a ring homomorphism. If , then .    Suppose is a ring homomorphism and . Then there exists with . We compute: and hence .      Show that a homomorphism sends a zero-divisor to either zero or a zero-divisor.    Mimic the ideas in .   TBD   Since homomorphisms are compatible with multiplication, and powers of elements are defined with multiplication, they must preserve powers as the next theorem shows.    Suppose is a ring homomorphism. For any and , we have in .    Suppose is a ring homomorphism and . We now proceed by induction. The base case is which certainly true.  For the inductive step, suppose that . We show : as desired. This equality completes the proof.      Kernel of a Homomorphism  Homomorphisms give rise to a particularly important class of subsets: kernels.   kernel   Let be a ring homomorphism. Then is the kernel of .    Note that by we know always. In particular, the kernel of a ring homomorphism is always a non-empty subset.    For each homomorphism in , find (with justification), the kernel.   TBD    Kernels are a fundamental structure when studying rings. As a first glimpse of their importance, we show that they give a useful way of determining whether their defining homomorphisms are monomorphisms.    Let be a homomorphism. Then is a monomorphism if and only if .     Supppose is a monomomorphism. Since is a homomorphism we know . Suppose now that so that . Since is injective and , we conclude that . In particular, .  For the converse, suppose that . Suppose are such that . Then we have: and so . Since the only element here is , we conclude that or that . Thus is a monomorphism.   A nice application of this theorem is the following result that shows that homomorphisms from a field are always monomorphisms. They will never fail to be injective!    Suppose is a ring homomorphism where is a field. Then is a monomorphism.     Suppose is a ring homomorphism where is a field. We show is a monomorphism by applying . Suppose that there is , with . If , then there is a unit. By , is also a unit and in particular is not . Thus the only element of is .     Image of a Homomorphism  The image of a homomorphism is just different terminology for the range. One reason to use different language is that we will see the image is not just a subset of , it is a subring of !    Suppose , the image of the , denoted is the range of :       Compute the image of the homomorphisms .    Before we prove that the image of a homomorphism is a subring, let's note that homomorphisms preserve most ring-axioms. In particular, we have defined subtraction of two ring elements as , where is the additive inverse of . In you will prove that homorphisms preserve additive inverses, namely: . In particular,     Suppose is a homomorphism. Then is a subring of .    Since , we know that . We just need to show it is closed under subtraction and multiplication:  For subtraction, take . Then   For multiplication, we have We conclude that is a subring of .      The Initial Ring   Initial Ring We now return to and investigate homomorphisms , where is an arbitrary ring. We will prove that there is one and only one homomorphism. This shows that is the initial ring . It is the unique ring (up to isomorphism) that has this property.     Action of Integers  Before we prove this, let's introduce some notation. Take a ring element . For we can define where the right hand sum has terms. Similarly, where the right hand sum has terms. And . We leave it to the reader to check that this is well-defined.    For any ring , there is a unique homomorphism .    Let be an arbitrary homomorphism. Since the image of unity is unity we have . Since the image of the additive identity is the additive identity, we have . By induction, we conclude that for any . Similarly for any .  Since was arbitrary, we have seen that any homomorphism is the homomorphism . This proves uniqueness.      The Terminal Ring   Terminal Ring In this last part of the section, we ask the question: Is there a ring such that for any ring , there exists one and only one homomorphism . That is to say, is there a ? One guess might be . It turns out this is not the case!    Verify the terminal ring, if it exists, cannot be . Do so by showing there is no homomorphism . What about ? Can it be terminal?    The right choice happens to be zero!    For any ring , there is one and only one homomorphism .    This is an exercise. There is only one set-theoretic mapping: the zero map. In this case, we just need to see that the zero map is a homomorphism. This is the case if and only if the codomain is .    We now have two very special rings: and . A natural question is to ask how they interact with each other. In particular, we know there exists a unique homomorphism . What about the other way around?    How many homomorphisms are there ?      Exercises   Mark the following as true or false.   Suppose are rings. Any function is a ring homomorphism.  Suppose is a ring homomorphism. Then is an ideal.  If is a ring homomorphism and is a field, then is a field.  If is a ring homomorphism and is a field, then is a field.  If is a ring homomorphism and is a finite ring, then is a finite ring.  If is a ring homomorphism and is a finite ring, then is a finite ring.  If is an injective ring homomorphism and is a finite ring, then is a finite ring.  The identity map on a ring is a ring homomorphism.  The zero map defined by is a ring homomorphism.     Fix . Let be defined by . Prove that is a ring homomorphism. Then show that is neither injective nor surjective.    Define by . Prove that is an injective ring homomorphism.    Let be any ring and be the set of matries with entries in . Define by , where is the identity matrix. Prove that is an injective ring homomorphism.    Suppose is a ring. Fix . Let be defined by . Prove that is a ring homomorphism. Is the evaluation homomorphism injective, surjective, and\/or bijective?    Gemini, Google's LLM, has claimed that for any ring , the trace map defined by where , is a ring homomorphism. This is true for exactly one . Find it, prove it is a homomorphism for that , then show it is not a homomorphism for any .    Consider the function defined by . Prove that this mapping is a homomorphism. Then show it is neither injective nor bijective. What is it's image?    Let be the Frobenius of . Show that is a monomorphism. Show it is not an epimorphism. Describe as a subring of .    Let be a ring homomorphism. Prove that . That is, ring homomorphisms also preserve the additive identity.    Let is a homomorphism, prove that . That is, the additive inverse of the image is the image of the additive inverse.    Suppose is a ring satisfying the initial property: For all rings , there is a unique homomorphism . Prove is isomorphic to as follows.    Show that there are unique homomorphisms and     Use to prove that .    Use that satisfies the initial property to prove .    Deduce that . How might your proof change if you were to show that there is a unique terminal ring instead?      Prove that the zero map is a homomorphism if and only is the zero ring.    "
+  "body": " Homomorphisms   Guiding Questions   In this section, we'll seek to answer the questions:    What is a ring homomorphism?  What are some examples of ring homomorphisms?  What is the kernel and image of a homomorphism?  What are the initial and terminal rings?     Central to modern mathematics is the notion of function . This section assumes a familiarity with the idea of function from a set-theoretic point of view, as well as the concepts of injective (one-to-one), surjective (onto), and bijective functions (one-to-one correspondences). . Functions arise in all areas of mathematics, each subdiscipline concerned with certain types of functions. In algebra, our concern is with operation-preserving functions, such as the linear transformations of vector spaces you have seen in a course in linear algebra. Those linear transformations had the properties that (addition is preserved) and (scalar multiplication is preserved).    Homomorphisms  We find something similar at work in the study of homomorphisms of rings, which we define to be functions that preserve both addition and multiplication.   homomorphism  monomorphism  epimorphism  isomorphism  automorphism   Let and be rings. A function is called a ring homomorphism if it preserves addition, multiplication, and sends the identity of to the identity of . That is, for all :  ,  , and  .  If is injective (one-to-one), we say that is a monomorphism . If is surjective (onto), we say that is an epimorphism . If is a bijection (both injective and surjective), we say that is an isomorphism and write . If is an isomorphism, we say is an automorphism of .    Our first job when glimpsing a new concept is to collect a stock of examples.    Determine whether the following functions are homomorphisms, monomorphisms, epimorphisms, isomorphisms, automorphisms, or none of these. Note that denotes an arbitrary ring and a field.   defined by  defined by  defined by  defined by  defined by , where  defined by  defined by , where if , is the expression obtained by plugging into : (this is known as the -evaluation map)  defined by      defined by is called the identity mapping . We in particular have: , , and The identity mapping satisfies the criteria for being a ring homomorphism. It is an automorphism.   defined by is the negation mapping. Although it is true that it fails the other two properties of a ring homorphism in general (sometimes not though!). Namely, for a general ring so that and also but . In general, so is not compatible with multiplication or unity. However, sometimes is true for every element of the ring, particularly Boolean rings. Examples include .   defined by , or the multiplication by map. The map does not preserve the unity nor does it preserve multiplication. Check! It is not a ring homomorphism.   defined by is sometimes called the Frobenius mapping. It is in fact a ring homomorphism in this case. For the unity and multiplicative compatibility we have and . For compatibility with addition we remind the reader that : It is not an automorphism; however, it is a homomorphism. Homomorphisms from a ring to itself are called endomorphisms .   defined by , where TBD   defined by TBD   defined by , where if , is the expression obtained by plugging into : (this is known as the -evaluation map) TBD   defined by TBD.      Ferdinand Georg Frobenius     Portrait of Ferdinand Georg Frobenius   Ferdinand Georg Frobenius, a student of Weierstrass, (1849-1917) was a German mathematician known for contributions to number theory, group theory, differential equations, and elliptic functions.    The Frobenius Homomorphism  Frobenius Homomorphism   The Frobenius Homomorphism (or just Frobenius) is a homomorphism that exists whenever we are working with a prime. In this example, we look at the Frobenius on a polynomial ring.  Let be a prime. Consider the function: defined by .  Before we prove that the Frobenius is a homomorphism, let's recall that whenever the binomial coefficient is divisible by . Indeed, using the usual formula: All of the terms in the denominator are strictly less than provided . Thus there is no term in the denominator that will cancel the in the numerator. In particular, the binomial coefficients are in whenever .  With that done, let's show is a homomorphism. It preserves unity: .  For compatibility with addition, suppose : as the cross terms are zero.  For compatibility with multiplication: We conclude that the Frobenius is a homomorphism.  The following checks will be left as an exercise: The Frobenius is a monomorphism, it is not an epimorphism, and hence not an automorphism.       Properties of Homomorphisms  The sequence of results that follows shows that homomorphisms preserve several of our ring-theoretic notions. This means is the right definition. That is, of all the possible functions between rings we isolated a good class to call structure preserving. We begin by showing that homomorphisms preserve the additive identity.    Suppose is a ring homomorphism. Then .    Supppose is a ring homomorphism. Note that and in particular this tells us as desired.    We now show that homomorphisms preserve units.    Suppose is a ring homomorphism. If , then .    Suppose is a ring homomorphism and . Then there exists with . We compute: and hence .      Show that a homomorphism sends a zero-divisor to either zero or a zero-divisor.    Mimic the ideas in .   TBD   Since homomorphisms are compatible with multiplication, and powers of elements are defined with multiplication, they must preserve powers as the next theorem shows.    Suppose is a ring homomorphism. For any and , we have in .    Suppose is a ring homomorphism and . We now proceed by induction. The base case is which certainly true.  For the inductive step, suppose that . We show : as desired. This equality completes the proof.      Kernel of a Homomorphism  Homomorphisms give rise to a particularly important class of subsets: kernels.   kernel   Let be a ring homomorphism. Then is the kernel of .    Note that by we know always. In particular, the kernel of a ring homomorphism is always a non-empty subset.    For each homomorphism in , find (with justification), the kernel.   TBD    Kernels are a fundamental structure when studying rings. As a first glimpse of their importance, we show that they give a useful way of determining whether their defining homomorphisms are monomorphisms.    Let be a homomorphism. Then is a monomorphism if and only if .     Supppose is a monomomorphism. Since is a homomorphism we know . Suppose now that so that . Since is injective and , we conclude that . In particular, .  For the converse, suppose that . Suppose are such that . Then we have: and so . Since the only element here is , we conclude that or that . Thus is a monomorphism.   A nice application of this theorem is the following result that shows that homomorphisms from a field are always monomorphisms. They will never fail to be injective!    Suppose is a ring homomorphism where is a field. Then is a monomorphism.     Suppose is a ring homomorphism where is a field. We show is a monomorphism by applying . Suppose that there is , with . If , then there is a unit. By , is also a unit and in particular is not . Thus the only element of is .     Image of a Homomorphism  The image of a homomorphism is just different terminology for the range. One reason to use different language is that we will see the image is not just a subset of , it is a subring of !    Suppose , the image of the , denoted is the range of :       Compute the image of the homomorphisms .    Before we prove that the image of a homomorphism is a subring, let's note that homomorphisms preserve most ring-axioms. In particular, we have defined subtraction of two ring elements as , where is the additive inverse of . In you will prove that homorphisms preserve additive inverses, namely: . In particular,     Suppose is a homomorphism. Then is a subring of .    Since , we know that . We just need to show it is closed under subtraction and multiplication:  For subtraction, take . Then   For multiplication, we have We conclude that is a subring of .      The Initial Ring   Initial Ring We now return to and investigate homomorphisms , where is an arbitrary ring. We will prove that there is one and only one homomorphism. This shows that is the initial ring . It is the unique ring (up to isomorphism) that has this property.     Action of Integers  Before we prove this, let's introduce some notation. Take a ring element . For we can define where the right hand sum has terms. Similarly, where the right hand sum has terms. And . We leave it to the reader to check that this is well-defined.    For any ring , there is a unique homomorphism .    Let be an arbitrary homomorphism. Since the image of unity is unity we have . Since the image of the additive identity is the additive identity, we have . By induction, we conclude that for any . Similarly for any .  Since was arbitrary, we have seen that any homomorphism is the homomorphism . This proves uniqueness.      The Terminal Ring   Terminal Ring In this last part of the section, we ask the question: Is there a ring such that for any ring , there exists one and only one homomorphism . That is to say, is there a ? One guess might be . It turns out this is not the case!    Verify the terminal ring, if it exists, cannot be . Do so by showing there is no homomorphism . What about ? Can it be terminal?    The right choice happens to be zero!    For any ring , there is one and only one homomorphism .    This is an exercise. There is only one set-theoretic mapping: the zero map. In this case, we just need to see that the zero map is a homomorphism. This is the case if and only if the codomain is .    We now have two very special rings: and . A natural question is to ask how they interact with each other. In particular, we know there exists a unique homomorphism . What about the other way around?    How many homomorphisms are there ?      Exercises   Mark the following as true or false.   Suppose are rings. Any function is a ring homomorphism.  Suppose is a ring homomorphism. Then is an ideal.  If is a ring homomorphism and is a field, then is a field.  If is a ring homomorphism and is a field, then is a field.  If is a ring homomorphism and is a finite ring, then is a finite ring.  If is a ring homomorphism and is a finite ring, then is a finite ring.  If is an injective ring homomorphism and is a finite ring, then is a finite ring.  The identity map on a ring is a ring homomorphism.  The zero map defined by is a ring homomorphism.     Fix . Let be defined by . Prove that is a ring homomorphism. Then show that is neither injective nor surjective.    Define by . Prove that is an injective ring homomorphism.    Let be any ring and be the set of matries with entries in . Define by , where is the identity matrix. Prove that is an injective ring homomorphism.    Suppose is a ring. Fix . Let be defined by . Prove that is a ring homomorphism. Is the evaluation homomorphism injective, surjective, and\/or bijective?    Gemini, Google's LLM, has claimed that for any ring , the trace map defined by where , is a ring homomorphism. This is true for exactly one . Find it, prove it is a homomorphism for that , then show it is not a homomorphism for any .    Consider the function defined by . Prove that this mapping is a homomorphism. Then show it is neither injective nor bijective. What is it's image?     Evaluation Homomorphism  Evaluation Homomorphism Evaluation Homomorphism  Let be a ring. Consider the polynomial ring over . For any , define the evaluation function: by . Prove that is always an epimorphism. That is, it is a homomorphism which is always surjective.  Why does this exercise not contradict the previous exercise?    Let be the Frobenius of . Show that is a monomorphism. Show it is not an epimorphism. Describe as a subring of .    Let be a ring homomorphism. Prove that . That is, ring homomorphisms also preserve the additive identity.    Let is a homomorphism, prove that . That is, the additive inverse of the image is the image of the additive inverse.    Suppose is a ring satisfying the initial property: For all rings , there is a unique homomorphism . Prove is isomorphic to as follows.    Show that there are unique homomorphisms and     Use to prove that .    Use that satisfies the initial property to prove .    Deduce that . How might your proof change if you were to show that there is a unique terminal ring instead?      Prove that the zero map is a homomorphism if and only is the zero ring.    "
 },
 {
   "id": "obj_homomorphisms",
@@ -2647,9 +2647,9 @@ var ptx_lunr_docs = [
   "body": "  How many homomorphisms are there ?   "
 },
 {
-  "id": "sec-homomorphisms-tf",
+  "id": "sec_homomorphismsTF",
   "level": "2",
-  "url": "sec_homomorphisms.html#sec-homomorphisms-tf",
+  "url": "sec_homomorphisms.html#sec_homomorphismsTF",
   "type": "Exercise",
   "number": "3.1.7.1",
   "title": "",
@@ -2665,18 +2665,18 @@ var ptx_lunr_docs = [
   "body": " Fix . Let be defined by . Prove that is a ring homomorphism. Then show that is neither injective nor surjective.  "
 },
 {
-  "id": "exers-homomorphisms-4",
+  "id": "exers_homomorphisms-4",
   "level": "2",
-  "url": "sec_homomorphisms.html#exers-homomorphisms-4",
+  "url": "sec_homomorphisms.html#exers_homomorphisms-4",
   "type": "Exercise",
   "number": "3.1.7.3",
   "title": "",
   "body": " Define by . Prove that is an injective ring homomorphism.  "
 },
 {
-  "id": "exers-homomorphisms-5",
+  "id": "exers_homomorphisms-5",
   "level": "2",
-  "url": "sec_homomorphisms.html#exers-homomorphisms-5",
+  "url": "sec_homomorphisms.html#exers_homomorphisms-5",
   "type": "Exercise",
   "number": "3.1.7.4",
   "title": "",
@@ -2692,38 +2692,47 @@ var ptx_lunr_docs = [
   "body": " Suppose is a ring. Fix . Let be defined by . Prove that is a ring homomorphism. Is the evaluation homomorphism injective, surjective, and\/or bijective?  "
 },
 {
-  "id": "exers-homomorphisms-7",
+  "id": "exers_homomorphisms-7",
   "level": "2",
-  "url": "sec_homomorphisms.html#exers-homomorphisms-7",
+  "url": "sec_homomorphisms.html#exers_homomorphisms-7",
   "type": "Exercise",
   "number": "3.1.7.6",
   "title": "",
   "body": " Gemini, Google's LLM, has claimed that for any ring , the trace map defined by where , is a ring homomorphism. This is true for exactly one . Find it, prove it is a homomorphism for that , then show it is not a homomorphism for any .  "
 },
 {
-  "id": "exers-homomorphisms-8",
+  "id": "exers_homomorphisms-8",
   "level": "2",
-  "url": "sec_homomorphisms.html#exers-homomorphisms-8",
+  "url": "sec_homomorphisms.html#exers_homomorphisms-8",
   "type": "Exercise",
   "number": "3.1.7.7",
   "title": "",
   "body": " Consider the function defined by . Prove that this mapping is a homomorphism. Then show it is neither injective nor bijective. What is it's image?  "
 },
 {
-  "id": "exers-homomorphisms-9",
+  "id": "exer_evaluationHomomorphism",
   "level": "2",
-  "url": "sec_homomorphisms.html#exers-homomorphisms-9",
+  "url": "sec_homomorphisms.html#exer_evaluationHomomorphism",
   "type": "Exercise",
   "number": "3.1.7.8",
+  "title": "Evaluation Homomorphism.",
+  "body": "  Evaluation Homomorphism  Evaluation Homomorphism Evaluation Homomorphism  Let be a ring. Consider the polynomial ring over . For any , define the evaluation function: by . Prove that is always an epimorphism. That is, it is a homomorphism which is always surjective.  Why does this exercise not contradict the previous exercise?  "
+},
+{
+  "id": "exers_homomorphisms-10",
+  "level": "2",
+  "url": "sec_homomorphisms.html#exers_homomorphisms-10",
+  "type": "Exercise",
+  "number": "3.1.7.9",
   "title": "",
   "body": " Let be the Frobenius of . Show that is a monomorphism. Show it is not an epimorphism. Describe as a subring of .  "
 },
 {
-  "id": "exers-homomorphisms-10",
+  "id": "exers_homomorphisms-11",
   "level": "2",
-  "url": "sec_homomorphisms.html#exers-homomorphisms-10",
+  "url": "sec_homomorphisms.html#exers_homomorphisms-11",
   "type": "Exercise",
-  "number": "3.1.7.9",
+  "number": "3.1.7.10",
   "title": "",
   "body": " Let be a ring homomorphism. Prove that . That is, ring homomorphisms also preserve the additive identity.  "
 },
@@ -2732,25 +2741,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_homomorphisms.html#exer_homomorphismPreserveAdditiveInverse",
   "type": "Exercise",
-  "number": "3.1.7.10",
+  "number": "3.1.7.11",
   "title": "",
   "body": " Let is a homomorphism, prove that . That is, the additive inverse of the image is the image of the additive inverse.  "
 },
 {
-  "id": "exers-homomorphisms-12",
+  "id": "exers_homomorphisms-13",
   "level": "2",
-  "url": "sec_homomorphisms.html#exers-homomorphisms-12",
+  "url": "sec_homomorphisms.html#exers_homomorphisms-13",
   "type": "Exercise",
-  "number": "3.1.7.11",
+  "number": "3.1.7.12",
   "title": "",
   "body": " Suppose is a ring satisfying the initial property: For all rings , there is a unique homomorphism . Prove is isomorphic to as follows.    Show that there are unique homomorphisms and     Use to prove that .    Use that satisfies the initial property to prove .    Deduce that . How might your proof change if you were to show that there is a unique terminal ring instead?    "
 },
 {
-  "id": "exers-homomorphisms-13",
+  "id": "exers_homomorphisms-14",
   "level": "2",
-  "url": "sec_homomorphisms.html#exers-homomorphisms-13",
+  "url": "sec_homomorphisms.html#exers_homomorphisms-14",
   "type": "Exercise",
-  "number": "3.1.7.12",
+  "number": "3.1.7.13",
   "title": "",
   "body": " Prove that the zero map is a homomorphism if and only is the zero ring.  "
 },
@@ -2761,7 +2770,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.2",
   "title": "Ideals",
-  "body": " Ideals   Guiding Questions   In this section, we'll seek to answer the questions:    What are ideals?  How do ideals generalize divisibility?     One of the ways in which mathematicians study the structure of an abstract object is by considering how it interacts with other (related) objects. This is especially true of its sub objects. Thus, in linear algebra, we are often concerned with subspaces of a vector space as a means of understanding the vector space, or even submatrices as a way of understanding a matrix (see, e.g., the cofactor expansion formula for the determinant). In real analysis and topology, the important subobjects are usually open sets, or subsequences, and the study of a graph's subgraphs is an important approach to many questions in graph theory.  In this section, we begin a set-theoretic structural exploration of the notion of ring by considering a particularly important class of subsets which will be integral to our understanding of factorization.  These subsets are called ideals . They arose in the work of Kummer and Dedekind as a way of trying to recover some notion of unique factorization in rings that do not have properties like the fundamental theorem of arithmetic in .    Ideals  We first return to the kernel of a ring homomorphism introduced in . While the following proposition might seem odd, it will lead us to the definition of an ideal.    Let be a ring homomorphism and be its kernel. For any and , we have:    and             Pick and so that . Then Thus . The proof of is similar and is left as an activity.  For the second claim, take so that . Then we have Thus .      Mimic the proof of to show that whenever is a ring homomorphism and and , then     The following definition of an ideal is an attempt to generalize the properties that kernels have.   Two-Sided Ideals  Our definition is that of a two-sided ideal. There are left and right ideals; however, we will not need this generality.    Ideal   A subset of a (not necessarily commutative) ring is called an ideal if:        for all , ; and,    for all and for all , and .       Observe that the third requirement for a set to be an ideal of is simplified slightly if is commutative. Namely, we need only check one of the conditions.  There are many important examples and types of ideals, but there are also some trivial ideals contained in every ring.    Let be a ring. Then and are ideals of .    Note that is a subset of containing 0, closed under addition, and closed under multiplication. Therefore is an ideal in .  The zero ideal has . The only element in is and . Lastly, for any , we know so that . Thus is an ideal of .     ideal (proper)  ideal (trivial)  ideal (non-trivial) An ideal is called proper if . The ideals are called trivial ideals . If is not equal to , it is called non-trivial .  The following theorem provides a useful characterization of when an ideal is in fact the whole ring.    Let be a ring and an ideal of . Then if and only if contains a unit of .    If , will do.  We know that . If there is a unit , then given any , , so that and hence .      Ideals of the Integers Modulo m  We collect some examples of ideals. Let's first investigate the relationship between and .    Pick with . Then the reduction modulo map is a ring homomorphism with kernel given by     We need to show that satisfies . To that end we first show it is compatible with addition. Take . Then: But this is of course just the definition of addition in which is why we spent so long checking that addition was well-defined. We were really proving this fact.  Similarly, for multiplication:   We also have and so satisfies all three propertis of being a ring homomorphism.  Lastly, suppose . That is, . Then . But and so .    By we know that is an ideal. We could have proved this directly. We do this now as it is an important skill to develop.    Fix any , then the set of multiples of is an ideal. That is, is an ideal. We prove this directly from the definition.  We have . For closure under addition, take for some . Then   Since is commutative, we just have to show absorbs left-multiplication. For that, take and arbitrary . Then Thus we have reproved : is an ideal of .  If , then is the zero ideal. If , then is the other extreme. For , the ideals are proper.      Let's consider our non-commutative example: . What are the ideals here? It turns out, that this ring is simple in that it only has trivial ideals.  Recall, the standard basis for consists of the sparse matrices which have a in row and column and zero elsewhere. For any matrix we have:   Similarly is the matrix with in the entry and zero elsewhere. Likewise for and .  Now take any ideal . We know that are two ideals. What we want to show is that if , then . To that end, suppose so there is a non-zero .  At least one of the entries of is non-zero, say . Then is the matrix with in the spot and zero elsehwere. Multiply by the scalar matrix so that we know has a matrix with in exactly one entry and zero elsewhere. That is, we know that one of the standard basis elements is in .  We now show that if one of the standard basis elements is in , then has all of the standard basis elements. The proof for each case is similar so we assume that has . Since absorbs multiplication, every product we compute will be an element of . We have: and and lastly . Thus has all of the elements in the standard basis.  To see now that has any matrix, we take a random . We can write Each one of the terms in this sum is in since absorbs multiplication. Since is closed under addition, . But was arbitrary so that .      Let's now consider the polynomial ring over : . Define the homomorphism given by . We've already see that is a homomorphism. From , the kernel of this mapping is an ideal.  Suppose or equivalently . We will revisit evaluation later but for now recall that this means that is a factor of . That is, there exists such that .  On the other hand, suppose , then . We can therefore describe the kernel of the multiplication map as the multiples of :       Principal Ideals  The most important type of ideals (for our work, at least), are those which are the sets of all multiples of a single element in the ring. We saw this with . Such ideals are called principal ideals .  For the following theorem\/definition, we require commutative rings. The interested reader is invited to formalize a definition for non-commutative rings.     Principal Ideal Generated by   Principal Ideal   Let be commutative with identity and let . The set is an ideal (called the principal ideal generated by ).    Observe that .  Moreover, if , . Finally, if and , .  Thus, is an ideal.    The element in the theorem is known as a generator of .    Let be commutative with identity, and let . Give necessary and sufficient conditions for and, separately, .  That is, fill in the blanks: _________ and _________.   Justify your answers.    We have and An acceptable alternative would be: . Make sure students are aware of this! .  Note that .  Similarly, suppose . Then , so . Conversely, if , then there is some such that , and thus for all , .  Note that this means that if we want to know if , it's enough to check that .    Principal ideals may have more than one generator.    Let be a ring and . Then , where is any unit of .    Apply the answer to the question.      In , describe the principal ideals generated by   2         9    0    27    3     Determine the subset relations among the above ideals.      All multiples of 2    All multiples of     All multiples of 9; same as the previous part.         All multiples of 27    All multiples of 3    We have . The ideal only contains , which is a subset of all ideals.      Ideals Generated by a Set  A good chunk of rings of interest are infinite and so their ideals are also usually infinite. We saw that in some cases ideals can be described by a single element, a principal generator. Ideals that are always generated by a single elements are called principal ideal rings . We will return to those later when we discuss factorization in general rings.  Although we will primarily focus on such principal ideal rings. It is important to understand what happens when you cannot generate the whole ideal with a single element. We introduce ideals generated by finitel many elements now. Note, ideals that are always guaranteed to be generated by finitely many elements are called Noetherian rings .     Ideal Generated by    Let be a commutative ring and . The ideal generated by  is the subset:     Let's verify it is an ideal.    Suppose is a commutative ring and . Then is an ideal.    Set . Then   For closure under addition: which is in .  For closure under left-multiplication: which is in . We conclude that is an ideal.     A Non-Principal Ideal   Take . We claim that cannot be generated by a single element. Indeed, suppose for some polynomial .  Since , we know that . Hence, for some polynomial . By comparing degrees, . In particular, is a constant that is divides . This means that or .  It cannot be that (Exercise???). There will be an easier way to prove this when we learn the Noether Isomorphism Theorem. It follows then that . This means that . But this is impossible. Indeed, notice that but every element of has even coefficients. This contradiction shows that is not a principal ideal. In particular, is not a principal ideal domain.    It turns out that any ideal in can be generated by at most two elements. The proof of this is beyond the scope of this textbook.   "
+  "body": " Ideals   Guiding Questions   In this section, we'll seek to answer the questions:    What are ideals?  How do ideals generalize divisibility?     One of the ways in which mathematicians study the structure of an abstract object is by considering how it interacts with other (related) objects. This is especially true of its sub objects. Thus, in linear algebra, we are often concerned with subspaces of a vector space as a means of understanding the vector space, or even submatrices as a way of understanding a matrix (see, e.g., the cofactor expansion formula for the determinant). In real analysis and topology, the important subobjects are usually open sets, or subsequences, and the study of a graph's subgraphs is an important approach to many questions in graph theory.  In this section, we begin a set-theoretic structural exploration of the notion of ring by considering a particularly important class of subsets which will be integral to our understanding of factorization.  These subsets are called ideals . They arose in the work of Kummer and Dedekind as a way of trying to recover some notion of unique factorization in rings that do not have properties like the fundamental theorem of arithmetic in .    Ideals  We first return to the kernel of a ring homomorphism introduced in . While the following proposition might seem odd, it will lead us to the definition of an ideal.    Let be a ring homomorphism and be its kernel. For any and , we have:    and             Pick and so that . Then Thus . The proof of is similar and is left as an activity.  For the second claim, take so that . Then we have Thus .      Mimic the proof of to show that whenever is a ring homomorphism and and , then     The following definition of an ideal is an attempt to generalize the properties that kernels have.   Two-Sided Ideals  Our definition is that of a two-sided ideal. There are left and right ideals; however, we will not need this generality.    Ideal   A subset of a (not necessarily commutative) ring is called an ideal if:        for all , ; and,    for all and for all , and .       Observe that the third requirement for a set to be an ideal of is simplified slightly if is commutative. Namely, we need only check one of the conditions.  There are many important examples and types of ideals, but there are also some trivial ideals contained in every ring.    Let be a ring. Then and are ideals of .    Note that is a subset of containing 0, closed under addition, and closed under multiplication. Therefore is an ideal in .  The zero ideal has . The only element in is and . Lastly, for any , we know so that . Thus is an ideal of .     ideal (proper)  ideal (trivial)  ideal (non-trivial) An ideal is called proper if . The ideals are called trivial ideals . If is not equal to , it is called non-trivial .  The following theorem provides a useful characterization of when an ideal is in fact the whole ring.    Let be a ring and an ideal of . Then if and only if contains a unit of .    If , will do.  We know that . If there is a unit , then given any , , so that and hence .      Ideals of the Integers Modulo m  We collect some examples of ideals. Let's first investigate the relationship between and .    Pick with . Then the reduction modulo map is a ring homomorphism with kernel given by     We need to show that satisfies . To that end we first show it is compatible with addition. Take . Then: But this is of course just the definition of addition in which is why we spent so long checking that addition was well-defined. We were really proving this fact.  Similarly, for multiplication:   We also have and so satisfies all three propertis of being a ring homomorphism.  Lastly, suppose . That is, . Then . But and so .    By we know that is an ideal. We could have proved this directly. We do this now as it is an important skill to develop.    Fix any , then the set of multiples of is an ideal. That is, is an ideal. We prove this directly from the definition.  We have . For closure under addition, take for some . Then   Since is commutative, we just have to show absorbs left-multiplication. For that, take and arbitrary . Then Thus we have reproved : is an ideal of .  If , then is the zero ideal. If , then is the other extreme. For , the ideals are proper.      Let's consider our non-commutative example: . What are the ideals here? It turns out, that this ring is simple in that it only has trivial ideals.  Recall, the standard basis for consists of the sparse matrices which have a in row and column and zero elsewhere. For any matrix we have:   Similarly is the matrix with in the entry and zero elsewhere. Likewise for and .  Now take any ideal . We know that are two ideals. What we want to show is that if , then . To that end, suppose so there is a non-zero .  At least one of the entries of is non-zero, say . Then is the matrix with in the spot and zero elsehwere. Multiply by the scalar matrix so that we know has a matrix with in exactly one entry and zero elsewhere. That is, we know that one of the standard basis elements is in .  We now show that if one of the standard basis elements is in , then has all of the standard basis elements. The proof for each case is similar so we assume that has . Since absorbs multiplication, every product we compute will be an element of . We have: and and lastly . Thus has all of the elements in the standard basis.  To see now that has any matrix, we take a random . We can write Each one of the terms in this sum is in since absorbs multiplication. Since is closed under addition, . But was arbitrary so that .      Let's now consider the polynomial ring over : . Define the homomorphism given by . We've already see that is a homomorphism in . From , the kernel of this mapping is an ideal.  Suppose or equivalently . We will revisit evaluation later but for now recall that this means that is a factor of . That is, there exists such that .  On the other hand, suppose , then . We can therefore describe the kernel of the multiplication map as the multiples of :       Principal Ideals  The most important type of ideals (for our work, at least), are those which are the sets of all multiples of a single element in the ring. We saw this with . Such ideals are called principal ideals .  For the following theorem\/definition, we require commutative rings. The interested reader is invited to formalize a definition for non-commutative rings.     Principal Ideal Generated by   Principal Ideal   Let be commutative with identity and let . The set is an ideal (called the principal ideal generated by ).    Observe that .  Moreover, if , . Finally, if and , .  Thus, is an ideal.    The element in the theorem is known as a generator of .    Let be commutative with identity, and let . Give necessary and sufficient conditions for and, separately, .  That is, fill in the blanks: _________ and _________.   Justify your answers.    We have and An acceptable alternative would be: . Make sure students are aware of this! .  Note that .  Similarly, suppose . Then , so . Conversely, if , then there is some such that , and thus for all , .  Note that this means that if we want to know if , it's enough to check that .    Principal ideals may have more than one generator.    Let be a ring and . Then , where is any unit of .    Apply the answer to the question.      In , describe the principal ideals generated by   2         9    0    27    3     Determine the subset relations among the above ideals.      All multiples of 2    All multiples of     All multiples of 9; same as the previous part.         All multiples of 27    All multiples of 3    We have . The ideal only contains , which is a subset of all ideals.      Ideals Generated by a Set  A good chunk of rings of interest are infinite and so their ideals are also usually infinite. We saw that in some cases ideals can be described by a single element, a principal generator. Rings where ideals are always generated by a single element are called principal ideal rings . These will be the subject of the next section.  It is important to understand what happens when you cannot generate the whole ideal with a single element. We introduce ideals generated by finitely many elements now. When ideals of a ring are always guaranteed to be generated by finitely many elements the ring is called Noetherian rings .     Ideal Generated by    Let be a commutative ring and . The ideal generated by  is the subset:     Let's verify it is an ideal.    Suppose is a commutative ring and . Then is an ideal.    Set . Then   For closure under addition: which is in .  For closure under left-multiplication: which is in . We conclude that is an ideal.     A Non-Principal Ideal   Take . We claim that cannot be generated by a single element. Indeed, suppose for some polynomial .  Since , we know that . Hence, for some polynomial . By comparing degrees, . In particular, is a constant that is divides . This means that or .  It cannot be that (Exercise???). There will be an easier way to prove this when we learn the Noether Isomorphism Theorem. It follows then that . This means that . But this is impossible. Indeed, notice that but every element of has even coefficients. This contradiction shows that is not a principal ideal. In particular, is not a principal ideal domain.    It turns out that any ideal in can be generated by at most two elements. The proof of this is beyond the scope of this textbook.     Mark the following as true or false.    Ideals are subrings.    All rings have ideals.    The ideal is a proper ideal.    The ideal is a proper ideal.    All ideals are principal ideals.    All principal ideals are ideals.    The kernel of a homomorphism is an ideal.    An ideal is all of if contains a zero-divisor.    Fields don't have ideals.    Matrix rings have non-trivial ideals.      In the Gaussian Integers, prove that the ideal generated by is all of but the ideal generated by is a proper ideal.    Argue that in , there is an equality of ideals . In view of , why does this make sense?    Given , when is a proper ideal? Can you describe it's elements?    Show that not all ideals in are principal by showing is not principally generated.    Prove that the ideal is not a principal ideal.     Sum of Ideals  Sums of Ideals ideals (sums)  Suppose are ideals of the ring . Define Show that is an ideal.    In the notation of the previous exercise, consider . What familiar ideal is ? Can you generalize?   Products of Ideals ideals (products)   Product of Ideals   Suppose are ideals of the ring . Define Show that is an ideal.    In the notation of the previous exercise, consider . What familiar ideal is ? Can you generalize?   Annihilator Ideals  An important ideal that arises in commutative algebra are annihilator ideals . Let be a commutative ring and an element. Define the annihilator of to be the set Prove that is always an ideal.    In the notation of the previous exercise, what is ? What about ?    Prove that if is a domain and , then unless in which case the annihilator is all of .     Radical of  Radical Ideals  Another important ideal that arises in commutative algebra are radical ideals . Let be an ideal in a commutative ring. Define the radica of to be the set Prove that is an ideal.    In the notation of the previous exercise, prove that the radical of in is . Hint: should be simple. For the reverse containment, if is not in , then it is odd. Argue that the radical cannot have an odd number.    Given any ideal , what is ?    "
 },
 {
   "id": "obj_ideals",
@@ -2860,7 +2869,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.2.8",
   "title": "",
-  "body": "  Let's now consider the polynomial ring over : . Define the homomorphism given by . We've already see that is a homomorphism. From , the kernel of this mapping is an ideal.  Suppose or equivalently . We will revisit evaluation later but for now recall that this means that is a factor of . That is, there exists such that .  On the other hand, suppose , then . We can therefore describe the kernel of the multiplication map as the multiples of :    "
+  "body": "  Let's now consider the polynomial ring over : . Define the homomorphism given by . We've already see that is a homomorphism in . From , the kernel of this mapping is an ideal.  Suppose or equivalently . We will revisit evaluation later but for now recall that this means that is a factor of . That is, there exists such that .  On the other hand, suppose , then . We can therefore describe the kernel of the multiplication map as the multiples of :    "
 },
 {
   "id": "thm_principalIdealsAreIdeals",
@@ -2881,9 +2890,9 @@ var ptx_lunr_docs = [
   "body": "  Let be commutative with identity, and let . Give necessary and sufficient conditions for and, separately, .  That is, fill in the blanks: _________ and _________.   Justify your answers.    We have and An acceptable alternative would be: . Make sure students are aware of this! .  Note that .  Similarly, suppose . Then , so . Conversely, if , then there is some such that , and thus for all , .  Note that this means that if we want to know if , it's enough to check that .   "
 },
 {
-  "id": "ssec_principalIdeals-8",
+  "id": "thm_principalGeneratorsUnits",
   "level": "2",
-  "url": "sec_ideals.html#ssec_principalIdeals-8",
+  "url": "sec_ideals.html#thm_principalGeneratorsUnits",
   "type": "Theorem",
   "number": "3.2.10",
   "title": "",
@@ -2944,13 +2953,157 @@ var ptx_lunr_docs = [
   "body": " A Non-Principal Ideal   Take . We claim that cannot be generated by a single element. Indeed, suppose for some polynomial .  Since , we know that . Hence, for some polynomial . By comparing degrees, . In particular, is a constant that is divides . This means that or .  It cannot be that (Exercise???). There will be an easier way to prove this when we learn the Noether Isomorphism Theorem. It follows then that . This means that . But this is impossible. Indeed, notice that but every element of has even coefficients. This contradiction shows that is not a principal ideal. In particular, is not a principal ideal domain.   "
 },
 {
+  "id": "exers_ideals-1",
+  "level": "2",
+  "url": "sec_ideals.html#exers_ideals-1",
+  "type": "Exercise",
+  "number": "3.2.5.1",
+  "title": "",
+  "body": " Mark the following as true or false.    Ideals are subrings.    All rings have ideals.    The ideal is a proper ideal.    The ideal is a proper ideal.    All ideals are principal ideals.    All principal ideals are ideals.    The kernel of a homomorphism is an ideal.    An ideal is all of if contains a zero-divisor.    Fields don't have ideals.    Matrix rings have non-trivial ideals.    "
+},
+{
+  "id": "exers_ideals-2",
+  "level": "2",
+  "url": "sec_ideals.html#exers_ideals-2",
+  "type": "Exercise",
+  "number": "3.2.5.2",
+  "title": "",
+  "body": " In the Gaussian Integers, prove that the ideal generated by is all of but the ideal generated by is a proper ideal.  "
+},
+{
+  "id": "exers_ideals-3",
+  "level": "2",
+  "url": "sec_ideals.html#exers_ideals-3",
+  "type": "Exercise",
+  "number": "3.2.5.3",
+  "title": "",
+  "body": " Argue that in , there is an equality of ideals . In view of , why does this make sense?  "
+},
+{
+  "id": "exers_ideals-4",
+  "level": "2",
+  "url": "sec_ideals.html#exers_ideals-4",
+  "type": "Exercise",
+  "number": "3.2.5.4",
+  "title": "",
+  "body": " Given , when is a proper ideal? Can you describe it's elements?  "
+},
+{
+  "id": "exers_ideals-5",
+  "level": "2",
+  "url": "sec_ideals.html#exers_ideals-5",
+  "type": "Exercise",
+  "number": "3.2.5.5",
+  "title": "",
+  "body": " Show that not all ideals in are principal by showing is not principally generated.  "
+},
+{
+  "id": "exers_ideals-6",
+  "level": "2",
+  "url": "sec_ideals.html#exers_ideals-6",
+  "type": "Exercise",
+  "number": "3.2.5.6",
+  "title": "",
+  "body": " Prove that the ideal is not a principal ideal.  "
+},
+{
+  "id": "exers_ideals-7",
+  "level": "2",
+  "url": "sec_ideals.html#exers_ideals-7",
+  "type": "Exercise",
+  "number": "3.2.5.7",
+  "title": "",
+  "body": "  Sum of Ideals  Sums of Ideals ideals (sums)  Suppose are ideals of the ring . Define Show that is an ideal.  "
+},
+{
+  "id": "exers_ideals-8",
+  "level": "2",
+  "url": "sec_ideals.html#exers_ideals-8",
+  "type": "Exercise",
+  "number": "3.2.5.8",
+  "title": "",
+  "body": " In the notation of the previous exercise, consider . What familiar ideal is ? Can you generalize?  "
+},
+{
+  "id": "exers_ideals-9",
+  "level": "2",
+  "url": "sec_ideals.html#exers_ideals-9",
+  "type": "Exercise",
+  "number": "3.2.5.9",
+  "title": "",
+  "body": "Products of Ideals ideals (products)   Product of Ideals   Suppose are ideals of the ring . Define Show that is an ideal.  "
+},
+{
+  "id": "exers_ideals-10",
+  "level": "2",
+  "url": "sec_ideals.html#exers_ideals-10",
+  "type": "Exercise",
+  "number": "3.2.5.10",
+  "title": "",
+  "body": " In the notation of the previous exercise, consider . What familiar ideal is ? Can you generalize?  "
+},
+{
+  "id": "exers_ideals-11",
+  "level": "2",
+  "url": "sec_ideals.html#exers_ideals-11",
+  "type": "Exercise",
+  "number": "3.2.5.11",
+  "title": "",
+  "body": "Annihilator Ideals  An important ideal that arises in commutative algebra are annihilator ideals . Let be a commutative ring and an element. Define the annihilator of to be the set Prove that is always an ideal.  "
+},
+{
+  "id": "exers_ideals-12",
+  "level": "2",
+  "url": "sec_ideals.html#exers_ideals-12",
+  "type": "Exercise",
+  "number": "3.2.5.12",
+  "title": "",
+  "body": " In the notation of the previous exercise, what is ? What about ?  "
+},
+{
+  "id": "exers_ideals-13",
+  "level": "2",
+  "url": "sec_ideals.html#exers_ideals-13",
+  "type": "Exercise",
+  "number": "3.2.5.13",
+  "title": "",
+  "body": " Prove that if is a domain and , then unless in which case the annihilator is all of .  "
+},
+{
+  "id": "exers_ideals-14",
+  "level": "2",
+  "url": "sec_ideals.html#exers_ideals-14",
+  "type": "Exercise",
+  "number": "3.2.5.14",
+  "title": "",
+  "body": "  Radical of  Radical Ideals  Another important ideal that arises in commutative algebra are radical ideals . Let be an ideal in a commutative ring. Define the radica of to be the set Prove that is an ideal.  "
+},
+{
+  "id": "exers_ideals-15",
+  "level": "2",
+  "url": "sec_ideals.html#exers_ideals-15",
+  "type": "Exercise",
+  "number": "3.2.5.15",
+  "title": "",
+  "body": " In the notation of the previous exercise, prove that the radical of in is . Hint: should be simple. For the reverse containment, if is not in , then it is odd. Argue that the radical cannot have an odd number.  "
+},
+{
+  "id": "exers_ideals-16",
+  "level": "2",
+  "url": "sec_ideals.html#exers_ideals-16",
+  "type": "Exercise",
+  "number": "3.2.5.16",
+  "title": "",
+  "body": " Given any ideal , what is ?  "
+},
+{
   "id": "sec_quotientRings",
   "level": "1",
   "url": "sec_quotientRings.html",
   "type": "Section",
   "number": "3.3",
   "title": "Quotient Rings",
-  "body": " Quotient Rings   Guiding Questions   In this section, we'll seek to answer the questions:    How can we use ideals to build new rings out of old?  What sorts of ideals allow us to build domains? Fields?  What is the First Isomorphism Theorem?     If the only rings that existed were polynomial rings, familiar systems of numbers like , polynomial rings, and matrix rings, there would still be enough to justify defining the concept of a ring and exploring its properties. However, these are not the only rings that exist. In this section, we explore a way of building new rings from old by means of ideals. To better understand these new rings, we will also define two new classes of ideals: prime ideals, and maximal ideals. We end by briefly connecting these rings to a familiar problem from high school algebra.    Congruence modulo  The major concept of this section is the notion of congruence modulo . One can reasonably think of this idea as a generalization of congruence modulo in .   congruence mod   Let be a ring, an ideal of , and . We say is congruent to modulo if . If this is the case, we write .      Determine (with brief justification) whether in the following rings .   , , ,  , , ,  , , ,  , , ,  ( Challenge. ) , , ,       We have so in .    We have as for any . Thus in .     . Thus in .     . Thus in .     . Thus in .        Given a ring , ideal , and , when is it the case that ?    When .    Observe that if , then there is some such that , and so .  The notation is more than just notation. It is an equality of sets. Given any ideal and any , define to be the set of all translates of under .    Let be an ideal and . Then is congruent to modulo if and only if we have equality of sets .    Suppose is congruent to modulo . Then so that for some . Take any , then as . Thus . Using instead we have, similarly, that . Thus .  Suppose . Since , we know that . Since , we have that . Thus for some . Equivalently . Thus is congruent to modulo .       Coset (ideal)   coset (ideal)   Given an ideal in a commutative ring . A coset of is a set of the form The collection of all cosets is denoted or if is understood:       We take a minute to observe that in the notion of congruence: modulo is equivalent to the definition here. Indeed, any defines a principal ideal . If , then for some . Hence, . And conversely, if , then . Thus there exists with and so .  In particular, this is a successful generalization of the notion of congruence modulo .    As was the case in , congruence modulo is an equivalence relation.    Let be a ring and an ideal of . Then congruence modulo is an equivalence relation on .    Since , for all , so and the relation is reflexive.  Moreover, if , then , so the relation is symmetric.  If and , then , so the relation is transitive.      Quotient Rings   Notation for Integers Modulo  It's standard practice to identify the principal ideal with when no confusion can arise. In , the set of equivalence classes modulo is denoted by instead of .   The set of equivalence classes under this relation is denoted . In particular, What is more, this is not merely a set of equivalence classes. As the next two theorems demonstrate, this set possesses two algebraic operations that extend naturally from those of .    Let be a ring and an ideal of . If such that and , then .    Suppose and . Then and . Adding, we have Thus, .    Note that the only requirement in the proof of this theorem is that is closed under addition.    Let be a commutative ring and an ideal of . If such that and , then .    As before, we observe that and . Write and . Then , so . Therefore .    The preceeding proof used two properties of : closure under addition and closure under multiplication by .  The previous two theorems together show that addition and multiplication on the set is well-defined. As these operations are built on the operations of , it will likely not surprise you to learn that the usual axioms defining a ring also hold.   quotient ring   Let be a commutative ring, an ideal of , and . The set of cosets of , denoted , is a commutative ring (called the quotient ring of by ) with additive identity and multiplicative identity under the following operations:     These operations were shown to be well-defined in and . We need to show that, with these operations, all eight ring axioms hold and that multiplication is commutative. Take .  We begin with the additive axioms. For associativity: Since has associative addition we have and so the cosets are equal.  For commutativity:   For identity: as is the additive identity in .  For inverses: and so the additive inverse of is .  We now turn to the multiplicative axioms plus commutativity. For associativity: But multiplication in is associative so that . Hence,   For commutativity:   For identity: as is the multiplicative identity in .  Since has commutative multiplication we only need to check the left-distributive axiom. where we have used that multiplication in has the left-distributive property in line 3.  We conclude that is a commutative ring.    Thus, given a ring and ideal of , we may build the quotient ring .    Answer the questions below. Be prepared to give an information justification of your thinking.   Suppose and . Calculate and .  Let and . List all elements of (there should be 9 in total).  Set and . Find an element such that .     In and , we will explore the question of when possesses some of the properties we've previously explored, e.g., when is a domain? A field? First, we conclude with two explorations. The first gives us a sense of what these rings can look like. The second connects quotient rings to solution sets of polynomial equations.    Consider the ring and the ideals and .   List the elements of and .  What happens to in when you pass to the quotient ring ? How about as you pass from to ?  In view of your answer to the previous question, how does behave as you mod out by and ?  Build addition and multiplication tables for each of and .    TBD    graph (of a function)  zero set   One of the most useful connections made in high school algebra is the connection between a function (in particular, a polynomial function) and its graph . We may extend this notion to ideals via the concept of a zero set as follows.  Let be a field and with a nonzero ideal. We define the zero set of , denoted , as the set of all points for which for all .   Suppose . Prove that if and only if for each . Thus, can be determined entirely by examining the generators of .  Describe given .  (Challenge) Given and , describe and .  Given , describe the relationship between the variables and in the quotient . In what way have we restricted our polynomial inputs to the parabola ?    TBD.      Noether Isomorphism Theorem  As quotient rings provide fertile soil for building new examples of rings, it should not surprise us to find that homomorphisms interact with quotient rings in interesting and useful ways. Chief among them are the isomorphism theorems . In this subsection, we focus primarily on the Noether Isomorphism Theorem (also called the First Isomorphism Theorem).  We have seen that any homomorphism gives rise to an ideal of , namely . Our next theorem demonstrates that, given a commutative ring , every ideal is the kernel of some homomorphism defined on . In particular, our definition of ideal accurately captured what it meant to be a kernel.    Let be commutative and an ideal of . Define by . Then is an epimorphism with .    We first verify that is a homomorphism. Note that which is the multiplicative identity in .  For compatibility with addition:   For compatibility with multiplication: Thus is a homomorphism.  That is surjective is clear: for any we have . Lastly, suppose . Then so that . Thus . Also for any we have so that which shows .    This is just a generalization of .  We work toward a proof of the Noether Isomorphism Theorem for Rings. The proof will proceed by a sequence of lemmas.  Throughout, let and be commutative rings, and let be a homomorphism. Recall that is a subring of .  Define by .    Using the notation from above, is a well-defined function.     Suppose that . Then , so , and thus . Therefore, , and is well-defined.     Using the notation above, is a homomorphism.     We have as is a homomorphism.  We show that preserves addition. That it preserves multiplication will follow similarly. We compute: where we have used that is a homomorphism in line 2.     Using the notation above, is one-to-one.     Suppose that . That is, . Then , so , and therefore . Thus, is one-to-one.     Using the notation above, is onto.     Since is onto by definition, given any there is some such that . Then .   We thus obtain the following, due to Emmy Noether:   First Isomorphism Theorem  Noether Isomorphism Theorem  Noether's Isomorphism Theorem  E. Noether   Let be a homomorphism of commutative rings. Then .  In particular, if is an epimorphism (it is onto), .    The Noether Isomorphism Theorem gives a useful way of establishing an isomorphism between a quotient ring and another ring : find an onto homomorphism with kernel .    Applying the Noether Isomorphism Theorem  In the next three examples, we make heavy use of the evaluation homomorphism. We prove three separate isomorphisms using it.    There is an isomorphism of rings . Indeed, let us consider the evaluation homomorphism defined by . We have seen it is a homomorphism in Exercise???  Evaluation is an epimorphism: Pick any and consider the polynomial . Then . Since evaluation is a surjective homomorphism it is an epimorphism.  We claim the kernel of evaluation at zero is . Suppose . Then and so . We conclude . and so . Thus .  By the Noether Isomorphism Theorem we have .    The previous example illustrates the power of the evaluation mapping. Here's another (similar) example.    There is an isomorphism of rings . Indeed, let us consider the evaluation at mapping: defined by . It is a homomorphism and, in a manner similar to the previous example but using polynomial division, we can see that .  The evaluation at mapping is an epimorphism as for any we have . By the Noether Isomorphism Theorem .  Of course nothing is special about here. You will prove a general theorem in Exercise????     Algebraic Definition of Complex Numbers   At this point, we've seen two different incarnations of the complex numbers. Refernce definition and Example ????? We will show yet another way of constructing them.  Let be the evaluation at mapping. Evaluation is a homomorphism. Let's also note that . Thus is an epimorphism.  Since we know that . When we get to factorizations in the next chapter we will use the division algorithm to revisit this example and prove that . At the moment we do not yet have the Euclidean Algorithm at our disposal. Nevertheless, it is true so by the Noether Isomorphism Theorem .  One could redefine the complex numbers as and this is a purely algebraic definition of (up to using ).      Let and define by . That is, sends an equivalence class represented by to the equivalence class represented by in .   Show that is a well-defined function. That is, to say if , then .  Prove that is a homomorphism.  Is onto? Justify.  Compute (that is, list the elements in the set). Is one-to-one?  Without appealing to the definition, is prime? Maximal? Explain.         "
+  "body": " Quotient Rings   Guiding Questions   In this section, we'll seek to answer the questions:    How can we use ideals to build new rings out of old?  What sorts of ideals allow us to build domains? Fields?  What is the First Isomorphism Theorem?     If the only rings that existed were polynomial rings, familiar systems of numbers like , polynomial rings, and matrix rings, there would still be enough to justify defining the concept of a ring and exploring its properties. However, these are not the only rings that exist. In this section, we explore a way of building new rings from old by means of ideals. To better understand these new rings, we will also define two new classes of ideals: prime ideals, and maximal ideals. We end by briefly connecting these rings to a familiar problem from high school algebra.    Congruence modulo  The major concept of this section is the notion of congruence modulo . One can reasonably think of this idea as a generalization of congruence modulo in .   congruence mod   Let be a ring, an ideal of , and . We say is congruent to modulo if . If this is the case, we write .      Determine (with brief justification) whether in the following rings .   , , ,  , , ,  , , ,  , , ,  ( Challenge. ) , , ,       We have so in .    We have as for any . Thus in .     . Thus in .     . Thus in .     . Thus in .        Given a ring , ideal , and , when is it the case that ?    When .    Observe that if , then there is some such that , and so .  The notation is more than just notation. It is an equality of sets. Given any ideal and any , define to be the set of all translates of under .    Let be an ideal and . Then is congruent to modulo if and only if we have equality of sets .    Suppose is congruent to modulo . Then so that for some . Take any , then as . Thus . Using instead we have, similarly, that . Thus .  Suppose . Since , we know that . Since , we have that . Thus for some . Equivalently . Thus is congruent to modulo .       Coset (ideal)   coset (ideal)   Given an ideal in a commutative ring . A coset of is a set of the form The collection of all cosets is denoted or if is understood:       We take a minute to observe that in the notion of congruence: modulo is equivalent to the definition here. Indeed, any defines a principal ideal . If , then for some . Hence, . And conversely, if , then . Thus there exists with and so .  In particular, this is a successful generalization of the notion of congruence modulo .    As was the case in , congruence modulo is an equivalence relation.    Let be a ring and an ideal of . Then congruence modulo is an equivalence relation on .    Since , for all , so and the relation is reflexive.  Moreover, if , then , so the relation is symmetric.  If and , then , so the relation is transitive.      Quotient Rings   Notation for Integers Modulo  It's standard practice to identify the principal ideal with when no confusion can arise. In , the set of equivalence classes modulo is denoted by instead of .   The set of equivalence classes under this relation is denoted . In particular, What is more, this is not merely a set of equivalence classes. As the next two theorems demonstrate, this set possesses two algebraic operations that extend naturally from those of .    Let be a ring and an ideal of . If such that and , then .    Suppose and . Then and . Adding, we have Thus, .    Note that the only requirement in the proof of this theorem is that is closed under addition.    Let be a commutative ring and an ideal of . If such that and , then .    As before, we observe that and . Write and . Then , so . Therefore .    The preceeding proof used two properties of : closure under addition and closure under multiplication by .  The previous two theorems together show that addition and multiplication on the set is well-defined. As these operations are built on the operations of , it will likely not surprise you to learn that the usual axioms defining a ring also hold.   quotient ring   Let be a commutative ring, an ideal of , and . The set of cosets of , denoted , is a commutative ring (called the quotient ring of by ) with additive identity and multiplicative identity under the following operations:     These operations were shown to be well-defined in and . We need to show that, with these operations, all eight ring axioms hold and that multiplication is commutative. Take .  We begin with the additive axioms. For associativity: Since has associative addition we have and so the cosets are equal.  For commutativity:   For identity: as is the additive identity in .  For inverses: and so the additive inverse of is .  We now turn to the multiplicative axioms plus commutativity. For associativity: But multiplication in is associative so that . Hence,   For commutativity:   For identity: as is the multiplicative identity in .  Since has commutative multiplication we only need to check the left-distributive axiom. where we have used that multiplication in has the left-distributive property in line 3.  We conclude that is a commutative ring.    Thus, given a ring and ideal of , we may build the quotient ring .    Answer the questions below. Be prepared to give an information justification of your thinking.   Suppose and . Calculate and .  Let and . List all elements of (there should be 9 in total).  Set and . Find an element such that .     In and , we will explore the question of when possesses some of the properties we've previously explored, e.g., when is a domain? A field? First, we conclude with two explorations. The first gives us a sense of what these rings can look like. The second connects quotient rings to solution sets of polynomial equations.    Consider the ring and the ideals and .   List the elements of and .  What happens to in when you pass to the quotient ring ? How about as you pass from to ?  In view of your answer to the previous question, how does behave as you mod out by and ?  Build addition and multiplication tables for each of and .    TBD    graph (of a function)  zero set   One of the most useful connections made in high school algebra is the connection between a function (in particular, a polynomial function) and its graph . We may extend this notion to ideals via the concept of a zero set as follows.  Let be a field and with a nonzero ideal. We define the zero set of , denoted , as the set of all points for which for all .   Suppose . Prove that if and only if for each . Thus, can be determined entirely by examining the generators of .  Describe given .  (Challenge) Given and , describe and .  Given , describe the relationship between the variables and in the quotient . In what way have we restricted our polynomial inputs to the parabola ?    TBD.      Noether Isomorphism Theorem  As quotient rings provide fertile soil for building new examples of rings, it should not surprise us to find that homomorphisms interact with quotient rings in interesting and useful ways. Chief among them are the isomorphism theorems . In this subsection, we focus primarily on the Noether Isomorphism Theorem (also called the First Isomorphism Theorem).  We have seen that any homomorphism gives rise to an ideal of , namely . Our next theorem demonstrates that, given a commutative ring , every ideal is the kernel of some homomorphism defined on . In particular, our definition of ideal accurately captured what it meant to be a kernel.    Let be commutative and an ideal of . Define by . Then is an epimorphism with .    We first verify that is a homomorphism. Note that which is the multiplicative identity in .  For compatibility with addition:   For compatibility with multiplication: Thus is a homomorphism.  That is surjective is clear: for any we have . Lastly, suppose . Then so that . Thus . Also for any we have so that which shows .    This is just a generalization of .  We work toward a proof of the Noether Isomorphism Theorem for Rings. The proof will proceed by a sequence of lemmas.  Throughout, let and be commutative rings, and let be a homomorphism. Recall that is a subring of .  Define by .    Using the notation from above, is a well-defined function.     Suppose that . Then , so , and thus . Therefore, , and is well-defined.     Using the notation above, is a homomorphism.     We have as is a homomorphism.  We show that preserves addition. That it preserves multiplication will follow similarly. We compute: where we have used that is a homomorphism in line 2.     Using the notation above, is one-to-one.     Suppose that . That is, . Then , so , and therefore . Thus, is one-to-one.     Using the notation above, is onto.     Since is onto by definition, given any there is some such that . Then .   We thus obtain the following, due to Emmy Noether:   First Isomorphism Theorem  Noether Isomorphism Theorem  Noether's Isomorphism Theorem  E. Noether   Let be a homomorphism of commutative rings. Then .  In particular, if is an epimorphism (it is onto), .    The Noether Isomorphism Theorem gives a useful way of establishing an isomorphism between a quotient ring and another ring : find an onto homomorphism with kernel .    Applying the Noether Isomorphism Theorem  In the next three examples, we make heavy use of the fact that the evaluation homomorphism from is a homomorphism. We prove three separate isomorphisms using it.    There is an isomorphism of rings . Indeed, let us consider the evaluation homomorphism defined by .  Evaluation is an epimorphism: Pick any and consider the polynomial . Then . Since evaluation is a surjective homomorphism it is an epimorphism.  We claim the kernel of evaluation at zero is . Suppose . Then and so . We conclude . and so . Thus .  By the Noether Isomorphism Theorem we have .    The previous example illustrates the power of the evaluation mapping. Here's another (similar) example.    There is an isomorphism of rings . Indeed, let us consider the evaluation at mapping: defined by . In a manner similar to the previous example but using polynomial division, we can see that .  The evaluation at mapping is an epimorphism as for any we have . By the Noether Isomorphism Theorem .  Of course nothing is special about here. You will prove a general theorem in Exercise????     Algebraic Definition of Complex Numbers   At this point, we've seen two different incarnations of the complex numbers: and We will show yet another way of constructing them.  Let be the evaluation at homomorphism. Let's also note that . Thus is an epimorphism.  Since we know that . When we get to factorizations in the next chapter we will use the division algorithm to revisit this example and prove that . At the moment we do not yet have the Euclidean Algorithm at our disposal. Nevertheless, it is true so by the Noether Isomorphism Theorem .  One could redefine the complex numbers as and this is a purely algebraic definition of (up to using ).      Let and define by . That is, sends an equivalence class represented by to the equivalence class represented by in .   Show that is a well-defined function. That is, to say if , then .  Prove that is a homomorphism.  Is onto? Justify.  Compute (that is, list the elements in the set). Is one-to-one?  Without appealing to the definition, is prime? Maximal? Explain.           Mark the following as true or false.                                              The quotient ring is isomorphic to . Prove it by writing out all of the elements of the quotient ring and computing their addition and multiplication tables.        Let be a ring. Prove that for any , we have an isomorphism .                                                "
 },
 {
   "id": "obj_quotientRings",
@@ -3175,7 +3328,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.3.15",
   "title": "",
-  "body": "  There is an isomorphism of rings . Indeed, let us consider the evaluation homomorphism defined by . We have seen it is a homomorphism in Exercise???  Evaluation is an epimorphism: Pick any and consider the polynomial . Then . Since evaluation is a surjective homomorphism it is an epimorphism.  We claim the kernel of evaluation at zero is . Suppose . Then and so . We conclude . and so . Thus .  By the Noether Isomorphism Theorem we have .   "
+  "body": "  There is an isomorphism of rings . Indeed, let us consider the evaluation homomorphism defined by .  Evaluation is an epimorphism: Pick any and consider the polynomial . Then . Since evaluation is a surjective homomorphism it is an epimorphism.  We claim the kernel of evaluation at zero is . Suppose . Then and so . We conclude . and so . Thus .  By the Noether Isomorphism Theorem we have .   "
 },
 {
   "id": "subsec--5",
@@ -3184,7 +3337,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.3.16",
   "title": "",
-  "body": "  There is an isomorphism of rings . Indeed, let us consider the evaluation at mapping: defined by . It is a homomorphism and, in a manner similar to the previous example but using polynomial division, we can see that .  The evaluation at mapping is an epimorphism as for any we have . By the Noether Isomorphism Theorem .  Of course nothing is special about here. You will prove a general theorem in Exercise????   "
+  "body": "  There is an isomorphism of rings . Indeed, let us consider the evaluation at mapping: defined by . In a manner similar to the previous example but using polynomial division, we can see that .  The evaluation at mapping is an epimorphism as for any we have . By the Noether Isomorphism Theorem .  Of course nothing is special about here. You will prove a general theorem in Exercise????   "
 },
 {
   "id": "ex_algebraicDefinitionC",
@@ -3193,7 +3346,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.3.17",
   "title": "Algebraic Definition of Complex Numbers.",
-  "body": " Algebraic Definition of Complex Numbers   At this point, we've seen two different incarnations of the complex numbers. Refernce definition and Example ????? We will show yet another way of constructing them.  Let be the evaluation at mapping. Evaluation is a homomorphism. Let's also note that . Thus is an epimorphism.  Since we know that . When we get to factorizations in the next chapter we will use the division algorithm to revisit this example and prove that . At the moment we do not yet have the Euclidean Algorithm at our disposal. Nevertheless, it is true so by the Noether Isomorphism Theorem .  One could redefine the complex numbers as and this is a purely algebraic definition of (up to using ).   "
+  "body": " Algebraic Definition of Complex Numbers   At this point, we've seen two different incarnations of the complex numbers: and We will show yet another way of constructing them.  Let be the evaluation at homomorphism. Let's also note that . Thus is an epimorphism.  Since we know that . When we get to factorizations in the next chapter we will use the division algorithm to revisit this example and prove that . At the moment we do not yet have the Euclidean Algorithm at our disposal. Nevertheless, it is true so by the Noether Isomorphism Theorem .  One could redefine the complex numbers as and this is a purely algebraic definition of (up to using ).   "
 },
 {
   "id": "subsec--7",
@@ -3203,6 +3356,150 @@ var ptx_lunr_docs = [
   "number": "3.3.6",
   "title": "",
   "body": "  Let and define by . That is, sends an equivalence class represented by to the equivalence class represented by in .   Show that is a well-defined function. That is, to say if , then .  Prove that is a homomorphism.  Is onto? Justify.  Compute (that is, list the elements in the set). Is one-to-one?  Without appealing to the definition, is prime? Maximal? Explain.       "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-1",
+  "level": "2",
+  "url": "sec_quotientRings.html#exers_divisibilityIntegralDomains-1",
+  "type": "Exercise",
+  "number": "3.3.5.1",
+  "title": "",
+  "body": " Mark the following as true or false.                                            "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-2",
+  "level": "2",
+  "url": "sec_quotientRings.html#exers_divisibilityIntegralDomains-2",
+  "type": "Exercise",
+  "number": "3.3.5.2",
+  "title": "",
+  "body": " The quotient ring is isomorphic to . Prove it by writing out all of the elements of the quotient ring and computing their addition and multiplication tables.  "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-3",
+  "level": "2",
+  "url": "sec_quotientRings.html#exers_divisibilityIntegralDomains-3",
+  "type": "Exercise",
+  "number": "3.3.5.3",
+  "title": "",
+  "body": " "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-4",
+  "level": "2",
+  "url": "sec_quotientRings.html#exers_divisibilityIntegralDomains-4",
+  "type": "Exercise",
+  "number": "3.3.5.4",
+  "title": "",
+  "body": " "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-5",
+  "level": "2",
+  "url": "sec_quotientRings.html#exers_divisibilityIntegralDomains-5",
+  "type": "Exercise",
+  "number": "3.3.5.5",
+  "title": "",
+  "body": " Let be a ring. Prove that for any , we have an isomorphism .  "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-6",
+  "level": "2",
+  "url": "sec_quotientRings.html#exers_divisibilityIntegralDomains-6",
+  "type": "Exercise",
+  "number": "3.3.5.6",
+  "title": "",
+  "body": "   "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-7",
+  "level": "2",
+  "url": "sec_quotientRings.html#exers_divisibilityIntegralDomains-7",
+  "type": "Exercise",
+  "number": "3.3.5.7",
+  "title": "",
+  "body": "   "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-8",
+  "level": "2",
+  "url": "sec_quotientRings.html#exers_divisibilityIntegralDomains-8",
+  "type": "Exercise",
+  "number": "3.3.5.8",
+  "title": "",
+  "body": "   "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-9",
+  "level": "2",
+  "url": "sec_quotientRings.html#exers_divisibilityIntegralDomains-9",
+  "type": "Exercise",
+  "number": "3.3.5.9",
+  "title": "",
+  "body": "   "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-10",
+  "level": "2",
+  "url": "sec_quotientRings.html#exers_divisibilityIntegralDomains-10",
+  "type": "Exercise",
+  "number": "3.3.5.10",
+  "title": "",
+  "body": "   "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-11",
+  "level": "2",
+  "url": "sec_quotientRings.html#exers_divisibilityIntegralDomains-11",
+  "type": "Exercise",
+  "number": "3.3.5.11",
+  "title": "",
+  "body": "   "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-12",
+  "level": "2",
+  "url": "sec_quotientRings.html#exers_divisibilityIntegralDomains-12",
+  "type": "Exercise",
+  "number": "3.3.5.12",
+  "title": "",
+  "body": "   "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-13",
+  "level": "2",
+  "url": "sec_quotientRings.html#exers_divisibilityIntegralDomains-13",
+  "type": "Exercise",
+  "number": "3.3.5.13",
+  "title": "",
+  "body": "   "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-14",
+  "level": "2",
+  "url": "sec_quotientRings.html#exers_divisibilityIntegralDomains-14",
+  "type": "Exercise",
+  "number": "3.3.5.14",
+  "title": "",
+  "body": "   "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-15",
+  "level": "2",
+  "url": "sec_quotientRings.html#exers_divisibilityIntegralDomains-15",
+  "type": "Exercise",
+  "number": "3.3.5.15",
+  "title": "",
+  "body": "   "
+},
+{
+  "id": "exers_divisibilityIntegralDomains-16",
+  "level": "2",
+  "url": "sec_quotientRings.html#exers_divisibilityIntegralDomains-16",
+  "type": "Exercise",
+  "number": "3.3.5.16",
+  "title": "",
+  "body": "   "
 },
 {
   "id": "sec_principalIdealsDomains",
