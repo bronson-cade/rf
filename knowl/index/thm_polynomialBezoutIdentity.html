@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.15</span><span class="period">.</span><span class="space"> </span><span class="title">Polynomial Bézout’s Identity.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(F\)</span> be a field. For any polynomials <span class="process-math">\(f,g\in F[x]\)</span> not both 0, there are polynomials <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+pf + qg = \gcd(f,g)\text{.}
+\end{equation*}
+</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">The Euclidean algorithm computes the greatest common divisor of <span class="process-math">\(f,g\text{.}\)</span> After running the Euclidean Algorithm, we have a sequence of remainders and quotients <span class="process-math">\(r_i\)</span> and <span class="process-math">\(q_i\text{,}\)</span> respectively. Here <span class="process-math">\(r_{-2} = f\)</span> and <span class="process-math">\(r_{-1} = g\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+r_{-2} \amp= q_0r_{-1} + r_0 \\
+r_{-1} \amp = q_1r_0+r_1\\
+\vdots \amp= \vdots \\
+r_{n-3}\amp = q_{n-1}r_{n-2}+r_{n-1}\\
+r_{n-2}\amp = q_nr_{n-1}+r_n\\
+r_{n-1}\amp= q_{n+1}r_n+0
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(r_n = \gcd(f,g)\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Solving this system of equations for the remainders we get:</div>
+<div class="displaymath process-math">
+\begin{align*}
+r_{-2} -q_0r_{-1} \amp= r_0 \\
+r_{-1} - q_1r_0 \amp= r_1\\
+\vdots \amp= \vdots \\
+r_{n-3} - q_{n-1}r_{n-2} \amp= r_{n-1}\\
+r_{n-2} - q_nr_{n-1}\amp= r_n
+\end{align*}
+</div>
+<div class="para">Now substitute <span class="process-math">\(r_{n-1}\)</span> from the second to last equation into the last equation:</div>
+<div class="displaymath process-math">
+\begin{align*}
+r_n \amp= r_{n-2}-q_nr_{n-1}\\
+\amp= r_{n-2}-q_n(r_{n-3}-q_{n-1}r_{n-2}) \\
+\amp= (1+q_nq_{n-1})r_{n-2}-q_nr_{n-3}
+\end{align*}
+</div>
+<div class="para">and in particular we have expressed <span class="process-math">\(r_n\)</span> as a polynomial combination of <span class="process-math">\(r_{n-2}\)</span> and <span class="process-math">\(r_{n-3}\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Into this equation substitute in <span class="process-math">\(r_{n-2}\text{,}\)</span> which is a polynomial combination of <span class="process-math">\(r_{n-3}\)</span> and <span class="process-math">\(r_{n-4}\text{.}\)</span> This will express <span class="process-math">\(r_n\)</span> as a polynomial combination of <span class="process-math">\(r_{n-3}\)</span> and <span class="process-math">\(r_{n-4}\text{.}\)</span> And keep doing so until we have arrived at</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\gcd(f,g) = r_n = pr_{-2}+qr_{-1} = pf+qg.
+\end{equation*}
+</div>
+<div class="para">This completes the proof.</div>
+</div></article></details><span class="incontext"><a class="internal" href="sec_divisibilityIntegralDomains.html#thm_polynomialBezoutIdentity">in-context</a></span>
+</body>
+</html>
