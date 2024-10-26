@@ -254,9 +254,9 @@ window.MathJax = {
 #sec_homomorphismsTF-1-2 { counter-set: sec_homomorphismsTF-1-2 0; }
 #sec_homomorphismsTF-1-2 > li::marker { content: "("counter(sec_homomorphismsTF-1-2,lower-alpha)")"; }
 #sec_homomorphismsTF-1-2 > li { counter-increment: sec_homomorphismsTF-1-2; }
-#exers_homomorphisms-13-1-2 { counter-set: exers_homomorphisms-13-1-2 0; }
-#exers_homomorphisms-13-1-2 > li::marker { content: "("counter(exers_homomorphisms-13-1-2,lower-alpha)")"; }
-#exers_homomorphisms-13-1-2 > li { counter-increment: exers_homomorphisms-13-1-2; }
+#exers_homomorphisms-15-1-2 { counter-set: exers_homomorphisms-15-1-2 0; }
+#exers_homomorphisms-15-1-2 > li::marker { content: "("counter(exers_homomorphisms-15-1-2,lower-alpha)")"; }
+#exers_homomorphisms-15-1-2 > li { counter-increment: exers_homomorphisms-15-1-2; }
 #prop_kernelIsIdeal-1-1-5 { counter-set: prop_kernelIsIdeal-1-1-5 0; }
 #prop_kernelIsIdeal-1-1-5 > li::marker { content: ""counter(prop_kernelIsIdeal-1-1-5,decimal)"."; }
 #prop_kernelIsIdeal-1-1-5 > li { counter-increment: prop_kernelIsIdeal-1-1-5; }
@@ -293,6 +293,9 @@ window.MathJax = {
 #exers_divisibilityIntegralDomains-1-1-2 { counter-set: exers_divisibilityIntegralDomains-1-1-2 0; }
 #exers_divisibilityIntegralDomains-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-1-1-2,lower-alpha)")"; }
 #exers_divisibilityIntegralDomains-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-1-1-2; }
+#exers_divisibilityIntegralDomains-3-1-1-3 { counter-set: exers_divisibilityIntegralDomains-3-1-1-3 0; }
+#exers_divisibilityIntegralDomains-3-1-1-3 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-3-1-1-3,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-3-1-1-3 > li { counter-increment: exers_divisibilityIntegralDomains-3-1-1-3; }
 #exers_divisibilityIntegralDomains-6-1-2 { counter-set: exers_divisibilityIntegralDomains-6-1-2 0; }
 #exers_divisibilityIntegralDomains-6-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-6-1-2,lower-alpha)")"; }
 #exers_divisibilityIntegralDomains-6-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-6-1-2; }
@@ -515,7 +518,7 @@ window.MathJax = {
 </div> <div class="para" id="ssec_divisibilityInDomains-3-2">Conversely, by contrapositive, assume that <span class="process-math">\(R\)</span> is not a domain. Let <span class="process-math">\(z\in R\)</span> be a zero divisor; then there is a nonzero <span class="process-math">\(x\in R\)</span> such that <span class="process-math">\(xz = 0 = 0 z\text{.}\)</span> Since <span class="process-math">\(z\ne 0\)</span> as zero-divisors are non-zero, this implies that <span class="process-math">\(x = 0\)</span> as we can cancel the <span class="process-math">\(z\)</span>’s, a contradiction.</div></article></details><div class="para" id="ssec_divisibilityInDomains-4">We may read <a href="sec_divisibilityIntegralDomains.html#thm_domainCancellationLaw" class="xref" data-knowl="./knowl/xref/thm_domainCancellationLaw.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.4.1: Cancellation Law">Theorem 2.4.1</a> as saying that the defining property of an integral domain is the ability to cancel common nonzero factors. Note that we have not <em class="emphasis">divided</em>; division is not a binary operation, and nonzero elements of rings need not be units. However, as was the case in <span class="process-math">\(\Z\text{,}\)</span> there are notions of <em class="emphasis">divisibility</em> and <em class="emphasis">factorization</em> in rings.</div>
 <article class="definition definition-like" id="def_divisibilityRings"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
-</h4> <div class="para" id="def_divisibilityRings-3-1">Let <span class="process-math">\(R\)</span> be a commutative ring with identity, and let <span class="process-math">\(a,b\in R\text{.}\)</span> We say <span class="process-math">\(a\)</span> <dfn class="terminology">divides</dfn> <span class="process-math">\(b\)</span> and write <span class="process-math">\(a\mid b\)</span> if there is a <span class="process-math">\(c\in R\)</span> such that <span class="process-math">\(ac = b\text{.}\)</span> We then say that <span class="process-math">\(a\)</span> is a <dfn class="terminology">factor</dfn> of <span class="process-math">\(b\text{.}\)</span>
+</h4> <div class="para" id="def_divisibilityRings-3-1">Let <span class="process-math">\(R\)</span> be a commutative ring, and let <span class="process-math">\(a,b\in R\text{.}\)</span> We say <span class="process-math">\(a\)</span> <dfn class="terminology">divides</dfn> <span class="process-math">\(b\)</span> and write <span class="process-math">\(a\mid b\)</span> if there is a <span class="process-math">\(c\in R\)</span> such that <span class="process-math">\(ac = b\text{.}\)</span> We then say that <span class="process-math">\(a\)</span> is a <dfn class="terminology">factor</dfn> of <span class="process-math">\(b\text{.}\)</span>
 </div></article><article class="investigation project-like" id="ssec_divisibilityInDomains-6"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
 </h4>
@@ -536,11 +539,11 @@ window.MathJax = {
 <div class="para" id="subsec-primeAndIrreducibleElements-2">Our definition of prime also extends nicely to commutative rings. Indeed, the desire to extend the familiar notion of prime from <span class="process-math">\(\Z\)</span> to any ring is the reason for our less-familiar definition given in <a href="sec-primesFactorization.html#def_primeInteger" class="xref" data-knowl="./knowl/xref/def_primeInteger.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.3.1">Definition 1.3.1</a>.</div>
 <article class="definition definition-like" id="def_primeElementsRings"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span>
-</h4> <div class="para" id="def_primeElementsRings-2-1">Let <span class="process-math">\(R\)</span> be commutative. We say a nonzero nonunit element <span class="process-math">\(a\in R\)</span> is <dfn class="terminology">prime</dfn> if whenever <span class="process-math">\(a\mid bc\)</span> for some <span class="process-math">\(b,c\in R\text{,}\)</span> either <span class="process-math">\(a|b\)</span> or <span class="process-math">\(a|c\text{.}\)</span>
+</h4> <div class="para" id="def_primeElementsRings-2-1">Let <span class="process-math">\(R\)</span> be a commutative ring. We say a nonzero nonunit element <span class="process-math">\(a\in R\)</span> is <dfn class="terminology">prime</dfn> if whenever <span class="process-math">\(a\mid bc\)</span> for some <span class="process-math">\(b,c\in R\text{,}\)</span> either <span class="process-math">\(a|b\)</span> or <span class="process-math">\(a|c\text{.}\)</span>
 </div></article><div class="para" id="subsec-primeAndIrreducibleElements-4">A notion related to primality is irreducibility. In fact, one might reasonably say that irreducibility is the natural generalization of the typical definition of prime one encounters in school mathematics. However, we will see that the notions differ in general.</div>
 <article class="definition definition-like" id="def_irreducibleelement"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span>
-</h4> <div class="para" id="def_irreducibleelement-3-1">Let <span class="process-math">\(R\)</span> be commutative with identity. We say a nonzero nonunit element <span class="process-math">\(a\in R\)</span> is <dfn class="terminology">irreducible</dfn> if whenever <span class="process-math">\(a = bc\)</span> for some <span class="process-math">\(b,c\in R\text{,}\)</span> one of <span class="process-math">\(b\)</span> or <span class="process-math">\(c\)</span> is a unit. (Note that in some areas of the literature, the word <dfn class="terminology">atom</dfn> is used interchangeably with irreducible.)</div></article><article class="exploration project-like" id="expl-unit-prime-irred"><h4 class="heading">
+</h4> <div class="para" id="def_irreducibleelement-3-1">Let <span class="process-math">\(R\)</span> be a commutative ring. We say a nonzero nonunit element <span class="process-math">\(a\in R\)</span> is <dfn class="terminology">irreducible</dfn> if whenever <span class="process-math">\(a = bc\)</span> for some <span class="process-math">\(b,c\in R\text{,}\)</span> one of <span class="process-math">\(b\)</span> or <span class="process-math">\(c\)</span> is a unit. (Note that in some areas of the literature, the word <dfn class="terminology">atom</dfn> is used interchangeably with irreducible.)</div></article><article class="exploration project-like" id="expl-unit-prime-irred"><h4 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="expl-unit-prime-irred-1-1">
@@ -788,7 +791,7 @@ x+1 \amp = 1\cdot(x+1)+0
 <div class="para">and so <span class="process-math">\(\gcd(f,g) = 1\text{.}\)</span>
 </div>
 </div> <div class="para logical" id="ssec_polynomialEuclideanAlgorithm-17-2-2">
-<div class="para">To find Bé coefficients, we solve for the remainders:</div>
+<div class="para">To find Béout coefficients, we solve for the remainders:</div>
 <div class="displaymath process-math" id="ssec_polynomialEuclideanAlgorithm-17-2-2-1">
 \begin{align*}
 x^5+x^4+1 - (x^2+x+1)(x^3+x)\amp=(x^2+x+1) \\

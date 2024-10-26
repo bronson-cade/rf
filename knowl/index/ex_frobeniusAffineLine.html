@@ -21,7 +21,7 @@
 \mathrm{Fr}\colon \mathbb{F}_p[x]\to \mathbb{F}_p[x]
 \end{equation*}
 </div>
-<div class="para">defined by <span class="process-math">\(\mathrm{Fr}(f(x)) = (f(x))^2\text{.}\)</span>
+<div class="para">defined by <span class="process-math">\(\mathrm{Fr}(f(x)) = (f(x))^p\text{.}\)</span>
 </div>
 </div> <div class="para logical">
 <div class="para">Before we prove that the Frobenius is a homomorphism, let’s recall that whenever <span class="process-math">\(k\neq 0,p\)</span> the binomial coefficient <span class="process-math">\({p\choose k}\)</span> is divisible by <span class="process-math">\(p\text{.}\)</span> Indeed, using the usual formula:</div>
@@ -39,7 +39,7 @@
 <div class="displaymath process-math">
 \begin{align*}
 \amp\mathrm{Fr}(f(x)+g(x)) \\
-\amp= (f(x)+g(x))^2 \\
+\amp= (f(x)+g(x))^p \\
 \amp= f(x)^p +{p\choose 1}f(x)^{p-1}g(x) + \cdots + {p\choose p-1}f(x)g(x)^{p-1} + g(x)^p\\
 \amp = f(x)^p + 0 + g(x)^p \\
 \amp = \mathrm{Fr}(f(x)) + \mathrm{Fr}(g(x)) 

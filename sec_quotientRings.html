@@ -254,9 +254,9 @@ window.MathJax = {
 #sec_homomorphismsTF-1-2 { counter-set: sec_homomorphismsTF-1-2 0; }
 #sec_homomorphismsTF-1-2 > li::marker { content: "("counter(sec_homomorphismsTF-1-2,lower-alpha)")"; }
 #sec_homomorphismsTF-1-2 > li { counter-increment: sec_homomorphismsTF-1-2; }
-#exers_homomorphisms-13-1-2 { counter-set: exers_homomorphisms-13-1-2 0; }
-#exers_homomorphisms-13-1-2 > li::marker { content: "("counter(exers_homomorphisms-13-1-2,lower-alpha)")"; }
-#exers_homomorphisms-13-1-2 > li { counter-increment: exers_homomorphisms-13-1-2; }
+#exers_homomorphisms-15-1-2 { counter-set: exers_homomorphisms-15-1-2 0; }
+#exers_homomorphisms-15-1-2 > li::marker { content: "("counter(exers_homomorphisms-15-1-2,lower-alpha)")"; }
+#exers_homomorphisms-15-1-2 > li { counter-increment: exers_homomorphisms-15-1-2; }
 #prop_kernelIsIdeal-1-1-5 { counter-set: prop_kernelIsIdeal-1-1-5 0; }
 #prop_kernelIsIdeal-1-1-5 > li::marker { content: ""counter(prop_kernelIsIdeal-1-1-5,decimal)"."; }
 #prop_kernelIsIdeal-1-1-5 > li { counter-increment: prop_kernelIsIdeal-1-1-5; }
@@ -293,6 +293,9 @@ window.MathJax = {
 #exers_divisibilityIntegralDomains-1-1-2 { counter-set: exers_divisibilityIntegralDomains-1-1-2 0; }
 #exers_divisibilityIntegralDomains-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-1-1-2,lower-alpha)")"; }
 #exers_divisibilityIntegralDomains-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-1-1-2; }
+#exers_divisibilityIntegralDomains-3-1-1-3 { counter-set: exers_divisibilityIntegralDomains-3-1-1-3 0; }
+#exers_divisibilityIntegralDomains-3-1-1-3 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-3-1-1-3,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-3-1-1-3 > li { counter-increment: exers_divisibilityIntegralDomains-3-1-1-3; }
 #exers_divisibilityIntegralDomains-6-1-2 { counter-set: exers_divisibilityIntegralDomains-6-1-2 0; }
 #exers_divisibilityIntegralDomains-6-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-6-1-2,lower-alpha)")"; }
 #exers_divisibilityIntegralDomains-6-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-6-1-2; }
@@ -849,8 +852,21 @@ f((x+\ker\varphi) + (y+\ker\varphi)) \amp= f((x+y)+\ker\varphi) \\
 </h4>
 <div class="para" id="ssec_NoetherIsomorphismTheorem-18-5-1">Let <span class="process-math">\(\varphi \colon R\to S\)</span> be a homomorphism of commutative rings. Then <span class="process-math">\(R/\ker \varphi \cong \mathrm{im} \varphi\text{.}\)</span>
 </div> <div class="para" id="ssec_NoetherIsomorphismTheorem-18-5-2">In particular, if <span class="process-math">\(\varphi \colon R\to S\)</span> is an epimorphism (it is onto), <span class="process-math">\(R/\ker \varphi \cong S\text{.}\)</span>
-</div></article><div class="para" id="ssec_NoetherIsomorphismTheorem-19">The Noether Isomorphism Theorem gives a useful way of establishing an isomorphism between a quotient ring <span class="process-math">\(R/I\)</span> and another ring <span class="process-math">\(S\text{:}\)</span> find an onto homomorphism <span class="process-math">\(R\to S\)</span> with kernel <span class="process-math">\(I\text{.}\)</span>
-</div></section><section class="subsection" id="subsec-"><h3 class="heading hide-type">
+</div></article><div class="para logical" id="ssec_NoetherIsomorphismTheorem-19">
+<div class="para">The Noether Isomorphism Theorem gives a useful way of establishing an isomorphism between a quotient ring <span class="process-math">\(R/I\)</span> and another ring <span class="process-math">\(S\text{:}\)</span> find an onto homomorphism <span class="process-math">\(R\to S\)</span> with kernel <span class="process-math">\(I\text{.}\)</span> It’s helpful to think of the Noether isomorphism theorem in terms of a diagram:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{CD}
+R @&gt;\varphi&gt;&gt; S\\
+@VVV @AAA\\
+R/\ker\varphi @&gt;\sim&gt;&gt; \mathrm{im}\varphi 
+\end{CD}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="ssec_NoetherIsomorphismTheorem-20">The way we read these diagrams is if you start with an element at any of the nodes and compute the images under each arrow. You should always end up with the same spot. In this context, to compute <span class="process-math">\(\varphi(r)\text{,}\)</span> we can first surject onto <span class="process-math">\(R/\ker\varphi\)</span> sending <span class="process-math">\(r\to\bar{r}\text{.}\)</span> Then apply the Noether isomorphism <span class="process-math">\(f(\bar{r}) = \varphi(r)\text{.}\)</span> Then include that into <span class="process-math">\(S\text{.}\)</span>
+</div>
+<div class="para" id="ssec_NoetherIsomorphismTheorem-21">The diagram is meant to visualize a factorization of <span class="process-math">\(\varphi\)</span> into varies pieces. In particular, we see that any homomorphism factors into the composite of an epimorphism followed by a monomorphism.</div></section><section class="subsection" id="subsec-"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="space"> </span><span class="title">Applying the Noether Isomorphism Theorem</span>
 </h3>
 <div class="para" id="subsec--2">In the next three examples, we make heavy use of the fact that the evaluation homomorphism from <a href="sec_homomorphisms.html#exer_evaluationHomomorphism" class="xref" data-knowl="./knowl/xref/exer_evaluationHomomorphism.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.1.7.8: Evaluation Homomorphism">Exercise 3.1.7.8</a> is a homomorphism. We prove three separate isomorphisms using it.</div>
@@ -899,8 +915,34 @@ f(x) = a_1x+\cdots + a_nx^n = x(a_1+\cdots +a_nx^{n-1})\text{.}
 </div> <div class="para" id="subsec--5-1-3">Of course nothing is special about <span class="process-math">\(5\)</span> here. You will prove a general theorem in Exercise????</div></article><article class="example example-like" id="ex_algebraicDefinitionC"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.17</span><span class="period">.</span><span class="space"> </span><span class="title">Algebraic Definition of Complex Numbers.</span>
 </h4>
-<div class="para" id="ex_algebraicDefinitionC-2-1">At this point, we’ve seen two different incarnations of the complex numbers: <a href="sec_fields.html#def_complexNumbers" class="xref" data-knowl="./knowl/xref/def_complexNumbers.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.3">Definition 2.1.3</a> and <a href="sec_fields.html#exer_complexNumbersAsMatrices" class="xref" data-knowl="./knowl/xref/exer_complexNumbersAsMatrices.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 2.1.7.3">Exercise 2.1.7.3</a> We will show yet another way of constructing them.</div> <div class="para" id="ex_algebraicDefinitionC-2-2">Let <span class="process-math">\(\mathrm{ev}_i\colon\R[x]\to\C\)</span> be the evaluation at <span class="process-math">\(i\)</span> homomorphism. Let’s also note that <span class="process-math">\(\mathrm{ev}_i(a+bx) = a+bi\text{.}\)</span> Thus <span class="process-math">\(\mathrm{ev}_i\)</span> is an epimorphism.</div> <div class="para" id="ex_algebraicDefinitionC-2-3">Since <span class="process-math">\(\mathrm{ev}_i(x^2+1) = i^2+1 = -1+1 = 0\)</span> we know that <span class="process-math">\(x^2+1\in\ker\mathrm{ev}_i\text{.}\)</span> When we get to factorizations in the next chapter we will use the division algorithm to revisit this example and prove that <span class="process-math">\(\ker\mathrm{ev}_i = (x^2+1)\text{.}\)</span> At the moment we do not yet have the Euclidean Algorithm at our disposal. Nevertheless, it is true so by the Noether Isomorphism Theorem <span class="process-math">\(\R[x]/(x^2+1)\cong\C\text{.}\)</span>
-</div> <div class="para" id="ex_algebraicDefinitionC-2-4">One could redefine the complex numbers as <span class="process-math">\(\R[x]/(x^2+1)\)</span> and this is a purely algebraic definition of <span class="process-math">\(\C\)</span> (up to using <span class="process-math">\(\R\)</span>).</div></article><article class="activity project-like" id="subsec--7"><h4 class="heading">
+<div class="para" id="ex_algebraicDefinitionC-2-1">At this point, we’ve seen two different incarnations of the complex numbers: <a href="sec_fields.html#def_complexNumbers" class="xref" data-knowl="./knowl/xref/def_complexNumbers.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.3">Definition 2.1.3</a> and <a href="sec_fields.html#exer_complexNumbersAsMatrices" class="xref" data-knowl="./knowl/xref/exer_complexNumbersAsMatrices.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 2.1.7.3">Exercise 2.1.7.3</a> We will show yet another way of constructing them.</div> <div class="para" id="ex_algebraicDefinitionC-2-2">Let <span class="process-math">\(\mathrm{ev}_i\colon\R[x]\to\C\)</span> be the evaluation at <span class="process-math">\(i\)</span> homomorphism. Let’s also note that <span class="process-math">\(\mathrm{ev}_i(a+bx) = a+bi\text{.}\)</span> Thus <span class="process-math">\(\mathrm{ev}_i\)</span> is an epimorphism.</div> <div class="para logical" id="ex_algebraicDefinitionC-2-3">
+<div class="para">Since <span class="process-math">\(\mathrm{ev}_i(x^2+1) = i^2+1 = -1+1 = 0\)</span> we know that <span class="process-math">\(x^2+1\in\ker\mathrm{ev}_i\text{.}\)</span> Suppose that <span class="process-math">\(p(x)\in\ker\mathrm{ev}_i\text{.}\)</span> Using the <a href="sec_principalIdealsDomains.html#thm_polynomialDivisionAlgorithm" class="xref" data-knowl="./knowl/xref/thm_polynomialDivisionAlgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.4.6: Polynomial Division Algorithm">Polynomial Division Algorithm</a>, we can divide <span class="process-math">\(p(x)\)</span> by <span class="process-math">\(x^2+1\)</span> to get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm_polynomialDivisionAlgorithm.html">
+\begin{equation*}
+p(x) = q(x)(x^2+1) + r(x)
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\deg(r(x)) \lt 2\text{.}\)</span> Since <span class="process-math">\(p(x)\)</span> is in the kernel we have:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm_polynomialDivisionAlgorithm.html" id="ex_algebraicDefinitionC-2-3-10">
+\begin{align*}
+0 \amp= p(i) \\
+\amp=q(i)(i^2+1)+r(i) \\
+\amp=r(i) 
+\end{align*}
+</div>
+<div class="para">and so <span class="process-math">\(r(i)=0\text{.}\)</span> Since <span class="process-math">\(r(x)\)</span> has degree at most one, we can write <span class="process-math">\(r(x) = a+bx\text{.}\)</span> But then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm_polynomialDivisionAlgorithm.html">
+\begin{equation*}
+0=r(i) = a+bi
+\end{equation*}
+</div>
+<div class="para">implies <span class="process-math">\(a=0,b=0\text{.}\)</span> Thus <span class="process-math">\(r(x) = 0\)</span> and <span class="process-math">\(p(x) = q(x)(x^2+1)\text{.}\)</span> In particular, <span class="process-math">\(p(x)\in (x^2+1)\text{.}\)</span> Finally, we can conclude that <span class="process-math">\(\ker\mathrm{ev}_i = (x^2+1)\)</span> and by the Noether Isomorphism Theorem</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm_polynomialDivisionAlgorithm.html">
+\begin{equation*}
+\R[x]/(x^2+1)\cong \C.
+\end{equation*}
+</div>
+</div> <div class="para" id="ex_algebraicDefinitionC-2-4">This example shows we could redefine the complex numbers as <span class="process-math">\(\R[x]/(x^2+1)\)</span> and this is a purely algebraic definition of <span class="process-math">\(\C\)</span> (up to using <span class="process-math">\(\R\)</span>).</div></article><article class="activity project-like" id="subsec--7"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.6</span><span class="period">.</span>
 </h4>
 <div class="para" id="subsec--7-1-1">Let <span class="process-math">\(R = \Z/6\)</span> and define <span class="process-math">\(\varphi\colon \Z/6 \to \Z/2\)</span> by <span class="process-math">\(\varphi(\overline{x}) = \overline{x}\text{.}\)</span> That is, <span class="process-math">\(\varphi\)</span> sends an equivalence class <span class="process-math">\(\overline{x}\in \Z/6\)</span> represented by <span class="process-math">\(x\in \Z\)</span> to the equivalence class represented by <span class="process-math">\(x\)</span> in <span class="process-math">\(\Z/2\text{.}\)</span>
@@ -928,15 +970,33 @@ S^{{\mathcal{W}}_\Lambda}\otimes T @&gt;j&gt;&gt; T\\
 <li id="exers_divisibilityIntegralDomains-1-1-2-1"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-1-1">Suppose <span class="process-math">\(I\)</span> is an ideal of a ring <span class="process-math">\(R\text{,}\)</span> then congruence modulo <span class="process-math">\(I\)</span> is reflexive.</div></li>
 <li id="exers_divisibilityIntegralDomains-1-1-2-2"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-2-1">Suppose <span class="process-math">\(I\)</span> is an ideal of a ring <span class="process-math">\(R\text{,}\)</span> then congruence modulo <span class="process-math">\(I\)</span> is symmetric.</div></li>
 <li id="exers_divisibilityIntegralDomains-1-1-2-3"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-3-1">If <span class="process-math">\(I\)</span> is an ideal of <span class="process-math">\(R\text{,}\)</span> then <span class="process-math">\(R/I\)</span> is a non-zero ring.</div></li>
-<li id="exers_divisibilityIntegralDomains-1-1-2-4"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-4-1"></div></li>
-<li id="exers_divisibilityIntegralDomains-1-1-2-5"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-5-1"></div></li>
-<li id="exers_divisibilityIntegralDomains-1-1-2-6"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-6-1"></div></li>
-<li id="exers_divisibilityIntegralDomains-1-1-2-7"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-7-1"></div></li>
-<li id="exers_divisibilityIntegralDomains-1-1-2-8"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-8-1"></div></li>
-<li id="exers_divisibilityIntegralDomains-1-1-2-9"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-9-1"></div></li>
-<li id="exers_divisibilityIntegralDomains-1-1-2-10"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-10-1"></div></li>
+<li id="exers_divisibilityIntegralDomains-1-1-2-4"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-4-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism, then <span class="process-math">\(R\cong \mathrm{im}\varphi\text{.}\)</span>
+</div></li>
+<li id="exers_divisibilityIntegralDomains-1-1-2-5"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-5-1">Every ideal is a kernel of a homomorphism.</div></li>
+<li id="exers_divisibilityIntegralDomains-1-1-2-6"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-6-1">Every kernel of a homomorphism is an ideal.</div></li>
+<li id="exers_divisibilityIntegralDomains-1-1-2-7"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-7-1">An ideal <span class="process-math">\(\mathfrak{m}\)</span> is maximal if <span class="process-math">\(ab\in \mathfrak{m}\)</span> implies <span class="process-math">\(a\in\mathfrak{m}\)</span> or <span class="process-math">\(b\in\mathfrak{m}\text{.}\)</span>
+</div></li>
+<li id="exers_divisibilityIntegralDomains-1-1-2-8"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-8-1">An ideal <span class="process-math">\(\mathfrak{p}\)</span> is prime if <span class="process-math">\(ab\in \mathfrak{p}\)</span> implies <span class="process-math">\(a\in\mathfrak{p}\)</span> or <span class="process-math">\(b\in\mathfrak{p}\text{.}\)</span>
+</div></li>
+<li id="exers_divisibilityIntegralDomains-1-1-2-9"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-9-1">Suppose <span class="process-math">\(I\)</span> is an ideal, then <span class="process-math">\(r+I=s+I\)</span> if and only if <span class="process-math">\(r-s\in I\text{.}\)</span>
+</div></li>
+<li id="exers_divisibilityIntegralDomains-1-1-2-10"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-10-1">Suppose <span class="process-math">\(I\)</span> is an ideal, then <span class="process-math">\((r+I)\cdot (s+I) = rs+I\text{.}\)</span>
+</div></li>
 </ol></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="exers_divisibilityIntegralDomains-2-1-1">The quotient ring <span class="process-math">\(\Z[i]/(1+i)\)</span> is isomorphic to <span class="process-math">\(\mathbb{F}_2\text{.}\)</span> Prove it by writing out all of the elements of the quotient ring and computing their addition and multiplication tables.</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="exers_divisibilityIntegralDomains-2-1-1">The quotient ring <span class="process-math">\(\Z[i]/(1+i)\)</span> is isomorphic to <span class="process-math">\(\mathbb{F}_2\text{.}\)</span> Prove it by writing out all of the elements of the quotient ring and computing their addition and multiplication tables.</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para logical" id="exers_divisibilityIntegralDomains-3-1-1">
+<div class="para">Consider the function <span class="process-math">\(\varphi\colon \Z[i]\to \mathbb{F}_5\)</span> given by <span class="process-math">\(\varphi(a+bi) = a-2b\text{.}\)</span>
+</div>
+<ol class="lower-alpha" id="exers_divisibilityIntegralDomains-3-1-1-3">
+<li id="exers_divisibilityIntegralDomains-3-1-1-3-1"><div class="para" id="exers_divisibilityIntegralDomains-3-1-1-3-1-1">Show that <span class="process-math">\(\varphi\)</span> is a homomorphism.</div></li>
+<li id="exers_divisibilityIntegralDomains-3-1-1-3-2"><div class="para" id="exers_divisibilityIntegralDomains-3-1-1-3-2-1">Show that <span class="process-math">\(2+i\in\ker\varphi\text{.}\)</span>
+</div></li>
+<li id="exers_divisibilityIntegralDomains-3-1-1-3-3"><div class="para" id="exers_divisibilityIntegralDomains-3-1-1-3-3-1">Show that the kernel consists of all multiples of <span class="process-math">\(2+i\text{.}\)</span> Hint: You will get a linear system of two equations in two unknowns. They will have different slope so a unique solution exists in <span class="process-math">\(\Q\text{.}\)</span> You will need to show that solution is integral.</div></li>
+<li id="exers_divisibilityIntegralDomains-3-1-1-3-4"><div class="para" id="exers_divisibilityIntegralDomains-3-1-1-3-4-1">Use the Noether Isomorphism theorem to identify <span class="process-math">\(\Z[i]/(2+i)\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="exers_divisibilityIntegralDomains-4-1-1">Ponder what happens in general with a quotient <span class="process-math">\(\Z[i]/(a+bi)\)</span> where <span class="process-math">\(a^2+b^2\)</span> is prime.</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
 <div class="para" id="exers_divisibilityIntegralDomains-5-1-1">Let <span class="process-math">\(R\)</span> be a ring. Prove that for any <span class="process-math">\(a\in R\text{,}\)</span> we have an isomorphism <span class="process-math">\(R[x]/(x-a)\cong R\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
 <div class="para" id="exers_divisibilityIntegralDomains-6-1-1">Suppose <span class="process-math">\(m,n\in\N\)</span> with <span class="process-math">\(m\mid n\text{.}\)</span> Define <span class="process-math">\(\varphi\colon \Z/n\to\Z/m\)</span> given by <span class="process-math">\(\varphi(\bar{x}) = \bar{x}\text{.}\)</span> That is, <span class="process-math">\(\varphi\)</span> sends an equivalence class <span class="process-math">\(\bar{x}\in \Z/n\)</span> represented by <span class="process-math">\(x\in\Z\)</span> to the equivalence class represented by <span class="process-math">\(\bar{x}\in\Z/m\text{.}\)</span>
@@ -944,11 +1004,44 @@ S^{{\mathcal{W}}_\Lambda}\otimes T @&gt;j&gt;&gt; T\\
 <li id="exers_divisibilityIntegralDomains-6-1-2-1"><div class="para" id="exers_divisibilityIntegralDomains-6-1-2-1-1">Prove <span class="process-math">\(\varphi\)</span> is well-defined: If <span class="process-math">\(x,y\in \Z\)</span> are such that <span class="process-math">\(\bar{x}=\bar{y}\)</span> in <span class="process-math">\(\Z/n\text{,}\)</span> then <span class="process-math">\(\bar{x} = \bar{y}\)</span> in <span class="process-math">\(\Z/m\text{.}\)</span> This part uses the divsibility hypothesis.</div></li>
 <li id="exers_divisibilityIntegralDomains-6-1-2-2"><div class="para" id="exers_divisibilityIntegralDomains-6-1-2-2-1">Prove <span class="process-math">\(\varphi\)</span> is a homomorphism.</div></li>
 <li id="exers_divisibilityIntegralDomains-6-1-2-3"><div class="para" id="exers_divisibilityIntegralDomains-6-1-2-3-1">Determine if <span class="process-math">\(\varphi\)</span> is a monomorphism, epimorphism, and/or isomorphism.</div></li>
+<li id="exers_divisibilityIntegralDomains-6-1-2-4"><div class="para" id="exers_divisibilityIntegralDomains-6-1-2-4-1">What is the kernel and what does the Noether Isomorphism tell us here?</div></li>
 </ol></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
 <div class="para" id="exers_divisibilityIntegralDomains-7-1-1">Show that if <span class="process-math">\(m,n\in\N\)</span> and <span class="process-math">\(m\nmid n\text{,}\)</span> then there cannot exist a homomorphism <span class="process-math">\(\varphi\colon \Z/n\to\Z/m\text{.}\)</span> Hint: Look at the image of the unity.</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="exers_divisibilityIntegralDomains-8-1-1"></div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="exers_divisibilityIntegralDomains-9-1-1"></div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="exers_divisibilityIntegralDomains-10-1-1"></div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para logical" id="exers_divisibilityIntegralDomains-8-1-1">
+<div class="para">Consider the polynomial ring in two variables <span class="process-math">\(\Q[x,y]\)</span> over <span class="process-math">\(\Q\text{.}\)</span> Elements here look like:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(x,y) = a_{00} + a_{10}x+a_{01}y+a_{20}x^2+a_{11}xy+a_{02}y^2+\cdots + a_{ij}x^my^n
+\end{equation*}
+</div>
+<div class="para">where the subscript on <span class="process-math">\(a_{ij}\)</span> tells us which monomial it is the coefficient of.</div>
+</div> <div class="para logical" id="exers_divisibilityIntegralDomains-8-1-2">
+<div class="para">We can think of this polynomial ring as polynomial functions on</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Q^2 = \{(r,s)\mid r,s\in\Q\}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(p(x,y)\colon \Q^2\to \Q\)</span> is the function <span class="process-math">\((r,s)\mapsto p(r,s)\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="exers_divisibilityIntegralDomains-8-1-3">
+<div class="para">The horizontal axis is defined by the polynomial equation <span class="process-math">\(y=0\text{.}\)</span> In this way we think of the horizontal axis as being the “same” as the polynomial <span class="process-math">\(y\text{.}\)</span> Prove that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Q[x,y]/(y)\cong \Q[x]
+\end{equation*}
+</div>
+<div class="para">by defining a homomorphism <span class="process-math">\(\varphi\colon \Q[x,y]\to \Q[x]\)</span> by <span class="process-math">\(\varphi(p(x,y)) = p(x,0)\text{.}\)</span> Show that <span class="process-math">\(\varphi\text{,}\)</span> which is just the evaluation at <span class="process-math">\(y=0\)</span> function, is an epimorphism. Then show that it’s kernel is precisely <span class="process-math">\((y)\text{.}\)</span> Deduce the desired isomorphism from the Noether Isomorphism Theorem.</div>
+</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para logical" id="exers_divisibilityIntegralDomains-9-1-1">
+<div class="para">Show that for <span class="process-math">\(m\leq n\)</span> and <span class="process-math">\(F\)</span> a field:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F[x_1,\ldots,x_n]/(x_1,\ldots,x_m)\cong F[x_{m+1},\ldots,x_n].
+\end{equation*}
+</div>
+</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="exers_divisibilityIntegralDomains-10-1-1">Prove <span class="process-math">\(\Z[x]/(x^2+1)\cong \Z[i]\text{.}\)</span> Do so by defining an epimorphism <span class="process-math">\(\Z[x]\to\Z[i]\text{.}\)</span> Then show that <span class="process-math">\((x^2+1)\subseteq \ker\)</span> and that any element in <span class="process-math">\(\Z[x]/(x^2+1)\)</span> can be written as a linear coset: <span class="process-math">\(a+bx+(x^2+1)\text{.}\)</span> Use this to deduce <span class="process-math">\(\ker\subseteq (x^2+1)\text{.}\)</span> Finally use the Noether Isomorphism Theorem to prove the desired isomorphism.</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
 <div class="para" id="exers_divisibilityIntegralDomains-11-1-1"></div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
 <div class="para" id="exers_divisibilityIntegralDomains-12-1-1"></div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-13"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
 <div class="para" id="exers_divisibilityIntegralDomains-13-1-1"></div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-14"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
