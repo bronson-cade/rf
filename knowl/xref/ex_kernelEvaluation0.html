@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Polynomials Without Constant Term.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let’s now consider the polynomial ring <span class="process-math">\(R[x]\)</span> over a genral ring <span class="process-math">\(R\)</span> in the indeterminant <span class="process-math">\(x\text{.}\)</span> Let <span class="process-math">\(I\subseteq R[x]\)</span> be the collection of all polynomials without constant term:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+I = \{a_1x+a_2x^2+a_3x^3+\cdots + a_nx^n\mid a_1,a_2,a_3,\ldots,a_n\in R\}.
+\end{equation*}
+</div>
+<div class="para">Let us check that <span class="process-math">\(I\)</span> is an ideal. Before that, let us notice that if <span class="process-math">\(p(x)\in I\)</span> then the lack of a constant term allows us to factor out an <span class="process-math">\(x\text{.}\)</span> So there is some <span class="process-math">\(q(x)\)</span> such that <span class="process-math">\(p(x) = xq(x)\text{.}\)</span> Explicitly:</div>
+<div class="displaymath process-math">
+\begin{align*}
+p(x) \amp=a_1x+a_2x^2+a_3x^3+\cdots + a_nx^n \\
+\amp=x(a_1+a_2x+a_3x^2+\cdots + a_nx^{n-1}) \\
+\amp=xq(x) 
+\end{align*}
+</div>
+<div class="para">where we set <span class="process-math">\(q(x) = a_1+a_2x+a_3x^2+\cdots + a_nx^{n-1}\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">The zero polynomial has zero as a constant term so <span class="process-math">\(0\in I\text{.}\)</span> Suppose we add two polynomials without constant term (possibly extend by zero so degrees match):</div>
+<div class="displaymath process-math">
+\begin{align*}
+p(x) \amp= a_1x+\cdots + a_nx^n\\
+q(x) \amp= b_1x+\cdots + b_nx^n\\
+p(x)+q(x) \amp= (a_1+b_1)x+\cdots + (a_n+b_n)x^n 
+\end{align*}
+</div>
+<div class="para">and their sum also has no constant term. Alternatively, there exists polynomials <span class="process-math">\(p'(x),q'(x)\in R[x]\)</span> such that <span class="process-math">\(p(x) = xp'(x)\)</span> and <span class="process-math">\(q(x) = xq'(x)\text{.}\)</span> Hence,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(x) + q(x) = xp'(x) + xq'(x) = x(p'(x)+q'(x))
+\end{equation*}
+</div>
+<div class="para">also has no constant term.</div>
+</div> <div class="para logical">
+<div class="para">Suppose we have a polynomial without a constant term with a general polynomial, so <span class="process-math">\(p(x)\in I\)</span> and <span class="process-math">\(r(x)\in R[x]\text{.}\)</span> Then there is <span class="process-math">\(p'(x)\in R[x]\)</span> with <span class="process-math">\(p(x) = xp'(x)\text{.}\)</span> Hence,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r(x)p(x) = r(x)xp'(x) = x(r(x)p'(x))
+\end{equation*}
+</div>
+<div class="para">and so the product lacks a constant term. We conclude that the polynomials without constant term collectively form an ideal <span class="process-math">\(I\)</span> in <span class="process-math">\(R[x]\text{.}\)</span>
+</div>
+</div> <div class="para">We now show that, at least in the commutative case, this ideal is the kernel of a familiar homomorphism. It is true in the non-commutative case as well but some care needs to be taken as the evaluation homomorphism from <a href="sec_homomorphisms.html#exer_evaluationHomomorphismGeneralR" class="xref" data-knowl="./knowl/xref/exer_evaluationHomomorphismGeneralR.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.1.7.5">Exercise 3.1.7.5</a> is ill-behaved when <span class="process-math">\(R\)</span> is non-commutative.</div> <div class="para logical">
+<div class="para">Suppose that <span class="process-math">\(R\)</span> is commutative and let us consider the evaluation homomorphism</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop_kernelIsIdeal.html">
+\begin{equation*}
+\mathrm{ev}_{0_R}\colon R[x]\to R\text{ given by }\mathrm{ev}_0(p(x)) = p(0).
+\end{equation*}
+</div>
+<div class="para">From <a href="sec_ideals.html#prop_kernelIsIdeal" class="xref" data-knowl="./knowl/xref/prop_kernelIsIdeal.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.1">Proposition 3.2.1</a>, the kernel of this homomorphism, <span class="process-math">\(\ker\mathrm{ev}_0\)</span> is an ideal. We claim that it is precisely the ideal of polynomials without constant term.</div>
+</div> <div class="para logical">
+<div class="para">Suppose <span class="process-math">\(\mathrm{ev}_{0_R}(p(x)) = 0\)</span> or equivalently <span class="process-math">\(p(0_R) = 0_R\text{.}\)</span> Writing <span class="process-math">\(p(x) = a_0+a_1x+\cdots +a_nx^n\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+0_R \amp=p(0_R) \\
+\amp= a_0 + a_1\cdot 0_R+\cdots + a_n\cdot 0_R^n \\
+\amp= a_0 
+\end{align*}
+</div>
+<div class="para">and so <span class="process-math">\(a_0=0\text{.}\)</span> That is to say, the condition that <span class="process-math">\(p(x)\in \ker\mathrm{ev}_{0_R}\)</span> is precisely the condition that <span class="process-math">\(p(x)\)</span> has no constant term. Hence, <span class="process-math">\(\ker\mathrm{ev}_{0_R} = I\text{.}\)</span>
+</div>
+</div> <div class="para">This example shows that the ideal we defined is in fact a kernel of a homomorphism. This is a general fact that will lead us to the construction of <dfn class="terminology">quotient rings</dfn>.</div></article><span class="incontext"><a class="internal" href="sec_ideals.html#ex_kernelEvaluation0">in-context</a></span>
+</body>
+</html>

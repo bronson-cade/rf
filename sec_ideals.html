@@ -88,6 +88,37 @@ window.MathJax = {
 <link href="_static/pretext/css/style_oscarlevin.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.4.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.00db6230172ad960.bundle.js"></script><script src="_static/prefix-347.8328b60515045466.bundle.js"></script><script src="_static/prefix-runestone.aa624e4071d017c3.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.51d479d87f8466bb.css">
 <style>
 #ssec_wellordering-8-1-3 { counter-set: ssec_wellordering-8-1-3 0; }
 #ssec_wellordering-8-1-3 > li::marker { content: ""counter(ssec_wellordering-8-1-3,decimal)"."; }
@@ -254,9 +285,9 @@ window.MathJax = {
 #sec_homomorphismsTF-1-2 { counter-set: sec_homomorphismsTF-1-2 0; }
 #sec_homomorphismsTF-1-2 > li::marker { content: "("counter(sec_homomorphismsTF-1-2,lower-alpha)")"; }
 #sec_homomorphismsTF-1-2 > li { counter-increment: sec_homomorphismsTF-1-2; }
-#exers_homomorphisms-15-1-2 { counter-set: exers_homomorphisms-15-1-2 0; }
-#exers_homomorphisms-15-1-2 > li::marker { content: "("counter(exers_homomorphisms-15-1-2,lower-alpha)")"; }
-#exers_homomorphisms-15-1-2 > li { counter-increment: exers_homomorphisms-15-1-2; }
+#exers_homomorphisms-16-1-2 { counter-set: exers_homomorphisms-16-1-2 0; }
+#exers_homomorphisms-16-1-2 > li::marker { content: "("counter(exers_homomorphisms-16-1-2,lower-alpha)")"; }
+#exers_homomorphisms-16-1-2 > li { counter-increment: exers_homomorphisms-16-1-2; }
 #prop_kernelIsIdeal-1-1-5 { counter-set: prop_kernelIsIdeal-1-1-5 0; }
 #prop_kernelIsIdeal-1-1-5 > li::marker { content: ""counter(prop_kernelIsIdeal-1-1-5,decimal)"."; }
 #prop_kernelIsIdeal-1-1-5 > li { counter-increment: prop_kernelIsIdeal-1-1-5; }
@@ -272,12 +303,6 @@ window.MathJax = {
 #exers_ideals-1-1-2 { counter-set: exers_ideals-1-1-2 0; }
 #exers_ideals-1-1-2 > li::marker { content: "("counter(exers_ideals-1-1-2,lower-alpha)")"; }
 #exers_ideals-1-1-2 > li { counter-increment: exers_ideals-1-1-2; }
-#ssec_congruenceModuloI-4-1-2 { counter-set: ssec_congruenceModuloI-4-1-2 0; }
-#ssec_congruenceModuloI-4-1-2 > li::marker { content: ""counter(ssec_congruenceModuloI-4-1-2,decimal)"."; }
-#ssec_congruenceModuloI-4-1-2 > li { counter-increment: ssec_congruenceModuloI-4-1-2; }
-#ssec_congruenceModuloI-4-2-1 { counter-set: ssec_congruenceModuloI-4-2-1 0; }
-#ssec_congruenceModuloI-4-2-1 > li::marker { content: ""counter(ssec_congruenceModuloI-4-2-1,decimal)"."; }
-#ssec_congruenceModuloI-4-2-1 > li { counter-increment: ssec_congruenceModuloI-4-2-1; }
 #ssec_quotientRings-11-1-2 { counter-set: ssec_quotientRings-11-1-2 0; }
 #ssec_quotientRings-11-1-2 > li::marker { content: ""counter(ssec_quotientRings-11-1-2,decimal)"."; }
 #ssec_quotientRings-11-1-2 > li { counter-increment: ssec_quotientRings-11-1-2; }
@@ -287,18 +312,21 @@ window.MathJax = {
 #ssec_quotientRings-14-3-3 { counter-set: ssec_quotientRings-14-3-3 0; }
 #ssec_quotientRings-14-3-3 > li::marker { content: ""counter(ssec_quotientRings-14-3-3,decimal)"."; }
 #ssec_quotientRings-14-3-3 > li { counter-increment: ssec_quotientRings-14-3-3; }
-#subsec--7-1-2 { counter-set: subsec--7-1-2 0; }
-#subsec--7-1-2 > li::marker { content: ""counter(subsec--7-1-2,decimal)"."; }
-#subsec--7-1-2 > li { counter-increment: subsec--7-1-2; }
+#subsec--8-1-2 { counter-set: subsec--8-1-2 0; }
+#subsec--8-1-2 > li::marker { content: ""counter(subsec--8-1-2,decimal)"."; }
+#subsec--8-1-2 > li { counter-increment: subsec--8-1-2; }
 #exers_divisibilityIntegralDomains-1-1-2 { counter-set: exers_divisibilityIntegralDomains-1-1-2 0; }
 #exers_divisibilityIntegralDomains-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-1-1-2,lower-alpha)")"; }
 #exers_divisibilityIntegralDomains-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-1-1-2; }
-#exers_divisibilityIntegralDomains-3-1-1-3 { counter-set: exers_divisibilityIntegralDomains-3-1-1-3 0; }
-#exers_divisibilityIntegralDomains-3-1-1-3 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-3-1-1-3,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-3-1-1-3 > li { counter-increment: exers_divisibilityIntegralDomains-3-1-1-3; }
-#exers_divisibilityIntegralDomains-6-1-2 { counter-set: exers_divisibilityIntegralDomains-6-1-2 0; }
-#exers_divisibilityIntegralDomains-6-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-6-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-6-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-6-1-2; }
+#exers_divisibilityIntegralDomains-2-1-2 { counter-set: exers_divisibilityIntegralDomains-2-1-2 0; }
+#exers_divisibilityIntegralDomains-2-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-2-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-2-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-2-1-2; }
+#exers_divisibilityIntegralDomains-5-1-1-2 { counter-set: exers_divisibilityIntegralDomains-5-1-1-2 0; }
+#exers_divisibilityIntegralDomains-5-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-5-1-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-5-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-5-1-1-2; }
+#exers_divisibilityIntegralDomains-8-1-2 { counter-set: exers_divisibilityIntegralDomains-8-1-2 0; }
+#exers_divisibilityIntegralDomains-8-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-8-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-8-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-8-1-2; }
 #ssec_principalIdealDomains-6-1-1-3 { counter-set: ssec_principalIdealDomains-6-1-1-3 0; }
 #ssec_principalIdealDomains-6-1-1-3 > li::marker { content: ""counter(ssec_principalIdealDomains-6-1-1-3,decimal)"."; }
 #ssec_principalIdealDomains-6-1-1-3 > li { counter-increment: ssec_principalIdealDomains-6-1-1-3; }
@@ -609,17 +637,17 @@ m\mathbb{Z} = \{mk\mid k\in\mathbb{Z}\}.
 </div>
 </div> <div class="para" id="thm_reductionModuloMIsHomomorphism-2-3">We also have <span class="process-math">\(\varphi(0) = \bar{0}\)</span> and so <span class="process-math">\(\varphi\)</span> satisfies all three propertis of being a ring homomorphism.</div> <div class="para" id="thm_reductionModuloMIsHomomorphism-2-4">Lastly, suppose <span class="process-math">\(\varphi(a) = \bar{0}\text{.}\)</span> That is, <span class="process-math">\(a\in\ker\vaprhi\text{.}\)</span> Then <span class="process-math">\(\bar{a} = \bar{0}\text{.}\)</span> But <span class="process-math">\(\bar{0} = m\Z\)</span> and so <span class="process-math">\(\bar{a} = m\Z\text{.}\)</span>
 </div></article></details><div class="para" id="ssec_examplesOfIdeals-4">By <a href="sec_ideals.html#prop_kernelIsIdeal" class="xref" data-knowl="./knowl/xref/prop_kernelIsIdeal.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.1">Proposition 3.2.1</a> we know that <span class="process-math">\(m\Z\)</span> is an ideal. We could have proved this directly. We do this now as it is an important skill to develop.</div>
-<article class="example example-like" id="ssec_examplesOfIdeals-5"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span>
+<article class="example example-like" id="ex_idealsInZ"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Multiples of <span class="process-math">\(m\)</span> in <span class="process-math">\(\Z\)</span>.</span>
 </h4>
-<div class="para" id="ssec_examplesOfIdeals-5-1-1">Fix any <span class="process-math">\(m\in\Z\text{,}\)</span> then the set of multiples of <span class="process-math">\(m\)</span> is an ideal. That is, <span class="process-math">\(m\Z\)</span> is an ideal. We prove this directly from the definition.</div> <div class="para logical" id="ssec_examplesOfIdeals-5-1-2">
+<div class="para" id="ex_idealsInZ-2-1">Fix any <span class="process-math">\(m\in\Z\text{,}\)</span> then the set of multiples of <span class="process-math">\(m\)</span> is an ideal. That is, <span class="process-math">\(m\Z\)</span> is an ideal. We prove this directly from the definition.</div> <div class="para logical" id="ex_idealsInZ-2-2">
 <div class="para">We have <span class="process-math">\(0 = m\cdot 0\in\Z\text{.}\)</span> For closure under addition, take <span class="process-math">\(mk, ml\in m\Z\)</span> for some <span class="process-math">\(k,l\in\Z\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 mk + ml = m(k+l)\in m\Z
 \end{equation*}
 </div>
-</div> <div class="para logical" id="ssec_examplesOfIdeals-5-1-3">
+</div> <div class="para logical" id="ex_idealsInZ-2-3">
 <div class="para">Since <span class="process-math">\(\Z\)</span> is commutative, we just have to show <span class="process-math">\(m\Z\)</span> absorbs left-multiplication. For that, take <span class="process-math">\(mk\in m\Z\)</span> and arbitrary <span class="process-math">\(a\in\Z\text{.}\)</span> Then</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm_reductionModuloMIsHomomorphism.html">
 \begin{equation*}
@@ -628,20 +656,20 @@ a(mk) = m(ak)\in \Z.
 </div>
 <div class="para">Thus we have reproved <a href="sec_ideals.html#thm_reductionModuloMIsHomomorphism" class="xref" data-knowl="./knowl/xref/thm_reductionModuloMIsHomomorphism.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.5">Theorem 3.2.5</a>: <span class="process-math">\(m\Z\)</span> is an ideal of <span class="process-math">\(\Z\text{.}\)</span>
 </div>
-</div> <div class="para" id="ssec_examplesOfIdeals-5-1-4">If <span class="process-math">\(m=0\text{,}\)</span> then <span class="process-math">\(0\Z = \{0\}\)</span> is the zero ideal. If <span class="process-math">\(m=\pm 1\text{,}\)</span> then <span class="process-math">\(m\Z = \Z\)</span> is the other extreme. For <span class="process-math">\(|m|&gt;1\text{,}\)</span> the ideals <span class="process-math">\(m\Z\)</span> are proper.</div></article><article class="example example-like" id="ssec_examplesOfIdeals-6"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="period">.</span>
+</div> <div class="para" id="ex_idealsInZ-2-4">If <span class="process-math">\(m=0\text{,}\)</span> then <span class="process-math">\(0\Z = \{0\}\)</span> is the zero ideal. If <span class="process-math">\(m=\pm 1\text{,}\)</span> then <span class="process-math">\(m\Z = \Z\)</span> is the other extreme. For <span class="process-math">\(|m|&gt;1\text{,}\)</span> the ideals <span class="process-math">\(m\Z\)</span> are proper.</div></article><article class="example example-like" id="ex_matrixRingsAreSimple"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix Rings are Simple.</span>
 </h4>
-<div class="para" id="ssec_examplesOfIdeals-6-1-1">Let’s consider our non-commutative example: <span class="process-math">\(M_2(\R)\text{.}\)</span> What are the ideals here? It turns out, that this ring is <em class="emphasis">simple</em> in that it only has trivial ideals.</div> <div class="para logical" id="ssec_examplesOfIdeals-6-1-2">
+<div class="para" id="ex_matrixRingsAreSimple-2-1">Let’s consider our non-commutative example: <span class="process-math">\(M_2(\R)\text{.}\)</span> What are the ideals here? It turns out, that this ring is <em class="emphasis">simple</em> in that it only has trivial ideals.</div> <div class="para logical" id="ex_matrixRingsAreSimple-2-2">
 <div class="para">Recall, the standard basis for <span class="process-math">\(M_2(\R)\)</span> consists of the sparse matrices <span class="process-math">\(e_{ij}\)</span> which have a <span class="process-math">\(1\)</span> in row <span class="process-math">\(i\)</span> and column <span class="process-math">\(j\)</span> and zero elsewhere. For any matrix <span class="process-math">\(A = (a_{ij})\)</span> we have:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 e_{11}\cdot \begin{bmatrix} a_{11} \amp a_{12} \\ a_{21} \amp a_{22}\end{bmatrix}e_{11} = \begin{bmatrix}  a_{11}\amp 0\\ 0 \amp 0\end{bmatrix}
 \end{equation*}
 </div>
-</div> <div class="para" id="ssec_examplesOfIdeals-6-1-3">Similarly <span class="process-math">\(e_{12}\cdot A e_{12}\)</span> is the matrix with <span class="process-math">\(a_{12}\)</span> in the <span class="process-math">\((1,2)\)</span> entry and zero elsewhere. Likewise for <span class="process-math">\(e_{21}\cdot A\cdot e_{21}\)</span> and <span class="process-math">\(e_{22}\cdot A\cdot e_{22}\text{.}\)</span>
-</div> <div class="para" id="ssec_examplesOfIdeals-6-1-4">Now take any ideal <span class="process-math">\(I\subseteq M_2(\R)\text{.}\)</span> We know that <span class="process-math">\(\{0\}, M_2(\R)\)</span> are two ideals. What we want to show is that if <span class="process-math">\(I\neq \{0\}\text{,}\)</span> then <span class="process-math">\(I=M_2(\R)\text{.}\)</span> To that end, suppose <span class="process-math">\(I\neq\{0\}\)</span> so there is a non-zero <span class="process-math">\(A\in I\text{.}\)</span>
-</div> <div class="para" id="ssec_examplesOfIdeals-6-1-5">At least one of the entries of <span class="process-math">\(A\)</span> is non-zero, say <span class="process-math">\(a_{i,j}\neq 0\text{.}\)</span> Then <span class="process-math">\(e_{ij}\cdot A\cdot e_{ij}\in I\)</span> is the matrix with <span class="process-math">\(a_{ij}\)</span> in the <span class="process-math">\((i,j)\)</span> spot and zero elsehwere. Multiply by the scalar matrix <span class="process-math">\(\frac{1}{a_{ij}}\)</span> so that we know <span class="process-math">\(I\)</span> has a matrix with <span class="process-math">\(1\)</span> in exactly one entry and zero elsewhere. That is, we know that one of the standard basis elements is in <span class="process-math">\(I\text{.}\)</span>
-</div> <div class="para logical" id="ssec_examplesOfIdeals-6-1-6">
+</div> <div class="para" id="ex_matrixRingsAreSimple-2-3">Similarly <span class="process-math">\(e_{12}\cdot A e_{12}\)</span> is the matrix with <span class="process-math">\(a_{12}\)</span> in the <span class="process-math">\((1,2)\)</span> entry and zero elsewhere. Likewise for <span class="process-math">\(e_{21}\cdot A\cdot e_{21}\)</span> and <span class="process-math">\(e_{22}\cdot A\cdot e_{22}\text{.}\)</span>
+</div> <div class="para" id="ex_matrixRingsAreSimple-2-4">Now take any ideal <span class="process-math">\(I\subseteq M_2(\R)\text{.}\)</span> We know that <span class="process-math">\(\{0\}, M_2(\R)\)</span> are two ideals. What we want to show is that if <span class="process-math">\(I\neq \{0\}\text{,}\)</span> then <span class="process-math">\(I=M_2(\R)\text{.}\)</span> To that end, suppose <span class="process-math">\(I\neq\{0\}\)</span> so there is a non-zero <span class="process-math">\(A\in I\text{.}\)</span>
+</div> <div class="para" id="ex_matrixRingsAreSimple-2-5">At least one of the entries of <span class="process-math">\(A\)</span> is non-zero, say <span class="process-math">\(a_{i,j}\neq 0\text{.}\)</span> Then <span class="process-math">\(e_{ij}\cdot A\cdot e_{ij}\in I\)</span> is the matrix with <span class="process-math">\(a_{ij}\)</span> in the <span class="process-math">\((i,j)\)</span> spot and zero elsehwere. Multiply by the scalar matrix <span class="process-math">\(\frac{1}{a_{ij}}\)</span> so that we know <span class="process-math">\(I\)</span> has a matrix with <span class="process-math">\(1\)</span> in exactly one entry and zero elsewhere. That is, we know that one of the standard basis elements is in <span class="process-math">\(I\text{.}\)</span>
+</div> <div class="para logical" id="ex_matrixRingsAreSimple-2-6">
 <div class="para">We now show that if one of the standard basis elements is in <span class="process-math">\(I\text{,}\)</span> then <span class="process-math">\(I\)</span> has all of the standard basis elements. The proof for each case is similar so we assume that <span class="process-math">\(I\)</span> has <span class="process-math">\(e_{11} = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 0 \end{bmatrix}\text{.}\)</span> Since <span class="process-math">\(I\)</span> absorbs multiplication, every product we compute will be an element of <span class="process-math">\(I\text{.}\)</span> We have:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -655,7 +683,7 @@ e_{11}\cdot e_{12} = e_{12}\in I.
 \end{equation*}
 </div>
 <div class="para">and lastly <span class="process-math">\(e_{22}\cdot e_{12} = e_{12}\in I\text{.}\)</span> Thus <span class="process-math">\(I\)</span> has all of the elements in the standard basis.</div>
-</div> <div class="para logical" id="ssec_examplesOfIdeals-6-1-7">
+</div> <div class="para logical" id="ex_matrixRingsAreSimple-2-7">
 <div class="para">To see now that <span class="process-math">\(I\)</span> has any matrix, we take a random <span class="process-math">\(B = (b_{ij})\text{.}\)</span> We can write</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -664,19 +692,73 @@ B = b_{11}I_2\cdot e_{11} + b_{12}I\cdot e_{12} + b_{21}I\cdot e_{21} + b_{22}I\
 </div>
 <div class="para">Each one of the terms in this sum is in <span class="process-math">\(I\)</span> since <span class="process-math">\(I\)</span> absorbs multiplication. Since <span class="process-math">\(I\)</span> is closed under addition, <span class="process-math">\(B\in I\text{.}\)</span> But <span class="process-math">\(B\)</span> was arbitrary so that <span class="process-math">\(I = M_2(\R)\text{.}\)</span>
 </div>
-</div></article><article class="example example-like" id="ssec_examplesOfIdeals-7"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="period">.</span>
+</div> <div class="para" id="ex_matrixRingsAreSimple-2-8">In fact, more is true! For any field <span class="process-math">\(\mathbb{F}\)</span> and any <span class="process-math">\(n\in\mathbb{N}\text{,}\)</span> the ring <span class="process-math">\(M_n(\mathbb{F})\)</span> of <span class="process-math">\(n\times n\)</span> matrices over <span class="process-math">\(\mathbb{F}\)</span> is a simple ring. That is, it has no non-trivial ideals. The proof is similar to the case <span class="process-math">\(n=2\)</span> and <span class="process-math">\(\mathbb{F} = \R\text{:}\)</span> the field was irrelevant in our work and we use the matrices <span class="process-math">\(e_{ij}\)</span> and their multiplication rules to show that we get all of <span class="process-math">\(M_n(\mathbb{R})\text{.}\)</span>
+</div></article><aside class="aside aside-like" id="ssec_examplesOfIdeals-7"><h4 class="heading"><span class="title">Central Elements.</span></h4>
+<div class="para" id="ssec_examplesOfIdeals-7-2">In <a href="sec_ideals.html#ex_kernelEvaluation0" class="xref" data-knowl="./knowl/xref/ex_kernelEvaluation0.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.8: Polynomials Without Constant Term">Example 3.2.8</a>, to show closure under multiplication by <span class="process-math">\(R\text{,}\)</span> we used that for any polynomial <span class="process-math">\(r(x)\in R[x]\)</span> we have <span class="process-math">\(r(x)\cdot x = x\cdot r(x)\text{.}\)</span> If <span class="process-math">\(R\)</span> is not commutative, then <span class="process-math">\(R[x]\)</span> is also non-commutative. However, <span class="process-math">\(x\)</span> is a <em class="emphasis">central element</em> of <span class="process-math">\(R[x]\text{.}\)</span> Namely, <span class="process-math">\(x\)</span> commutes with all polynomials.</div></aside><article class="example example-like" id="ex_kernelEvaluation0"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Polynomials Without Constant Term.</span>
 </h4>
-<div class="para" id="ssec_examplesOfIdeals-7-1-1">Let’s now consider the polynomial ring over <span class="process-math">\(\C\text{:}\)</span> <span class="process-math">\(\C[x]\text{.}\)</span> Define the homomorphism <span class="process-math">\(\mathrm{ev}_0\colon\C[x]\to \C\)</span> given by <span class="process-math">\(\mathrm{ev}_0(p(x)) = p(0)\text{.}\)</span> We’ve already see that <span class="process-math">\(\mathrm{ev}_0\)</span> is a homomorphism in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "ex_evaluationHomomorphism" missing or not unique]</code>. From <a href="sec_ideals.html#prop_kernelIsIdeal" class="xref" data-knowl="./knowl/xref/prop_kernelIsIdeal.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.1">Proposition 3.2.1</a>, the kernel of this mapping is an ideal.</div> <div class="para" id="ssec_examplesOfIdeals-7-1-2">Suppose <span class="process-math">\(\mathrm{ev}_0(p(x)) = 0\)</span> or equivalently <span class="process-math">\(p(0) = 0\text{.}\)</span> We will revisit evaluation later but for now recall that this means that <span class="process-math">\(x\)</span> is a factor of <span class="process-math">\(p(x)\text{.}\)</span> That is, there exists <span class="process-math">\(p'(x)\)</span> such that <span class="process-math">\(p(x) = xp'(x)\text{.}\)</span>
-</div> <div class="para logical" id="ssec_examplesOfIdeals-7-1-3">
-<div class="para">On the other hand, suppose <span class="process-math">\(f(x)\in\C[x]\text{,}\)</span> then <span class="process-math">\(\mathrm{ev}_0(xf(x)) = 0f(0) = 0\text{.}\)</span> We can therefore describe the kernel of the multiplication map as the multiples of <span class="process-math">\(x\text{:}\)</span>
-</div>
+<div class="para logical" id="ex_kernelEvaluation0-2-1">
+<div class="para">Let’s now consider the polynomial ring <span class="process-math">\(R[x]\)</span> over a genral ring <span class="process-math">\(R\)</span> in the indeterminant <span class="process-math">\(x\text{.}\)</span> Let <span class="process-math">\(I\subseteq R[x]\)</span> be the collection of all polynomials without constant term:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\ker\mathrm{ev}_0 = x\C[x] = \{xp(x)\mid p(x)\in \C[x]\}.
+I = \{a_1x+a_2x^2+a_3x^3+\cdots + a_nx^n\mid a_1,a_2,a_3,\ldots,a_n\in R\}.
 \end{equation*}
 </div>
-</div></article></section><section class="subsection" id="ssec_principalIdeals"><h3 class="heading hide-type">
+<div class="para">Let us check that <span class="process-math">\(I\)</span> is an ideal. Before that, let us notice that if <span class="process-math">\(p(x)\in I\)</span> then the lack of a constant term allows us to factor out an <span class="process-math">\(x\text{.}\)</span> So there is some <span class="process-math">\(q(x)\)</span> such that <span class="process-math">\(p(x) = xq(x)\text{.}\)</span> Explicitly:</div>
+<div class="displaymath process-math" id="ex_kernelEvaluation0-2-1-11">
+\begin{align*}
+p(x) \amp=a_1x+a_2x^2+a_3x^3+\cdots + a_nx^n \\
+\amp=x(a_1+a_2x+a_3x^2+\cdots + a_nx^{n-1}) \\
+\amp=xq(x) 
+\end{align*}
+</div>
+<div class="para">where we set <span class="process-math">\(q(x) = a_1+a_2x+a_3x^2+\cdots + a_nx^{n-1}\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="ex_kernelEvaluation0-2-2">
+<div class="para">The zero polynomial has zero as a constant term so <span class="process-math">\(0\in I\text{.}\)</span> Suppose we add two polynomials without constant term (possibly extend by zero so degrees match):</div>
+<div class="displaymath process-math" id="ex_kernelEvaluation0-2-2-2">
+\begin{align*}
+p(x) \amp= a_1x+\cdots + a_nx^n\\
+q(x) \amp= b_1x+\cdots + b_nx^n\\
+p(x)+q(x) \amp= (a_1+b_1)x+\cdots + (a_n+b_n)x^n 
+\end{align*}
+</div>
+<div class="para">and their sum also has no constant term. Alternatively, there exists polynomials <span class="process-math">\(p'(x),q'(x)\in R[x]\)</span> such that <span class="process-math">\(p(x) = xp'(x)\)</span> and <span class="process-math">\(q(x) = xq'(x)\text{.}\)</span> Hence,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(x) + q(x) = xp'(x) + xq'(x) = x(p'(x)+q'(x))
+\end{equation*}
+</div>
+<div class="para">also has no constant term.</div>
+</div> <div class="para logical" id="ex_kernelEvaluation0-2-3">
+<div class="para">Suppose we have a polynomial without a constant term with a general polynomial, so <span class="process-math">\(p(x)\in I\)</span> and <span class="process-math">\(r(x)\in R[x]\text{.}\)</span> Then there is <span class="process-math">\(p'(x)\in R[x]\)</span> with <span class="process-math">\(p(x) = xp'(x)\text{.}\)</span> Hence,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r(x)p(x) = r(x)xp'(x) = x(r(x)p'(x))
+\end{equation*}
+</div>
+<div class="para">and so the product lacks a constant term. We conclude that the polynomials without constant term collectively form an ideal <span class="process-math">\(I\)</span> in <span class="process-math">\(R[x]\text{.}\)</span>
+</div>
+</div> <div class="para" id="ex_kernelEvaluation0-2-4">We now show that, at least in the commutative case, this ideal is the kernel of a familiar homomorphism. It is true in the non-commutative case as well but some care needs to be taken as the evaluation homomorphism from <a href="sec_homomorphisms.html#exer_evaluationHomomorphismGeneralR" class="xref" data-knowl="./knowl/xref/exer_evaluationHomomorphismGeneralR.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.1.7.5">Exercise 3.1.7.5</a> is ill-behaved when <span class="process-math">\(R\)</span> is non-commutative.</div> <div class="para logical" id="ex_kernelEvaluation0-2-5">
+<div class="para">Suppose that <span class="process-math">\(R\)</span> is commutative and let us consider the evaluation homomorphism</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop_kernelIsIdeal.html">
+\begin{equation*}
+\mathrm{ev}_{0_R}\colon R[x]\to R\text{ given by }\mathrm{ev}_0(p(x)) = p(0).
+\end{equation*}
+</div>
+<div class="para">From <a href="sec_ideals.html#prop_kernelIsIdeal" class="xref" data-knowl="./knowl/xref/prop_kernelIsIdeal.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.1">Proposition 3.2.1</a>, the kernel of this homomorphism, <span class="process-math">\(\ker\mathrm{ev}_0\)</span> is an ideal. We claim that it is precisely the ideal of polynomials without constant term.</div>
+</div> <div class="para logical" id="ex_kernelEvaluation0-2-6">
+<div class="para">Suppose <span class="process-math">\(\mathrm{ev}_{0_R}(p(x)) = 0\)</span> or equivalently <span class="process-math">\(p(0_R) = 0_R\text{.}\)</span> Writing <span class="process-math">\(p(x) = a_0+a_1x+\cdots +a_nx^n\)</span> we have</div>
+<div class="displaymath process-math" id="ex_kernelEvaluation0-2-6-4">
+\begin{align*}
+0_R \amp=p(0_R) \\
+\amp= a_0 + a_1\cdot 0_R+\cdots + a_n\cdot 0_R^n \\
+\amp= a_0 
+\end{align*}
+</div>
+<div class="para">and so <span class="process-math">\(a_0=0\text{.}\)</span> That is to say, the condition that <span class="process-math">\(p(x)\in \ker\mathrm{ev}_{0_R}\)</span> is precisely the condition that <span class="process-math">\(p(x)\)</span> has no constant term. Hence, <span class="process-math">\(\ker\mathrm{ev}_{0_R} = I\text{.}\)</span>
+</div>
+</div> <div class="para" id="ex_kernelEvaluation0-2-7">This example shows that the ideal we defined is in fact a kernel of a homomorphism. This is a general fact that will lead us to the construction of <dfn class="terminology">quotient rings</dfn>.</div></article></section><section class="subsection" id="ssec_principalIdeals"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="space"> </span><span class="title">Principal Ideals</span>
 </h3>
 <div class="para" id="ssec_principalIdeals-2">The most important type of ideals (for our work, at least), are those which are the sets of all multiples of a single element in the ring. We saw this with <span class="process-math">\(m\Z\subseteq \Z\text{.}\)</span> Such ideals are called <em class="emphasis">principal ideals</em>.</div>
@@ -685,7 +767,7 @@ B = b_{11}I_2\cdot e_{11} + b_{12}I\cdot e_{12} + b_{21}I\cdot e_{21} + b_{22}I\
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.9</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="thm_principalIdealsAreIdeals-3-1">
-<div class="para">Let <span class="process-math">\(R\)</span> be commutative with identity and let <span class="process-math">\(a\in R\text{.}\)</span> The set</div>
+<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring and let <span class="process-math">\(a\in R\text{.}\)</span> The set</div>
 <div class="displaymath process-math">
 \begin{equation*}
 (a) = \{ra\mid r\in R\}
@@ -699,7 +781,7 @@ B = b_{11}I_2\cdot e_{11} + b_{12}I\cdot e_{12} + b_{21}I\cdot e_{21} + b_{22}I\
 <article class="investigation project-like" id="ssec_principalIdeals-6"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
 </h4>
-<div class="para" id="ssec_principalIdeals-6-1-1">Let <span class="process-math">\(R\)</span> be commutative with identity, and let <span class="process-math">\(x,y,z\in R\text{.}\)</span> Give necessary and sufficient conditions for <span class="process-math">\(z\in (x)\)</span> and, separately, <span class="process-math">\((x) \subseteq (y)\text{.}\)</span>
+<div class="para" id="ssec_principalIdeals-6-1-1">Let <span class="process-math">\(R\)</span> be a commutative ring, and let <span class="process-math">\(x,y,z\in R\text{.}\)</span> Give necessary and sufficient conditions for <span class="process-math">\(z\in (x)\)</span> and, separately, <span class="process-math">\((x) \subseteq (y)\text{.}\)</span>
 </div> <div class="para" id="ssec_principalIdeals-6-1-2">That is, fill in the blanks: “<span class="process-math">\(z\in (x) \Leftrightarrow\)</span> _________” and “<span class="process-math">\((x)\subseteq (y) \Leftrightarrow\)</span> _________.”</div> <div class="para" id="ssec_principalIdeals-6-1-3">Justify your answers.</div>
 <div class="solutions"><details id="ssec_principalIdeals-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
 <div class="para" id="ssec_principalIdeals-6-2-1">We have “<span class="process-math">\(z\in (x) \Leftrightarrow x|z\)</span>” and “<span class="process-math">\((x)\subseteq (y) \Leftrightarrow y|x\)</span>”<details class="ptx-footnote" aria-live="polite" id="ssec_principalIdeals-6-2-1-3"><summary class="ptx-footnote__number" title="Footnote 3.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="ssec_principalIdeals-6-2-1-3">An acceptable alternative would be: <span class="process-math">\(x\in (y)\text{.}\)</span> Make sure students are aware of this!</div></details>.</div> <div class="para" id="ssec_principalIdeals-6-2-2">Note that <span class="process-math">\(z\in (x) \Leftrightarrow \exists r\in R, z = xr \Leftrightarrow x|z\text{.}\)</span>
@@ -801,10 +883,14 @@ r(r_1a_1+\cdots + r_na_n) = (rr_1)a_1 + \cdots + (rr_n)a_n
 </ol></article><article class="exercise exercise-like" id="exers_ideals-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="para" id="exers_ideals-2-1-1">In the Gaussian Integers, prove that the ideal generated by <span class="process-math">\(i\)</span> is all of <span class="process-math">\(\Z[i]\)</span> but the ideal generated by <span class="process-math">\(1+i\)</span> is a proper ideal.</div></article><article class="exercise exercise-like" id="exers_ideals-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
 <div class="para" id="exers_ideals-3-1-1">Argue that in <span class="process-math">\(\Z/6\text{,}\)</span> there is an equality of ideals <span class="process-math">\((2) = (4)\text{.}\)</span> In view of <a href="sec_ideals.html#thm_principalGeneratorsUnits" class="xref" data-knowl="./knowl/xref/thm_principalGeneratorsUnits.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.10">Theorem 3.2.10</a>, why does this make sense?</div></article><article class="exercise exercise-like" id="exers_ideals-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-4-1-1">Given <span class="process-math">\(\bar{a}\in \Z/m\text{,}\)</span> when is <span class="process-math">\((\bar{a})\)</span> a proper ideal? Can you describe it’s elements?</div></article><article class="exercise exercise-like" id="exers_ideals-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-5-1-1">Show that not all ideals in <span class="process-math">\(\C[x,y]\)</span> are principal by showing <span class="process-math">\((x,y)\)</span> is not principally generated.</div></article><article class="exercise exercise-like" id="exers_ideals-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-6-1-1">Prove that the ideal <span class="process-math">\((3,x^2)\subseteq\mathbb{Z}[x]\)</span> is not a principal ideal.</div></article><article class="exercise exercise-like" id="exers_ideals-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para logical" id="exers_ideals-7-4-1">
+<div class="para" id="exers_ideals-4-1-1">Given <span class="process-math">\(\bar{a}\in \Z/m\text{,}\)</span> when is <span class="process-math">\((\bar{a})\)</span> a proper ideal? Can you describe it’s elements?</div></article><article class="exercise exercise-like" id="exer_subidealsZ12"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="exer_subidealsZ12-1-1">What are all the sub-ideals of <span class="process-math">\((12)\subseteq\Z\text{?}\)</span> That is, what are the ideals <span class="process-math">\(I\subseteq \Z\)</span> such that <span class="process-math">\(I\subseteq (12)\text{?}\)</span>
+</div></article><article class="exercise exercise-like" id="exers_ideals-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="exers_ideals-6-1-1">Prove that for any <span class="process-math">\(n\gt 1\text{,}\)</span> there are only finitely many sub-ideals of <span class="process-math">\((n)\subseteq\Z\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exers_ideals-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="exers_ideals-7-1-1">Show that not all ideals in <span class="process-math">\(\C[x,y]\)</span> are principal by showing <span class="process-math">\((x,y)\)</span> is not principally generated.</div></article><article class="exercise exercise-like" id="exers_ideals-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="exers_ideals-8-1-1">Prove that the ideal <span class="process-math">\((3,x^2)\subseteq\mathbb{Z}[x]\)</span> is not a principal ideal.</div></article><article class="exercise exercise-like" id="exers_ideals-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para logical" id="exers_ideals-9-4-1">
 <div class="para">Suppose <span class="process-math">\(I,J\subseteq R\)</span> are ideals of the ring <span class="process-math">\(R\text{.}\)</span> Define</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -812,9 +898,9 @@ I+J = \{i+j\mid i\in I, j\in J\}.
 \end{equation*}
 </div>
 <div class="para">Show that <span class="process-math">\(I+J\)</span> is an ideal.</div>
-</div></article><article class="exercise exercise-like" id="exers_ideals-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-8-1-1">In the notation of the previous exercise, consider <span class="process-math">\((4),(6)\subseteq\Z\text{.}\)</span> What familiar ideal is <span class="process-math">\((4)+(6)\text{?}\)</span> Can you generalize?</div></article><article class="exercise exercise-like" id="exers_ideals-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para logical" id="exers_ideals-9-4-1">
+</div></article><article class="exercise exercise-like" id="exers_ideals-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="exers_ideals-10-1-1">In the notation of the previous exercise, consider <span class="process-math">\((4),(6)\subseteq\Z\text{.}\)</span> What familiar ideal is <span class="process-math">\((4)+(6)\text{?}\)</span> Can you generalize?</div></article><article class="exercise exercise-like" id="exers_ideals-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para logical" id="exers_ideals-11-4-1">
 <div class="para">Suppose <span class="process-math">\(I,J\subseteq R\)</span> are ideals of the ring <span class="process-math">\(R\text{.}\)</span> Define</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -822,9 +908,9 @@ I\cdot J = \{ij\mid i\in I, j\in J\}.
 \end{equation*}
 </div>
 <div class="para">Show that <span class="process-math">\(I\cdot J\)</span> is an ideal.</div>
-</div></article><article class="exercise exercise-like" id="exers_ideals-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-10-1-1">In the notation of the previous exercise, consider <span class="process-math">\((4),(6)\subseteq\Z\text{.}\)</span> What familiar ideal is <span class="process-math">\((4)\cdot (6)\text{?}\)</span> Can you generalize?</div></article><article class="exercise exercise-like" id="exers_ideals-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="para logical" id="exers_ideals-11-2-1">
+</div></article><article class="exercise exercise-like" id="exers_ideals-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="para" id="exers_ideals-12-1-1">In the notation of the previous exercise, consider <span class="process-math">\((4),(6)\subseteq\Z\text{.}\)</span> What familiar ideal is <span class="process-math">\((4)\cdot (6)\text{?}\)</span> Can you generalize?</div></article><article class="exercise exercise-like" id="exers_ideals-13"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="para logical" id="exers_ideals-13-2-1">
 <div class="para">An important ideal that arises in commutative algebra are <dfn class="terminology">annihilator ideals</dfn>. Let <span class="process-math">\(R\)</span> be a commutative ring and <span class="process-math">\(r\in R\)</span> an element. Define the annihilator of <span class="process-math">\(r\)</span> to be the set</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -832,12 +918,12 @@ I\cdot J = \{ij\mid i\in I, j\in J\}.
 \end{equation*}
 </div>
 <div class="para">Prove that <span class="process-math">\(\mathrm{Ann}_R(r)\)</span> is always an ideal.</div>
-</div></article><article class="exercise exercise-like" id="exers_ideals-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-12-1-1">In the notation of the previous exercise, what is <span class="process-math">\(\mathrm{Ann}_{\Z/6}(\bar{3})\text{?}\)</span> What about <span class="process-math">\(\mathrm{Ann}_{\Z}(3)\text{?}\)</span>
-</div></article><article class="exercise exercise-like" id="exers_ideals-13"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-13-1-1">Prove that if <span class="process-math">\(R\)</span> is a domain and <span class="process-math">\(s\in R\text{,}\)</span> then <span class="process-math">\(\mathrm{Ann}_R(s) = \{0\}\)</span> unless <span class="process-math">\(s=0\)</span> in which case the annihilator is all of <span class="process-math">\(R\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exers_ideals-14"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
-<div class="para logical" id="exers_ideals-14-3-1">
+<div class="para" id="exers_ideals-14-1-1">In the notation of the previous exercise, what is <span class="process-math">\(\mathrm{Ann}_{\Z/6}(\bar{3})\text{?}\)</span> What about <span class="process-math">\(\mathrm{Ann}_{\Z}(3)\text{?}\)</span>
+</div></article><article class="exercise exercise-like" id="exers_ideals-15"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+<div class="para" id="exers_ideals-15-1-1">Prove that if <span class="process-math">\(R\)</span> is a domain and <span class="process-math">\(s\in R\text{,}\)</span> then <span class="process-math">\(\mathrm{Ann}_R(s) = \{0\}\)</span> unless <span class="process-math">\(s=0\)</span> in which case the annihilator is all of <span class="process-math">\(R\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exers_ideals-16"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
+<div class="para logical" id="exers_ideals-16-3-1">
 <div class="para">Another important ideal that arises in commutative algebra are <dfn class="terminology">radical ideals</dfn>. Let <span class="process-math">\(I\subseteq R\)</span> be an ideal in a commutative ring. Define the radica of <span class="process-math">\(r\)</span> to be the set</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -845,9 +931,9 @@ I\cdot J = \{ij\mid i\in I, j\in J\}.
 \end{equation*}
 </div>
 <div class="para">Prove that <span class="process-math">\(\sqrt{I}\)</span> is an ideal.</div>
-</div></article><article class="exercise exercise-like" id="exers_ideals-15"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-15-1-1">In the notation of the previous exercise, prove that the radical of <span class="process-math">\((4)\)</span> in <span class="process-math">\(\Z\)</span> is <span class="process-math">\((2)\text{.}\)</span> Hint: <span class="process-math">\((2)\subseteq \sqrt{(4)}\)</span> should be simple. For the reverse containment, if <span class="process-math">\(a\in\Z\)</span> is not in <span class="process-math">\((2)\text{,}\)</span> then it is odd. Argue that the radical cannot have an odd number.</div></article><article class="exercise exercise-like" id="exers_ideals-16"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-16-1-1">Given any ideal <span class="process-math">\((n)\subseteq \Z\text{,}\)</span> what is <span class="process-math">\(\sqrt{(n)}\text{?}\)</span>
+</div></article><article class="exercise exercise-like" id="exers_ideals-17"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>
+<div class="para" id="exers_ideals-17-1-1">In the notation of the previous exercise, prove that the radical of <span class="process-math">\((4)\)</span> in <span class="process-math">\(\Z\)</span> is <span class="process-math">\((2)\text{.}\)</span> Hint: <span class="process-math">\((2)\subseteq \sqrt{(4)}\)</span> should be simple. For the reverse containment, if <span class="process-math">\(a\in\Z\)</span> is not in <span class="process-math">\((2)\text{,}\)</span> then it is odd. Argue that the radical cannot have an odd number.</div></article><article class="exercise exercise-like" id="exers_ideals-18"><h4 class="heading"><span class="codenumber">18<span class="period">.</span></span></h4>
+<div class="para" id="exers_ideals-18-1-1">Given any ideal <span class="process-math">\((n)\subseteq \Z\text{,}\)</span> what is <span class="process-math">\(\sqrt{(n)}\text{?}\)</span>
 </div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec_homomorphisms.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_quotientRings.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

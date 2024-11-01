@@ -88,6 +88,37 @@ window.MathJax = {
 <link href="_static/pretext/css/style_oscarlevin.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.4.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.00db6230172ad960.bundle.js"></script><script src="_static/prefix-347.8328b60515045466.bundle.js"></script><script src="_static/prefix-runestone.aa624e4071d017c3.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.51d479d87f8466bb.css">
 <style>
 #ssec_wellordering-8-1-3 { counter-set: ssec_wellordering-8-1-3 0; }
 #ssec_wellordering-8-1-3 > li::marker { content: ""counter(ssec_wellordering-8-1-3,decimal)"."; }
@@ -254,9 +285,9 @@ window.MathJax = {
 #sec_homomorphismsTF-1-2 { counter-set: sec_homomorphismsTF-1-2 0; }
 #sec_homomorphismsTF-1-2 > li::marker { content: "("counter(sec_homomorphismsTF-1-2,lower-alpha)")"; }
 #sec_homomorphismsTF-1-2 > li { counter-increment: sec_homomorphismsTF-1-2; }
-#exers_homomorphisms-15-1-2 { counter-set: exers_homomorphisms-15-1-2 0; }
-#exers_homomorphisms-15-1-2 > li::marker { content: "("counter(exers_homomorphisms-15-1-2,lower-alpha)")"; }
-#exers_homomorphisms-15-1-2 > li { counter-increment: exers_homomorphisms-15-1-2; }
+#exers_homomorphisms-16-1-2 { counter-set: exers_homomorphisms-16-1-2 0; }
+#exers_homomorphisms-16-1-2 > li::marker { content: "("counter(exers_homomorphisms-16-1-2,lower-alpha)")"; }
+#exers_homomorphisms-16-1-2 > li { counter-increment: exers_homomorphisms-16-1-2; }
 #prop_kernelIsIdeal-1-1-5 { counter-set: prop_kernelIsIdeal-1-1-5 0; }
 #prop_kernelIsIdeal-1-1-5 > li::marker { content: ""counter(prop_kernelIsIdeal-1-1-5,decimal)"."; }
 #prop_kernelIsIdeal-1-1-5 > li { counter-increment: prop_kernelIsIdeal-1-1-5; }
@@ -272,12 +303,6 @@ window.MathJax = {
 #exers_ideals-1-1-2 { counter-set: exers_ideals-1-1-2 0; }
 #exers_ideals-1-1-2 > li::marker { content: "("counter(exers_ideals-1-1-2,lower-alpha)")"; }
 #exers_ideals-1-1-2 > li { counter-increment: exers_ideals-1-1-2; }
-#ssec_congruenceModuloI-4-1-2 { counter-set: ssec_congruenceModuloI-4-1-2 0; }
-#ssec_congruenceModuloI-4-1-2 > li::marker { content: ""counter(ssec_congruenceModuloI-4-1-2,decimal)"."; }
-#ssec_congruenceModuloI-4-1-2 > li { counter-increment: ssec_congruenceModuloI-4-1-2; }
-#ssec_congruenceModuloI-4-2-1 { counter-set: ssec_congruenceModuloI-4-2-1 0; }
-#ssec_congruenceModuloI-4-2-1 > li::marker { content: ""counter(ssec_congruenceModuloI-4-2-1,decimal)"."; }
-#ssec_congruenceModuloI-4-2-1 > li { counter-increment: ssec_congruenceModuloI-4-2-1; }
 #ssec_quotientRings-11-1-2 { counter-set: ssec_quotientRings-11-1-2 0; }
 #ssec_quotientRings-11-1-2 > li::marker { content: ""counter(ssec_quotientRings-11-1-2,decimal)"."; }
 #ssec_quotientRings-11-1-2 > li { counter-increment: ssec_quotientRings-11-1-2; }
@@ -287,18 +312,21 @@ window.MathJax = {
 #ssec_quotientRings-14-3-3 { counter-set: ssec_quotientRings-14-3-3 0; }
 #ssec_quotientRings-14-3-3 > li::marker { content: ""counter(ssec_quotientRings-14-3-3,decimal)"."; }
 #ssec_quotientRings-14-3-3 > li { counter-increment: ssec_quotientRings-14-3-3; }
-#subsec--7-1-2 { counter-set: subsec--7-1-2 0; }
-#subsec--7-1-2 > li::marker { content: ""counter(subsec--7-1-2,decimal)"."; }
-#subsec--7-1-2 > li { counter-increment: subsec--7-1-2; }
+#subsec--8-1-2 { counter-set: subsec--8-1-2 0; }
+#subsec--8-1-2 > li::marker { content: ""counter(subsec--8-1-2,decimal)"."; }
+#subsec--8-1-2 > li { counter-increment: subsec--8-1-2; }
 #exers_divisibilityIntegralDomains-1-1-2 { counter-set: exers_divisibilityIntegralDomains-1-1-2 0; }
 #exers_divisibilityIntegralDomains-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-1-1-2,lower-alpha)")"; }
 #exers_divisibilityIntegralDomains-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-1-1-2; }
-#exers_divisibilityIntegralDomains-3-1-1-3 { counter-set: exers_divisibilityIntegralDomains-3-1-1-3 0; }
-#exers_divisibilityIntegralDomains-3-1-1-3 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-3-1-1-3,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-3-1-1-3 > li { counter-increment: exers_divisibilityIntegralDomains-3-1-1-3; }
-#exers_divisibilityIntegralDomains-6-1-2 { counter-set: exers_divisibilityIntegralDomains-6-1-2 0; }
-#exers_divisibilityIntegralDomains-6-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-6-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-6-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-6-1-2; }
+#exers_divisibilityIntegralDomains-2-1-2 { counter-set: exers_divisibilityIntegralDomains-2-1-2 0; }
+#exers_divisibilityIntegralDomains-2-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-2-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-2-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-2-1-2; }
+#exers_divisibilityIntegralDomains-5-1-1-2 { counter-set: exers_divisibilityIntegralDomains-5-1-1-2 0; }
+#exers_divisibilityIntegralDomains-5-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-5-1-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-5-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-5-1-1-2; }
+#exers_divisibilityIntegralDomains-8-1-2 { counter-set: exers_divisibilityIntegralDomains-8-1-2 0; }
+#exers_divisibilityIntegralDomains-8-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-8-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-8-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-8-1-2; }
 #ssec_principalIdealDomains-6-1-1-3 { counter-set: ssec_principalIdealDomains-6-1-1-3 0; }
 #ssec_principalIdealDomains-6-1-1-3 > li::marker { content: ""counter(ssec_principalIdealDomains-6-1-1-3,decimal)"."; }
 #ssec_principalIdealDomains-6-1-1-3 > li { counter-increment: ssec_principalIdealDomains-6-1-1-3; }
@@ -507,7 +535,7 @@ window.MathJax = {
 <ul class="disc" id="obj_quotientRings-3">
 <li id="obj_quotientRings-3-1"><div class="para" id="p-derived-obj_quotientRings-3-1">How can we use ideals to build new rings out of old?</div></li>
 <li id="obj_quotientRings-3-2"><div class="para" id="p-derived-obj_quotientRings-3-2">What sorts of ideals allow us to build domains? Fields?</div></li>
-<li id="obj_quotientRings-3-3"><div class="para" id="p-derived-obj_quotientRings-3-3">What is the First Isomorphism Theorem?</div></li>
+<li id="obj_quotientRings-3-3"><div class="para" id="p-derived-obj_quotientRings-3-3">What is the Noether Isomorphism Theorem?</div></li>
 </ul></article><section class="introduction" id="sec_quotientRings-3"><div class="para" id="sec_quotientRings-3-1">If the only rings that existed were polynomial rings, familiar systems of numbers like <span class="process-math">\(\Z/m, \Z, \Q, \R, \C\text{,}\)</span> polynomial rings, and matrix rings, there would still be enough to justify defining the concept of a ring and exploring its properties. However, these are not the only rings that exist. In this section, we explore a way of building new rings from old by means of ideals. To better understand these new rings, we will also define two new classes of ideals: prime ideals, and maximal ideals. We end by briefly connecting these rings to a familiar problem from high school algebra.</div></section><section class="subsection" id="ssec_congruenceModuloI"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="space"> </span><span class="title">Congruence modulo <span class="process-math">\(I\)</span></span>
 </h3>
@@ -516,57 +544,77 @@ window.MathJax = {
 <article class="definition definition-like" id="ssec_congruenceModuloI-3"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
 </h4> <div class="para" id="ssec_congruenceModuloI-3-2-1">Let <span class="process-math">\(R\)</span> be a ring, <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{,}\)</span> and <span class="process-math">\(a,b\in R\text{.}\)</span> We say <span class="process-math">\(a\)</span> is <dfn class="terminology">congruent to <span class="process-math">\(b\)</span> modulo <span class="process-math">\(I\)</span></dfn> if <span class="process-math">\(b-a\in I\text{.}\)</span> If this is the case, we write <span class="process-math">\(a + I = b + I\text{.}\)</span>
-</div></article><article class="activity project-like" id="ssec_congruenceModuloI-4"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
+</div></article><article class="example example-like" id="ssec_congruenceModuloI-4"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Congruence modulo <span class="process-math">\((m)\)</span>.</span>
 </h4>
-<div class="para" id="ssec_congruenceModuloI-4-1-1">Determine (with brief justification) whether <span class="process-math">\(a + I = b + I\)</span> in the following rings <span class="process-math">\(R\text{.}\)</span>
-</div> <ol class="decimal" id="ssec_congruenceModuloI-4-1-2">
-<li id="ssec_congruenceModuloI-4-1-2-1"><div class="para" id="p-derived-ssec_congruenceModuloI-4-1-2-1">
-<span class="process-math">\(a = 9\text{,}\)</span> <span class="process-math">\(b = 3\text{,}\)</span> <span class="process-math">\(I = (6)\text{,}\)</span> <span class="process-math">\(R = \Z\)</span>
-</div></li>
-<li id="ssec_congruenceModuloI-4-1-2-2"><div class="para" id="p-derived-ssec_congruenceModuloI-4-1-2-2">
-<span class="process-math">\(a = 10\text{,}\)</span> <span class="process-math">\(b = 4\text{,}\)</span> <span class="process-math">\(I = (7)\text{,}\)</span> <span class="process-math">\(R = \Z\)</span>
-</div></li>
-<li id="ssec_congruenceModuloI-4-1-2-3"><div class="para" id="p-derived-ssec_congruenceModuloI-4-1-2-3">
-<span class="process-math">\(a = 9\text{,}\)</span> <span class="process-math">\(b = 3\text{,}\)</span> <span class="process-math">\(I = (6)\text{,}\)</span> <span class="process-math">\(R = \Z[x]\)</span>
-</div></li>
-<li id="ssec_congruenceModuloI-4-1-2-4"><div class="para" id="p-derived-ssec_congruenceModuloI-4-1-2-4">
-<span class="process-math">\(a = x^2+x-2\text{,}\)</span> <span class="process-math">\(b = x-1\text{,}\)</span> <span class="process-math">\(I = (x+1)\text{,}\)</span> <span class="process-math">\(R = \Q[x]\)</span>
-</div></li>
-<li id="ssec_congruenceModuloI-4-1-2-5"><div class="para" id="p-derived-ssec_congruenceModuloI-4-1-2-5">(<em class="emphasis">Challenge.</em>) <span class="process-math">\(a = x^3\text{,}\)</span> <span class="process-math">\(b = x^2+2x\text{,}\)</span> <span class="process-math">\(I = (y-x^2, y-x-2)\text{,}\)</span> <span class="process-math">\(R = \Q[x,y]\)</span>
-</div></li>
-</ol>
-<div class="solutions"><details id="ssec_congruenceModuloI-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="decimal" id="ssec_congruenceModuloI-4-2-1">
-<li id="ssec_congruenceModuloI-4-2-1-1"><div class="para" id="ssec_congruenceModuloI-4-2-1-1-1">We have <span class="process-math">\(3-9 = -6 = (-1)\cdot 6\in (6)\)</span> so <span class="process-math">\(9+(6) = 3+ (6)\)</span> in <span class="process-math">\(\Z\text{.}\)</span>
-</div></li>
-<li id="ssec_congruenceModuloI-4-2-1-2"><div class="para" id="ssec_congruenceModuloI-4-2-1-2-1">We have <span class="process-math">\(4-10 = -6\notin (7)\)</span> as <span class="process-math">\(-6\neq 7k\)</span> for any <span class="process-math">\(k\in\Z\text{.}\)</span> Thus <span class="process-math">\(10+(7)\neq 4+(7)\)</span> in <span class="process-math">\(\Z\text{.}\)</span>
-</div></li>
-<li id="ssec_congruenceModuloI-4-2-1-3"><div class="para" id="ssec_congruenceModuloI-4-2-1-3-1">
-<span class="process-math">\(3-9 = -6 = (-1)\cdot 6\in (6)\text{.}\)</span> Thus <span class="process-math">\(9+(6) = 3+(6)\)</span> in <span class="process-math">\(\Z[x]\text{.}\)</span>
-</div></li>
-<li id="ssec_congruenceModuloI-4-2-1-4"><div class="para" id="ssec_congruenceModuloI-4-2-1-4-1">
-<span class="process-math">\(x-1-(x^2+x-2) = -x^2+1 = -(x-1)(x+1)\in (x+1)\text{.}\)</span> Thus <span class="process-math">\(x-1+(x+1) = x^2+x-2 + (x+1)\)</span> in <span class="process-math">\(\Q[x]\text{.}\)</span>
-</div></li>
-<li id="ssec_congruenceModuloI-4-2-1-5"><div class="para logical" id="ssec_congruenceModuloI-4-2-1-5-1">
-<div class="para">
-<span class="process-math">\(x^3 - x^2 - 2x = x(x-2)(x+1) = -x(y-x^2) + x(y-x-2)\text{.}\)</span> Thus</div>
+<div class="para" id="ssec_congruenceModuloI-4-2-1">We first show that in the case <span class="process-math">\(R=\Z\text{,}\)</span> congruence modulo <span class="process-math">\((m)\)</span> is the same as congruence modulo <span class="process-math">\(m\text{.}\)</span> Indeed, supppose <span class="process-math">\(a,b\in\Z\)</span> are congruent modulo <span class="process-math">\((m)\text{.}\)</span> Then <span class="process-math">\(b-a\in (m)\)</span> and so <span class="process-math">\(b-a=mk\)</span> for some <span class="process-math">\(k\in\Z\text{.}\)</span> Hence, <span class="process-math">\(a\equiv_m b\text{.}\)</span>
+</div> <div class="para" id="ssec_congruenceModuloI-4-2-2">The preceeding argument is an if and only if argument so can be read in reverse too. Hence, congruence modulo <span class="process-math">\((m)\)</span> and congruence modulo <span class="process-math">\(m\)</span> agree.</div></article><article class="example example-like" id="ssec_congruenceModuloI-5"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Congruence in <span class="process-math">\(\Z[x]\)</span>.</span>
+</h4>
+<div class="para" id="ssec_congruenceModuloI-5-2-1">Let’s now work in <span class="process-math">\(R=\Z[x]\)</span> and first consider the ideal <span class="process-math">\((6)\text{.}\)</span> Are <span class="process-math">\(9x\)</span> and <span class="process-math">\(3x\)</span> congruent modulo <span class="process-math">\((6)\text{?}\)</span> The difference is <span class="process-math">\(3x-9x=6(-x)\in (6)\)</span> and so they are congruent modulo <span class="process-math">\(6\text{.}\)</span> What other elements are congruent modulo <span class="process-math">\(6\text{?}\)</span>
+</div> <div class="para logical" id="ssec_congruenceModuloI-5-2-2">
+<div class="para">What other elements are congruent modulo <span class="process-math">\((6)\text{?}\)</span> Let’s first better understand <span class="process-math">\((6)\text{.}\)</span> This is the set of all integral polynomial multiples of <span class="process-math">\(6\text{:}\)</span>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
-x^3+(y-x^2,y-x-2) = x^2+x+ (y-x^2,y-x-2)
+(6) = \{6p(x)\mid p(x)\in\Z[x]\}.
 \end{equation*}
 </div>
-<div class="para">in <span class="process-math">\(\Q[x,y]\text{.}\)</span>
+<div class="para">In particular, all coefficients of elements of <span class="process-math">\((6)\)</span> are multiples of <span class="process-math">\(6\text{.}\)</span> From this we learn that <span class="process-math">\(p(x),q(x)\in \Z[x]\)</span> are congruent modulo <span class="process-math">\((6)\)</span> if and only if the coefficients of their difference are divisible by <span class="process-math">\(6\text{.}\)</span> So, for example, <span class="process-math">\(9x,3\)</span> are not congruent modulo <span class="process-math">\(6\text{,}\)</span> while <span class="process-math">\(9x^2+12x-32\)</span> and <span class="process-math">\(21x^2-38\)</span> are congruent modulo <span class="process-math">\(6\text{.}\)</span>
 </div>
-</div></li>
-</ol></div></details></div></article><article class="exploration project-like" id="ssec_congruenceModuloI-5"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
+</div> <div class="para" id="ssec_congruenceModuloI-5-2-3">Let’s look at another ideal here, say <span class="process-math">\((x)\subseteq \Z[x]\text{.}\)</span> As a first example, <span class="process-math">\(9x\)</span> and <span class="process-math">\(3x\)</span> are congruent modulo <span class="process-math">\((x)\)</span> as <span class="process-math">\(3x-9x=(-6)x\in(x)\text{.}\)</span> However, <span class="process-math">\(9x^2+12x-32,21x^2-38\)</span> are not congruent modulo <span class="process-math">\((x)\)</span> as their difference is <span class="process-math">\(12x^2-12x-6\)</span> which is not a multiple of <span class="process-math">\(x\text{.}\)</span>
+</div> <div class="para logical" id="ssec_congruenceModuloI-5-2-4">
+<div class="para">What does it mean here to be congruent modulo <span class="process-math">\((x)\text{?}\)</span> Again, let’s better understand the ideal <span class="process-math">\((x)\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x) = \{xp(x)\mid p(x)\in\Z[x]\}
+\end{equation*}
+</div>
+<div class="para">and so elements of <span class="process-math">\((x)\)</span> are precisely the polynomials without a constant term. In particular, two elements <span class="process-math">\(p(x),q(x)\in\Z[x]\)</span> are congruent modulo <span class="process-math">\((x)\)</span> if and only if they have identical constant term as their difference needs to not have a constant term.</div>
+</div> <div class="para" id="ssec_congruenceModuloI-5-2-5">Hence, the polynomial <span class="process-math">\(9x^2+12-32\)</span> and <span class="process-math">\(21x^2-32\)</span> are congruent modulo <span class="process-math">\((x)\)</span> while the polynomials <span class="process-math">\(9x,3\)</span> are not.</div></article><article class="example example-like" id="ssec_congruenceModuloI-6"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Congruence in <span class="process-math">\(\C[x,y]\)</span>.</span>
 </h4>
-<div class="para" id="ssec_congruenceModuloI-5-1-1">Given a ring <span class="process-math">\(R\text{,}\)</span> ideal <span class="process-math">\(I\text{,}\)</span> and <span class="process-math">\(a\in R\text{,}\)</span> when is it the case that <span class="process-math">\(a + I = 0 + I = I\text{?}\)</span>
+<div class="para logical" id="ssec_congruenceModuloI-6-2-1">
+<div class="para">Let’s now look at a more complicated example: the ideal <span class="process-math">\((x,y)\subseteq \C[x,y]\text{.}\)</span> This ideal is not principal and as a reminder it is equal to:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x,y) = \{xp(x,y)+yq(x,y)\mid p(x,y),q(x,y)\in\C[x,y]\}.
+\end{equation*}
 </div>
-<div class="solutions"><details id="ssec_congruenceModuloI-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="ssec_congruenceModuloI-5-2-1">When <span class="process-math">\(a\in I\text{.}\)</span>
-</div></div></details></div></article><div class="para" id="ssec_congruenceModuloI-6">Observe that if <span class="process-math">\(b-a \in I\text{,}\)</span> then there is some <span class="process-math">\(x\in I\)</span> such that <span class="process-math">\(b-a = x\text{,}\)</span> and so <span class="process-math">\(b = a+x\text{.}\)</span>
+<div class="para">That is, it is all polynomial combinations of <span class="process-math">\(x,y\text{.}\)</span>
 </div>
-<div class="para logical" id="ssec_congruenceModuloI-7">
+</div> <div class="para logical" id="ssec_congruenceModuloI-6-2-2">
+<div class="para">What is congruence modulo <span class="process-math">\((x,y)\text{?}\)</span> We consider a couple of examples first. The polynomials <span class="process-math">\(x+y-2\)</span> and <span class="process-math">\(xy+2x-2\)</span> are congruent modulo <span class="process-math">\((x,y)\)</span> as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+xy+2x-2-(x+y-2) = xy+x-y = x(y+1)+y(-1).
+\end{equation*}
+</div>
+<div class="para">and so the difference is a polynomial combination of <span class="process-math">\(x,y\text{.}\)</span> As another example, we see that <span class="process-math">\(xy-x-y\)</span> and <span class="process-math">\(x^2+xy+y^2\)</span> are also congruent modulo <span class="process-math">\((x,y)\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x^2+xy+y^2 - (xy-x-y) = x^2+y^2+x+y = x(x+1) + y(y+1)
+\end{equation*}
+</div>
+<div class="para">and the difference is again a polynomial combination of <span class="process-math">\(x,y\text{.}\)</span> Let’s look at <span class="process-math">\(xy+y+1\)</span> and <span class="process-math">\(2xy+2x-3y+2\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2xy+2x-3y+2-(xy+y+1) = xy+2x-4y+1.
+\end{equation*}
+</div>
+<div class="para">This polynomial cannot be written as a polynomial combination of <span class="process-math">\(x,y\)</span> because such combinations cannot have a constant term!</div>
+</div> <div class="para" id="ssec_congruenceModuloI-6-2-3">Our sequence of example elements seems to indicate that polynomials are congruent modulo <span class="process-math">\((x,y)\)</span> if and only if they have the same constant term. And indeed this is the case. The details of which are left as an exercise which is primarily an exercise in multivariate polynomial notation.</div></article><article class="exploration project-like" id="ssec_congruenceModuloI-7"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
+</h4>
+<div class="para" id="ssec_congruenceModuloI-7-1-1">Given a ring <span class="process-math">\(R\text{,}\)</span> ideal <span class="process-math">\(I\text{,}\)</span> and <span class="process-math">\(a\in R\text{,}\)</span> when is it the case that <span class="process-math">\(a + I = 0 + I = I\text{?}\)</span>
+</div>
+<div class="solutions"><details id="ssec_congruenceModuloI-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="ssec_congruenceModuloI-7-2-1">When <span class="process-math">\(a\in I\text{.}\)</span>
+</div></div></details></div></article><div class="para" id="ssec_congruenceModuloI-8">Observe that if <span class="process-math">\(b-a \in I\text{,}\)</span> then there is some <span class="process-math">\(x\in I\)</span> such that <span class="process-math">\(b-a = x\text{,}\)</span> and so <span class="process-math">\(b = a+x\text{.}\)</span>
+</div>
+<div class="para logical" id="ssec_congruenceModuloI-9">
 <div class="para">The notation <span class="process-math">\(a+I = b+I\)</span> is more than just notation. It is an equality of sets. Given any ideal <span class="process-math">\(I\subseteq R\)</span> and any <span class="process-math">\(a\in R\text{,}\)</span> define</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -577,13 +625,13 @@ a+I = \{a+i\mid i\in I\}
 </div>
 </div>
 <article class="theorem theorem-like" id="thm_congruenceIsEquality"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span>
 </h4>
 <div class="para" id="thm_congruenceIsEquality-1-1">Let <span class="process-math">\(I\subseteq R\)</span> be an ideal and <span class="process-math">\(a,b\in R\text{.}\)</span> Then <span class="process-math">\(a\)</span> is congruent to <span class="process-math">\(b\)</span> modulo <span class="process-math">\(I\)</span> if and only if we have equality of sets <span class="process-math">\(a+I = b+I\text{.}\)</span>
 </div></article><details id="thm_congruenceIsEquality-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_congruenceIsEquality-2-1">Suppose <span class="process-math">\(a\)</span> is congruent to <span class="process-math">\(b\)</span> modulo <span class="process-math">\(I\text{.}\)</span> Then <span class="process-math">\(b-a\in I\)</span> so that <span class="process-math">\(b = a+x\)</span> for some <span class="process-math">\(x\in I\text{.}\)</span> Take any <span class="process-math">\(i\in I\text{,}\)</span> then <span class="process-math">\(b+i = a+(x+i)\in a+I\)</span> as <span class="process-math">\(x+i\in I\text{.}\)</span> Thus <span class="process-math">\(b+I\subseteq a+I\text{.}\)</span> Using instead <span class="process-math">\(a = b+(-x)\)</span> we have, similarly, that <span class="process-math">\(a+I\subseteq b+I\text{.}\)</span> Thus <span class="process-math">\(a+I = b+I\text{.}\)</span>
 </div> <div class="para" id="thm_congruenceIsEquality-2-2">Suppose <span class="process-math">\(a+I = b+I\text{.}\)</span> Since <span class="process-math">\(0\in I\text{,}\)</span> we know that <span class="process-math">\(b = b+0\in b+I\text{.}\)</span> Since <span class="process-math">\(a+I = b+I\text{,}\)</span> we have that <span class="process-math">\(b\in a+I\text{.}\)</span> Thus <span class="process-math">\(b = a + x\)</span> for some <span class="process-math">\(x\in I\text{.}\)</span> Equivalently <span class="process-math">\(b-a=x\in I\text{.}\)</span> Thus <span class="process-math">\(a\)</span> is congruent to <span class="process-math">\(b\)</span> modulo <span class="process-math">\(I\text{.}\)</span>
 </div></article></details><article class="definition definition-like" id="def_cosetsIdeal"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.3.6</span><span class="period">.</span>
 </h4> <div class="para logical" id="def_cosetsIdeal-3-1">
 <div class="para">Given an ideal <span class="process-math">\(I\subseteq R\)</span> in a commutative ring <span class="process-math">\(R\text{.}\)</span> A <dfn class="terminology">coset</dfn> of <span class="process-math">\(I\)</span> is a set of the form</div>
 <div class="displaymath process-math">
@@ -597,17 +645,17 @@ a+I = \{a+i\mid i\in I\}.
 R/I = \{a+I\mid a\in R\}.
 \end{equation*}
 </div>
-</div></article><article class="example example-like" id="ssec_congruenceModuloI-10"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span>
+</div></article><article class="example example-like" id="ssec_congruenceModuloI-12"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.7</span><span class="period">.</span>
 </h4>
-<div class="para" id="ssec_congruenceModuloI-10-1-1">We take a minute to observe that in <span class="process-math">\(\Z\)</span> the notion of congruence: <span class="process-math">\(a\equiv b\)</span> modulo <span class="process-math">\(m\)</span> is equivalent to the definition here. Indeed, any <span class="process-math">\(m\in\Z\)</span> defines a principal ideal <span class="process-math">\((m)\text{.}\)</span> If <span class="process-math">\(a\equiv_m b\text{,}\)</span> then <span class="process-math">\(b-a = mk\)</span> for some <span class="process-math">\(k\in \Z\text{.}\)</span> Hence, <span class="process-math">\(b-a\in (m)\text{.}\)</span> And conversely, if <span class="process-math">\(a+(m) = b+(m)\text{,}\)</span> then <span class="process-math">\(b-a\in (m)\text{.}\)</span> Thus there exists <span class="process-math">\(k\in\Z\)</span> with <span class="process-math">\(b-a = mk\)</span> and so <span class="process-math">\(a\equiv_mb\text{.}\)</span>
-</div> <div class="para" id="ssec_congruenceModuloI-10-1-2">In particular, this is a successful generalization of the notion of congruence modulo <span class="process-math">\(m\text{.}\)</span>
-</div></article><div class="para" id="ssec_congruenceModuloI-11">As was the case in <span class="process-math">\(\Z/m\text{,}\)</span> congruence modulo <span class="process-math">\(I\)</span> is an equivalence relation.</div>
-<article class="theorem theorem-like" id="ssec_congruenceModuloI-12"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span>
+<div class="para" id="ssec_congruenceModuloI-12-1-1">We take a minute to observe that in <span class="process-math">\(\Z\)</span> the notion of congruence: <span class="process-math">\(a\equiv b\)</span> modulo <span class="process-math">\(m\)</span> is equivalent to the definition here. Indeed, any <span class="process-math">\(m\in\Z\)</span> defines a principal ideal <span class="process-math">\((m)\text{.}\)</span> If <span class="process-math">\(a\equiv_m b\text{,}\)</span> then <span class="process-math">\(b-a = mk\)</span> for some <span class="process-math">\(k\in \Z\text{.}\)</span> Hence, <span class="process-math">\(b-a\in (m)\text{.}\)</span> And conversely, if <span class="process-math">\(a+(m) = b+(m)\text{,}\)</span> then <span class="process-math">\(b-a\in (m)\text{.}\)</span> Thus there exists <span class="process-math">\(k\in\Z\)</span> with <span class="process-math">\(b-a = mk\)</span> and so <span class="process-math">\(a\equiv_mb\text{.}\)</span>
+</div> <div class="para" id="ssec_congruenceModuloI-12-1-2">In particular, this is a successful generalization of the notion of congruence modulo <span class="process-math">\(m\text{.}\)</span>
+</div></article><div class="para" id="ssec_congruenceModuloI-13">As was the case in <span class="process-math">\(\Z/m\text{,}\)</span> congruence modulo <span class="process-math">\(I\)</span> is an equivalence relation.</div>
+<article class="theorem theorem-like" id="ssec_congruenceModuloI-14"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.8</span><span class="period">.</span>
 </h4>
-<div class="para" id="ssec_congruenceModuloI-12-1-1">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> Then congruence modulo <span class="process-math">\(I\)</span> is an equivalence relation on <span class="process-math">\(R\text{.}\)</span>
-</div></article><details id="ssec_congruenceModuloI-12-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_congruenceModuloI-12-2-1">Since <span class="process-math">\(0\in I\text{,}\)</span> <span class="process-math">\(a-a \in I\)</span> for all <span class="process-math">\(a\text{,}\)</span> so <span class="process-math">\(a + I = a+I\)</span> and the relation is reflexive.</div> <div class="para" id="ssec_congruenceModuloI-12-2-2">Moreover, if <span class="process-math">\(b-a \in I\text{,}\)</span> then <span class="process-math">\(-1(b-a) = a-b \in I\text{,}\)</span> so the relation is symmetric.</div> <div class="para" id="ssec_congruenceModuloI-12-2-3">If <span class="process-math">\(b-a \in I\)</span> and <span class="process-math">\(c-b\in I\text{,}\)</span> then <span class="process-math">\((b-a) + (c-b) = c-a \in I\text{,}\)</span> so the relation is transitive.</div></article></details></section><section class="subsection" id="ssec_quotientRings"><h3 class="heading hide-type">
+<div class="para" id="ssec_congruenceModuloI-14-1-1">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> Then congruence modulo <span class="process-math">\(I\)</span> is an equivalence relation on <span class="process-math">\(R\text{.}\)</span>
+</div></article><details id="ssec_congruenceModuloI-14-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_congruenceModuloI-14-2-1">Since <span class="process-math">\(0\in I\text{,}\)</span> <span class="process-math">\(a-a \in I\)</span> for all <span class="process-math">\(a\text{,}\)</span> so <span class="process-math">\(a + I = a+I\)</span> and the relation is reflexive.</div> <div class="para" id="ssec_congruenceModuloI-14-2-2">Moreover, if <span class="process-math">\(b-a \in I\text{,}\)</span> then <span class="process-math">\(-1(b-a) = a-b \in I\text{,}\)</span> so the relation is symmetric.</div> <div class="para" id="ssec_congruenceModuloI-14-2-3">If <span class="process-math">\(b-a \in I\)</span> and <span class="process-math">\(c-b\in I\text{,}\)</span> then <span class="process-math">\((b-a) + (c-b) = c-a \in I\text{,}\)</span> so the relation is transitive.</div></article></details></section><section class="subsection" id="ssec_quotientRings"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="space"> </span><span class="title">Quotient Rings</span>
 </h3>
 <aside class="aside aside-like" id="ssec_quotientRings-2"><h4 class="heading"><span class="title">Notation for Integers Modulo <span class="process-math">\(m\)</span>.</span></h4>
@@ -615,7 +663,7 @@ R/I = \{a+I\mid a\in R\}.
 </div></aside><div class="para" id="ssec_quotientRings-3">The set of equivalence classes under this relation is denoted <span class="process-math">\(R/I\text{.}\)</span> In particular, What is more, this is not merely a set of equivalence classes. As the next two theorems demonstrate, this set possesses two algebraic operations that extend naturally from those of <span class="process-math">\(R\text{.}\)</span>
 </div>
 <article class="theorem theorem-like" id="thm_additionModI"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.6</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.9</span><span class="period">.</span>
 </h4>
 <div class="para" id="thm_additionModI-1-1">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> If <span class="process-math">\(a_1,a_2,b_1,b_2\in R\)</span> such that <span class="process-math">\(a_1+I = a_2+I\)</span> and <span class="process-math">\(b_1+I = b_2+I\text{,}\)</span> then <span class="process-math">\((a_1+b_1) + I = (a_2+b_2) + I\text{.}\)</span>
 </div></article><details id="thm_additionModI-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_additionModI-2-1">
@@ -629,7 +677,7 @@ R/I = \{a+I\mid a\in R\}.
 </div>
 </div></article></details><div class="para" id="ssec_quotientRings-5">Note that the only requirement in the proof of this theorem is that <span class="process-math">\(I\)</span> is closed under addition.</div>
 <article class="theorem theorem-like" id="thm_multiplicationModI"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.7</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.10</span><span class="period">.</span>
 </h4>
 <div class="para" id="thm_multiplicationModI-1-1">Let <span class="process-math">\(R\)</span> be a commutative ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> If <span class="process-math">\(a_1,a_2,b_1,b_2\in R\)</span> such that <span class="process-math">\(a_1+I = a_2+I\)</span> and <span class="process-math">\(b_1+I = b_2+I\text{,}\)</span> then <span class="process-math">\(a_1b_1 + I = a_2b_2 + I\text{.}\)</span>
 </div></article><details id="thm_multiplicationModI-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_multiplicationModI-2-1">
@@ -647,7 +695,7 @@ a_2b_2 =\amp (a_1+x)(b_1+y) \\
 </div>
 <div class="para" id="ssec_quotientRings-8">The previous two theorems together show that addition and multiplication on the set <span class="process-math">\(R/I\)</span> is well-defined. As these operations are built on the operations of <span class="process-math">\(R\text{,}\)</span> it will likely not surprise you to learn that the usual <a href="sec_rings.html#def_ring" class="xref" data-knowl="./knowl/xref/def_ring.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.7">axioms defining a ring</a> also hold.</div>
 <article class="theorem theorem-like" id="ssec_quotientRings-9"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.8</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.11</span><span class="period">.</span>
 </h4>
 <div class="para" id="ssec_quotientRings-9-2-1">Let <span class="process-math">\(R\)</span> be a commutative ring, <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{,}\)</span> and <span class="process-math">\(a,b\in R\text{.}\)</span> The set of cosets of <span class="process-math">\(I\text{,}\)</span> denoted <span class="process-math">\(\bar{R} = R/I\text{,}\)</span> is a commutative ring (called the <dfn class="terminology">quotient ring</dfn> of <span class="process-math">\(R\)</span> by <span class="process-math">\(I\)</span>) with additive identity <span class="process-math">\(0_R+I\)</span> and multiplicative identity <span class="process-math">\(1_R + I\)</span> under the following operations:</div>
 <div class="displaymath process-math" id="ssec_quotientRings-9-2-2">
@@ -655,7 +703,7 @@ a_2b_2 =\amp (a_1+x)(b_1+y) \\
 (a+I) + (b+I) &amp; := (a+b) + I\\
 (a+I) \cdot (b+I) &amp; := (ab) + I.
 \end{align*}
-</div></article><details id="ssec_quotientRings-9-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_quotientRings-9-3-1">These operations were shown to be well-defined in <a href="sec_quotientRings.html#thm_additionModI" class="xref" data-knowl="./knowl/xref/thm_additionModI.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.6">Theorem 3.3.6</a> and <a href="sec_quotientRings.html#thm_multiplicationModI" class="xref" data-knowl="./knowl/xref/thm_multiplicationModI.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.7">Theorem 3.3.7</a>. We need to show that, with these operations, all eight ring axioms hold and that multiplication is commutative. Take <span class="process-math">\(a+I,b+I,c+I\in R/I\text{.}\)</span>
+</div></article><details id="ssec_quotientRings-9-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_quotientRings-9-3-1">These operations were shown to be well-defined in <a href="sec_quotientRings.html#thm_additionModI" class="xref" data-knowl="./knowl/xref/thm_additionModI.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.9">Theorem 3.3.9</a> and <a href="sec_quotientRings.html#thm_multiplicationModI" class="xref" data-knowl="./knowl/xref/thm_multiplicationModI.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.10">Theorem 3.3.10</a>. We need to show that, with these operations, all eight ring axioms hold and that multiplication is commutative. Take <span class="process-math">\(a+I,b+I,c+I\in R/I\text{.}\)</span>
 </div> <div class="para logical" id="ssec_quotientRings-9-3-2">
 <div class="para">We begin with the additive axioms. For associativity:</div>
 <div class="displaymath process-math" id="ssec_quotientRings-9-3-2-1">
@@ -745,7 +793,7 @@ a(bc)+I = (ab)c+I.
 </div> <div class="para" id="ssec_quotientRings-9-3-10">We conclude that <span class="process-math">\(R/I\)</span> is a commutative ring.</div></article></details><div class="para" id="ssec_quotientRings-10">Thus, given a ring <span class="process-math">\(R\)</span> and ideal <span class="process-math">\(I\)</span> of <span class="process-math">\(R\text{,}\)</span> we may build the quotient ring <span class="process-math">\(R/I\text{.}\)</span>
 </div>
 <article class="activity project-like" id="ssec_quotientRings-11"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
 </h4>
 <div class="para" id="ssec_quotientRings-11-1-1">Answer the questions below. Be prepared to give an information justification of your thinking.</div> <ol class="decimal" id="ssec_quotientRings-11-1-2">
 <li id="ssec_quotientRings-11-1-2-1"><div class="para" id="p-derived-ssec_quotientRings-11-1-2-1">Suppose <span class="process-math">\(R= \Z\)</span> and <span class="process-math">\(I = (8)\text{.}\)</span> Calculate <span class="process-math">\((3+I) + (7+I)\)</span> and <span class="process-math">\((4+I)\cdot (6+I)\text{.}\)</span>
@@ -755,7 +803,7 @@ a(bc)+I = (ab)c+I.
 </div></li>
 </ol></article><div class="para" id="ssec_quotientRings-12">In <a href="sec_principalIdealsDomains.html#ssec_primeIdeals" class="internal" title="Subsection 3.4.3: Prime Ideals">Prime Ideals</a> and <a href="sec_principalIdealsDomains.html#ssec_maximalIdeals" class="internal" title="Subsection 3.4.4: Maximal Ideals">Maximal Ideals</a>, we will explore the question of when <span class="process-math">\(R/I\)</span> possesses some of the properties we’ve previously explored, e.g., when is <span class="process-math">\(R/I\)</span> a domain? A field? First, we conclude with two explorations. The first gives us a sense of what these rings can look like. The second connects quotient rings to <em class="emphasis">solution sets</em> of polynomial equations.</div>
 <article class="exploration project-like" id="ssec_quotientRings-13"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
 </h4>
 <div class="para" id="ssec_quotientRings-13-1-1">Consider the ring <span class="process-math">\(R=\Z/2[x]\)</span> and the ideals <span class="process-math">\(I = (x^2-1)\)</span> and <span class="process-math">\(J = (x^3 -x -1)\text{.}\)</span>
 </div> <ol class="decimal" id="ssec_quotientRings-13-1-2">
@@ -769,7 +817,7 @@ a(bc)+I = (ab)c+I.
 </div></li>
 </ol>
 <div class="solutions"><details id="ssec_quotientRings-13-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">TBD</div></details></div></article><article class="exploration project-like" id="ssec_quotientRings-14"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span>
 </h4>
 <div class="para" id="ssec_quotientRings-14-3-1">One of the most useful connections made in high school algebra is the connection between a function <span class="process-math">\(f\)</span> (in particular, a polynomial function) and its <em class="emphasis">graph</em>. We may extend this notion to ideals via the concept of a <em class="emphasis">zero set</em> as follows.</div> <div class="para" id="ssec_quotientRings-14-3-2">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(R = F[x,y]\)</span> with <span class="process-math">\(I\subseteq R\)</span> a nonzero ideal. We define the <dfn class="terminology">zero set</dfn> of <span class="process-math">\(I\text{,}\)</span> denoted <span class="process-math">\(Z(I)\text{,}\)</span> as the set of all points <span class="process-math">\((a,b)\in F^2\)</span> for which <span class="process-math">\(f(a,b)=0\)</span> for all <span class="process-math">\(f\in I\text{.}\)</span>
 </div> <ol class="decimal" id="ssec_quotientRings-14-3-3">
@@ -788,7 +836,7 @@ a(bc)+I = (ab)c+I.
 <div class="para" id="ssec_NoetherIsomorphismTheorem-2">As quotient rings provide fertile soil for building new examples of rings, it should not surprise us to find that homomorphisms interact with quotient rings in interesting and useful ways. Chief among them are the <em class="emphasis">isomorphism theorems</em>. In this subsection, we focus primarily on the Noether Isomorphism Theorem (also called the First Isomorphism Theorem).</div>
 <div class="para" id="ssec_NoetherIsomorphismTheorem-3">We have seen that any homomorphism <span class="process-math">\(\varphi\colon R\to S\)</span> gives rise to an ideal of <span class="process-math">\(R\text{,}\)</span> namely <span class="process-math">\(\ker\varphi\text{.}\)</span> Our next theorem demonstrates that, given a commutative ring <span class="process-math">\(R\text{,}\)</span> every ideal is the kernel of some homomorphism defined on <span class="process-math">\(R\text{.}\)</span> In particular, our definition of ideal accurately captured what it meant to be a kernel.</div>
 <article class="theorem theorem-like" id="ssec_NoetherIsomorphismTheorem-4"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.9</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.12</span><span class="period">.</span>
 </h4>
 <div class="para" id="ssec_NoetherIsomorphismTheorem-4-1-1">Let <span class="process-math">\(R\)</span> be commutative and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> Define <span class="process-math">\(\varphi\colon R\to R/I\)</span> by <span class="process-math">\(\varphi(r) = r+I\text{.}\)</span> Then <span class="process-math">\(\varphi\)</span> is an epimorphism with <span class="process-math">\(\ker\varphi = I\text{.}\)</span>
 </div></article><details id="ssec_NoetherIsomorphismTheorem-4-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_NoetherIsomorphismTheorem-4-2-1">We first verify that <span class="process-math">\(\varphi\)</span> is a homomorphism. Note that <span class="process-math">\(\varphi(1_R) = 1_R+I\)</span> which is the multiplicative identity in <span class="process-math">\(R/I\text{.}\)</span>
@@ -823,10 +871,10 @@ a(bc)+I = (ab)c+I.
 <div class="para" id="ssec_NoetherIsomorphismTheorem-8">Define <span class="process-math">\(f\colon R/\ker \varphi \to \mathrm{im} \varphi\)</span> by <span class="process-math">\(f(r+\ker \varphi) = \varphi(r)\text{.}\)</span>
 </div>
 <article class="lemma theorem-like" id="ssec_NoetherIsomorphismTheorem-9"><h4 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.3.10</span><span class="period">.</span>
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.3.13</span><span class="period">.</span>
 </h4>
 <div class="para" id="ssec_NoetherIsomorphismTheorem-9-1-1">Using the notation from above, <span class="process-math">\(f\)</span> is a well-defined function.</div></article><details id="ssec_NoetherIsomorphismTheorem-10" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_NoetherIsomorphismTheorem-10-1">Suppose that <span class="process-math">\(r_1 + \ker\varphi = r_2 + \ker\varphi\text{.}\)</span> Then <span class="process-math">\(r_2-r_1 \in \ker\varphi\text{,}\)</span> so <span class="process-math">\(\varphi(r_2-r_1) = 0_S\text{,}\)</span> and thus <span class="process-math">\(\varphi(r_1) = \varphi(r_2)\text{.}\)</span> Therefore, <span class="process-math">\(f(r_1+\ker\varphi) = f(r_2+\ker\varphi)\text{,}\)</span> and <span class="process-math">\(f\)</span> is well-defined.</div></article></details><article class="lemma theorem-like" id="ssec_NoetherIsomorphismTheorem-11"><h4 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.3.11</span><span class="period">.</span>
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.3.14</span><span class="period">.</span>
 </h4>
 <div class="para" id="ssec_NoetherIsomorphismTheorem-11-1-1">Using the notation above, <span class="process-math">\(f\)</span> is a homomorphism.</div></article><details id="ssec_NoetherIsomorphismTheorem-12" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_NoetherIsomorphismTheorem-12-1">We have <span class="process-math">\(f(1_R+\ker\varphi) = \varphi(1_R) = 1_S\)</span> as <span class="process-math">\(\varphi\)</span> is a homomorphism.</div> <div class="para logical" id="ssec_NoetherIsomorphismTheorem-12-2">
 <div class="para">We show that <span class="process-math">\(f\)</span> preserves addition. That it preserves multiplication will follow similarly. We compute:</div>
@@ -840,15 +888,15 @@ f((x+\ker\varphi) + (y+\ker\varphi)) \amp= f((x+y)+\ker\varphi) \\
 </div>
 <div class="para">where we have used that <span class="process-math">\(\varphi\)</span> is a homomorphism in line 2.</div>
 </div></article></details><article class="lemma theorem-like" id="ssec_NoetherIsomorphismTheorem-13"><h4 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.3.12</span><span class="period">.</span>
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.3.15</span><span class="period">.</span>
 </h4>
 <div class="para" id="ssec_NoetherIsomorphismTheorem-13-1-1">Using the notation above, <span class="process-math">\(f\)</span> is one-to-one.</div></article><details id="ssec_NoetherIsomorphismTheorem-14" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_NoetherIsomorphismTheorem-14-1">Suppose that <span class="process-math">\(f(r_1 + \ker\varphi) = f(r_2 + \ker\varphi)\text{.}\)</span> That is, <span class="process-math">\(\varphi(r_1) = \varphi(r_2)\text{.}\)</span> Then <span class="process-math">\(\varphi(r_1 - r_2) = 0_S\text{,}\)</span> so <span class="process-math">\(r_1 -r_2 \in \ker\varphi\text{,}\)</span> and therefore <span class="process-math">\(r_1 + \ker\varphi = r_2 + \ker \varphi\text{.}\)</span> Thus, <span class="process-math">\(f\)</span> is one-to-one.</div></article></details><article class="lemma theorem-like" id="ssec_NoetherIsomorphismTheorem-15"><h4 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.3.13</span><span class="period">.</span>
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.3.16</span><span class="period">.</span>
 </h4>
 <div class="para" id="ssec_NoetherIsomorphismTheorem-15-1-1">Using the notation above, <span class="process-math">\(f\)</span> is onto.</div></article><details id="ssec_NoetherIsomorphismTheorem-16" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_NoetherIsomorphismTheorem-16-1">Since <span class="process-math">\(\varphi\)</span> is onto <span class="process-math">\(\mathrm{im} \varphi\)</span> by definition, given any <span class="process-math">\(s\in \mathrm{im} \varphi\)</span> there is some <span class="process-math">\(r\in R\)</span> such that <span class="process-math">\(\varphi(r) = s\text{.}\)</span> Then <span class="process-math">\(f(r+\ker\varphi) = \varphi(r)\text{.}\)</span>
 </div></article></details><div class="para" id="ssec_NoetherIsomorphismTheorem-17">We thus obtain the following, due to Emmy Noether:</div>
 <article class="theorem theorem-like" id="ssec_NoetherIsomorphismTheorem-18"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.14</span><span class="space"> </span><span class="creator">(E. Noether)</span><span class="period">.</span><span class="space"> </span><span class="title">Noether’s Isomorphism Theorem.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.17</span><span class="space"> </span><span class="creator">(E. Noether)</span><span class="period">.</span><span class="space"> </span><span class="title">Noether’s Isomorphism Theorem.</span>
 </h4>
 <div class="para" id="ssec_NoetherIsomorphismTheorem-18-5-1">Let <span class="process-math">\(\varphi \colon R\to S\)</span> be a homomorphism of commutative rings. Then <span class="process-math">\(R/\ker \varphi \cong \mathrm{im} \varphi\text{.}\)</span>
 </div> <div class="para" id="ssec_NoetherIsomorphismTheorem-18-5-2">In particular, if <span class="process-math">\(\varphi \colon R\to S\)</span> is an epimorphism (it is onto), <span class="process-math">\(R/\ker \varphi \cong S\text{.}\)</span>
@@ -871,7 +919,7 @@ R/\ker\varphi @&gt;\sim&gt;&gt; \mathrm{im}\varphi
 </h3>
 <div class="para" id="subsec--2">In the next three examples, we make heavy use of the fact that the evaluation homomorphism from <a href="sec_homomorphisms.html#exer_evaluationHomomorphism" class="xref" data-knowl="./knowl/xref/exer_evaluationHomomorphism.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.1.7.8: Evaluation Homomorphism">Exercise 3.1.7.8</a> is a homomorphism. We prove three separate isomorphisms using it.</div>
 <article class="example example-like" id="subsec--3"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.15</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.18</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="subsec--3-1-1">
 <div class="para">There is an isomorphism of rings <span class="process-math">\(\Z[x]/(x)\cong \Z\text{.}\)</span> Indeed, let us consider the evaluation homomorphism</div>
@@ -900,7 +948,7 @@ f(x) = a_1x+\cdots + a_nx^n = x(a_1+\cdots +a_nx^{n-1})\text{.}
 </div> <div class="para" id="subsec--3-1-4">By the Noether Isomorphism Theorem we have <span class="process-math">\(\Z[x]/(x)\cong \Z\text{.}\)</span>
 </div></article><div class="para" id="subsec--4">The previous example illustrates the power of the evaluation mapping. Here’s another (similar) example.</div>
 <article class="example example-like" id="subsec--5"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.16</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.19</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="subsec--5-1-1">
 <div class="para">There is an isomorphism of rings <span class="process-math">\(\Q[x]/(x-5)\cong \Q\text{.}\)</span> Indeed, let us consider the evaluation at <span class="process-math">\(5\)</span> mapping:</div>
@@ -913,7 +961,7 @@ f(x) = a_1x+\cdots + a_nx^n = x(a_1+\cdots +a_nx^{n-1})\text{.}
 </div>
 </div> <div class="para" id="subsec--5-1-2">The evaluation at <span class="process-math">\(5\)</span> mapping is an epimorphism as for any <span class="process-math">\(r\in\Q\)</span> we have <span class="process-math">\(\mathrm{ev}_5(r) = r\text{.}\)</span> By the Noether Isomorphism Theorem <span class="process-math">\(\Q[x]/(x-5)\cong \Q\text{.}\)</span>
 </div> <div class="para" id="subsec--5-1-3">Of course nothing is special about <span class="process-math">\(5\)</span> here. You will prove a general theorem in Exercise????</div></article><article class="example example-like" id="ex_algebraicDefinitionC"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.17</span><span class="period">.</span><span class="space"> </span><span class="title">Algebraic Definition of Complex Numbers.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.20</span><span class="period">.</span><span class="space"> </span><span class="title">Algebraic Definition of Complex Numbers.</span>
 </h4>
 <div class="para" id="ex_algebraicDefinitionC-2-1">At this point, we’ve seen two different incarnations of the complex numbers: <a href="sec_fields.html#def_complexNumbers" class="xref" data-knowl="./knowl/xref/def_complexNumbers.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.3">Definition 2.1.3</a> and <a href="sec_fields.html#exer_complexNumbersAsMatrices" class="xref" data-knowl="./knowl/xref/exer_complexNumbersAsMatrices.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 2.1.7.3">Exercise 2.1.7.3</a> We will show yet another way of constructing them.</div> <div class="para" id="ex_algebraicDefinitionC-2-2">Let <span class="process-math">\(\mathrm{ev}_i\colon\R[x]\to\C\)</span> be the evaluation at <span class="process-math">\(i\)</span> homomorphism. Let’s also note that <span class="process-math">\(\mathrm{ev}_i(a+bx) = a+bi\text{.}\)</span> Thus <span class="process-math">\(\mathrm{ev}_i\)</span> is an epimorphism.</div> <div class="para logical" id="ex_algebraicDefinitionC-2-3">
 <div class="para">Since <span class="process-math">\(\mathrm{ev}_i(x^2+1) = i^2+1 = -1+1 = 0\)</span> we know that <span class="process-math">\(x^2+1\in\ker\mathrm{ev}_i\text{.}\)</span> Suppose that <span class="process-math">\(p(x)\in\ker\mathrm{ev}_i\text{.}\)</span> Using the <a href="sec_principalIdealsDomains.html#thm_polynomialDivisionAlgorithm" class="xref" data-knowl="./knowl/xref/thm_polynomialDivisionAlgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.4.6: Polynomial Division Algorithm">Polynomial Division Algorithm</a>, we can divide <span class="process-math">\(p(x)\)</span> by <span class="process-math">\(x^2+1\)</span> to get</div>
@@ -942,19 +990,61 @@ p(x) = q(x)(x^2+1) + r(x)
 \R[x]/(x^2+1)\cong \C.
 \end{equation*}
 </div>
-</div> <div class="para" id="ex_algebraicDefinitionC-2-4">This example shows we could redefine the complex numbers as <span class="process-math">\(\R[x]/(x^2+1)\)</span> and this is a purely algebraic definition of <span class="process-math">\(\C\)</span> (up to using <span class="process-math">\(\R\)</span>).</div></article><article class="activity project-like" id="subsec--7"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.6</span><span class="period">.</span>
+</div> <div class="para" id="ex_algebraicDefinitionC-2-4">This example shows we could redefine the complex numbers as <span class="process-math">\(\R[x]/(x^2+1)\)</span> and this is a purely algebraic definition of <span class="process-math">\(\C\)</span> (up to using <span class="process-math">\(\R\)</span>).</div></article><article class="example example-like" id="subsec--7"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.21</span><span class="period">.</span>
 </h4>
-<div class="para" id="subsec--7-1-1">Let <span class="process-math">\(R = \Z/6\)</span> and define <span class="process-math">\(\varphi\colon \Z/6 \to \Z/2\)</span> by <span class="process-math">\(\varphi(\overline{x}) = \overline{x}\text{.}\)</span> That is, <span class="process-math">\(\varphi\)</span> sends an equivalence class <span class="process-math">\(\overline{x}\in \Z/6\)</span> represented by <span class="process-math">\(x\in \Z\)</span> to the equivalence class represented by <span class="process-math">\(x\)</span> in <span class="process-math">\(\Z/2\text{.}\)</span>
-</div> <ol class="decimal" id="subsec--7-1-2">
-<li id="subsec--7-1-2-1"><div class="para" id="p-derived-subsec--7-1-2-1">Show that <span class="process-math">\(\varphi\)</span> is a <a href="sec_integersModuloM.html#def-well-defined" class="xref" data-knowl="./knowl/xref/def-well-defined.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.4.8">well-defined</a> function. That is, to say if <span class="process-math">\(a\equiv_6 b\text{,}\)</span> then <span class="process-math">\(\varphi(a) = \varphi(b)\text{.}\)</span>
+<div class="para logical" id="subsec--7-1-1">
+<div class="para">Let’s now consider <span class="process-math">\((1+\sqrt{-2})\in\Z[\sqrt{-2}]\text{.}\)</span> Since <span class="process-math">\(1+\sqrt{-2}\in(1+\sqrt{-2})\)</span> we have equality of cosets:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sqrt{-2} + (1+\sqrt{-2}) = -1+(1+\sqrt{-2}).
+\end{equation*}
+</div>
+<div class="para">This means that any <span class="process-math">\(\sqrt{-2}\)</span> can be replaced with a <span class="process-math">\(-1\text{.}\)</span> Also notice that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(1+\sqrt{-2})^2 = -3+2\sqrt{-2}\in (1+\sqrt{-2})
+\end{equation*}
+</div>
+<div class="para">and so, coupled with the previous fact, we have equality of cosets:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0+(1+\sqrt{-2}) = -3+2\sqrt{-2}+(1+\sqrt{-2}) = -5+(1+\sqrt{-2})
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(5=-(-5)\in(1+\sqrt{-2})\text{.}\)</span>
+</div>
+</div> <div class="para" id="subsec--7-1-2">This seems to indicate that the quotient ring doesn’t have a <span class="process-math">\(\sqrt{-2}\)</span> (as it becomes <span class="process-math">\(-1\)</span>) so it’s as if we just have <span class="process-math">\(\Z\text{.}\)</span> Furthermore, <span class="process-math">\(5=0\)</span> in this ring. One ring that should come to mind is <span class="process-math">\(\mathbb{F}_5\text{!}\)</span> Let’s try to prove it is isomorphic to <span class="process-math">\(\mathbb{F}_5\text{.}\)</span>
+</div> <div class="para logical" id="subsec--7-1-3">
+<div class="para">To apply the Noether Isomorphism Theorem we first need a homomorphism. Whatever the homomorphism we define it should send <span class="process-math">\(\sqrt{-2}\)</span> to <span class="process-math">\(-1\text{.}\)</span> Likely it should be similar to the reduction modulo <span class="process-math">\(5\)</span> mapping as well. Coupling these two requirements leads to <span class="process-math">\(\varphi\colon\Z[\sqrt{-2}]\to\mathbb{F}_5\)</span> defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\varphi(a+b\sqrt{-2}) = \overline{a-b}.
+\end{equation*}
+</div>
+</div> <div class="para logical" id="subsec--7-1-4">
+<div class="para">Let’s check it is a homomorphism: <span class="process-math">\(\varphi(1) = \bar{1}\)</span> and so <span class="process-math">\(\varphi\)</span> preserves unity. For <span class="process-math">\(a+b\sqrt{-2},c+d\sqrt{-2}\in\Z[\sqrt{-2}]\)</span> we have</div>
+<div class="displaymath process-math" id="subsec--7-1-4-4">
+\begin{align*}
+\varphi((a+b\sqrt{-2})(c+d\sqrt{-2})) \amp= \varphi(ac-2bd+(ad+bc)\sqrt{-2}) \\
+\amp=\overline{ac-2bd-(ad-bc)} \\
+\amp=\overline{ac-2bd-ad+bc)} \\
+\varphi(a+b\sqrt{-2})\varphi(c+d\sqrt{-2})\amp=\overline{a-b}\cdot\overline{c-d} 
+\end{align*}
+</div>
+</div></article><article class="activity project-like" id="subsec--8"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec--8-1-1">Let <span class="process-math">\(R = \Z/6\)</span> and define <span class="process-math">\(\varphi\colon \Z/6 \to \Z/2\)</span> by <span class="process-math">\(\varphi(\overline{x}) = \overline{x}\text{.}\)</span> That is, <span class="process-math">\(\varphi\)</span> sends an equivalence class <span class="process-math">\(\overline{x}\in \Z/6\)</span> represented by <span class="process-math">\(x\in \Z\)</span> to the equivalence class represented by <span class="process-math">\(x\)</span> in <span class="process-math">\(\Z/2\text{.}\)</span>
+</div> <ol class="decimal" id="subsec--8-1-2">
+<li id="subsec--8-1-2-1"><div class="para" id="p-derived-subsec--8-1-2-1">Show that <span class="process-math">\(\varphi\)</span> is a <a href="sec_integersModuloM.html#def-well-defined" class="xref" data-knowl="./knowl/xref/def-well-defined.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.4.8">well-defined</a> function. That is, to say if <span class="process-math">\(a\equiv_6 b\text{,}\)</span> then <span class="process-math">\(\varphi(a) = \varphi(b)\text{.}\)</span>
 </div></li>
-<li id="subsec--7-1-2-2"><div class="para" id="p-derived-subsec--7-1-2-2">Prove that <span class="process-math">\(\varphi\)</span> is a homomorphism.</div></li>
-<li id="subsec--7-1-2-3"><div class="para" id="p-derived-subsec--7-1-2-3">Is <span class="process-math">\(\varphi\)</span> onto? Justify.</div></li>
-<li id="subsec--7-1-2-4"><div class="para" id="p-derived-subsec--7-1-2-4">Compute <span class="process-math">\(\ker\varphi\)</span> (that is, list the elements in the set). Is <span class="process-math">\(\varphi\)</span> one-to-one?</div></li>
-<li id="subsec--7-1-2-5"><div class="para" id="p-derived-subsec--7-1-2-5">Without appealing to the definition, is <span class="process-math">\(\ker\varphi\)</span> prime? Maximal? Explain.</div></li>
+<li id="subsec--8-1-2-2"><div class="para" id="p-derived-subsec--8-1-2-2">Prove that <span class="process-math">\(\varphi\)</span> is a homomorphism.</div></li>
+<li id="subsec--8-1-2-3"><div class="para" id="p-derived-subsec--8-1-2-3">Is <span class="process-math">\(\varphi\)</span> onto? Justify.</div></li>
+<li id="subsec--8-1-2-4"><div class="para" id="p-derived-subsec--8-1-2-4">Compute <span class="process-math">\(\ker\varphi\)</span> (that is, list the elements in the set). Is <span class="process-math">\(\varphi\)</span> one-to-one?</div></li>
+<li id="subsec--8-1-2-5"><div class="para" id="p-derived-subsec--8-1-2-5">Without appealing to the definition, is <span class="process-math">\(\ker\varphi\)</span> prime? Maximal? Explain.</div></li>
 </ol>
-<div class="solutions"><details id="subsec--7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="displaymath process-math">
+<div class="solutions"><details id="subsec--8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="displaymath process-math">
 \begin{equation*}
 \begin{CD}
 S^{{\mathcal{W}}_\Lambda}\otimes T @&gt;j&gt;&gt; T\\
@@ -983,31 +1073,51 @@ S^{{\mathcal{W}}_\Lambda}\otimes T @&gt;j&gt;&gt; T\\
 <li id="exers_divisibilityIntegralDomains-1-1-2-10"><div class="para" id="exers_divisibilityIntegralDomains-1-1-2-10-1">Suppose <span class="process-math">\(I\)</span> is an ideal, then <span class="process-math">\((r+I)\cdot (s+I) = rs+I\text{.}\)</span>
 </div></li>
 </ol></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="exers_divisibilityIntegralDomains-2-1-1">The quotient ring <span class="process-math">\(\Z[i]/(1+i)\)</span> is isomorphic to <span class="process-math">\(\mathbb{F}_2\text{.}\)</span> Prove it by writing out all of the elements of the quotient ring and computing their addition and multiplication tables.</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para logical" id="exers_divisibilityIntegralDomains-3-1-1">
-<div class="para">Consider the function <span class="process-math">\(\varphi\colon \Z[i]\to \mathbb{F}_5\)</span> given by <span class="process-math">\(\varphi(a+bi) = a-2b\text{.}\)</span>
-</div>
-<ol class="lower-alpha" id="exers_divisibilityIntegralDomains-3-1-1-3">
-<li id="exers_divisibilityIntegralDomains-3-1-1-3-1"><div class="para" id="exers_divisibilityIntegralDomains-3-1-1-3-1-1">Show that <span class="process-math">\(\varphi\)</span> is a homomorphism.</div></li>
-<li id="exers_divisibilityIntegralDomains-3-1-1-3-2"><div class="para" id="exers_divisibilityIntegralDomains-3-1-1-3-2-1">Show that <span class="process-math">\(2+i\in\ker\varphi\text{.}\)</span>
+<div class="para" id="exers_divisibilityIntegralDomains-2-1-1">Determine (with brief justification) whether <span class="process-math">\(a + I = b + I\)</span> in the following rings <span class="process-math">\(R\text{.}\)</span>
+</div> <ol class="lower-alpha" id="exers_divisibilityIntegralDomains-2-1-2">
+<li id="exers_divisibilityIntegralDomains-2-1-2-1"><div class="para" id="p-derived-exers_divisibilityIntegralDomains-2-1-2-1">
+<span class="process-math">\(a = 9\text{,}\)</span> <span class="process-math">\(b = 3\text{,}\)</span> <span class="process-math">\(I = (6)\text{,}\)</span> <span class="process-math">\(R = \Z\)</span>
 </div></li>
-<li id="exers_divisibilityIntegralDomains-3-1-1-3-3"><div class="para" id="exers_divisibilityIntegralDomains-3-1-1-3-3-1">Show that the kernel consists of all multiples of <span class="process-math">\(2+i\text{.}\)</span> Hint: You will get a linear system of two equations in two unknowns. They will have different slope so a unique solution exists in <span class="process-math">\(\Q\text{.}\)</span> You will need to show that solution is integral.</div></li>
-<li id="exers_divisibilityIntegralDomains-3-1-1-3-4"><div class="para" id="exers_divisibilityIntegralDomains-3-1-1-3-4-1">Use the Noether Isomorphism theorem to identify <span class="process-math">\(\Z[i]/(2+i)\text{.}\)</span>
+<li id="exers_divisibilityIntegralDomains-2-1-2-2"><div class="para" id="p-derived-exers_divisibilityIntegralDomains-2-1-2-2">
+<span class="process-math">\(a = 10\text{,}\)</span> <span class="process-math">\(b = 4\text{,}\)</span> <span class="process-math">\(I = (7)\text{,}\)</span> <span class="process-math">\(R = \Z\)</span>
+</div></li>
+<li id="exers_divisibilityIntegralDomains-2-1-2-3"><div class="para" id="p-derived-exers_divisibilityIntegralDomains-2-1-2-3">
+<span class="process-math">\(a = 9\text{,}\)</span> <span class="process-math">\(b = 3\text{,}\)</span> <span class="process-math">\(I = (6)\text{,}\)</span> <span class="process-math">\(R = \Z[x]\)</span>
+</div></li>
+<li id="exers_divisibilityIntegralDomains-2-1-2-4"><div class="para" id="p-derived-exers_divisibilityIntegralDomains-2-1-2-4">
+<span class="process-math">\(a = x^2+x-2\text{,}\)</span> <span class="process-math">\(b = x-1\text{,}\)</span> <span class="process-math">\(I = (x+1)\text{,}\)</span> <span class="process-math">\(R = \Q[x]\)</span>
+</div></li>
+<li id="exers_divisibilityIntegralDomains-2-1-2-5"><div class="para" id="p-derived-exers_divisibilityIntegralDomains-2-1-2-5">(<em class="emphasis">Challenge.</em>) <span class="process-math">\(a = x^3\text{,}\)</span> <span class="process-math">\(b = x^2+2x\text{,}\)</span> <span class="process-math">\(I = (y-x^2, y-x-2)\text{,}\)</span> <span class="process-math">\(R = \Q[x,y]\)</span>
+</div></li>
+</ol></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="exers_divisibilityIntegralDomains-3-1-1">Prove that <span class="process-math">\(p(x,y),q(x,y)\in\C[x,y]\)</span> are congruent modulo <span class="process-math">\((x,y)\)</span> if and only if they have the same constant term.</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="exers_divisibilityIntegralDomains-4-1-1">The quotient ring <span class="process-math">\(\Z[i]/(1+i)\)</span> is isomorphic to <span class="process-math">\(\mathbb{F}_2\text{.}\)</span> Prove it by writing out all of the elements of the quotient ring and computing their addition and multiplication tables.</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para logical" id="exers_divisibilityIntegralDomains-5-1-1">
+<div class="para">In this exercise you will prove that <span class="process-math">\(\Z[i]/(2+i)\cong\mathbb{Z}/5\text{.}\)</span> It will proceed in a sequence of steps.</div>
+<ol class="lower-alpha" id="exers_divisibilityIntegralDomains-5-1-1-2">
+<li id="exers_divisibilityIntegralDomains-5-1-1-2-1"><div class="para" id="exers_divisibilityIntegralDomains-5-1-1-2-1-1">Show that in <span class="process-math">\(\Z[i]/(2+i)\)</span> we have <span class="process-math">\(5+(2+i) = 0+(2+i)\text{.}\)</span>
+</div></li>
+<li id="exers_divisibilityIntegralDomains-5-1-1-2-2"><div class="para" id="exers_divisibilityIntegralDomains-5-1-1-2-2-1">Use the multiplicativity of the norm <span class="process-math">\(N\colon\Z[i]\to\N\)</span> given by <span class="process-math">\(N(a+bi) = a^2+b^2\)</span> to prove that the non-zero elements in <span class="process-math">\((2+i)\)</span> have norm divisible by <span class="process-math">\(5\text{:}\)</span> <span class="process-math">\(a+bi\in (2+i)\)</span> implies <span class="process-math">\(5\mid N(a+bi)\text{.}\)</span>
+</div></li>
+<li id="exers_divisibilityIntegralDomains-5-1-1-2-3"><div class="para" id="exers_divisibilityIntegralDomains-5-1-1-2-3-1">Show that the unique homomorphism <span class="process-math">\(\varphi\colon \Z\to\Z[i]/(2+i)\)</span> defined by <span class="process-math">\(\varphi(a) = a+(2+i)\)</span> is in fact a homomorphism (or use a result to see it is).</div></li>
+<li id="exers_divisibilityIntegralDomains-5-1-1-2-4"><div class="para" id="exers_divisibilityIntegralDomains-5-1-1-2-4-1">Show that <span class="process-math">\(5\in \ker\varphi\text{.}\)</span> Use (b) to prove that <span class="process-math">\(5\)</span> is the smallest positive integer <span class="process-math">\(a\in\Z\)</span> such that <span class="process-math">\(\varphi(a) = 0+(2+i)\text{.}\)</span>
+</div></li>
+<li id="exers_divisibilityIntegralDomains-5-1-1-2-5"><div class="para" id="exers_divisibilityIntegralDomains-5-1-1-2-5-1">Prove that <span class="process-math">\(\varphi\)</span> is an epimorphism using coset arithmetic and then use the Noether isomorphism theorem to prove <span class="process-math">\(\Z/5\cong \Z[i]/(2+i)\text{.}\)</span>
 </div></li>
 </ol>
-</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="exers_divisibilityIntegralDomains-4-1-1">Ponder what happens in general with a quotient <span class="process-math">\(\Z[i]/(a+bi)\)</span> where <span class="process-math">\(a^2+b^2\)</span> is prime.</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="exers_divisibilityIntegralDomains-5-1-1">Let <span class="process-math">\(R\)</span> be a ring. Prove that for any <span class="process-math">\(a\in R\text{,}\)</span> we have an isomorphism <span class="process-math">\(R[x]/(x-a)\cong R\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="exers_divisibilityIntegralDomains-6-1-1">Suppose <span class="process-math">\(m,n\in\N\)</span> with <span class="process-math">\(m\mid n\text{.}\)</span> Define <span class="process-math">\(\varphi\colon \Z/n\to\Z/m\)</span> given by <span class="process-math">\(\varphi(\bar{x}) = \bar{x}\text{.}\)</span> That is, <span class="process-math">\(\varphi\)</span> sends an equivalence class <span class="process-math">\(\bar{x}\in \Z/n\)</span> represented by <span class="process-math">\(x\in\Z\)</span> to the equivalence class represented by <span class="process-math">\(\bar{x}\in\Z/m\text{.}\)</span>
-</div> <ol class="lower-alpha" id="exers_divisibilityIntegralDomains-6-1-2">
-<li id="exers_divisibilityIntegralDomains-6-1-2-1"><div class="para" id="exers_divisibilityIntegralDomains-6-1-2-1-1">Prove <span class="process-math">\(\varphi\)</span> is well-defined: If <span class="process-math">\(x,y\in \Z\)</span> are such that <span class="process-math">\(\bar{x}=\bar{y}\)</span> in <span class="process-math">\(\Z/n\text{,}\)</span> then <span class="process-math">\(\bar{x} = \bar{y}\)</span> in <span class="process-math">\(\Z/m\text{.}\)</span> This part uses the divsibility hypothesis.</div></li>
-<li id="exers_divisibilityIntegralDomains-6-1-2-2"><div class="para" id="exers_divisibilityIntegralDomains-6-1-2-2-1">Prove <span class="process-math">\(\varphi\)</span> is a homomorphism.</div></li>
-<li id="exers_divisibilityIntegralDomains-6-1-2-3"><div class="para" id="exers_divisibilityIntegralDomains-6-1-2-3-1">Determine if <span class="process-math">\(\varphi\)</span> is a monomorphism, epimorphism, and/or isomorphism.</div></li>
-<li id="exers_divisibilityIntegralDomains-6-1-2-4"><div class="para" id="exers_divisibilityIntegralDomains-6-1-2-4-1">What is the kernel and what does the Noether Isomorphism tell us here?</div></li>
-</ol></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="exers_divisibilityIntegralDomains-7-1-1">Show that if <span class="process-math">\(m,n\in\N\)</span> and <span class="process-math">\(m\nmid n\text{,}\)</span> then there cannot exist a homomorphism <span class="process-math">\(\varphi\colon \Z/n\to\Z/m\text{.}\)</span> Hint: Look at the image of the unity.</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para logical" id="exers_divisibilityIntegralDomains-8-1-1">
+<div class="para" id="exers_divisibilityIntegralDomains-6-1-1">Ponder what happens in general with a quotient <span class="process-math">\(\Z[i]/(a+bi)\)</span> where <span class="process-math">\(a^2+b^2\)</span> is prime.</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="exers_divisibilityIntegralDomains-7-1-1">Let <span class="process-math">\(R\)</span> be a ring. Prove that for any <span class="process-math">\(a\in R\text{,}\)</span> we have an isomorphism <span class="process-math">\(R[x]/(x-a)\cong R\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="exers_divisibilityIntegralDomains-8-1-1">Suppose <span class="process-math">\(m,n\in\N\)</span> with <span class="process-math">\(m\mid n\text{.}\)</span> Define <span class="process-math">\(\varphi\colon \Z/n\to\Z/m\)</span> given by <span class="process-math">\(\varphi(\bar{x}) = \bar{x}\text{.}\)</span> That is, <span class="process-math">\(\varphi\)</span> sends an equivalence class <span class="process-math">\(\bar{x}\in \Z/n\)</span> represented by <span class="process-math">\(x\in\Z\)</span> to the equivalence class represented by <span class="process-math">\(\bar{x}\in\Z/m\text{.}\)</span>
+</div> <ol class="lower-alpha" id="exers_divisibilityIntegralDomains-8-1-2">
+<li id="exers_divisibilityIntegralDomains-8-1-2-1"><div class="para" id="exers_divisibilityIntegralDomains-8-1-2-1-1">Prove <span class="process-math">\(\varphi\)</span> is well-defined: If <span class="process-math">\(x,y\in \Z\)</span> are such that <span class="process-math">\(\bar{x}=\bar{y}\)</span> in <span class="process-math">\(\Z/n\text{,}\)</span> then <span class="process-math">\(\bar{x} = \bar{y}\)</span> in <span class="process-math">\(\Z/m\text{.}\)</span> This part uses the divsibility hypothesis.</div></li>
+<li id="exers_divisibilityIntegralDomains-8-1-2-2"><div class="para" id="exers_divisibilityIntegralDomains-8-1-2-2-1">Prove <span class="process-math">\(\varphi\)</span> is a homomorphism.</div></li>
+<li id="exers_divisibilityIntegralDomains-8-1-2-3"><div class="para" id="exers_divisibilityIntegralDomains-8-1-2-3-1">Determine if <span class="process-math">\(\varphi\)</span> is a monomorphism, epimorphism, and/or isomorphism.</div></li>
+<li id="exers_divisibilityIntegralDomains-8-1-2-4"><div class="para" id="exers_divisibilityIntegralDomains-8-1-2-4-1">What is the kernel and what does the Noether Isomorphism tell us here?</div></li>
+</ol></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="exers_divisibilityIntegralDomains-9-1-1">Show that if <span class="process-math">\(m,n\in\N\)</span> and <span class="process-math">\(m\nmid n\text{,}\)</span> then there cannot exist a homomorphism <span class="process-math">\(\varphi\colon \Z/n\to\Z/m\text{.}\)</span> Hint: Look at the image of the unity.</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para logical" id="exers_divisibilityIntegralDomains-10-1-1">
 <div class="para">Consider the polynomial ring in two variables <span class="process-math">\(\Q[x,y]\)</span> over <span class="process-math">\(\Q\text{.}\)</span> Elements here look like:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1015,7 +1125,7 @@ p(x,y) = a_{00} + a_{10}x+a_{01}y+a_{20}x^2+a_{11}xy+a_{02}y^2+\cdots + a_{ij}x^
 \end{equation*}
 </div>
 <div class="para">where the subscript on <span class="process-math">\(a_{ij}\)</span> tells us which monomial it is the coefficient of.</div>
-</div> <div class="para logical" id="exers_divisibilityIntegralDomains-8-1-2">
+</div> <div class="para logical" id="exers_divisibilityIntegralDomains-10-1-2">
 <div class="para">We can think of this polynomial ring as polynomial functions on</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1024,7 +1134,7 @@ p(x,y) = a_{00} + a_{10}x+a_{01}y+a_{20}x^2+a_{11}xy+a_{02}y^2+\cdots + a_{ij}x^
 </div>
 <div class="para">where <span class="process-math">\(p(x,y)\colon \Q^2\to \Q\)</span> is the function <span class="process-math">\((r,s)\mapsto p(r,s)\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="exers_divisibilityIntegralDomains-8-1-3">
+</div> <div class="para logical" id="exers_divisibilityIntegralDomains-10-1-3">
 <div class="para">The horizontal axis is defined by the polynomial equation <span class="process-math">\(y=0\text{.}\)</span> In this way we think of the horizontal axis as being the “same” as the polynomial <span class="process-math">\(y\text{.}\)</span> Prove that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1032,22 +1142,32 @@ p(x,y) = a_{00} + a_{10}x+a_{01}y+a_{20}x^2+a_{11}xy+a_{02}y^2+\cdots + a_{ij}x^
 \end{equation*}
 </div>
 <div class="para">by defining a homomorphism <span class="process-math">\(\varphi\colon \Q[x,y]\to \Q[x]\)</span> by <span class="process-math">\(\varphi(p(x,y)) = p(x,0)\text{.}\)</span> Show that <span class="process-math">\(\varphi\text{,}\)</span> which is just the evaluation at <span class="process-math">\(y=0\)</span> function, is an epimorphism. Then show that it’s kernel is precisely <span class="process-math">\((y)\text{.}\)</span> Deduce the desired isomorphism from the Noether Isomorphism Theorem.</div>
-</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para logical" id="exers_divisibilityIntegralDomains-9-1-1">
+</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para logical" id="exers_divisibilityIntegralDomains-11-1-1">
 <div class="para">Show that for <span class="process-math">\(m\leq n\)</span> and <span class="process-math">\(F\)</span> a field:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 F[x_1,\ldots,x_n]/(x_1,\ldots,x_m)\cong F[x_{m+1},\ldots,x_n].
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="exers_divisibilityIntegralDomains-10-1-1">Prove <span class="process-math">\(\Z[x]/(x^2+1)\cong \Z[i]\text{.}\)</span> Do so by defining an epimorphism <span class="process-math">\(\Z[x]\to\Z[i]\text{.}\)</span> Then show that <span class="process-math">\((x^2+1)\subseteq \ker\)</span> and that any element in <span class="process-math">\(\Z[x]/(x^2+1)\)</span> can be written as a linear coset: <span class="process-math">\(a+bx+(x^2+1)\text{.}\)</span> Use this to deduce <span class="process-math">\(\ker\subseteq (x^2+1)\text{.}\)</span> Finally use the Noether Isomorphism Theorem to prove the desired isomorphism.</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="para" id="exers_divisibilityIntegralDomains-11-1-1"></div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<div class="para" id="exers_divisibilityIntegralDomains-12-1-1"></div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-13"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
-<div class="para" id="exers_divisibilityIntegralDomains-13-1-1"></div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-14"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
-<div class="para" id="exers_divisibilityIntegralDomains-14-1-1"></div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-15"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="para" id="exers_divisibilityIntegralDomains-12-1-1">Prove <span class="process-math">\(\Z[x]/(x^2+1)\cong \Z[i]\text{.}\)</span> Do so by defining an epimorphism <span class="process-math">\(\Z[x]\to\Z[i]\text{.}\)</span> Then show that <span class="process-math">\((x^2+1)\subseteq \ker\)</span> and that any element in <span class="process-math">\(\Z[x]/(x^2+1)\)</span> can be written as a linear coset: <span class="process-math">\(a+bx+(x^2+1)\text{.}\)</span> Use this to deduce <span class="process-math">\(\ker\subseteq (x^2+1)\text{.}\)</span> Finally use the Noether Isomorphism Theorem to prove the desired isomorphism.</div></article><article class="exercise exercise-like" id="exer_correspondenceTheorem"><h4 class="heading">
+<span class="codenumber">13<span class="period">.</span></span><span class="space"> </span><span class="title">Correspondence Theorem.</span>
+</h4>
+<div class="para logical" id="exer_correspondenceTheorem-2-1">
+<div class="para">Prove the weak Correspondence Theorem: For any ideals <span class="process-math">\(I\subseteq R\)</span> and <span class="process-math">\(\bar{J}\subseteq \bar{R}=R/I\text{,}\)</span> there exists a unique ideal <span class="process-math">\(I\subseteq J\subseteq R\)</span> such that the image of <span class="process-math">\(J\)</span> under the quotient <span class="process-math">\(\pi\colon R\to \bar{R}\)</span> is <span class="process-math">\(\bar{J}\text{.}\)</span> Hint: Set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+J = \pi^{-1}(J) = \{r\in R\mid \pi(r)\in J\}.
+\end{equation*}
+</div>
+<div class="para">Show that <span class="process-math">\(J\)</span> is an ideal of <span class="process-math">\(R\text{,}\)</span> that it contains <span class="process-math">\(I\text{,}\)</span> that <span class="process-math">\(\pi(J) = \bar{J}\text{.}\)</span> Then prove that <span class="process-math">\(J\)</span> is unique.</div>
+</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-14"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<div class="para" id="exers_divisibilityIntegralDomains-14-1-1">Use the <a href="sec_quotientRings.html#exer_correspondenceTheorem" class="xref" data-knowl="./knowl/xref/exer_correspondenceTheorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.3.5.13: Correspondence Theorem">Correspondence Theorem</a> to find all ideals in <span class="process-math">\(\Z/12\text{.}\)</span> <a href="sec_ideals.html#exer_subidealsZ12" class="xref" data-knowl="./knowl/xref/exer_subidealsZ12.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.2.5.5">Exercise 3.2.5.5</a> might be helpful too.</div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-15"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
 <div class="para" id="exers_divisibilityIntegralDomains-15-1-1"></div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-16"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
-<div class="para" id="exers_divisibilityIntegralDomains-16-1-1"></div></article></section></section></div>
+<div class="para" id="exers_divisibilityIntegralDomains-16-1-1"></div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-17"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>
+<div class="para" id="exers_divisibilityIntegralDomains-17-1-1"></div></article><article class="exercise exercise-like" id="exers_divisibilityIntegralDomains-18"><h4 class="heading"><span class="codenumber">18<span class="period">.</span></span></h4>
+<div class="para" id="exers_divisibilityIntegralDomains-18-1-1"></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec_ideals.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_principalIdealsDomains.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

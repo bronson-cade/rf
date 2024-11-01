@@ -88,6 +88,37 @@ window.MathJax = {
 <link href="_static/pretext/css/style_oscarlevin.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.4.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.00db6230172ad960.bundle.js"></script><script src="_static/prefix-347.8328b60515045466.bundle.js"></script><script src="_static/prefix-runestone.aa624e4071d017c3.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.51d479d87f8466bb.css">
 <style>
 #ssec_wellordering-8-1-3 { counter-set: ssec_wellordering-8-1-3 0; }
 #ssec_wellordering-8-1-3 > li::marker { content: ""counter(ssec_wellordering-8-1-3,decimal)"."; }
@@ -254,9 +285,9 @@ window.MathJax = {
 #sec_homomorphismsTF-1-2 { counter-set: sec_homomorphismsTF-1-2 0; }
 #sec_homomorphismsTF-1-2 > li::marker { content: "("counter(sec_homomorphismsTF-1-2,lower-alpha)")"; }
 #sec_homomorphismsTF-1-2 > li { counter-increment: sec_homomorphismsTF-1-2; }
-#exers_homomorphisms-15-1-2 { counter-set: exers_homomorphisms-15-1-2 0; }
-#exers_homomorphisms-15-1-2 > li::marker { content: "("counter(exers_homomorphisms-15-1-2,lower-alpha)")"; }
-#exers_homomorphisms-15-1-2 > li { counter-increment: exers_homomorphisms-15-1-2; }
+#exers_homomorphisms-16-1-2 { counter-set: exers_homomorphisms-16-1-2 0; }
+#exers_homomorphisms-16-1-2 > li::marker { content: "("counter(exers_homomorphisms-16-1-2,lower-alpha)")"; }
+#exers_homomorphisms-16-1-2 > li { counter-increment: exers_homomorphisms-16-1-2; }
 #prop_kernelIsIdeal-1-1-5 { counter-set: prop_kernelIsIdeal-1-1-5 0; }
 #prop_kernelIsIdeal-1-1-5 > li::marker { content: ""counter(prop_kernelIsIdeal-1-1-5,decimal)"."; }
 #prop_kernelIsIdeal-1-1-5 > li { counter-increment: prop_kernelIsIdeal-1-1-5; }
@@ -272,12 +303,6 @@ window.MathJax = {
 #exers_ideals-1-1-2 { counter-set: exers_ideals-1-1-2 0; }
 #exers_ideals-1-1-2 > li::marker { content: "("counter(exers_ideals-1-1-2,lower-alpha)")"; }
 #exers_ideals-1-1-2 > li { counter-increment: exers_ideals-1-1-2; }
-#ssec_congruenceModuloI-4-1-2 { counter-set: ssec_congruenceModuloI-4-1-2 0; }
-#ssec_congruenceModuloI-4-1-2 > li::marker { content: ""counter(ssec_congruenceModuloI-4-1-2,decimal)"."; }
-#ssec_congruenceModuloI-4-1-2 > li { counter-increment: ssec_congruenceModuloI-4-1-2; }
-#ssec_congruenceModuloI-4-2-1 { counter-set: ssec_congruenceModuloI-4-2-1 0; }
-#ssec_congruenceModuloI-4-2-1 > li::marker { content: ""counter(ssec_congruenceModuloI-4-2-1,decimal)"."; }
-#ssec_congruenceModuloI-4-2-1 > li { counter-increment: ssec_congruenceModuloI-4-2-1; }
 #ssec_quotientRings-11-1-2 { counter-set: ssec_quotientRings-11-1-2 0; }
 #ssec_quotientRings-11-1-2 > li::marker { content: ""counter(ssec_quotientRings-11-1-2,decimal)"."; }
 #ssec_quotientRings-11-1-2 > li { counter-increment: ssec_quotientRings-11-1-2; }
@@ -287,18 +312,21 @@ window.MathJax = {
 #ssec_quotientRings-14-3-3 { counter-set: ssec_quotientRings-14-3-3 0; }
 #ssec_quotientRings-14-3-3 > li::marker { content: ""counter(ssec_quotientRings-14-3-3,decimal)"."; }
 #ssec_quotientRings-14-3-3 > li { counter-increment: ssec_quotientRings-14-3-3; }
-#subsec--7-1-2 { counter-set: subsec--7-1-2 0; }
-#subsec--7-1-2 > li::marker { content: ""counter(subsec--7-1-2,decimal)"."; }
-#subsec--7-1-2 > li { counter-increment: subsec--7-1-2; }
+#subsec--8-1-2 { counter-set: subsec--8-1-2 0; }
+#subsec--8-1-2 > li::marker { content: ""counter(subsec--8-1-2,decimal)"."; }
+#subsec--8-1-2 > li { counter-increment: subsec--8-1-2; }
 #exers_divisibilityIntegralDomains-1-1-2 { counter-set: exers_divisibilityIntegralDomains-1-1-2 0; }
 #exers_divisibilityIntegralDomains-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-1-1-2,lower-alpha)")"; }
 #exers_divisibilityIntegralDomains-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-1-1-2; }
-#exers_divisibilityIntegralDomains-3-1-1-3 { counter-set: exers_divisibilityIntegralDomains-3-1-1-3 0; }
-#exers_divisibilityIntegralDomains-3-1-1-3 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-3-1-1-3,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-3-1-1-3 > li { counter-increment: exers_divisibilityIntegralDomains-3-1-1-3; }
-#exers_divisibilityIntegralDomains-6-1-2 { counter-set: exers_divisibilityIntegralDomains-6-1-2 0; }
-#exers_divisibilityIntegralDomains-6-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-6-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-6-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-6-1-2; }
+#exers_divisibilityIntegralDomains-2-1-2 { counter-set: exers_divisibilityIntegralDomains-2-1-2 0; }
+#exers_divisibilityIntegralDomains-2-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-2-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-2-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-2-1-2; }
+#exers_divisibilityIntegralDomains-5-1-1-2 { counter-set: exers_divisibilityIntegralDomains-5-1-1-2 0; }
+#exers_divisibilityIntegralDomains-5-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-5-1-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-5-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-5-1-1-2; }
+#exers_divisibilityIntegralDomains-8-1-2 { counter-set: exers_divisibilityIntegralDomains-8-1-2 0; }
+#exers_divisibilityIntegralDomains-8-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-8-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-8-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-8-1-2; }
 #ssec_principalIdealDomains-6-1-1-3 { counter-set: ssec_principalIdealDomains-6-1-1-3 0; }
 #ssec_principalIdealDomains-6-1-1-3 > li::marker { content: ""counter(ssec_principalIdealDomains-6-1-1-3,decimal)"."; }
 #ssec_principalIdealDomains-6-1-1-3 > li { counter-increment: ssec_principalIdealDomains-6-1-1-3; }
@@ -630,12 +658,44 @@ Fr(p+q) \amp= (p+q)^2\\
 \end{equation*}
 </div>
 <div class="para">We conclude that the Frobenius is a homomorphism.</div>
-</div> <div class="para" id="ex_frobeniusAffineLine-3-7">The following checks will be left as an exercise: The Frobenius is a monomorphism, it is not an epimorphism, and hence not an automorphism.</div></article></section><section class="subsection" id="ssec_propertiesOfHomomorphisms"><h3 class="heading hide-type">
+</div> <div class="para" id="ex_frobeniusAffineLine-3-7">The following checks will be left as an exercise: The Frobenius is a monomorphism, it is not an epimorphism, and hence not an automorphism.</div></article><details id="number-theory-proof" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Parsons Problem, Mathematical Proof.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone parsons_section" style="max-width: none;"><div data-component="parsons" class="parsons" id="number-theory-proof">
+<div class="parsons_question parsons-text"><div class="para" id="number-theory-proof-3-1">Create a proof of the theorem: All automorphisms are monomorphisms.</div></div>
+<pre class="parsonsblocks" data-question_label="" style="visibility: hidden;" data-language="natural" data-adaptive="true" data-noindent="true"><div class="para" id="number-theory-proof-4-1-1">Let <span class="process-math">\(\varphi\colon R\to R\)</span> be an automorphism.</div>
+---
+<div class="para" id="number-theory-proof-4-2-2-1">Then there exists an <span class="process-math">\(m\)</span> so that <span class="process-math">\(n = 2m\text{.}\)</span>
+</div>
+---
+<div class="para" id="number-theory-proof-4-2-1-1">Then <span class="process-math">\(n\)</span> is a prime number.</div> #paired
+---
+<div class="para" id="number-theory-proof-4-2-3-1">Then there exists an <span class="process-math">\(m\)</span> so that <span class="process-math">\(n = 2m + 1\text{.}\)</span>
+</div> #paired
+---
+<div class="para" id="number-theory-proof-4-3-1">Click the heels of your ruby slippers together three times.</div> #distractor
+---
+<div class="para" id="number-theory-proof-4-4-1">So <span class="process-math">\(n = 2m + 0\text{.}\)</span>
+</div> <div class="para" id="number-theory-proof-4-4-2">This is a superfluous second paragraph in this block.</div>
+---
+<div class="para" id="number-theory-proof-4-5-1">Thus <span class="process-math">\(n\equiv 0\mod 2\text{.}\)</span>
+</div>
+---
+<div class="para logical" id="number-theory-proof-4-6-1">
+<div class="para">And a little bit of irrelevant multi-line math</div>
+<div class="displaymath process-math" id="number-theory-proof-4-6-1-1">
+\begin{align*}
+c^2&amp;a^2+b^2\\
+&amp;x^2+y^2\text{.}
+\end{align*}
+</div>
+</div> #distractor</pre>
+</div></div></div>
+<div class="solutions"><details id="number-theory-proof-5" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="number-theory-proof-5-1">Dorothy will not be much help with this proof.</div></div></details></div></article></details></section><section class="subsection" id="ssec_propertiesOfHomomorphisms"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="space"> </span><span class="title">Properties of Homomorphisms</span>
 </h3>
 <div class="para" id="ssec_propertiesOfHomomorphisms-2">The sequence of results that follows shows that homomorphisms preserve several of our ring-theoretic notions. This means <a href="sec_homomorphisms.html#def_ringHomomorphism" class="xref" data-knowl="./knowl/xref/def_ringHomomorphism.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1.1">Definition 3.1.1</a> is the <em class="emphasis">right</em> definition. That is, of all the possible functions between rings we isolated a good class to call structure preserving. We begin by showing that homomorphisms preserve the additive identity.</div>
 <article class="theorem theorem-like" id="thm_homomorphismsPreserveZero"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
 </h4>
 <div class="para" id="thm_homomorphismsPreserveZero-1-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism. Then <span class="process-math">\(\varphi(0_R) = 0_S\text{.}\)</span>
 </div></article><details id="thm_homomorphismsPreserveZero-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_homomorphismsPreserveZero-2-1">
@@ -651,7 +711,7 @@ Fr(p+q) \amp= (p+q)^2\\
 <div class="para">as desired.</div>
 </div></article></details><div class="para" id="ssec_propertiesOfHomomorphisms-4">We now show that homomorphisms preserve units.</div>
 <article class="theorem theorem-like" id="thm_homomorphismsPreserveUnits"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
 </h4>
 <div class="para" id="thm_homomorphismsPreserveUnits-1-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism. If <span class="process-math">\(u\in R^\times \text{,}\)</span> then <span class="process-math">\(\varphi(u)\in S^\times\text{.}\)</span>
 </div></article><details id="thm_homomorphismsPreserveUnits-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_homomorphismsPreserveUnits-2-1">
@@ -666,7 +726,7 @@ Fr(p+q) \amp= (p+q)^2\\
 </div>
 </div></article></details><div class="para" id="ssec_propertiesOfHomomorphisms-6">Since homomorphisms are compatible with multiplication, and powers of elements are defined with multiplication, they must preserve powers as the next theorem shows.</div>
 <article class="theorem theorem-like" id="thm_homomorphismsPreservePowers"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
 </h4>
 <div class="para" id="thm_homomorphismsPreservePowers-1-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism. For any <span class="process-math">\(a\in R\)</span> and <span class="process-math">\(n\in\N\text{,}\)</span> we have <span class="process-math">\(\varphi(a)^n = \varphi(a^n)\)</span> in <span class="process-math">\(S\text{.}\)</span>
 </div></article><details id="thm_homomorphismsPreservePowers-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_homomorphismsPreservePowers-2-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism and <span class="process-math">\(a\in R\text{.}\)</span> We now proceed by induction. The base case is <span class="process-math">\(\varphi(a) = \varphi(a)\)</span> which certainly true.</div> <div class="para logical" id="thm_homomorphismsPreservePowers-2-2">
@@ -686,7 +746,7 @@ Fr(p+q) \amp= (p+q)^2\\
 </h3>
 <div class="para" id="ssec_kernelOfAHomomorphism-2">Homomorphisms give rise to a particularly important class of subsets: kernels.</div>
 <article class="definition definition-like" id="ssec_kernelOfAHomomorphism-3"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span>
 </h4> <div class="para logical" id="ssec_kernelOfAHomomorphism-3-2-1">
 <div class="para">Let <span class="process-math">\(\varphi\colon R \to S\)</span> be a ring homomorphism. Then</div>
 <div class="displaymath process-math">
@@ -696,14 +756,14 @@ Fr(p+q) \amp= (p+q)^2\\
 </div>
 <div class="para">is the <dfn class="terminology">kernel</dfn> of <span class="process-math">\(\varphi\text{.}\)</span>
 </div>
-</div></article><div class="para" id="ssec_kernelOfAHomomorphism-4">Note that by <a href="sec_homomorphisms.html#thm_homomorphismsPreserveZero" class="xref" data-knowl="./knowl/xref/thm_homomorphismsPreserveZero.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.4">Theorem 3.1.4</a> we know <span class="process-math">\(0_R\in \ker\varphi\)</span> always. In particular, the kernel of a ring homomorphism is always a non-empty subset.</div>
+</div></article><div class="para" id="ssec_kernelOfAHomomorphism-4">Note that by <a href="sec_homomorphisms.html#thm_homomorphismsPreserveZero" class="xref" data-knowl="./knowl/xref/thm_homomorphismsPreserveZero.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.5">Theorem 3.1.5</a> we know <span class="process-math">\(0_R\in \ker\varphi\)</span> always. In particular, the kernel of a ring homomorphism is always a non-empty subset.</div>
 <article class="activity project-like" id="ssec_kernelOfAHomomorphism-5"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
 </h4>
 <div class="para" id="ssec_kernelOfAHomomorphism-5-1-1">For each homomorphism in <a href="sec_homomorphisms.html#expl-homomorphism-examples" class="xref" data-knowl="./knowl/xref/expl-homomorphism-examples.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 3.1.1">Exploration 3.1.1</a>, find (with justification), the kernel.</div>
 <div class="solutions"><details id="ssec_kernelOfAHomomorphism-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">TBD</div></details></div></article><div class="para" id="ssec_kernelOfAHomomorphism-6">Kernels are a fundamental structure when studying rings. As a first glimpse of their importance, we show that they give a useful way of determining whether their defining homomorphisms are monomorphisms.</div>
 <article class="theorem theorem-like" id="thm_zeroKernelIsInto"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.9</span><span class="period">.</span>
 </h4>
 <div class="para" id="thm_zeroKernelIsInto-1-1">Let <span class="process-math">\(\varphi \colon R\to S\)</span> be a homomorphism. Then <span class="process-math">\(\varphi\)</span> is a monomorphism if and only if <span class="process-math">\(\ker\varphi = \{0\}\text{.}\)</span>
 </div></article><details id="ssec_kernelOfAHomomorphism-8" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_kernelOfAHomomorphism-8-1">Supppose <span class="process-math">\(\varphi\)</span> is a monomomorphism. Since <span class="process-math">\(\varphi\)</span> is a homomorphism we know <span class="process-math">\(\varphi(0) = 0\text{.}\)</span> Suppose now that <span class="process-math">\(x\in\ker\varphi\)</span> so that <span class="process-math">\(\varphi(x)=0\text{.}\)</span> Since <span class="process-math">\(\varphi\)</span> is injective and <span class="process-math">\(\varphi(x)=\varphi(0)\text{,}\)</span> we conclude that <span class="process-math">\(x=0\text{.}\)</span> In particular, <span class="process-math">\(\ker\varphi=\{0\}\text{.}\)</span>
@@ -719,16 +779,16 @@ Fr(p+q) \amp= (p+q)^2\\
 <div class="para">and so <span class="process-math">\(y-x\in\ker\varphi\text{.}\)</span> Since the only element here is <span class="process-math">\(0\text{,}\)</span> we conclude that <span class="process-math">\(y-x=0\)</span> or that <span class="process-math">\(y=x\text{.}\)</span> Thus <span class="process-math">\(\varphi\)</span> is a monomorphism.</div>
 </div></article></details><div class="para" id="ssec_kernelOfAHomomorphism-9">A nice application of this theorem is the following result that shows that homomorphisms from a field are always monomorphisms. They will never fail to be injective!</div>
 <article class="theorem theorem-like" id="thm-homomorphismsFromFieldsInjective"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.9</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.10</span><span class="period">.</span>
 </h4>
-<div class="para" id="thm-homomorphismsFromFieldsInjective-1-1">Suppose <span class="process-math">\(\varphi\colon F\to S\)</span> is a ring homomorphism where <span class="process-math">\(F\)</span> is a field. Then <span class="process-math">\(\varphi\)</span> is a monomorphism.</div></article><details id="ssec_kernelOfAHomomorphism-11" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_kernelOfAHomomorphism-11-1">Suppose <span class="process-math">\(\varphi\colon F\to S\)</span> is a ring homomorphism where <span class="process-math">\(F\)</span> is a field. We show <span class="process-math">\(\varphi\)</span> is a monomorphism by applying <a href="sec_homomorphisms.html#thm_zeroKernelIsInto" class="xref" data-knowl="./knowl/xref/thm_zeroKernelIsInto.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.8">Theorem 3.1.8</a>. Suppose that there is <span class="process-math">\(x\in F\text{,}\)</span> with <span class="process-math">\(\varphi(x) = 0\text{.}\)</span> If <span class="process-math">\(x\neq 0\text{,}\)</span> then there <span class="process-math">\(x\)</span> is a unit. By <a href="sec_homomorphisms.html#thm_homomorphismsPreserveUnits" class="xref" data-knowl="./knowl/xref/thm_homomorphismsPreserveUnits.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.5">Theorem 3.1.5</a>, <span class="process-math">\(\varphi(x)\)</span> is also a unit and in particular is not <span class="process-math">\(0\text{.}\)</span> Thus the only element of <span class="process-math">\(\ker\varphi\)</span> is <span class="process-math">\(0\text{.}\)</span>
+<div class="para" id="thm-homomorphismsFromFieldsInjective-1-1">Suppose <span class="process-math">\(\varphi\colon F\to S\)</span> is a ring homomorphism where <span class="process-math">\(F\)</span> is a field. Then <span class="process-math">\(\varphi\)</span> is a monomorphism.</div></article><details id="ssec_kernelOfAHomomorphism-11" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_kernelOfAHomomorphism-11-1">Suppose <span class="process-math">\(\varphi\colon F\to S\)</span> is a ring homomorphism where <span class="process-math">\(F\)</span> is a field. We show <span class="process-math">\(\varphi\)</span> is a monomorphism by applying <a href="sec_homomorphisms.html#thm_zeroKernelIsInto" class="xref" data-knowl="./knowl/xref/thm_zeroKernelIsInto.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.9">Theorem 3.1.9</a>. Suppose that there is <span class="process-math">\(x\in F\text{,}\)</span> with <span class="process-math">\(\varphi(x) = 0\text{.}\)</span> If <span class="process-math">\(x\neq 0\text{,}\)</span> then there <span class="process-math">\(x\)</span> is a unit. By <a href="sec_homomorphisms.html#thm_homomorphismsPreserveUnits" class="xref" data-knowl="./knowl/xref/thm_homomorphismsPreserveUnits.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.6">Theorem 3.1.6</a>, <span class="process-math">\(\varphi(x)\)</span> is also a unit and in particular is not <span class="process-math">\(0\text{.}\)</span> Thus the only element of <span class="process-math">\(\ker\varphi\)</span> is <span class="process-math">\(0\text{.}\)</span>
 </div></article></details></section><section class="subsection" id="ssec_imageOfAHomomorphism"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="space"> </span><span class="title">Image of a Homomorphism</span>
 </h3>
 <div class="para" id="ssec_imageOfAHomomorphism-2">The image of a homomorphism <span class="process-math">\(\varphi\colon R\to S\)</span> is just different terminology for the range. One reason to use different language is that we will see the image is not just a subset of <span class="process-math">\(S\text{,}\)</span> it is a subring of <span class="process-math">\(S\text{!}\)</span>
 </div>
 <article class="definition definition-like" id="def_imageOfAHomomorphism"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.10</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.11</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="def_imageOfAHomomorphism-1-1">
 <div class="para">Suppose <span class="process-math">\(\varphi\colon R\to S\text{,}\)</span> the image of the <span class="process-math">\(\varphi\text{,}\)</span> denoted <span class="process-math">\(\mathrm{im}\varphi\)</span> is the range of <span class="process-math">\(\varphi\text{:}\)</span>
@@ -742,7 +802,7 @@ Fr(p+q) \amp= (p+q)^2\\
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
 </h4>
 <div class="para" id="ssec_imageOfAHomomorphism-4-1-1">Compute the image of the homomorphisms <a href="sec_homomorphisms.html#expl-homomorphism-examples" class="xref" data-knowl="./knowl/xref/expl-homomorphism-examples.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 3.1.1">Exploration 3.1.1</a>.</div></article><div class="para logical" id="ssec_imageOfAHomomorphism-5">
-<div class="para">Before we prove that the image of a homomorphism is a subring, let’s note that homomorphisms preserve most ring-axioms. In particular, we have defined subtraction of two ring elements <span class="process-math">\(a,b\in R\)</span> as <span class="process-math">\(a-b:=a+(-b)\text{,}\)</span> where <span class="process-math">\(-b\)</span> is the additive inverse of <span class="process-math">\(b\text{.}\)</span> In <a href="sec_homomorphisms.html#exer_homomorphismPreserveAdditiveInverse" class="xref" data-knowl="./knowl/xref/exer_homomorphismPreserveAdditiveInverse.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.1.7.13">Exercise 3.1.7.13</a> you will prove that homorphisms preserve additive inverses, namely: <span class="process-math">\(\varphi(-r) =-\varphi(r)\text{.}\)</span> In particular,</div>
+<div class="para">Before we prove that the image of a homomorphism is a subring, let’s note that homomorphisms preserve most ring-axioms. In particular, we have defined subtraction of two ring elements <span class="process-math">\(a,b\in R\)</span> as <span class="process-math">\(a-b:=a+(-b)\text{,}\)</span> where <span class="process-math">\(-b\)</span> is the additive inverse of <span class="process-math">\(b\text{.}\)</span> In <a href="sec_homomorphisms.html#exer_homomorphismPreserveAdditiveInverse" class="xref" data-knowl="./knowl/xref/exer_homomorphismPreserveAdditiveInverse.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.1.7.14">Exercise 3.1.7.14</a> you will prove that homorphisms preserve additive inverses, namely: <span class="process-math">\(\varphi(-r) =-\varphi(r)\text{.}\)</span> In particular,</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exer_homomorphismPreserveAdditiveInverse.html">
 \begin{equation*}
 \varphi(a)-\varphi(b) = \varphi(a)+\varphi(-b) = \varphi(a-b).
@@ -750,7 +810,7 @@ Fr(p+q) \amp= (p+q)^2\\
 </div>
 </div>
 <article class="theorem theorem-like" id="thm_imageIsASubring"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.11</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.12</span><span class="period">.</span>
 </h4>
 <div class="para" id="thm_imageIsASubring-1-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a homomorphism. Then <span class="process-math">\(\mathrm{im}\varphi\)</span> is a subring of <span class="process-math">\(S\text{.}\)</span>
 </div></article><details id="thm_imageIsASubring-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_imageIsASubring-2-1">Since <span class="process-math">\(\varphi(1_R) = 1_S\text{,}\)</span> we know that <span class="process-math">\(1_S\in\mathrm{im}\varphi\text{.}\)</span> We just need to show it is closed under subtraction and multiplication:</div> <div class="para logical" id="thm_imageIsASubring-2-2">
@@ -789,7 +849,7 @@ n\cdot a = a + a + \cdots + a
 <div class="para">where the right hand sum has <span class="process-math">\(n\)</span> terms. And <span class="process-math">\(0\cdot a=0\text{.}\)</span> We leave it to the reader to check that this is well-defined.</div>
 </div>
 <article class="theorem theorem-like" id="thm_initialRing"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.12</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.13</span><span class="period">.</span>
 </h4>
 <div class="para" id="thm_initialRing-1-1">For any ring <span class="process-math">\(R\text{,}\)</span> there is a unique homomorphism <span class="process-math">\(\varphi\colon \Z\to R\text{.}\)</span>
 </div></article><details id="thm_initialRing-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_initialRing-2-1">Let <span class="process-math">\(\varphi\colon \Z\to R\)</span> be an arbitrary homomorphism. Since the image of unity is unity we have <span class="process-math">\(\varphi(1) = 1_R\text{.}\)</span> Since the image of the additive identity is the additive identity, we have <span class="process-math">\(\varphi(0) = 0_R\text{.}\)</span> By induction, we conclude that <span class="process-math">\(\varphi(n) = n\cdot 1_R\)</span> for any <span class="process-math">\(n\in\N_0\text{.}\)</span> Similarly <span class="process-math">\(\varphi(-n) = (-n)\cdot 1_R\)</span> for any <span class="process-math">\(n\in\N\text{.}\)</span>
@@ -802,7 +862,7 @@ n\cdot a = a + a + \cdots + a
 </h4>
 <div class="para" id="ssec_terminalRing-3-1-1">Verify the terminal ring, if it exists, cannot be <span class="process-math">\(\Z\text{.}\)</span> Do so by showing there is no homomorphism <span class="process-math">\(\varphi\colon \Z/2\to \Z\text{.}\)</span> What about <span class="process-math">\(\Z/2\text{?}\)</span> Can it be terminal?</div></article><div class="para" id="ssec_terminalRing-4">The right choice happens to be zero!</div>
 <article class="theorem theorem-like" id="thm_terminalRing"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.13</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.14</span><span class="period">.</span>
 </h4>
 <div class="para" id="thm_terminalRing-1-1">For any ring <span class="process-math">\(R\text{,}\)</span> there is one and only one homomorphism <span class="process-math">\(\varphi\colon R\to \{0\}\text{.}\)</span>
 </div></article><details id="thm_terminalRing-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_terminalRing-2-1">This is an exercise. There is only one set-theoretic mapping: the zero map. In this case, we just need to see that the zero map is a homomorphism. This is the case if and only if the codomain is <span class="process-math">\(\{0\}\text{.}\)</span>
@@ -817,19 +877,18 @@ n\cdot a = a + a + \cdots + a
 <article class="exercise exercise-like" id="sec_homomorphismsTF"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="para" id="sec_homomorphismsTF-1-1">Mark the following as true or false.</div> <ol class="lower-alpha" id="sec_homomorphismsTF-1-2">
 <li id="sec_homomorphismsTF-1-2-1"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-1">Suppose <span class="process-math">\(R,S\)</span> are rings. Any function <span class="process-math">\(f\colon R\to S\)</span> is a ring homomorphism.</div></li>
-<li id="sec_homomorphismsTF-1-2-2"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-2">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism. Then <span class="process-math">\(\ker(\varphi)\)</span> is an ideal.</div></li>
-<li id="sec_homomorphismsTF-1-2-3"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-3">If <span class="process-math">\(\varphi\colon R\to F\)</span> is a ring homomorphism and <span class="process-math">\(F\)</span> is a field, then <span class="process-math">\(R\)</span> is a field.</div></li>
-<li id="sec_homomorphismsTF-1-2-4"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-4">If <span class="process-math">\(\varphi\colon F\to R\)</span> is a ring homomorphism and <span class="process-math">\(F\)</span> is a field, then <span class="process-math">\(R\)</span> is a field.</div></li>
-<li id="sec_homomorphismsTF-1-2-5"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-5">If <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism and <span class="process-math">\(R\)</span> is a finite ring, then <span class="process-math">\(S\)</span> is a finite ring.</div></li>
-<li id="sec_homomorphismsTF-1-2-6"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-6">If <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism and <span class="process-math">\(S\)</span> is a finite ring, then <span class="process-math">\(R\)</span> is a finite ring.</div></li>
-<li id="sec_homomorphismsTF-1-2-7"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-7">If <span class="process-math">\(\varphi\colon R\to S\)</span> is an injective ring homomorphism and <span class="process-math">\(S\)</span> is a finite ring, then <span class="process-math">\(R\)</span> is a finite ring.</div></li>
-<li id="sec_homomorphismsTF-1-2-8"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-8">The identity map on a ring is a ring homomorphism.</div></li>
-<li id="sec_homomorphismsTF-1-2-9"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-9">The zero map <span class="process-math">\(0\colon R\to R\)</span> defined by <span class="process-math">\(0(r) = 0\)</span> is a ring homomorphism.</div></li>
+<li id="sec_homomorphismsTF-1-2-2"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-2">The identity map on a ring is a ring homomorphism.</div></li>
+<li id="sec_homomorphismsTF-1-2-3"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-3">The zero map <span class="process-math">\(0\colon R\to R\)</span> defined by <span class="process-math">\(0(r) = 0\)</span> is a ring homomorphism.</div></li>
+<li id="sec_homomorphismsTF-1-2-4"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-4">If <span class="process-math">\(\varphi\colon R\to F\)</span> is a ring homomorphism and <span class="process-math">\(F\)</span> is a field, then <span class="process-math">\(R\)</span> is a field.</div></li>
+<li id="sec_homomorphismsTF-1-2-5"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-5">If <span class="process-math">\(\varphi\colon F\to R\)</span> is a ring homomorphism and <span class="process-math">\(F\)</span> is a field, then <span class="process-math">\(R\)</span> is a field.</div></li>
+<li id="sec_homomorphismsTF-1-2-6"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-6">If <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism and <span class="process-math">\(R\)</span> is a finite ring, then <span class="process-math">\(S\)</span> is a finite ring.</div></li>
+<li id="sec_homomorphismsTF-1-2-7"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-7">If <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism and <span class="process-math">\(S\)</span> is a finite ring, then <span class="process-math">\(R\)</span> is a finite ring.</div></li>
+<li id="sec_homomorphismsTF-1-2-8"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-8">If <span class="process-math">\(\varphi\colon R\to S\)</span> is an injective ring homomorphism and <span class="process-math">\(S\)</span> is a finite ring, then <span class="process-math">\(R\)</span> is a finite ring.</div></li>
 </ol></article><article class="exercise exercise-like" id="evaluationHomomorphismIntegral"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="para" id="evaluationHomomorphismIntegral-1-1">Fix <span class="process-math">\(a\in\Z\text{.}\)</span> Let <span class="process-math">\(\mathrm{ev}_a\colon\mathbb{Z}[x]\to\mathbb{R}\)</span> be defined by <span class="process-math">\(\mathrm{ev}_a(p(x)) = p(a)\text{.}\)</span> Prove that <span class="process-math">\(\mathrm{ev}_a\)</span> is a ring homomorphism. Then show that <span class="process-math">\(\mathrm{ev}_a\)</span> is neither injective nor surjective.</div></article><article class="exercise exercise-like" id="exers_homomorphisms-4"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
 <div class="para" id="exers_homomorphisms-4-1-1">Define <span class="process-math">\(\iota\colon\Z\to \Q\)</span> by <span class="process-math">\(\iota(a) = \frac{a}{1}\text{.}\)</span> Prove that <span class="process-math">\(\iota\)</span> is an injective ring homomorphism.</div></article><article class="exercise exercise-like" id="exers_homomorphisms-5"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="exers_homomorphisms-5-1-1">Let <span class="process-math">\(R\)</span> be any ring and <span class="process-math">\(\mathcal{M}_n(R)\)</span> be the set of <span class="process-math">\(n\times n\)</span> matries with entries in <span class="process-math">\(R\text{.}\)</span> Define <span class="process-math">\(\iota\colon R\to M_n(R)\)</span> by <span class="process-math">\(\iota(r) = r\cdot I_n\text{,}\)</span> where <span class="process-math">\(I_n\)</span> is the identity matrix. Prove that <span class="process-math">\(\iota\)</span> is an injective ring homomorphism.</div></article><article class="exercise exercise-like" id="evaluationHomomorphismGeneralR"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="evaluationHomomorphismGeneralR-1-1">Suppose <span class="process-math">\(R\)</span> is a ring. Fix <span class="process-math">\(a\in R\text{.}\)</span> Let <span class="process-math">\(\mathrm{ev}_a\colon R[x]\to R\)</span> be defined by <span class="process-math">\(\mathrm{ev}_a(p(x)) = p(a)\text{.}\)</span> Prove that <span class="process-math">\(\mathrm{ev}_a\)</span> is a ring homomorphism. Is the evaluation homomorphism injective, surjective, and/or bijective?</div></article><article class="exercise exercise-like" id="exers_homomorphisms-7"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="exers_homomorphisms-5-1-1">Let <span class="process-math">\(R\)</span> be any ring and <span class="process-math">\(\mathcal{M}_n(R)\)</span> be the set of <span class="process-math">\(n\times n\)</span> matries with entries in <span class="process-math">\(R\text{.}\)</span> Define <span class="process-math">\(\iota\colon R\to M_n(R)\)</span> by <span class="process-math">\(\iota(r) = r\cdot I_n\text{,}\)</span> where <span class="process-math">\(I_n\)</span> is the identity matrix. Prove that <span class="process-math">\(\iota\)</span> is an injective ring homomorphism.</div></article><article class="exercise exercise-like" id="exer_evaluationHomomorphismGeneralR"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="exer_evaluationHomomorphismGeneralR-1-1">Suppose <span class="process-math">\(R\)</span> is a commutative ring. Fix <span class="process-math">\(a\in R\text{.}\)</span> Let <span class="process-math">\(\mathrm{ev}_a\colon R[x]\to R\)</span> be defined by <span class="process-math">\(\mathrm{ev}_a(p(x)) = p(a)\text{.}\)</span> Prove that <span class="process-math">\(\mathrm{ev}_a\)</span> is a ring homomorphism. Is the evaluation homomorphism injective, surjective, and/or bijective?</div></article><article class="exercise exercise-like" id="exers_homomorphisms-7"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
 <div class="para" id="exers_homomorphisms-7-1-1">Gemini, Google’s LLM, has claimed that for any ring <span class="process-math">\(R\text{,}\)</span> the trace map <span class="process-math">\(\mathrm{tr}\colon M_n(R)\to R\)</span> defined by <span class="process-math">\(\mathrm{tr}(A) = \sum_{i=1}^n a_{ii}\)</span> where <span class="process-math">\(A=(a_{ij})\text{,}\)</span> is a ring homomorphism. This is true for exactly one <span class="process-math">\(n_0\in\N\text{.}\)</span> Find it, prove it is a homomorphism for that <span class="process-math">\(n_0\text{,}\)</span> then show it is not a homomorphism for any <span class="process-math">\(n\neq n_0\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exers_homomorphisms-8"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
 <div class="para" id="exers_homomorphisms-8-1-1">Consider the function <span class="process-math">\(\mathrm{ev}_{\sqrt{2}}\colon \Z[x]\to\R\)</span> defined by <span class="process-math">\(\mathrm{ev}_{\sqrt{2}}(p(x)) = p(\sqrt{2})\text{.}\)</span> Prove that this mapping is a homomorphism. Then show it is neither injective nor bijective. What is it’s image?</div></article><article class="exercise exercise-like" id="exer_evaluationHomomorphism"><h4 class="heading">
@@ -849,18 +908,31 @@ n\cdot a = a + a + \cdots + a
 <div class="para" id="exers_homomorphisms-11-1-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a homomorphism. Prove <span class="process-math">\(\varphi(-a) = -\varphi(a)\)</span> for all <span class="process-math">\(a\in R\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exers_homomorphisms-12"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
 <div class="para" id="exers_homomorphisms-12-1-1">Let <span class="process-math">\(\varphi\colon \Z/6\to \Z/3\)</span> be the <em class="emphasis">further reduce modulo three</em> map. Show that <span class="process-math">\(\varphi\)</span> is well-defined and an epimorphism. Then show that <span class="process-math">\(\varphi(\bar{3})\)</span> is not a zero-divisor. That is, homomorphisms need not preserve zero-divisors.</div></article><article class="exercise exercise-like" id="exers_homomorphisms-13"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<div class="para" id="exers_homomorphisms-13-1-1">Let <span class="process-math">\(\varphi\colon R\to S\)</span> be a ring homomorphism. Prove that <span class="process-math">\(\varphi(0_R) = 0_S\text{.}\)</span> That is, ring homomorphisms also preserve the additive identity.</div></article><article class="exercise exercise-like" id="exer_homomorphismPreserveAdditiveInverse"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
-<div class="para" id="exer_homomorphismPreserveAdditiveInverse-1-1">Let <span class="process-math">\(\varphi\colon R\to S\)</span> is a homomorphism, prove that <span class="process-math">\(\varphi(-r) = -\varphi(r)\text{.}\)</span> That is, the additive inverse of the image is the image of the additive inverse.</div></article><article class="exercise exercise-like" id="exers_homomorphisms-15"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
-<div class="para" id="exers_homomorphisms-15-1-1">Suppose <span class="process-math">\(R\)</span> is a ring satisfying the initial property: For all rings <span class="process-math">\(S\text{,}\)</span> there is a unique homomorphism <span class="process-math">\(\varphi\colon R\to S\text{.}\)</span> Prove <span class="process-math">\(R\)</span> is isomorphic to <span class="process-math">\(\Z\)</span> as follows.</div> <ol class="lower-alpha" id="exers_homomorphisms-15-1-2">
-<li id="exers_homomorphisms-15-1-2-1"><div class="para" id="exers_homomorphisms-15-1-2-1-1">Show that there are unique homomorphisms <span class="process-math">\(\varphi_\Z\colon R\to \Z\)</span> and <span class="process-math">\(\varphi_R\colon \Z\to R\)</span>
+<div class="para" id="exers_homomorphisms-13-1-1">Let <span class="process-math">\(\varphi\colon R\to S\)</span> and <span class="process-math">\(\psi\colon S\to T\)</span> be ring homomorphisms. Prove <span class="process-math">\(\psi\circ \varphi\colon R\to T\)</span> defined by <span class="process-math">\((\psi\circ \varphi)(r) = \psi(\varphi(r))\)</span> is again a ring homomorphism.</div></article><article class="exercise exercise-like" id="exers_homomorphisms-14"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="para" id="exers_homomorphisms-14-1-1">Which of the properties one-to-one, onto, bijective are stable under composition of ring homomorphisms? That is, if <span class="process-math">\(\varphi,\psi\)</span> both have one of these properties, must <span class="process-math">\(\psi\circ\varphi\)</span> also have it?</div></article><article class="exercise exercise-like" id="exer_homomorphismPreserveAdditiveInverse"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<div class="para" id="exer_homomorphismPreserveAdditiveInverse-1-1">Let <span class="process-math">\(\varphi\colon R\to S\)</span> is a homomorphism, prove that <span class="process-math">\(\varphi(-r) = -\varphi(r)\text{.}\)</span> That is, the additive inverse of the image is the image of the additive inverse.</div></article><article class="exercise exercise-like" id="exers_homomorphisms-16"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+<div class="para" id="exers_homomorphisms-16-1-1">Suppose <span class="process-math">\(R\)</span> is a ring satisfying the initial property: For all rings <span class="process-math">\(S\text{,}\)</span> there is a unique homomorphism <span class="process-math">\(\varphi\colon R\to S\text{.}\)</span> Prove <span class="process-math">\(R\)</span> is isomorphic to <span class="process-math">\(\Z\)</span> as follows.</div> <ol class="lower-alpha" id="exers_homomorphisms-16-1-2">
+<li id="exers_homomorphisms-16-1-2-1"><div class="para" id="exers_homomorphisms-16-1-2-1-1">Show that there are unique homomorphisms <span class="process-math">\(\varphi_\Z\colon R\to \Z\)</span> and <span class="process-math">\(\varphi_R\colon \Z\to R\)</span>
 </div></li>
-<li id="exers_homomorphisms-15-1-2-2"><div class="para" id="exers_homomorphisms-15-1-2-2-1">Use <a href="sec_homomorphisms.html#thm_initialRing" class="xref" data-knowl="./knowl/xref/thm_initialRing.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.12">Theorem 3.1.12</a> to prove that <span class="process-math">\(\varphi_\Z\circ \varphi_R = \mathrm{Id}_\Z\text{.}\)</span>
+<li id="exers_homomorphisms-16-1-2-2"><div class="para" id="exers_homomorphisms-16-1-2-2-1">Use <a href="sec_homomorphisms.html#thm_initialRing" class="xref" data-knowl="./knowl/xref/thm_initialRing.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.13">Theorem 3.1.13</a> to prove that <span class="process-math">\(\varphi_\Z\circ \varphi_R = \mathrm{Id}_\Z\text{.}\)</span>
 </div></li>
-<li id="exers_homomorphisms-15-1-2-3"><div class="para" id="exers_homomorphisms-15-1-2-3-1">Use that <span class="process-math">\(R\)</span> satisfies the initial property to prove <span class="process-math">\(\varphi_R\circ \varphi_\Z = \mathrm{Id}_R\text{.}\)</span>
+<li id="exers_homomorphisms-16-1-2-3"><div class="para" id="exers_homomorphisms-16-1-2-3-1">Use that <span class="process-math">\(R\)</span> satisfies the initial property to prove <span class="process-math">\(\varphi_R\circ \varphi_\Z = \mathrm{Id}_R\text{.}\)</span>
 </div></li>
-<li id="exers_homomorphisms-15-1-2-4"><div class="para" id="exers_homomorphisms-15-1-2-4-1">Deduce that <span class="process-math">\(\Z\cong R\text{.}\)</span> How might your proof change if you were to show that there is a unique terminal ring instead?</div></li>
-</ol></article><article class="exercise exercise-like" id="exers_homomorphisms-16"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
-<div class="para" id="exers_homomorphisms-16-1-1">Prove that the zero map <span class="process-math">\(0\colon R\to S\)</span> is a homomorphism if and only <span class="process-math">\(S\)</span> is the zero ring.</div></article></section></section></div>
+<li id="exers_homomorphisms-16-1-2-4"><div class="para" id="exers_homomorphisms-16-1-2-4-1">Deduce that <span class="process-math">\(\Z\cong R\text{.}\)</span> How might your proof change if you were to show that there is a unique terminal ring instead?</div></li>
+</ol></article><article class="exercise exercise-like" id="exers_homomorphisms-17"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
+<div class="para" id="exers_homomorphisms-17-1-1">Prove that the zero map <span class="process-math">\(0\colon R\to S\)</span> is a homomorphism if and only <span class="process-math">\(S\)</span> is the zero ring.</div></article><article class="exercise exercise-like" id="matching-dates"><h4 class="heading">
+<span class="codenumber">17<span class="period">.</span></span><span class="space"> </span><span class="title">Matching Problem, Dates.</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone matching_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="matching-dates">
+<span data-subcomponent="question"><div class="para" id="matching-dates-3-1">Match each type of (blank)-morphism with its definition</div></span><li data-subcomponent="draggable" id="matching-dates_drag1">epimorphism</li>
+<li data-subcomponent="dropzone" for="matching-dates_drag1">An onto homomorphism</li>
+<li data-subcomponent="draggable" id="matching-dates_drag2">monomorphism</li>
+<li data-subcomponent="dropzone" for="matching-dates_drag2">An into homomorphism</li>
+<li data-subcomponent="draggable" id="matching-dates_drag3">isomorphism</li>
+<li data-subcomponent="dropzone" for="matching-dates_drag3">An onto and into homomorphism</li>
+<li data-subcomponent="draggable" id="matching-dates_drag4">automorphism</li>
+<li data-subcomponent="dropzone" for="matching-dates_drag4">An isomorphism where codomain is domain</li>
+</ul></div></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch3-homomorphismsAndIdeals.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_ideals.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
