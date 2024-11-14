@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.21</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let’s now consider <span class="process-math">\(R=\Z[\sqrt{-2}]\)</span> and the principal ideal <span class="process-math">\(I=(1+\sqrt{-2})\text{.}\)</span> Since <span class="process-math">\(1+\sqrt{-2}\in(1+\sqrt{-2})\)</span> we have equality of cosets:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sqrt{-2} + I = -1+I.
+\end{equation*}
+</div>
+<div class="para">This means that any <span class="process-math">\(\sqrt{-2}\)</span> can be replaced with a <span class="process-math">\(-1\text{.}\)</span> And so:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-2+I=(\sqrt{-2}+I)^2 = (-1+I)^2 = 1+I.
+\end{equation*}
+</div>
+<div class="para">In the quotient ring <span class="process-math">\(R/I\)</span> we therefore have <span class="process-math">\(3+I = 0+I\text{.}\)</span>
+</div>
+</div> <div class="para">This seems to indicate that the quotient ring doesn’t have a <span class="process-math">\(\sqrt{-2}\)</span> (as it becomes <span class="process-math">\(-1\)</span>) so it’s as if we just have <span class="process-math">\(\Z\text{.}\)</span> Furthermore, <span class="process-math">\(3=0\)</span> in this ring. One ring that should come to mind is <span class="process-math">\(\mathbb{F}_3\text{!}\)</span> Let’s try to prove it is isomorphic to <span class="process-math">\(\mathbb{F}_3\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">To apply the Noether Isomorphism Theorem we first need a homomorphism. Whatever the homomorphism we define it should send <span class="process-math">\(\sqrt{-2}\)</span> to <span class="process-math">\(-1\text{.}\)</span> Likely it should be similar to the reduction modulo <span class="process-math">\(5\)</span> mapping as well. Coupling these two requirements leads to <span class="process-math">\(\varphi\colon\Z[\sqrt{-2}]\to\mathbb{F}_5\)</span> defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\varphi(a+b\sqrt{-2}) = \overline{a-b}.
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Let’s check it is a homomorphism: <span class="process-math">\(\varphi(1) = \bar{1}\)</span> and so <span class="process-math">\(\varphi\)</span> preserves unity. For <span class="process-math">\(a+b\sqrt{-2},c+d\sqrt{-2}\in\Z[\sqrt{-2}]\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\varphi((a+b\sqrt{-2})(c+d\sqrt{-2})) \amp= \varphi(ac-2bd+(ad+bc)\sqrt{-2}) \\
+\amp=\overline{ac-2bd-(ad+bc)} \\
+\amp=\overline{ac-2bd-ad-bc)} \\
+\amp=\overline{ac+bd-ad-bc} \\
+\varphi(a+b\sqrt{-2})\varphi(c+d\sqrt{-2})\amp=\overline{a-b}\cdot\overline{c-d} \\
+\amp= \overline{ac+bd-bc-ad} 
+\end{align*}
+</div>
+<div class="para">and so it preserves multiplication. That it preserves addition will be left as an exercise.</div>
+</div> <div class="para logical">
+<div class="para">We now turn to the kernel. Evidently <span class="process-math">\(\varphi(1+\sqrt{-2}) = \overline{1-1}=\bar{0}\text{.}\)</span> So that <span class="process-math">\(I\subseteq \ker\varphi\text{.}\)</span> Before we show the reverse containment observe that for any <span class="process-math">\(k\in\Z\)</span> we have:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-k(1-\sqrt{-2})\cdot (1+\sqrt{-2})=3k\in I.
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Now for the reverse containment, we notice that if <span class="process-math">\(a+b\sqrt{-2}\in\ker\varphi\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bar{0}=\varphi(a+b\sqrt{-2}) = \bar{a}-\bar{b}.
+\end{equation*}
+</div>
+<div class="para">Thus there exists <span class="process-math">\(k\in\Z\)</span> with <span class="process-math">\(a = b+3k\text{.}\)</span> Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a+b\sqrt{-2} = b+3k+b\sqrt{-2} = b(1+\sqrt{-2}) + 3k
+\end{equation*}
+</div>
+<div class="para">and both of these terms are in <span class="process-math">\(I\text{.}\)</span> We conclude <span class="process-math">\(\ker\varphi = I\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Lastly, by the Noether Isomorphism Theorem we have an isomorphism:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f\colon \mathbb{Z}[\sqrt{-2}]/(1+\sqrt{-2})\to \mathbb{F}_3
+\end{equation*}
+</div>
+<div class="para">defined by <span class="process-math">\(f(a+b\sqrt{-2}+I)=\overline{a-b}\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a class="internal" href="sec_quotientRings.html#ex_ZSqrtNeg2Mod">in-context</a></span>
+</body>
+</html>
