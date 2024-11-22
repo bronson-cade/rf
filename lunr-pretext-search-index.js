@@ -1474,7 +1474,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Rings",
-  "body": " Rings   Guiding Questions   In this section, we'll seek to answer the questions:    What are rings and how do they relate to fields?  What are subrings, and how can we tell if a given subset of a ring is a subring?     In the previous section, we observed that many familiar number systems are fields but that some are not. As we will see, these non-fields are often more structurally interesting, at least from the perspective of factorization. In this section, we explore them in more detail. We start that exploration with a rigorous definition of polynomials and their arithmetic operations.    Integral Polynomials    A polynomial in with coefficients in is an expression of the form , where and . We will sometimes omit the function notation and denote simply by . We call the degree of the polynomial , denoted , and the coefficients of the polynomial. The coefficient is known as the leading coefficient of , and is the leading term of . The set of all integral polynomials is: Lastly, two polynomials are equal if and only if they have the same coefficients.    We know from our experience with polynomials in calculus and other courses that when we add two polynomials we again get a polynomial. Also when we multiply two polynomials we again get a polynomial. However, in order to show that addition and multiplication are well-defined operations on , they must first be defined!  This is easier said than done. Let's remind ourselves with an example that addition of polynomials is combine like terms . For example: Let's do this computation slightly differently: Notice, that to properly combine like terms we need to artificially add 0's. This is a mental trick we tacitly do when we compute anyways but this idea of extending a polynomial by 0 is crucial to defining the addition and multiplication operations.   Alternatives to Extension by 0  An alternative (more rigorous) way of defining addition and multiplication is to not use the variable at all. But rather to think of polynomials as defined by their coefficients. In this case, we define a polynomial as a list of integers (indexed by ): such that only finitely many of the entries are non-zero. Or equivalently, that there exists such that for all .     Given two polynomials , we define their sum as follows. Write If , we extend by 0: where . If , we extend by 0: where . Then     The extra effort we've put in to defining polynomial addition will simplify proofs as the following proposition shows.    Addition of integral polynomials is commutative. That is, for any , we have      Suppose . Possibly by extending by 0, we can assume Then    Notice that in the proof of we did not need to go into cases based off of if the degree of is greater than or less than the degree of .    Mimic the proof of to prove that addition of integral polynomials is associative.    We now handle polynomial multiplication. We first recall how polynomial multiplication works with the goal of writing a definition down.    Consider the integral polynomials and . Let's compute their product using distribution:     In particular, to compute the produce we needed to be able to: compute all pairwise products between terms of and terms of and then combine like terms. The following definition will be a formalization of this and in particular is somewhat involved due to the nature of poynomial multiplication.    Given two polynomials , we define their sum as follows. Write Extend both and by so that: where . Then where and where     As was the case with polynomial addition, this definition is aimed to make proving statements about polynomial muliplication easier.    Multplication of integral polynomials is commutative. That is, for any , we have .    Take of degrees , respectively. Extend both by zero so that where and .  Then where We also have where We need to show .  To that end, recall that addition in is commutative and multiplication is commutative too: Since the coefficients of and agreee they are equal polynomials.    The preceeding proof was necessarily long and somewhat complicated because polynomial multiplication is long and complicated. It's also worth noting that we very much relied on arithmetic properties of , particular commutative multiplication.  We leave our discussion of integral polynomials to introduce the main course: rings . We will then return to them as important examples or rings.    Rings   ring  unity   A ring  is a nonempty set, together with binary operations and , denoted , and satisfying the following axioms.   Given any , . (Associativity of addition)    Given any , . (Commutativity of addition)    There exists an element such that for all , . (Additive identity)    Given any there exists a such that . (Additive inverses)    Given any , . (Associativity of multiplication)    There exists an element , such that for all . (Multiplicative identity)    For all , . (Left-distributive property)    For all , . (Right-distributive property)   As with fields, when the ring is clear from context, we will often write in place of and in place of . The element is also referred to as the unity .     Non-Unital Rings  Most rings of interest in modern algebra, particularly commutative algebra, have a multiplicative identity. Algebraic structures that satisfy all the ring axioms except for the multiplicative identity are called non-unital rings and are sometimes referred to as rngs (without the i).     Compare and contrast Definitions and . What are the similarities? What are the differences?    While rings do not enjoy all the properties of fields, they are incredibly useful even in applied mathematics (see, e.g., for one recent example).    commutative ring  A ring is said to be commutative if, for all , .      The integers form a ring. We have actually assumed all the ring axioms for the majority of this text and will continue to assume them. A proof of the ring axioms requires a deeper dive on the natural numbers and is more suited to an introduction to proof course. Nevertheless, we will continue to freely use that is a commutative ring. The unity is and the additive identity is .      All fields are rings. Fields satisfy all eight rings axioms plus an additional two: commutative multiplication and every non-zero element has a multiplicative inverse.    We now return to polynomials. First, we will define polynomials over general rings.    Let be a ring. A polynomial in with coefficients in is an expression of the form , where and . We will sometimes omit the function notation and denote simply by . The set of all polynomials over is: The general definitions of equality, degree, terms, coefficients, extension by 0, addition, and multiplication carry over directly to polynomials over .    Unlike fields, rings need not be commutative. In fact, an important class of examples of non-commutative rings are matrix rings. We'll see a first example in .     Which properties of fields in Theorem hold for (commutative) rings?      Are all rings fields? Are all fields rings? Justify.     Emmy Noether     Portrait of Emmy Noether   In the 1920s, Emmy Noether was the first to explicitly describe the ring axioms as we know them today, and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra, number theory, and geometry, including the (see for more on the historical development of the proof of Fermat's Last Theorem). Most modern definitions of ring agree with our Definition and allow for rings with noncommutative multiplication.   The following theorem states that the set of polynomials with coefficients in a ring is itself a ring under the usual operations of polynomial addition of like terms, and multiplication via distribution. The proof is not tricky, but a rigorous justification (especially of, e.g., the associativity of polynomial multiplication) is tedious, and thus is omitted.   Theorem   If is a (commutative) ring, then is a (commutative) ring.    As in the proof of , we see that if is a ring and is commutative, then must also be commutative. The proof carries over mutatis mutandis .  To see that is a ring, we need to check all eight axioms. Before we do that, recall in that we have already seen polynomial addition is commutative provided the addition of coefficients is commutative. That proof therefore carries over mutatis mutandis .  We check associativity. Take and, by extending by 0, we can assume where for . Then the coefficient of in is . The coefficient of in is . Since is a ring and addition is associative in we have . Since the coefficients of and are equal, they are equal polynomials.  We claim is the additive identity. Take and write Then extend by zero: The sum is then: as is the additive identity in so that for all . Similarly, .  For additive inverses, suppose is as before. Then define by: where is the additive inverse of the coefficient in . Then Similarly .  The proof that multiplication is associative is particularly notationally dense and we leave it as an exercise. For the multiplicative identity, set . Take a polynomial as before. We extend by zero via: where and for . Then the product where However, for so for we have by Exercise???? In particular, . Since the coefficients of and are equal, the polynomials are equal: . Similarly .  The remaining two proofs are left- and right-distributive properties. As they are similar, we only prove the left-distributive property. TBD.    The preceeding theorem says that whenever we have a ring, polynomials with coefficients in that ring again form a ring. In particular, if is a ring, then so is , and hence so is and so on. This leads us to the corollary:    Let be a (commutative) ring and be indeterminates. Then the set of polynomials in with coefficients in , , is a (commutative) ring.    We proceed by induction. The base case is . This is the content of .  For the inductive step, suppose is a (commutative) ring. By , is again a (commutative) ring. But the latter is the .     We now have some great examples of commutative rings. Namely polynomial rings in some number of variables over any of or . As we have yet to see an example of a non-commutative ring we remedy this now.   Square Matrices   Consider the set of square matrices over (or whatever ring or field you like to work with). We recall matrix addition and multiplication: and   In Exercise???? you will check this is a ring. We show that multiplication is not commutative. To that end, consider: Then In particular, and so matrix multiplication is not commutative.    In the previous example, we observed that matrix multiplication failed to be commutative for matrices with real entries. What about for entries in a general ring? If you review that example, you will notice the only reason the products did not agree is because in . The next example shows that the multiplicative identity and additive identity sometimes agree.   The Zero Ring   Let . That is, a set with one element. Define addition and multiplication by and . We claim that addition and multiplication define a ring structure on .  Almost all of the checks are straightforward. For example, to check associativity of addition we only have one element so we just check . But there is only one thing both sides can be: . So addition is associative.  The only property that warrants inspection is the multiplicative identity. We claim that in this ring . Indeed, we need to show that for every that . But there's only element to check this on: where it is true.  We conclude that the zero ring is a ring!      Subrings: New Rings from Old   subring  overring   Let be a ring and let . If is itself a ring under and , we say is a subring of . In this case, is often called an overring of .    The following theorem provides a easy-to-apply test to check if a given subset of a ring is in fact a subring of .   Subring Test  subring test   Let be a ring and a subset of . Then is a subring if and only if:    ;     is closed under multiplication; and     is closed under subtraction.       Suppose and is closed under multiplication and subtraction. We check each of the axioms in . Since and is closed under subtraction we have . For any , we know that so that Thus and are the additive and multiplicative identities, respectively, in .  For any , we know that . Thus is closed under additive inverses. If , then so that is closed under addition.  For any triple of elements , we know so that and . Thus associativity and commutativity of addition are inherited from . Similarly, , , and . That is, inherits associativity of multiplication as well as the left- and right-distributive properties from .  We conclude that is a ring under the multiplication and addition from .      In , we saw that was a field and so it is a commutative ring. Let's define a subset of this field by taking those elements with integral real and imaginary part: We claim that is a subring of . To that end we apply the subring test. That is, , it is closed under subtraction and multiplication.  We see that and so our subset has the multiplicative identity.  For closure under subtraction, take . Then and . We conclude is closed under subtraction.  For closure under multiplication we compute: and again .  By the , we conclude is a subring of . In particular, it is a ring.      Determine whether the following rings are subrings of the given rings .    ,      ,      is any ring,      ,            Units and Associates in a Ring   unit  associates   Let be a ring and let be nonzero. If there is a such that , we say is unit of . We denote the set of units of by . We say are associates if there exists some such that .      Explicitly describe the set . What are the associates of 7 in ?    In other words, a unit in a ring is a nonzero element with a multiplicative inverse. The existence of units is the primary difference between fields and commutative rings: in a field, all nonzero elements are units, while in a commutative ring, no nonzero elements need be units, as demonstrates.    We describe the units in . Notice that for , of degrees respectively, the leading coefficient of is But for and for . Using this observation, we can conclude that , see Exercise???? Since and the product of two non-zero integers remains non-zero, we conclude that . In particular,   Now suppose that in . Then Since , the only way this can happen is if so that are constant polynomials. Thus are units in . We conclude       A commutative ring in which every nonzero element is a unit is a field.     Compare the axioms for a commutative ring and a field. The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.     Mark the following as true or false.    All fields are rings.    All rings are fields.    All rings are commutative.    Addition in any ring is commutative and associative.    Multiplication in any ring is commutative and associative.    In a ring, the left- and right-distibutive laws hold.    In a ring, only the left-distributive law is guaranteed to hold.    All rings are rngs, but not all rngs are rings.     is a ring with the usual operations of addition and multiplication.     is a ring with the usual operations of addition and multiplication.     is a ring with the usual operations of addition and multiplication.     is a ring with the usual operations of addition and multiplication.      Consider the polynomial ring with integer coefficients . Prove that the left- and right-distributive laws hold. You can use that polynomial multiplication is commutative to simplify some of your work.   Gaussian Integers  The Gaussian Integers are the subset of given by     Using the usual addition and multiplication in , prove that the Gaussian Integers are a ring (don't appeal to ).    Use the to prove that the Gaussian Integers are a ring.      Compute the units in .     Square Matrices over a Ring   Consider the set of matrices with real entries, , as in .    Prove is a ring with the usual matrix addition and matrix multiplication.    What is special about ? Does your proof work if is replaced by an arbitrary ring ?    What is special about ? What about the set of matrices with entries in a ring , denoted ?      Prove the set of integer multiples of : is a rng but not a ring. You can appeal to the subrng test but also be able to do it straight from the definition.    Prove that in a ring (or rng), the additive identity is unique.    Prove that in a ring (or rng), the multiplicative identity is unique.    Prove that in a ring (or rng), the product of the additive identity and any element is 0.   Upper Triangular Matrices   Upper Triangular Matrices  Upper Triangular Matrices  Use the subring test to prove that the collection of upper triangular matrices -matrices over a general ring , denoted forms a ring. An upper triangular -matrix looks like where .   Lower Triangular Matrices  How would the previous proof change with Lower Triangular Matrices?    Explain why the set of upper uni-triangular matrices with coefficients in a ring is not a ring. A upper uni-triangular matrix is a matrix of the form: where .      C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes , Bull. Math. Bio. 75 (2013), 1571-1611, DOI 10.1007\/s11538-013-9860-3    "
+  "body": " Rings   Guiding Questions   In this section, we'll seek to answer the questions:    What are rings and how do they relate to fields?  What are subrings, and how can we tell if a given subset of a ring is a subring?     In the previous section, we observed that many familiar number systems are fields but that some are not. As we will see, these non-fields are often more structurally interesting, at least from the perspective of factorization. In this section, we explore them in more detail. We start that exploration with a rigorous definition of polynomials and their arithmetic operations.    Integral Polynomials    A polynomial in with coefficients in is an expression of the form , where and . We will sometimes omit the function notation and denote simply by . We call the degree of the polynomial , denoted , and the coefficients of the polynomial. The coefficient is known as the leading coefficient of , and is the leading term of . The set of all integral polynomials is: Lastly, two polynomials are equal if and only if they have the same coefficients.    We know from our experience with polynomials in calculus and other courses that when we add two polynomials we again get a polynomial. Also when we multiply two polynomials we again get a polynomial. However, in order to show that addition and multiplication are well-defined operations on , they must first be defined!  This is easier said than done. Let's remind ourselves with an example that addition of polynomials is combine like terms . For example: Let's do this computation slightly differently: Notice, that to properly combine like terms we need to artificially add 0's. This is a mental trick we tacitly do when we compute anyways but this idea of extending a polynomial by 0 is crucial to defining the addition and multiplication operations.   Alternatives to Extension by 0  An alternative (more rigorous) way of defining addition and multiplication is to not use the variable at all. But rather to think of polynomials as defined by their coefficients. In this case, we define a polynomial as a list of integers (indexed by ): such that only finitely many of the entries are non-zero. Or equivalently, that there exists such that for all .     Given two polynomials , we define their sum as follows. Write If , we extend by 0: where . If , we extend by 0: where . Then     The extra effort we've put in to defining polynomial addition will simplify proofs as the following proposition shows.    Addition of integral polynomials is commutative. That is, for any , we have      Suppose . Possibly by extending by 0, we can assume Then    Notice that in the proof of we did not need to go into cases based off of if the degree of is greater than or less than the degree of .    Mimic the proof of to prove that addition of integral polynomials is associative.    We now handle polynomial multiplication. We first recall how polynomial multiplication works with the goal of writing a definition down.    Consider the integral polynomials and . Let's compute their product using distribution:     In particular, to compute the produce we needed to be able to: compute all pairwise products between terms of and terms of and then combine like terms. The following definition will be a formalization of this and in particular is somewhat involved due to the nature of poynomial multiplication.    Given two polynomials , we define their sum as follows. Write Extend both and by so that: where . Then where and where     As was the case with polynomial addition, this definition is aimed to make proving statements about polynomial muliplication easier.    Multplication of integral polynomials is commutative. That is, for any , we have .    Take of degrees , respectively. Extend both by zero so that where and .  Then where We also have where We need to show .  To that end, recall that addition in is commutative and multiplication is commutative too: Since the coefficients of and agreee they are equal polynomials.    The preceeding proof was necessarily long and somewhat complicated because polynomial multiplication is long and complicated. It's also worth noting that we very much relied on arithmetic properties of , particular commutative multiplication.  We leave our discussion of integral polynomials to introduce the main course: rings . We will then return to them as important examples or rings.    Rings   ring  unity   A ring  is a nonempty set, together with binary operations and , denoted , and satisfying the following axioms.   Given any , . (Associativity of addition)    Given any , . (Commutativity of addition)    There exists an element such that for all , . (Additive identity)    Given any there exists a such that . (Additive inverses)    Given any , . (Associativity of multiplication)    There exists an element , such that for all . (Multiplicative identity)    For all , . (Left-distributive property)    For all , . (Right-distributive property)   As with fields, when the ring is clear from context, we will often write in place of and in place of . The element is also referred to as the unity .     Non-Unital Rings  Most rings of interest in modern algebra, particularly commutative algebra, have a multiplicative identity. Algebraic structures that satisfy all the ring axioms except for the multiplicative identity are called non-unital rings and are sometimes referred to as rngs (without the i).     Compare and contrast Definitions and . What are the similarities? What are the differences?    While rings do not enjoy all the properties of fields, they are incredibly useful even in applied mathematics (see, e.g., for one recent example).    commutative ring  A ring is said to be commutative if, for all , .      The integers form a ring. We have actually assumed all the ring axioms for the majority of this text and will continue to assume them. A proof of the ring axioms requires a deeper dive on the natural numbers and is more suited to an introduction to proof course. Nevertheless, we will continue to freely use that is a commutative ring. The unity is and the additive identity is .      All fields are rings. Fields satisfy all eight rings axioms plus an additional two: commutative multiplication and every non-zero element has a multiplicative inverse.    We now return to polynomials. First, we will define polynomials over general rings.    Let be a ring. A polynomial in with coefficients in is an expression of the form , where and . We will sometimes omit the function notation and denote simply by . The set of all polynomials over is: The general definitions of equality, degree, terms, coefficients, extension by 0, addition, and multiplication carry over directly to polynomials over .    Unlike fields, rings need not be commutative. In fact, an important class of examples of non-commutative rings are matrix rings. We'll see a first example in .     Which properties of fields in Theorem hold for (commutative) rings?      Are all rings fields? Are all fields rings? Justify.     Emmy Noether     Portrait of Emmy Noether   In the 1920s, Emmy Noether was the first to explicitly describe the ring axioms as we know them today, and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra, number theory, and geometry, including the (see for more on the historical development of the proof of Fermat's Last Theorem). Most modern definitions of ring agree with our Definition and allow for rings with noncommutative multiplication.   The following theorem states that the set of polynomials with coefficients in a ring is itself a ring under the usual operations of polynomial addition of like terms, and multiplication via distribution. The proof is not tricky, but a rigorous justification (especially of, e.g., the associativity of polynomial multiplication) is tedious, and thus is omitted.   Theorem   If is a (commutative) ring, then is a (commutative) ring.    As in the proof of , we see that if is a ring and is commutative, then must also be commutative. The proof carries over mutatis mutandis .  To see that is a ring, we need to check all eight axioms. Before we do that, recall in that we have already seen polynomial addition is commutative provided the addition of coefficients is commutative. That proof therefore carries over mutatis mutandis .  We check associativity. Take and, by extending by 0, we can assume where for . Then the coefficient of in is . The coefficient of in is . Since is a ring and addition is associative in we have . Since the coefficients of and are equal, they are equal polynomials.  We claim is the additive identity. Take and write Then extend by zero: The sum is then: as is the additive identity in so that for all . Similarly, .  For additive inverses, suppose is as before. Then define by: where is the additive inverse of the coefficient in . Then Similarly .  The proof that multiplication is associative is particularly notationally dense and we leave it as an exercise. For the multiplicative identity, set . Take a polynomial as before. We extend by zero via: where and for . Then the product where However, for so for we have by Exercise???? In particular, . Since the coefficients of and are equal, the polynomials are equal: . Similarly .  The remaining two proofs are left- and right-distributive properties. As they are similar, we only prove the left-distributive property. TBD.    The preceeding theorem says that whenever we have a ring, polynomials with coefficients in that ring again form a ring. In particular, if is a ring, then so is , and hence so is and so on. This leads us to the corollary:    Let be a (commutative) ring and be indeterminates. Then the set of polynomials in with coefficients in , , is a (commutative) ring.    We proceed by induction. The base case is . This is the content of .  For the inductive step, suppose is a (commutative) ring. By , is again a (commutative) ring. But the latter is the .     We now have some great examples of commutative rings. Namely polynomial rings in some number of variables over any of or . As we have yet to see an example of a non-commutative ring we remedy this now.   Square Matrices   Consider the set of square matrices over (or whatever ring or field you like to work with). We recall matrix addition and multiplication: and   In Exercise???? you will check this is a ring. We show that multiplication is not commutative. To that end, consider: Then In particular, and so matrix multiplication is not commutative.    In the previous example, we observed that matrix multiplication failed to be commutative for matrices with real entries. What about for entries in a general ring? If you review that example, you will notice the only reason the products did not agree is because in . The next example shows that the multiplicative identity and additive identity sometimes agree.   The Zero Ring   Let . That is, a set with one element. Define addition and multiplication by and . We claim that addition and multiplication define a ring structure on .  Almost all of the checks are straightforward. For example, to check associativity of addition we only have one element so we just check . But there is only one thing both sides can be: . So addition is associative.  The only property that warrants inspection is the multiplicative identity. We claim that in this ring . Indeed, we need to show that for every that . But there's only element to check this on: where it is true.  We conclude that the zero ring is a ring!      Subrings: New Rings from Old   subring  overring   Let be a ring and let . If is itself a ring under and , we say is a subring of . In this case, is often called an overring of .    The following theorem provides a easy-to-apply test to check if a given subset of a ring is in fact a subring of .   Subring Test  subring test   Let be a ring and a subset of . Then is a subring if and only if:    ;     is closed under multiplication; and     is closed under subtraction.       Suppose and is closed under multiplication and subtraction. We check each of the axioms in . Since and is closed under subtraction we have . For any , we know that so that Thus and are the additive and multiplicative identities, respectively, in .  For any , we know that . Thus is closed under additive inverses. If , then so that is closed under addition.  For any triple of elements , we know so that and . Thus associativity and commutativity of addition are inherited from . Similarly, , , and . That is, inherits associativity of multiplication as well as the left- and right-distributive properties from .  We conclude that is a ring under the multiplication and addition from .      In , we saw that was a field and so it is a commutative ring. Let's define a subset of this field by taking those elements with integral real and imaginary part: We claim that is a subring of . To that end we apply the subring test. That is, , it is closed under subtraction and multiplication.  We see that and so our subset has the multiplicative identity.  For closure under subtraction, take . Then and . We conclude is closed under subtraction.  For closure under multiplication we compute: and again .  By the , we conclude is a subring of . In particular, it is a ring.      Determine whether the following rings are subrings of the given rings .    ,      ,      is any ring,      ,            Units and Associates in a Ring   unit  associates   Let be a ring and let be nonzero. If there is a such that , we say is unit of . We denote the set of units of by . We say are associates if there exists some such that .      Explicitly describe the set . What are the associates of 7 in ?    In other words, a unit in a ring is a nonzero element with a multiplicative inverse. The existence of units is the primary difference between fields and commutative rings: in a field, all nonzero elements are units, while in a commutative ring, no nonzero elements need be units, as demonstrates.    We describe the units in . Notice that for , of degrees respectively, the leading coefficient of is But for and for . Using this observation, we can conclude that , see Exercise???? Since and the product of two non-zero integers remains non-zero, we conclude that . In particular,   Now suppose that in . Then Since , the only way this can happen is if so that are constant polynomials. Thus are units in . We conclude       A commutative ring in which every nonzero element is a unit is a field.     Compare the axioms for a commutative ring and a field. The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.     Mark the following as true or false.    All fields are rings.    All rings are fields.    All rings are commutative.    Addition in any ring is commutative and associative.    Multiplication in any ring is commutative and associative.    In a ring, the left- and right-distibutive laws hold.    In a ring, only the left-distributive law is guaranteed to hold.    All rings are rngs, but not all rngs are rings.     is a ring with the usual operations of addition and multiplication.     is a ring with the usual operations of addition and multiplication.     is a ring with the usual operations of addition and multiplication.     is a ring with the usual operations of addition and multiplication.      Consider the polynomial ring with integer coefficients . Prove that the left- and right-distributive laws hold. You can use that polynomial multiplication is commutative to simplify some of your work.   Gaussian Integers  The Gaussian Integers are the subset of given by     Using the usual addition and multiplication in , prove that the Gaussian Integers are a ring (don't appeal to ).    Use the to prove that the Gaussian Integers are a ring.      Compute the units in .     Square Matrices over a Ring   Consider the set of matrices with real entries, , as in .    Prove is a ring with the usual matrix addition and matrix multiplication.    What is special about ? Does your proof work if is replaced by an arbitrary ring ?    What is special about ? What about the set of matrices with entries in a ring , denoted ?      Prove the set of integer multiples of : is a rng but not a ring. You can appeal to the subrng test but also be able to do it straight from the definition.    Prove that in a ring (or rng), the additive identity is unique.    Prove that in a ring (or rng), the multiplicative identity is unique.    Prove that in a ring (or rng), the product of the additive identity and any element is 0.   Upper Triangular Matrices   Upper Triangular Matrices  Upper Triangular Matrices  Use the subring test to prove that the collection of upper triangular matrices -matrices over a general ring , denoted forms a ring. An upper triangular -matrix looks like where .   Lower Triangular Matrices  How would the previous proof change with Lower Triangular Matrices?    Explain why the set of upper uni-triangular matrices with coefficients in a ring is not a ring. A upper uni-triangular matrix is a matrix of the form: where .    Consider the subset defined by: Prove that is a subring of .    In contrast to the previous example, show that the subset defined by is not a subring of .      C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes , Bull. Math. Bio. 75 (2013), 1571-1611, DOI 10.1007\/s11538-013-9860-3    "
 },
 {
   "id": "obj_rings",
@@ -1837,9 +1837,9 @@ var ptx_lunr_docs = [
   "body": " Prove that in a ring (or rng), the product of the additive identity and any element is 0.  "
 },
 {
-  "id": "exers_rings-10",
+  "id": "exer_upperTriangularMatrices",
   "level": "2",
-  "url": "sec_rings.html#exers_rings-10",
+  "url": "sec_rings.html#exer_upperTriangularMatrices",
   "type": "Exercise",
   "number": "2.2.4.10",
   "title": "Upper Triangular Matrices.",
@@ -1862,6 +1862,24 @@ var ptx_lunr_docs = [
   "number": "2.2.4.12",
   "title": "",
   "body": " Explain why the set of upper uni-triangular matrices with coefficients in a ring is not a ring. A upper uni-triangular matrix is a matrix of the form: where .  "
+},
+{
+  "id": "exers_rings-13",
+  "level": "2",
+  "url": "sec_rings.html#exers_rings-13",
+  "type": "Exercise",
+  "number": "2.2.4.13",
+  "title": "",
+  "body": " Consider the subset defined by: Prove that is a subring of .  "
+},
+{
+  "id": "exers_rings-14",
+  "level": "2",
+  "url": "sec_rings.html#exers_rings-14",
+  "type": "Exercise",
+  "number": "2.2.4.14",
+  "title": "",
+  "body": " In contrast to the previous example, show that the subset defined by is not a subring of .  "
 },
 {
   "id": "sec_integralDomains",
@@ -2554,7 +2572,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.1",
   "title": "Homomorphisms",
-  "body": " Homomorphisms   Guiding Questions   In this section, we'll seek to answer the questions:    What is a ring homomorphism?  What are some examples of ring homomorphisms?  What is the kernel and image of a homomorphism?  What are the initial and terminal rings?     Central to modern mathematics is the notion of function . This section assumes a familiarity with the idea of function from a set-theoretic point of view, as well as the concepts of injective (one-to-one), surjective (onto), and bijective functions (one-to-one correspondences). . Functions arise in all areas of mathematics, each subdiscipline concerned with certain types of functions. In algebra, our concern is with operation-preserving functions, such as the linear transformations of vector spaces you have seen in a course in linear algebra. Those linear transformations had the properties that (addition is preserved) and (scalar multiplication is preserved).    Homomorphisms  We find something similar at work in the study of homomorphisms of rings, which we define to be functions that preserve both addition and multiplication.   homomorphism  monomorphism  epimorphism  isomorphism  automorphism   Let and be rings. A function is called a ring homomorphism if it preserves addition, multiplication, and sends the identity of to the identity of . That is, for all :  ,  , and  .  If is injective (one-to-one), we say that is a monomorphism . If is surjective (onto), we say that is an epimorphism . If is a bijection (both injective and surjective), we say that is an isomorphism and write . If is an isomorphism, we say is an automorphism of .    Our first job when glimpsing a new concept is to collect a stock of examples.    Determine whether the following functions are homomorphisms, monomorphisms, epimorphisms, isomorphisms, automorphisms, or none of these. Note that denotes an arbitrary ring and a field.   defined by  defined by  defined by  defined by  defined by , where  defined by  defined by , where if , is the expression obtained by plugging into : (this is known as the -evaluation map)  defined by      defined by is called the identity mapping . We in particular have: , , and The identity mapping satisfies the criteria for being a ring homomorphism. It is an automorphism.   defined by is the negation mapping. Although it is true that it fails the other two properties of a ring homorphism in general (sometimes not though!). Namely, for a general ring so that and also but . In general, so is not compatible with multiplication or unity. However, sometimes is true for every element of the ring, particularly Boolean rings. Examples include .   defined by , or the multiplication by map. The map does not preserve the unity nor does it preserve multiplication. Check! It is not a ring homomorphism.   defined by is sometimes called the Frobenius mapping. It is in fact a ring homomorphism in this case. For the unity and multiplicative compatibility we have and . For compatibility with addition we remind the reader that : It is not an automorphism; however, it is a homomorphism. Homomorphisms from a ring to itself are called endomorphisms .   defined by , where TBD   defined by TBD   defined by , where if , is the expression obtained by plugging into : (this is known as the -evaluation map) TBD   defined by TBD.      Ferdinand Georg Frobenius     Portrait of Ferdinand Georg Frobenius   Ferdinand Georg Frobenius, a student of Weierstrass, (1849-1917) was a German mathematician known for contributions to number theory, group theory, differential equations, and elliptic functions.    The Frobenius Homomorphism  Frobenius Homomorphism   The Frobenius Homomorphism (or just Frobenius) is a homomorphism that exists whenever we are working with a prime. In this example, we look at the Frobenius on a polynomial ring.  Let be a prime. Consider the function: defined by .  Before we prove that the Frobenius is a homomorphism, let's recall that whenever the binomial coefficient is divisible by . Indeed, using the usual formula: All of the terms in the denominator are strictly less than provided . Thus there is no term in the denominator that will cancel the in the numerator. In particular, the binomial coefficients are in whenever .  With that done, let's show is a homomorphism. It preserves unity: .  For compatibility with addition, suppose : as the cross terms are zero.  For compatibility with multiplication: We conclude that the Frobenius is a homomorphism.  The following checks will be left as an exercise: The Frobenius is a monomorphism, it is not an epimorphism, and hence not an automorphism.     Parsons Problem, Mathematical Proof even numbers  Create a proof of the theorem: All automorphisms are monomorphisms.    Let be an automorphism.     Then is a prime number.    Then there exists an so that .    Then there exists an so that .     Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    And a little bit of irrelevant multi-line math .    Dorothy will not be much help with this proof.     Properties of Homomorphisms  The sequence of results that follows shows that homomorphisms preserve several of our ring-theoretic notions. This means is the right definition. That is, of all the possible functions between rings we isolated a good class to call structure preserving. We begin by showing that homomorphisms preserve the additive identity.    Suppose is a ring homomorphism. Then .    Supppose is a ring homomorphism. Note that and in particular this tells us as desired.    We now show that homomorphisms preserve units.    Suppose is a ring homomorphism. If , then .    Suppose is a ring homomorphism and . Then there exists with . We compute: and hence .    Since homomorphisms are compatible with multiplication, and powers of elements are defined with multiplication, they must preserve powers as the next theorem shows.    Suppose is a ring homomorphism. For any and , we have in .    Suppose is a ring homomorphism and . We now proceed by induction. The base case is which certainly true.  For the inductive step, suppose that . We show : as desired. This equality completes the proof.      Kernel of a Homomorphism  Homomorphisms give rise to a particularly important class of subsets: kernels.   kernel   Let be a ring homomorphism. Then is the kernel of .    Note that by we know always. In particular, the kernel of a ring homomorphism is always a non-empty subset.    For each homomorphism in , find (with justification), the kernel.   TBD    Kernels are a fundamental structure when studying rings. As a first glimpse of their importance, we show that they give a useful way of determining whether their defining homomorphisms are monomorphisms.    Let be a homomorphism. Then is a monomorphism if and only if .     Supppose is a monomomorphism. Since is a homomorphism we know . Suppose now that so that . Since is injective and , we conclude that . In particular, .  For the converse, suppose that . Suppose are such that . Then we have: and so . Since the only element here is , we conclude that or that . Thus is a monomorphism.   A nice application of this theorem is the following result that shows that homomorphisms from a field are always monomorphisms. They will never fail to be injective!    Suppose is a ring homomorphism where is a field. Then is a monomorphism.     Suppose is a ring homomorphism where is a field. We show is a monomorphism by applying . Suppose that there is , with . If , then there is a unit. By , is also a unit and in particular is not . Thus the only element of is .     Image of a Homomorphism  The image of a homomorphism is just different terminology for the range. One reason to use different language is that we will see the image is not just a subset of , it is a subring of !    Suppose , the image of the , denoted is the range of :       Compute the image of the homomorphisms .    Before we prove that the image of a homomorphism is a subring, let's note that homomorphisms preserve most ring-axioms. In particular, we have defined subtraction of two ring elements as , where is the additive inverse of . In you will prove that homorphisms preserve additive inverses, namely: . In particular,     Suppose is a homomorphism. Then is a subring of .    Since , we know that . We just need to show it is closed under subtraction and multiplication:  For subtraction, take . Then   For multiplication, we have We conclude that is a subring of .      The Initial Ring   Initial Ring We now return to and investigate homomorphisms , where is an arbitrary ring. We will prove that there is one and only one homomorphism. This shows that is the initial ring . It is the unique ring (up to isomorphism) that has this property.     Action of Integers  Before we prove this, let's introduce some notation. Take a ring element . For we can define where the right hand sum has terms. Similarly, where the right hand sum has terms. And . We leave it to the reader to check that this is well-defined.    For any ring , there is a unique homomorphism .    Let be an arbitrary homomorphism. Since the image of unity is unity we have . Since the image of the additive identity is the additive identity, we have . By induction, we conclude that for any . Similarly for any .  Since was arbitrary, we have seen that any homomorphism is the homomorphism . This proves uniqueness.      The Terminal Ring   Terminal Ring In this last part of the section, we ask the question: Is there a ring such that for any ring , there exists one and only one homomorphism . That is to say, is there a ? One guess might be . It turns out this is not the case!    Verify the terminal ring, if it exists, cannot be . Do so by showing there is no homomorphism . What about ? Can it be terminal?    The right choice happens to be zero!    For any ring , there is one and only one homomorphism .    This is an exercise. There is only one set-theoretic mapping: the zero map. In this case, we just need to see that the zero map is a homomorphism. This is the case if and only if the codomain is .    We now have two very special rings: and . A natural question is to ask how they interact with each other. In particular, we know there exists a unique homomorphism . What about the other way around?    How many homomorphisms are there ?      Exercises   Mark the following as true or false.   Suppose are rings. Any function is a ring homomorphism.  The identity map on a ring is a ring homomorphism.  The zero map defined by is a ring homomorphism.  If is a ring homomorphism and is a field, then is a field.  If is a ring homomorphism and is a field, then is a field.  If is a ring homomorphism and is a finite ring, then is a finite ring.  If is a ring homomorphism and is a finite ring, then is a finite ring.  If is an injective ring homomorphism and is a finite ring, then is a finite ring.     Fix . Let be defined by . Prove that is a ring homomorphism. Then show that is neither injective nor surjective.    Define by . Prove that is an injective ring homomorphism.    Let be any ring and be the set of matries with entries in . Define by , where is the identity matrix. Prove that is an injective ring homomorphism.    Suppose is a commutative ring. Fix . Let be defined by . Prove that is a ring homomorphism. Is the evaluation homomorphism injective, surjective, and\/or bijective?    Gemini, Google's LLM, has claimed that for any ring , the trace map defined by where , is a ring homomorphism. This is true for exactly one . Find it, prove it is a homomorphism for that , then show it is not a homomorphism for any .    Consider the function defined by . Prove that this mapping is a homomorphism. Then show it is neither injective nor bijective. What is it's image?     Evaluation Homomorphism  Evaluation Homomorphism Evaluation Homomorphism  Let be a ring. Consider the polynomial ring over . For any , define the evaluation function: by . Prove that is always an epimorphism. That is, it is a homomorphism which is always surjective.  Why does this exercise not contradict the previous exercise?    Let be the Frobenius of . Show that is a monomorphism. Show it is not an epimorphism. Describe as a subring of .    Suppose is a homomorphism. Prove for all .    Let be the further reduce modulo three map. Show that is well-defined and an epimorphism. Then show that is not a zero-divisor. That is, homomorphisms need not preserve zero-divisors.    Let and be ring homomorphisms. Prove defined by is again a ring homomorphism.    Which of the properties one-to-one, onto, bijective are stable under composition of ring homomorphisms? That is, if both have one of these properties, must also have it?    Let is a homomorphism, prove that . That is, the additive inverse of the image is the image of the additive inverse.    Suppose is a ring satisfying the initial property: For all rings , there is a unique homomorphism . Prove is isomorphic to as follows.    Show that there are unique homomorphisms and     Use to prove that .    Use that satisfies the initial property to prove .    Deduce that . How might your proof change if you were to show that there is a unique terminal ring instead?      Prove that the zero map is a homomorphism if and only is the zero ring.   Matching Problem, Dates matching US dates  Match each type of (blank)-morphism with its definition    epimorphism  An onto homomorphism    monomorphism  An into homomorphism    isomorphism  An onto and into homomorphism    automorphism  An isomorphism where codomain is domain      "
+  "body": " Homomorphisms   Guiding Questions   In this section, we'll seek to answer the questions:    What is a ring homomorphism?  What are some examples of ring homomorphisms?  What is the kernel and image of a homomorphism?  What are the initial and terminal rings?     Central to modern mathematics is the notion of function . This section assumes a familiarity with the idea of function from a set-theoretic point of view, as well as the concepts of injective (one-to-one), surjective (onto), and bijective functions (one-to-one correspondences). . Functions arise in all areas of mathematics, each subdiscipline concerned with certain types of functions. In algebra, our concern is with operation-preserving functions, such as the linear transformations of vector spaces you have seen in a course in linear algebra. Those linear transformations had the properties that (addition is preserved) and (scalar multiplication is preserved).    Homomorphisms  We find something similar at work in the study of homomorphisms of rings, which we define to be functions that preserve both addition and multiplication.   homomorphism  monomorphism  epimorphism  isomorphism  automorphism   Let and be rings. A function is called a ring homomorphism if it preserves addition, multiplication, and sends the identity of to the identity of . That is, for all :  ,  , and  .  If is injective (one-to-one), we say that is a monomorphism . If is surjective (onto), we say that is an epimorphism . If is a bijection (both injective and surjective), we say that is an isomorphism and write . If is an isomorphism, we say is an automorphism of .    Our first job when glimpsing a new concept is to collect a stock of examples.    Determine whether the following functions are homomorphisms, monomorphisms, epimorphisms, isomorphisms, automorphisms, or none of these. Note that denotes an arbitrary ring and a field.   defined by  defined by  defined by  defined by  defined by , where  defined by  defined by , where if , is the expression obtained by plugging into : (this is known as the -evaluation map)  defined by      defined by is called the identity mapping . We in particular have: , , and The identity mapping satisfies the criteria for being a ring homomorphism. It is an automorphism.   defined by is the negation mapping. Although it is true that it fails the other two properties of a ring homorphism in general (sometimes not though!). Namely, for a general ring so that and also but . In general, so is not compatible with multiplication or unity. However, sometimes is true for every element of the ring, particularly Boolean rings. Examples include .   defined by , or the multiplication by map. The map does not preserve the unity nor does it preserve multiplication. Check! It is not a ring homomorphism.   defined by is sometimes called the Frobenius mapping. It is in fact a ring homomorphism in this case. For the unity and multiplicative compatibility we have and . For compatibility with addition we remind the reader that : It is not an automorphism; however, it is a homomorphism. Homomorphisms from a ring to itself are called endomorphisms .   defined by , where TBD   defined by TBD   defined by , where if , is the expression obtained by plugging into : (this is known as the -evaluation map) TBD   defined by TBD.      Ferdinand Georg Frobenius     Portrait of Ferdinand Georg Frobenius   Ferdinand Georg Frobenius, a student of Weierstrass, (1849-1917) was a German mathematician known for contributions to number theory, group theory, differential equations, and elliptic functions.    The Frobenius Homomorphism  Frobenius Homomorphism   The Frobenius Homomorphism (or just Frobenius) is a homomorphism that exists whenever we are working with a prime. In this example, we look at the Frobenius on a polynomial ring.  Let be a prime. Consider the function: defined by .  Before we prove that the Frobenius is a homomorphism, let's recall that whenever the binomial coefficient is divisible by . Indeed, using the usual formula: All of the terms in the denominator are strictly less than provided . Thus there is no term in the denominator that will cancel the in the numerator. In particular, the binomial coefficients are in whenever .  With that done, let's show is a homomorphism. It preserves unity: .  For compatibility with addition, suppose : as the cross terms are zero.  For compatibility with multiplication: We conclude that the Frobenius is a homomorphism.  The following checks will be left as an exercise: The Frobenius is a monomorphism, it is not an epimorphism, and hence not an automorphism.     Parsons Problem, Mathematical Proof even numbers  Create a proof of the theorem: All automorphisms are monomorphisms.    Let be an automorphism.     Then is a prime number.    Then there exists an so that .    Then there exists an so that .     Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    And a little bit of irrelevant multi-line math .    Dorothy will not be much help with this proof.     Properties of Homomorphisms  The sequence of results that follows shows that homomorphisms preserve several of our ring-theoretic notions. This means is the right definition. That is, of all the possible functions between rings we isolated a good class to call structure preserving. We begin by showing that homomorphisms preserve the additive identity.    Suppose is a ring homomorphism. Then .    Supppose is a ring homomorphism. Note that and in particular this tells us as desired.    We now show that homomorphisms preserve units.    Suppose is a ring homomorphism. If , then .    Suppose is a ring homomorphism and . Then there exists with . We compute: and hence .    Since homomorphisms are compatible with multiplication, and powers of elements are defined with multiplication, they must preserve powers as the next theorem shows.    Suppose is a ring homomorphism. For any and , we have in .    Suppose is a ring homomorphism and . We now proceed by induction. The base case is which certainly true.  For the inductive step, suppose that . We show : as desired. This equality completes the proof.      Kernel of a Homomorphism  Homomorphisms give rise to a particularly important class of subsets: kernels.   kernel   Let be a ring homomorphism. Then is the kernel of .    Note that by we know always. In particular, the kernel of a ring homomorphism is always a non-empty subset.    For each homomorphism in , find (with justification), the kernel.   TBD    Kernels are a fundamental structure when studying rings. As a first glimpse of their importance, we show that they give a useful way of determining whether their defining homomorphisms are monomorphisms.    Let be a homomorphism. Then is a monomorphism if and only if .     Supppose is a monomomorphism. Since is a homomorphism we know . Suppose now that so that . Since is injective and , we conclude that . In particular, .  For the converse, suppose that . Suppose are such that . Then we have: and so . Since the only element here is , we conclude that or that . Thus is a monomorphism.   A nice application of this theorem is the following result that shows that homomorphisms from a field are always monomorphisms. They will never fail to be injective!    Suppose is a ring homomorphism where is a field. Then is a monomorphism.     Suppose is a ring homomorphism where is a field. We show is a monomorphism by applying . Suppose that there is , with . If , then there is a unit. By , is also a unit and in particular is not . Thus the only element of is .     Image of a Homomorphism  The image of a homomorphism is just different terminology for the range. One reason to use different language is that we will see the image is not just a subset of , it is a subring of !    Suppose , the image of the , denoted is the range of :       Compute the image of the homomorphisms .    Before we prove that the image of a homomorphism is a subring, let's note that homomorphisms preserve most ring-axioms. In particular, we have defined subtraction of two ring elements as , where is the additive inverse of . In you will prove that homorphisms preserve additive inverses, namely: . In particular,     Suppose is a homomorphism. Then is a subring of .    Since , we know that . We just need to show it is closed under subtraction and multiplication:  For subtraction, take . Then   For multiplication, we have We conclude that is a subring of .      The Initial Ring   Initial Ring We now return to and investigate homomorphisms , where is an arbitrary ring. We will prove that there is one and only one homomorphism. This shows that is the initial ring . It is the unique ring (up to isomorphism) that has this property.     Action of Integers  Before we prove this, let's introduce some notation. Take a ring element . For we can define where the right hand sum has terms. Similarly, where the right hand sum has terms. And . We leave it to the reader to check that this is well-defined.    For any ring , there is a unique homomorphism .    Let be an arbitrary homomorphism. Since the image of unity is unity we have . Since the image of the additive identity is the additive identity, we have . By induction, we conclude that for any . Similarly for any .  Since was arbitrary, we have seen that any homomorphism is the homomorphism . This proves uniqueness.      The Terminal Ring   Terminal Ring In this last part of the section, we ask the question: Is there a ring such that for any ring , there exists one and only one homomorphism . That is to say, is there a ? One guess might be . It turns out this is not the case!    Verify the terminal ring, if it exists, cannot be . Do so by showing there is no homomorphism . What about ? Can it be terminal?    The right choice happens to be zero!    For any ring , there is one and only one homomorphism .    This is an exercise. There is only one set-theoretic mapping: the zero map. In this case, we just need to see that the zero map is a homomorphism. This is the case if and only if the codomain is .    We now have two very special rings: and . A natural question is to ask how they interact with each other. In particular, we know there exists a unique homomorphism . What about the other way around?    How many homomorphisms are there ?      Exercises   Mark the following as true or false.   Suppose are rings. Any function is a ring homomorphism.  The identity map on a ring is a ring homomorphism.  The zero map defined by is a ring homomorphism.  If is a ring homomorphism and is a field, then is a field.  If is a ring homomorphism and is a field, then is a field.  If is a ring homomorphism and is a finite ring, then is a finite ring.  If is a ring homomorphism and is a finite ring, then is a finite ring.  If is an injective ring homomorphism and is a finite ring, then is a finite ring.     Fix . Let be defined by . Prove that is a ring homomorphism. Then show that is neither injective nor surjective.    Define by . Prove that is an injective ring homomorphism.    Let be any ring and be the set of matries with entries in . Define by , where is the identity matrix. Prove that is an injective ring homomorphism.    Suppose is a commutative ring. Fix . Let be defined by . Prove that is a ring homomorphism. Is the evaluation homomorphism injective, surjective, and\/or bijective?    Gemini, Google's LLM, has claimed that for any ring , the trace map defined by where , is a ring homomorphism. This is true for exactly one . Find it, prove it is a homomorphism for that , then show it is not a homomorphism for any .    Consider the function defined by . Prove that this mapping is a homomorphism. Then show it is neither injective nor bijective. What is it's image?     Evaluation Homomorphism  Evaluation Homomorphism Evaluation Homomorphism  Let be a ring. Consider the polynomial ring over . For any , define the evaluation function: by . Prove that is always an epimorphism. That is, it is a homomorphism which is always surjective.  Why does this exercise not contradict the previous exercise?    Let be the Frobenius of . Show that is a monomorphism. Show it is not an epimorphism. Describe as a subring of .    Suppose is a homomorphism. Prove for all .    Let be the further reduce modulo three map. Show that is well-defined and an epimorphism. Then show that is not a zero-divisor. That is, homomorphisms need not preserve zero-divisors.    Let and be ring homomorphisms. Prove defined by is again a ring homomorphism.    Which of the properties one-to-one, onto, bijective are stable under composition of ring homomorphisms? That is, if both have one of these properties, must also have it?    Let is a homomorphism, prove that . That is, the additive inverse of the image is the image of the additive inverse.    Suppose is a ring satisfying the initial property: For all rings , there is a unique homomorphism . Prove is isomorphic to as follows.    Show that there are unique homomorphisms and     Use to prove that .    Use that satisfies the initial property to prove .    Deduce that . How might your proof change if you were to show that there is a unique terminal ring instead?      Prove that the zero map is a homomorphism if and only is the zero ring.    Revisiting upper triangular matrices from . Consider the projection onto the entry maps: defined by Prove that and are homomorphisms; however, and are not homomorphisms.   Matching Problem, Dates matching US dates  Match each type of (blank)-morphism with its definition    epimorphism  An onto homomorphism    monomorphism  An into homomorphism    isomorphism  An onto and into homomorphism    automorphism  An isomorphism where codomain is domain      "
 },
 {
   "id": "obj_homomorphisms",
@@ -2908,11 +2926,20 @@ var ptx_lunr_docs = [
   "body": " Prove that the zero map is a homomorphism if and only is the zero ring.  "
 },
 {
+  "id": "exers_homomorphisms-18",
+  "level": "2",
+  "url": "sec_homomorphisms.html#exers_homomorphisms-18",
+  "type": "Exercise",
+  "number": "3.1.7.17",
+  "title": "",
+  "body": " Revisiting upper triangular matrices from . Consider the projection onto the entry maps: defined by Prove that and are homomorphisms; however, and are not homomorphisms.  "
+},
+{
   "id": "matching-dates",
   "level": "2",
   "url": "sec_homomorphisms.html#matching-dates",
   "type": "Exercise",
-  "number": "3.1.7.17",
+  "number": "3.1.7.18",
   "title": "Matching Problem, Dates.",
   "body": "Matching Problem, Dates matching US dates  Match each type of (blank)-morphism with its definition    epimorphism  An onto homomorphism    monomorphism  An into homomorphism    isomorphism  An onto and into homomorphism    automorphism  An isomorphism where codomain is domain   "
 },
@@ -3709,9 +3736,9 @@ var ptx_lunr_docs = [
   "body": " Use the to find all ideals in . might be helpful too.  "
 },
 {
-  "id": "sec_principalIdealsDomains",
+  "id": "sec_principalIdealDomains",
   "level": "1",
-  "url": "sec_principalIdealsDomains.html",
+  "url": "sec_principalIdealDomains.html",
   "type": "Section",
   "number": "3.4",
   "title": "Principal Ideals Domains",
@@ -3720,7 +3747,7 @@ var ptx_lunr_docs = [
 {
   "id": "obj_principalIdealsEuclideanDomains",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#obj_principalIdealsEuclideanDomains",
+  "url": "sec_principalIdealDomains.html#obj_principalIdealsEuclideanDomains",
   "type": "Guiding Questions",
   "number": "3.4",
   "title": "Guiding Questions",
@@ -3729,7 +3756,7 @@ var ptx_lunr_docs = [
 {
   "id": "ssec_principalIdealDomains-3",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ssec_principalIdealDomains-3",
+  "url": "sec_principalIdealDomains.html#ssec_principalIdealDomains-3",
   "type": "Definition",
   "number": "3.4.1",
   "title": "",
@@ -3738,7 +3765,7 @@ var ptx_lunr_docs = [
 {
   "id": "thm_ZisPID",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#thm_ZisPID",
+  "url": "sec_principalIdealDomains.html#thm_ZisPID",
   "type": "Theorem",
   "number": "3.4.2",
   "title": "",
@@ -3747,7 +3774,7 @@ var ptx_lunr_docs = [
 {
   "id": "ssec_principalIdealDomains-6",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ssec_principalIdealDomains-6",
+  "url": "sec_principalIdealDomains.html#ssec_principalIdealDomains-6",
   "type": "Theorem",
   "number": "3.4.3",
   "title": "",
@@ -3756,7 +3783,7 @@ var ptx_lunr_docs = [
 {
   "id": "ssec_principalIdealDomains-7",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ssec_principalIdealDomains-7",
+  "url": "sec_principalIdealDomains.html#ssec_principalIdealDomains-7",
   "type": "Proof",
   "number": "3.4.1.1",
   "title": "",
@@ -3765,7 +3792,7 @@ var ptx_lunr_docs = [
 {
   "id": "lem_minimalDegreePoly",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#lem_minimalDegreePoly",
+  "url": "sec_principalIdealDomains.html#lem_minimalDegreePoly",
   "type": "Lemma",
   "number": "3.4.4",
   "title": "",
@@ -3774,7 +3801,7 @@ var ptx_lunr_docs = [
 {
   "id": "thm_polynomialsOverFieldArePID",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#thm_polynomialsOverFieldArePID",
+  "url": "sec_principalIdealDomains.html#thm_polynomialsOverFieldArePID",
   "type": "Theorem",
   "number": "3.4.5",
   "title": "",
@@ -3783,7 +3810,7 @@ var ptx_lunr_docs = [
 {
   "id": "ssec_polynomialRingsOverAField-7",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ssec_polynomialRingsOverAField-7",
+  "url": "sec_principalIdealDomains.html#ssec_polynomialRingsOverAField-7",
   "type": "Proof",
   "number": "3.4.2.1",
   "title": "",
@@ -3792,7 +3819,7 @@ var ptx_lunr_docs = [
 {
   "id": "ssec_polynomialRingsOverAField-9",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ssec_polynomialRingsOverAField-9",
+  "url": "sec_principalIdealDomains.html#ssec_polynomialRingsOverAField-9",
   "type": "Example",
   "number": "3.4.6",
   "title": "",
@@ -3801,7 +3828,7 @@ var ptx_lunr_docs = [
 {
   "id": "ssec_primeIdeals-4",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ssec_primeIdeals-4",
+  "url": "sec_principalIdealDomains.html#ssec_primeIdeals-4",
   "type": "Definition",
   "number": "3.4.7",
   "title": "",
@@ -3810,7 +3837,7 @@ var ptx_lunr_docs = [
 {
   "id": "thm_primeElementGeneratesPrimeIdeal",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#thm_primeElementGeneratesPrimeIdeal",
+  "url": "sec_principalIdealDomains.html#thm_primeElementGeneratesPrimeIdeal",
   "type": "Theorem",
   "number": "3.4.8",
   "title": "",
@@ -3819,7 +3846,7 @@ var ptx_lunr_docs = [
 {
   "id": "ssec_primeIdeals-7",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ssec_primeIdeals-7",
+  "url": "sec_principalIdealDomains.html#ssec_primeIdeals-7",
   "type": "Activity",
   "number": "3.4.1",
   "title": "",
@@ -3828,7 +3855,7 @@ var ptx_lunr_docs = [
 {
   "id": "thm_quotientByPrimeIsDomain",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#thm_quotientByPrimeIsDomain",
+  "url": "sec_principalIdealDomains.html#thm_quotientByPrimeIsDomain",
   "type": "Theorem",
   "number": "3.4.9",
   "title": "",
@@ -3837,7 +3864,7 @@ var ptx_lunr_docs = [
 {
   "id": "ssec_primeIdeals-10",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ssec_primeIdeals-10",
+  "url": "sec_principalIdealDomains.html#ssec_primeIdeals-10",
   "type": "Proof",
   "number": "3.4.3.1",
   "title": "",
@@ -3846,7 +3873,7 @@ var ptx_lunr_docs = [
 {
   "id": "ssec_primeIdeals-11",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ssec_primeIdeals-11",
+  "url": "sec_principalIdealDomains.html#ssec_primeIdeals-11",
   "type": "Example",
   "number": "3.4.10",
   "title": "",
@@ -3855,7 +3882,7 @@ var ptx_lunr_docs = [
 {
   "id": "ssec_primeIdeals-12",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ssec_primeIdeals-12",
+  "url": "sec_principalIdealDomains.html#ssec_primeIdeals-12",
   "type": "Example",
   "number": "3.4.11",
   "title": "",
@@ -3864,7 +3891,7 @@ var ptx_lunr_docs = [
 {
   "id": "ssec_primeIdeals-13",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ssec_primeIdeals-13",
+  "url": "sec_principalIdealDomains.html#ssec_primeIdeals-13",
   "type": "Example",
   "number": "3.4.12",
   "title": "",
@@ -3873,7 +3900,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex_nonprincipalPrimeIdeal",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ex_nonprincipalPrimeIdeal",
+  "url": "sec_principalIdealDomains.html#ex_nonprincipalPrimeIdeal",
   "type": "Example",
   "number": "3.4.13",
   "title": "",
@@ -3882,7 +3909,7 @@ var ptx_lunr_docs = [
 {
   "id": "ssec_maximalIdeals-3",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ssec_maximalIdeals-3",
+  "url": "sec_principalIdealDomains.html#ssec_maximalIdeals-3",
   "type": "Definition",
   "number": "3.4.14",
   "title": "",
@@ -3891,7 +3918,7 @@ var ptx_lunr_docs = [
 {
   "id": "ssec_maximalIdeals-8",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ssec_maximalIdeals-8",
+  "url": "sec_principalIdealDomains.html#ssec_maximalIdeals-8",
   "type": "Lemma",
   "number": "3.4.15",
   "title": "",
@@ -3900,7 +3927,7 @@ var ptx_lunr_docs = [
 {
   "id": "ssec_maximalIdeals-9",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ssec_maximalIdeals-9",
+  "url": "sec_principalIdealDomains.html#ssec_maximalIdeals-9",
   "type": "Theorem",
   "number": "3.4.16",
   "title": "",
@@ -3909,7 +3936,7 @@ var ptx_lunr_docs = [
 {
   "id": "ssec_maximalIdeals-10",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ssec_maximalIdeals-10",
+  "url": "sec_principalIdealDomains.html#ssec_maximalIdeals-10",
   "type": "Theorem",
   "number": "3.4.17",
   "title": "",
@@ -3918,7 +3945,7 @@ var ptx_lunr_docs = [
 {
   "id": "thm-pid-primes-are-maximal",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#thm-pid-primes-are-maximal",
+  "url": "sec_principalIdealDomains.html#thm-pid-primes-are-maximal",
   "type": "Theorem",
   "number": "3.4.18",
   "title": "",
@@ -3927,7 +3954,7 @@ var ptx_lunr_docs = [
 {
   "id": "ssec_maximalIdeals-13",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#ssec_maximalIdeals-13",
+  "url": "sec_principalIdealDomains.html#ssec_maximalIdeals-13",
   "type": "Exploration",
   "number": "3.4.2",
   "title": "",
@@ -3936,7 +3963,7 @@ var ptx_lunr_docs = [
 {
   "id": "challenge-nonmaximal-prime",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#challenge-nonmaximal-prime",
+  "url": "sec_principalIdealDomains.html#challenge-nonmaximal-prime",
   "type": "Exploration",
   "number": "3.4.3",
   "title": "Challenge.",
@@ -3945,7 +3972,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-1",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-1",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-1",
   "type": "Exercise",
   "number": "3.4.5.1",
   "title": "",
@@ -3954,7 +3981,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-2",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-2",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-2",
   "type": "Exercise",
   "number": "3.4.5.2",
   "title": "",
@@ -3963,7 +3990,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-3",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-3",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-3",
   "type": "Exercise",
   "number": "3.4.5.3",
   "title": "",
@@ -3972,7 +3999,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-4",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-4",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-4",
   "type": "Exercise",
   "number": "3.4.5.4",
   "title": "",
@@ -3981,7 +4008,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-5",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-5",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-5",
   "type": "Exercise",
   "number": "3.4.5.5",
   "title": "",
@@ -3990,7 +4017,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-6",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-6",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-6",
   "type": "Exercise",
   "number": "3.4.5.6",
   "title": "",
@@ -3999,7 +4026,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-7",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-7",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-7",
   "type": "Exercise",
   "number": "3.4.5.7",
   "title": "",
@@ -4008,7 +4035,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-8",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-8",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-8",
   "type": "Exercise",
   "number": "3.4.5.8",
   "title": "",
@@ -4017,7 +4044,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-9",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-9",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-9",
   "type": "Exercise",
   "number": "3.4.5.9",
   "title": "",
@@ -4026,7 +4053,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-10",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-10",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-10",
   "type": "Exercise",
   "number": "3.4.5.10",
   "title": "",
@@ -4035,7 +4062,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-11",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-11",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-11",
   "type": "Exercise",
   "number": "3.4.5.11",
   "title": "",
@@ -4044,7 +4071,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-12",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-12",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-12",
   "type": "Exercise",
   "number": "3.4.5.12",
   "title": "",
@@ -4053,7 +4080,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-13",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-13",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-13",
   "type": "Exercise",
   "number": "3.4.5.13",
   "title": "",
@@ -4062,7 +4089,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-14",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-14",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-14",
   "type": "Exercise",
   "number": "3.4.5.14",
   "title": "",
@@ -4071,7 +4098,7 @@ var ptx_lunr_docs = [
 {
   "id": "exer_divisionAlgorithmGaussianIntegers",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exer_divisionAlgorithmGaussianIntegers",
+  "url": "sec_principalIdealDomains.html#exer_divisionAlgorithmGaussianIntegers",
   "type": "Exercise",
   "number": "3.4.5.15",
   "title": "Division Algorithm for Gaussian Integers.",
@@ -4080,7 +4107,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-16",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-16",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-16",
   "type": "Exercise",
   "number": "3.4.5.16",
   "title": "",
@@ -4089,7 +4116,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-17",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-17",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-17",
   "type": "Exercise",
   "number": "3.4.5.17",
   "title": "",
@@ -4098,7 +4125,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-18",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-18",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-18",
   "type": "Exercise",
   "number": "3.4.5.18",
   "title": "",
@@ -4107,7 +4134,7 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-19",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-19",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-19",
   "type": "Exercise",
   "number": "3.4.5.19",
   "title": "",
@@ -4116,11 +4143,443 @@ var ptx_lunr_docs = [
 {
   "id": "exers_principalIdealDomains-20",
   "level": "2",
-  "url": "sec_principalIdealsDomains.html#exers_principalIdealDomains-20",
+  "url": "sec_principalIdealDomains.html#exers_principalIdealDomains-20",
   "type": "Exercise",
   "number": "3.4.5.20",
   "title": "",
   "body": " Find all ideals such that .  "
+},
+{
+  "id": "sec_factoringPolynomials",
+  "level": "1",
+  "url": "sec_factoringPolynomials.html",
+  "type": "Section",
+  "number": "4.1",
+  "title": "Factoring Polynomials",
+  "body": " Factoring Polynomials   Guiding Questions   In this section, we'll seek to answer the questions:    What is an irreducible polynomial? Are there any tools we can use to determine if a given polynomial is irreducible?    One of the most beautiful consequences of an abstract study of algebra is the fact that both and are Euclidean domains. While they are not the same , we can expect them to share many of the same properties. In this section, our first goal will be to extend familiar properties from to . We will also see that particular features of a polynomial (e.g., its degree, or the existence of roots) allows for additional criteria for its irreducibility to be decided.  Since both and have a division algorithm, it is reasonable to expect that, similar to the integers, we can also investigate the greatest common divisor of polynomials. In fact, our method for finding the greatest common divisor of two integers extends nicely to polynomials.    Given , state a conjecture that gives a means for finding . Prove your conjecture is correct.    The Euclidean algorithm! Apply the division algorithm for polynomials and mimic the proof of the Euclidean algorithm in .      Carefully state and prove a Bézout-like theorem (recall Theorem ) for polynomials in .    Let such that and are not both the zero polynomial. Then there exist polynomials such that .    One of the most useful things we can do with polynomials is evaluate them by plugging in elements from our coefficient set (or some superset that contains it) and performing the resulting arithmetic in an appropriate ring. We can make this completely rigorous using the language of functions: given a commutative ring and all polynomials , we define the function by . However, we will not belabor this point; instead, we will generally write in place of and appeal to our common notions of evaluating polynomials.  Given a polynomial , we have frequently been interested in finding all for which .     zero (of a polynomial)  root   Let be commutative with identity and suppose . We say is a zero or root of if .    When considering polynomials with integer coefficients, any rational roots are particularly well-behaved.    Let with . If such that , and , then and .   TBD.     Use to find the possible rational roots of . Which of the possibilities you found are actually roots? Justify.    TBD.     gave a condition to check to see if polynomials in had roots in . However, the lack of a rational root for a polynomial is not sufficient to say that a polynomial is irreducible in according to .    Find a polynomial that has no roots in but is nonetheless reducible over .    Any polynomial with a nonunit integer factor will do, such as .    To simplify matters, we will focus henceforth on polynomials with coefficients in a field. The following theorem is a result that you learned in high school algebra (and have likely used countless times since then), but as with the other familiar topics we have explored so far, it is necessary to formalize prior to continuing.   Factor Theorem   Let be a field, and . Then is a root of if and only if divides .    If divides , then and , so is a root.  Otherwise, use the division algorithm to divide by . Then , where . Thus, is a nonzero constant. If is a root of , then , so and .    Note that while is a ring, and we already have a definition of an irreducible element of a ring, we will find it useful to have a ready definition of irreducible in the context of polynomials with coefficients in a field. It is to that task that we now turn.   irreducible (polynomial)   Given a field , define an irreducible element of , keeping in view Theorem and Definition . What are the units in ?     An irreducible polynomial is a nonzero nonconstant such that whenever , where , either or is a nonzero constant.     reducible (polynomial)   A polynomial is reducible if it is not irreducible.      State a positive definition for a reducible polynomial with coefficients in a field . That is, state a definition which does not refer to the notion of irreducibility.    A polynomial is reducible if it can be written as , where and .      Every polynomial of degree 1 in is irreducible.    Let be degree 1 and write . Then . Since , one of or is 0, hence or is constant.      A nonconstant polynomial of degree 2 or 3 is irreducible over if and only if it has no zeros in .    We prove the double contrapositive: of degree 2 or 3 is reducible if and only if it has a zero in .  If is reducible there exist nonconstant such that . Since or 3, one of or has degree 1, and is thus of the form , where . Thus, has a zero.  Similarly, if has a zero , , where . Thus, is reducible over .    The preceding theorems allow us to explore the (ir)reducibility of polynomials of small degree with coefficients in any field .    Determine which of the following polynomials are irreducible over the given fields. Justify your answer.    Over :   ,  ,  ,  ,  .    Over :   ,  ,  ,  ,  ,  ,  .       TBD.    As the following theorem illustrates, in , all irreducibles are primes.    Let be a field and such that is irreducible and divides . Then divides or divides .    Assume does not divede . Then and . Multiplying by yields which implies that divides (since divides ) .    We next state the Fundamental Theorem of Algebra. Despite its name, its proof relies on analytic properties of the real numbers; there is no purely algebraic proof. Moreover, it is not essential for the work we do in following sections, but given its close relationship to the question of factorization, we include it here for completeness.   Fundamental Theorem of Algebra  Fundamental Theorem of Algebra   Every nonconstant polynomial with coefficients in has a root in .    We conclude with one consequence of the Fundamental Theorem of Algebra.    Every nonconstant polynomial in can be written as a product of linear polynomials.    What are the irreducibles in ?     Induction on degree of polynomial using previous theorem.   Thus, the multiplicative structure of is straightforward: everything can be factored as a product of linear polynomials. Fields of coefficients like for which this is true are said to be algebraically closed ; not all fields satisfy this property. For instance, does not factor into a product of linear polynomials. Consequently, is not algebraically closed.  However, regardless of whether our field is algebraically closed, we have not yet determined that any can be factored uniquely into a product of irreducibles, or even that such factorizations into irreducibles exist. In , we do just that.  "
+},
+{
+  "id": "obj_factoringPolynomials",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#obj_factoringPolynomials",
+  "type": "Guiding Questions",
+  "number": "4.1",
+  "title": "Guiding Questions",
+  "body": " Guiding Questions   In this section, we'll seek to answer the questions:    What is an irreducible polynomial? Are there any tools we can use to determine if a given polynomial is irreducible?   "
+},
+{
+  "id": "sec_factoringPolynomials-5",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#sec_factoringPolynomials-5",
+  "type": "Investigation",
+  "number": "4.1.1",
+  "title": "",
+  "body": "  Given , state a conjecture that gives a means for finding . Prove your conjecture is correct.    The Euclidean algorithm! Apply the division algorithm for polynomials and mimic the proof of the Euclidean algorithm in .   "
+},
+{
+  "id": "sec_factoringPolynomials-6",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#sec_factoringPolynomials-6",
+  "type": "Investigation",
+  "number": "4.1.2",
+  "title": "",
+  "body": "  Carefully state and prove a Bézout-like theorem (recall Theorem ) for polynomials in .    Let such that and are not both the zero polynomial. Then there exist polynomials such that .   "
+},
+{
+  "id": "sec_factoringPolynomials-9",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#sec_factoringPolynomials-9",
+  "type": "Definition",
+  "number": "4.1.1",
+  "title": "",
+  "body": " zero (of a polynomial)  root   Let be commutative with identity and suppose . We say is a zero or root of if .   "
+},
+{
+  "id": "thm-rational-root",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#thm-rational-root",
+  "type": "Theorem",
+  "number": "4.1.2",
+  "title": "",
+  "body": "  Let with . If such that , and , then and .   TBD.  "
+},
+{
+  "id": "sec_factoringPolynomials-12",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#sec_factoringPolynomials-12",
+  "type": "Activity",
+  "number": "4.1.3",
+  "title": "",
+  "body": "  Use to find the possible rational roots of . Which of the possibilities you found are actually roots? Justify.    TBD.   "
+},
+{
+  "id": "sec_factoringPolynomials-14",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#sec_factoringPolynomials-14",
+  "type": "Activity",
+  "number": "4.1.4",
+  "title": "",
+  "body": "  Find a polynomial that has no roots in but is nonetheless reducible over .    Any polynomial with a nonunit integer factor will do, such as .   "
+},
+{
+  "id": "sec_factoringPolynomials-16",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#sec_factoringPolynomials-16",
+  "type": "Theorem",
+  "number": "4.1.3",
+  "title": "Factor Theorem.",
+  "body": " Factor Theorem   Let be a field, and . Then is a root of if and only if divides .    If divides , then and , so is a root.  Otherwise, use the division algorithm to divide by . Then , where . Thus, is a nonzero constant. If is a root of , then , so and .   "
+},
+{
+  "id": "sec_factoringPolynomials-18",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#sec_factoringPolynomials-18",
+  "type": "Exploration",
+  "number": "4.1.5",
+  "title": "",
+  "body": " irreducible (polynomial)   Given a field , define an irreducible element of , keeping in view Theorem and Definition . What are the units in ?     An irreducible polynomial is a nonzero nonconstant such that whenever , where , either or is a nonzero constant.   "
+},
+{
+  "id": "sec_factoringPolynomials-19",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#sec_factoringPolynomials-19",
+  "type": "Definition",
+  "number": "4.1.4",
+  "title": "",
+  "body": " reducible (polynomial)   A polynomial is reducible if it is not irreducible.   "
+},
+{
+  "id": "sec_factoringPolynomials-20",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#sec_factoringPolynomials-20",
+  "type": "Exploration",
+  "number": "4.1.6",
+  "title": "",
+  "body": "  State a positive definition for a reducible polynomial with coefficients in a field . That is, state a definition which does not refer to the notion of irreducibility.    A polynomial is reducible if it can be written as , where and .   "
+},
+{
+  "id": "sec_factoringPolynomials-21",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#sec_factoringPolynomials-21",
+  "type": "Theorem",
+  "number": "4.1.5",
+  "title": "",
+  "body": "  Every polynomial of degree 1 in is irreducible.    Let be degree 1 and write . Then . Since , one of or is 0, hence or is constant.   "
+},
+{
+  "id": "sec_factoringPolynomials-22",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#sec_factoringPolynomials-22",
+  "type": "Theorem",
+  "number": "4.1.6",
+  "title": "",
+  "body": "  A nonconstant polynomial of degree 2 or 3 is irreducible over if and only if it has no zeros in .    We prove the double contrapositive: of degree 2 or 3 is reducible if and only if it has a zero in .  If is reducible there exist nonconstant such that . Since or 3, one of or has degree 1, and is thus of the form , where . Thus, has a zero.  Similarly, if has a zero , , where . Thus, is reducible over .   "
+},
+{
+  "id": "sec_factoringPolynomials-24",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#sec_factoringPolynomials-24",
+  "type": "Activity",
+  "number": "4.1.7",
+  "title": "",
+  "body": "  Determine which of the following polynomials are irreducible over the given fields. Justify your answer.    Over :   ,  ,  ,  ,  .    Over :   ,  ,  ,  ,  ,  ,  .       TBD.   "
+},
+{
+  "id": "sec_factoringPolynomials-26",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#sec_factoringPolynomials-26",
+  "type": "Theorem",
+  "number": "4.1.7",
+  "title": "",
+  "body": "  Let be a field and such that is irreducible and divides . Then divides or divides .    Assume does not divede . Then and . Multiplying by yields which implies that divides (since divides ) .   "
+},
+{
+  "id": "sec_factoringPolynomials-30",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#sec_factoringPolynomials-30",
+  "type": "Theorem",
+  "number": "4.1.8",
+  "title": "",
+  "body": "  Every nonconstant polynomial in can be written as a product of linear polynomials.    What are the irreducibles in ?   "
+},
+{
+  "id": "sec_factoringPolynomials-31",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#sec_factoringPolynomials-31",
+  "type": "Proof",
+  "number": "4.1.1",
+  "title": "",
+  "body": " Induction on degree of polynomial using previous theorem.  "
+},
+{
+  "id": "sec_factoringPolynomials-32",
+  "level": "2",
+  "url": "sec_factoringPolynomials.html#sec_factoringPolynomials-32",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "algebraically closed "
+},
+{
+  "id": "sec_factorizationEuclideanDomains",
+  "level": "1",
+  "url": "sec_factorizationEuclideanDomains.html",
+  "type": "Section",
+  "number": "4.2",
+  "title": "Factorization in Euclidean Domains",
+  "body": " Factorization in Euclidean Domains   Guiding Questions   In this section, we'll seek to answer the questions:    What is a unique factorization domain? What examples of UFDs do we possess?  What is the ascending chain condition on ideals? What are Noetherian rings?  What does the ascending chain condition have to do with unique factorization?     In this section, our explorations of the structural arithmetic properties that guarantee unique factorization culminate in . Specifically, we'll see that all Euclidean domains possess the unique factorization property. To prove this theorem, we will rely in part on an interesting property of chains of ideals in Euclidean domains.    Unique Factorization Domains  We begin by describing exactly what we mean by unique factorization. The reader may find it helpful to compare to The Fundamental Theorem of Arithmetic .   unique factorization domain (UFD)   An integral domain is called a unique factorization domain (or UFD ) if the following conditions hold.   Every nonzero nonunit element of is either irreducible or can be written as a finite product of irreducibles in .    Factorization into irreducibles is unique up to associates. That is, if can be written as for some irreducibles , then and, after reordering, is an associate of .         Using as an example, illustrate the definition of UFD by factoring 20 into two sets of different irreducibles which nonetheless can be paired up as associates.    We are already familiar with several examples.    The integers form a UFD.   We have already seen that primes and irreducibles coincide in (see and ). The result follows from the Fundamental Theorem of Algebra.     Every field is a UFD.   There are no nonzero nonunits in a field. The UFD conditions are therefore trivially satisfied.     The Ascending Chain Condition and Noetherian Rings  We now set our sights on a proof of . In order to prove it, we will make use of an important property of ideals in Euclidean domains. First, a definition.    A commutative ring is called Noetherian if it satisfies the ascending chain condition on ideals. These rings are named in honor of Emmy Noether , one of the preeminent mathematicians of the 20th century. In addition to making substantial contributions to physics, she formalized the axiomatic definition of ring that is still in use today. That is, is Noetherian if whenever is an ascending chain of ideals in , then there exists some for which .      Consider the ideals in and . Find the longest ascending chains of ideals starting first with and then with that you can. When does each chain stabilize?   TBD.   We next show that every PID is Noetherian.    Every principal ideal domain is Noetherian.    Let and set . Show that is an ideal, and use your assumptions!    It is a straightforward definition check to see that as defined in the hint is an ideal. That we are in a PID means there exists such that . Therefore there exists such that . It follows that and in particular that for all .      Every Euclidean domain is Noetherian.    Every ED is a PID.      Euclidean Domains are UFDs  We now begin collecting results to prove that every Euclidean domain is a UFD. The first condition in the UFD definition is that every nonzero nonunit factors as a product of irreducibles. We first show that every nonzero nonunit is divisible by at least one irreducible ( ), which we apply to show that every nonzero nonunit can be written as a finite product of irreducibles ( ).    Let be a principal ideal domain, and a nonzero nonunit. Then is divisible by an irreducible.    Let be reducible and write . Continue to factor reducibles and build an ascending chain of ideals.    Suppose that is not irreducible. Write , where the are nonzero nonunits. Then . If is not irreducible, we may write , where are nonzero nonunits, and observe that .  (If  is irreducible and we nonetheless write , then either if is a unit, or if is associate to .)  Continuing in this way, we may continue to factor the reducible factors of ; since is a PID and thus has the ascending chain condition, we must eventually reach a point where the chain stabilizes, i.e., that we have found an irreducible factor of .      Let be a PID. Then every nonzero nonunit element of is either irreducible or can be written as a finite product of irreducibles in .    We may perform the analysis from Lemma for all factors of , and thus can be factored into a product of irreducibles.    The second condition that must be satisfied for a domain to be a UFD is that the product of irreducibles must be unique (up to associates). In order to prove that, we will make use of , which states that in PIDs, primes and irreducibles are identical concepts.    Let be a PID and let be irreducible. Let be such that . Then and thus there exist such that .    Assume that is irreducible. Suppose that divides for some and that does not divide . Since is a PID, . Thus there exists such that .      Let be a PID and let . Then is prime if and only if is irreducible.    Assume that is prime. Suppose that for some . Then divides which implies that divides or divides . WLOG, assume that divides . Then there exists such that which implies that . Therefore and is a unit which implies that is irreducible.  Assume that is irreducible. Suppose that divides for some and that does not divide . Then and there exists such that . Multiplying boths sides by yiels which implies that divides and therefore is prime.    Observe that implies that if is a PID and is irreducible with , then or .   Our crucial final step on the road to is the following.    Every PID is a UFD.   For part 2 of the definition, use induction on the number of irreducible divisors of an arbitrary nonzero nonunit. Mimic the proof of .   Let be a PID, and observe that by every nonzero nonunit can be written as a product of irreducibles. We thus need only show that this product is unique (up to associates).  To that end, we adopt the notation of . Let . We perform induction on the number of irreducible factors of . If , then is a unit. If we had for some irreducible , then divides a unit and would thus be a unit itself, which is a contradiction.  Suppose now that and we write where the and are not necessarily distinct irreducibles. Since , we know by that must divide one of the factors.  Renumbering, we may assume that , whence , where must be a unit as is irreducible. Canceling yields By induction on we conclude that each of the irreducible factors on the left matches with precisely one factor on the right (up to associates). This completes the inductive step, and thus the proof.       Every Euclidean domain is a unique factorization domain.     Apply Theorems and .    (Unique Factorization of Polynomials)   Let be a field. Then is a UFD.  That is, if with , then is either irreducible or a product of irreducibles in . What is more, if are two factorizations of into irreducibles , then and after reordering, and are associates.    Handle existence and uniqueness separately. For each, (strong) induction on will work. Or do something entirely different.    Thus, we see that the existence of a well-behaved division algorithm (and a lack of zero divisors) is sufficient to guarantee unique factorization. However, it is not necessary. The following theorem is included for reference, but is not intended to be proved.   Theorem  If is a UFD, then is a UFD.    Thus, is a UFD. That is, every nonconstant polynomial in is either irreducible or can be factored uniquely into a product of irreducibles. However, as we will see later, is not a PID.   "
+},
+{
+  "id": "obj_factorizationEuclideanDomains",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#obj_factorizationEuclideanDomains",
+  "type": "Guiding Questions",
+  "number": "4.2",
+  "title": "Guiding Questions",
+  "body": " Guiding Questions   In this section, we'll seek to answer the questions:    What is a unique factorization domain? What examples of UFDs do we possess?  What is the ascending chain condition on ideals? What are Noetherian rings?  What does the ascending chain condition have to do with unique factorization?   "
+},
+{
+  "id": "def-ufd",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#def-ufd",
+  "type": "Definition",
+  "number": "4.2.1",
+  "title": "",
+  "body": " unique factorization domain (UFD)   An integral domain is called a unique factorization domain (or UFD ) if the following conditions hold.   Every nonzero nonunit element of is either irreducible or can be written as a finite product of irreducibles in .    Factorization into irreducibles is unique up to associates. That is, if can be written as for some irreducibles , then and, after reordering, is an associate of .      "
+},
+{
+  "id": "sec_factorizationEuclideanDomains-4-4",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-4-4",
+  "type": "Activity",
+  "number": "4.2.1",
+  "title": "",
+  "body": "  Using as an example, illustrate the definition of UFD by factoring 20 into two sets of different irreducibles which nonetheless can be paired up as associates.   "
+},
+{
+  "id": "sec_factorizationEuclideanDomains-4-6",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-4-6",
+  "type": "Theorem",
+  "number": "4.2.2",
+  "title": "",
+  "body": "  The integers form a UFD.   We have already seen that primes and irreducibles coincide in (see and ). The result follows from the Fundamental Theorem of Algebra.  "
+},
+{
+  "id": "sec_factorizationEuclideanDomains-4-7",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-4-7",
+  "type": "Theorem",
+  "number": "4.2.3",
+  "title": "",
+  "body": "  Every field is a UFD.   There are no nonzero nonunits in a field. The UFD conditions are therefore trivially satisfied.  "
+},
+{
+  "id": "def-noetherian",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#def-noetherian",
+  "type": "Definition",
+  "number": "4.2.4",
+  "title": "",
+  "body": "  A commutative ring is called Noetherian if it satisfies the ascending chain condition on ideals. These rings are named in honor of Emmy Noether , one of the preeminent mathematicians of the 20th century. In addition to making substantial contributions to physics, she formalized the axiomatic definition of ring that is still in use today. That is, is Noetherian if whenever is an ascending chain of ideals in , then there exists some for which .   "
+},
+{
+  "id": "sec_factorizationEuclideanDomains-5-4",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-5-4",
+  "type": "Exploration",
+  "number": "4.2.2",
+  "title": "",
+  "body": "  Consider the ideals in and . Find the longest ascending chains of ideals starting first with and then with that you can. When does each chain stabilize?   TBD.  "
+},
+{
+  "id": "theorem-pidisnoetherian",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#theorem-pidisnoetherian",
+  "type": "Theorem",
+  "number": "4.2.5",
+  "title": "",
+  "body": "  Every principal ideal domain is Noetherian.    Let and set . Show that is an ideal, and use your assumptions!    It is a straightforward definition check to see that as defined in the hint is an ideal. That we are in a PID means there exists such that . Therefore there exists such that . It follows that and in particular that for all .   "
+},
+{
+  "id": "sec_factorizationEuclideanDomains-5-7",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-5-7",
+  "type": "Corollary",
+  "number": "4.2.6",
+  "title": "",
+  "body": "  Every Euclidean domain is Noetherian.    Every ED is a PID.   "
+},
+{
+  "id": "lem_divisiblebyirred",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#lem_divisiblebyirred",
+  "type": "Lemma",
+  "number": "4.2.7",
+  "title": "",
+  "body": "  Let be a principal ideal domain, and a nonzero nonunit. Then is divisible by an irreducible.    Let be reducible and write . Continue to factor reducibles and build an ascending chain of ideals.    Suppose that is not irreducible. Write , where the are nonzero nonunits. Then . If is not irreducible, we may write , where are nonzero nonunits, and observe that .  (If  is irreducible and we nonetheless write , then either if is a unit, or if is associate to .)  Continuing in this way, we may continue to factor the reducible factors of ; since is a PID and thus has the ascending chain condition, we must eventually reach a point where the chain stabilizes, i.e., that we have found an irreducible factor of .   "
+},
+{
+  "id": "thm-writeasprodofirred",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#thm-writeasprodofirred",
+  "type": "Theorem",
+  "number": "4.2.8",
+  "title": "",
+  "body": "  Let be a PID. Then every nonzero nonunit element of is either irreducible or can be written as a finite product of irreducibles in .    We may perform the analysis from Lemma for all factors of , and thus can be factored into a product of irreducibles.   "
+},
+{
+  "id": "sec_factorizationEuclideanDomains-6-6",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-6-6",
+  "type": "Lemma",
+  "number": "4.2.9",
+  "title": "",
+  "body": "  Let be a PID and let be irreducible. Let be such that . Then and thus there exist such that .    Assume that is irreducible. Suppose that divides for some and that does not divide . Since is a PID, . Thus there exists such that .   "
+},
+{
+  "id": "thm-primesareirredinPID",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#thm-primesareirredinPID",
+  "type": "Theorem",
+  "number": "4.2.10",
+  "title": "",
+  "body": "  Let be a PID and let . Then is prime if and only if is irreducible.    Assume that is prime. Suppose that for some . Then divides which implies that divides or divides . WLOG, assume that divides . Then there exists such that which implies that . Therefore and is a unit which implies that is irreducible.  Assume that is irreducible. Suppose that divides for some and that does not divide . Then and there exists such that . Multiplying boths sides by yiels which implies that divides and therefore is prime.   "
+},
+{
+  "id": "thm_pidisufd",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#thm_pidisufd",
+  "type": "Theorem",
+  "number": "4.2.11",
+  "title": "",
+  "body": "  Every PID is a UFD.   For part 2 of the definition, use induction on the number of irreducible divisors of an arbitrary nonzero nonunit. Mimic the proof of .   Let be a PID, and observe that by every nonzero nonunit can be written as a product of irreducibles. We thus need only show that this product is unique (up to associates).  To that end, we adopt the notation of . Let . We perform induction on the number of irreducible factors of . If , then is a unit. If we had for some irreducible , then divides a unit and would thus be a unit itself, which is a contradiction.  Suppose now that and we write where the and are not necessarily distinct irreducibles. Since , we know by that must divide one of the factors.  Renumbering, we may assume that , whence , where must be a unit as is irreducible. Canceling yields By induction on we conclude that each of the irreducible factors on the left matches with precisely one factor on the right (up to associates). This completes the inductive step, and thus the proof.    "
+},
+{
+  "id": "theorem_everyedisufd",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#theorem_everyedisufd",
+  "type": "Theorem",
+  "number": "4.2.12",
+  "title": "",
+  "body": "  Every Euclidean domain is a unique factorization domain.   "
+},
+{
+  "id": "sec_factorizationEuclideanDomains-6-12",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-6-12",
+  "type": "Proof",
+  "number": "4.2.3.1",
+  "title": "",
+  "body": " Apply Theorems and .  "
+},
+{
+  "id": "sec_factorizationEuclideanDomains-6-13",
+  "level": "2",
+  "url": "sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-6-13",
+  "type": "Theorem",
+  "number": "4.2.13",
+  "title": "(Unique Factorization of Polynomials).",
+  "body": " (Unique Factorization of Polynomials)   Let be a field. Then is a UFD.  That is, if with , then is either irreducible or a product of irreducibles in . What is more, if are two factorizations of into irreducibles , then and after reordering, and are associates.    Handle existence and uniqueness separately. For each, (strong) induction on will work. Or do something entirely different.   "
+},
+{
+  "id": "sec_nonuniqueFactorization",
+  "level": "1",
+  "url": "sec_nonuniqueFactorization.html",
+  "type": "Section",
+  "number": "4.3",
+  "title": "Principal Ideals and Euclidean Domains",
+  "body": " Principal Ideals and Euclidean Domains   Guiding Questions   In this section, we'll seek to answer the questions:    How can unique factorization fail, and why does it matter?  What is an example of a nonatomic domain?  What is an example of an element that does not factor uniquely into a product of irreducibles?    Despite the evidence to the contrary, not every ring has the unique factorization property. That is, there are commutative rings with identity which are not UFDs. In fact, the failure of certain rings in algebraic number theory to have the unique factorization property played a role in several failed attempts to prove Fermat's Last Theorem, which says that there are no nontrivial integer solutions to the equation if . Pierre de Fermat famously claimed that he had a marvelous proof of this fact, but the margin of the book in which he was writing was too narrow to contain it. Fermat's supposed proof was never found, and many now doubt that he had one. The search for a valid proof would not be complete until the work of Andrew Wiles and Richard Taylor in the mid-1990s.  In 1847, Gabriel Lamé claimed he had completely solved the problem. His solution relied on the factorization of , where is an odd prime, as , where is a primitive -th root of unity in . However, the ring is not a unique factorization domain.  There are two ways that unique factorization in an integral domain can fail: there can be a failure of a nonzero nonunit to factor into irreducibles, or there can be nonassociate factorizations of the same element. We investigate each in turn.   A non-atomic domain   We say an integral domain is atomic if every nonzero nonunit can be written as a finite product of irreducibles in . The term atom was suggested by Paul Cohn as a synonym for irreducible. In this exploration, we encounter a non-atomic domain.  Let the set of polynomials with integer constant terms and rational coefficients.   Convince yourself that is an integral domain. You do not need to prove it in detail, but you should at least argue that is closed under the usual polynomial addition and multiplication, and that is a domain.  Describe the irreducibles in .  Use the notion of degree to argue that any factorization of in has the form   Explain why the factorization in the previous part cannot lead to a factorization of into irreducibles in .    TBD.   We now explore the atomic domain . As we will see, even when a nonzero nonunit can be written as a product of irreducibles, it may be the case that this factorization is not unique.    Verify that .    Next, we develop a multiplicative function which enables us to explore the multiplicative properties of .    Define by . Then for all , .      An element is a unit if and only if .     Observe that is a unit if and only if for some , which menas that , so .     There do not exist such that .     Suppose there exist such that . Then we must have , which means that , a contradiction.     The elements 2, , and are irreducible in . We conclude that is not a UFD.     Suppose . Then . By the lemma, we may not have , which means without loss of generality that , and thus is a unit. Therefore, 2 is irreducible.  Now suppose that . Then . The possible values for are 1, 2, 4, and 8. If or 8, then is irreducible, as either or is necessarily a unit. By the lemma, we may not have or , so in fact either or 8. Therefore, is irreducible.  Since we have factored 8 into two different products of irreducibles, is not a UFD.   "
+},
+{
+  "id": "obj_nonuniqueFactorization",
+  "level": "2",
+  "url": "sec_nonuniqueFactorization.html#obj_nonuniqueFactorization",
+  "type": "Guiding Questions",
+  "number": "4.3",
+  "title": "Guiding Questions",
+  "body": " Guiding Questions   In this section, we'll seek to answer the questions:    How can unique factorization fail, and why does it matter?  What is an example of a nonatomic domain?  What is an example of an element that does not factor uniquely into a product of irreducibles?   "
+},
+{
+  "id": "sec_nonuniqueFactorization-6",
+  "level": "2",
+  "url": "sec_nonuniqueFactorization.html#sec_nonuniqueFactorization-6",
+  "type": "Exploration",
+  "number": "4.3.1",
+  "title": "A non-atomic domain.",
+  "body": " A non-atomic domain   We say an integral domain is atomic if every nonzero nonunit can be written as a finite product of irreducibles in . The term atom was suggested by Paul Cohn as a synonym for irreducible. In this exploration, we encounter a non-atomic domain.  Let the set of polynomials with integer constant terms and rational coefficients.   Convince yourself that is an integral domain. You do not need to prove it in detail, but you should at least argue that is closed under the usual polynomial addition and multiplication, and that is a domain.  Describe the irreducibles in .  Use the notion of degree to argue that any factorization of in has the form   Explain why the factorization in the previous part cannot lead to a factorization of into irreducibles in .    TBD.  "
+},
+{
+  "id": "sec_nonuniqueFactorization-8",
+  "level": "2",
+  "url": "sec_nonuniqueFactorization.html#sec_nonuniqueFactorization-8",
+  "type": "Activity",
+  "number": "4.3.2",
+  "title": "",
+  "body": "  Verify that .   "
+},
+{
+  "id": "sec_nonuniqueFactorization-10",
+  "level": "2",
+  "url": "sec_nonuniqueFactorization.html#sec_nonuniqueFactorization-10",
+  "type": "Theorem",
+  "number": "4.3.1",
+  "title": "",
+  "body": "  Define by . Then for all , .   "
+},
+{
+  "id": "sec_nonuniqueFactorization-11",
+  "level": "2",
+  "url": "sec_nonuniqueFactorization.html#sec_nonuniqueFactorization-11",
+  "type": "Theorem",
+  "number": "4.3.2",
+  "title": "",
+  "body": "  An element is a unit if and only if .   "
+},
+{
+  "id": "sec_nonuniqueFactorization-12",
+  "level": "2",
+  "url": "sec_nonuniqueFactorization.html#sec_nonuniqueFactorization-12",
+  "type": "Proof",
+  "number": "4.3.1",
+  "title": "",
+  "body": " Observe that is a unit if and only if for some , which menas that , so .  "
+},
+{
+  "id": "sec_nonuniqueFactorization-13",
+  "level": "2",
+  "url": "sec_nonuniqueFactorization.html#sec_nonuniqueFactorization-13",
+  "type": "Lemma",
+  "number": "4.3.3",
+  "title": "",
+  "body": "  There do not exist such that .   "
+},
+{
+  "id": "sec_nonuniqueFactorization-14",
+  "level": "2",
+  "url": "sec_nonuniqueFactorization.html#sec_nonuniqueFactorization-14",
+  "type": "Proof",
+  "number": "4.3.2",
+  "title": "",
+  "body": " Suppose there exist such that . Then we must have , which means that , a contradiction.  "
+},
+{
+  "id": "sec_nonuniqueFactorization-15",
+  "level": "2",
+  "url": "sec_nonuniqueFactorization.html#sec_nonuniqueFactorization-15",
+  "type": "Theorem",
+  "number": "4.3.4",
+  "title": "",
+  "body": "  The elements 2, , and are irreducible in . We conclude that is not a UFD.   "
+},
+{
+  "id": "sec_nonuniqueFactorization-16",
+  "level": "2",
+  "url": "sec_nonuniqueFactorization.html#sec_nonuniqueFactorization-16",
+  "type": "Proof",
+  "number": "4.3.3",
+  "title": "",
+  "body": " Suppose . Then . By the lemma, we may not have , which means without loss of generality that , and thus is a unit. Therefore, 2 is irreducible.  Now suppose that . Then . The possible values for are 1, 2, 4, and 8. If or 8, then is irreducible, as either or is necessarily a unit. By the lemma, we may not have or , so in fact either or 8. Therefore, is irreducible.  Since we have factored 8 into two different products of irreducibles, is not a UFD.  "
 },
 {
   "id": "backmatter-2",

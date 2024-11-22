@@ -85,9 +85,40 @@ window.MathJax = {
 <link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_oscarlevin.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.4.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.00db6230172ad960.bundle.js"></script><script src="_static/prefix-347.8328b60515045466.bundle.js"></script><script src="_static/prefix-runestone.aa624e4071d017c3.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.51d479d87f8466bb.css">
 <style>
 #ssec_wellordering-8-1-3 { counter-set: ssec_wellordering-8-1-3 0; }
 #ssec_wellordering-8-1-3 > li::marker { content: ""counter(ssec_wellordering-8-1-3,decimal)"."; }
@@ -110,9 +141,9 @@ window.MathJax = {
 #sec-divisibility-gcd-3-5-1-1-2 { counter-set: sec-divisibility-gcd-3-5-1-1-2 0; }
 #sec-divisibility-gcd-3-5-1-1-2 > li::marker { content: ""counter(sec-divisibility-gcd-3-5-1-1-2,decimal)"."; }
 #sec-divisibility-gcd-3-5-1-1-2 > li { counter-increment: sec-divisibility-gcd-3-5-1-1-2; }
-#def_gcdZ-2-1-9 { counter-set: def_gcdZ-2-1-9 0; }
-#def_gcdZ-2-1-9 > li::marker { content: ""counter(def_gcdZ-2-1-9,decimal)"."; }
-#def_gcdZ-2-1-9 > li { counter-increment: def_gcdZ-2-1-9; }
+#def_gcdZ-3-1-9 { counter-set: def_gcdZ-3-1-9 0; }
+#def_gcdZ-3-1-9 > li::marker { content: ""counter(def_gcdZ-3-1-9,decimal)"."; }
+#def_gcdZ-3-1-9 > li { counter-increment: def_gcdZ-3-1-9; }
 #act-gcdcomputations-1-1-2 { counter-set: act-gcdcomputations-1-1-2 0; }
 #act-gcdcomputations-1-1-2 > li::marker { content: ""counter(act-gcdcomputations-1-1-2,decimal)"."; }
 #act-gcdcomputations-1-1-2 > li { counter-increment: act-gcdcomputations-1-1-2; }
@@ -122,9 +153,9 @@ window.MathJax = {
 #sec-divisibility-gcd-quorem-1-2 { counter-set: sec-divisibility-gcd-quorem-1-2 0; }
 #sec-divisibility-gcd-quorem-1-2 > li::marker { content: "("counter(sec-divisibility-gcd-quorem-1-2,lower-alpha)")"; }
 #sec-divisibility-gcd-quorem-1-2 > li { counter-increment: sec-divisibility-gcd-quorem-1-2; }
-#sec-primes-factorization-tf-1-2 { counter-set: sec-primes-factorization-tf-1-2 0; }
-#sec-primes-factorization-tf-1-2 > li::marker { content: "("counter(sec-primes-factorization-tf-1-2,lower-alpha)")"; }
-#sec-primes-factorization-tf-1-2 > li { counter-increment: sec-primes-factorization-tf-1-2; }
+#exer_primesFactorizationTF-1-2 { counter-set: exer_primesFactorizationTF-1-2 0; }
+#exer_primesFactorizationTF-1-2 > li::marker { content: "("counter(exer_primesFactorizationTF-1-2,lower-alpha)")"; }
+#exer_primesFactorizationTF-1-2 > li { counter-increment: exer_primesFactorizationTF-1-2; }
 #exer-primes-factorization-factorizations-1-2 { counter-set: exer-primes-factorization-factorizations-1-2 0; }
 #exer-primes-factorization-factorizations-1-2 > li::marker { content: "("counter(exer-primes-factorization-factorizations-1-2,lower-alpha)")"; }
 #exer-primes-factorization-factorizations-1-2 > li { counter-increment: exer-primes-factorization-factorizations-1-2; }
@@ -173,48 +204,165 @@ window.MathJax = {
 #subsec-subfieldsAndExtensions-3-3-1-3 { counter-set: subsec-subfieldsAndExtensions-3-3-1-3 0; }
 #subsec-subfieldsAndExtensions-3-3-1-3 > li::marker { content: ""counter(subsec-subfieldsAndExtensions-3-3-1-3,decimal)"."; }
 #subsec-subfieldsAndExtensions-3-3-1-3 > li { counter-increment: subsec-subfieldsAndExtensions-3-3-1-3; }
+#exer_primesFactorizationTF-1-2 { counter-set: exer_primesFactorizationTF-1-2 0; }
+#exer_primesFactorizationTF-1-2 > li::marker { content: "("counter(exer_primesFactorizationTF-1-2,lower-alpha)")"; }
+#exer_primesFactorizationTF-1-2 > li { counter-increment: exer_primesFactorizationTF-1-2; }
+#exers_primesFactorization-3-1-2 { counter-set: exers_primesFactorization-3-1-2 0; }
+#exers_primesFactorization-3-1-2 > li::marker { content: "("counter(exers_primesFactorization-3-1-2,lower-alpha)")"; }
+#exers_primesFactorization-3-1-2 > li { counter-increment: exers_primesFactorization-3-1-2; }
+#exer_complexNumbersAsMatrices-1-2 { counter-set: exer_complexNumbersAsMatrices-1-2 0; }
+#exer_complexNumbersAsMatrices-1-2 > li::marker { content: "("counter(exer_complexNumbersAsMatrices-1-2,lower-alpha)")"; }
+#exer_complexNumbersAsMatrices-1-2 > li { counter-increment: exer_complexNumbersAsMatrices-1-2; }
+#exers_primesFactorization-10-1-2 { counter-set: exers_primesFactorization-10-1-2 0; }
+#exers_primesFactorization-10-1-2 > li::marker { content: "("counter(exers_primesFactorization-10-1-2,lower-alpha)")"; }
+#exers_primesFactorization-10-1-2 > li { counter-increment: exers_primesFactorization-10-1-2; }
+#exers_primesFactorization-11-3-2 { counter-set: exers_primesFactorization-11-3-2 0; }
+#exers_primesFactorization-11-3-2 > li::marker { content: "("counter(exers_primesFactorization-11-3-2,lower-alpha)")"; }
+#exers_primesFactorization-11-3-2 > li { counter-increment: exers_primesFactorization-11-3-2; }
 #def_ring-3-1-6 { counter-set: def_ring-3-1-6 0; }
 #def_ring-3-1-6 > li::marker { content: ""counter(def_ring-3-1-6,decimal)"."; }
 #def_ring-3-1-6 > li { counter-increment: def_ring-3-1-6; }
-#thm_subringTest-2-1-5 { counter-set: thm_subringTest-2-1-5 0; }
-#thm_subringTest-2-1-5 > li::marker { content: ""counter(thm_subringTest-2-1-5,decimal)"."; }
-#thm_subringTest-2-1-5 > li { counter-increment: thm_subringTest-2-1-5; }
-#ssec_subrings-5-1-1-3 { counter-set: ssec_subrings-5-1-1-3 0; }
-#ssec_subrings-5-1-1-3 > li::marker { content: ""counter(ssec_subrings-5-1-1-3,decimal)"."; }
-#ssec_subrings-5-1-1-3 > li { counter-increment: ssec_subrings-5-1-1-3; }
+#thm_subringTest-3-1-5 { counter-set: thm_subringTest-3-1-5 0; }
+#thm_subringTest-3-1-5 > li::marker { content: ""counter(thm_subringTest-3-1-5,decimal)"."; }
+#thm_subringTest-3-1-5 > li { counter-increment: thm_subringTest-3-1-5; }
+#ssec_subrings-6-1-1-3 { counter-set: ssec_subrings-6-1-1-3 0; }
+#ssec_subrings-6-1-1-3 > li::marker { content: ""counter(ssec_subrings-6-1-1-3,decimal)"."; }
+#ssec_subrings-6-1-1-3 > li { counter-increment: ssec_subrings-6-1-1-3; }
+#exers_rings-1-1-2 { counter-set: exers_rings-1-1-2 0; }
+#exers_rings-1-1-2 > li::marker { content: "("counter(exers_rings-1-1-2,lower-alpha)")"; }
+#exers_rings-1-1-2 > li { counter-increment: exers_rings-1-1-2; }
+#exer_gaussianIntegers-2-2 { counter-set: exer_gaussianIntegers-2-2 0; }
+#exer_gaussianIntegers-2-2 > li::marker { content: "("counter(exer_gaussianIntegers-2-2,lower-alpha)")"; }
+#exer_gaussianIntegers-2-2 > li { counter-increment: exer_gaussianIntegers-2-2; }
+#exers_rings-5-2-2 { counter-set: exers_rings-5-2-2 0; }
+#exers_rings-5-2-2 > li::marker { content: "("counter(exers_rings-5-2-2,lower-alpha)")"; }
+#exers_rings-5-2-2 > li { counter-increment: exers_rings-5-2-2; }
 #ssec_integralDomains-5-1-1-1 { counter-set: ssec_integralDomains-5-1-1-1 0; }
 #ssec_integralDomains-5-1-1-1 > li::marker { content: ""counter(ssec_integralDomains-5-1-1-1,decimal)"."; }
 #ssec_integralDomains-5-1-1-1 > li { counter-increment: ssec_integralDomains-5-1-1-1; }
-#ssec_divisibilityInDomains-6-1-2 { counter-set: ssec_divisibilityInDomains-6-1-2 0; }
-#ssec_divisibilityInDomains-6-1-2 > li::marker { content: ""counter(ssec_divisibilityInDomains-6-1-2,decimal)"."; }
-#ssec_divisibilityInDomains-6-1-2 > li { counter-increment: ssec_divisibilityInDomains-6-1-2; }
+#exers_integralDomains-1-1-2 { counter-set: exers_integralDomains-1-1-2 0; }
+#exers_integralDomains-1-1-2 > li::marker { content: "("counter(exers_integralDomains-1-1-2,lower-alpha)")"; }
+#exers_integralDomains-1-1-2 > li { counter-increment: exers_integralDomains-1-1-2; }
+#exer_nilpotent-3-2 { counter-set: exer_nilpotent-3-2 0; }
+#exer_nilpotent-3-2 > li::marker { content: "("counter(exer_nilpotent-3-2,lower-alpha)")"; }
+#exer_nilpotent-3-2 > li { counter-increment: exer_nilpotent-3-2; }
+#ssec_divisibilityInDomains-6-1-1-2 { counter-set: ssec_divisibilityInDomains-6-1-1-2 0; }
+#ssec_divisibilityInDomains-6-1-1-2 > li::marker { content: ""counter(ssec_divisibilityInDomains-6-1-1-2,decimal)"."; }
+#ssec_divisibilityInDomains-6-1-1-2 > li { counter-increment: ssec_divisibilityInDomains-6-1-1-2; }
 #expl-unit-prime-irred-1-1-1 { counter-set: expl-unit-prime-irred-1-1-1 0; }
 #expl-unit-prime-irred-1-1-1 > li::marker { content: ""counter(expl-unit-prime-irred-1-1-1,decimal)"."; }
 #expl-unit-prime-irred-1-1-1 > li { counter-increment: expl-unit-prime-irred-1-1-1; }
 #def_gcdDomain-2-1-7 { counter-set: def_gcdDomain-2-1-7 0; }
 #def_gcdDomain-2-1-7 > li::marker { content: ""counter(def_gcdDomain-2-1-7,decimal)"."; }
 #def_gcdDomain-2-1-7 > li { counter-increment: def_gcdDomain-2-1-7; }
-#def-ideal-1-1-4 { counter-set: def-ideal-1-1-4 0; }
-#def-ideal-1-1-4 > li::marker { content: ""counter(def-ideal-1-1-4,decimal)"."; }
-#def-ideal-1-1-4 > li { counter-increment: def-ideal-1-1-4; }
-#sec_principalIdealsEuclideanDomains-22-1-1-2 { counter-set: sec_principalIdealsEuclideanDomains-22-1-1-2 0; }
-#sec_principalIdealsEuclideanDomains-22-1-1-2 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-22-1-1-2,decimal)"."; }
-#sec_principalIdealsEuclideanDomains-22-1-1-2 > li { counter-increment: sec_principalIdealsEuclideanDomains-22-1-1-2; }
-#sec_principalIdealsEuclideanDomains-22-2-1 { counter-set: sec_principalIdealsEuclideanDomains-22-2-1 0; }
-#sec_principalIdealsEuclideanDomains-22-2-1 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-22-2-1,decimal)"."; }
-#sec_principalIdealsEuclideanDomains-22-2-1 > li { counter-increment: sec_principalIdealsEuclideanDomains-22-2-1; }
-#sec_principalIdealsEuclideanDomains-27-1-1-3 { counter-set: sec_principalIdealsEuclideanDomains-27-1-1-3 0; }
-#sec_principalIdealsEuclideanDomains-27-1-1-3 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-27-1-1-3,decimal)"."; }
-#sec_principalIdealsEuclideanDomains-27-1-1-3 > li { counter-increment: sec_principalIdealsEuclideanDomains-27-1-1-3; }
-#sec_principalIdealsEuclideanDomains-27-2-1-1 { counter-set: sec_principalIdealsEuclideanDomains-27-2-1-1 0; }
-#sec_principalIdealsEuclideanDomains-27-2-1-1 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-27-2-1-1,decimal)"."; }
-#sec_principalIdealsEuclideanDomains-27-2-1-1 > li { counter-increment: sec_principalIdealsEuclideanDomains-27-2-1-1; }
-#sec_principalIdealsEuclideanDomains-28-1-1-4 { counter-set: sec_principalIdealsEuclideanDomains-28-1-1-4 0; }
-#sec_principalIdealsEuclideanDomains-28-1-1-4 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-28-1-1-4,decimal)"."; }
-#sec_principalIdealsEuclideanDomains-28-1-1-4 > li { counter-increment: sec_principalIdealsEuclideanDomains-28-1-1-4; }
-#sec_principalIdealsEuclideanDomains-32-1-1-6 { counter-set: sec_principalIdealsEuclideanDomains-32-1-1-6 0; }
-#sec_principalIdealsEuclideanDomains-32-1-1-6 > li::marker { content: ""counter(sec_principalIdealsEuclideanDomains-32-1-1-6,decimal)"."; }
-#sec_principalIdealsEuclideanDomains-32-1-1-6 > li { counter-increment: sec_principalIdealsEuclideanDomains-32-1-1-6; }
+#alg_euclideanAlgorithmPolynomials-2-1-7 { counter-set: alg_euclideanAlgorithmPolynomials-2-1-7 0; }
+#alg_euclideanAlgorithmPolynomials-2-1-7 > li::marker { content: ""counter(alg_euclideanAlgorithmPolynomials-2-1-7,decimal)"."; }
+#alg_euclideanAlgorithmPolynomials-2-1-7 > li { counter-increment: alg_euclideanAlgorithmPolynomials-2-1-7; }
+#exers_divisibilityIntegralDomains-1-1-2 { counter-set: exers_divisibilityIntegralDomains-1-1-2 0; }
+#exers_divisibilityIntegralDomains-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-1-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-1-1-2; }
+#exers_divisibilityIntegralDomains-3-1-2 { counter-set: exers_divisibilityIntegralDomains-3-1-2 0; }
+#exers_divisibilityIntegralDomains-3-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-3-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-3-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-3-1-2; }
+#exers_divisibilityIntegralDomains-4-1-2 { counter-set: exers_divisibilityIntegralDomains-4-1-2 0; }
+#exers_divisibilityIntegralDomains-4-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-4-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-4-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-4-1-2; }
+#exers_divisibilityIntegralDomains-5-1-2 { counter-set: exers_divisibilityIntegralDomains-5-1-2 0; }
+#exers_divisibilityIntegralDomains-5-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-5-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-5-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-5-1-2; }
+#exers_divisibilityIntegralDomains-6-1-2 { counter-set: exers_divisibilityIntegralDomains-6-1-2 0; }
+#exers_divisibilityIntegralDomains-6-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-6-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-6-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-6-1-2; }
+#exers_divisibilityIntegralDomains-8-1-2 { counter-set: exers_divisibilityIntegralDomains-8-1-2 0; }
+#exers_divisibilityIntegralDomains-8-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-8-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-8-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-8-1-2; }
+#expl-homomorphism-examples-1-2 { counter-set: expl-homomorphism-examples-1-2 0; }
+#expl-homomorphism-examples-1-2 > li::marker { content: ""counter(expl-homomorphism-examples-1-2,decimal)"."; }
+#expl-homomorphism-examples-1-2 > li { counter-increment: expl-homomorphism-examples-1-2; }
+#expl-homomorphism-examples-2-1 { counter-set: expl-homomorphism-examples-2-1 0; }
+#expl-homomorphism-examples-2-1 > li::marker { content: ""counter(expl-homomorphism-examples-2-1,decimal)"."; }
+#expl-homomorphism-examples-2-1 > li { counter-increment: expl-homomorphism-examples-2-1; }
+#sec_homomorphismsTF-1-2 { counter-set: sec_homomorphismsTF-1-2 0; }
+#sec_homomorphismsTF-1-2 > li::marker { content: "("counter(sec_homomorphismsTF-1-2,lower-alpha)")"; }
+#sec_homomorphismsTF-1-2 > li { counter-increment: sec_homomorphismsTF-1-2; }
+#exers_homomorphisms-16-1-2 { counter-set: exers_homomorphisms-16-1-2 0; }
+#exers_homomorphisms-16-1-2 > li::marker { content: "("counter(exers_homomorphisms-16-1-2,lower-alpha)")"; }
+#exers_homomorphisms-16-1-2 > li { counter-increment: exers_homomorphisms-16-1-2; }
+#prop_kernelIsIdeal-1-1-5 { counter-set: prop_kernelIsIdeal-1-1-5 0; }
+#prop_kernelIsIdeal-1-1-5 > li::marker { content: ""counter(prop_kernelIsIdeal-1-1-5,decimal)"."; }
+#prop_kernelIsIdeal-1-1-5 > li { counter-increment: prop_kernelIsIdeal-1-1-5; }
+#def_ideal-2-1-4 { counter-set: def_ideal-2-1-4 0; }
+#def_ideal-2-1-4 > li::marker { content: ""counter(def_ideal-2-1-4,decimal)"."; }
+#def_ideal-2-1-4 > li { counter-increment: def_ideal-2-1-4; }
+#ssec_principalIdeals-9-1-1-2 { counter-set: ssec_principalIdeals-9-1-1-2 0; }
+#ssec_principalIdeals-9-1-1-2 > li::marker { content: ""counter(ssec_principalIdeals-9-1-1-2,decimal)"."; }
+#ssec_principalIdeals-9-1-1-2 > li { counter-increment: ssec_principalIdeals-9-1-1-2; }
+#ssec_principalIdeals-9-2-1 { counter-set: ssec_principalIdeals-9-2-1 0; }
+#ssec_principalIdeals-9-2-1 > li::marker { content: ""counter(ssec_principalIdeals-9-2-1,decimal)"."; }
+#ssec_principalIdeals-9-2-1 > li { counter-increment: ssec_principalIdeals-9-2-1; }
+#exers_ideals-1-1-2 { counter-set: exers_ideals-1-1-2 0; }
+#exers_ideals-1-1-2 > li::marker { content: "("counter(exers_ideals-1-1-2,lower-alpha)")"; }
+#exers_ideals-1-1-2 > li { counter-increment: exers_ideals-1-1-2; }
+#ssec_quotientRings-11-1-2 { counter-set: ssec_quotientRings-11-1-2 0; }
+#ssec_quotientRings-11-1-2 > li::marker { content: ""counter(ssec_quotientRings-11-1-2,decimal)"."; }
+#ssec_quotientRings-11-1-2 > li { counter-increment: ssec_quotientRings-11-1-2; }
+#ssec_quotientRings-13-1-2 { counter-set: ssec_quotientRings-13-1-2 0; }
+#ssec_quotientRings-13-1-2 > li::marker { content: ""counter(ssec_quotientRings-13-1-2,decimal)"."; }
+#ssec_quotientRings-13-1-2 > li { counter-increment: ssec_quotientRings-13-1-2; }
+#ssec_quotientRings-14-3-3 { counter-set: ssec_quotientRings-14-3-3 0; }
+#ssec_quotientRings-14-3-3 > li::marker { content: ""counter(ssec_quotientRings-14-3-3,decimal)"."; }
+#ssec_quotientRings-14-3-3 > li { counter-increment: ssec_quotientRings-14-3-3; }
+#subsec--8-1-2 { counter-set: subsec--8-1-2 0; }
+#subsec--8-1-2 > li::marker { content: ""counter(subsec--8-1-2,decimal)"."; }
+#subsec--8-1-2 > li { counter-increment: subsec--8-1-2; }
+#exers_divisibilityIntegralDomains-1-1-2 { counter-set: exers_divisibilityIntegralDomains-1-1-2 0; }
+#exers_divisibilityIntegralDomains-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-1-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-1-1-2; }
+#exers_divisibilityIntegralDomains-2-1-2 { counter-set: exers_divisibilityIntegralDomains-2-1-2 0; }
+#exers_divisibilityIntegralDomains-2-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-2-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-2-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-2-1-2; }
+#exers_divisibilityIntegralDomains-3-1-2 { counter-set: exers_divisibilityIntegralDomains-3-1-2 0; }
+#exers_divisibilityIntegralDomains-3-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-3-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-3-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-3-1-2; }
+#exers_divisibilityIntegralDomains-4-1-2 { counter-set: exers_divisibilityIntegralDomains-4-1-2 0; }
+#exers_divisibilityIntegralDomains-4-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-4-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-4-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-4-1-2; }
+#exers_divisibilityIntegralDomains-8-1-1-2 { counter-set: exers_divisibilityIntegralDomains-8-1-1-2 0; }
+#exers_divisibilityIntegralDomains-8-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-8-1-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-8-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-8-1-1-2; }
+#exers_divisibilityIntegralDomains-11-1-2 { counter-set: exers_divisibilityIntegralDomains-11-1-2 0; }
+#exers_divisibilityIntegralDomains-11-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-11-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-11-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-11-1-2; }
+#ssec_principalIdealDomains-6-1-1-4 { counter-set: ssec_principalIdealDomains-6-1-1-4 0; }
+#ssec_principalIdealDomains-6-1-1-4 > li::marker { content: ""counter(ssec_principalIdealDomains-6-1-1-4,decimal)"."; }
+#ssec_principalIdealDomains-6-1-1-4 > li { counter-increment: ssec_principalIdealDomains-6-1-1-4; }
+#ssec_polynomialRingsOverAField-9-1-6-2 { counter-set: ssec_polynomialRingsOverAField-9-1-6-2 0; }
+#ssec_polynomialRingsOverAField-9-1-6-2 > li::marker { content: ""counter(ssec_polynomialRingsOverAField-9-1-6-2,decimal)"."; }
+#ssec_polynomialRingsOverAField-9-1-6-2 > li { counter-increment: ssec_polynomialRingsOverAField-9-1-6-2; }
+#ssec_primeIdeals-7-1-1-1 { counter-set: ssec_primeIdeals-7-1-1-1 0; }
+#ssec_primeIdeals-7-1-1-1 > li::marker { content: ""counter(ssec_primeIdeals-7-1-1-1,decimal)"."; }
+#ssec_primeIdeals-7-1-1-1 > li { counter-increment: ssec_primeIdeals-7-1-1-1; }
+#ssec_primeIdeals-7-2-1-1 { counter-set: ssec_primeIdeals-7-2-1-1 0; }
+#ssec_primeIdeals-7-2-1-1 > li::marker { content: ""counter(ssec_primeIdeals-7-2-1-1,decimal)"."; }
+#ssec_primeIdeals-7-2-1-1 > li { counter-increment: ssec_primeIdeals-7-2-1-1; }
+#exers_principalIdealDomains-1-1-2 { counter-set: exers_principalIdealDomains-1-1-2 0; }
+#exers_principalIdealDomains-1-1-2 > li::marker { content: "("counter(exers_principalIdealDomains-1-1-2,lower-alpha)")"; }
+#exers_principalIdealDomains-1-1-2 > li { counter-increment: exers_principalIdealDomains-1-1-2; }
+#exers_principalIdealDomains-2-1-1-3 { counter-set: exers_principalIdealDomains-2-1-1-3 0; }
+#exers_principalIdealDomains-2-1-1-3 > li::marker { content: "("counter(exers_principalIdealDomains-2-1-1-3,lower-alpha)")"; }
+#exers_principalIdealDomains-2-1-1-3 > li { counter-increment: exers_principalIdealDomains-2-1-1-3; }
+#exers_principalIdealDomains-3-1-1-5 { counter-set: exers_principalIdealDomains-3-1-1-5 0; }
+#exers_principalIdealDomains-3-1-1-5 > li::marker { content: "("counter(exers_principalIdealDomains-3-1-1-5,lower-alpha)")"; }
+#exers_principalIdealDomains-3-1-1-5 > li { counter-increment: exers_principalIdealDomains-3-1-1-5; }
+#exers_principalIdealDomains-6-1-2 { counter-set: exers_principalIdealDomains-6-1-2 0; }
+#exers_principalIdealDomains-6-1-2 > li::marker { content: "("counter(exers_principalIdealDomains-6-1-2,lower-alpha)")"; }
+#exers_principalIdealDomains-6-1-2 > li { counter-increment: exers_principalIdealDomains-6-1-2; }
+#exer_divisionAlgorithmGaussianIntegers-2-2 { counter-set: exer_divisionAlgorithmGaussianIntegers-2-2 0; }
+#exer_divisionAlgorithmGaussianIntegers-2-2 > li::marker { content: "("counter(exer_divisionAlgorithmGaussianIntegers-2-2,lower-alpha)")"; }
+#exer_divisionAlgorithmGaussianIntegers-2-2 > li { counter-increment: exer_divisionAlgorithmGaussianIntegers-2-2; }
+#exers_principalIdealDomains-16-1-2 { counter-set: exers_principalIdealDomains-16-1-2 0; }
+#exers_principalIdealDomains-16-1-2 > li::marker { content: "("counter(exers_principalIdealDomains-16-1-2,lower-alpha)")"; }
+#exers_principalIdealDomains-16-1-2 > li { counter-increment: exers_principalIdealDomains-16-1-2; }
 #sec_factoringPolynomials-24-1-2 { counter-set: sec_factoringPolynomials-24-1-2 0; }
 #sec_factoringPolynomials-24-1-2 > li::marker { content: ""counter(sec_factoringPolynomials-24-1-2,decimal)"."; }
 #sec_factoringPolynomials-24-1-2 > li { counter-increment: sec_factoringPolynomials-24-1-2; }
@@ -230,48 +378,12 @@ window.MathJax = {
 #sec_nonuniqueFactorization-6-2-3 { counter-set: sec_nonuniqueFactorization-6-2-3 0; }
 #sec_nonuniqueFactorization-6-2-3 > li::marker { content: ""counter(sec_nonuniqueFactorization-6-2-3,decimal)"."; }
 #sec_nonuniqueFactorization-6-2-3 > li { counter-increment: sec_nonuniqueFactorization-6-2-3; }
-#thm_idealgeneratingset-1-1-4 { counter-set: thm_idealgeneratingset-1-1-4 0; }
-#thm_idealgeneratingset-1-1-4 > li::marker { content: ""counter(thm_idealgeneratingset-1-1-4,decimal)"."; }
-#thm_idealgeneratingset-1-1-4 > li { counter-increment: thm_idealgeneratingset-1-1-4; }
-#expl-homomorphism-examples-1-2 { counter-set: expl-homomorphism-examples-1-2 0; }
-#expl-homomorphism-examples-1-2 > li::marker { content: ""counter(expl-homomorphism-examples-1-2,decimal)"."; }
-#expl-homomorphism-examples-1-2 > li { counter-increment: expl-homomorphism-examples-1-2; }
-#expl-homomorphism-examples-2-1 { counter-set: expl-homomorphism-examples-2-1 0; }
-#expl-homomorphism-examples-2-1 > li::marker { content: ""counter(expl-homomorphism-examples-2-1,decimal)"."; }
-#expl-homomorphism-examples-2-1 > li { counter-increment: expl-homomorphism-examples-2-1; }
-#sec-homomorphisms-tf-1-2 { counter-set: sec-homomorphisms-tf-1-2 0; }
-#sec-homomorphisms-tf-1-2 > li::marker { content: "("counter(sec-homomorphisms-tf-1-2,lower-alpha)")"; }
-#sec-homomorphisms-tf-1-2 > li { counter-increment: sec-homomorphisms-tf-1-2; }
-#sec_quotientRings-4-4-1-2 { counter-set: sec_quotientRings-4-4-1-2 0; }
-#sec_quotientRings-4-4-1-2 > li::marker { content: ""counter(sec_quotientRings-4-4-1-2,decimal)"."; }
-#sec_quotientRings-4-4-1-2 > li { counter-increment: sec_quotientRings-4-4-1-2; }
-#sec_quotientRings-4-15-1-2 { counter-set: sec_quotientRings-4-15-1-2 0; }
-#sec_quotientRings-4-15-1-2 > li::marker { content: ""counter(sec_quotientRings-4-15-1-2,decimal)"."; }
-#sec_quotientRings-4-15-1-2 > li { counter-increment: sec_quotientRings-4-15-1-2; }
-#sec_quotientRings-4-17-1-2 { counter-set: sec_quotientRings-4-17-1-2 0; }
-#sec_quotientRings-4-17-1-2 > li::marker { content: ""counter(sec_quotientRings-4-17-1-2,decimal)"."; }
-#sec_quotientRings-4-17-1-2 > li { counter-increment: sec_quotientRings-4-17-1-2; }
-#sec_quotientRings-4-18-3-3 { counter-set: sec_quotientRings-4-18-3-3 0; }
-#sec_quotientRings-4-18-3-3 > li::marker { content: ""counter(sec_quotientRings-4-18-3-3,decimal)"."; }
-#sec_quotientRings-4-18-3-3 > li { counter-increment: sec_quotientRings-4-18-3-3; }
-#subsec-prime-maximal-ideal-5-1-1-1 { counter-set: subsec-prime-maximal-ideal-5-1-1-1 0; }
-#subsec-prime-maximal-ideal-5-1-1-1 > li::marker { content: ""counter(subsec-prime-maximal-ideal-5-1-1-1,decimal)"."; }
-#subsec-prime-maximal-ideal-5-1-1-1 > li { counter-increment: subsec-prime-maximal-ideal-5-1-1-1; }
-#subsec-prime-maximal-ideal-5-2-1-1 { counter-set: subsec-prime-maximal-ideal-5-2-1-1 0; }
-#subsec-prime-maximal-ideal-5-2-1-1 > li::marker { content: ""counter(subsec-prime-maximal-ideal-5-2-1-1,decimal)"."; }
-#subsec-prime-maximal-ideal-5-2-1-1 > li { counter-increment: subsec-prime-maximal-ideal-5-2-1-1; }
-#sec_quotientRings-6-19-1-1-1 { counter-set: sec_quotientRings-6-19-1-1-1 0; }
-#sec_quotientRings-6-19-1-1-1 > li::marker { content: ""counter(sec_quotientRings-6-19-1-1-1,decimal)"."; }
-#sec_quotientRings-6-19-1-1-1 > li { counter-increment: sec_quotientRings-6-19-1-1-1; }
-#sec_quotientRings-6-21-1-2 { counter-set: sec_quotientRings-6-21-1-2 0; }
-#sec_quotientRings-6-21-1-2 > li::marker { content: ""counter(sec_quotientRings-6-21-1-2,decimal)"."; }
-#sec_quotientRings-6-21-1-2 > li { counter-increment: sec_quotientRings-6-21-1-2; }
 </style>
 </head>
 <body id="ringsFirst" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="my-great-book.html"><span class="title">Rings First:</span> <span class="subtitle">An Introduction to Abstract Algebra</span></a></h1>
+<h1 class="heading"><a href="RFIAA.html"><span class="title">Rings First:</span> <span class="subtitle">An Introduction to Abstract Algebra</span></a></h1>
 <p class="byline">Bronson Lim</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
@@ -285,7 +397,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec_factoringPolynomials.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch3-factorization.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_nonuniqueFactorization.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec_factoringPolynomials.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch3-factorization.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_nonuniqueFactorization.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \newcommand{\C}{\mathbb{C}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -294,16 +406,24 @@ window.MathJax = {
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
-<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch1-integers.html" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-induction-wellordering.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Induction and the Well-Ordering Property</span></a></div>
+<div class="toc-title-box"><a href="sec_inductionWellOrdering.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Induction and the Well-Ordering Property</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-induction-wellordering.html#ssec_wellordering" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Well-Ordering Principle</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-induction-wellordering.html#ssec_induction" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Principle of Mathematical Induction</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-induction-wellordering.html#sec-induction-wellordering-7" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#ssec_wellordering" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Well-Ordering Principle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#ssec_induction" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Principle of Mathematical Induction</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#sec_inductionWellOrdering-7" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -315,36 +435,40 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-primes-factorization.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Primes and Factorization</span></a></div>
+<div class="toc-title-box"><a href="sec-primesFactorization.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Primes and Factorization</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-primes-factorization.html#exers-primes-factorization" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="sec-primes-factorization.html#sec-primes-factorization-23" class="internal"><span class="codenumber">1.3</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primesFactorization.html#ssec_primeNumbers" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Prime Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primesFactorization.html#ssec_fundamentalTheoremOfArithmetic" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Fundamental Theorem of Arithmetic</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-primesFactorization.html#exers_primesFactorization" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="sec-primesFactorization.html#sec-primesFactorization-7" class="internal"><span class="codenumber">1.3.4</span> <span class="title">References</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-integers-modulo-m.html" class="internal"><span class="codenumber">1.4</span> <span class="title">The Integers modulo <span class="process-math">\(m\)</span></span></a></div>
+<div class="toc-title-box"><a href="sec_integersModuloM.html" class="internal"><span class="codenumber">1.4</span> <span class="title">The Integers modulo <span class="process-math">\(m\)</span></span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-integers-modulo-m.html#ssec_equivalenceRelations" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Equivalence Relations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-integers-modulo-m.html#ssec_congruenceModm" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Congruence Modulo <span class="process-math">\(m\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-integers-modulo-m.html#ssec_integersModm" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Integers Modulo <span class="process-math">\(m\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-integers-modulo-m.html#ssec_additionMultiplicationTablesZm" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Addition and Multiplication Tables in <span class="process-math">\(\Z/m\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-integers-modulo-m.html#ssec_propertiesOfZm" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Arithmetic Properties of <span class="process-math">\(\Z/m\)</span></span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-integers-modulo-m.html#exers-integers-mod-m" class="internal"><span class="codenumber">1.4.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integersModuloM.html#ssec_equivalenceRelations" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Equivalence Relations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integersModuloM.html#ssec_congruenceModm" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Congruence Modulo <span class="process-math">\(m\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integersModuloM.html#ssec_integersModm" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Integers Modulo <span class="process-math">\(m\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integersModuloM.html#ssec_additionMultiplicationTablesZm" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Addition and Multiplication Tables in <span class="process-math">\(\Z/m\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integersModuloM.html#ssec_propertiesOfZm" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Arithmetic Properties of <span class="process-math">\(\Z/m\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_integersModuloM.html#exers-integers-mod-m" class="internal"><span class="codenumber">1.4.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch2-ringsAndFields.html" class="internal"><span class="codenumber">2</span> <span class="title">Rings and Fields</span></a></div>
+<div class="toc-title-box"><a href="ch2-ringsAndFields.html" class="internal"><span class="codenumber">2</span> <span class="title">Fields, Rings, and Domains</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec_fields.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Fields</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-numberSystems" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Number Systems</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-binaryOperations" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Binary Operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-fields" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Fields</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-propertiesOfFields" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Properties of Fields</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-subfieldsAndExtensions" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Subfields and Extensions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#ssec_binaryOperations" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Binary Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#ssec_fields" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#ssec_examplesOfFields" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Examples of Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-propertiesOfFields" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Properties of Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-subfieldsAndExtensions" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Subfields and Extensions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_fields.html#exers_primesFactorization" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -353,7 +477,10 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_rings.html#ssec_polynomialRing" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Integral Polynomials</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_rings.html#ssec_rings" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Rings</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_rings.html#ssec_subrings" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Subrings: New Rings from Old</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_rings.html#ssec_unitsAndAssociates" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Units and Associates in a Ring</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_rings.html#ssec_unitsAndAssociates" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Units and Associates in a Ring</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_rings.html#exers_rings" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_rings.html#sec_rings-8" class="internal"><span class="codenumber">2.2.5</span> <span class="title">References</span></a></div></li>
 </ul>
 </li>
@@ -363,7 +490,8 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integralDomains.html#ssec_zeroDivisors" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Zero Divisors</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integralDomains.html#ssec_integralDomains" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Integral Domains</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integralDomains.html#ssec_polynomialRingAreDomains" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Polynomial Rings are Domains</span></a></div></li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_integralDomains.html#sec_integralDomains-7" class="internal"><span class="codenumber">2.3.4</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_integralDomains.html#exers_integralDomains" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_integralDomains.html#sec_integralDomains-8" class="internal"><span class="codenumber">2.3.5</span> <span class="title">References</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -372,45 +500,72 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_divisibilityIntegralDomains.html#ssec_divisibilityInDomains" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Divisibility in Domains</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_divisibilityIntegralDomains.html#subsec-primeAndIrreducibleElements" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Prime and Irreducible Elements</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_divisibilityIntegralDomains.html#ssec_greatestCommonDivisors" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Greatest Common Divisors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_divisibilityIntegralDomains.html#ssec_polynomialEuclideanAlgorithm" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Polynomial Euclidean Algorithm</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains" class="internal"><span class="codenumber">2.4.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_principalIdealsEuclideanDomains.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Principal Ideals and Euclidean Domains</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch3-factorization.html" class="internal"><span class="codenumber">3</span> <span class="title">Factorization</span></a></div>
-<ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_factoringPolynomials.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Factoring Polynomials</span></a></div></li>
-<li class="toc-item toc-section active">
-<div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Factorization in Euclidean Domains</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-4" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Unique Factorization Domains</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-5" class="internal"><span class="codenumber">3.2.2</span> <span class="title">The Ascending Chain Condition and Noetherian Rings</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-6" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Euclidean Domains are UFDs</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_nonuniqueFactorization.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Principal Ideals and Euclidean Domains</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch4-idealsAndHomomorphisms.html" class="internal"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a></div>
+<div class="toc-title-box"><a href="ch3-homomorphismsAndIdeals.html" class="internal"><span class="codenumber">3</span> <span class="title">Homomorphisms and Ideals</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec_ideals.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Ideals</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_ideals.html#sec_ideals-32" class="internal"><span class="codenumber">4.1</span> <span class="title">References</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec_homomorphisms.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Homomorphisms</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_homomorphisms.html#exers-homomorphisms" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec_quotientRings.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Quotient Rings</span></a></div>
+<div class="toc-title-box"><a href="sec_homomorphisms.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Homomorphisms</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#sec_quotientRings-4" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Congruence modulo <span class="process-math">\(I\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#subsec-prime-maximal-ideal" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Prime and Maximal Ideals</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#sec_quotientRings-6" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Homomorphisms and Quotient Rings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_homomorphisms.html#subsec-homomorphisms" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Homomorphisms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_homomorphisms.html#ssec_propertiesOfHomomorphisms" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Properties of Homomorphisms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_homomorphisms.html#ssec_kernelOfAHomomorphism" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Kernel of a Homomorphism</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_homomorphisms.html#ssec_imageOfAHomomorphism" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Image of a Homomorphism</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_homomorphisms.html#ssec_initialRing" class="internal"><span class="codenumber">3.1.5</span> <span class="title">The Initial Ring</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_homomorphisms.html#ssec_terminalRing" class="internal"><span class="codenumber">3.1.6</span> <span class="title">The Terminal Ring</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_homomorphisms.html#exers_homomorphisms" class="internal"><span class="codenumber">3.1.7</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_ideals.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Ideals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_ideals.html#ssec_ideals" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Ideals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_ideals.html#ssec_examplesOfIdeals" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Ideals of the Integers Modulo m</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_ideals.html#ssec_principalIdeals" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Principal Ideals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_ideals.html#ssec_idealsGeneratedByASet" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Ideals Generated by a Set</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_ideals.html#exers_ideals" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_quotientRings.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Rings</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#ssec_congruenceModuloI" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Congruence modulo <span class="process-math">\(I\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#ssec_quotientRings" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Quotient Rings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#ssec_NoetherIsomorphismTheorem" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Noether Isomorphism Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#subsec-" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Applying the Noether Isomorphism Theorem</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_quotientRings.html#exers_divisibilityIntegralDomains" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_principalIdealDomains.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Principal Ideals Domains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_principalIdealDomains.html#ssec_principalIdealDomains" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Principal Ideal Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_principalIdealDomains.html#ssec_polynomialRingsOverAField" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Polynomial Rings over a Field</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_principalIdealDomains.html#ssec_primeIdeals" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Prime Ideals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_principalIdealDomains.html#ssec_maximalIdeals" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Maximal Ideals</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_principalIdealDomains.html#exers_principalIdealDomains" class="internal"><span class="codenumber">3.4.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch3-factorization.html" class="internal"><span class="codenumber">4</span> <span class="title">Factorization</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_factoringPolynomials.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Factoring Polynomials</span></a></div></li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Factorization in Euclidean Domains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-4" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Unique Factorization Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-5" class="internal"><span class="codenumber">4.2.2</span> <span class="title">The Ascending Chain Condition and Noetherian Rings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-6" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Euclidean Domains are UFDs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_nonuniqueFactorization.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Principal Ideals and Euclidean Domains</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -423,22 +578,22 @@ window.MathJax = {
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_factorizationEuclideanDomains"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Factorization in Euclidean Domains</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.2</span><span class="space"> </span><span class="title">Factorization in Euclidean Domains</span>
 </h2>
 <article class="objectives goal-like" id="obj_factorizationEuclideanDomains"><h3 class="heading">
-<span class="type">Objectives:</span><span class="space"> </span><span class="title">Guiding Questions</span>
+<span class="type">Guiding Questions:</span><span class="space"> </span><span class="title">Guiding Questions</span>
 </h3>
 <div class="introduction" id="obj_factorizationEuclideanDomains-2"><div class="para" id="obj_factorizationEuclideanDomains-2-1">In this section, we’ll seek to answer the questions:</div></div>
 <ul class="disc" id="obj_factorizationEuclideanDomains-3">
 <li id="obj_factorizationEuclideanDomains-3-1"><div class="para" id="p-derived-obj_factorizationEuclideanDomains-3-1">What is a unique factorization domain? What examples of UFDs do we possess?</div></li>
 <li id="obj_factorizationEuclideanDomains-3-2"><div class="para" id="p-derived-obj_factorizationEuclideanDomains-3-2">What is the ascending chain condition on ideals? What are Noetherian rings?</div></li>
 <li id="obj_factorizationEuclideanDomains-3-3"><div class="para" id="p-derived-obj_factorizationEuclideanDomains-3-3">What does the ascending chain condition have to do with unique factorization?</div></li>
-</ul></article><section class="introduction" id="sec_factorizationEuclideanDomains-3"><div class="para" id="sec_factorizationEuclideanDomains-3-1">In this section, our explorations of the structural arithmetic properties that guarantee unique factorization culminate in <a href="sec_factorizationEuclideanDomains.html#theorem_everyedisufd" class="xref" data-knowl="./knowl/xref/theorem_everyedisufd.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.12">Theorem 3.2.12</a>. Specifically, we’ll see that all Euclidean domains possess the unique factorization property. To prove this theorem, we will rely in part on an interesting property of <em class="emphasis">chains</em> of ideals in Euclidean domains.</div></section><section class="subsection" id="sec_factorizationEuclideanDomains-4"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="space"> </span><span class="title">Unique Factorization Domains</span>
+</ul></article><section class="introduction" id="sec_factorizationEuclideanDomains-3"><div class="para" id="sec_factorizationEuclideanDomains-3-1">In this section, our explorations of the structural arithmetic properties that guarantee unique factorization culminate in <a href="sec_factorizationEuclideanDomains.html#theorem_everyedisufd" class="xref" data-knowl="./knowl/xref/theorem_everyedisufd.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.12">Theorem 4.2.12</a>. Specifically, we’ll see that all Euclidean domains possess the unique factorization property. To prove this theorem, we will rely in part on an interesting property of <em class="emphasis">chains</em> of ideals in Euclidean domains.</div></section><section class="subsection" id="sec_factorizationEuclideanDomains-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="space"> </span><span class="title">Unique Factorization Domains</span>
 </h3>
-<div class="para" id="sec_factorizationEuclideanDomains-4-2">We begin by describing exactly what we mean by unique factorization. The reader may find it helpful to compare <a href="sec_factorizationEuclideanDomains.html#def-ufd" class="xref" data-knowl="./knowl/xref/def-ufd.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.2.1">Definition 3.2.1</a> to <a href="sec-primes-factorization.html#ftarith" class="xref" data-knowl="./knowl/xref/ftarith.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.3.6: Fundamental Theorem of Arithmetic">The Fundamental Theorem of Arithmetic</a>.</div>
+<div class="para" id="sec_factorizationEuclideanDomains-4-2">We begin by describing exactly what we mean by unique factorization. The reader may find it helpful to compare <a href="sec_factorizationEuclideanDomains.html#def-ufd" class="xref" data-knowl="./knowl/xref/def-ufd.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.2.1">Definition 4.2.1</a> to <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "ftarith" missing or not unique]</code>.</div>
 <article class="definition definition-like" id="def-ufd"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
 </h4> <div class="para logical" id="def-ufd-2-1">
 <div class="para">An integral domain <span class="process-math">\(R\)</span> is called a <dfn class="terminology">unique factorization domain</dfn> (or <dfn class="terminology">UFD</dfn>) if the following conditions hold.</div>
 <ol class="decimal" id="def-ufd-2-1-4">
@@ -456,21 +611,21 @@ s = p_1 p_2 \cdots p_k \text{ and }  s = q_1 q_2 \cdots q_m
 </div></li>
 </ol>
 </div></article><article class="activity project-like" id="sec_factorizationEuclideanDomains-4-4"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
 </h4>
 <div class="para" id="sec_factorizationEuclideanDomains-4-4-1-1">Using <span class="process-math">\(\Z\)</span> as an example, illustrate the definition of UFD by factoring 20 into two sets of <em class="emphasis">different</em> irreducibles which nonetheless can be paired up as associates.</div></article><div class="para" id="sec_factorizationEuclideanDomains-4-5">We are already familiar with several examples.</div>
 <article class="theorem theorem-like" id="sec_factorizationEuclideanDomains-4-6"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
 </h4>
 <div class="para" id="sec_factorizationEuclideanDomains-4-6-1-1">The integers <span class="process-math">\(\Z\)</span> form a UFD.</div></article><details id="sec_factorizationEuclideanDomains-4-6-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content">We have already seen that primes and irreducibles coincide in <span class="process-math">\(\Z\)</span> (see <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm-primesareirredindomains" missing or not unique]</code> and <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm-irredisprimeinZ" missing or not unique]</code>). The result follows from the Fundamental Theorem of Algebra.</article></details><article class="theorem theorem-like" id="sec_factorizationEuclideanDomains-4-7"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
 </h4>
 <div class="para" id="sec_factorizationEuclideanDomains-4-7-1-1">Every field is a UFD.</div></article><details id="sec_factorizationEuclideanDomains-4-7-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content">There are no nonzero nonunits in a field. The UFD conditions are therefore trivially satisfied.</article></details></section><section class="subsection" id="sec_factorizationEuclideanDomains-5"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="space"> </span><span class="title">The Ascending Chain Condition and Noetherian Rings</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="space"> </span><span class="title">The Ascending Chain Condition and Noetherian Rings</span>
 </h3>
-<div class="para" id="sec_factorizationEuclideanDomains-5-2">We now set our sights on a proof of <a href="sec_factorizationEuclideanDomains.html#theorem_everyedisufd" class="xref" data-knowl="./knowl/xref/theorem_everyedisufd.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.12">Theorem 3.2.12</a>. In order to prove it, we will make use of an important property of ideals in Euclidean domains. First, a definition.</div>
+<div class="para" id="sec_factorizationEuclideanDomains-5-2">We now set our sights on a proof of <a href="sec_factorizationEuclideanDomains.html#theorem_everyedisufd" class="xref" data-knowl="./knowl/xref/theorem_everyedisufd.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.12">Theorem 4.2.12</a>. In order to prove it, we will make use of an important property of ideals in Euclidean domains. First, a definition.</div>
 <article class="definition definition-like" id="def-noetherian"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="def-noetherian-1-1">
 <div class="para">A commutative ring <span class="process-math">\(R\)</span> is called <dfn class="terminology">Noetherian</dfn> if it satisfies the <dfn class="terminology">ascending chain condition</dfn> on ideals. <aside class="aside aside-like" id="def-noetherian-1-1-4"></aside> That is, <span class="process-math">\(R\)</span> is Noetherian if whenever</div>
@@ -482,24 +637,24 @@ I_1 \subseteq I_2\subseteq I_3\subseteq \cdots
 <div class="para">is an ascending chain of ideals in <span class="process-math">\(R\text{,}\)</span> then there exists some <span class="process-math">\(n\)</span> for which <span class="process-math">\(I_n = I_{n+1} = I_{n+2} = \cdots\text{.}\)</span>
 </div>
 </div></article><article class="exploration project-like" id="sec_factorizationEuclideanDomains-5-4"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
 </h4>
 <div class="para" id="sec_factorizationEuclideanDomains-5-4-1-1">Consider the ideals <span class="process-math">\(I_1 = \ideal{30}\)</span> in <span class="process-math">\(\Z\)</span> and <span class="process-math">\(J_1 = \ideal{32}\text{.}\)</span> Find the longest ascending chains of ideals starting first with <span class="process-math">\(I_1\)</span> and then with <span class="process-math">\(J_1\)</span> that you can. When does each chain stabilize?</div>
 <div class="solutions"><details id="sec_factorizationEuclideanDomains-5-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">TBD.</div></details></div></article><div class="para" id="sec_factorizationEuclideanDomains-5-5">We next show that every PID is Noetherian.</div>
 <article class="theorem theorem-like" id="theorem-pidisnoetherian"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span>
 </h4>
 <div class="para" id="theorem-pidisnoetherian-1-1">Every principal ideal domain is Noetherian.</div>
 <details id="theorem-pidisnoetherian-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="theorem-pidisnoetherian-2-1">Let <span class="process-math">\(I_1\subseteq I_2\subseteq I_3 \subseteq \cdots\)</span> and set <span class="process-math">\(I = \cup I_j\text{.}\)</span> Show that <span class="process-math">\(I\)</span> is an ideal, and use your assumptions!</div></div></details></article><details id="theorem-pidisnoetherian-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="theorem-pidisnoetherian-3-1">It is a straightforward definition check to see that <span class="process-math">\(I\)</span> as defined in the hint is an ideal. That we are in a PID means there exists <span class="process-math">\(a\)</span> such that <span class="process-math">\(I=\cup I_j=\ideal{a}\text{.}\)</span> Therefore there exists <span class="process-math">\(j\)</span> such that <span class="process-math">\(a\in I_j\text{.}\)</span> It follows that <span class="process-math">\(I=I_j\)</span> and in particular that <span class="process-math">\(I=I_k\)</span> for all <span class="process-math">\(k\geq j\text{.}\)</span>
 </div></article></details><article class="corollary theorem-like" id="sec_factorizationEuclideanDomains-5-7"><h4 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span>
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span>
 </h4>
 <div class="para" id="sec_factorizationEuclideanDomains-5-7-1-1">Every Euclidean domain is Noetherian.</div></article><details id="sec_factorizationEuclideanDomains-5-7-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_factorizationEuclideanDomains-5-7-2-1">Every ED is a PID.</div></article></details></section><section class="subsection" id="sec_factorizationEuclideanDomains-6"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="space"> </span><span class="title">Euclidean Domains are UFDs</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="space"> </span><span class="title">Euclidean Domains are UFDs</span>
 </h3>
-<div class="para" id="sec_factorizationEuclideanDomains-6-2">We now begin collecting results to prove that every Euclidean domain is a UFD. The first condition in the UFD definition is that every nonzero nonunit factors as a product of irreducibles. We first show that every nonzero nonunit is divisible by at least one irreducible (<a href="sec_factorizationEuclideanDomains.html#lem_divisiblebyirred" class="xref" data-knowl="./knowl/xref/lem_divisiblebyirred.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.2.7">Lemma 3.2.7</a>), which we apply to show that every nonzero nonunit can be written as a finite product of irreducibles (<a href="sec_factorizationEuclideanDomains.html#thm-writeasprodofirred" class="xref" data-knowl="./knowl/xref/thm-writeasprodofirred.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.8">Theorem 3.2.8</a>).</div>
+<div class="para" id="sec_factorizationEuclideanDomains-6-2">We now begin collecting results to prove that every Euclidean domain is a UFD. The first condition in the UFD definition is that every nonzero nonunit factors as a product of irreducibles. We first show that every nonzero nonunit is divisible by at least one irreducible (<a href="sec_factorizationEuclideanDomains.html#lem_divisiblebyirred" class="xref" data-knowl="./knowl/xref/lem_divisiblebyirred.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 4.2.7">Lemma 4.2.7</a>), which we apply to show that every nonzero nonunit can be written as a finite product of irreducibles (<a href="sec_factorizationEuclideanDomains.html#thm-writeasprodofirred" class="xref" data-knowl="./knowl/xref/thm-writeasprodofirred.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.8">Theorem 4.2.8</a>).</div>
 <article class="lemma theorem-like" id="lem_divisiblebyirred"><h4 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="period">.</span>
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.2.7</span><span class="period">.</span>
 </h4>
 <div class="para" id="lem_divisiblebyirred-1-1">Let <span class="process-math">\(R\)</span> be a principal ideal domain, and <span class="process-math">\(r\in R\)</span> a nonzero nonunit. Then <span class="process-math">\(r\)</span> is divisible by an irreducible.</div>
 <details id="lem_divisiblebyirred-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="lem_divisiblebyirred-2-1">Let <span class="process-math">\(r\in R\)</span> be reducible and write <span class="process-math">\(r = r_1 r_2\text{.}\)</span> Continue to factor reducibles and build an ascending chain of ideals.</div></div></details></article><details id="lem_divisiblebyirred-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="lem_divisiblebyirred-3-1">
@@ -511,33 +666,33 @@ I_1 \subseteq I_2\subseteq I_3\subseteq \cdots
 </div>
 </div> <div class="para" id="lem_divisiblebyirred-3-2">(If <span class="process-math">\(r_1\)</span> <em class="emphasis">is</em> irreducible and we nonetheless write <span class="process-math">\(r_1 = r_{1,1} r_{1,2}\text{,}\)</span> then either <span class="process-math">\(\ideal{r_{1,1}} = R\)</span> if <span class="process-math">\(r_{1,1}\)</span> is a unit, or <span class="process-math">\(\ideal{r_{1,1}} = \ideal{r_1}\)</span> if <span class="process-math">\(r_{1,1}\)</span> is associate to <span class="process-math">\(r_1\text{.}\)</span>)</div> <div class="para" id="lem_divisiblebyirred-3-3">Continuing in this way, we may continue to factor the reducible factors of <span class="process-math">\(r_1\text{;}\)</span> since <span class="process-math">\(R\)</span> is a PID and thus has the ascending chain condition, we must eventually reach a point where the chain stabilizes, i.e., that we have found an irreducible factor of <span class="process-math">\(r_1\text{.}\)</span>
 </div></article></details><article class="theorem theorem-like" id="thm-writeasprodofirred"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.8</span><span class="period">.</span>
 </h4>
 <div class="para" id="thm-writeasprodofirred-1-1">Let <span class="process-math">\(R\)</span> be a PID. Then every nonzero nonunit element of <span class="process-math">\(R\)</span> is either irreducible or can be written as a finite product of irreducibles in <span class="process-math">\(R\text{.}\)</span>
-</div></article><details id="thm-writeasprodofirred-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-writeasprodofirred-2-1">We may perform the analysis from <a href="sec_factorizationEuclideanDomains.html#lem_divisiblebyirred" class="xref" data-knowl="./knowl/xref/lem_divisiblebyirred.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.2.7">Lemma 3.2.7</a> for all factors of <span class="process-math">\(r\text{,}\)</span> and thus <span class="process-math">\(r\)</span> can be factored into a product of irreducibles.</div></article></details><div class="para" id="sec_factorizationEuclideanDomains-6-5">The second condition that must be satisfied for a domain to be a UFD is that the product of irreducibles must be unique (up to associates). In order to prove that, we will make use of <a href="sec_factorizationEuclideanDomains.html#thm-primesareirredinPID" class="xref" data-knowl="./knowl/xref/thm-primesareirredinPID.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.10">Theorem 3.2.10</a>, which states that in PIDs, primes and irreducibles are identical concepts.</div>
+</div></article><details id="thm-writeasprodofirred-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-writeasprodofirred-2-1">We may perform the analysis from <a href="sec_factorizationEuclideanDomains.html#lem_divisiblebyirred" class="xref" data-knowl="./knowl/xref/lem_divisiblebyirred.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 4.2.7">Lemma 4.2.7</a> for all factors of <span class="process-math">\(r\text{,}\)</span> and thus <span class="process-math">\(r\)</span> can be factored into a product of irreducibles.</div></article></details><div class="para" id="sec_factorizationEuclideanDomains-6-5">The second condition that must be satisfied for a domain to be a UFD is that the product of irreducibles must be unique (up to associates). In order to prove that, we will make use of <a href="sec_factorizationEuclideanDomains.html#thm-primesareirredinPID" class="xref" data-knowl="./knowl/xref/thm-primesareirredinPID.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.10">Theorem 4.2.10</a>, which states that in PIDs, primes and irreducibles are identical concepts.</div>
 <article class="lemma theorem-like" id="sec_factorizationEuclideanDomains-6-6"><h4 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.2.9</span><span class="period">.</span>
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.2.9</span><span class="period">.</span>
 </h4>
 <div class="para" id="sec_factorizationEuclideanDomains-6-6-1-1">Let <span class="process-math">\(R\)</span> be a PID and let <span class="process-math">\(p\in R\)</span> be irreducible. Let <span class="process-math">\(a\in R\)</span> be such that <span class="process-math">\(p\nmid a\text{.}\)</span> Then <span class="process-math">\(1\in I = \setof{ax+py}{x,y\in R}\)</span> and thus there exist <span class="process-math">\(s,t\in R\)</span> such that <span class="process-math">\(1 = as+pt\text{.}\)</span>
 </div></article><details id="sec_factorizationEuclideanDomains-6-6-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_factorizationEuclideanDomains-6-6-2-1">Assume that <span class="process-math">\(p\)</span> is irreducible. Suppose that <span class="process-math">\(p\)</span> divides <span class="process-math">\(ab\)</span> for some <span class="process-math">\(a,b \in R\)</span> and that <span class="process-math">\(p\)</span> does not divide <span class="process-math">\(a\text{.}\)</span> Since <span class="process-math">\(R\)</span> is a PID, <span class="process-math">\(I = \ideal{\gcd(a,p)} = \ideal{1}\text{.}\)</span> Thus there exists <span class="process-math">\(s,t\in R\)</span> such that <span class="process-math">\(1=as+pt\text{.}\)</span>
 </div></article></details><article class="theorem theorem-like" id="thm-primesareirredinPID"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.10</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.10</span><span class="period">.</span>
 </h4>
-<div class="para" id="thm-primesareirredinPID-1-1">Let <span class="process-math">\(R\)</span> be a PID and let <span class="process-math">\(p\in R\text{.}\)</span> Then <span class="process-math">\(p\)</span> is prime if and only if <span class="process-math">\(p\)</span> is irreducible.</div></article><details id="thm-primesareirredinPID-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-primesareirredinPID-2-1">Assume that <span class="process-math">\(p\)</span> is prime. Suppose that <span class="process-math">\(p=ab\)</span> for some <span class="process-math">\(a,b \in R\text{.}\)</span> Then <span class="process-math">\(p\)</span> divides <span class="process-math">\(ab\)</span> which implies that <span class="process-math">\(p\)</span> divides <span class="process-math">\(a\)</span> or <span class="process-math">\(p\)</span> divides <span class="process-math">\(b\text{.}\)</span> WLOG, assume that <span class="process-math">\(p\)</span> divides <span class="process-math">\(a\text{.}\)</span> Then there exists <span class="process-math">\(c\in R\)</span> such that <span class="process-math">\(a=pc\)</span> which implies that <span class="process-math">\(p=pcb\text{.}\)</span> Therefore <span class="process-math">\(cb=1\)</span> and <span class="process-math">\(b\)</span> is a unit which implies that <span class="process-math">\(p\)</span> is irreducible.</div> <div class="para" id="thm-primesareirredinPID-2-2">Assume that <span class="process-math">\(p\)</span> is irreducible. Suppose that <span class="process-math">\(p\)</span> divides <span class="process-math">\(ab\)</span> for some <span class="process-math">\(a,b \in R\)</span> and that <span class="process-math">\(p\)</span> does not divide <span class="process-math">\(a\text{.}\)</span> Then <span class="process-math">\(\ideal{a,p}=R\)</span> and there exists <span class="process-math">\(x,y\in R\)</span> such that <span class="process-math">\(1=ax+py\text{.}\)</span> Multiplying boths sides by <span class="process-math">\(b\)</span> yiels <span class="process-math">\(b=abx+pby=p(cx+by)\)</span> which implies that <span class="process-math">\(p\)</span> divides <span class="process-math">\(b\)</span> and therefore <span class="process-math">\(p\)</span> is prime.</div></article></details><div class="para" id="sec_factorizationEuclideanDomains-6-8">Observe that <a href="sec_factorizationEuclideanDomains.html#thm-primesareirredinPID" class="xref" data-knowl="./knowl/xref/thm-primesareirredinPID.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.10">Theorem 3.2.10</a> implies that if <span class="process-math">\(R\)</span> is a PID and <span class="process-math">\(p\in R\)</span> is irreducible with <span class="process-math">\(p|ab\text{,}\)</span> then <span class="process-math">\(p|a\)</span> or <span class="process-math">\(p|b\text{.}\)</span>
+<div class="para" id="thm-primesareirredinPID-1-1">Let <span class="process-math">\(R\)</span> be a PID and let <span class="process-math">\(p\in R\text{.}\)</span> Then <span class="process-math">\(p\)</span> is prime if and only if <span class="process-math">\(p\)</span> is irreducible.</div></article><details id="thm-primesareirredinPID-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-primesareirredinPID-2-1">Assume that <span class="process-math">\(p\)</span> is prime. Suppose that <span class="process-math">\(p=ab\)</span> for some <span class="process-math">\(a,b \in R\text{.}\)</span> Then <span class="process-math">\(p\)</span> divides <span class="process-math">\(ab\)</span> which implies that <span class="process-math">\(p\)</span> divides <span class="process-math">\(a\)</span> or <span class="process-math">\(p\)</span> divides <span class="process-math">\(b\text{.}\)</span> WLOG, assume that <span class="process-math">\(p\)</span> divides <span class="process-math">\(a\text{.}\)</span> Then there exists <span class="process-math">\(c\in R\)</span> such that <span class="process-math">\(a=pc\)</span> which implies that <span class="process-math">\(p=pcb\text{.}\)</span> Therefore <span class="process-math">\(cb=1\)</span> and <span class="process-math">\(b\)</span> is a unit which implies that <span class="process-math">\(p\)</span> is irreducible.</div> <div class="para" id="thm-primesareirredinPID-2-2">Assume that <span class="process-math">\(p\)</span> is irreducible. Suppose that <span class="process-math">\(p\)</span> divides <span class="process-math">\(ab\)</span> for some <span class="process-math">\(a,b \in R\)</span> and that <span class="process-math">\(p\)</span> does not divide <span class="process-math">\(a\text{.}\)</span> Then <span class="process-math">\(\ideal{a,p}=R\)</span> and there exists <span class="process-math">\(x,y\in R\)</span> such that <span class="process-math">\(1=ax+py\text{.}\)</span> Multiplying boths sides by <span class="process-math">\(b\)</span> yiels <span class="process-math">\(b=abx+pby=p(cx+by)\)</span> which implies that <span class="process-math">\(p\)</span> divides <span class="process-math">\(b\)</span> and therefore <span class="process-math">\(p\)</span> is prime.</div></article></details><div class="para" id="sec_factorizationEuclideanDomains-6-8">Observe that <a href="sec_factorizationEuclideanDomains.html#thm-primesareirredinPID" class="xref" data-knowl="./knowl/xref/thm-primesareirredinPID.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.10">Theorem 4.2.10</a> implies that if <span class="process-math">\(R\)</span> is a PID and <span class="process-math">\(p\in R\)</span> is irreducible with <span class="process-math">\(p|ab\text{,}\)</span> then <span class="process-math">\(p|a\)</span> or <span class="process-math">\(p|b\text{.}\)</span>
 </div>
-<div class="para" id="sec_factorizationEuclideanDomains-6-9">Our crucial final step on the road to <a href="sec_factorizationEuclideanDomains.html#theorem_everyedisufd" class="xref" data-knowl="./knowl/xref/theorem_everyedisufd.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.12">Theorem 3.2.12</a> is the following.</div>
+<div class="para" id="sec_factorizationEuclideanDomains-6-9">Our crucial final step on the road to <a href="sec_factorizationEuclideanDomains.html#theorem_everyedisufd" class="xref" data-knowl="./knowl/xref/theorem_everyedisufd.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.12">Theorem 4.2.12</a> is the following.</div>
 <article class="theorem theorem-like" id="thm_pidisufd"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.11</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.11</span><span class="period">.</span>
 </h4>
 <div class="para" id="thm_pidisufd-1-1">Every PID is a UFD.</div>
-<details id="thm_pidisufd-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">For part 2 of the definition, use induction on the number of irreducible divisors of an arbitrary nonzero nonunit. Mimic the proof of <a href="sec-primes-factorization.html#theorem_FTAuniqueness" class="xref" data-knowl="./knowl/xref/theorem_FTAuniqueness.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.3.9: Fundamental Theorem of Arithmetic–Uniqueness Part">Theorem 1.3.9</a>.</div></details></article><details id="thm_pidisufd-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_pidisufd-3-1">Let <span class="process-math">\(R\)</span> be a PID, and observe that by <a href="sec_factorizationEuclideanDomains.html#thm-writeasprodofirred" class="xref" data-knowl="./knowl/xref/thm-writeasprodofirred.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.8">Theorem 3.2.8</a> every nonzero nonunit can be written as a product of irreducibles. We thus need only show that this product is unique (up to associates).</div> <div class="para" id="thm_pidisufd-3-2">To that end, we adopt the notation of <a href="sec_factorizationEuclideanDomains.html#def-ufd" class="xref" data-knowl="./knowl/xref/def-ufd.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.2.1">Definition 3.2.1</a>. Let <span class="process-math">\(s\in R\text{.}\)</span> We perform induction on the number of irreducible factors <span class="process-math">\(k\)</span> of <span class="process-math">\(s\text{.}\)</span> If <span class="process-math">\(k=0\text{,}\)</span> then <span class="process-math">\(s\)</span> is a unit. If we had <span class="process-math">\(s = pa\)</span> for some irreducible <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(p\)</span> divides a unit and would thus be a unit itself, which is a contradiction.</div> <div class="para logical" id="thm_pidisufd-3-3">
+<details id="thm_pidisufd-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">For part 2 of the definition, use induction on the number of irreducible divisors of an arbitrary nonzero nonunit. Mimic the proof of <a href="sec-primesFactorization.html#theorem_FTAuniqueness" class="xref" data-knowl="./knowl/xref/theorem_FTAuniqueness.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.3.9: Fundamental Theorem of Arithmetic–Uniqueness Part">Theorem 1.3.9</a>.</div></details></article><details id="thm_pidisufd-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_pidisufd-3-1">Let <span class="process-math">\(R\)</span> be a PID, and observe that by <a href="sec_factorizationEuclideanDomains.html#thm-writeasprodofirred" class="xref" data-knowl="./knowl/xref/thm-writeasprodofirred.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.8">Theorem 4.2.8</a> every nonzero nonunit can be written as a product of irreducibles. We thus need only show that this product is unique (up to associates).</div> <div class="para" id="thm_pidisufd-3-2">To that end, we adopt the notation of <a href="sec_factorizationEuclideanDomains.html#def-ufd" class="xref" data-knowl="./knowl/xref/def-ufd.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.2.1">Definition 4.2.1</a>. Let <span class="process-math">\(s\in R\text{.}\)</span> We perform induction on the number of irreducible factors <span class="process-math">\(k\)</span> of <span class="process-math">\(s\text{.}\)</span> If <span class="process-math">\(k=0\text{,}\)</span> then <span class="process-math">\(s\)</span> is a unit. If we had <span class="process-math">\(s = pa\)</span> for some irreducible <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(p\)</span> divides a unit and would thus be a unit itself, which is a contradiction.</div> <div class="para logical" id="thm_pidisufd-3-3">
 <div class="para">Suppose now that <span class="process-math">\(k\ge 1\)</span> and we write</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-primesareirredinPID.html">
 \begin{equation*}
 s = p_1 p_2 \cdots p_k \text{ and }  s = q_1 q_2 \cdots q_m, \ m \ge k,
 \end{equation*}
 </div>
-<div class="para">where the <span class="process-math">\(p_i\)</span> and <span class="process-math">\(q_j\)</span> are not necessarily distinct irreducibles. Since <span class="process-math">\(p_1 | q_1 q_2 \cdots q_m\text{,}\)</span> we know by <a href="sec_factorizationEuclideanDomains.html#thm-primesareirredinPID" class="xref" data-knowl="./knowl/xref/thm-primesareirredinPID.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.10">Theorem 3.2.10</a> that <span class="process-math">\(p_1\)</span> must divide one of the factors.</div>
+<div class="para">where the <span class="process-math">\(p_i\)</span> and <span class="process-math">\(q_j\)</span> are not necessarily distinct irreducibles. Since <span class="process-math">\(p_1 | q_1 q_2 \cdots q_m\text{,}\)</span> we know by <a href="sec_factorizationEuclideanDomains.html#thm-primesareirredinPID" class="xref" data-knowl="./knowl/xref/thm-primesareirredinPID.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.10">Theorem 4.2.10</a> that <span class="process-math">\(p_1\)</span> must divide one of the factors.</div>
 </div> <div class="para logical" id="thm_pidisufd-3-4">
 <div class="para">Renumbering, we may assume that <span class="process-math">\(p_1 | q_1\text{,}\)</span> whence <span class="process-math">\(q_1 = p_1 v_1\text{,}\)</span> where <span class="process-math">\(v_1\)</span> must be a unit as <span class="process-math">\(q_1\)</span> is irreducible. Canceling <span class="process-math">\(p_1\)</span> yields</div>
 <div class="displaymath process-math">
@@ -547,10 +702,10 @@ p_2 p_3 \cdots p_k = v_1 q_2 q_3 \cdots q_n, m\ge k.
 </div>
 <div class="para">By induction on <span class="process-math">\(k\)</span> we conclude that each of the irreducible factors on the left matches with precisely one factor on the right (up to associates). This completes the inductive step, and thus the proof.</div>
 </div></article></details><article class="theorem theorem-like" id="theorem_everyedisufd"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.12</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.12</span><span class="period">.</span>
 </h4>
-<div class="para" id="theorem_everyedisufd-1-1">Every Euclidean domain is a unique factorization domain.</div></article><details id="sec_factorizationEuclideanDomains-6-12" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_factorizationEuclideanDomains-6-12-1">Apply <a href="sec_principalIdealsEuclideanDomains.html#thm_edispid" class="xref" data-knowl="./knowl/xref/thm_edispid.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.5.16">Theorems 2.5.16</a> and <a href="sec_factorizationEuclideanDomains.html#thm_pidisufd" class="xref" data-knowl="./knowl/xref/thm_pidisufd.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.11">Theorem 3.2.11</a>.</div></article></details><article class="theorem theorem-like" id="sec_factorizationEuclideanDomains-6-13"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">(Unique Factorization of Polynomials).</span>
+<div class="para" id="theorem_everyedisufd-1-1">Every Euclidean domain is a unique factorization domain.</div></article><details id="sec_factorizationEuclideanDomains-6-12" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_factorizationEuclideanDomains-6-12-1">Apply <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_edispid" missing or not unique]</code> and <a href="sec_factorizationEuclideanDomains.html#thm_pidisufd" class="xref" data-knowl="./knowl/xref/thm_pidisufd.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.11">Theorem 4.2.11</a>.</div></article></details><article class="theorem theorem-like" id="sec_factorizationEuclideanDomains-6-13"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">(Unique Factorization of Polynomials).</span>
 </h4>
 <div class="para" id="sec_factorizationEuclideanDomains-6-13-2-1">Let <span class="process-math">\(F\)</span> be a field. Then <span class="process-math">\(F[x]\)</span> is a UFD.</div> <div class="para logical" id="sec_factorizationEuclideanDomains-6-13-2-2">
 <div class="para">That is, if <span class="process-math">\(f(x) \in F[x]\)</span> with <span class="process-math">\(\deg(f(x)) \ge 1\text{,}\)</span> then <span class="process-math">\(f(x)\)</span> is either irreducible or a product of irreducibles in <span class="process-math">\(F[x]\text{.}\)</span> What is more, if</div>

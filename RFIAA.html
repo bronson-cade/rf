@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Primes and Factorization</title>
+<title>Rings First</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -397,7 +397,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-divisibility-gcd.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch1-integers.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_integersModuloM.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \newcommand{\C}{\mathbb{C}}
+<span class="nav-other-controls"></span><span class="treebuttons"><span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><span class="up-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></span><a class="next-button button" href="frontmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \newcommand{\C}{\mathbb{C}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -415,9 +415,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Preface</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch1-integers.html" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec_inductionWellOrdering.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Induction and the Well-Ordering Property</span></a></div>
 <ul class="structural toc-item-list">
@@ -434,7 +434,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-divisibility-gcd.html#sec-divisibility-gcd-exercises" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-primesFactorization.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Primes and Factorization</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primesFactorization.html#ssec_primeNumbers" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Prime Numbers</span></a></div></li>
@@ -577,189 +577,16 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-primesFactorization"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.3</span><span class="space"> </span><span class="title">Primes and Factorization</span>
-</h2>
-<article class="objectives goal-like" id="obj_primesFactorization"><h3 class="heading"><span class="type">Guiding Questions</span></h3>
-<div class="introduction" id="obj_primesFactorization-1"><div class="para" id="obj_primesFactorization-1-1">In this section, we’ll seek to answer the questions:</div></div>
-<ul class="disc" id="obj_primesFactorization-2">
-<li id="obj_primesFactorization-2-1"><div class="para" id="p-derived-obj_primesFactorization-2-1">What are primes? What properties do they have?</div></li>
-<li id="obj_primesFactorization-2-2"><div class="para" id="p-derived-obj_primesFactorization-2-2">What does the Fundamental Theorem of Arithmetic say?</div></li>
-<li id="obj_primesFactorization-2-3"><div class="para" id="p-derived-obj_primesFactorization-2-3">Why is the Fundamental Theorem of Arithmetic true?</div></li>
-</ul></article><section class="introduction" id="sec-primesFactorization-3"><div class="para" id="sec-primesFactorization-3-1">As described in <a href="sec_inductionWellOrdering.html" class="internal" title="Section 1.1: Induction and the Well-Ordering Property">Section 1.1</a>, our main goal is to build a deep structural understanding of the notion of <em class="emphasis">factorization</em>. That is, splitting objects (e.g., numbers, polynomials, matrices) into products of other objects. One of the most familiar examples of this process involves factoring integers into products of primes.</div></section><section class="subsection" id="ssec_primeNumbers"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="space"> </span><span class="title">Prime Numbers</span>
-</h3>
-<div class="para" id="ssec_primeNumbers-2">We begin with the proper mathematical definition of <em class="emphasis">prime</em>.</div>
-<article class="definition definition-like" id="def_primeInteger"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span>
-</h4> <div class="para" id="def_primeInteger-1-3">Let <span class="process-math">\(p &gt; 1\)</span> be a natural number. We say <span class="process-math">\(p\)</span> is <dfn class="terminology">prime</dfn> if whenever <span class="process-math">\(a,b\in
-\Z\)</span> such that <span class="process-math">\(p\mid ab\text{,}\)</span> either <span class="process-math">\(p\mid a\)</span> or <span class="process-math">\(p\mid b\text{.}\)</span>
-</div> <div class="para" id="def_primeInteger-1-4">A natural number <span class="process-math">\(m &gt; 1\)</span> is said to be <dfn class="terminology">composite</dfn> if it is not prime.</div></article><div class="para" id="ssec_primeNumbers-4">This is almost certainly not the definition of prime that you are familiar with from your school days, which likely said something to the effect that a prime <span class="process-math">\(p &gt; 1\)</span> is a natural number only divisible by 1 and itself. However, <a href="sec-primesFactorization.html#def_primeInteger" class="xref" data-knowl="./knowl/xref/def_primeInteger.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.3.1">Definition 1.3.1</a> is often more useful than the usual definition. And, as <a href="sec-primesFactorization.html#thm_euclidsLemma" class="xref" data-knowl="./knowl/xref/thm_euclidsLemma.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 1.3.2: Euclid’s Lemma">Lemma 1.3.2</a> demonstrates, the two notions are equivalent.</div>
-<article class="lemma theorem-like" id="thm_euclidsLemma"><h4 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Euclid’s Lemma.</span>
-</h4>
-<div class="para" id="thm_euclidsLemma-3-1">Given any <span class="process-math">\(p\in \N\text{,}\)</span> <span class="process-math">\(p &gt; 1\text{,}\)</span> <span class="process-math">\(p\)</span> is prime if and only if whenever <span class="process-math">\(m\in
-\N\)</span> divides <span class="process-math">\(p\text{,}\)</span> either <span class="process-math">\(m = p\)</span> or <span class="process-math">\(m = 1\text{.}\)</span>
-</div></article><details id="thm_euclidsLemma-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_euclidsLemma-4-1">Let <span class="process-math">\(p\)</span> be prime and suppose <span class="process-math">\(m\in \N\)</span> divides <span class="process-math">\(p\text{,}\)</span> so <span class="process-math">\(p = mk\)</span> for some <span class="process-math">\(k\in \N\text{.}\)</span> By definition, <span class="process-math">\(p|m\)</span> or <span class="process-math">\(p|k\text{.}\)</span> If <span class="process-math">\(p|m\text{,}\)</span> then <span class="process-math">\(pj = m\text{,}\)</span> so <span class="process-math">\(p = pjk\text{,}\)</span> and <span class="process-math">\(jk=1\text{,}\)</span> which means <span class="process-math">\(j=k=1\)</span> and thus <span class="process-math">\(m=p\text{.}\)</span> If <span class="process-math">\(p|k\text{,}\)</span> then <span class="process-math">\(pj=k\text{,}\)</span> so <span class="process-math">\(p = mpj\text{,}\)</span> and <span class="process-math">\(mj=1\text{,}\)</span> so <span class="process-math">\(m = j = 1\text{.}\)</span>
-</div> <div class="para" id="thm_euclidsLemma-4-2">Conversely, assume <span class="process-math">\(p\in \N\)</span> has the property that whenever an integer <span class="process-math">\(m\)</span> exists with <span class="process-math">\(m|p\text{,}\)</span> then <span class="process-math">\(m= p\)</span> or <span class="process-math">\(m =1\text{.}\)</span> Suppose <span class="process-math">\(p|ab\text{,}\)</span> so there exists a <span class="process-math">\(k\in\N\)</span> such that <span class="process-math">\(pk = ab\text{.}\)</span> Note that if <span class="process-math">\(\gcd(a,p) = d &gt; 1\text{,}\)</span> then <span class="process-math">\(d|p\text{,}\)</span> and so <span class="process-math">\(d = p\text{,}\)</span> and then <span class="process-math">\(p|a\text{.}\)</span> If <span class="process-math">\(\gcd(a,p) = 1\text{,}\)</span> then by Bézout’s Identity there are integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that <span class="process-math">\(ax + py = 1\text{,}\)</span> so we may multiply by <span class="process-math">\(b\)</span> to obtain <span class="process-math">\(abx + pby = b\text{,}\)</span> whence <span class="process-math">\(p|b\text{.}\)</span>
-</div></article></details><article class="exploration project-like" id="question_compositecharacterization"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span>
-</h4>
-<div class="para" id="question_compositecharacterization-1-1">Using <a href="sec-primesFactorization.html#thm_euclidsLemma" class="xref" data-knowl="./knowl/xref/thm_euclidsLemma.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 1.3.2: Euclid’s Lemma">Lemma 1.3.2</a> as a guide, give a biconditional characterization for composite numbers. That is, finish the sentence: “A number <span class="process-math">\(m\in\N\)</span> is composite if and only if ....”</div>
-<div class="solutions"><details id="question_compositecharacterization-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="question_compositecharacterization-2-1">“A number <span class="process-math">\(m\in\N\)</span> is composite if and only if there exist natural numbers <span class="process-math">\(a,b\ne
-1\)</span> such that <span class="process-math">\(m = ab\text{.}\)</span>”</div></div></details></div></article><article class="remark remark-like" id="ssec_primeNumbers-7"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span>
-</h4>
-<div class="para" id="ssec_primeNumbers-7-1">How does your definition treat the number 1? The primality of 1 has been the subject of much debate stretching back to the Greeks (most of whom did not consider 1 to be a number). Throughout history, mathematicians have at times viewed 1 as prime, and at other times, not prime. The main argument for the non-primality of 1 is that if 1 were taken to be prime, we would need to word theorems like the Fundamental Theorem of Arithmetic (below) in such a way that only prime factorizations not including 1 can be considered. For, if 1 is prime, we would have to consider, e.g., <span class="process-math">\(6 = 2\cdot 3 = 1\cdot 2 \cdot 3 = 1\cdot 1\cdot 2\cdot 3\)</span> as three different factorizations of 6 into primes.</div> <div class="para" id="ssec_primeNumbers-7-2">However, neither is 1 composite (your definition should rule this out in some way). Instead, we call 1 a <dfn class="terminology">unit</dfn>, which we’ll explore more fully in <a href="sec_rings.html#def_unit" class="xref" data-knowl="./knowl/xref/def_unit.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.20">Definition 2.2.20</a> and the following; consequently, the opposite of "prime" is not "composite", but "not prime".</div></article><article class="theorem theorem-like" id="ssec_primeNumbers-8"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span>
-</h4>
-<div class="para" id="ssec_primeNumbers-8-1-1">Let <span class="process-math">\(a\in \N\)</span> such that <span class="process-math">\(a &gt; 1\text{.}\)</span> Then there is a prime <span class="process-math">\(p\)</span> such that <span class="process-math">\(p\mid
-a\text{.}\)</span>
-</div></article><details id="ssec_primeNumbers-8-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_primeNumbers-8-2-1">We proceed by mathematical induction. Note that when <span class="process-math">\(a = 2\text{,}\)</span> the statement holds.</div> <div class="para" id="ssec_primeNumbers-8-2-2">Assume that there is a <span class="process-math">\(k\in\N\)</span> such that for all <span class="process-math">\(a\le k\text{,}\)</span> the statement holds. Consider <span class="process-math">\(k+1\text{.}\)</span> If <span class="process-math">\(k+1\)</span> is prime, we are done. If not, then <span class="process-math">\(k+1\)</span> is composite, and by the answer to <a href="sec-primesFactorization.html#question_compositecharacterization" class="xref" data-knowl="./knowl/xref/question_compositecharacterization.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 1.3.1">Question 1.3.1</a>, there are integers <span class="process-math">\(a,b\ne 1\)</span> such that <span class="process-math">\(k+1 = ab\text{.}\)</span> By induction, there is a prime <span class="process-math">\(p\)</span> such that <span class="process-math">\(p|a\text{,}\)</span> so <span class="process-math">\(p|k+1\text{.}\)</span>
-</div></article></details><article class="theorem theorem-like" id="ssec_primeNumbers-9"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span>
-</h4>
-<div class="para" id="ssec_primeNumbers-9-1-1">Suppose <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are primes with <span class="process-math">\(p|q\text{.}\)</span> Then <span class="process-math">\(p = q\text{.}\)</span>
-</div></article><details id="ssec_primeNumbers-9-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content">Since <span class="process-math">\(p\mid q\text{,}\)</span> we know <span class="process-math">\(\gcd(p,q) = p&gt;1\text{.}\)</span> By <a href="sec-primesFactorization.html#thm_euclidsLemma" class="xref" data-knowl="./knowl/xref/thm_euclidsLemma.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 1.3.2: Euclid’s Lemma">Euclid’s Lemma 1.3.2</a>, the only possible divisors of <span class="process-math">\(q\)</span> are <span class="process-math">\(1,q\text{.}\)</span> It follows that <span class="process-math">\(p=q\)</span> .</article></details></section><section class="subsection" id="ssec_fundamentalTheoremOfArithmetic"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="space"> </span><span class="title">Fundamental Theorem of Arithmetic</span>
-</h3>
-<div class="para" id="ssec_fundamentalTheoremOfArithmetic-2">Our first major theorem makes two claims: that positive integers greater than 1 <em class="emphasis">can</em> be factored into products of primes, and that this factorization can happen in only one way. As the semester progresses, we will see other theorems like this one, and catch glimpses of other ways to think about the <em class="emphasis">unique factorization property</em>.</div>
-<article class="theorem theorem-like" id="thm_fundamentalTheoremOfArithmetic"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental Theorem of Arithmetic.</span>
-</h4>
-<div class="para" id="thm_fundamentalTheoremOfArithmetic-3">Every natural number greater than 1 is either a prime number or it can be expressed as a finite product of prime numbers where the expression is unique up to the order of the factors.</div></article><div class="para" id="ssec_fundamentalTheoremOfArithmetic-4">The proof is broken into two parts: existence (<a href="sec-primesFactorization.html#theorem_FTAexistence" class="xref" data-knowl="./knowl/xref/theorem_FTAexistence.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.3.7: Fundamental Theorem of Arithmetic–Existence Part">Theorem 1.3.7</a>) and uniqueness (<a href="sec-primesFactorization.html#theorem_FTAuniqueness" class="xref" data-knowl="./knowl/xref/theorem_FTAuniqueness.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.3.9: Fundamental Theorem of Arithmetic–Uniqueness Part">Theorem 1.3.9</a>).</div>
-<article class="theorem theorem-like" id="theorem_FTAexistence"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental Theorem of Arithmetic–Existence Part<details class="ptx-footnote" aria-live="polite" id="theorem_FTAexistence-1-2"><summary class="ptx-footnote__number" title="Footnote 1.3.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="theorem_FTAexistence-1-2">This approach to the Fundamental Theorem of Arithmetic is adapted from [1.3.4.1].</div></details>.</span>
-</h4>
-<div class="para logical" id="theorem_FTAexistence-2-1">
-<div class="para">Every natural number <span class="process-math">\(n &gt; 1\)</span> is either a prime number or it can be expressed as a finite product of prime numbers. That is, for every natural number <span class="process-math">\(n &gt; 1\text{,}\)</span> there exist primes <span class="process-math">\(p_1, p_2, \ldots,
-p_m\)</span> and natural numbers <span class="process-math">\(r_1, r_2, \ldots, r_m\)</span> such that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-n = p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m}\text{.}
-\end{equation*}
-</div>
-</div>
-<details id="theorem_FTAexistence-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="theorem_FTAexistence-3-1">Induction!</div></div></details></article><details id="ssec_fundamentalTheoremOfArithmetic-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_fundamentalTheoremOfArithmetic-6-1">It is enough to show that, if <span class="process-math">\(n &gt; 1\text{,}\)</span> we may write <span class="process-math">\(n = p_1 p_2 \cdots p_k\text{,}\)</span> where the <span class="process-math">\(p_i\)</span>’s are not necessarily distinct primes. Then we can collect the common primes and write them with exponent notation.</div> <div class="para" id="ssec_fundamentalTheoremOfArithmetic-6-2">Note that when <span class="process-math">\(n = 2\text{,}\)</span> there is such an expression, so let <span class="process-math">\(k &gt; 2\)</span> be the least positive integer that fails to be expressed as above. We note that <span class="process-math">\(k\)</span> cannot be prime, or it could be expressed as above. Thus, by Theorem 2.1, there is a prime <span class="process-math">\(p\)</span> such that <span class="process-math">\(k
-= p b\text{,}\)</span> where <span class="process-math">\(1 \lt p, b \lt k\text{.}\)</span> Since <span class="process-math">\(k\)</span> was the least positive integer that cannot be factored as a product of primes, <span class="process-math">\(b\)</span> has a prime factorization. But then so does <span class="process-math">\(k\text{,}\)</span> a contradiction.</div></article></details><article class="lemma theorem-like" id="ssec_fundamentalTheoremOfArithmetic-7"><h4 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.3.8</span><span class="period">.</span>
-</h4>
-<div class="para" id="ssec_fundamentalTheoremOfArithmetic-7-1-1">Let <span class="process-math">\(p\)</span> and <span class="process-math">\(q_1, q_2,\ldots,
-q_n\)</span> all be primes and let <span class="process-math">\(k\)</span> be a natural number such that <span class="process-math">\(pk = q_1 q_2
-\ldots q_n\text{.}\)</span> Then <span class="process-math">\(p = q_i\)</span> for some <span class="process-math">\(i\text{.}\)</span>
-</div></article><details id="ssec_fundamentalTheoremOfArithmetic-8" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_fundamentalTheoremOfArithmetic-8-1">We first state a claim that will be useful.</div> <div class="para" id="ssec_fundamentalTheoremOfArithmetic-8-2">
-<em class="emphasis">Claim 1:</em> If <span class="process-math">\(p,q\)</span> are primes such that <span class="process-math">\(p|q\text{,}\)</span> then <span class="process-math">\(p = q\text{.}\)</span>
-</div> <div class="para" id="ssec_fundamentalTheoremOfArithmetic-8-3">
-<em class="emphasis">Proof of Claim 1:</em> Since <span class="process-math">\(p,
-q &gt; 1\)</span> and both <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are prime, <span class="process-math">\(p = q\)</span> by the definition of primality. <span class="process-math">\(\checkmark\)</span>
-</div> <div class="para" id="ssec_fundamentalTheoremOfArithmetic-8-4">Now assume that <span class="process-math">\(pk = q_1 q_2 \cdots q_n = (q_1 q_2 \cdots q_{n-1}) q_n\text{.}\)</span> If <span class="process-math">\(p|q_n\text{,}\)</span> we’re done by Claim 1. If not, the definition of a prime guarantees that <span class="process-math">\(p| q_1 q_2 \cdots
-q_{n-1}\text{.}\)</span> If <span class="process-math">\(p|q_{n-1}\text{,}\)</span> we’re done by Claim 1. Otherwise, <span class="process-math">\(p|q_1 q_2 \cdots
-q_{n-2}\text{.}\)</span>
-</div> <div class="para" id="ssec_fundamentalTheoremOfArithmetic-8-5">Repeating this process, we see that either <span class="process-math">\(p|q_i\)</span> for some <span class="process-math">\(i &gt; 2\text{,}\)</span> or <span class="process-math">\(p|q_1
-q_2\text{.}\)</span> Now the definition of a prime guarantees that <span class="process-math">\(p|q_1\)</span> or <span class="process-math">\(p|q_2\text{,}\)</span> in which case Claim 1 requires that <span class="process-math">\(p = q_1\)</span> or <span class="process-math">\(p = q_2\text{.}\)</span>
-</div></article></details><article class="theorem theorem-like" id="theorem_FTAuniqueness"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental Theorem of Arithmetic–Uniqueness Part.</span>
-</h4>
-<div class="para logical" id="theorem_FTAuniqueness-2-1">
-<div class="para">Let <span class="process-math">\(n\)</span> be a natural number. Let <span class="process-math">\(\set{p_1,p_2,\ldots,p_m}\)</span> and <span class="process-math">\(\set{q_1,q_2,\ldots,q_s}\)</span> be sets of primes with <span class="process-math">\(p_i\ne p_j\)</span> if <span class="process-math">\(i\ne j\)</span> and <span class="process-math">\(q_i\ne
-q_j\)</span> if <span class="process-math">\(i\ne j\text{.}\)</span> Let <span class="process-math">\(\set{r_1,r_2,\ldots,r_m}\)</span> and <span class="process-math">\(\set{t_1,t_2,\ldots,t_s}\)</span> be sets of natural numbers such that</div>
-<div class="displaymath process-math" id="theorem_FTAuniqueness-2-1-10">
-\begin{align*}
-n \amp = p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m}\\
-\amp = q_1^{t_1} q_2^{t_2} \cdots q_s^{t_s}\text{.}
-\end{align*}
-</div>
-</div> <div class="para" id="theorem_FTAuniqueness-2-2">Then <span class="process-math">\(m = s\)</span> and <span class="process-math">\(\set{p_1,p_2,\ldots,p_m} = \set{q_1,q_2,\ldots,q_s}\text{.}\)</span> That is, the sets of primes are equal but their elements are not necessarily listed in the same order (i.e., <span class="process-math">\(p_i\)</span> may or may not equal <span class="process-math">\(q_i\)</span>). Moreover, if <span class="process-math">\(p_i = q_j\text{,}\)</span> then <span class="process-math">\(r_i
-= t_j\text{.}\)</span> In other words, if we express the same natural number as a product of distinct primes, then the expressions are identical except for the ordering of the factors.</div>
-<details id="theorem_FTAuniqueness-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="theorem_FTAuniqueness-3-1">Argue that the two sets are equal (how do we do that?). Then argue that the exponents must also be equal.</div></div></details></article><details id="ssec_fundamentalTheoremOfArithmetic-10" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="ssec_fundamentalTheoremOfArithmetic-10-1">
-<div class="para">Without loss of generality, assume <span class="process-math">\(p_1 \lt p_2 \lt \cdots \lt p_m\)</span> and <span class="process-math">\(q_1 \lt q_2
-\lt \cdots \lt q_s\text{.}\)</span> Given a <span class="process-math">\(p_i\text{,}\)</span> we know that <span class="process-math">\(p_i | q_1^{t_1} q_2^{t_2} \cdots
-q_s^{t_s}\text{,}\)</span> which implies that <span class="process-math">\(p_i | q_j\)</span> for some <span class="process-math">\(j\)</span> by Claim 2 in the proof of Lemma 2.8. Further, Lemma 2.8 implies that <span class="process-math">\(p_i = q_j\text{,}\)</span> and similarly, given a <span class="process-math">\(q_j\)</span> , <span class="process-math">\(q_j = p_i\)</span> for some <span class="process-math">\(i\text{.}\)</span> Thus, <span class="process-math">\(m =s\text{,}\)</span> and by the ordering of the <span class="process-math">\(p_i\)</span>’s and <span class="process-math">\(q_j\)</span>’s, we have <span class="process-math">\(p_i = q_j\text{,}\)</span> <span class="process-math">\(i = 1, 2, \ldots, m\text{.}\)</span> Therefore,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-n = p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m} = p_1^{t_1} p_2^{t_2} \cdots p_m^{t_m}
-\end{equation*}
-</div>
-<div class="para">.</div>
-</div> <div class="para logical" id="ssec_fundamentalTheoremOfArithmetic-10-2">
-<div class="para">Now, assume by way of contradiction, that <span class="process-math">\(r_i \ne t_i\)</span> for some <span class="process-math">\(i\text{.}\)</span> Without loss of generality, we may assume <span class="process-math">\(r_i \lt t_i\text{.}\)</span> Then <span class="process-math">\(p_i^{t_i} | p_1^{r_1} p_2^{r_2}
-\cdots p_m^{r_m}\text{,}\)</span> which implies that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-p_i^{t_i - r_i} | p_1^{r_1} p_2^{r_2} \cdots \hat{p}_i^{r_i} \cdots p_m^{r_m}
-\end{equation*}
-</div>
-<div class="para">.</div>
-</div> <div class="para logical" id="ssec_fundamentalTheoremOfArithmetic-10-3">
-<div class="para">Since <span class="process-math">\(t_i - r_i &gt; 0\text{,}\)</span> we have that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-p_i | p_1^{r_1} p_2^{r_2} \cdots \hat{p}_i^{r_i} \cdots p_m^{r_m}\text{,}
-\end{equation*}
-</div>
-<div class="para">from which <span class="process-math">\(p_i | p_j\)</span> for some <span class="process-math">\(j\ne i\)</span> by Lemma 2.8. This is a contradiction, so <span class="process-math">\(r_i
-= t_i\)</span> for <span class="process-math">\(i = 1, 2, \ldots, m\text{.}\)</span>
-</div>
-</div></article></details><div class="para" id="ssec_fundamentalTheoremOfArithmetic-11">Our first major result is in hand: we can factor natural numbers <span class="process-math">\(n &gt; 2\)</span> uniquely as a product of primes. Much of the rest of this book seeks to deduce a generalization of this result that relies on structural arithmetic properties enjoyed by <span class="process-math">\(\Z\)</span> and similar objects.</div></section><section class="exercises" id="exers_primesFactorization"><h3 class="heading hide-type">
-<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="exer_primesFactorizationTF"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="exer_primesFactorizationTF-1-1">Mark the following as true or false.</div> <ol class="lower-alpha" id="exer_primesFactorizationTF-1-2">
-<li id="exer_primesFactorizationTF-1-2-1"><div class="para" id="p-derived-exer_primesFactorizationTF-1-2-1">Every even number is composite.</div></li>
-<li id="exer_primesFactorizationTF-1-2-2"><div class="para" id="p-derived-exer_primesFactorizationTF-1-2-2">The sum of two prime numbers is prime.</div></li>
-<li id="exer_primesFactorizationTF-1-2-3"><div class="para" id="p-derived-exer_primesFactorizationTF-1-2-3">The product of two prime numbers is prime.</div></li>
-<li id="exer_primesFactorizationTF-1-2-4"><div class="para" id="p-derived-exer_primesFactorizationTF-1-2-4">Every odd number is composite.</div></li>
-<li id="exer_primesFactorizationTF-1-2-5"><div class="para" id="p-derived-exer_primesFactorizationTF-1-2-5">If a prime divides the product of two integers, it must divide at least one of the integers.</div></li>
-<li id="exer_primesFactorizationTF-1-2-6"><div class="para" id="p-derived-exer_primesFactorizationTF-1-2-6">Every composite number has at least two distinct prime factors.</div></li>
-<li id="exer_primesFactorizationTF-1-2-7"><div class="para" id="p-derived-exer_primesFactorizationTF-1-2-7">The product of two compposite numbers is always composite.</div></li>
-<li id="exer_primesFactorizationTF-1-2-8"><div class="para" id="p-derived-exer_primesFactorizationTF-1-2-8">There are infinitely many composite numbers.</div></li>
-</ol></article><article class="exercise exercise-like" id="exers_primesFactorization-3"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="exers_primesFactorization-3-1-1">List the prime numbers between 50 and 100.</div></article><article class="exercise exercise-like" id="exer-primes-factorization-factorizations"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="exer-primes-factorization-factorizations-1-1">Compute the prime factorization of:</div> <ol class="lower-alpha" id="exer-primes-factorization-factorizations-1-2">
-<li id="exer-primes-factorization-factorizations-1-2-1"><div class="para" id="p-derived-exer-primes-factorization-factorizations-1-2-1"><span class="process-math">\(\displaystyle 120\)</span></div></li>
-<li id="exer-primes-factorization-factorizations-1-2-2"><div class="para" id="p-derived-exer-primes-factorization-factorizations-1-2-2"><span class="process-math">\(\displaystyle 252\)</span></div></li>
-<li id="exer-primes-factorization-factorizations-1-2-3"><div class="para" id="p-derived-exer-primes-factorization-factorizations-1-2-3"><span class="process-math">\(\displaystyle 378\)</span></div></li>
-<li id="exer-primes-factorization-factorizations-1-2-4"><div class="para" id="p-derived-exer-primes-factorization-factorizations-1-2-4"><span class="process-math">\(\displaystyle 2024\)</span></div></li>
-</ol></article><article class="exercise exercise-like" id="exer-primes-factorization-isprime"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para logical" id="exer-primes-factorization-isprime-1-1">
-<div class="para">Determine if the following numbers are prime:</div>
-<ol class="lower-alpha" id="exer-primes-factorization-isprime-1-1-1">
-<li id="exer-primes-factorization-isprime-1-1-1-1"><div class="para" id="p-derived-exer-primes-factorization-isprime-1-1-1-1"><span class="process-math">\(\displaystyle 120\)</span></div></li>
-<li id="exer-primes-factorization-isprime-1-1-1-2"><div class="para" id="p-derived-exer-primes-factorization-isprime-1-1-1-2"><span class="process-math">\(\displaystyle 53\)</span></div></li>
-<li id="exer-primes-factorization-isprime-1-1-1-3"><div class="para" id="p-derived-exer-primes-factorization-isprime-1-1-1-3"><span class="process-math">\(\displaystyle 91\)</span></div></li>
-<li id="exer-primes-factorization-isprime-1-1-1-4"><div class="para" id="p-derived-exer-primes-factorization-isprime-1-1-1-4"><span class="process-math">\(\displaystyle 57\)</span></div></li>
-<li id="exer-primes-factorization-isprime-1-1-1-5"><div class="para" id="p-derived-exer-primes-factorization-isprime-1-1-1-5"><span class="process-math">\(\displaystyle 51\)</span></div></li>
-<li id="exer-primes-factorization-isprime-1-1-1-6"><div class="para" id="p-derived-exer-primes-factorization-isprime-1-1-1-6"><span class="process-math">\(\displaystyle 100001\)</span></div></li>
-</ol>
-</div></article><article class="exercise exercise-like" id="sec-divisibility-gcd-bezout-coeff"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para logical" id="sec-divisibility-gcd-bezout-coeff-1-1">
-<div class="para">For each of the pairs of integers in <a href="sec-divisibility-gcd.html#sec-divisibility-gcd-quorem" class="xref" data-knowl="./knowl/xref/sec-divisibility-gcd-quorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.2.3.2">Exercise 1.2.3.2</a> find Bézout coefficients. That is, find <span class="process-math">\(x,y\in \Z\)</span> such that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec-divisibility-gcd-quorem.html">
-\begin{equation*}
-ax+by = \gcd(a,b)
-\end{equation*}
-</div>
-<div class="para">.</div>
-</div></article><article class="exercise exercise-like" id="exers_primesFactorization-7"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="introduction" id="exers_primesFactorization-7-1"><div class="para" id="exers_primesFactorization-7-1-1">Another way of computing the gcd is to compute the prime factorizations of two numbers and seeing what they share. Use this method to compute <span class="process-math">\(\gcd(120,252)\text{.}\)</span>
-</div></div></article><article class="exercise exercise-like" id="exers_primesFactorization-8"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="introduction" id="exers_primesFactorization-8-1"><div class="para" id="exers_primesFactorization-8-1-1">Find the prime factorization of 100!.</div></div></article><article class="exercise exercise-like" id="exers_primesFactorization-9"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="exers_primesFactorization-9-1-1">Prove that there are infinitely many prime numbers.</div></article><article class="exercise exercise-like" id="exers_primesFactorization-10"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="exers_primesFactorization-10-1-1">Suppose <span class="process-math">\(a,b\in \N\)</span> are such that <span class="process-math">\(a\mid b\text{.}\)</span> Prove <span class="process-math">\(1\leq a\leq b\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exers_primesFactorization-11"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="exers_primesFactorization-11-1-1">Suppose <span class="process-math">\(a,b\in\N\)</span> are such that <span class="process-math">\(a^2\mid b^2\text{.}\)</span> Prove that <span class="process-math">\(a\mid b\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exer_primes-factorization-primeDividingPower"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="para" id="exer_primes-factorization-primeDividingPower-1-1">Suppose <span class="process-math">\(p\)</span> is a prime number and <span class="process-math">\(a\in\N\)</span> is such that <span class="process-math">\(p\mid a^n\)</span> for some <span class="process-math">\(n\in\N\text{.}\)</span> Use the Fundamental Theorem of Arithmetic to prove <span class="process-math">\(p\mid a\text{.}\)</span> Show this is false if <span class="process-math">\(p\)</span> is not prime.</div></article><article class="exercise exercise-like" id="exers_primesFactorization-13"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<div class="para" id="exers_primesFactorization-13-1-1">Find the smallest natural number that has exactly 10 distinct prime factors.</div></article><article class="exercise exercise-like" id="exers_primesFactorization-14"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
-<div class="para" id="exers_primesFactorization-14-1-1">Using <a href="sec-primesFactorization.html#def_primeInteger" class="xref" data-knowl="./knowl/xref/def_primeInteger.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.3.1">Definition 1.3.1</a> and matehmatical induction, prove that if <span class="process-math">\(p\)</span> is prime and <span class="process-math">\(p\mid a^n\)</span> for some <span class="process-math">\(a\in \Z, n\in N\text{,}\)</span> then <span class="process-math">\(p\mid a\text{.}\)</span> This is an alternate proof of <a href="sec-primesFactorization.html#exer_primes-factorization-primeDividingPower" class="xref" data-knowl="./knowl/xref/exer_primes-factorization-primeDividingPower.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.3.3.11">Exercise 1.3.3.11</a>.</div></article><article class="exercise exercise-like" id="exers_primesFactorization-15"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
-<div class="para" id="exers_primesFactorization-15-1-1">Show that if <span class="process-math">\(p\mid a^3-b^3\text{,}\)</span> then it is not necessarily true that <span class="process-math">\(p\mid a-b\text{.}\)</span> However, prove that if <span class="process-math">\(p\mid a-b\text{,}\)</span> then <span class="process-math">\(p\mid a^3-b^3\text{.}\)</span>
-</div></article></section><section class="references" id="sec-primesFactorization-7"><h3 class="heading hide-type">
-<span class="type">References</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="space"> </span><span class="title">References</span>
-</h3>
-<article class="bib" id="NTI"><div class="bibitem">[1]</div>
-<div class="bibentry">D. Marshall, E. Odell, M. Starbird, <em class="emphasis">Number Theory Through Inquiry</em>, MAA Textbooks, Mathematical Association of America, 2007</div></article></section></section></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="book" id="RFIAA"><nav class="summary-links"><ul>
+<li><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></li>
+<li><a href="ch1-integers.html" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a></li>
+<li><a href="ch2-ringsAndFields.html" class="internal"><span class="codenumber">2</span> <span class="title">Fields, Rings, and Domains</span></a></li>
+<li><a href="ch3-homomorphismsAndIdeals.html" class="internal"><span class="codenumber">3</span> <span class="title">Homomorphisms and Ideals</span></a></li>
+<li><a href="ch3-factorization.html" class="internal"><span class="codenumber">4</span> <span class="title">Factorization</span></a></li>
+<li><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></li>
+</ul></nav></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-divisibility-gcd.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_integersModuloM.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="frontmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Principal Ideals Domains</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Rings First">
+<meta property="book:author" content="Bronson Lim">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_oscarlevin.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.4.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.00db6230172ad960.bundle.js"></script><script src="_static/prefix-347.8328b60515045466.bundle.js"></script><script src="_static/prefix-runestone.aa624e4071d017c3.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.51d479d87f8466bb.css">
+<style>
+#ssec_wellordering-8-1-3 { counter-set: ssec_wellordering-8-1-3 0; }
+#ssec_wellordering-8-1-3 > li::marker { content: ""counter(ssec_wellordering-8-1-3,decimal)"."; }
+#ssec_wellordering-8-1-3 > li { counter-increment: ssec_wellordering-8-1-3; }
+#ssec_wellordering-8-2-1 { counter-set: ssec_wellordering-8-2-1 0; }
+#ssec_wellordering-8-2-1 > li::marker { content: ""counter(ssec_wellordering-8-2-1,decimal)"."; }
+#ssec_wellordering-8-2-1 > li { counter-increment: ssec_wellordering-8-2-1; }
+#thm_mathematical_induction-2-3 { counter-set: thm_mathematical_induction-2-3 0; }
+#thm_mathematical_induction-2-3 > li::marker { content: ""counter(thm_mathematical_induction-2-3,decimal)"."; }
+#thm_mathematical_induction-2-3 > li { counter-increment: thm_mathematical_induction-2-3; }
+#sec-induction-tf-1-2 { counter-set: sec-induction-tf-1-2 0; }
+#sec-induction-tf-1-2 > li::marker { content: "("counter(sec-induction-tf-1-2,lower-alpha)")"; }
+#sec-induction-tf-1-2 > li { counter-increment: sec-induction-tf-1-2; }
+#sec-induction-smallest-elements1-1-2 { counter-set: sec-induction-smallest-elements1-1-2 0; }
+#sec-induction-smallest-elements1-1-2 > li::marker { content: "("counter(sec-induction-smallest-elements1-1-2,lower-alpha)")"; }
+#sec-induction-smallest-elements1-1-2 > li { counter-increment: sec-induction-smallest-elements1-1-2; }
+#sec-induction-smallest-elements2-1-2 { counter-set: sec-induction-smallest-elements2-1-2 0; }
+#sec-induction-smallest-elements2-1-2 > li::marker { content: "("counter(sec-induction-smallest-elements2-1-2,lower-alpha)")"; }
+#sec-induction-smallest-elements2-1-2 > li { counter-increment: sec-induction-smallest-elements2-1-2; }
+#sec-divisibility-gcd-3-5-1-1-2 { counter-set: sec-divisibility-gcd-3-5-1-1-2 0; }
+#sec-divisibility-gcd-3-5-1-1-2 > li::marker { content: ""counter(sec-divisibility-gcd-3-5-1-1-2,decimal)"."; }
+#sec-divisibility-gcd-3-5-1-1-2 > li { counter-increment: sec-divisibility-gcd-3-5-1-1-2; }
+#def_gcdZ-3-1-9 { counter-set: def_gcdZ-3-1-9 0; }
+#def_gcdZ-3-1-9 > li::marker { content: ""counter(def_gcdZ-3-1-9,decimal)"."; }
+#def_gcdZ-3-1-9 > li { counter-increment: def_gcdZ-3-1-9; }
+#act-gcdcomputations-1-1-2 { counter-set: act-gcdcomputations-1-1-2 0; }
+#act-gcdcomputations-1-1-2 > li::marker { content: ""counter(act-gcdcomputations-1-1-2,decimal)"."; }
+#act-gcdcomputations-1-1-2 > li { counter-increment: act-gcdcomputations-1-1-2; }
+#sec-divisibility-gcd-tf-1-2 { counter-set: sec-divisibility-gcd-tf-1-2 0; }
+#sec-divisibility-gcd-tf-1-2 > li::marker { content: "("counter(sec-divisibility-gcd-tf-1-2,lower-alpha)")"; }
+#sec-divisibility-gcd-tf-1-2 > li { counter-increment: sec-divisibility-gcd-tf-1-2; }
+#sec-divisibility-gcd-quorem-1-2 { counter-set: sec-divisibility-gcd-quorem-1-2 0; }
+#sec-divisibility-gcd-quorem-1-2 > li::marker { content: "("counter(sec-divisibility-gcd-quorem-1-2,lower-alpha)")"; }
+#sec-divisibility-gcd-quorem-1-2 > li { counter-increment: sec-divisibility-gcd-quorem-1-2; }
+#exer_primesFactorizationTF-1-2 { counter-set: exer_primesFactorizationTF-1-2 0; }
+#exer_primesFactorizationTF-1-2 > li::marker { content: "("counter(exer_primesFactorizationTF-1-2,lower-alpha)")"; }
+#exer_primesFactorizationTF-1-2 > li { counter-increment: exer_primesFactorizationTF-1-2; }
+#exer-primes-factorization-factorizations-1-2 { counter-set: exer-primes-factorization-factorizations-1-2 0; }
+#exer-primes-factorization-factorizations-1-2 > li::marker { content: "("counter(exer-primes-factorization-factorizations-1-2,lower-alpha)")"; }
+#exer-primes-factorization-factorizations-1-2 > li { counter-increment: exer-primes-factorization-factorizations-1-2; }
+#exer-primes-factorization-isprime-1-1-1 { counter-set: exer-primes-factorization-isprime-1-1-1 0; }
+#exer-primes-factorization-isprime-1-1-1 > li::marker { content: "("counter(exer-primes-factorization-isprime-1-1-1,lower-alpha)")"; }
+#exer-primes-factorization-isprime-1-1-1 > li { counter-increment: exer-primes-factorization-isprime-1-1-1; }
+#ssec_congruenceModm-4-1-1-1 { counter-set: ssec_congruenceModm-4-1-1-1 0; }
+#ssec_congruenceModm-4-1-1-1 > li::marker { content: ""counter(ssec_congruenceModm-4-1-1-1,decimal)"."; }
+#ssec_congruenceModm-4-1-1-1 > li { counter-increment: ssec_congruenceModm-4-1-1-1; }
+#def-arithemticmodm-1-1-3 { counter-set: def-arithemticmodm-1-1-3 0; }
+#def-arithemticmodm-1-1-3 > li::marker { content: ""counter(def-arithemticmodm-1-1-3,decimal)"."; }
+#def-arithemticmodm-1-1-3 > li { counter-increment: def-arithemticmodm-1-1-3; }
+#ssec_integersModm-12-1-2 { counter-set: ssec_integersModm-12-1-2 0; }
+#ssec_integersModm-12-1-2 > li::marker { content: ""counter(ssec_integersModm-12-1-2,decimal)"."; }
+#ssec_integersModm-12-1-2 > li { counter-increment: ssec_integersModm-12-1-2; }
+#invest-tables-1-2 { counter-set: invest-tables-1-2 0; }
+#invest-tables-1-2 > li::marker { content: ""counter(invest-tables-1-2,decimal)"."; }
+#invest-tables-1-2 > li { counter-increment: invest-tables-1-2; }
+#theorem_cancelinZp-1-1-4 { counter-set: theorem_cancelinZp-1-1-4 0; }
+#theorem_cancelinZp-1-1-4 > li::marker { content: ""counter(theorem_cancelinZp-1-1-4,decimal)"."; }
+#theorem_cancelinZp-1-1-4 > li { counter-increment: theorem_cancelinZp-1-1-4; }
+#integers-mod-m-tf-1-2 { counter-set: integers-mod-m-tf-1-2 0; }
+#integers-mod-m-tf-1-2 > li::marker { content: "("counter(integers-mod-m-tf-1-2,lower-alpha)")"; }
+#integers-mod-m-tf-1-2 > li { counter-increment: integers-mod-m-tf-1-2; }
+#exers-integers-mod-m-4-1-2 { counter-set: exers-integers-mod-m-4-1-2 0; }
+#exers-integers-mod-m-4-1-2 > li::marker { content: "("counter(exers-integers-mod-m-4-1-2,lower-alpha)")"; }
+#exers-integers-mod-m-4-1-2 > li { counter-increment: exers-integers-mod-m-4-1-2; }
+#invest-binop-1-1-2 { counter-set: invest-binop-1-1-2 0; }
+#invest-binop-1-1-2 > li::marker { content: ""counter(invest-binop-1-1-2,decimal)"."; }
+#invest-binop-1-1-2 > li { counter-increment: invest-binop-1-1-2; }
+#def_field-2-1-7 { counter-set: def_field-2-1-7 0; }
+#def_field-2-1-7 > li::marker { content: ""counter(def_field-2-1-7,decimal)"."; }
+#def_field-2-1-7 > li { counter-increment: def_field-2-1-7; }
+#exer_fieldexamples-1-1-1 { counter-set: exer_fieldexamples-1-1-1 0; }
+#exer_fieldexamples-1-1-1 > li::marker { content: ""counter(exer_fieldexamples-1-1-1,decimal)"."; }
+#exer_fieldexamples-1-1-1 > li { counter-increment: exer_fieldexamples-1-1-1; }
+#exer_fieldexamples-2-1-1 { counter-set: exer_fieldexamples-2-1-1 0; }
+#exer_fieldexamples-2-1-1 > li::marker { content: ""counter(exer_fieldexamples-2-1-1,decimal)"."; }
+#exer_fieldexamples-2-1-1 > li { counter-increment: exer_fieldexamples-2-1-1; }
+#thm_fieldproperties-2-1-2 { counter-set: thm_fieldproperties-2-1-2 0; }
+#thm_fieldproperties-2-1-2 > li::marker { content: ""counter(thm_fieldproperties-2-1-2,decimal)"."; }
+#thm_fieldproperties-2-1-2 > li { counter-increment: thm_fieldproperties-2-1-2; }
+#subsec-propertiesOfFields-3-1 { counter-set: subsec-propertiesOfFields-3-1 0; }
+#subsec-propertiesOfFields-3-1 > li::marker { content: ""counter(subsec-propertiesOfFields-3-1,decimal)"."; }
+#subsec-propertiesOfFields-3-1 > li { counter-increment: subsec-propertiesOfFields-3-1; }
+#subsec-subfieldsAndExtensions-3-3-1-3 { counter-set: subsec-subfieldsAndExtensions-3-3-1-3 0; }
+#subsec-subfieldsAndExtensions-3-3-1-3 > li::marker { content: ""counter(subsec-subfieldsAndExtensions-3-3-1-3,decimal)"."; }
+#subsec-subfieldsAndExtensions-3-3-1-3 > li { counter-increment: subsec-subfieldsAndExtensions-3-3-1-3; }
+#exer_primesFactorizationTF-1-2 { counter-set: exer_primesFactorizationTF-1-2 0; }
+#exer_primesFactorizationTF-1-2 > li::marker { content: "("counter(exer_primesFactorizationTF-1-2,lower-alpha)")"; }
+#exer_primesFactorizationTF-1-2 > li { counter-increment: exer_primesFactorizationTF-1-2; }
+#exers_primesFactorization-3-1-2 { counter-set: exers_primesFactorization-3-1-2 0; }
+#exers_primesFactorization-3-1-2 > li::marker { content: "("counter(exers_primesFactorization-3-1-2,lower-alpha)")"; }
+#exers_primesFactorization-3-1-2 > li { counter-increment: exers_primesFactorization-3-1-2; }
+#exer_complexNumbersAsMatrices-1-2 { counter-set: exer_complexNumbersAsMatrices-1-2 0; }
+#exer_complexNumbersAsMatrices-1-2 > li::marker { content: "("counter(exer_complexNumbersAsMatrices-1-2,lower-alpha)")"; }
+#exer_complexNumbersAsMatrices-1-2 > li { counter-increment: exer_complexNumbersAsMatrices-1-2; }
+#exers_primesFactorization-10-1-2 { counter-set: exers_primesFactorization-10-1-2 0; }
+#exers_primesFactorization-10-1-2 > li::marker { content: "("counter(exers_primesFactorization-10-1-2,lower-alpha)")"; }
+#exers_primesFactorization-10-1-2 > li { counter-increment: exers_primesFactorization-10-1-2; }
+#exers_primesFactorization-11-3-2 { counter-set: exers_primesFactorization-11-3-2 0; }
+#exers_primesFactorization-11-3-2 > li::marker { content: "("counter(exers_primesFactorization-11-3-2,lower-alpha)")"; }
+#exers_primesFactorization-11-3-2 > li { counter-increment: exers_primesFactorization-11-3-2; }
+#def_ring-3-1-6 { counter-set: def_ring-3-1-6 0; }
+#def_ring-3-1-6 > li::marker { content: ""counter(def_ring-3-1-6,decimal)"."; }
+#def_ring-3-1-6 > li { counter-increment: def_ring-3-1-6; }
+#thm_subringTest-3-1-5 { counter-set: thm_subringTest-3-1-5 0; }
+#thm_subringTest-3-1-5 > li::marker { content: ""counter(thm_subringTest-3-1-5,decimal)"."; }
+#thm_subringTest-3-1-5 > li { counter-increment: thm_subringTest-3-1-5; }
+#ssec_subrings-6-1-1-3 { counter-set: ssec_subrings-6-1-1-3 0; }
+#ssec_subrings-6-1-1-3 > li::marker { content: ""counter(ssec_subrings-6-1-1-3,decimal)"."; }
+#ssec_subrings-6-1-1-3 > li { counter-increment: ssec_subrings-6-1-1-3; }
+#exers_rings-1-1-2 { counter-set: exers_rings-1-1-2 0; }
+#exers_rings-1-1-2 > li::marker { content: "("counter(exers_rings-1-1-2,lower-alpha)")"; }
+#exers_rings-1-1-2 > li { counter-increment: exers_rings-1-1-2; }
+#exer_gaussianIntegers-2-2 { counter-set: exer_gaussianIntegers-2-2 0; }
+#exer_gaussianIntegers-2-2 > li::marker { content: "("counter(exer_gaussianIntegers-2-2,lower-alpha)")"; }
+#exer_gaussianIntegers-2-2 > li { counter-increment: exer_gaussianIntegers-2-2; }
+#exers_rings-5-2-2 { counter-set: exers_rings-5-2-2 0; }
+#exers_rings-5-2-2 > li::marker { content: "("counter(exers_rings-5-2-2,lower-alpha)")"; }
+#exers_rings-5-2-2 > li { counter-increment: exers_rings-5-2-2; }
+#ssec_integralDomains-5-1-1-1 { counter-set: ssec_integralDomains-5-1-1-1 0; }
+#ssec_integralDomains-5-1-1-1 > li::marker { content: ""counter(ssec_integralDomains-5-1-1-1,decimal)"."; }
+#ssec_integralDomains-5-1-1-1 > li { counter-increment: ssec_integralDomains-5-1-1-1; }
+#exers_integralDomains-1-1-2 { counter-set: exers_integralDomains-1-1-2 0; }
+#exers_integralDomains-1-1-2 > li::marker { content: "("counter(exers_integralDomains-1-1-2,lower-alpha)")"; }
+#exers_integralDomains-1-1-2 > li { counter-increment: exers_integralDomains-1-1-2; }
+#exer_nilpotent-3-2 { counter-set: exer_nilpotent-3-2 0; }
+#exer_nilpotent-3-2 > li::marker { content: "("counter(exer_nilpotent-3-2,lower-alpha)")"; }
+#exer_nilpotent-3-2 > li { counter-increment: exer_nilpotent-3-2; }
+#ssec_divisibilityInDomains-6-1-1-2 { counter-set: ssec_divisibilityInDomains-6-1-1-2 0; }
+#ssec_divisibilityInDomains-6-1-1-2 > li::marker { content: ""counter(ssec_divisibilityInDomains-6-1-1-2,decimal)"."; }
+#ssec_divisibilityInDomains-6-1-1-2 > li { counter-increment: ssec_divisibilityInDomains-6-1-1-2; }
+#expl-unit-prime-irred-1-1-1 { counter-set: expl-unit-prime-irred-1-1-1 0; }
+#expl-unit-prime-irred-1-1-1 > li::marker { content: ""counter(expl-unit-prime-irred-1-1-1,decimal)"."; }
+#expl-unit-prime-irred-1-1-1 > li { counter-increment: expl-unit-prime-irred-1-1-1; }
+#def_gcdDomain-2-1-7 { counter-set: def_gcdDomain-2-1-7 0; }
+#def_gcdDomain-2-1-7 > li::marker { content: ""counter(def_gcdDomain-2-1-7,decimal)"."; }
+#def_gcdDomain-2-1-7 > li { counter-increment: def_gcdDomain-2-1-7; }
+#alg_euclideanAlgorithmPolynomials-2-1-7 { counter-set: alg_euclideanAlgorithmPolynomials-2-1-7 0; }
+#alg_euclideanAlgorithmPolynomials-2-1-7 > li::marker { content: ""counter(alg_euclideanAlgorithmPolynomials-2-1-7,decimal)"."; }
+#alg_euclideanAlgorithmPolynomials-2-1-7 > li { counter-increment: alg_euclideanAlgorithmPolynomials-2-1-7; }
+#exers_divisibilityIntegralDomains-1-1-2 { counter-set: exers_divisibilityIntegralDomains-1-1-2 0; }
+#exers_divisibilityIntegralDomains-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-1-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-1-1-2; }
+#exers_divisibilityIntegralDomains-3-1-2 { counter-set: exers_divisibilityIntegralDomains-3-1-2 0; }
+#exers_divisibilityIntegralDomains-3-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-3-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-3-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-3-1-2; }
+#exers_divisibilityIntegralDomains-4-1-2 { counter-set: exers_divisibilityIntegralDomains-4-1-2 0; }
+#exers_divisibilityIntegralDomains-4-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-4-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-4-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-4-1-2; }
+#exers_divisibilityIntegralDomains-5-1-2 { counter-set: exers_divisibilityIntegralDomains-5-1-2 0; }
+#exers_divisibilityIntegralDomains-5-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-5-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-5-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-5-1-2; }
+#exers_divisibilityIntegralDomains-6-1-2 { counter-set: exers_divisibilityIntegralDomains-6-1-2 0; }
+#exers_divisibilityIntegralDomains-6-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-6-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-6-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-6-1-2; }
+#exers_divisibilityIntegralDomains-8-1-2 { counter-set: exers_divisibilityIntegralDomains-8-1-2 0; }
+#exers_divisibilityIntegralDomains-8-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-8-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-8-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-8-1-2; }
+#expl-homomorphism-examples-1-2 { counter-set: expl-homomorphism-examples-1-2 0; }
+#expl-homomorphism-examples-1-2 > li::marker { content: ""counter(expl-homomorphism-examples-1-2,decimal)"."; }
+#expl-homomorphism-examples-1-2 > li { counter-increment: expl-homomorphism-examples-1-2; }
+#expl-homomorphism-examples-2-1 { counter-set: expl-homomorphism-examples-2-1 0; }
+#expl-homomorphism-examples-2-1 > li::marker { content: ""counter(expl-homomorphism-examples-2-1,decimal)"."; }
+#expl-homomorphism-examples-2-1 > li { counter-increment: expl-homomorphism-examples-2-1; }
+#sec_homomorphismsTF-1-2 { counter-set: sec_homomorphismsTF-1-2 0; }
+#sec_homomorphismsTF-1-2 > li::marker { content: "("counter(sec_homomorphismsTF-1-2,lower-alpha)")"; }
+#sec_homomorphismsTF-1-2 > li { counter-increment: sec_homomorphismsTF-1-2; }
+#exers_homomorphisms-16-1-2 { counter-set: exers_homomorphisms-16-1-2 0; }
+#exers_homomorphisms-16-1-2 > li::marker { content: "("counter(exers_homomorphisms-16-1-2,lower-alpha)")"; }
+#exers_homomorphisms-16-1-2 > li { counter-increment: exers_homomorphisms-16-1-2; }
+#prop_kernelIsIdeal-1-1-5 { counter-set: prop_kernelIsIdeal-1-1-5 0; }
+#prop_kernelIsIdeal-1-1-5 > li::marker { content: ""counter(prop_kernelIsIdeal-1-1-5,decimal)"."; }
+#prop_kernelIsIdeal-1-1-5 > li { counter-increment: prop_kernelIsIdeal-1-1-5; }
+#def_ideal-2-1-4 { counter-set: def_ideal-2-1-4 0; }
+#def_ideal-2-1-4 > li::marker { content: ""counter(def_ideal-2-1-4,decimal)"."; }
+#def_ideal-2-1-4 > li { counter-increment: def_ideal-2-1-4; }
+#ssec_principalIdeals-9-1-1-2 { counter-set: ssec_principalIdeals-9-1-1-2 0; }
+#ssec_principalIdeals-9-1-1-2 > li::marker { content: ""counter(ssec_principalIdeals-9-1-1-2,decimal)"."; }
+#ssec_principalIdeals-9-1-1-2 > li { counter-increment: ssec_principalIdeals-9-1-1-2; }
+#ssec_principalIdeals-9-2-1 { counter-set: ssec_principalIdeals-9-2-1 0; }
+#ssec_principalIdeals-9-2-1 > li::marker { content: ""counter(ssec_principalIdeals-9-2-1,decimal)"."; }
+#ssec_principalIdeals-9-2-1 > li { counter-increment: ssec_principalIdeals-9-2-1; }
+#exers_ideals-1-1-2 { counter-set: exers_ideals-1-1-2 0; }
+#exers_ideals-1-1-2 > li::marker { content: "("counter(exers_ideals-1-1-2,lower-alpha)")"; }
+#exers_ideals-1-1-2 > li { counter-increment: exers_ideals-1-1-2; }
+#ssec_quotientRings-11-1-2 { counter-set: ssec_quotientRings-11-1-2 0; }
+#ssec_quotientRings-11-1-2 > li::marker { content: ""counter(ssec_quotientRings-11-1-2,decimal)"."; }
+#ssec_quotientRings-11-1-2 > li { counter-increment: ssec_quotientRings-11-1-2; }
+#ssec_quotientRings-13-1-2 { counter-set: ssec_quotientRings-13-1-2 0; }
+#ssec_quotientRings-13-1-2 > li::marker { content: ""counter(ssec_quotientRings-13-1-2,decimal)"."; }
+#ssec_quotientRings-13-1-2 > li { counter-increment: ssec_quotientRings-13-1-2; }
+#ssec_quotientRings-14-3-3 { counter-set: ssec_quotientRings-14-3-3 0; }
+#ssec_quotientRings-14-3-3 > li::marker { content: ""counter(ssec_quotientRings-14-3-3,decimal)"."; }
+#ssec_quotientRings-14-3-3 > li { counter-increment: ssec_quotientRings-14-3-3; }
+#subsec--8-1-2 { counter-set: subsec--8-1-2 0; }
+#subsec--8-1-2 > li::marker { content: ""counter(subsec--8-1-2,decimal)"."; }
+#subsec--8-1-2 > li { counter-increment: subsec--8-1-2; }
+#exers_divisibilityIntegralDomains-1-1-2 { counter-set: exers_divisibilityIntegralDomains-1-1-2 0; }
+#exers_divisibilityIntegralDomains-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-1-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-1-1-2; }
+#exers_divisibilityIntegralDomains-2-1-2 { counter-set: exers_divisibilityIntegralDomains-2-1-2 0; }
+#exers_divisibilityIntegralDomains-2-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-2-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-2-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-2-1-2; }
+#exers_divisibilityIntegralDomains-3-1-2 { counter-set: exers_divisibilityIntegralDomains-3-1-2 0; }
+#exers_divisibilityIntegralDomains-3-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-3-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-3-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-3-1-2; }
+#exers_divisibilityIntegralDomains-4-1-2 { counter-set: exers_divisibilityIntegralDomains-4-1-2 0; }
+#exers_divisibilityIntegralDomains-4-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-4-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-4-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-4-1-2; }
+#exers_divisibilityIntegralDomains-8-1-1-2 { counter-set: exers_divisibilityIntegralDomains-8-1-1-2 0; }
+#exers_divisibilityIntegralDomains-8-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-8-1-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-8-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-8-1-1-2; }
+#exers_divisibilityIntegralDomains-11-1-2 { counter-set: exers_divisibilityIntegralDomains-11-1-2 0; }
+#exers_divisibilityIntegralDomains-11-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-11-1-2,lower-alpha)")"; }
+#exers_divisibilityIntegralDomains-11-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-11-1-2; }
+#ssec_principalIdealDomains-6-1-1-4 { counter-set: ssec_principalIdealDomains-6-1-1-4 0; }
+#ssec_principalIdealDomains-6-1-1-4 > li::marker { content: ""counter(ssec_principalIdealDomains-6-1-1-4,decimal)"."; }
+#ssec_principalIdealDomains-6-1-1-4 > li { counter-increment: ssec_principalIdealDomains-6-1-1-4; }
+#ssec_polynomialRingsOverAField-9-1-6-2 { counter-set: ssec_polynomialRingsOverAField-9-1-6-2 0; }
+#ssec_polynomialRingsOverAField-9-1-6-2 > li::marker { content: ""counter(ssec_polynomialRingsOverAField-9-1-6-2,decimal)"."; }
+#ssec_polynomialRingsOverAField-9-1-6-2 > li { counter-increment: ssec_polynomialRingsOverAField-9-1-6-2; }
+#ssec_primeIdeals-7-1-1-1 { counter-set: ssec_primeIdeals-7-1-1-1 0; }
+#ssec_primeIdeals-7-1-1-1 > li::marker { content: ""counter(ssec_primeIdeals-7-1-1-1,decimal)"."; }
+#ssec_primeIdeals-7-1-1-1 > li { counter-increment: ssec_primeIdeals-7-1-1-1; }
+#ssec_primeIdeals-7-2-1-1 { counter-set: ssec_primeIdeals-7-2-1-1 0; }
+#ssec_primeIdeals-7-2-1-1 > li::marker { content: ""counter(ssec_primeIdeals-7-2-1-1,decimal)"."; }
+#ssec_primeIdeals-7-2-1-1 > li { counter-increment: ssec_primeIdeals-7-2-1-1; }
+#exers_principalIdealDomains-1-1-2 { counter-set: exers_principalIdealDomains-1-1-2 0; }
+#exers_principalIdealDomains-1-1-2 > li::marker { content: "("counter(exers_principalIdealDomains-1-1-2,lower-alpha)")"; }
+#exers_principalIdealDomains-1-1-2 > li { counter-increment: exers_principalIdealDomains-1-1-2; }
+#exers_principalIdealDomains-2-1-1-3 { counter-set: exers_principalIdealDomains-2-1-1-3 0; }
+#exers_principalIdealDomains-2-1-1-3 > li::marker { content: "("counter(exers_principalIdealDomains-2-1-1-3,lower-alpha)")"; }
+#exers_principalIdealDomains-2-1-1-3 > li { counter-increment: exers_principalIdealDomains-2-1-1-3; }
+#exers_principalIdealDomains-3-1-1-5 { counter-set: exers_principalIdealDomains-3-1-1-5 0; }
+#exers_principalIdealDomains-3-1-1-5 > li::marker { content: "("counter(exers_principalIdealDomains-3-1-1-5,lower-alpha)")"; }
+#exers_principalIdealDomains-3-1-1-5 > li { counter-increment: exers_principalIdealDomains-3-1-1-5; }
+#exers_principalIdealDomains-6-1-2 { counter-set: exers_principalIdealDomains-6-1-2 0; }
+#exers_principalIdealDomains-6-1-2 > li::marker { content: "("counter(exers_principalIdealDomains-6-1-2,lower-alpha)")"; }
+#exers_principalIdealDomains-6-1-2 > li { counter-increment: exers_principalIdealDomains-6-1-2; }
+#exer_divisionAlgorithmGaussianIntegers-2-2 { counter-set: exer_divisionAlgorithmGaussianIntegers-2-2 0; }
+#exer_divisionAlgorithmGaussianIntegers-2-2 > li::marker { content: "("counter(exer_divisionAlgorithmGaussianIntegers-2-2,lower-alpha)")"; }
+#exer_divisionAlgorithmGaussianIntegers-2-2 > li { counter-increment: exer_divisionAlgorithmGaussianIntegers-2-2; }
+#exers_principalIdealDomains-16-1-2 { counter-set: exers_principalIdealDomains-16-1-2 0; }
+#exers_principalIdealDomains-16-1-2 > li::marker { content: "("counter(exers_principalIdealDomains-16-1-2,lower-alpha)")"; }
+#exers_principalIdealDomains-16-1-2 > li { counter-increment: exers_principalIdealDomains-16-1-2; }
+#sec_factoringPolynomials-24-1-2 { counter-set: sec_factoringPolynomials-24-1-2 0; }
+#sec_factoringPolynomials-24-1-2 > li::marker { content: ""counter(sec_factoringPolynomials-24-1-2,decimal)"."; }
+#sec_factoringPolynomials-24-1-2 > li { counter-increment: sec_factoringPolynomials-24-1-2; }
+#sec_factoringPolynomials-24-1-2-1-2 { counter-set: sec_factoringPolynomials-24-1-2-1-2 0; }
+#sec_factoringPolynomials-24-1-2-1-2 > li::marker { content: "("counter(sec_factoringPolynomials-24-1-2-1-2,lower-alpha)")"; }
+#sec_factoringPolynomials-24-1-2-1-2 > li { counter-increment: sec_factoringPolynomials-24-1-2-1-2; }
+#sec_factoringPolynomials-24-1-2-2-2 { counter-set: sec_factoringPolynomials-24-1-2-2-2 0; }
+#sec_factoringPolynomials-24-1-2-2-2 > li::marker { content: "("counter(sec_factoringPolynomials-24-1-2-2-2,lower-alpha)")"; }
+#sec_factoringPolynomials-24-1-2-2-2 > li { counter-increment: sec_factoringPolynomials-24-1-2-2-2; }
+#def-ufd-2-1-4 { counter-set: def-ufd-2-1-4 0; }
+#def-ufd-2-1-4 > li::marker { content: ""counter(def-ufd-2-1-4,decimal)"."; }
+#def-ufd-2-1-4 > li { counter-increment: def-ufd-2-1-4; }
+#sec_nonuniqueFactorization-6-2-3 { counter-set: sec_nonuniqueFactorization-6-2-3 0; }
+#sec_nonuniqueFactorization-6-2-3 > li::marker { content: ""counter(sec_nonuniqueFactorization-6-2-3,decimal)"."; }
+#sec_nonuniqueFactorization-6-2-3 > li { counter-increment: sec_nonuniqueFactorization-6-2-3; }
+</style>
+</head>
+<body id="ringsFirst" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="RFIAA.html"><span class="title">Rings First:</span> <span class="subtitle">An Introduction to Abstract Algebra</span></a></h1>
+<p class="byline">Bronson Lim</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec_quotientRings.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch3-homomorphismsAndIdeals.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch3-factorization.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \newcommand{\C}{\mathbb{C}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch1-integers.html" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_inductionWellOrdering.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Induction and the Well-Ordering Property</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#ssec_wellordering" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Well-Ordering Principle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#ssec_induction" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Principle of Mathematical Induction</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#sec_inductionWellOrdering-7" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-divisibility-gcd.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Divisibility and GCDs in the Integers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-divisibility-gcd.html#sec-divisibility-gcd-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Divisibility and the Division Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-divisibility-gcd.html#sec-divisibility-gcd-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Greatest Common Divisors</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-divisibility-gcd.html#sec-divisibility-gcd-exercises" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-primesFactorization.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Primes and Factorization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primesFactorization.html#ssec_primeNumbers" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Prime Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primesFactorization.html#ssec_fundamentalTheoremOfArithmetic" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Fundamental Theorem of Arithmetic</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-primesFactorization.html#exers_primesFactorization" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="sec-primesFactorization.html#sec-primesFactorization-7" class="internal"><span class="codenumber">1.3.4</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_integersModuloM.html" class="internal"><span class="codenumber">1.4</span> <span class="title">The Integers modulo <span class="process-math">\(m\)</span></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integersModuloM.html#ssec_equivalenceRelations" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Equivalence Relations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integersModuloM.html#ssec_congruenceModm" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Congruence Modulo <span class="process-math">\(m\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integersModuloM.html#ssec_integersModm" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Integers Modulo <span class="process-math">\(m\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integersModuloM.html#ssec_additionMultiplicationTablesZm" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Addition and Multiplication Tables in <span class="process-math">\(\Z/m\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integersModuloM.html#ssec_propertiesOfZm" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Arithmetic Properties of <span class="process-math">\(\Z/m\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_integersModuloM.html#exers-integers-mod-m" class="internal"><span class="codenumber">1.4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch2-ringsAndFields.html" class="internal"><span class="codenumber">2</span> <span class="title">Fields, Rings, and Domains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_fields.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-numberSystems" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Number Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#ssec_binaryOperations" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Binary Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#ssec_fields" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#ssec_examplesOfFields" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Examples of Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-propertiesOfFields" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Properties of Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-subfieldsAndExtensions" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Subfields and Extensions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_fields.html#exers_primesFactorization" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_rings.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Rings</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_rings.html#ssec_polynomialRing" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Integral Polynomials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_rings.html#ssec_rings" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Rings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_rings.html#ssec_subrings" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Subrings: New Rings from Old</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_rings.html#ssec_unitsAndAssociates" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Units and Associates in a Ring</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_rings.html#exers_rings" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_rings.html#sec_rings-8" class="internal"><span class="codenumber">2.2.5</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_integralDomains.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Integral Domains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integralDomains.html#ssec_zeroDivisors" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Zero Divisors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integralDomains.html#ssec_integralDomains" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Integral Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integralDomains.html#ssec_polynomialRingAreDomains" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Polynomial Rings are Domains</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_integralDomains.html#exers_integralDomains" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_integralDomains.html#sec_integralDomains-8" class="internal"><span class="codenumber">2.3.5</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_divisibilityIntegralDomains.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Divisibility in Integral Domains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_divisibilityIntegralDomains.html#ssec_divisibilityInDomains" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Divisibility in Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_divisibilityIntegralDomains.html#subsec-primeAndIrreducibleElements" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Prime and Irreducible Elements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_divisibilityIntegralDomains.html#ssec_greatestCommonDivisors" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Greatest Common Divisors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_divisibilityIntegralDomains.html#ssec_polynomialEuclideanAlgorithm" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Polynomial Euclidean Algorithm</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_divisibilityIntegralDomains.html#exers_divisibilityIntegralDomains" class="internal"><span class="codenumber">2.4.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch3-homomorphismsAndIdeals.html" class="internal"><span class="codenumber">3</span> <span class="title">Homomorphisms and Ideals</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_homomorphisms.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Homomorphisms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_homomorphisms.html#subsec-homomorphisms" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Homomorphisms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_homomorphisms.html#ssec_propertiesOfHomomorphisms" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Properties of Homomorphisms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_homomorphisms.html#ssec_kernelOfAHomomorphism" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Kernel of a Homomorphism</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_homomorphisms.html#ssec_imageOfAHomomorphism" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Image of a Homomorphism</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_homomorphisms.html#ssec_initialRing" class="internal"><span class="codenumber">3.1.5</span> <span class="title">The Initial Ring</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_homomorphisms.html#ssec_terminalRing" class="internal"><span class="codenumber">3.1.6</span> <span class="title">The Terminal Ring</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_homomorphisms.html#exers_homomorphisms" class="internal"><span class="codenumber">3.1.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_ideals.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Ideals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_ideals.html#ssec_ideals" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Ideals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_ideals.html#ssec_examplesOfIdeals" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Ideals of the Integers Modulo m</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_ideals.html#ssec_principalIdeals" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Principal Ideals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_ideals.html#ssec_idealsGeneratedByASet" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Ideals Generated by a Set</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_ideals.html#exers_ideals" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_quotientRings.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Rings</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#ssec_congruenceModuloI" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Congruence modulo <span class="process-math">\(I\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#ssec_quotientRings" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Quotient Rings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#ssec_NoetherIsomorphismTheorem" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Noether Isomorphism Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#subsec-" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Applying the Noether Isomorphism Theorem</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_quotientRings.html#exers_divisibilityIntegralDomains" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec_principalIdealDomains.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Principal Ideals Domains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_principalIdealDomains.html#ssec_principalIdealDomains" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Principal Ideal Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_principalIdealDomains.html#ssec_polynomialRingsOverAField" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Polynomial Rings over a Field</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_principalIdealDomains.html#ssec_primeIdeals" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Prime Ideals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_principalIdealDomains.html#ssec_maximalIdeals" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Maximal Ideals</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_principalIdealDomains.html#exers_principalIdealDomains" class="internal"><span class="codenumber">3.4.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch3-factorization.html" class="internal"><span class="codenumber">4</span> <span class="title">Factorization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_factoringPolynomials.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Factoring Polynomials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Factorization in Euclidean Domains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-4" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Unique Factorization Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-5" class="internal"><span class="codenumber">4.2.2</span> <span class="title">The Ascending Chain Condition and Noetherian Rings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-6" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Euclidean Domains are UFDs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_nonuniqueFactorization.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Principal Ideals and Euclidean Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_principalIdealDomains"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">Principal Ideals Domains</span>
+</h2>
+<article class="objectives goal-like" id="obj_principalIdealsEuclideanDomains"><h3 class="heading">
+<span class="type">Guiding Questions:</span><span class="space"> </span><span class="title">Guiding Questions</span>
+</h3>
+<div class="introduction" id="obj_principalIdealsEuclideanDomains-2"><div class="para" id="obj_principalIdealsEuclideanDomains-2-1">In this section, we’ll seek to answer the questions:</div></div>
+<ul class="disc" id="obj_principalIdealsEuclideanDomains-3">
+<li id="obj_principalIdealsEuclideanDomains-3-1"><div class="para" id="p-derived-obj_principalIdealsEuclideanDomains-3-1">What are principal ideal domains?</div></li>
+<li id="obj_principalIdealsEuclideanDomains-3-2"><div class="para" id="p-derived-obj_principalIdealsEuclideanDomains-3-2">What are prime and maximal ideals and how can we use them?</div></li>
+</ul></article><section class="introduction" id="sec_principalIdealDomains-3"><div class="para" id="sec_principalIdealDomains-3-1">The examples at the end of the last section were interesting. In particular, when we looked at the quotient of <span class="process-math">\(\R[x]\)</span> by <span class="process-math">\((x^2+1)\text{.}\)</span> In this section, we aim to give more substance to the Noether Isomorphism theorem in two ways: We isolate a class of domains where ideals are always principal and we introduce two new types of ideals. We then use these ideas to study quotients of polynomials rings.</div></section><section class="subsection" id="ssec_principalIdealDomains"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="space"> </span><span class="title">Principal Ideal Domains</span>
+</h3>
+<div class="para" id="ssec_principalIdealDomains-2">In <span class="process-math">\(\Z\text{,}\)</span> and as we will see <span class="process-math">\(F[x]\)</span> where <span class="process-math">\(F\)</span> is a field, ideals are particularly simple in that they are always principal. We first give domains satisfying that property a name.</div>
+<article class="definition definition-like" id="ssec_principalIdealDomains-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
+</h4> <div class="para" id="ssec_principalIdealDomains-3-3-1">An integral domain <span class="process-math">\(R\)</span> in which every ideal is principal is known as a <dfn class="terminology">principal ideal domain (PID)</dfn>.</div></article><article class="theorem theorem-like" id="thm_ZisPID"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
+</h4>
+<div class="para" id="thm_ZisPID-1-1">The ring <span class="process-math">\(\Z\)</span> is a principal ideal domain.</div></article><details id="thm_ZisPID-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_ZisPID-2-1">The zero ideal is principally generated by <span class="process-math">\(0\)</span> so we let <span class="process-math">\(I\subseteq\Z\)</span> be a non-zero ideal and show it is principally generated.</div> <div class="para" id="thm_ZisPID-2-2">Consider <span class="process-math">\(S=I\cap \mathbb{N}\text{.}\)</span> Since <span class="process-math">\(I\neq \{0\}\text{,}\)</span> there is <span class="process-math">\(0\neq a\in I\text{.}\)</span> If <span class="process-math">\(a\ge 0\text{,}\)</span> then <span class="process-math">\(a\in S\text{.}\)</span> Otherwise <span class="process-math">\(-1\cdot a = -a\ge 0\)</span> so that <span class="process-math">\(-a\in S\)</span> (ideals are closed under multiplication). Thus <span class="process-math">\(S\)</span> is a non-empty subset of <span class="process-math">\(\mathbb{N}\)</span> and so it has a least element <span class="process-math">\(d\text{.}\)</span> We claim <span class="process-math">\(I = (d)\text{.}\)</span>
+</div> <div class="para" id="thm_ZisPID-2-3">Take any other element <span class="process-math">\(b\in I\text{,}\)</span> which we assume is positive. Then the division algorithm tells us there exists <span class="process-math">\(q,r\in\N\)</span> with <span class="process-math">\(0\leq r \lt d\)</span> such that <span class="process-math">\(b = dq+r\text{.}\)</span> But this would tell us <span class="process-math">\(r = b-dq\in I\)</span> and <span class="process-math">\(r \lt d\text{.}\)</span> Since <span class="process-math">\(d\)</span> is the least positive element of <span class="process-math">\(I\text{,}\)</span> this can only happen if <span class="process-math">\(r=0\)</span> and so <span class="process-math">\(b=dq\)</span> and <span class="process-math">\(b\in (d)\text{.}\)</span> Therefore <span class="process-math">\(I=(d)\text{.}\)</span>
+</div> <div class="para" id="thm_ZisPID-2-4">We conclude that <span class="process-math">\(\Z\)</span> is a PID.</div></article></details><div class="para" id="ssec_principalIdealDomains-5">Notice that for any non-zero ideal of <span class="process-math">\(\Z\text{,}\)</span> the greatest common divisor of all the elements is a principal generator (the negative of it is too). We can use this to find the principal generator for ideals generated by more than one element:</div>
+<article class="theorem theorem-like" id="ssec_principalIdealDomains-6"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="ssec_principalIdealDomains-6-1-1">
+<div class="para">Let <span class="process-math">\(R\)</span> be a principal ideal domain and <span class="process-math">\(x,y\in R\)</span> be not both zero. Let <span class="process-math">\(I = \{xm+yn\mid m,n\in R\}\text{.}\)</span> Then:</div>
+<ol class="decimal" id="ssec_principalIdealDomains-6-1-1-4">
+<li id="ssec_principalIdealDomains-6-1-1-4-1"><div class="para" id="ssec_principalIdealDomains-6-1-1-4-1-1">
+<span class="process-math">\(I\)</span> is an ideal, so there is some <span class="process-math">\(d\in R\)</span> for which <span class="process-math">\(I = (d)\text{;}\)</span>
+</div></li>
+<li id="ssec_principalIdealDomains-6-1-1-4-2"><div class="para" id="ssec_principalIdealDomains-6-1-1-4-2-1">
+<span class="process-math">\(d\)</span> is a <a href="sec_divisibilityIntegralDomains.html#def_gcdDomain" class="xref" data-knowl="./knowl/xref/def_gcdDomain.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.4.7">greatest common divisor</a> of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>
+</div></li>
+</ol>
+</div> <div class="para" id="ssec_principalIdealDomains-6-1-2">We conclude that there exist <span class="process-math">\(s,t\in R\)</span> such that <span class="process-math">\(d = xs + yt\text{.}\)</span>
+</div></article><details id="ssec_principalIdealDomains-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_principalIdealDomains-7-1">Observe that <span class="process-math">\(0 = x0 + y0 \in I\text{.}\)</span> Additionally, if <span class="process-math">\(x m_1 + y n_1, x m_2 + y n_2\in I\text{,}\)</span> then <span class="process-math">\((x m_1 + y n_1) + (x m_2 + y n_2) = x (m_1 + m_2) + y (n_1 + n_2) \in I\text{,}\)</span> and <span class="process-math">\(r(x m_1 + y n_1) = x (rm_1) + y(rn_1) \in I\text{.}\)</span> Thus, <span class="process-math">\(I\)</span> is an ideal.</div> <div class="para" id="ssec_principalIdealDomains-7-2">Since <span class="process-math">\(R\)</span> is a PID, there exists <span class="process-math">\(d\in R\)</span> such that <span class="process-math">\(I = (d)\text{.}\)</span> We claim that <span class="process-math">\(d\)</span> is a GCD of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>
+</div> <div class="para" id="ssec_principalIdealDomains-7-3">It is clear that <span class="process-math">\(d|x\text{,}\)</span> as <span class="process-math">\(x\cdot 1 + y\cdot 0\in I = (d)\text{.}\)</span> Similarly, <span class="process-math">\(d|y\text{.}\)</span>
+</div> <div class="para" id="ssec_principalIdealDomains-7-4">Now let <span class="process-math">\(e\in R\)</span> be a common divisor of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> We wish to show that <span class="process-math">\(e|d\text{.}\)</span> Write <span class="process-math">\(x = e k_1\)</span> and <span class="process-math">\(y = e k_2\text{.}\)</span> Since <span class="process-math">\(d\in (d)\text{,}\)</span> there exist <span class="process-math">\(s,t\in R\)</span> such that <span class="process-math">\(d = x s + yt = (e k_1) s + (e k_2)t = e(k_1 s + k_2 t)\text{,}\)</span> and thus <span class="process-math">\(e|d\text{.}\)</span>
+</div> <div class="para" id="ssec_principalIdealDomains-7-5">In particular, there exist <span class="process-math">\(s,t\in R\)</span> such that a GCD <span class="process-math">\(d\)</span> of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> can be written as <span class="process-math">\(d = xs + yt\text{.}\)</span>
+</div></article></details><div class="para" id="ssec_principalIdealDomains-8">We have so far abstracted and axiomatized several important algebraic properties of <span class="process-math">\(\Z\)</span> that we discussed in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "sec_integers" missing or not unique]</code>. In particular, we have our usual operations of addition and multiplication, and their interactions, we have notions of divisibility/factorization, irreducibility, and primality; we also have cancellation and greatest common divisors.</div></section><section class="subsection" id="ssec_polynomialRingsOverAField"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="space"> </span><span class="title">Polynomial Rings over a Field</span>
+</h3>
+<div class="para" id="ssec_polynomialRingsOverAField-2">Our next goal is to prove that polynomial rings over a field are always a PID. In the course of the proof we will notice that such rings share a lot in common (factorization-wise) with integers. The key to factorization here is the degree function.</div>
+<div class="para" id="ssec_polynomialRingsOverAField-3">We start by proving any ideal (or any non-zero subset) of a polynomial ring has an element of least degree.</div>
+<article class="lemma theorem-like" id="lem_minimalDegreePoly"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span>
+</h4>
+<div class="para" id="lem_minimalDegreePoly-1-1">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(S\subseteq F[x]\)</span> a set containing a nonzero polynomial. Prove that <span class="process-math">\(S\)</span> contains a polynomial <span class="process-math">\(f\)</span> such that <span class="process-math">\(\deg(f) \le \deg(g)\)</span> for all nonzero <span class="process-math">\(g\in S\text{.}\)</span>
+</div></article><details id="lem_minimalDegreePoly-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="lem_minimalDegreePoly-2-1">Let <span class="process-math">\(T = \{\deg g\mid g\in S\}\text{.}\)</span> Since <span class="process-math">\(S\)</span> contains a nonzero polynomial, <span class="process-math">\(T\ne \emptyset\text{.}\)</span> By WOP, <span class="process-math">\(T\)</span> contains a minimal element <span class="process-math">\(d \ge 0\text{,}\)</span> which must be the degree of some polynomial in <span class="process-math">\(S\text{.}\)</span>
+</div></article></details><div class="para" id="ssec_polynomialRingsOverAField-5">Notice that in the proof of <a href="sec_principalIdealDomains.html#lem_minimalDegreePoly" class="xref" data-knowl="./knowl/xref/lem_minimalDegreePoly.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.4.4">Lemma 3.4.4</a> we did not use that <span class="process-math">\(F\)</span> was a field. In particular, we only need that there are non-zero polynomials, i.e. the coefficient ring is a non-zero ring.</div>
+<article class="theorem theorem-like" id="thm_polynomialsOverFieldArePID"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.5</span><span class="period">.</span>
+</h4>
+<div class="para" id="thm_polynomialsOverFieldArePID-1-1">Let <span class="process-math">\(F\)</span> be a field. Then the ring <span class="process-math">\(F[x]\)</span> is a principal ideal domain.</div></article><details id="ssec_polynomialRingsOverAField-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_polynomialRingsOverAField-7-1">Let <span class="process-math">\(I\)</span> be a nonzero ideal of <span class="process-math">\(F[x]\)</span> and let <span class="process-math">\(f(x)\in I\)</span> be a non-zero polynomial of smallest degree. We claim <span class="process-math">\(I = (f(x))\text{.}\)</span>
+</div> <div class="para" id="ssec_polynomialRingsOverAField-7-2">We have <span class="process-math">\((f(x))\subseteq I\)</span> as <span class="process-math">\(f(x)\in I\text{.}\)</span>
+</div> <div class="para" id="ssec_polynomialRingsOverAField-7-3">Let <span class="process-math">\(g(x)\in I\)</span> and use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_polynomialDivisionAlgorithm" missing or not unique]</code> to write <span class="process-math">\(g(x) = f(x) q(x) + r(x)\text{,}\)</span> where <span class="process-math">\(\deg r(x) \lt \deg f(x)\text{.}\)</span> As in <a href="sec_principalIdealDomains.html#thm_ZisPID" class="xref" data-knowl="./knowl/xref/thm_ZisPID.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.4.2">Theorem 3.4.2</a>, write <span class="process-math">\(r(x) = g(x) - f(x) q(x) \in I\text{.}\)</span> Since <span class="process-math">\(\deg(r(x))\lt \deg(f(x))\text{,}\)</span> the only way this can happen is if <span class="process-math">\(r(x)=0\text{.}\)</span> Thus, <span class="process-math">\(g(x) = f(x)q(x)\)</span> and so <span class="process-math">\(f(x) | g(x)\text{.}\)</span> Hence, <span class="process-math">\(g(x)\in (f(x))\text{.}\)</span> In particular, <span class="process-math">\(I\subseteq (f(x))\)</span> and we have <span class="process-math">\(I=(f(x))\text{.}\)</span>
+</div> <div class="para" id="ssec_polynomialRingsOverAField-7-4">Thus any ideal in <span class="process-math">\(F[x]\)</span> is principally generated and since <span class="process-math">\(F[x]\)</span> is a domain, it is a principal ideal domain.</div></article></details><div class="para" id="ssec_polynomialRingsOverAField-8">The proof of <a href="sec_principalIdealDomains.html#thm_polynomialsOverFieldArePID" class="xref" data-knowl="./knowl/xref/thm_polynomialsOverFieldArePID.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.4.5">Theorem 3.4.5</a> shows that to find a principal generated we need only look for a polynomial of minimal degree.</div>
+<article class="example example-like" id="ssec_polynomialRingsOverAField-9"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.6</span><span class="period">.</span>
+</h4>
+<div class="para" id="ssec_polynomialRingsOverAField-9-1-1">In this example, we will show how to give a purely algebraic construction of <span class="process-math">\(\sqrt{2}\text{.}\)</span> What does it mean to algebraically construct <span class="process-math">\(\sqrt{2}\text{?}\)</span> We will take this to mean having access to a number system with <span class="process-math">\(\sqrt{2}\)</span> that does not involve analytic constructions. That is, we will avoid using <span class="process-math">\(\mathbb{R}\text{.}\)</span> Our starting algebraic system will be the rational numbers. If we had access to analysis, we could just allow the use of <span class="process-math">\(\sqrt{2}\)</span> by throwing it into our set. We’ve encountered this field already: <span class="process-math">\(\Q[\sqrt{2}]\text{.}\)</span> Whatever we do should recover this field.</div> <div class="para" id="ssec_polynomialRingsOverAField-9-1-2">Consider the function <span class="process-math">\(\mathrm{ev}_{\sqrt{2}}\colon\mathbb{Q}[x]\to\mathbb{Q}[\sqrt{2}]\)</span> given by <span class="process-math">\(\mathrm{ev}_{\sqrt{2}}(p(x)) = p(\sqrt{2})\text{.}\)</span> We have seen many times that <span class="process-math">\(\mathrm{ev}_{\sqrt{2}}\)</span> is a homomorphism. Let us find it’s kernel.</div> <div class="para" id="ssec_polynomialRingsOverAField-9-1-3">Since <span class="process-math">\(\mathbb{Q}[x]\)</span> is a PID, the kernel is principally generated. Since <span class="process-math">\(\mathrm{ev}_\sqrt{2}(x^2-2) = (\sqrt{2})^2-2=0\text{,}\)</span> the kernel is non-zero and so it is principally generated by a non-zero polynomial. By the remark before this example, it is principally generated by a polynomial of least degree. Since <span class="process-math">\(x^2-2\in\ker\mathrm{ev}_{\sqrt{2}}\text{,}\)</span> it is a candidate for the principal generator. We just need to see no elements of smaller degree are in the kernel.</div> <div class="para logical" id="ssec_polynomialRingsOverAField-9-1-4">
+<div class="para">To that end, suppose <span class="process-math">\(a+bx\in\ker\mathrm{ev}_{\sqrt{2}}\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = \mathrm{ev}_{\sqrt{2}}(a+bx) = a+b\sqrt{2}
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(b\neq 0\text{,}\)</span> then <span class="process-math">\(\sqrt{2}=-a/b\)</span> says <span class="process-math">\(\sqrt{2}\)</span> is rational which is false. Thus <span class="process-math">\(b=0\)</span> and so <span class="process-math">\(a=0\)</span> too. We conclude that the kernel does not contain any terms of degrees zero or one. Hence, <span class="process-math">\(x^2-2\)</span> is a non-zero polynomial of smallest degree in the kernel. Thus <span class="process-math">\(\ker\mathrm{ev}_{\sqrt{2}}=(x^2-2)\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="ssec_polynomialRingsOverAField-9-1-5">
+<div class="para">The evaluation mapping is onto as for any <span class="process-math">\(a+b\sqrt{2}\in\mathbb{Q}[\sqrt{2}]\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathrm{ev}_\sqrt{2}(a+bx) = a+b\sqrt{2}.
+\end{equation*}
+</div>
+<div class="para">Thus it is an epimorphism. By the Noether Isomorphism Theorem, we have an isomorphism:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{Q}[x]/(x^2-2)\cong \mathbb{Q}[\sqrt{2}]
+\end{equation*}
+</div>
+<div class="para">defined by <span class="process-math">\(p(x)+(x^2-2)\mapsto p(\sqrt{2})\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="ssec_polynomialRingsOverAField-9-1-6">
+<div class="para">The ring (field more precisely) <span class="process-math">\(\mathbb{Q}[x]/(x^2-2)\)</span> relies on:</div>
+<ol class="decimal" id="ssec_polynomialRingsOverAField-9-1-6-2">
+<li id="ssec_polynomialRingsOverAField-9-1-6-2-1"><div class="para" id="ssec_polynomialRingsOverAField-9-1-6-2-1-1">Constructing the rational numbers <span class="process-math">\(\Q\text{.}\)</span>
+</div></li>
+<li id="ssec_polynomialRingsOverAField-9-1-6-2-2"><div class="para" id="ssec_polynomialRingsOverAField-9-1-6-2-2-1">Constructing the polynomial ring <span class="process-math">\(\Q[x]\)</span> over <span class="process-math">\(\Q\text{.}\)</span>
+</div></li>
+<li id="ssec_polynomialRingsOverAField-9-1-6-2-3"><div class="para" id="ssec_polynomialRingsOverAField-9-1-6-2-3-1">Modding out that polynomial ring by the principal ideal <span class="process-math">\(x^2-2\text{.}\)</span>
+</div></li>
+</ol>
+<div class="para">Each one of these steps is purely algebraic. The last step adds <span class="process-math">\(\sqrt{2}\)</span> to <span class="process-math">\(\Q\)</span> by saying we want to add a symbol <span class="process-math">\(x\)</span> that squares to <span class="process-math">\(2\text{.}\)</span>
+</div>
+</div></article></section><section class="subsection" id="ssec_primeIdeals"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="space"> </span><span class="title">Prime Ideals</span>
+</h3>
+<div class="para" id="ssec_primeIdeals-2">In this section, we continue return to our exploration of quotient rings by looking more closely at properties of ideals. We focus on particular properties of ideals that ensure that the quotient <span class="process-math">\(R/I\)</span> is either a domain or a field. Our examples will focus on the case <span class="process-math">\(R\)</span> is a PID.</div>
+<aside class="aside aside-like" id="ssec_primeIdeals-3"><h4 class="heading"><span class="title">Fraktur Font.</span></h4>
+<div class="para" id="ssec_primeIdeals-3-2">The Fraktur font is a German typeface from the 16th century. It was long known as the “German typeface”. In 1941 it was banned by the Nazi government. It is usually used when denoting prime (<span class="process-math">\(\mathfrak{p}\)</span>) and maximal (<span class="process-math">\(\mathfrak{m}\)</span>) ideals. TBD</div></aside><article class="definition definition-like" id="ssec_primeIdeals-4"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.7</span><span class="period">.</span>
+</h4> <div class="para" id="ssec_primeIdeals-4-3-1">Let <span class="process-math">\(R\)</span> be a commutative ring and <span class="process-math">\(\mathfrak{p}\subsetneq R\)</span> a proper ideal. We say <span class="process-math">\(\mathfrak{p}\)</span> is <dfn class="terminology">prime</dfn> if whenever <span class="process-math">\(a,b\in R\)</span> such that <span class="process-math">\(ab\in \mathfrak{p}\text{,}\)</span> we have <span class="process-math">\(a\in \mathfrak{p}\)</span> or <span class="process-math">\(b\in \mathfrak{p}\text{.}\)</span>
+</div></article><div class="para" id="ssec_primeIdeals-5">This definition arises by replacing <em class="emphasis">divides</em> with <em class="emphasis">is contained in</em> in the usual definition of prime element??? The following theorem shows that these definitions agree to the extent they can: prime elements generate prime ideals.</div>
+<article class="theorem theorem-like" id="thm_primeElementGeneratesPrimeIdeal"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.8</span><span class="period">.</span>
+</h4>
+<div class="para" id="thm_primeElementGeneratesPrimeIdeal-1-1">Let <span class="process-math">\(R\)</span> be a domain and <span class="process-math">\(p\in R\)</span> be prime. Then <span class="process-math">\(\mathfrak{p} = (p)\)</span> is a prime ideal.</div></article><details id="thm_primeElementGeneratesPrimeIdeal-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_primeElementGeneratesPrimeIdeal-2-1">Suppose <span class="process-math">\(p\)</span> is a prime element of a domain and <span class="process-math">\(\mathfrak{p} = (p)\text{.}\)</span> Suppose a product is in <span class="process-math">\(\mathfrak{p}\text{,}\)</span> say <span class="process-math">\(ab\in\mathfrak{p}\text{.}\)</span> Then there exists <span class="process-math">\(r\in R\)</span> with <span class="process-math">\(rp = ab\text{.}\)</span> Thus <span class="process-math">\(p\mid ab\text{.}\)</span> Since <span class="process-math">\(p\)</span> is prime, either <span class="process-math">\(p\mid a\)</span> or <span class="process-math">\(p\mid b\text{.}\)</span>
+</div> <div class="para" id="thm_primeElementGeneratesPrimeIdeal-2-2">Without loss of generality assume <span class="process-math">\(p\mid a\text{.}\)</span> Then there exists <span class="process-math">\(s\in R\)</span> with <span class="process-math">\(a = sp\text{.}\)</span> Hence, <span class="process-math">\(a\in (p) = \mathfrak{p}\text{.}\)</span>
+</div></article></details><article class="activity project-like" id="ssec_primeIdeals-7"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="ssec_primeIdeals-7-1-1">
+<div class="para">Which of the following ideals are prime?</div>
+<ol class="decimal" id="ssec_primeIdeals-7-1-1-1">
+<li id="ssec_primeIdeals-7-1-1-1-1"><div class="para" id="ssec_primeIdeals-7-1-1-1-1-1">
+<span class="process-math">\((9)\)</span> in <span class="process-math">\(\Z\)</span>
+</div></li>
+<li id="ssec_primeIdeals-7-1-1-1-2"><div class="para" id="ssec_primeIdeals-7-1-1-1-2-1">
+<span class="process-math">\((11)\)</span> in <span class="process-math">\(\Z\)</span>
+</div></li>
+<li id="ssec_primeIdeals-7-1-1-1-3"><div class="para" id="ssec_primeIdeals-7-1-1-1-3-1">
+<span class="process-math">\((x^2+1)\)</span> in <span class="process-math">\(\R[x]\)</span>
+</div></li>
+<li id="ssec_primeIdeals-7-1-1-1-4"><div class="para" id="ssec_primeIdeals-7-1-1-1-4-1">
+<span class="process-math">\((x^2-1)\)</span> in <span class="process-math">\(\R[x]\)</span>
+</div></li>
+<li id="ssec_primeIdeals-7-1-1-1-5"><div class="para" id="ssec_primeIdeals-7-1-1-1-5-1">
+<span class="process-math">\((x^2-5x+6, x^4+2x^3-10x^2+5x-2)\)</span> in <span class="process-math">\(\R[x]\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="ssec_primeIdeals-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ssec_primeIdeals-7-2-1"><ol class="decimal" id="ssec_primeIdeals-7-2-1-1">
+<li id="ssec_primeIdeals-7-2-1-1-1"><div class="para" id="ssec_primeIdeals-7-2-1-1-1-1">Not prime. <span class="process-math">\(3\cdot 3= 9\in (9)\text{,}\)</span> but <span class="process-math">\(3\notin(9)\text{.}\)</span>
+</div></li>
+<li id="ssec_primeIdeals-7-2-1-1-2"><div class="para" id="ssec_primeIdeals-7-2-1-1-2-1">Prime. If <span class="process-math">\(x\in (11)\text{,}\)</span> then <span class="process-math">\(11|x\)</span> and 11 is prime.</div></li>
+<li id="ssec_primeIdeals-7-2-1-1-3"><div class="para" id="ssec_primeIdeals-7-2-1-1-3-1">Prime. Easy explanation is that <span class="process-math">\(R[x]/(x^2+1)\)</span> is isomorphic to <span class="process-math">\(\C\text{.}\)</span> <span class="process-math">\(\ddot\smile\)</span> For now, though, we know that <span class="process-math">\(x^2+1\)</span> is irreducible, and <span class="process-math">\(R[x]\)</span> is a PID, so irreducibles are prime.</div></li>
+<li id="ssec_primeIdeals-7-2-1-1-4"><div class="para" id="ssec_primeIdeals-7-2-1-1-4-1">Not prime. <span class="process-math">\(x^2-1 = (x-1)(x+1)\text{,}\)</span> but <span class="process-math">\(x\pm 1\notin (x^2-1)\)</span> for degree reasons.</div></li>
+<li id="ssec_primeIdeals-7-2-1-1-5"><div class="para" id="ssec_primeIdeals-7-2-1-1-5-1">One may use the EA to show that <span class="process-math">\(\gcd(x^2-5x+6,x^4+2x^3-10x^2+5x-2) = x-2\text{,}\)</span> so <span class="process-math">\((x^2-5x+6, x^4+2x^3-10x^2+5x-2) = (x-2)\text{.}\)</span> This is prime.</div></li>
+</ol></div></div></details></div></article><div class="para" id="ssec_primeIdeals-8">It is this precise condition that guarantees that the resulting quotient is a domain.</div>
+<article class="theorem theorem-like" id="thm_quotientByPrimeIsDomain"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.9</span><span class="period">.</span>
+</h4>
+<div class="para" id="thm_quotientByPrimeIsDomain-1-1">Let <span class="process-math">\(R\)</span> be a commutative ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> Then <span class="process-math">\(I\)</span> is prime if and only if <span class="process-math">\(R/I\)</span> is an integral domain.</div></article><details id="ssec_primeIdeals-10" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_primeIdeals-10-1">Begin by assuming that <span class="process-math">\(I\)</span> is prime, and suppose <span class="process-math">\((a+I)(b+I) = 0+I = I\text{.}\)</span> Then <span class="process-math">\(ab \in I\text{,}\)</span> and since <span class="process-math">\(I\)</span> is prime, either <span class="process-math">\(a\in I\)</span> or <span class="process-math">\(b\in I\text{.}\)</span> Thus either <span class="process-math">\(a+I = 0+I\)</span> or <span class="process-math">\(b+I = 0+I\text{.}\)</span>
+</div> <div class="para" id="ssec_primeIdeals-10-2">Now assume that <span class="process-math">\(R/I\)</span> is a domain. Further, let <span class="process-math">\(a,b\in R\)</span> be such that <span class="process-math">\((a+I)(b+I) = ab+I = 0+I\text{.}\)</span> Then <span class="process-math">\(ab\in I\text{,}\)</span> and since <span class="process-math">\(R/I\)</span> is a domain, <span class="process-math">\(a+I = 0+I\)</span> or <span class="process-math">\(b+I = 0+I\text{,}\)</span> i.e., <span class="process-math">\(a\in I\)</span> or <span class="process-math">\(b\in I\text{.}\)</span> Thus, <span class="process-math">\(I\)</span> is prime.</div></article></details><article class="example example-like" id="ssec_primeIdeals-11"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.10</span><span class="period">.</span>
+</h4>
+<div class="para" id="ssec_primeIdeals-11-1-1">The ideal <span class="process-math">\((x^2-2)\)</span> is a prime ideal of <span class="process-math">\(\Q[x]\)</span> because the quotient <span class="process-math">\(\Q[x]/(x^2-2)\cong \mathbb{Q}[\sqrt{2}]\)</span> is a field (in particular a domain).</div></article><article class="example example-like" id="ssec_primeIdeals-12"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.11</span><span class="period">.</span>
+</h4>
+<div class="para" id="ssec_primeIdeals-12-1-1">The ideal <span class="process-math">\((x)\)</span> is a prime ideal of <span class="process-math">\(\Z[x]\)</span> because the quotient <span class="process-math">\(\Z[x]/(x)\cong \Z\)</span> and <span class="process-math">\(\Z\)</span> is a domain.</div></article><article class="example example-like" id="ssec_primeIdeals-13"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.12</span><span class="period">.</span>
+</h4>
+<div class="para" id="ssec_primeIdeals-13-1-1">The ideal <span class="process-math">\((x^2)\)</span> is not a prime ideal of <span class="process-math">\(\Z[x]\text{.}\)</span> Indeed, <span class="process-math">\(x\cdot x\in (x^2)\)</span> but <span class="process-math">\(x\notin (x^2)\text{.}\)</span>
+</div> <div class="para" id="ssec_primeIdeals-13-1-2">Alternatively, in <span class="process-math">\(\Z[x]/(x^2)\)</span> we have <span class="process-math">\(\bar{x}\neq 0\)</span> but <span class="process-math">\(\bar{x}\cdot \bar{x} = \bar{x}^2=0\text{.}\)</span> Thus <span class="process-math">\(\Z[x]/(x^2)\)</span> is not a domain and consequently <span class="process-math">\((x^2)\)</span> is not prime.</div></article><article class="example example-like" id="ex_nonprincipalPrimeIdeal"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.13</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="ex_nonprincipalPrimeIdeal-1-1">
+<div class="para">The ideal <span class="process-math">\((x,2)\)</span> is a prime ideal of <span class="process-math">\(\Z[x]\text{.}\)</span> Indeed, the mapping <span class="process-math">\(\varphi\colon \Z[x]\to \mathbb{F}_2\)</span> defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\varphi(a_0+a_1x+\cdots+a_nx^n) = \bar{a}_0
+\end{equation*}
+</div>
+<div class="para">is an epimorphism (exercise). This is nothing more than the reduce the constant term modulo 2 mapping.</div>
+</div> <div class="para" id="ex_nonprincipalPrimeIdeal-1-2">The kernel of this mapping certainly contains <span class="process-math">\((x,2)\)</span> as polynomials in <span class="process-math">\((x,2)\)</span> are nothing more than the polynomials with even constant term, which reduces to 0 modulo 2. Any element not in <span class="process-math">\((x,2)\)</span> has odd constant term. Thus it will not be in the kernel. Hence, <span class="process-math">\(\ker(\varphi) = (x,2)\)</span> and by the Noether Isomorphism Theorem <span class="process-math">\(\Z[x]/(x,2)\cong\mathbb{F}_2\text{.}\)</span> This is a field and so a domain. Thus <span class="process-math">\((x,2)\)</span> is a prime ideal that is not principal.</div></article></section><section class="subsection" id="ssec_maximalIdeals"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="space"> </span><span class="title">Maximal Ideals</span>
+</h3>
+<div class="para" id="ssec_maximalIdeals-2">We now consider another important class of ideals: the maximal ideals.</div>
+<article class="definition definition-like" id="ssec_maximalIdeals-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.14</span><span class="period">.</span>
+</h4> <div class="para" id="ssec_maximalIdeals-3-4-1">Let <span class="process-math">\(R\)</span> be a commutative ring and let <span class="process-math">\(\mathfrak{m}\subsetneq R\)</span> be a proper ideal. We say that <span class="process-math">\(\mathfrak{m}\)</span> is a <dfn class="terminology">maximal ideal</dfn> if no proper ideal of <span class="process-math">\(R\)</span> properly contains <span class="process-math">\(\mathfrak{m}\text{.}\)</span> That is, if <span class="process-math">\(J\)</span> is an ideal satisfying <span class="process-math">\(\mathfrak{m}\subseteq
+J\subseteq R\text{,}\)</span> either <span class="process-math">\(J=\mathfrak{m}\)</span> or <span class="process-math">\(J=R\text{.}\)</span>
+</div></article><div class="para" id="ssec_maximalIdeals-4">In other words, an ideal <span class="process-math">\(\mathfrak{m}\ne R\)</span> is maximal if no “larger” ideal (with respect to inclusion) properly contains it. As we will see later, rings can have many maximal ideals.</div>
+<div class="para" id="ssec_maximalIdeals-5">It is a fact that any ring <span class="process-math">\(R\)</span> with <span class="process-math">\(0_R\ne 1_R\)</span> has a maximal ideal. This follows from <em class="emphasis">Zorn’s Lemma</em>; a rigorous exploration of Zorn’s Lemma lies outside of the scope of this text, but suffice it to say that Zorn’s Lemma is incredibly useful in all areas of algebra for proving existence theorems. For example, a proof that every vector space has a basis relies on Zorn’s Lemma.</div>
+<div class="para" id="ssec_maximalIdeals-6">Rings with only one maximal ideal are said to be <em class="emphasis">local rings</em>, and are actively studied in modern research in commutative algebra (the study of commutative rings and their properties).</div>
+<div class="para" id="ssec_maximalIdeals-7">The next two results demonstrate that the maximality of <span class="process-math">\(I\)</span> is precisely the condition that guarantees that <span class="process-math">\(R/I\)</span> is a field.</div>
+<article class="lemma theorem-like" id="ssec_maximalIdeals-8"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.4.15</span><span class="period">.</span>
+</h4>
+<div class="para" id="ssec_maximalIdeals-8-1-1">Let <span class="process-math">\(R\)</span> be a commutative ring and <span class="process-math">\(\mathfrak{m}\)</span> a maximal ideal of <span class="process-math">\(R\text{.}\)</span> Let <span class="process-math">\(x\in
+R\setminus \mathfrak{m}\text{,}\)</span> and set <span class="process-math">\(J = \{xr+y\mid r\in R, \ y\in \mathfrak{m}\}\text{.}\)</span> Then: <span class="process-math">\(J\)</span> is an ideal of <span class="process-math">\(R\)</span> such that <span class="process-math">\(\mathfrak{m}\subsetneq J\text{.}\)</span> Thus there exist <span class="process-math">\(r'\in R\text{,}\)</span> <span class="process-math">\(y'\in \mathfrak{m}\)</span> such that <span class="process-math">\(1 = xr'+y'\text{.}\)</span>
+</div></article><details id="ssec_maximalIdeals-8-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="ssec_maximalIdeals-8-2-1">
+<div class="para">Let <span class="process-math">\(J\)</span> be the set in question. Then <span class="process-math">\(0\in\mathfrak{m}\)</span> as it is an ideal so <span class="process-math">\(x\cdot 0 + 0 = 0\in J\text{.}\)</span> Take <span class="process-math">\(xr_1+y_1,xr_2+y_2\in J\text{.}\)</span> Then:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(xr_1+y_1)+(xr_2+y_2) = x(r_1+r_2)+(y_1+y_2)
+\end{equation*}
+</div>
+<div class="para">and since <span class="process-math">\(y_1+y_2\in\mathfrak{m}\)</span> the sum is in <span class="process-math">\(J\text{.}\)</span> So <span class="process-math">\(J\)</span> is closed under addition.</div>
+</div> <div class="para logical" id="ssec_maximalIdeals-8-2-2">
+<div class="para">For closure by multiplication by <span class="process-math">\(R\text{:}\)</span> Take <span class="process-math">\(r'\in R,\ xr+y\in J\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r'(xr+y) = x(rr') + r'y
+\end{equation*}
+</div>
+<div class="para">and since <span class="process-math">\(\mathfrak{m}\)</span> is an ideal we have <span class="process-math">\(r'y\in\mathfrak{m}\)</span> so that <span class="process-math">\(r'(xr+y)\in J\text{.}\)</span> We conclude that <span class="process-math">\(J\)</span> is an ideal.</div>
+</div> <div class="para" id="ssec_maximalIdeals-8-2-3">For the last two statements, we know that <span class="process-math">\(\mathfrak{m}\subseteq J\text{.}\)</span> Since <span class="process-math">\(x = x\cdot 1 + 0\in J\)</span> and <span class="process-math">\(x\notin \mathfrak{m}\)</span> it cannot be that they are equal so that <span class="process-math">\(\mathfrak{m}\subsetneq J\subseteq R\text{.}\)</span> By maximality, it must be that <span class="process-math">\(J = R\text{.}\)</span> Since <span class="process-math">\(1\in R\)</span> there exists <span class="process-math">\(r\in R\)</span> with <span class="process-math">\(1 = xr + y\)</span> for some <span class="process-math">\(y\in\mathfrak{m}\text{.}\)</span>
+</div></article></details><article class="theorem theorem-like" id="ssec_maximalIdeals-9"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.16</span><span class="period">.</span>
+</h4>
+<div class="para" id="ssec_maximalIdeals-9-1-1">Let <span class="process-math">\(R\)</span> be a commutative ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> Then <span class="process-math">\(I\)</span> is maximal if and only if <span class="process-math">\(R/I\)</span> is a field.</div>
+<details id="ssec_maximalIdeals-9-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="ssec_maximalIdeals-9-2-1">For the forward direction, apply the previous lemma to construct an inverse for <span class="process-math">\(x+I\)</span> given any <span class="process-math">\(x\in R\setminus I\text{.}\)</span>
+</div></div></details></article><details id="ssec_maximalIdeals-9-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_maximalIdeals-9-3-1">If <span class="process-math">\(R/I\)</span> is a field, assume <span class="process-math">\(J\)</span> is an ideal of <span class="process-math">\(R\)</span> that properly contains <span class="process-math">\(I\text{.}\)</span> Let <span class="process-math">\(x\in J\setminus I\text{;}\)</span> then <span class="process-math">\(x+I\)</span> is a nonzero element of <span class="process-math">\(R/I\text{,}\)</span> and since <span class="process-math">\(R/I\)</span> is a field, there is some <span class="process-math">\(y+I\)</span> such that <span class="process-math">\((xy)+I = 1+I\text{.}\)</span> Since <span class="process-math">\(x\in J\text{,}\)</span> <span class="process-math">\(xy\in J\text{.}\)</span> As <span class="process-math">\(1+I = (x+I)(y+I) = xy+I\text{,}\)</span> we have <span class="process-math">\(1-xy\in
+I\subsetneq J\text{,}\)</span> and thus <span class="process-math">\(1 = (1-xy)+xy \in J\text{,}\)</span> which means <span class="process-math">\(J = R\text{.}\)</span> Thus, <span class="process-math">\(I\)</span> is maximal.</div> <div class="para logical" id="ssec_maximalIdeals-9-3-2">
+<div class="para">Now, suppose that <span class="process-math">\(I\)</span> is maximal and let <span class="process-math">\(x\in R\setminus I\text{.}\)</span> Apply the previous lemma to obtain <span class="process-math">\(1 = xr + y'\text{,}\)</span> where <span class="process-math">\(y\in I\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1 + I = xr+y + I = xr + I = (x+I)(r+I).
+\end{equation*}
+</div>
+</div></article></details><article class="theorem theorem-like" id="ssec_maximalIdeals-10"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.17</span><span class="period">.</span>
+</h4>
+<div class="para" id="ssec_maximalIdeals-10-1-1">Every maximal ideal is prime.</div></article><details id="ssec_maximalIdeals-10-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_maximalIdeals-10-2-1">All fields are integral domains. Thus, if <span class="process-math">\(I\)</span> is maximal, <span class="process-math">\(R/I\)</span> is a field, thus a domain, and thus <span class="process-math">\(I\)</span> is prime.</div></article></details><div class="para" id="ssec_maximalIdeals-11">In general, the converse is not true (see the <a href="sec_principalIdealDomains.html#challenge-nonmaximal-prime" class="xref" data-knowl="./knowl/xref/challenge-nonmaximal-prime.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 3.4.3: Challenge">Challenge</a> below). However, it holds in sufficiently nice rings.</div>
+<article class="theorem theorem-like" id="thm-pid-primes-are-maximal"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.18</span><span class="period">.</span>
+</h4>
+<div class="para" id="thm-pid-primes-are-maximal-1-1">In a principal ideal domain, every prime ideal is maximal.</div></article><details id="thm-pid-primes-are-maximal-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-pid-primes-are-maximal-2-1">Let <span class="process-math">\(R\)</span> be a PID and <span class="process-math">\(\mathfrak{p}=(p)\)</span> a prime ideal. By previous work, <span class="process-math">\(p\)</span> is prime. Suppose that <span class="process-math">\(\mathfrak{p} \subseteq \mathfrak{m}\text{.}\)</span> Thus, <span class="process-math">\(p\in (m)\text{,}\)</span> so <span class="process-math">\(m|p\text{.}\)</span> That is, <span class="process-math">\(p = mk\text{.}\)</span> Since <span class="process-math">\(p\)</span> is prime and <span class="process-math">\(R\)</span> is a domain, it is irreducible. Thus, either <span class="process-math">\(m\)</span> or <span class="process-math">\(k\)</span> is a unit. If <span class="process-math">\(m\)</span> is a unit, then <span class="process-math">\((m) = R\text{.}\)</span> If <span class="process-math">\(k\)</span> is a unit, then <span class="process-math">\(m = k^{-1} p\text{,}\)</span> and thus <span class="process-math">\(m\in (p)\text{,}\)</span> which means that <span class="process-math">\((m) = (p)\text{.}\)</span>
+</div> <div class="para" id="thm-pid-primes-are-maximal-2-2">Thus, <span class="process-math">\((p)\)</span> is maximal.</div></article></details><article class="exploration project-like" id="ssec_maximalIdeals-13"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
+</h4>
+<div class="para" id="ssec_maximalIdeals-13-1-1">Describe the prime and maximal ideals of <span class="process-math">\(\Z\)</span> and <span class="process-math">\(\Q[x]\text{.}\)</span>
+</div>
+<div class="solutions">
+<details id="ssec_maximalIdeals-13-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">For which ideals <span class="process-math">\(I\)</span> is <span class="process-math">\(\Z/I\)</span> a domain? A field? Similarly for <span class="process-math">\(\Q[x]\text{.}\)</span> Or, use <a href="sec_principalIdealDomains.html#thm-pid-primes-are-maximal" class="xref" data-knowl="./knowl/xref/thm-pid-primes-are-maximal.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.4.18">Theorem 3.4.18</a>.</div></details><details id="ssec_maximalIdeals-13-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">TBD</div></details>
+</div></article><article class="exploration project-like" id="challenge-nonmaximal-prime"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Challenge.</span>
+</h4> <div class="para" id="challenge-nonmaximal-prime-2">Find a commutative ring , <span class="process-math">\(R\text{,}\)</span> and a nonmaximal prime ideal <span class="process-math">\(P\)</span> of <span class="process-math">\(R\text{.}\)</span>
+</div> <details id="challenge-nonmaximal-prime-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="challenge-nonmaximal-prime-3-1">In <span class="process-math">\(\Z[x]\text{,}\)</span> it is straightforward to see that <span class="process-math">\((x)\)</span> is prime (<span class="process-math">\(\Z/(x)\cong
+\Z\)</span>). Moreover, <span class="process-math">\((x)\subsetneq (2,x)\text{,}\)</span> and thus is not maximal.</div></div></details></article></section><section class="exercises" id="exers_principalIdealDomains"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">3.4.5</span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exers_principalIdealDomains-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-1-1-1">Mark the following as true or false.</div> <ol class="lower-alpha" id="exers_principalIdealDomains-1-1-2">
+<li id="exers_principalIdealDomains-1-1-2-1"><div class="para" id="exers_principalIdealDomains-1-1-2-1-1">Let <span class="process-math">\(F\)</span> be a field, then <span class="process-math">\(F[x]\)</span> is a PID.</div></li>
+<li id="exers_principalIdealDomains-1-1-2-2"><div class="para" id="exers_principalIdealDomains-1-1-2-2-1">Let <span class="process-math">\(F\)</span> be a field, then <span class="process-math">\(F[x,y]\)</span> is a PID.</div></li>
+<li id="exers_principalIdealDomains-1-1-2-3"><div class="para" id="exers_principalIdealDomains-1-1-2-3-1">The ring of integers is a PID.</div></li>
+<li id="exers_principalIdealDomains-1-1-2-4"><div class="para" id="exers_principalIdealDomains-1-1-2-4-1">The domain <span class="process-math">\(\Z[x]\)</span> is a PID.</div></li>
+<li id="exers_principalIdealDomains-1-1-2-5"><div class="para" id="exers_principalIdealDomains-1-1-2-5-1">Every prime ideal is maximal.</div></li>
+<li id="exers_principalIdealDomains-1-1-2-6"><div class="para" id="exers_principalIdealDomains-1-1-2-6-1">Every maximal ideal is prime.</div></li>
+<li id="exers_principalIdealDomains-1-1-2-7"><div class="para" id="exers_principalIdealDomains-1-1-2-7-1">Every prime ideal is maximal in a PID.</div></li>
+<li id="exers_principalIdealDomains-1-1-2-8"><div class="para" id="exers_principalIdealDomains-1-1-2-8-1">Every irreducible element in a ring is prime.</div></li>
+<li id="exers_principalIdealDomains-1-1-2-9"><div class="para" id="exers_principalIdealDomains-1-1-2-9-1">Every irreducible element in a PID is prime.</div></li>
+</ol></article><article class="exercise exercise-like" id="exers_principalIdealDomains-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para logical" id="exers_principalIdealDomains-2-1-1">
+<div class="para">Find an integer <span class="process-math">\(d\)</span> such that <span class="process-math">\(I = (d)\subseteq \Z\text{,}\)</span> if</div>
+<ol class="lower-alpha" id="exers_principalIdealDomains-2-1-1-3">
+<li id="exers_principalIdealDomains-2-1-1-3-1"><div class="para" id="exers_principalIdealDomains-2-1-1-3-1-1"><span class="process-math">\(\displaystyle I = (4,10) = \{4x+10y\mid x,y\in\Z\}\)</span></div></li>
+<li id="exers_principalIdealDomains-2-1-1-3-2"><div class="para" id="exers_principalIdealDomains-2-1-1-3-2-1"><span class="process-math">\(\displaystyle I = (6,7) = \{6s+7t\mid s,t\in\Z\}\)</span></div></li>
+<li id="exers_principalIdealDomains-2-1-1-3-3"><div class="para" id="exers_principalIdealDomains-2-1-1-3-3-1"><span class="process-math">\(\displaystyle I = (9,12) =  \{9w+12z\mid w,z\in\Z\}\)</span></div></li>
+<li id="exers_principalIdealDomains-2-1-1-3-4"><div class="para" id="exers_principalIdealDomains-2-1-1-3-4-1"><span class="process-math">\(\displaystyle I = (a,b) =  \{am+bn\mid m,n\in\Z\}\)</span></div></li>
+</ol>
+</div> <div class="para" id="exers_principalIdealDomains-2-1-2">You do not need to prove that each of the sets above are ideals (though you should make sure you can do it).</div></article><article class="exercise exercise-like" id="exers_principalIdealDomains-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para logical" id="exers_principalIdealDomains-3-1-1">
+<div class="para">Let <span class="process-math">\(I\)</span> be an ideal in the ring <span class="process-math">\(\mathbb{F}_2[x]\text{.}\)</span> Find a polynomial <span class="process-math">\(d(x)\)</span> such that <span class="process-math">\(I = (d(x))\text{,}\)</span> if</div>
+<ol class="lower-alpha" id="exers_principalIdealDomains-3-1-1-5">
+<li id="exers_principalIdealDomains-3-1-1-5-1"><div class="para" id="exers_principalIdealDomains-3-1-1-5-1-1"><span class="process-math">\(\displaystyle I = (x+1,x^2+1) = \{(x+1)p(x)+(x^2+1)q(x)\mid p(x),q(x)\in\mathbb{F}_2[x]\}\)</span></div></li>
+<li id="exers_principalIdealDomains-3-1-1-5-2"><div class="para" id="exers_principalIdealDomains-3-1-1-5-2-1"><span class="process-math">\(\displaystyle I = (x+1,x^2+x+1) = \{(x+1)p(x)+(x^2+x+1)q(x)\mid p(x),q(x)\in\mathbb{F}_2[x]\}\)</span></div></li>
+<li id="exers_principalIdealDomains-3-1-1-5-3"><div class="para" id="exers_principalIdealDomains-3-1-1-5-3-1"><span class="process-math">\(\displaystyle I = (x^4+x,x^3+x) =  \{(x^4+x)p(x)+(x^3+x)q(x)\mid p(x),q(x)\in\mathbb{F}_2[x]\}\)</span></div></li>
+</ol>
+</div> <div class="para" id="exers_principalIdealDomains-3-1-2">You do not need to prove that each of the sets above are ideals (though you should make sure you can do it).</div></article><article class="exercise exercise-like" id="exers_principalIdealDomains-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-4-1-1">Let <span class="process-math">\(I\)</span> be a non-zero ideal in <span class="process-math">\(\Z\text{.}\)</span> Show that <span class="process-math">\(I=(d)\text{,}\)</span> where <span class="process-math">\(d\)</span> is the greatest common divisor of all the non-zero elements of <span class="process-math">\(I\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exers_principalIdealDomains-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-5-1-1">Let <span class="process-math">\(I\)</span> be a non-zero ideal in <span class="process-math">\(F[x]\)</span> where <span class="process-math">\(F\)</span> is a field. Show that <span class="process-math">\(I=(d(x))\text{,}\)</span> where <span class="process-math">\(d(x)\)</span> is a greatest common divisor of all the non-zero elements of <span class="process-math">\(I\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exers_principalIdealDomains-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-6-1-1">Determine if the following ideals in the corresponding ring are prime and/or maximal or neither.</div> <ol class="lower-alpha" id="exers_principalIdealDomains-6-1-2">
+<li id="exers_principalIdealDomains-6-1-2-1"><div class="para" id="exers_principalIdealDomains-6-1-2-1-1"><span class="process-math">\(\displaystyle R=\Z,\ I = (57)\)</span></div></li>
+<li id="exers_principalIdealDomains-6-1-2-2"><div class="para" id="exers_principalIdealDomains-6-1-2-2-1"><span class="process-math">\(\displaystyle R=\Z,\ I = (31)\)</span></div></li>
+<li id="exers_principalIdealDomains-6-1-2-3"><div class="para" id="exers_principalIdealDomains-6-1-2-3-1"><span class="process-math">\(\displaystyle R=\Z[x],\ I = (x-1)\)</span></div></li>
+<li id="exers_principalIdealDomains-6-1-2-4"><div class="para" id="exers_principalIdealDomains-6-1-2-4-1"><span class="process-math">\(\displaystyle R=\Z[x],\ I = (x,2)\)</span></div></li>
+<li id="exers_principalIdealDomains-6-1-2-5"><div class="para" id="exers_principalIdealDomains-6-1-2-5-1"><span class="process-math">\(\displaystyle R=\R[x],\ I = (x^2+2)\)</span></div></li>
+<li id="exers_principalIdealDomains-6-1-2-6"><div class="para" id="exers_principalIdealDomains-6-1-2-6-1"><span class="process-math">\(\displaystyle R=\R[x],\ I = (x^2-5x+6)\)</span></div></li>
+<li id="exers_principalIdealDomains-6-1-2-7"><div class="para" id="exers_principalIdealDomains-6-1-2-7-1"><span class="process-math">\(\displaystyle R=\Z[x,y], I=(x^2,2)\)</span></div></li>
+<li id="exers_principalIdealDomains-6-1-2-8"><div class="para" id="exers_principalIdealDomains-6-1-2-8-1"><span class="process-math">\(\displaystyle R=\Z[x,y], I = (x,7)\)</span></div></li>
+</ol></article><article class="exercise exercise-like" id="exers_principalIdealDomains-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-7-1-1">Let <span class="process-math">\(R\)</span> be a domain and <span class="process-math">\(\mathfrak{p}=(p)\)</span> a principal ideal. Prove the converse of <a href="sec_principalIdealDomains.html#thm_primeElementGeneratesPrimeIdeal" class="xref" data-knowl="./knowl/xref/thm_primeElementGeneratesPrimeIdeal.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.4.8">Theorem 3.4.8</a>. That is, prove that if <span class="process-math">\(\mathfrak{p}\)</span> is a prime ideal, then <span class="process-math">\(p\)</span> is a prime element.</div></article><article class="exercise exercise-like" id="exers_principalIdealDomains-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-8-1-1">Prove that the homomorphism in <a href="sec_principalIdealDomains.html#ex_nonprincipalPrimeIdeal" class="xref" data-knowl="./knowl/xref/ex_nonprincipalPrimeIdeal.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.4.13">Example 3.4.13</a> is in fact a homomorphism and is onto.</div></article><article class="exercise exercise-like" id="exers_principalIdealDomains-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-9-1-1">Generalize <a href="sec_principalIdealDomains.html#ex_nonprincipalPrimeIdeal" class="xref" data-knowl="./knowl/xref/ex_nonprincipalPrimeIdeal.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.4.13">Example 3.4.13</a> by showing that the <span class="process-math">\((x,m)\)</span> in <span class="process-math">\(\Z[x]\)</span> is prime if and only if <span class="process-math">\(m\in\mathbb{Z}\)</span> is a prime number.</div></article><article class="exercise exercise-like" id="exers_principalIdealDomains-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-10-1-1">Consider the principal ideal <span class="process-math">\(\mathfrak{p}=(x^2+y^2+1)\)</span> in <span class="process-math">\(\R[x,y]\text{.}\)</span> Prove that <span class="process-math">\(\mathfrak{p}\)</span> is prime but not maximal. Hint: Show that <span class="process-math">\(\mathfrak{m}=(\mathfrak{p},x)\)</span> is a larger ideal that is still proper.</div></article><article class="exercise exercise-like" id="exers_principalIdealDomains-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-11-1-1">Prove that <span class="process-math">\(\R[x,y]/(x^2+y^2+1,x)\cong \C\)</span> so that the ideal <span class="process-math">\(\mathfrak{m}\)</span> from the previous example is a maximal ideal containing <span class="process-math">\(\mathfrak{p}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exers_principalIdealDomains-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-12-1-1">Prove that <span class="process-math">\(\mathbb{F}_2[x]/(x^2+x+1)\)</span> is a field. Then write out the multiplication and addition tables.</div></article><article class="exercise exercise-like" id="exers_principalIdealDomains-13"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-13-1-1">Prove that <span class="process-math">\(\mathbb{F}_3[x]/(x^2+x+1)\)</span> is not a field but <span class="process-math">\(\mathbb{F}_3[x]/(x^2+1)\)</span> is a field. Write out the multiplication and addition tables for the latter.</div></article><article class="exercise exercise-like" id="exers_principalIdealDomains-14"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-14-1-1">Let <span class="process-math">\(R\)</span> be a commutative ring. Prove that the zero ideal <span class="process-math">\((0)\)</span> is prime if and only if <span class="process-math">\(R\)</span> is a domain.</div></article><article class="exercise exercise-like" id="exer_divisionAlgorithmGaussianIntegers"><h4 class="heading">
+<span class="codenumber">15<span class="period">.</span></span><span class="space"> </span><span class="title">Division Algorithm for Gaussian Integers.</span>
+</h4>
+<div class="para logical" id="exer_divisionAlgorithmGaussianIntegers-2-1">
+<div class="para">Let <span class="process-math">\(\Z[i]\)</span> be the Gaussian integers. Given <span class="process-math">\(\alpha,\beta\in\Z[i]\text{,}\)</span> not both zero, show there exists (not necessarily unique) <span class="process-math">\(\kappa,\rho\in\Z[i]\)</span> with</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha = \beta\kappa + \rho
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(N(\rho)\lt N(\beta)\text{.}\)</span> Here, <span class="process-math">\(N(a+bi) = a^2+b^2\text{.}\)</span> Do so as follows:</div>
+</div> <ol class="lower-alpha" id="exer_divisionAlgorithmGaussianIntegers-2-2">
+<li id="exer_divisionAlgorithmGaussianIntegers-2-2-1"><div class="para" id="exer_divisionAlgorithmGaussianIntegers-2-2-1-1">Divide <span class="process-math">\(\alpha\)</span> by <span class="process-math">\(\beta\)</span> in <span class="process-math">\(\C\)</span> to get <span class="process-math">\(\alpha/\beta = x+iy\)</span> where <span class="process-math">\(x,y\in\mathbb{Q}\text{.}\)</span>
+</div></li>
+<li id="exer_divisionAlgorithmGaussianIntegers-2-2-2"><div class="para logical" id="exer_divisionAlgorithmGaussianIntegers-2-2-2-1">
+<div class="para">Choose integers <span class="process-math">\(m,n\in\Z\)</span> such that <span class="process-math">\(|x-m|,|y-n|\leq\frac{1}{2}\text{.}\)</span> Then argue</div>
+<div class="displaymath process-math">
+\begin{equation*}
+N(x+iy-(m+in))\leq 1/2.
+\end{equation*}
+</div>
+</div></li>
+<li id="exer_divisionAlgorithmGaussianIntegers-2-2-3"><div class="para logical" id="exer_divisionAlgorithmGaussianIntegers-2-2-3-1">
+<div class="para">Show that if <span class="process-math">\(\kappa=m+in\)</span> and <span class="process-math">\(\rho=\alpha-\beta\kappa\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha = \beta\kappa+\rho
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+N(\rho)\lt N(\beta).
+\end{equation*}
+</div>
+</div></li>
+</ol></article><article class="exercise exercise-like" id="exers_principalIdealDomains-16"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-16-1-1">Prove that <span class="process-math">\(\Z[i]\)</span> is a PID by:</div> <ol class="lower-alpha" id="exers_principalIdealDomains-16-1-2">
+<li id="exers_principalIdealDomains-16-1-2-1"><div class="para" id="exers_principalIdealDomains-16-1-2-1-1">Let <span class="process-math">\(I\)</span> be a non-zero ideal. Show there exists an element <span class="process-math">\(\alpha\in I\)</span> of minimal norm. Here, the norm is <span class="process-math">\(N(a+bi)=a^2+b^2\text{.}\)</span>
+</div></li>
+<li id="exers_principalIdealDomains-16-1-2-2"><div class="para" id="exers_principalIdealDomains-16-1-2-2-1">Argue that <span class="process-math">\((\alpha)\subseteq I\text{.}\)</span>
+</div></li>
+<li id="exers_principalIdealDomains-16-1-2-3"><div class="para" id="exers_principalIdealDomains-16-1-2-3-1">For the reverse containment, use the division algorithm for <span class="process-math">\(\Z[i]\)</span> in the previous problem.</div></li>
+<li id="exers_principalIdealDomains-16-1-2-4"><div class="para" id="exers_principalIdealDomains-16-1-2-4-1">Deduce that <span class="process-math">\(\Z[i]\)</span> is a PID.</div></li>
+</ol></article><article class="exercise exercise-like" id="exers_principalIdealDomains-17"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-17-1-1">Prove that <span class="process-math">\((x^2+x+1)\)</span> is a prime ideal in <span class="process-math">\(\Q[x]\text{.}\)</span> Identify <span class="process-math">\(\Q[x]/(x^2+x+1)\)</span> with a subfield of <span class="process-math">\(\C\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exers_principalIdealDomains-18"><h4 class="heading"><span class="codenumber">18<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-18-1-1">Prove that <span class="process-math">\((x^4+x^3+x^2+1)\)</span> is a prime ideal in <span class="process-math">\(\Q[x]\text{.}\)</span> Identify <span class="process-math">\(\Q[x]/(x^4+x^3+x^2+x+1)\)</span> with a subfield of <span class="process-math">\(\C\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exers_principalIdealDomains-19"><h4 class="heading"><span class="codenumber">19<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-19-1-1">Prove that if <span class="process-math">\(I=(a+bi)\)</span> is prime, then <span class="process-math">\(\Z[i]/I\cong \mathbb{F}_m\)</span> where <span class="process-math">\(m=N(a+bi) = a^2+b^2\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exers_principalIdealDomains-20"><h4 class="heading"><span class="codenumber">20<span class="period">.</span></span></h4>
+<div class="para" id="exers_principalIdealDomains-20-1-1">Find all ideals <span class="process-math">\(J\subsetneq\mathbb{Z}[x]\)</span> such that <span class="process-math">\((x)\subsetneq J\subsetneq \mathbb{Z}[x]\text{.}\)</span>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec_quotientRings.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch3-factorization.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

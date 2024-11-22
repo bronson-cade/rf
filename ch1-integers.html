@@ -363,12 +363,27 @@ eBookConfig.enable_chatcodes =  false;
 #exers_principalIdealDomains-16-1-2 { counter-set: exers_principalIdealDomains-16-1-2 0; }
 #exers_principalIdealDomains-16-1-2 > li::marker { content: "("counter(exers_principalIdealDomains-16-1-2,lower-alpha)")"; }
 #exers_principalIdealDomains-16-1-2 > li { counter-increment: exers_principalIdealDomains-16-1-2; }
+#sec_factoringPolynomials-24-1-2 { counter-set: sec_factoringPolynomials-24-1-2 0; }
+#sec_factoringPolynomials-24-1-2 > li::marker { content: ""counter(sec_factoringPolynomials-24-1-2,decimal)"."; }
+#sec_factoringPolynomials-24-1-2 > li { counter-increment: sec_factoringPolynomials-24-1-2; }
+#sec_factoringPolynomials-24-1-2-1-2 { counter-set: sec_factoringPolynomials-24-1-2-1-2 0; }
+#sec_factoringPolynomials-24-1-2-1-2 > li::marker { content: "("counter(sec_factoringPolynomials-24-1-2-1-2,lower-alpha)")"; }
+#sec_factoringPolynomials-24-1-2-1-2 > li { counter-increment: sec_factoringPolynomials-24-1-2-1-2; }
+#sec_factoringPolynomials-24-1-2-2-2 { counter-set: sec_factoringPolynomials-24-1-2-2-2 0; }
+#sec_factoringPolynomials-24-1-2-2-2 > li::marker { content: "("counter(sec_factoringPolynomials-24-1-2-2-2,lower-alpha)")"; }
+#sec_factoringPolynomials-24-1-2-2-2 > li { counter-increment: sec_factoringPolynomials-24-1-2-2-2; }
+#def-ufd-2-1-4 { counter-set: def-ufd-2-1-4 0; }
+#def-ufd-2-1-4 > li::marker { content: ""counter(def-ufd-2-1-4,decimal)"."; }
+#def-ufd-2-1-4 > li { counter-increment: def-ufd-2-1-4; }
+#sec_nonuniqueFactorization-6-2-3 { counter-set: sec_nonuniqueFactorization-6-2-3 0; }
+#sec_nonuniqueFactorization-6-2-3 > li::marker { content: ""counter(sec_nonuniqueFactorization-6-2-3,decimal)"."; }
+#sec_nonuniqueFactorization-6-2-3 > li { counter-increment: sec_nonuniqueFactorization-6-2-3; }
 </style>
 </head>
 <body id="ringsFirst" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="my-great-book.html"><span class="title">Rings First:</span> <span class="subtitle">An Introduction to Abstract Algebra</span></a></h1>
+<h1 class="heading"><a href="RFIAA.html"><span class="title">Rings First:</span> <span class="subtitle">An Introduction to Abstract Algebra</span></a></h1>
 <p class="byline">Bronson Lim</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
@@ -382,7 +397,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="frontmatter-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_inductionWellOrdering.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \newcommand{\C}{\mathbb{C}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="frontmatter-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="RFIAA.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_inductionWellOrdering.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \newcommand{\C}{\mathbb{C}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -527,15 +542,30 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec_principalIdealsDomains.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Principal Ideals Domains</span></a></div>
+<div class="toc-title-box"><a href="sec_principalIdealDomains.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Principal Ideals Domains</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_principalIdealsDomains.html#ssec_principalIdealDomains" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Principal Ideal Domains</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_principalIdealsDomains.html#ssec_polynomialRingsOverAField" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Polynomial Rings over a Field</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_principalIdealsDomains.html#ssec_primeIdeals" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Prime Ideals</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_principalIdealsDomains.html#ssec_maximalIdeals" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Maximal Ideals</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_principalIdealsDomains.html#exers_principalIdealDomains" class="internal"><span class="codenumber">3.4.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_principalIdealDomains.html#ssec_principalIdealDomains" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Principal Ideal Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_principalIdealDomains.html#ssec_polynomialRingsOverAField" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Polynomial Rings over a Field</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_principalIdealDomains.html#ssec_primeIdeals" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Prime Ideals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_principalIdealDomains.html#ssec_maximalIdeals" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Maximal Ideals</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_principalIdealDomains.html#exers_principalIdealDomains" class="internal"><span class="codenumber">3.4.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch3-factorization.html" class="internal"><span class="codenumber">4</span> <span class="title">Factorization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_factoringPolynomials.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Factoring Polynomials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Factorization in Euclidean Domains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-4" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Unique Factorization Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-5" class="internal"><span class="codenumber">4.2.2</span> <span class="title">The Ascending Chain Condition and Noetherian Rings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html#sec_factorizationEuclideanDomains-6" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Euclidean Domains are UFDs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_nonuniqueFactorization.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Principal Ideals and Euclidean Domains</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
