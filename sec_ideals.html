@@ -6,14 +6,19 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Ideals</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Rings First">
-<meta property="book:author" content="Bronson Lim">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,26 +74,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/style_oscarlevin.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/colors_blue_grey.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Rings First">
+<meta property="book:author" content="Bronson Morningstar">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -110,283 +101,24 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.4.4';
+eBookConfig.runestone_version = '7.9.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.00db6230172ad960.bundle.js"></script><script src="_static/prefix-347.8328b60515045466.bundle.js"></script><script src="_static/prefix-runestone.aa624e4071d017c3.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.51d479d87f8466bb.css">
-<style>
-#ssec_wellordering-8-1-3 { counter-set: ssec_wellordering-8-1-3 0; }
-#ssec_wellordering-8-1-3 > li::marker { content: ""counter(ssec_wellordering-8-1-3,decimal)"."; }
-#ssec_wellordering-8-1-3 > li { counter-increment: ssec_wellordering-8-1-3; }
-#ssec_wellordering-8-2-1 { counter-set: ssec_wellordering-8-2-1 0; }
-#ssec_wellordering-8-2-1 > li::marker { content: ""counter(ssec_wellordering-8-2-1,decimal)"."; }
-#ssec_wellordering-8-2-1 > li { counter-increment: ssec_wellordering-8-2-1; }
-#thm_mathematical_induction-2-3 { counter-set: thm_mathematical_induction-2-3 0; }
-#thm_mathematical_induction-2-3 > li::marker { content: ""counter(thm_mathematical_induction-2-3,decimal)"."; }
-#thm_mathematical_induction-2-3 > li { counter-increment: thm_mathematical_induction-2-3; }
-#sec-induction-tf-1-2 { counter-set: sec-induction-tf-1-2 0; }
-#sec-induction-tf-1-2 > li::marker { content: "("counter(sec-induction-tf-1-2,lower-alpha)")"; }
-#sec-induction-tf-1-2 > li { counter-increment: sec-induction-tf-1-2; }
-#sec-induction-smallest-elements1-1-2 { counter-set: sec-induction-smallest-elements1-1-2 0; }
-#sec-induction-smallest-elements1-1-2 > li::marker { content: "("counter(sec-induction-smallest-elements1-1-2,lower-alpha)")"; }
-#sec-induction-smallest-elements1-1-2 > li { counter-increment: sec-induction-smallest-elements1-1-2; }
-#sec-induction-smallest-elements2-1-2 { counter-set: sec-induction-smallest-elements2-1-2 0; }
-#sec-induction-smallest-elements2-1-2 > li::marker { content: "("counter(sec-induction-smallest-elements2-1-2,lower-alpha)")"; }
-#sec-induction-smallest-elements2-1-2 > li { counter-increment: sec-induction-smallest-elements2-1-2; }
-#sec-divisibility-gcd-3-5-1-1-2 { counter-set: sec-divisibility-gcd-3-5-1-1-2 0; }
-#sec-divisibility-gcd-3-5-1-1-2 > li::marker { content: ""counter(sec-divisibility-gcd-3-5-1-1-2,decimal)"."; }
-#sec-divisibility-gcd-3-5-1-1-2 > li { counter-increment: sec-divisibility-gcd-3-5-1-1-2; }
-#def_gcdZ-3-1-9 { counter-set: def_gcdZ-3-1-9 0; }
-#def_gcdZ-3-1-9 > li::marker { content: ""counter(def_gcdZ-3-1-9,decimal)"."; }
-#def_gcdZ-3-1-9 > li { counter-increment: def_gcdZ-3-1-9; }
-#act-gcdcomputations-1-1-2 { counter-set: act-gcdcomputations-1-1-2 0; }
-#act-gcdcomputations-1-1-2 > li::marker { content: ""counter(act-gcdcomputations-1-1-2,decimal)"."; }
-#act-gcdcomputations-1-1-2 > li { counter-increment: act-gcdcomputations-1-1-2; }
-#sec-divisibility-gcd-tf-1-2 { counter-set: sec-divisibility-gcd-tf-1-2 0; }
-#sec-divisibility-gcd-tf-1-2 > li::marker { content: "("counter(sec-divisibility-gcd-tf-1-2,lower-alpha)")"; }
-#sec-divisibility-gcd-tf-1-2 > li { counter-increment: sec-divisibility-gcd-tf-1-2; }
-#sec-divisibility-gcd-quorem-1-2 { counter-set: sec-divisibility-gcd-quorem-1-2 0; }
-#sec-divisibility-gcd-quorem-1-2 > li::marker { content: "("counter(sec-divisibility-gcd-quorem-1-2,lower-alpha)")"; }
-#sec-divisibility-gcd-quorem-1-2 > li { counter-increment: sec-divisibility-gcd-quorem-1-2; }
-#exer_primesFactorizationTF-1-2 { counter-set: exer_primesFactorizationTF-1-2 0; }
-#exer_primesFactorizationTF-1-2 > li::marker { content: "("counter(exer_primesFactorizationTF-1-2,lower-alpha)")"; }
-#exer_primesFactorizationTF-1-2 > li { counter-increment: exer_primesFactorizationTF-1-2; }
-#exer-primes-factorization-factorizations-1-2 { counter-set: exer-primes-factorization-factorizations-1-2 0; }
-#exer-primes-factorization-factorizations-1-2 > li::marker { content: "("counter(exer-primes-factorization-factorizations-1-2,lower-alpha)")"; }
-#exer-primes-factorization-factorizations-1-2 > li { counter-increment: exer-primes-factorization-factorizations-1-2; }
-#exer-primes-factorization-isprime-1-1-1 { counter-set: exer-primes-factorization-isprime-1-1-1 0; }
-#exer-primes-factorization-isprime-1-1-1 > li::marker { content: "("counter(exer-primes-factorization-isprime-1-1-1,lower-alpha)")"; }
-#exer-primes-factorization-isprime-1-1-1 > li { counter-increment: exer-primes-factorization-isprime-1-1-1; }
-#ssec_congruenceModm-4-1-1-1 { counter-set: ssec_congruenceModm-4-1-1-1 0; }
-#ssec_congruenceModm-4-1-1-1 > li::marker { content: ""counter(ssec_congruenceModm-4-1-1-1,decimal)"."; }
-#ssec_congruenceModm-4-1-1-1 > li { counter-increment: ssec_congruenceModm-4-1-1-1; }
-#def-arithemticmodm-1-1-3 { counter-set: def-arithemticmodm-1-1-3 0; }
-#def-arithemticmodm-1-1-3 > li::marker { content: ""counter(def-arithemticmodm-1-1-3,decimal)"."; }
-#def-arithemticmodm-1-1-3 > li { counter-increment: def-arithemticmodm-1-1-3; }
-#ssec_integersModm-12-1-2 { counter-set: ssec_integersModm-12-1-2 0; }
-#ssec_integersModm-12-1-2 > li::marker { content: ""counter(ssec_integersModm-12-1-2,decimal)"."; }
-#ssec_integersModm-12-1-2 > li { counter-increment: ssec_integersModm-12-1-2; }
-#invest-tables-1-2 { counter-set: invest-tables-1-2 0; }
-#invest-tables-1-2 > li::marker { content: ""counter(invest-tables-1-2,decimal)"."; }
-#invest-tables-1-2 > li { counter-increment: invest-tables-1-2; }
-#theorem_cancelinZp-1-1-4 { counter-set: theorem_cancelinZp-1-1-4 0; }
-#theorem_cancelinZp-1-1-4 > li::marker { content: ""counter(theorem_cancelinZp-1-1-4,decimal)"."; }
-#theorem_cancelinZp-1-1-4 > li { counter-increment: theorem_cancelinZp-1-1-4; }
-#integers-mod-m-tf-1-2 { counter-set: integers-mod-m-tf-1-2 0; }
-#integers-mod-m-tf-1-2 > li::marker { content: "("counter(integers-mod-m-tf-1-2,lower-alpha)")"; }
-#integers-mod-m-tf-1-2 > li { counter-increment: integers-mod-m-tf-1-2; }
-#exers-integers-mod-m-4-1-2 { counter-set: exers-integers-mod-m-4-1-2 0; }
-#exers-integers-mod-m-4-1-2 > li::marker { content: "("counter(exers-integers-mod-m-4-1-2,lower-alpha)")"; }
-#exers-integers-mod-m-4-1-2 > li { counter-increment: exers-integers-mod-m-4-1-2; }
-#invest-binop-1-1-2 { counter-set: invest-binop-1-1-2 0; }
-#invest-binop-1-1-2 > li::marker { content: ""counter(invest-binop-1-1-2,decimal)"."; }
-#invest-binop-1-1-2 > li { counter-increment: invest-binop-1-1-2; }
-#def_field-2-1-7 { counter-set: def_field-2-1-7 0; }
-#def_field-2-1-7 > li::marker { content: ""counter(def_field-2-1-7,decimal)"."; }
-#def_field-2-1-7 > li { counter-increment: def_field-2-1-7; }
-#exer_fieldexamples-1-1-1 { counter-set: exer_fieldexamples-1-1-1 0; }
-#exer_fieldexamples-1-1-1 > li::marker { content: ""counter(exer_fieldexamples-1-1-1,decimal)"."; }
-#exer_fieldexamples-1-1-1 > li { counter-increment: exer_fieldexamples-1-1-1; }
-#exer_fieldexamples-2-1-1 { counter-set: exer_fieldexamples-2-1-1 0; }
-#exer_fieldexamples-2-1-1 > li::marker { content: ""counter(exer_fieldexamples-2-1-1,decimal)"."; }
-#exer_fieldexamples-2-1-1 > li { counter-increment: exer_fieldexamples-2-1-1; }
-#thm_fieldproperties-2-1-2 { counter-set: thm_fieldproperties-2-1-2 0; }
-#thm_fieldproperties-2-1-2 > li::marker { content: ""counter(thm_fieldproperties-2-1-2,decimal)"."; }
-#thm_fieldproperties-2-1-2 > li { counter-increment: thm_fieldproperties-2-1-2; }
-#subsec-propertiesOfFields-3-1 { counter-set: subsec-propertiesOfFields-3-1 0; }
-#subsec-propertiesOfFields-3-1 > li::marker { content: ""counter(subsec-propertiesOfFields-3-1,decimal)"."; }
-#subsec-propertiesOfFields-3-1 > li { counter-increment: subsec-propertiesOfFields-3-1; }
-#subsec-subfieldsAndExtensions-3-3-1-3 { counter-set: subsec-subfieldsAndExtensions-3-3-1-3 0; }
-#subsec-subfieldsAndExtensions-3-3-1-3 > li::marker { content: ""counter(subsec-subfieldsAndExtensions-3-3-1-3,decimal)"."; }
-#subsec-subfieldsAndExtensions-3-3-1-3 > li { counter-increment: subsec-subfieldsAndExtensions-3-3-1-3; }
-#exer_primesFactorizationTF-1-2 { counter-set: exer_primesFactorizationTF-1-2 0; }
-#exer_primesFactorizationTF-1-2 > li::marker { content: "("counter(exer_primesFactorizationTF-1-2,lower-alpha)")"; }
-#exer_primesFactorizationTF-1-2 > li { counter-increment: exer_primesFactorizationTF-1-2; }
-#exers_primesFactorization-3-1-2 { counter-set: exers_primesFactorization-3-1-2 0; }
-#exers_primesFactorization-3-1-2 > li::marker { content: "("counter(exers_primesFactorization-3-1-2,lower-alpha)")"; }
-#exers_primesFactorization-3-1-2 > li { counter-increment: exers_primesFactorization-3-1-2; }
-#exer_complexNumbersAsMatrices-1-2 { counter-set: exer_complexNumbersAsMatrices-1-2 0; }
-#exer_complexNumbersAsMatrices-1-2 > li::marker { content: "("counter(exer_complexNumbersAsMatrices-1-2,lower-alpha)")"; }
-#exer_complexNumbersAsMatrices-1-2 > li { counter-increment: exer_complexNumbersAsMatrices-1-2; }
-#exers_primesFactorization-10-1-2 { counter-set: exers_primesFactorization-10-1-2 0; }
-#exers_primesFactorization-10-1-2 > li::marker { content: "("counter(exers_primesFactorization-10-1-2,lower-alpha)")"; }
-#exers_primesFactorization-10-1-2 > li { counter-increment: exers_primesFactorization-10-1-2; }
-#exers_primesFactorization-11-3-2 { counter-set: exers_primesFactorization-11-3-2 0; }
-#exers_primesFactorization-11-3-2 > li::marker { content: "("counter(exers_primesFactorization-11-3-2,lower-alpha)")"; }
-#exers_primesFactorization-11-3-2 > li { counter-increment: exers_primesFactorization-11-3-2; }
-#def_ring-3-1-6 { counter-set: def_ring-3-1-6 0; }
-#def_ring-3-1-6 > li::marker { content: ""counter(def_ring-3-1-6,decimal)"."; }
-#def_ring-3-1-6 > li { counter-increment: def_ring-3-1-6; }
-#thm_subringTest-3-1-5 { counter-set: thm_subringTest-3-1-5 0; }
-#thm_subringTest-3-1-5 > li::marker { content: ""counter(thm_subringTest-3-1-5,decimal)"."; }
-#thm_subringTest-3-1-5 > li { counter-increment: thm_subringTest-3-1-5; }
-#ssec_subrings-6-1-1-3 { counter-set: ssec_subrings-6-1-1-3 0; }
-#ssec_subrings-6-1-1-3 > li::marker { content: ""counter(ssec_subrings-6-1-1-3,decimal)"."; }
-#ssec_subrings-6-1-1-3 > li { counter-increment: ssec_subrings-6-1-1-3; }
-#exers_rings-1-1-2 { counter-set: exers_rings-1-1-2 0; }
-#exers_rings-1-1-2 > li::marker { content: "("counter(exers_rings-1-1-2,lower-alpha)")"; }
-#exers_rings-1-1-2 > li { counter-increment: exers_rings-1-1-2; }
-#exer_gaussianIntegers-2-2 { counter-set: exer_gaussianIntegers-2-2 0; }
-#exer_gaussianIntegers-2-2 > li::marker { content: "("counter(exer_gaussianIntegers-2-2,lower-alpha)")"; }
-#exer_gaussianIntegers-2-2 > li { counter-increment: exer_gaussianIntegers-2-2; }
-#exers_rings-5-2-2 { counter-set: exers_rings-5-2-2 0; }
-#exers_rings-5-2-2 > li::marker { content: "("counter(exers_rings-5-2-2,lower-alpha)")"; }
-#exers_rings-5-2-2 > li { counter-increment: exers_rings-5-2-2; }
-#ssec_integralDomains-5-1-1-1 { counter-set: ssec_integralDomains-5-1-1-1 0; }
-#ssec_integralDomains-5-1-1-1 > li::marker { content: ""counter(ssec_integralDomains-5-1-1-1,decimal)"."; }
-#ssec_integralDomains-5-1-1-1 > li { counter-increment: ssec_integralDomains-5-1-1-1; }
-#exers_integralDomains-1-1-2 { counter-set: exers_integralDomains-1-1-2 0; }
-#exers_integralDomains-1-1-2 > li::marker { content: "("counter(exers_integralDomains-1-1-2,lower-alpha)")"; }
-#exers_integralDomains-1-1-2 > li { counter-increment: exers_integralDomains-1-1-2; }
-#exer_nilpotent-3-2 { counter-set: exer_nilpotent-3-2 0; }
-#exer_nilpotent-3-2 > li::marker { content: "("counter(exer_nilpotent-3-2,lower-alpha)")"; }
-#exer_nilpotent-3-2 > li { counter-increment: exer_nilpotent-3-2; }
-#ssec_divisibilityInDomains-6-1-1-2 { counter-set: ssec_divisibilityInDomains-6-1-1-2 0; }
-#ssec_divisibilityInDomains-6-1-1-2 > li::marker { content: ""counter(ssec_divisibilityInDomains-6-1-1-2,decimal)"."; }
-#ssec_divisibilityInDomains-6-1-1-2 > li { counter-increment: ssec_divisibilityInDomains-6-1-1-2; }
-#expl-unit-prime-irred-1-1-1 { counter-set: expl-unit-prime-irred-1-1-1 0; }
-#expl-unit-prime-irred-1-1-1 > li::marker { content: ""counter(expl-unit-prime-irred-1-1-1,decimal)"."; }
-#expl-unit-prime-irred-1-1-1 > li { counter-increment: expl-unit-prime-irred-1-1-1; }
-#def_gcdDomain-2-1-7 { counter-set: def_gcdDomain-2-1-7 0; }
-#def_gcdDomain-2-1-7 > li::marker { content: ""counter(def_gcdDomain-2-1-7,decimal)"."; }
-#def_gcdDomain-2-1-7 > li { counter-increment: def_gcdDomain-2-1-7; }
-#alg_euclideanAlgorithmPolynomials-2-1-7 { counter-set: alg_euclideanAlgorithmPolynomials-2-1-7 0; }
-#alg_euclideanAlgorithmPolynomials-2-1-7 > li::marker { content: ""counter(alg_euclideanAlgorithmPolynomials-2-1-7,decimal)"."; }
-#alg_euclideanAlgorithmPolynomials-2-1-7 > li { counter-increment: alg_euclideanAlgorithmPolynomials-2-1-7; }
-#exers_divisibilityIntegralDomains-1-1-2 { counter-set: exers_divisibilityIntegralDomains-1-1-2 0; }
-#exers_divisibilityIntegralDomains-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-1-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-1-1-2; }
-#exers_divisibilityIntegralDomains-3-1-2 { counter-set: exers_divisibilityIntegralDomains-3-1-2 0; }
-#exers_divisibilityIntegralDomains-3-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-3-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-3-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-3-1-2; }
-#exers_divisibilityIntegralDomains-4-1-2 { counter-set: exers_divisibilityIntegralDomains-4-1-2 0; }
-#exers_divisibilityIntegralDomains-4-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-4-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-4-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-4-1-2; }
-#exers_divisibilityIntegralDomains-5-1-2 { counter-set: exers_divisibilityIntegralDomains-5-1-2 0; }
-#exers_divisibilityIntegralDomains-5-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-5-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-5-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-5-1-2; }
-#exers_divisibilityIntegralDomains-6-1-2 { counter-set: exers_divisibilityIntegralDomains-6-1-2 0; }
-#exers_divisibilityIntegralDomains-6-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-6-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-6-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-6-1-2; }
-#exers_divisibilityIntegralDomains-8-1-2 { counter-set: exers_divisibilityIntegralDomains-8-1-2 0; }
-#exers_divisibilityIntegralDomains-8-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-8-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-8-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-8-1-2; }
-#expl-homomorphism-examples-1-2 { counter-set: expl-homomorphism-examples-1-2 0; }
-#expl-homomorphism-examples-1-2 > li::marker { content: ""counter(expl-homomorphism-examples-1-2,decimal)"."; }
-#expl-homomorphism-examples-1-2 > li { counter-increment: expl-homomorphism-examples-1-2; }
-#expl-homomorphism-examples-2-1 { counter-set: expl-homomorphism-examples-2-1 0; }
-#expl-homomorphism-examples-2-1 > li::marker { content: ""counter(expl-homomorphism-examples-2-1,decimal)"."; }
-#expl-homomorphism-examples-2-1 > li { counter-increment: expl-homomorphism-examples-2-1; }
-#sec_homomorphismsTF-1-2 { counter-set: sec_homomorphismsTF-1-2 0; }
-#sec_homomorphismsTF-1-2 > li::marker { content: "("counter(sec_homomorphismsTF-1-2,lower-alpha)")"; }
-#sec_homomorphismsTF-1-2 > li { counter-increment: sec_homomorphismsTF-1-2; }
-#exers_homomorphisms-16-1-2 { counter-set: exers_homomorphisms-16-1-2 0; }
-#exers_homomorphisms-16-1-2 > li::marker { content: "("counter(exers_homomorphisms-16-1-2,lower-alpha)")"; }
-#exers_homomorphisms-16-1-2 > li { counter-increment: exers_homomorphisms-16-1-2; }
-#prop_kernelIsIdeal-1-1-5 { counter-set: prop_kernelIsIdeal-1-1-5 0; }
-#prop_kernelIsIdeal-1-1-5 > li::marker { content: ""counter(prop_kernelIsIdeal-1-1-5,decimal)"."; }
-#prop_kernelIsIdeal-1-1-5 > li { counter-increment: prop_kernelIsIdeal-1-1-5; }
-#def_ideal-2-1-4 { counter-set: def_ideal-2-1-4 0; }
-#def_ideal-2-1-4 > li::marker { content: ""counter(def_ideal-2-1-4,decimal)"."; }
-#def_ideal-2-1-4 > li { counter-increment: def_ideal-2-1-4; }
-#ssec_principalIdeals-9-1-1-2 { counter-set: ssec_principalIdeals-9-1-1-2 0; }
-#ssec_principalIdeals-9-1-1-2 > li::marker { content: ""counter(ssec_principalIdeals-9-1-1-2,decimal)"."; }
-#ssec_principalIdeals-9-1-1-2 > li { counter-increment: ssec_principalIdeals-9-1-1-2; }
-#ssec_principalIdeals-9-2-1 { counter-set: ssec_principalIdeals-9-2-1 0; }
-#ssec_principalIdeals-9-2-1 > li::marker { content: ""counter(ssec_principalIdeals-9-2-1,decimal)"."; }
-#ssec_principalIdeals-9-2-1 > li { counter-increment: ssec_principalIdeals-9-2-1; }
-#exers_ideals-1-1-2 { counter-set: exers_ideals-1-1-2 0; }
-#exers_ideals-1-1-2 > li::marker { content: "("counter(exers_ideals-1-1-2,lower-alpha)")"; }
-#exers_ideals-1-1-2 > li { counter-increment: exers_ideals-1-1-2; }
-#ssec_quotientRings-11-1-2 { counter-set: ssec_quotientRings-11-1-2 0; }
-#ssec_quotientRings-11-1-2 > li::marker { content: ""counter(ssec_quotientRings-11-1-2,decimal)"."; }
-#ssec_quotientRings-11-1-2 > li { counter-increment: ssec_quotientRings-11-1-2; }
-#ssec_quotientRings-13-1-2 { counter-set: ssec_quotientRings-13-1-2 0; }
-#ssec_quotientRings-13-1-2 > li::marker { content: ""counter(ssec_quotientRings-13-1-2,decimal)"."; }
-#ssec_quotientRings-13-1-2 > li { counter-increment: ssec_quotientRings-13-1-2; }
-#ssec_quotientRings-14-3-3 { counter-set: ssec_quotientRings-14-3-3 0; }
-#ssec_quotientRings-14-3-3 > li::marker { content: ""counter(ssec_quotientRings-14-3-3,decimal)"."; }
-#ssec_quotientRings-14-3-3 > li { counter-increment: ssec_quotientRings-14-3-3; }
-#subsec--8-1-2 { counter-set: subsec--8-1-2 0; }
-#subsec--8-1-2 > li::marker { content: ""counter(subsec--8-1-2,decimal)"."; }
-#subsec--8-1-2 > li { counter-increment: subsec--8-1-2; }
-#exers_divisibilityIntegralDomains-1-1-2 { counter-set: exers_divisibilityIntegralDomains-1-1-2 0; }
-#exers_divisibilityIntegralDomains-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-1-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-1-1-2; }
-#exers_divisibilityIntegralDomains-2-1-2 { counter-set: exers_divisibilityIntegralDomains-2-1-2 0; }
-#exers_divisibilityIntegralDomains-2-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-2-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-2-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-2-1-2; }
-#exers_divisibilityIntegralDomains-3-1-2 { counter-set: exers_divisibilityIntegralDomains-3-1-2 0; }
-#exers_divisibilityIntegralDomains-3-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-3-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-3-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-3-1-2; }
-#exers_divisibilityIntegralDomains-4-1-2 { counter-set: exers_divisibilityIntegralDomains-4-1-2 0; }
-#exers_divisibilityIntegralDomains-4-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-4-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-4-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-4-1-2; }
-#exers_divisibilityIntegralDomains-8-1-1-2 { counter-set: exers_divisibilityIntegralDomains-8-1-1-2 0; }
-#exers_divisibilityIntegralDomains-8-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-8-1-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-8-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-8-1-1-2; }
-#exers_divisibilityIntegralDomains-11-1-2 { counter-set: exers_divisibilityIntegralDomains-11-1-2 0; }
-#exers_divisibilityIntegralDomains-11-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-11-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-11-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-11-1-2; }
-#ssec_principalIdealDomains-6-1-1-4 { counter-set: ssec_principalIdealDomains-6-1-1-4 0; }
-#ssec_principalIdealDomains-6-1-1-4 > li::marker { content: ""counter(ssec_principalIdealDomains-6-1-1-4,decimal)"."; }
-#ssec_principalIdealDomains-6-1-1-4 > li { counter-increment: ssec_principalIdealDomains-6-1-1-4; }
-#ssec_polynomialRingsOverAField-9-1-6-2 { counter-set: ssec_polynomialRingsOverAField-9-1-6-2 0; }
-#ssec_polynomialRingsOverAField-9-1-6-2 > li::marker { content: ""counter(ssec_polynomialRingsOverAField-9-1-6-2,decimal)"."; }
-#ssec_polynomialRingsOverAField-9-1-6-2 > li { counter-increment: ssec_polynomialRingsOverAField-9-1-6-2; }
-#ssec_primeIdeals-7-1-1-1 { counter-set: ssec_primeIdeals-7-1-1-1 0; }
-#ssec_primeIdeals-7-1-1-1 > li::marker { content: ""counter(ssec_primeIdeals-7-1-1-1,decimal)"."; }
-#ssec_primeIdeals-7-1-1-1 > li { counter-increment: ssec_primeIdeals-7-1-1-1; }
-#ssec_primeIdeals-7-2-1-1 { counter-set: ssec_primeIdeals-7-2-1-1 0; }
-#ssec_primeIdeals-7-2-1-1 > li::marker { content: ""counter(ssec_primeIdeals-7-2-1-1,decimal)"."; }
-#ssec_primeIdeals-7-2-1-1 > li { counter-increment: ssec_primeIdeals-7-2-1-1; }
-#exers_principalIdealDomains-1-1-2 { counter-set: exers_principalIdealDomains-1-1-2 0; }
-#exers_principalIdealDomains-1-1-2 > li::marker { content: "("counter(exers_principalIdealDomains-1-1-2,lower-alpha)")"; }
-#exers_principalIdealDomains-1-1-2 > li { counter-increment: exers_principalIdealDomains-1-1-2; }
-#exers_principalIdealDomains-2-1-1-3 { counter-set: exers_principalIdealDomains-2-1-1-3 0; }
-#exers_principalIdealDomains-2-1-1-3 > li::marker { content: "("counter(exers_principalIdealDomains-2-1-1-3,lower-alpha)")"; }
-#exers_principalIdealDomains-2-1-1-3 > li { counter-increment: exers_principalIdealDomains-2-1-1-3; }
-#exers_principalIdealDomains-3-1-1-5 { counter-set: exers_principalIdealDomains-3-1-1-5 0; }
-#exers_principalIdealDomains-3-1-1-5 > li::marker { content: "("counter(exers_principalIdealDomains-3-1-1-5,lower-alpha)")"; }
-#exers_principalIdealDomains-3-1-1-5 > li { counter-increment: exers_principalIdealDomains-3-1-1-5; }
-#exers_principalIdealDomains-6-1-2 { counter-set: exers_principalIdealDomains-6-1-2 0; }
-#exers_principalIdealDomains-6-1-2 > li::marker { content: "("counter(exers_principalIdealDomains-6-1-2,lower-alpha)")"; }
-#exers_principalIdealDomains-6-1-2 > li { counter-increment: exers_principalIdealDomains-6-1-2; }
-#exer_divisionAlgorithmGaussianIntegers-2-2 { counter-set: exer_divisionAlgorithmGaussianIntegers-2-2 0; }
-#exer_divisionAlgorithmGaussianIntegers-2-2 > li::marker { content: "("counter(exer_divisionAlgorithmGaussianIntegers-2-2,lower-alpha)")"; }
-#exer_divisionAlgorithmGaussianIntegers-2-2 > li { counter-increment: exer_divisionAlgorithmGaussianIntegers-2-2; }
-#exers_principalIdealDomains-16-1-2 { counter-set: exers_principalIdealDomains-16-1-2 0; }
-#exers_principalIdealDomains-16-1-2 > li::marker { content: "("counter(exers_principalIdealDomains-16-1-2,lower-alpha)")"; }
-#exers_principalIdealDomains-16-1-2 > li { counter-increment: exers_principalIdealDomains-16-1-2; }
-#sec_factoringPolynomials-24-1-2 { counter-set: sec_factoringPolynomials-24-1-2 0; }
-#sec_factoringPolynomials-24-1-2 > li::marker { content: ""counter(sec_factoringPolynomials-24-1-2,decimal)"."; }
-#sec_factoringPolynomials-24-1-2 > li { counter-increment: sec_factoringPolynomials-24-1-2; }
-#sec_factoringPolynomials-24-1-2-1-2 { counter-set: sec_factoringPolynomials-24-1-2-1-2 0; }
-#sec_factoringPolynomials-24-1-2-1-2 > li::marker { content: "("counter(sec_factoringPolynomials-24-1-2-1-2,lower-alpha)")"; }
-#sec_factoringPolynomials-24-1-2-1-2 > li { counter-increment: sec_factoringPolynomials-24-1-2-1-2; }
-#sec_factoringPolynomials-24-1-2-2-2 { counter-set: sec_factoringPolynomials-24-1-2-2-2 0; }
-#sec_factoringPolynomials-24-1-2-2-2 > li::marker { content: "("counter(sec_factoringPolynomials-24-1-2-2-2,lower-alpha)")"; }
-#sec_factoringPolynomials-24-1-2-2-2 > li { counter-increment: sec_factoringPolynomials-24-1-2-2-2; }
-#def-ufd-2-1-4 { counter-set: def-ufd-2-1-4 0; }
-#def-ufd-2-1-4 > li::marker { content: ""counter(def-ufd-2-1-4,decimal)"."; }
-#def-ufd-2-1-4 > li { counter-increment: def-ufd-2-1-4; }
-#sec_nonuniqueFactorization-6-2-3 { counter-set: sec_nonuniqueFactorization-6-2-3 0; }
-#sec_nonuniqueFactorization-6-2-3 > li::marker { content: ""counter(sec_nonuniqueFactorization-6-2-3,decimal)"."; }
-#sec_nonuniqueFactorization-6-2-3 > li { counter-increment: sec_nonuniqueFactorization-6-2-3; }
-</style>
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body id="ringsFirst" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="RFIAA.html"><span class="title">Rings First:</span> <span class="subtitle">An Introduction to Abstract Algebra</span></a></h1>
-<p class="byline">Bronson Lim</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="RFIAA.html"><span class="title">Rings First</span> <span class="subtitle">An Introduction to Abstract Algebra</span></a></h1>
+<p class="byline">Bronson Morningstar</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -397,7 +129,8 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec_homomorphisms.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch3-homomorphismsAndIdeals.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_quotientRings.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \newcommand{\C}{\mathbb{C}}
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec_homomorphisms.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch3-homomorphismsAndIdeals.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_quotientRings.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \newcommand{\C}{\mathbb{C}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -405,14 +138,14 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Dedication</span></a></div></li>
-<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">Preface</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -423,7 +156,7 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#ssec_wellordering" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Well-Ordering Principle</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#ssec_induction" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Principle of Mathematical Induction</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#sec_inductionWellOrdering-7" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#sec_inductionWellOrdering-6" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -468,7 +201,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#ssec_examplesOfFields" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Examples of Fields</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-propertiesOfFields" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Properties of Fields</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-subfieldsAndExtensions" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Subfields and Extensions</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_fields.html#exers_primesFactorization" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_fields.html#exers_fields" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -481,7 +214,6 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="sec_rings.html#ssec_unitsAndAssociates" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Units and Associates in a Ring</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_rings.html#exers_rings" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_rings.html#sec_rings-8" class="internal"><span class="codenumber">2.2.5</span> <span class="title">References</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -491,7 +223,6 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integralDomains.html#ssec_integralDomains" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Integral Domains</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integralDomains.html#ssec_polynomialRingAreDomains" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Polynomial Rings are Domains</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_integralDomains.html#exers_integralDomains" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_integralDomains.html#sec_integralDomains-8" class="internal"><span class="codenumber">2.3.5</span> <span class="title">References</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -521,9 +252,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_homomorphisms.html#exers_homomorphisms" class="internal"><span class="codenumber">3.1.7</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec_ideals.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Ideals</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_ideals.html#ssec_ideals" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Ideals</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_ideals.html#ssec_examplesOfIdeals" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Ideals of the Integers Modulo m</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_ideals.html#ssec_principalIdeals" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Principal Ideals</span></a></div></li>
@@ -538,7 +269,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#ssec_quotientRings" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Quotient Rings</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#ssec_NoetherIsomorphismTheorem" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Noether Isomorphism Theorem</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#subsec-" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Applying the Noether Isomorphism Theorem</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_quotientRings.html#exers_divisibilityIntegralDomains" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_quotientRings.html#exers_quotientRings" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -556,7 +287,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch3-factorization.html" class="internal"><span class="codenumber">4</span> <span class="title">Factorization</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_factoringPolynomials.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Factoring Polynomials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_factoringPolynomials.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Factoring Polynomials</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factoringPolynomials.html#ssec_polynomialFunctions" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Polynomials As Functions</span></a></div></li></ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Factorization in Euclidean Domains</span></a></div>
 <ul class="structural toc-item-list">
@@ -578,32 +312,55 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_ideals"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Ideals</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ideals</span>
 </h2>
 <article class="objectives goal-like" id="obj_ideals"><h3 class="heading">
-<span class="type">Guiding Questions:</span><span class="space"> </span><span class="title">Guiding Questions</span>
+<span class="type">Guiding Questions<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Guiding Questions</span>
 </h3>
-<div class="introduction" id="obj_ideals-2"><div class="para" id="obj_ideals-2-1">In this section, we’ll seek to answer the questions:</div></div>
+<div class="introduction" id="obj_ideals-2"><div class="para" id="obj_ideals-2-1">In this section, we’ll seek to answer the questions:<div class="autopermalink" data-description="Paragraph"><a href="#obj_ideals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <ul class="disc" id="obj_ideals-3">
-<li id="obj_ideals-3-1"><div class="para" id="p-derived-obj_ideals-3-1">What are ideals?</div></li>
-<li id="obj_ideals-3-2"><div class="para" id="p-derived-obj_ideals-3-2">How do ideals generalize divisibility?</div></li>
-</ul></article><section class="introduction" id="sec_ideals-3"><div class="para" id="sec_ideals-3-1">One of the ways in which mathematicians study the <em class="emphasis">structure</em> of an abstract object is by considering how it interacts with other (related) objects. This is especially true of its <em class="emphasis">sub</em>objects. Thus, in linear algebra, we are often concerned with <em class="emphasis">subspaces</em> of a vector space as a means of understanding the vector space, or even submatrices as a way of understanding a matrix (see, e.g., the cofactor expansion formula for the determinant). In real analysis and topology, the important subobjects are usually open sets, or subsequences, and the study of a graph’s subgraphs is an important approach to many questions in graph theory.</div> <div class="para" id="sec_ideals-3-2">In this section, we begin a set-theoretic structural exploration of the notion of ring by considering a particularly important class of subsets which will be integral to our understanding of factorization.</div> <div class="para" id="sec_ideals-3-3">These subsets are called <em class="emphasis">ideals</em>. They arose in the work of Kummer and Dedekind as a way of trying to recover some notion of unique factorization in rings that do not have properties like the fundamental theorem of arithmetic in <span class="process-math">\(\Z\text{.}\)</span>
+<li id="obj_ideals-3-1">
+<div class="para" id="p-derived-obj_ideals-3-1">What are ideals?</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj_ideals-3-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="obj_ideals-3-2">
+<div class="para" id="p-derived-obj_ideals-3-2">How do ideals generalize divisibility?</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj_ideals-3-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Guiding Questions 3.2: Guiding Questions"><a href="#obj_ideals" title="Copy heading and permalink for Guiding Questions 3.2: Guiding Questions" aria-label="Copy heading and permalink for Guiding Questions 3.2: Guiding Questions">🔗</a></div></article><section class="introduction" id="sec_ideals-3"><div class="para" id="sec_ideals-3-1">One of the ways in which mathematicians study the <em class="emphasis">structure</em> of an abstract object is by considering how it interacts with other (related) objects. This is especially true of its <em class="emphasis">sub</em>objects. Thus, in linear algebra, we are often concerned with <em class="emphasis">subspaces</em> of a vector space as a means of understanding the vector space, or even submatrices as a way of understanding a matrix (see, e.g., the cofactor expansion formula for the determinant). In real analysis and topology, the important subobjects are usually open sets, or subsequences, and the study of a graph’s subgraphs is an important approach to many questions in graph theory.<div class="autopermalink" data-description="Paragraph"><a href="#sec_ideals-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_ideals-3-2">In this section, we begin a set-theoretic structural exploration of the notion of ring by considering a particularly important class of subsets which will be integral to our understanding of factorization.<div class="autopermalink" data-description="Paragraph"><a href="#sec_ideals-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_ideals-3-3">These subsets are called <em class="emphasis">ideals</em>. They arose in the work of Kummer and Dedekind as a way of trying to recover some notion of unique factorization in rings that do not have properties like the fundamental theorem of arithmetic in <span class="process-math">\(\Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_ideals-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="subsection" id="ssec_ideals"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="space"> </span><span class="title">Ideals</span>
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ideals</span>
 </h3>
-<div class="para" id="ssec_ideals-2">We first return to the kernel of a ring homomorphism introduced in <a href="sec_homomorphisms.html#ssec_kernelOfAHomomorphism" class="internal" title="Subsection 3.1.3: Kernel of a Homomorphism">Subsection 3.1.3</a>. While the following proposition might seem odd, it will lead us to the definition of an ideal.</div>
+<div class="para" id="ssec_ideals-2">We first return to the kernel of a ring homomorphism introduced in <a href="sec_homomorphisms.html#ssec_kernelOfAHomomorphism" class="internal" title="Subsection 3.1.3: Kernel of a Homomorphism">Subsection 3.1.3</a>. While the following proposition might seem odd, it will lead us to the definition of an ideal.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_ideals-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="proposition theorem-like" id="prop_kernelIsIdeal"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="prop_kernelIsIdeal-1-1">
 <div class="para">Let <span class="process-math">\(\varphi\colon R\to S\)</span> be a ring homomorphism and <span class="process-math">\(\ker\varphi\)</span> be its kernel. For any <span class="process-math">\(r\in R\)</span> and <span class="process-math">\(x,y\in \ker\varphi\text{,}\)</span> we have:</div>
 <ol class="decimal" id="prop_kernelIsIdeal-1-1-5">
-<li id="prop_kernelIsIdeal-1-1-5-1"><div class="para" id="prop_kernelIsIdeal-1-1-5-1-1">
-<span class="process-math">\(rx\in\ker\varphi\)</span> and <span class="process-math">\(xr\in\ker\varphi\)</span>
-</div></li>
-<li id="prop_kernelIsIdeal-1-1-5-2"><div class="para" id="prop_kernelIsIdeal-1-1-5-2-1"><span class="process-math">\(\displaystyle x+y\in\ker\varphi\)</span></div></li>
+<li id="prop_kernelIsIdeal-1-1-5-1">
+<div class="para" id="prop_kernelIsIdeal-1-1-5-1-1">
+<span class="process-math">\(rx\in\ker\varphi\)</span> and <span class="process-math">\(xr\in\ker\varphi\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_kernelIsIdeal-1-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#prop_kernelIsIdeal-1-1-5-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="prop_kernelIsIdeal-1-1-5-2">
+<div class="para" id="prop_kernelIsIdeal-1-1-5-2-1">
+<span class="process-math">\(\displaystyle x+y\in\ker\varphi\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_kernelIsIdeal-1-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#prop_kernelIsIdeal-1-1-5-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
 </ol>
-</div></article><details id="prop_kernelIsIdeal-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop_kernelIsIdeal-2-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#prop_kernelIsIdeal-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 3.2.1"><a href="#prop_kernelIsIdeal" title="Copy heading and permalink for Proposition 3.2.1" aria-label="Copy heading and permalink for Proposition 3.2.1">🔗</a></div></article><details id="prop_kernelIsIdeal-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop_kernelIsIdeal-2-1">
 <div class="para">Pick <span class="process-math">\(r\in R\)</span> and <span class="process-math">\(x\in\ker\varphi\)</span> so that <span class="process-math">\(\varphi(x)=0\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -611,7 +368,9 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">Thus <span class="process-math">\(rx\in \ker\varphi\text{.}\)</span> The proof of <span class="process-math">\(xr\in\ker\varphi\)</span> is similar and is left as an activity.</div>
-</div> <div class="para logical" id="prop_kernelIsIdeal-2-2">
+<div class="autopermalink" data-description="Paragraph"><a href="#prop_kernelIsIdeal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="prop_kernelIsIdeal-2-2">
 <div class="para">For the second claim, take <span class="process-math">\(x,y\in\ker\varphi\)</span> so that <span class="process-math">\(\varphi(x)=\varphi(y)=0\text{.}\)</span> Then we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -620,44 +379,76 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para">Thus <span class="process-math">\(x+y\in\ker\varphi\text{.}\)</span>
 </div>
-</div></article></details><article class="activity project-like" id="ssec_ideals-4"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop_kernelIsIdeal-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.1.1"><a href="#prop_kernelIsIdeal-2" title="Copy heading and permalink for Proof 3.2.1.1" aria-label="Copy heading and permalink for Proof 3.2.1.1">🔗</a></div></article></details><article class="activity project-like" id="ssec_ideals-4"><h4 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="ssec_ideals-4-1-1">Mimic the proof of <a href="sec_ideals.html#prop_kernelIsIdeal" class="xref" data-knowl="./knowl/xref/prop_kernelIsIdeal.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.1">Proposition 3.2.1</a> to show that whenever <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism and <span class="process-math">\(r\in R\)</span> and <span class="process-math">\(x\in \ker\varphi\text{,}\)</span> then <span class="process-math">\(xr\in\ker\varphi\)</span>
-</div></article><div class="para" id="ssec_ideals-5">The following definition of an <em class="emphasis">ideal</em> is an attempt to generalize the properties that kernels have.</div>
-<aside class="aside aside-like" id="ssec_ideals-6"><h4 class="heading"><span class="title">Two-Sided Ideals.</span></h4>
-<div class="para" id="ssec_ideals-6-2">Our definition is that of a two-sided ideal. There are left and right ideals; however, we will not need this generality.</div></aside><article class="definition definition-like" id="def_ideal"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
-</h4> <div class="para logical" id="def_ideal-2-1">
+<div class="para" id="ssec_ideals-4-1-1">Mimic the proof of <a href="sec_ideals.html#prop_kernelIsIdeal" class="xref" data-knowl="./knowl/xref/prop_kernelIsIdeal.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.1">Proposition 3.2.1</a> to show that whenever <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism and <span class="process-math">\(r\in R\)</span> and <span class="process-math">\(x\in \ker\varphi\text{,}\)</span> then <span class="process-math">\(xr\in\ker\varphi\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_ideals-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 3.2.1"><a href="#ssec_ideals-4" title="Copy heading and permalink for Activity 3.2.1" aria-label="Copy heading and permalink for Activity 3.2.1">🔗</a></div></article><div class="para" id="ssec_ideals-5">The following definition of an <em class="emphasis">ideal</em> is an attempt to generalize the properties that kernels have.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_ideals-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ssec_ideals-6" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Two-Sided Ideals.</span>
+</h4></summary><aside class="aside aside-like knowl__content"><div class="para" id="ssec_ideals-6-2">Our definition is that of a two-sided ideal. There are left and right ideals; however, we will not need this generality.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_ideals-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside></details><article class="definition definition-like" id="def_ideal"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="def_ideal-2-1">
 <div class="para">A subset <span class="process-math">\(I\)</span> of a (not necessarily commutative) ring <span class="process-math">\(R\)</span> is called an <dfn class="terminology">ideal</dfn> if:</div>
 <ol class="decimal" id="def_ideal-2-1-4">
-<li id="def_ideal-2-1-4-1"><div class="para" id="def_ideal-2-1-4-1-1"><span class="process-math">\(\displaystyle 0\in I\)</span></div></li>
-<li id="def_ideal-2-1-4-2"><div class="para" id="def_ideal-2-1-4-2-1">for all <span class="process-math">\(x,y\in I\text{,}\)</span> <span class="process-math">\(x+y\in I\text{;}\)</span> and,</div></li>
-<li id="def_ideal-2-1-4-3"><div class="para" id="def_ideal-2-1-4-3-1">for all <span class="process-math">\(x\in I\)</span> and for all <span class="process-math">\(r\in R\text{,}\)</span> <span class="process-math">\(xr\in I\)</span> and <span class="process-math">\(rx\in I\text{.}\)</span>
-</div></li>
+<li id="def_ideal-2-1-4-1">
+<div class="para" id="def_ideal-2-1-4-1-1">
+<span class="process-math">\(\displaystyle 0\in I\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def_ideal-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#def_ideal-2-1-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="def_ideal-2-1-4-2">
+<div class="para" id="def_ideal-2-1-4-2-1">for all <span class="process-math">\(x,y\in I\text{,}\)</span> <span class="process-math">\(x+y\in I\text{;}\)</span> and,<div class="autopermalink" data-description="Paragraph"><a href="#def_ideal-2-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#def_ideal-2-1-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="def_ideal-2-1-4-3">
+<div class="para" id="def_ideal-2-1-4-3-1">for all <span class="process-math">\(x\in I\)</span> and for all <span class="process-math">\(r\in R\text{,}\)</span> <span class="process-math">\(xr\in I\)</span> and <span class="process-math">\(rx\in I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def_ideal-2-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#def_ideal-2-1-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
 </ol>
-</div></article><div class="para" id="ssec_ideals-8">Observe that the third requirement for a set <span class="process-math">\(I\)</span> to be an ideal of <span class="process-math">\(R\)</span> is simplified slightly if <span class="process-math">\(R\)</span> is commutative. Namely, we need only check one of the conditions.</div>
-<div class="para" id="ssec_ideals-9">There are many important examples and types of ideals, but there are also some trivial ideals contained in every ring.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def_ideal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2.2"><a href="#def_ideal" title="Copy heading and permalink for Definition 3.2.2" aria-label="Copy heading and permalink for Definition 3.2.2">🔗</a></div></article><div class="para" id="ssec_ideals-8">Observe that the third requirement for a set <span class="process-math">\(I\)</span> to be an ideal of <span class="process-math">\(R\)</span> is simplified slightly if <span class="process-math">\(R\)</span> is commutative. Namely, we need only check one of the conditions.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_ideals-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ssec_ideals-9">There are many important examples and types of ideals, but there are also some trivial ideals contained in every ring.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_ideals-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="ssec_ideals-10"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="ssec_ideals-10-1-1">Let <span class="process-math">\(R\)</span> be a ring. Then <span class="process-math">\(R\)</span> and <span class="process-math">\(\{0\}\)</span> are ideals of <span class="process-math">\(R\text{.}\)</span>
-</div></article><details id="ssec_ideals-10-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_ideals-10-2-1">Note that <span class="process-math">\(R\subseteq R\)</span> is a subset of <span class="process-math">\(R\)</span> containing 0, closed under addition, and closed under multiplication. Therefore <span class="process-math">\(R\)</span> is an ideal in <span class="process-math">\(R\text{.}\)</span>
-</div> <div class="para" id="ssec_ideals-10-2-2">The zero ideal <span class="process-math">\(\{0\}\)</span> has <span class="process-math">\(0\text{.}\)</span> The only element in <span class="process-math">\(\{0\}\)</span> is <span class="process-math">\(0\)</span> and <span class="process-math">\(0+0=0\in \{0\}\text{.}\)</span> Lastly, for any <span class="process-math">\(r\in R\text{,}\)</span> we know <span class="process-math">\(r\cdot 0 = 0\)</span> so that <span class="process-math">\(r\cdot 0\in \{0\}\text{.}\)</span> Thus <span class="process-math">\(\{0\}\)</span> is an ideal of <span class="process-math">\(R\text{.}\)</span>
-</div></article></details><div class="para" id="ssec_ideals-11"> An ideal <span class="process-math">\(I\subseteq R\)</span> is called <dfn class="terminology">proper</dfn> if <span class="process-math">\(I\neq R\text{.}\)</span> The ideals <span class="process-math">\(\{0\},R\)</span> are called <dfn class="terminology">trivial ideals</dfn>. If <span class="process-math">\(I\subseteq R\)</span> is not equal to <span class="process-math">\(\{0\},R\text{,}\)</span> it is called <dfn class="terminology">non-trivial</dfn>.</div>
-<div class="para" id="ssec_ideals-12">The following theorem provides a useful characterization of when an ideal <span class="process-math">\(I\)</span> is in fact the whole ring.</div>
+<div class="para" id="ssec_ideals-10-1-1">Let <span class="process-math">\(R\)</span> be a ring. Then <span class="process-math">\(R\)</span> and <span class="process-math">\(\{0\}\)</span> are ideals of <span class="process-math">\(R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_ideals-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.2.3"><a href="#ssec_ideals-10" title="Copy heading and permalink for Theorem 3.2.3" aria-label="Copy heading and permalink for Theorem 3.2.3">🔗</a></div></article><details id="ssec_ideals-10-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_ideals-10-2-1">Note that <span class="process-math">\(R\subseteq R\)</span> is a subset of <span class="process-math">\(R\)</span> containing 0, closed under addition, and closed under multiplication. Therefore <span class="process-math">\(R\)</span> is an ideal in <span class="process-math">\(R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_ideals-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ssec_ideals-10-2-2">The zero ideal <span class="process-math">\(\{0\}\)</span> has <span class="process-math">\(0\text{.}\)</span> The only element in <span class="process-math">\(\{0\}\)</span> is <span class="process-math">\(0\)</span> and <span class="process-math">\(0+0=0\in \{0\}\text{.}\)</span> Lastly, for any <span class="process-math">\(r\in R\text{,}\)</span> we know <span class="process-math">\(r\cdot 0 = 0\)</span> so that <span class="process-math">\(r\cdot 0\in \{0\}\text{.}\)</span> Thus <span class="process-math">\(\{0\}\)</span> is an ideal of <span class="process-math">\(R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_ideals-10-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.3.1"><a href="#ssec_ideals-10-2" title="Copy heading and permalink for Proof 3.2.3.1" aria-label="Copy heading and permalink for Proof 3.2.3.1">🔗</a></div></article></details><div class="para" id="ssec_ideals-11"> An ideal <span class="process-math">\(I\subseteq R\)</span> is called <dfn class="terminology">proper</dfn> if <span class="process-math">\(I\neq R\text{.}\)</span> The ideals <span class="process-math">\(\{0\},R\)</span> are called <dfn class="terminology">trivial ideals</dfn>. If <span class="process-math">\(I\subseteq R\)</span> is not equal to <span class="process-math">\(\{0\},R\text{,}\)</span> it is called <dfn class="terminology">non-trivial</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_ideals-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ssec_ideals-12">The following theorem provides a useful characterization of when an ideal <span class="process-math">\(I\)</span> is in fact the whole ring.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_ideals-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="ssec_ideals-13"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="ssec_ideals-13-1-1">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> Then <span class="process-math">\(I = R\)</span> if and only if <span class="process-math">\(I\)</span> contains a unit of <span class="process-math">\(R\text{.}\)</span>
-</div></article><details id="ssec_ideals-13-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_ideals-13-2-1">If <span class="process-math">\(I = R\text{,}\)</span> <span class="process-math">\(1\in R\)</span> will do.</div> <div class="para" id="ssec_ideals-13-2-2">We know that <span class="process-math">\(I\subseteq R\text{.}\)</span> If there is a unit <span class="process-math">\(u\in I\text{,}\)</span> then given any <span class="process-math">\(r\in R\text{,}\)</span> <span class="process-math">\(r = r u^{-1} u = (ru^{-1}) u \in I\text{,}\)</span> so that <span class="process-math">\(R \subseteq I\)</span> and hence <span class="process-math">\(I=R\text{.}\)</span>
-</div></article></details></section><section class="subsection" id="ssec_examplesOfIdeals"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="space"> </span><span class="title">Ideals of the Integers Modulo m</span>
+<div class="para" id="ssec_ideals-13-1-1">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> Then <span class="process-math">\(I = R\)</span> if and only if <span class="process-math">\(I\)</span> contains a unit of <span class="process-math">\(R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_ideals-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.2.4"><a href="#ssec_ideals-13" title="Copy heading and permalink for Theorem 3.2.4" aria-label="Copy heading and permalink for Theorem 3.2.4">🔗</a></div></article><details id="ssec_ideals-13-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_ideals-13-2-1">If <span class="process-math">\(I = R\text{,}\)</span> <span class="process-math">\(1\in R\)</span> will do.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_ideals-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ssec_ideals-13-2-2">We know that <span class="process-math">\(I\subseteq R\text{.}\)</span> If there is a unit <span class="process-math">\(u\in I\text{,}\)</span> then given any <span class="process-math">\(r\in R\text{,}\)</span> <span class="process-math">\(r = r u^{-1} u = (ru^{-1}) u \in I\text{,}\)</span> so that <span class="process-math">\(R \subseteq I\)</span> and hence <span class="process-math">\(I=R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_ideals-13-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.4.1"><a href="#ssec_ideals-13-2" title="Copy heading and permalink for Proof 3.2.4.1" aria-label="Copy heading and permalink for Proof 3.2.4.1">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.2.1: Ideals"><a href="#ssec_ideals" title="Copy heading and permalink for Subsection 3.2.1: Ideals" aria-label="Copy heading and permalink for Subsection 3.2.1: Ideals">🔗</a></div></section><section class="subsection" id="ssec_examplesOfIdeals"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ideals of the Integers Modulo m</span>
 </h3>
-<div class="para" id="ssec_examplesOfIdeals-2">We collect some examples of ideals. Let’s first investigate the relationship between <span class="process-math">\(\Z\)</span> and <span class="process-math">\(\Z/m\text{.}\)</span>
+<div class="para" id="ssec_examplesOfIdeals-2">We collect some examples of ideals. Let’s first investigate the relationship between <span class="process-math">\(\Z\)</span> and <span class="process-math">\(\Z/m\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_examplesOfIdeals-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm_reductionModuloMIsHomomorphism"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="thm_reductionModuloMIsHomomorphism-1-1">
 <div class="para">Pick <span class="process-math">\(m\in\mathbb{N}\)</span> with <span class="process-math">\(m&gt;1\text{.}\)</span> Then the reduction modulo <span class="process-math">\(m\)</span> map</div>
@@ -672,7 +463,9 @@ eBookConfig.enable_chatcodes =  false;
 m\mathbb{Z} = \{mk\mid k\in\mathbb{Z}\}.
 \end{equation*}
 </div>
-</div></article><details id="thm_reductionModuloMIsHomomorphism-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_reductionModuloMIsHomomorphism-2-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_reductionModuloMIsHomomorphism-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.2.5"><a href="#thm_reductionModuloMIsHomomorphism" title="Copy heading and permalink for Theorem 3.2.5" aria-label="Copy heading and permalink for Theorem 3.2.5">🔗</a></div></article><details id="thm_reductionModuloMIsHomomorphism-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_reductionModuloMIsHomomorphism-2-1">
 <div class="para">We need to show that <span class="process-math">\(\varphi\)</span> satisfies <a href="sec_homomorphisms.html#def_ringHomomorphism" class="xref" data-knowl="./knowl/xref/def_ringHomomorphism.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1.1">Definition 3.1.1</a>. To that end we first show it is compatible with addition. Take <span class="process-math">\(a,b\in\Z\text{.}\)</span> Then:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def_ringHomomorphism.html">
 \begin{equation*}
@@ -680,25 +473,35 @@ m\mathbb{Z} = \{mk\mid k\in\mathbb{Z}\}.
 \end{equation*}
 </div>
 <div class="para">But this is of course just the definition of addition in <span class="process-math">\(\Z/m\)</span> which is why we spent so long checking that addition was well-defined. We were really proving this fact.</div>
-</div> <div class="para logical" id="thm_reductionModuloMIsHomomorphism-2-2">
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_reductionModuloMIsHomomorphism-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm_reductionModuloMIsHomomorphism-2-2">
 <div class="para">Similarly, for multiplication:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \varphi(ab) = \overline{ab} = \bar{a}\bar{b} = \varphi(a)\varphi(b).
 \end{equation*}
 </div>
-</div> <div class="para" id="thm_reductionModuloMIsHomomorphism-2-3">We also have <span class="process-math">\(\varphi(0) = \bar{0}\)</span> and so <span class="process-math">\(\varphi\)</span> satisfies all three propertis of being a ring homomorphism.</div> <div class="para" id="thm_reductionModuloMIsHomomorphism-2-4">Lastly, suppose <span class="process-math">\(\varphi(a) = \bar{0}\text{.}\)</span> That is, <span class="process-math">\(a\in\ker\vaprhi\text{.}\)</span> Then <span class="process-math">\(\bar{a} = \bar{0}\text{.}\)</span> But <span class="process-math">\(\bar{0} = m\Z\)</span> and so <span class="process-math">\(\bar{a} = m\Z\text{.}\)</span>
-</div></article></details><div class="para" id="ssec_examplesOfIdeals-4">By <a href="sec_ideals.html#prop_kernelIsIdeal" class="xref" data-knowl="./knowl/xref/prop_kernelIsIdeal.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.1">Proposition 3.2.1</a> we know that <span class="process-math">\(m\Z\)</span> is an ideal. We could have proved this directly. We do this now as it is an important skill to develop.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_reductionModuloMIsHomomorphism-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm_reductionModuloMIsHomomorphism-2-3">We also have <span class="process-math">\(\varphi(0) = \bar{0}\)</span> and so <span class="process-math">\(\varphi\)</span> satisfies all three propertis of being a ring homomorphism.<div class="autopermalink" data-description="Paragraph"><a href="#thm_reductionModuloMIsHomomorphism-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm_reductionModuloMIsHomomorphism-2-4">Lastly, suppose <span class="process-math">\(\varphi(a) = \bar{0}\text{.}\)</span> That is, <span class="process-math">\(a\in\ker\vaprhi\text{.}\)</span> Then <span class="process-math">\(\bar{a} = \bar{0}\text{.}\)</span> But <span class="process-math">\(\bar{0} = m\Z\)</span> and so <span class="process-math">\(\bar{a} = m\Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_reductionModuloMIsHomomorphism-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.5.1"><a href="#thm_reductionModuloMIsHomomorphism-2" title="Copy heading and permalink for Proof 3.2.5.1" aria-label="Copy heading and permalink for Proof 3.2.5.1">🔗</a></div></article></details><div class="para" id="ssec_examplesOfIdeals-4">By <a href="sec_ideals.html#prop_kernelIsIdeal" class="xref" data-knowl="./knowl/xref/prop_kernelIsIdeal.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.1">Proposition 3.2.1</a> we know that <span class="process-math">\(m\Z\)</span> is an ideal. We could have proved this directly. We do this now as it is an important skill to develop.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_examplesOfIdeals-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="ex_idealsInZ"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Multiples of <span class="process-math">\(m\)</span> in <span class="process-math">\(\Z\)</span>.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multiples of <span class="process-math">\(m\)</span> in <span class="process-math">\(\Z\)</span>.</span>
 </h4>
-<div class="para" id="ex_idealsInZ-2-1">Fix any <span class="process-math">\(m\in\Z\text{,}\)</span> then the set of multiples of <span class="process-math">\(m\)</span> is an ideal. That is, <span class="process-math">\(m\Z\)</span> is an ideal. We prove this directly from the definition.</div> <div class="para logical" id="ex_idealsInZ-2-2">
+<div class="para" id="ex_idealsInZ-2-1">Fix any <span class="process-math">\(m\in\Z\text{,}\)</span> then the set of multiples of <span class="process-math">\(m\)</span> is an ideal. That is, <span class="process-math">\(m\Z\)</span> is an ideal. We prove this directly from the definition.<div class="autopermalink" data-description="Paragraph"><a href="#ex_idealsInZ-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex_idealsInZ-2-2">
 <div class="para">We have <span class="process-math">\(0 = m\cdot 0\in\Z\text{.}\)</span> For closure under addition, take <span class="process-math">\(mk, ml\in m\Z\)</span> for some <span class="process-math">\(k,l\in\Z\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 mk + ml = m(k+l)\in m\Z
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_idealsInZ-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="ex_idealsInZ-2-3">
 <div class="para">Since <span class="process-math">\(\Z\)</span> is commutative, we just have to show <span class="process-math">\(m\Z\)</span> absorbs left-multiplication. For that, take <span class="process-math">\(mk\in m\Z\)</span> and arbitrary <span class="process-math">\(a\in\Z\text{.}\)</span> Then</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm_reductionModuloMIsHomomorphism.html">
@@ -708,19 +511,24 @@ a(mk) = m(ak)\in \Z.
 </div>
 <div class="para">Thus we have reproved <a href="sec_ideals.html#thm_reductionModuloMIsHomomorphism" class="xref" data-knowl="./knowl/xref/thm_reductionModuloMIsHomomorphism.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.5">Theorem 3.2.5</a>: <span class="process-math">\(m\Z\)</span> is an ideal of <span class="process-math">\(\Z\text{.}\)</span>
 </div>
-</div> <div class="para" id="ex_idealsInZ-2-4">If <span class="process-math">\(m=0\text{,}\)</span> then <span class="process-math">\(0\Z = \{0\}\)</span> is the zero ideal. If <span class="process-math">\(m=\pm 1\text{,}\)</span> then <span class="process-math">\(m\Z = \Z\)</span> is the other extreme. For <span class="process-math">\(|m|&gt;1\text{,}\)</span> the ideals <span class="process-math">\(m\Z\)</span> are proper.</div></article><article class="example example-like" id="ex_matrixRingsAreSimple"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix Rings are Simple.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_idealsInZ-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex_idealsInZ-2-4">If <span class="process-math">\(m=0\text{,}\)</span> then <span class="process-math">\(0\Z = \{0\}\)</span> is the zero ideal. If <span class="process-math">\(m=\pm 1\text{,}\)</span> then <span class="process-math">\(m\Z = \Z\)</span> is the other extreme. For <span class="process-math">\(|m|&gt;1\text{,}\)</span> the ideals <span class="process-math">\(m\Z\)</span> are proper.<div class="autopermalink" data-description="Paragraph"><a href="#ex_idealsInZ-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.2.6: Multiples of m in \Z"><a href="#ex_idealsInZ" title="Copy heading and permalink for Example 3.2.6: Multiples of m in \Z" aria-label="Copy heading and permalink for Example 3.2.6: Multiples of m in \Z">🔗</a></div></article><article class="example example-like" id="ex_matrixRingsAreSimple"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Matrix Rings are Simple.</span>
 </h4>
-<div class="para" id="ex_matrixRingsAreSimple-2-1">Let’s consider our non-commutative example: <span class="process-math">\(M_2(\R)\text{.}\)</span> What are the ideals here? It turns out, that this ring is <em class="emphasis">simple</em> in that it only has trivial ideals.</div> <div class="para logical" id="ex_matrixRingsAreSimple-2-2">
+<div class="para" id="ex_matrixRingsAreSimple-2-1">Let’s consider our non-commutative example: <span class="process-math">\(M_2(\R)\text{.}\)</span> What are the ideals here? It turns out, that this ring is <em class="emphasis">simple</em> in that it only has trivial ideals.<div class="autopermalink" data-description="Paragraph"><a href="#ex_matrixRingsAreSimple-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex_matrixRingsAreSimple-2-2">
 <div class="para">Recall, the standard basis for <span class="process-math">\(M_2(\R)\)</span> consists of the sparse matrices <span class="process-math">\(e_{ij}\)</span> which have a <span class="process-math">\(1\)</span> in row <span class="process-math">\(i\)</span> and column <span class="process-math">\(j\)</span> and zero elsewhere. For any matrix <span class="process-math">\(A = (a_{ij})\)</span> we have:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 e_{11}\cdot \begin{bmatrix} a_{11} \amp a_{12} \\ a_{21} \amp a_{22}\end{bmatrix}e_{11} = \begin{bmatrix}  a_{11}\amp 0\\ 0 \amp 0\end{bmatrix}
 \end{equation*}
 </div>
-</div> <div class="para" id="ex_matrixRingsAreSimple-2-3">Similarly <span class="process-math">\(e_{12}\cdot A e_{12}\)</span> is the matrix with <span class="process-math">\(a_{12}\)</span> in the <span class="process-math">\((1,2)\)</span> entry and zero elsewhere. Likewise for <span class="process-math">\(e_{21}\cdot A\cdot e_{21}\)</span> and <span class="process-math">\(e_{22}\cdot A\cdot e_{22}\text{.}\)</span>
-</div> <div class="para" id="ex_matrixRingsAreSimple-2-4">Now take any ideal <span class="process-math">\(I\subseteq M_2(\R)\text{.}\)</span> We know that <span class="process-math">\(\{0\}, M_2(\R)\)</span> are two ideals. What we want to show is that if <span class="process-math">\(I\neq \{0\}\text{,}\)</span> then <span class="process-math">\(I=M_2(\R)\text{.}\)</span> To that end, suppose <span class="process-math">\(I\neq\{0\}\)</span> so there is a non-zero <span class="process-math">\(A\in I\text{.}\)</span>
-</div> <div class="para" id="ex_matrixRingsAreSimple-2-5">At least one of the entries of <span class="process-math">\(A\)</span> is non-zero, say <span class="process-math">\(a_{i,j}\neq 0\text{.}\)</span> Then <span class="process-math">\(e_{ij}\cdot A\cdot e_{ij}\in I\)</span> is the matrix with <span class="process-math">\(a_{ij}\)</span> in the <span class="process-math">\((i,j)\)</span> spot and zero elsehwere. Multiply by the scalar matrix <span class="process-math">\(\frac{1}{a_{ij}}\)</span> so that we know <span class="process-math">\(I\)</span> has a matrix with <span class="process-math">\(1\)</span> in exactly one entry and zero elsewhere. That is, we know that one of the standard basis elements is in <span class="process-math">\(I\text{.}\)</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_matrixRingsAreSimple-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex_matrixRingsAreSimple-2-3">Similarly <span class="process-math">\(e_{12}\cdot A e_{12}\)</span> is the matrix with <span class="process-math">\(a_{12}\)</span> in the <span class="process-math">\((1,2)\)</span> entry and zero elsewhere. Likewise for <span class="process-math">\(e_{21}\cdot A\cdot e_{21}\)</span> and <span class="process-math">\(e_{22}\cdot A\cdot e_{22}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_matrixRingsAreSimple-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex_matrixRingsAreSimple-2-4">Now take any ideal <span class="process-math">\(I\subseteq M_2(\R)\text{.}\)</span> We know that <span class="process-math">\(\{0\}, M_2(\R)\)</span> are two ideals. What we want to show is that if <span class="process-math">\(I\neq \{0\}\text{,}\)</span> then <span class="process-math">\(I=M_2(\R)\text{.}\)</span> To that end, suppose <span class="process-math">\(I\neq\{0\}\)</span> so there is a non-zero <span class="process-math">\(A\in I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_matrixRingsAreSimple-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex_matrixRingsAreSimple-2-5">At least one of the entries of <span class="process-math">\(A\)</span> is non-zero, say <span class="process-math">\(a_{i,j}\neq 0\text{.}\)</span> Then <span class="process-math">\(e_{ij}\cdot A\cdot e_{ij}\in I\)</span> is the matrix with <span class="process-math">\(a_{ij}\)</span> in the <span class="process-math">\((i,j)\)</span> spot and zero elsehwere. Multiply by the scalar matrix <span class="process-math">\(\frac{1}{a_{ij}}\)</span> so that we know <span class="process-math">\(I\)</span> has a matrix with <span class="process-math">\(1\)</span> in exactly one entry and zero elsewhere. That is, we know that one of the standard basis elements is in <span class="process-math">\(I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_matrixRingsAreSimple-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="ex_matrixRingsAreSimple-2-6">
 <div class="para">We now show that if one of the standard basis elements is in <span class="process-math">\(I\text{,}\)</span> then <span class="process-math">\(I\)</span> has all of the standard basis elements. The proof for each case is similar so we assume that <span class="process-math">\(I\)</span> has <span class="process-math">\(e_{11} = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 0 \end{bmatrix}\text{.}\)</span> Since <span class="process-math">\(I\)</span> absorbs multiplication, every product we compute will be an element of <span class="process-math">\(I\text{.}\)</span> We have:</div>
 <div class="displaymath process-math">
@@ -735,6 +543,7 @@ e_{11}\cdot e_{12} = e_{12}\in I.
 \end{equation*}
 </div>
 <div class="para">and lastly <span class="process-math">\(e_{22}\cdot e_{12} = e_{12}\in I\text{.}\)</span> Thus <span class="process-math">\(I\)</span> has all of the elements in the standard basis.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_matrixRingsAreSimple-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="ex_matrixRingsAreSimple-2-7">
 <div class="para">To see now that <span class="process-math">\(I\)</span> has any matrix, we take a random <span class="process-math">\(B = (b_{ij})\text{.}\)</span> We can write</div>
 <div class="displaymath process-math">
@@ -744,10 +553,14 @@ B = b_{11}I_2\cdot e_{11} + b_{12}I\cdot e_{12} + b_{21}I\cdot e_{21} + b_{22}I\
 </div>
 <div class="para">Each one of the terms in this sum is in <span class="process-math">\(I\)</span> since <span class="process-math">\(I\)</span> absorbs multiplication. Since <span class="process-math">\(I\)</span> is closed under addition, <span class="process-math">\(B\in I\text{.}\)</span> But <span class="process-math">\(B\)</span> was arbitrary so that <span class="process-math">\(I = M_2(\R)\text{.}\)</span>
 </div>
-</div> <div class="para" id="ex_matrixRingsAreSimple-2-8">In fact, more is true! For any field <span class="process-math">\(\mathbb{F}\)</span> and any <span class="process-math">\(n\in\mathbb{N}\text{,}\)</span> the ring <span class="process-math">\(M_n(\mathbb{F})\)</span> of <span class="process-math">\(n\times n\)</span> matrices over <span class="process-math">\(\mathbb{F}\)</span> is a simple ring. That is, it has no non-trivial ideals. The proof is similar to the case <span class="process-math">\(n=2\)</span> and <span class="process-math">\(\mathbb{F} = \R\text{:}\)</span> the field was irrelevant in our work and we use the matrices <span class="process-math">\(e_{ij}\)</span> and their multiplication rules to show that we get all of <span class="process-math">\(M_n(\mathbb{R})\text{.}\)</span>
-</div></article><aside class="aside aside-like" id="ssec_examplesOfIdeals-7"><h4 class="heading"><span class="title">Central Elements.</span></h4>
-<div class="para" id="ssec_examplesOfIdeals-7-2">In <a href="sec_ideals.html#ex_kernelEvaluation0" class="xref" data-knowl="./knowl/xref/ex_kernelEvaluation0.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.8: Polynomials Without Constant Term">Example 3.2.8</a>, to show closure under multiplication by <span class="process-math">\(R\text{,}\)</span> we used that for any polynomial <span class="process-math">\(r(x)\in R[x]\)</span> we have <span class="process-math">\(r(x)\cdot x = x\cdot r(x)\text{.}\)</span> If <span class="process-math">\(R\)</span> is not commutative, then <span class="process-math">\(R[x]\)</span> is also non-commutative. However, <span class="process-math">\(x\)</span> is a <em class="emphasis">central element</em> of <span class="process-math">\(R[x]\text{.}\)</span> Namely, <span class="process-math">\(x\)</span> commutes with all polynomials.</div></aside><article class="example example-like" id="ex_kernelEvaluation0"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Polynomials Without Constant Term.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_matrixRingsAreSimple-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex_matrixRingsAreSimple-2-8">In fact, more is true! For any field <span class="process-math">\(\mathbb{F}\)</span> and any <span class="process-math">\(n\in\mathbb{N}\text{,}\)</span> the ring <span class="process-math">\(M_n(\mathbb{F})\)</span> of <span class="process-math">\(n\times n\)</span> matrices over <span class="process-math">\(\mathbb{F}\)</span> is a simple ring. That is, it has no non-trivial ideals. The proof is similar to the case <span class="process-math">\(n=2\)</span> and <span class="process-math">\(\mathbb{F} = \R\text{:}\)</span> the field was irrelevant in our work and we use the matrices <span class="process-math">\(e_{ij}\)</span> and their multiplication rules to show that we get all of <span class="process-math">\(M_n(\mathbb{R})\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_matrixRingsAreSimple-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.2.7: Matrix Rings are Simple"><a href="#ex_matrixRingsAreSimple" title="Copy heading and permalink for Example 3.2.7: Matrix Rings are Simple" aria-label="Copy heading and permalink for Example 3.2.7: Matrix Rings are Simple">🔗</a></div></article><details id="ssec_examplesOfIdeals-7" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Central Elements.</span>
+</h4></summary><aside class="aside aside-like knowl__content"><div class="para" id="ssec_examplesOfIdeals-7-2">In <a href="sec_ideals.html#ex_kernelEvaluation0" class="xref" data-knowl="./knowl/xref/ex_kernelEvaluation0.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.8: Polynomials Without Constant Term">Example 3.2.8</a>, to show closure under multiplication by <span class="process-math">\(R\text{,}\)</span> we used that for any polynomial <span class="process-math">\(r(x)\in R[x]\)</span> we have <span class="process-math">\(r(x)\cdot x = x\cdot r(x)\text{.}\)</span> If <span class="process-math">\(R\)</span> is not commutative, then <span class="process-math">\(R[x]\)</span> is also non-commutative. However, <span class="process-math">\(x\)</span> is a <em class="emphasis">central element</em> of <span class="process-math">\(R[x]\text{.}\)</span> Namely, <span class="process-math">\(x\)</span> commutes with all polynomials.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_examplesOfIdeals-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside></details><article class="example example-like" id="ex_kernelEvaluation0"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Polynomials Without Constant Term.</span>
 </h4>
 <div class="para logical" id="ex_kernelEvaluation0-2-1">
 <div class="para">Let’s now consider the polynomial ring <span class="process-math">\(R[x]\)</span> over a genral ring <span class="process-math">\(R\)</span> in the indeterminant <span class="process-math">\(x\text{.}\)</span> Let <span class="process-math">\(I\subseteq R[x]\)</span> be the collection of all polynomials without constant term:</div>
@@ -766,6 +579,7 @@ p(x) \amp=a_1x+a_2x^2+a_3x^3+\cdots + a_nx^n \\
 </div>
 <div class="para">where we set <span class="process-math">\(q(x) = a_1+a_2x+a_3x^2+\cdots + a_nx^{n-1}\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_kernelEvaluation0-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="ex_kernelEvaluation0-2-2">
 <div class="para">The zero polynomial has zero as a constant term so <span class="process-math">\(0\in I\text{.}\)</span> Suppose we add two polynomials without constant term (possibly extend by zero so degrees match):</div>
 <div class="displaymath process-math" id="ex_kernelEvaluation0-2-2-2">
@@ -782,6 +596,7 @@ p(x) + q(x) = xp'(x) + xq'(x) = x(p'(x)+q'(x))
 \end{equation*}
 </div>
 <div class="para">also has no constant term.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_kernelEvaluation0-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="ex_kernelEvaluation0-2-3">
 <div class="para">Suppose we have a polynomial without a constant term with a general polynomial, so <span class="process-math">\(p(x)\in I\)</span> and <span class="process-math">\(r(x)\in R[x]\text{.}\)</span> Then there is <span class="process-math">\(p'(x)\in R[x]\)</span> with <span class="process-math">\(p(x) = xp'(x)\text{.}\)</span> Hence,</div>
 <div class="displaymath process-math">
@@ -791,7 +606,9 @@ r(x)p(x) = r(x)xp'(x) = x(r(x)p'(x))
 </div>
 <div class="para">and so the product lacks a constant term. We conclude that the polynomials without constant term collectively form an ideal <span class="process-math">\(I\)</span> in <span class="process-math">\(R[x]\text{.}\)</span>
 </div>
-</div> <div class="para" id="ex_kernelEvaluation0-2-4">We now show that, at least in the commutative case, this ideal is the kernel of a familiar homomorphism. It is true in the non-commutative case as well but some care needs to be taken as the evaluation homomorphism from <a href="sec_homomorphisms.html#exer_evaluationHomomorphismGeneralR" class="xref" data-knowl="./knowl/xref/exer_evaluationHomomorphismGeneralR.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.1.7.5">Exercise 3.1.7.5</a> is ill-behaved when <span class="process-math">\(R\)</span> is non-commutative.</div> <div class="para logical" id="ex_kernelEvaluation0-2-5">
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_kernelEvaluation0-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex_kernelEvaluation0-2-4">We now show that, at least in the commutative case, this ideal is the kernel of a familiar homomorphism. It is true in the non-commutative case as well but some care needs to be taken as the evaluation homomorphism from <a href="sec_homomorphisms.html#exer_evaluationHomomorphismGeneralR" class="xref" data-knowl="./knowl/xref/exer_evaluationHomomorphismGeneralR.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.1.7.5">Exercise 3.1.7.5</a> is ill-behaved when <span class="process-math">\(R\)</span> is non-commutative.<div class="autopermalink" data-description="Paragraph"><a href="#ex_kernelEvaluation0-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex_kernelEvaluation0-2-5">
 <div class="para">Suppose that <span class="process-math">\(R\)</span> is commutative and let us consider the evaluation homomorphism</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop_kernelIsIdeal.html">
 \begin{equation*}
@@ -799,6 +616,7 @@ r(x)p(x) = r(x)xp'(x) = x(r(x)p'(x))
 \end{equation*}
 </div>
 <div class="para">From <a href="sec_ideals.html#prop_kernelIsIdeal" class="xref" data-knowl="./knowl/xref/prop_kernelIsIdeal.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.1">Proposition 3.2.1</a>, the kernel of this homomorphism, <span class="process-math">\(\ker\mathrm{ev}_0\)</span> is an ideal. We claim that it is precisely the ideal of polynomials without constant term.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_kernelEvaluation0-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="ex_kernelEvaluation0-2-6">
 <div class="para">Suppose <span class="process-math">\(\mathrm{ev}_{0_R}(p(x)) = 0\)</span> or equivalently <span class="process-math">\(p(0_R) = 0_R\text{.}\)</span> Writing <span class="process-math">\(p(x) = a_0+a_1x+\cdots +a_nx^n\)</span> we have</div>
 <div class="displaymath process-math" id="ex_kernelEvaluation0-2-6-4">
@@ -810,91 +628,182 @@ r(x)p(x) = r(x)xp'(x) = x(r(x)p'(x))
 </div>
 <div class="para">and so <span class="process-math">\(a_0=0\text{.}\)</span> That is to say, the condition that <span class="process-math">\(p(x)\in \ker\mathrm{ev}_{0_R}\)</span> is precisely the condition that <span class="process-math">\(p(x)\)</span> has no constant term. Hence, <span class="process-math">\(\ker\mathrm{ev}_{0_R} = I\text{.}\)</span>
 </div>
-</div> <div class="para" id="ex_kernelEvaluation0-2-7">This example shows that the ideal we defined is in fact a kernel of a homomorphism. This is a general fact that will lead us to the construction of <dfn class="terminology">quotient rings</dfn>.</div></article></section><section class="subsection" id="ssec_principalIdeals"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="space"> </span><span class="title">Principal Ideals</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_kernelEvaluation0-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex_kernelEvaluation0-2-7">This example shows that the ideal we defined is in fact a kernel of a homomorphism. This is a general fact that will lead us to the construction of <dfn class="terminology">quotient rings</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#ex_kernelEvaluation0-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.2.8: Polynomials Without Constant Term"><a href="#ex_kernelEvaluation0" title="Copy heading and permalink for Example 3.2.8: Polynomials Without Constant Term" aria-label="Copy heading and permalink for Example 3.2.8: Polynomials Without Constant Term">🔗</a></div></article><div class="autopermalink" data-description="Subsection 3.2.2: Ideals of the Integers Modulo m"><a href="#ssec_examplesOfIdeals" title="Copy heading and permalink for Subsection 3.2.2: Ideals of the Integers Modulo m" aria-label="Copy heading and permalink for Subsection 3.2.2: Ideals of the Integers Modulo m">🔗</a></div></section><section class="subsection" id="ssec_principalIdeals"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Principal Ideals</span>
 </h3>
-<div class="para" id="ssec_principalIdeals-2">The most important type of ideals (for our work, at least), are those which are the sets of all multiples of a single element in the ring. We saw this with <span class="process-math">\(m\Z\subseteq \Z\text{.}\)</span> Such ideals are called <em class="emphasis">principal ideals</em>.</div>
-<div class="para" id="ssec_principalIdeals-3">For the following theorem/definition, we require commutative rings. The interested reader is invited to formalize a definition for non-commutative rings.</div>
+<div class="para" id="ssec_principalIdeals-2">The most important type of ideals (for our work, at least), are those which are the sets of all multiples of a single element in the ring. We saw this with <span class="process-math">\(m\Z\subseteq \Z\text{.}\)</span> Such ideals are called <em class="emphasis">principal ideals</em>.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ssec_principalIdeals-3">For the following theorem/definition, we require commutative rings. The interested reader is invited to formalize a definition for non-commutative rings.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="thm_principalIdealsAreIdeals"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.9</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para logical" id="thm_principalIdealsAreIdeals-3-1">
-<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring and let <span class="process-math">\(a\in R\text{.}\)</span> The set</div>
+<div class="para logical" id="thm_principalIdealsAreIdeals-2-1">
+<div class="para"> Let <span class="process-math">\(R\)</span> be a commutative ring and let <span class="process-math">\(a\in R\text{.}\)</span> The set</div>
 <div class="displaymath process-math">
 \begin{equation*}
 (a) = \{ra\mid r\in R\}
 \end{equation*}
 </div>
 <div class="para">is an ideal (called the <dfn class="terminology">principal ideal generated by <span class="process-math">\(a\)</span></dfn>).</div>
-</div></article><details id="thm_principalIdealsAreIdeals-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_principalIdealsAreIdeals-4-1">Observe that <span class="process-math">\(0 = 0\cdot a \in (a)\text{.}\)</span>
-</div> <div class="para" id="thm_principalIdealsAreIdeals-4-2">Moreover, if <span class="process-math">\(r_1 a, r_2 a\in (a)\text{,}\)</span> <span class="process-math">\(r_1 a - r_2 a = (r_1 - r_2)a \in (a)\text{.}\)</span> Finally, if <span class="process-math">\(x\in R\)</span> and <span class="process-math">\(r a\in (a)\text{,}\)</span> <span class="process-math">\(x (ra) = (xr) a \in (a)\text{.}\)</span>
-</div> <div class="para" id="thm_principalIdealsAreIdeals-4-3">Thus, <span class="process-math">\((a)\)</span> is an ideal.</div></article></details><div class="para" id="ssec_principalIdeals-5">The element <span class="process-math">\(a\)</span> in the theorem is known as a <em class="emphasis">generator</em> of <span class="process-math">\((a)\text{.}\)</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_principalIdealsAreIdeals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.2.9"><a href="#thm_principalIdealsAreIdeals" title="Copy heading and permalink for Theorem 3.2.9" aria-label="Copy heading and permalink for Theorem 3.2.9">🔗</a></div></article><details id="thm_principalIdealsAreIdeals-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_principalIdealsAreIdeals-3-1">Observe that <span class="process-math">\(0 = 0\cdot a \in (a)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_principalIdealsAreIdeals-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm_principalIdealsAreIdeals-3-2">Moreover, if <span class="process-math">\(r_1 a, r_2 a\in (a)\text{,}\)</span> <span class="process-math">\(r_1 a - r_2 a = (r_1 - r_2)a \in (a)\text{.}\)</span> Finally, if <span class="process-math">\(x\in R\)</span> and <span class="process-math">\(r a\in (a)\text{,}\)</span> <span class="process-math">\(x (ra) = (xr) a \in (a)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_principalIdealsAreIdeals-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm_principalIdealsAreIdeals-3-3">Thus, <span class="process-math">\((a)\)</span> is an ideal.<div class="autopermalink" data-description="Paragraph"><a href="#thm_principalIdealsAreIdeals-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.9.1"><a href="#thm_principalIdealsAreIdeals-3" title="Copy heading and permalink for Proof 3.2.9.1" aria-label="Copy heading and permalink for Proof 3.2.9.1">🔗</a></div></article></details><div class="para" id="ssec_principalIdeals-5">The element <span class="process-math">\(a\)</span> in the theorem is known as a <em class="emphasis">generator</em> of <span class="process-math">\((a)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="investigation project-like" id="ssec_principalIdeals-6"><h4 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
+<span class="type">Investigation</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="ssec_principalIdeals-6-1-1">Let <span class="process-math">\(R\)</span> be a commutative ring, and let <span class="process-math">\(x,y,z\in R\text{.}\)</span> Give necessary and sufficient conditions for <span class="process-math">\(z\in (x)\)</span> and, separately, <span class="process-math">\((x) \subseteq (y)\text{.}\)</span>
-</div> <div class="para" id="ssec_principalIdeals-6-1-2">That is, fill in the blanks: “<span class="process-math">\(z\in (x) \Leftrightarrow\)</span> _________” and “<span class="process-math">\((x)\subseteq (y) \Leftrightarrow\)</span> _________.”</div> <div class="para" id="ssec_principalIdeals-6-1-3">Justify your answers.</div>
-<div class="solutions"><details id="ssec_principalIdeals-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<div class="para" id="ssec_principalIdeals-6-2-1">We have “<span class="process-math">\(z\in (x) \Leftrightarrow x|z\)</span>” and “<span class="process-math">\((x)\subseteq (y) \Leftrightarrow y|x\)</span>”<details class="ptx-footnote" aria-live="polite" id="ssec_principalIdeals-6-2-1-3"><summary class="ptx-footnote__number" title="Footnote 3.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="ssec_principalIdeals-6-2-1-3">An acceptable alternative would be: <span class="process-math">\(x\in (y)\text{.}\)</span> Make sure students are aware of this!</div></details>.</div> <div class="para" id="ssec_principalIdeals-6-2-2">Note that <span class="process-math">\(z\in (x) \Leftrightarrow \exists r\in R, z = xr \Leftrightarrow x|z\text{.}\)</span>
-</div> <div class="para" id="ssec_principalIdeals-6-2-3">Similarly, suppose <span class="process-math">\((x)\subseteq (y)\text{.}\)</span> Then <span class="process-math">\(x\in (y)\text{,}\)</span> so <span class="process-math">\(y|x\text{.}\)</span> Conversely, if <span class="process-math">\(y|x\text{,}\)</span> then there is some <span class="process-math">\(r\in R\)</span> such that <span class="process-math">\(x = yr\text{,}\)</span> and thus for all <span class="process-math">\(ax\in (x)\text{,}\)</span> <span class="process-math">\(ax = (ar)y \in (y)\text{.}\)</span>
-</div> <div class="para" id="ssec_principalIdeals-6-2-4">Note that this means that if we want to know if <span class="process-math">\((x)\subseteq (y)\text{,}\)</span> it’s enough to check that <span class="process-math">\(x\in (y)\text{.}\)</span>
+<div class="para" id="ssec_principalIdeals-6-1-1">Let <span class="process-math">\(R\)</span> be a commutative ring, and let <span class="process-math">\(x,y,z\in R\text{.}\)</span> Give necessary and sufficient conditions for <span class="process-math">\(z\in (x)\)</span> and, separately, <span class="process-math">\((x) \subseteq (y)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ssec_principalIdeals-6-1-2">That is, fill in the blanks: “<span class="process-math">\(z\in (x) \Leftrightarrow\)</span> _________” and “<span class="process-math">\((x)\subseteq (y) \Leftrightarrow\)</span> _________.”<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ssec_principalIdeals-6-1-3">Justify your answers.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-6-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-</div></details></div></article><div class="para" id="ssec_principalIdeals-7">Principal ideals may have more than one generator.</div>
+<div class="solutions"><details id="ssec_principalIdeals-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="ssec_principalIdeals-6-2-1">We have “<span class="process-math">\(z\in (x) \Leftrightarrow x|z\)</span>” and “<span class="process-math">\((x)\subseteq (y) \Leftrightarrow y|x\)</span>”<details class="ptx-footnote" aria-live="polite" id="ssec_principalIdeals-6-2-1-3"><summary class="ptx-footnote__number" title="Footnote 3.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="ssec_principalIdeals-6-2-1-3">An acceptable alternative would be: <span class="process-math">\(x\in (y)\text{.}\)</span> Make sure students are aware of this!</div></details>.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ssec_principalIdeals-6-2-2">Note that <span class="process-math">\(z\in (x) \Leftrightarrow \exists r\in R, z = xr \Leftrightarrow x|z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ssec_principalIdeals-6-2-3">Similarly, suppose <span class="process-math">\((x)\subseteq (y)\text{.}\)</span> Then <span class="process-math">\(x\in (y)\text{,}\)</span> so <span class="process-math">\(y|x\text{.}\)</span> Conversely, if <span class="process-math">\(y|x\text{,}\)</span> then there is some <span class="process-math">\(r\in R\)</span> such that <span class="process-math">\(x = yr\text{,}\)</span> and thus for all <span class="process-math">\(ax\in (x)\text{,}\)</span> <span class="process-math">\(ax = (ar)y \in (y)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-6-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ssec_principalIdeals-6-2-4">Note that this means that if we want to know if <span class="process-math">\((x)\subseteq (y)\text{,}\)</span> it’s enough to check that <span class="process-math">\(x\in (y)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-6-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 3.2.2.1"><a href="#ssec_principalIdeals-6-2" title="Copy heading and permalink for Answer 3.2.2.1" aria-label="Copy heading and permalink for Answer 3.2.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Investigation 3.2.2"><a href="#ssec_principalIdeals-6" title="Copy heading and permalink for Investigation 3.2.2" aria-label="Copy heading and permalink for Investigation 3.2.2">🔗</a></div></article><div class="para" id="ssec_principalIdeals-7">Principal ideals may have more than one generator.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="thm_principalGeneratorsUnits"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.10</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="thm_principalGeneratorsUnits-1-1">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(a\in R\text{.}\)</span> Then <span class="process-math">\((a) = (ua)\text{,}\)</span> where <span class="process-math">\(u\)</span> is any unit of <span class="process-math">\(R\text{.}\)</span>
-</div></article><details id="thm_principalGeneratorsUnits-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_principalGeneratorsUnits-2-1">Apply the answer to the question.</div></article></details><article class="activity project-like" id="ssec_principalIdeals-9"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
+<div class="para" id="thm_principalGeneratorsUnits-1-1">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(a\in R\text{.}\)</span> Then <span class="process-math">\((a) = (ua)\text{,}\)</span> where <span class="process-math">\(u\)</span> is any unit of <span class="process-math">\(R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_principalGeneratorsUnits-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.2.10"><a href="#thm_principalGeneratorsUnits" title="Copy heading and permalink for Theorem 3.2.10" aria-label="Copy heading and permalink for Theorem 3.2.10">🔗</a></div></article><details id="thm_principalGeneratorsUnits-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_principalGeneratorsUnits-2-1">Apply the answer to the question.<div class="autopermalink" data-description="Paragraph"><a href="#thm_principalGeneratorsUnits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.10.1"><a href="#thm_principalGeneratorsUnits-2" title="Copy heading and permalink for Proof 3.2.10.1" aria-label="Copy heading and permalink for Proof 3.2.10.1">🔗</a></div></article></details><article class="activity project-like" id="ssec_principalIdeals-9"><h4 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="ssec_principalIdeals-9-1-1">
 <div class="para">In <span class="process-math">\(R = \Z\text{,}\)</span> describe the principal ideals generated by</div>
 <ol class="decimal" id="ssec_principalIdeals-9-1-1-2">
-<li id="ssec_principalIdeals-9-1-1-2-1"><div class="para" id="ssec_principalIdeals-9-1-1-2-1-1">2</div></li>
-<li id="ssec_principalIdeals-9-1-1-2-2"><div class="para" id="ssec_principalIdeals-9-1-1-2-2-1"><span class="process-math">\(\displaystyle -9\)</span></div></li>
-<li id="ssec_principalIdeals-9-1-1-2-3"><div class="para" id="ssec_principalIdeals-9-1-1-2-3-1">9</div></li>
-<li id="ssec_principalIdeals-9-1-1-2-4"><div class="para" id="ssec_principalIdeals-9-1-1-2-4-1">0</div></li>
-<li id="ssec_principalIdeals-9-1-1-2-5"><div class="para" id="ssec_principalIdeals-9-1-1-2-5-1">27</div></li>
-<li id="ssec_principalIdeals-9-1-1-2-6"><div class="para" id="ssec_principalIdeals-9-1-1-2-6-1">3</div></li>
+<li id="ssec_principalIdeals-9-1-1-2-1">
+<div class="para" id="ssec_principalIdeals-9-1-1-2-1-1">2<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-9-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ssec_principalIdeals-9-1-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ssec_principalIdeals-9-1-1-2-2">
+<div class="para" id="ssec_principalIdeals-9-1-1-2-2-1">
+<span class="process-math">\(\displaystyle -9\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-9-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#ssec_principalIdeals-9-1-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ssec_principalIdeals-9-1-1-2-3">
+<div class="para" id="ssec_principalIdeals-9-1-1-2-3-1">9<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-9-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#ssec_principalIdeals-9-1-1-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="ssec_principalIdeals-9-1-1-2-4">
+<div class="para" id="ssec_principalIdeals-9-1-1-2-4-1">0<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-9-1-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#ssec_principalIdeals-9-1-1-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="ssec_principalIdeals-9-1-1-2-5">
+<div class="para" id="ssec_principalIdeals-9-1-1-2-5-1">27<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-9-1-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#ssec_principalIdeals-9-1-1-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="ssec_principalIdeals-9-1-1-2-6">
+<div class="para" id="ssec_principalIdeals-9-1-1-2-6-1">3<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-9-1-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6"><a href="#ssec_principalIdeals-9-1-1-2-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
 </ol>
-</div> <div class="para" id="ssec_principalIdeals-9-1-2">Determine the subset relations among the above ideals.</div>
-<div class="solutions"><details id="ssec_principalIdeals-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<ol class="decimal" id="ssec_principalIdeals-9-2-1">
-<li id="ssec_principalIdeals-9-2-1-1"><div class="para" id="ssec_principalIdeals-9-2-1-1-1">All multiples of 2</div></li>
-<li id="ssec_principalIdeals-9-2-1-2"><div class="para" id="ssec_principalIdeals-9-2-1-2-1">All multiples of <span class="process-math">\(-9\)</span>
-</div></li>
-<li id="ssec_principalIdeals-9-2-1-3"><div class="para" id="ssec_principalIdeals-9-2-1-3-1">All multiples of 9; same as the previous part.</div></li>
-<li id="ssec_principalIdeals-9-2-1-4"><div class="para" id="ssec_principalIdeals-9-2-1-4-1"><span class="process-math">\(\displaystyle \set{0}\)</span></div></li>
-<li id="ssec_principalIdeals-9-2-1-5"><div class="para" id="ssec_principalIdeals-9-2-1-5-1">All multiples of 27</div></li>
-<li id="ssec_principalIdeals-9-2-1-6"><div class="para" id="ssec_principalIdeals-9-2-1-6-1">All multiples of 3</div></li>
-</ol> <div class="para" id="ssec_principalIdeals-9-2-2">We have <span class="process-math">\((0)\subsetneq (27)\subsetneq (-9) = (9) \subsetneq (3)\text{.}\)</span> The ideal <span class="process-math">\((2)\)</span> only contains <span class="process-math">\((0)\text{,}\)</span> which is a subset of all ideals.</div>
-</div></details></div></article></section><section class="subsection" id="ssec_idealsGeneratedByASet"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="space"> </span><span class="title">Ideals Generated by a Set</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ssec_principalIdeals-9-1-2">Determine the subset relations among the above ideals.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-9-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ssec_principalIdeals-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ssec_principalIdeals-9-2-1">
+<ol class="decimal" id="ssec_principalIdeals-9-2-1-1">
+<li id="ssec_principalIdeals-9-2-1-1-1">
+<div class="para" id="ssec_principalIdeals-9-2-1-1-1-1">All multiples of 2<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-9-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ssec_principalIdeals-9-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ssec_principalIdeals-9-2-1-1-2">
+<div class="para" id="ssec_principalIdeals-9-2-1-1-2-1">All multiples of <span class="process-math">\(-9\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-9-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#ssec_principalIdeals-9-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ssec_principalIdeals-9-2-1-1-3">
+<div class="para" id="ssec_principalIdeals-9-2-1-1-3-1">All multiples of 9; same as the previous part.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-9-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#ssec_principalIdeals-9-2-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="ssec_principalIdeals-9-2-1-1-4">
+<div class="para" id="ssec_principalIdeals-9-2-1-1-4-1">
+<span class="process-math">\(\displaystyle \set{0}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-9-2-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#ssec_principalIdeals-9-2-1-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="ssec_principalIdeals-9-2-1-1-5">
+<div class="para" id="ssec_principalIdeals-9-2-1-1-5-1">All multiples of 27<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-9-2-1-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#ssec_principalIdeals-9-2-1-1-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="ssec_principalIdeals-9-2-1-1-6">
+<div class="para" id="ssec_principalIdeals-9-2-1-1-6-1">All multiples of 3<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-9-2-1-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6"><a href="#ssec_principalIdeals-9-2-1-1-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ssec_principalIdeals-9-2-2">We have <span class="process-math">\((0)\subsetneq (27)\subsetneq (-9) = (9) \subsetneq (3)\text{.}\)</span> The ideal <span class="process-math">\((2)\)</span> only contains <span class="process-math">\((0)\text{,}\)</span> which is a subset of all ideals.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_principalIdeals-9-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.3.1"><a href="#ssec_principalIdeals-9-2" title="Copy heading and permalink for Solution 3.2.3.1" aria-label="Copy heading and permalink for Solution 3.2.3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Activity 3.2.3"><a href="#ssec_principalIdeals-9" title="Copy heading and permalink for Activity 3.2.3" aria-label="Copy heading and permalink for Activity 3.2.3">🔗</a></div></article><div class="autopermalink" data-description="Subsection 3.2.3: Principal Ideals"><a href="#ssec_principalIdeals" title="Copy heading and permalink for Subsection 3.2.3: Principal Ideals" aria-label="Copy heading and permalink for Subsection 3.2.3: Principal Ideals">🔗</a></div></section><section class="subsection" id="ssec_idealsGeneratedByASet"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ideals Generated by a Set</span>
 </h3>
-<div class="para" id="ssec_idealsGeneratedByASet-2">A good chunk of rings of interest are infinite and so their ideals are also usually infinite. We saw that in some cases ideals can be described by a single element, a principal generator. Rings where ideals are always generated by a single element are called <dfn class="terminology">principal ideal rings</dfn>. These will be the subject of the next section.</div>
-<div class="para" id="ssec_idealsGeneratedByASet-3">It is important to understand what happens when you cannot generate the whole ideal with a single element. We introduce ideals generated by finitely many elements now. When ideals of a ring <span class="process-math">\(R\)</span> are always guaranteed to be generated by finitely many elements the ring is called <dfn class="terminology">Noetherian rings</dfn>.</div>
+<div class="para" id="ssec_idealsGeneratedByASet-2">A good chunk of rings of interest are infinite and so their ideals are also usually infinite. We saw that in some cases ideals can be described by a single element, a principal generator. Rings where ideals are always generated by a single element are called <dfn class="terminology">principal ideal rings</dfn>. These will be the subject of the next section.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_idealsGeneratedByASet-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ssec_idealsGeneratedByASet-3">It is important to understand what happens when you cannot generate the whole ideal with a single element. We introduce ideals generated by finitely many elements now. When ideals of a ring <span class="process-math">\(R\)</span> are always guaranteed to be generated by finitely many elements the ring is called <dfn class="terminology">Noetherian rings</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_idealsGeneratedByASet-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="def_idealGeneratedByFinitelyManyElements"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.11</span><span class="period">.</span>
-</h4> <div class="para logical" id="def_idealGeneratedByFinitelyManyElements-2-1">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="def_idealGeneratedByFinitelyManyElements-2-1">
 <div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring and <span class="process-math">\(a_1,a_2,\ldots,a_n\in R\text{.}\)</span> The <dfn class="terminology">ideal generated by</dfn> <span class="process-math">\(a_1,\ldots,a_n\)</span> is the subset:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 (a_1,a_2,\ldots,a_n) = \{r_1a_1+r_2a_2+\cdots + r_na_n\mid r_1,r_2,\ldots,r_n\in R\}.
 \end{equation*}
 </div>
-</div></article><div class="para" id="ssec_idealsGeneratedByASet-5">Let’s verify it is an ideal.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def_idealGeneratedByFinitelyManyElements-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2.11"><a href="#def_idealGeneratedByFinitelyManyElements" title="Copy heading and permalink for Definition 3.2.11" aria-label="Copy heading and permalink for Definition 3.2.11">🔗</a></div></article><div class="para" id="ssec_idealsGeneratedByASet-5">Let’s verify it is an ideal.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_idealsGeneratedByASet-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="thm_idealGeneratedByFinitelyManyElementsIsIdeal"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.12</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="thm_idealGeneratedByFinitelyManyElementsIsIdeal-1-1">Suppose <span class="process-math">\(R\)</span> is a commutative ring and <span class="process-math">\(a_1,a_2,\ldots,a_n\in R\text{.}\)</span> Then <span class="process-math">\((a_1,a_2,\ldots,a_n)\)</span> is an ideal.</div></article><details id="thm_idealGeneratedByFinitelyManyElementsIsIdeal-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_idealGeneratedByFinitelyManyElementsIsIdeal-2-1">
+<div class="para" id="thm_idealGeneratedByFinitelyManyElementsIsIdeal-1-1">Suppose <span class="process-math">\(R\)</span> is a commutative ring and <span class="process-math">\(a_1,a_2,\ldots,a_n\in R\text{.}\)</span> Then <span class="process-math">\((a_1,a_2,\ldots,a_n)\)</span> is an ideal.<div class="autopermalink" data-description="Paragraph"><a href="#thm_idealGeneratedByFinitelyManyElementsIsIdeal-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.2.12"><a href="#thm_idealGeneratedByFinitelyManyElementsIsIdeal" title="Copy heading and permalink for Theorem 3.2.12" aria-label="Copy heading and permalink for Theorem 3.2.12">🔗</a></div></article><details id="thm_idealGeneratedByFinitelyManyElementsIsIdeal-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_idealGeneratedByFinitelyManyElementsIsIdeal-2-1">
 <div class="para">Set <span class="process-math">\(I = (a_1,\ldots,a_n)\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 0 = 0\cdot a_1 + \cdots + 0\cdot a_n \in I.
 \end{equation*}
 </div>
-</div> <div class="para logical" id="thm_idealGeneratedByFinitelyManyElementsIsIdeal-2-2">
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_idealGeneratedByFinitelyManyElementsIsIdeal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm_idealGeneratedByFinitelyManyElementsIsIdeal-2-2">
 <div class="para">For closure under addition:</div>
 <div class="displaymath process-math" id="thm_idealGeneratedByFinitelyManyElementsIsIdeal-2-2-1">
 \begin{align*}
@@ -904,7 +813,9 @@ r(x)p(x) = r(x)xp'(x) = x(r(x)p'(x))
 </div>
 <div class="para">which is in <span class="process-math">\(I\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="thm_idealGeneratedByFinitelyManyElementsIsIdeal-2-3">
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_idealGeneratedByFinitelyManyElementsIsIdeal-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm_idealGeneratedByFinitelyManyElementsIsIdeal-2-3">
 <div class="para">For closure under left-multiplication:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -912,37 +823,97 @@ r(r_1a_1+\cdots + r_na_n) = (rr_1)a_1 + \cdots + (rr_n)a_n
 \end{equation*}
 </div>
 <div class="para">which is in <span class="process-math">\(I\text{.}\)</span> We conclude that <span class="process-math">\(I\)</span> is an ideal.</div>
-</div></article></details><article class="example example-like" id="ex_nonPrincipalIdeal"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">A Non-Principal Ideal.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_idealGeneratedByFinitelyManyElementsIsIdeal-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.12.1"><a href="#thm_idealGeneratedByFinitelyManyElementsIsIdeal-2" title="Copy heading and permalink for Proof 3.2.12.1" aria-label="Copy heading and permalink for Proof 3.2.12.1">🔗</a></div></article></details><article class="example example-like" id="ex_nonPrincipalIdeal"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Non-Principal Ideal.</span>
 </h4>
-<div class="para" id="ex_nonPrincipalIdeal-2-1">Take <span class="process-math">\((2,x)\subseteq\Z[x]\text{.}\)</span> We claim that <span class="process-math">\((2,x)\)</span> cannot be generated by a single element. Indeed, suppose <span class="process-math">\((2,x) = (f(x))\)</span> for some polynomial <span class="process-math">\(f(x)\in\Z[x]\text{.}\)</span>
-</div> <div class="para" id="ex_nonPrincipalIdeal-2-2">Since <span class="process-math">\(2 = 1\cdot 2 + 0\cdot x\in (2,x)\text{,}\)</span> we know that <span class="process-math">\(2\in (f(x))\text{.}\)</span> Hence, <span class="process-math">\(2 = f(x)\cdot q(x)\)</span> for some polynomial <span class="process-math">\(q(x)\text{.}\)</span> By comparing degrees, <span class="process-math">\(\deg(f(x)) = 0\text{.}\)</span> In particular, <span class="process-math">\(f(x)\)</span> is a constant that is divides <span class="process-math">\(2\text{.}\)</span> This means that <span class="process-math">\(f(x) = \pm 1\)</span> or <span class="process-math">\(\pm 2\text{.}\)</span>
-</div> <div class="para" id="ex_nonPrincipalIdeal-2-3">It cannot be that <span class="process-math">\(f(x) = \pm 1\)</span> (Exercise???). There will be an easier way to prove this when we learn the Noether Isomorphism Theorem. It follows then that <span class="process-math">\(f(x) = \pm 2\text{.}\)</span> This means that <span class="process-math">\((2,x) = (2)\text{.}\)</span> But this is impossible. Indeed, notice that <span class="process-math">\(x\in (2,x) = (2)\)</span> but every element of <span class="process-math">\((2)\)</span> has even coefficients. This contradiction shows that <span class="process-math">\((2,x)\)</span> is not a principal ideal. In particular, <span class="process-math">\(\Z[x]\)</span> is not a principal ideal domain.</div></article><div class="para" id="ssec_idealsGeneratedByASet-8">It turns out that any ideal in <span class="process-math">\(\Z[x]\)</span> can be generated by at most two elements. The proof of this is beyond the scope of this textbook.</div></section><section class="exercises" id="exers_ideals"><h3 class="heading hide-type">
-<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="space"> </span><span class="title">Exercises</span>
+<div class="para" id="ex_nonPrincipalIdeal-2-1">Take <span class="process-math">\((2,x)\subseteq\Z[x]\text{.}\)</span> We claim that <span class="process-math">\((2,x)\)</span> cannot be generated by a single element. Indeed, suppose <span class="process-math">\((2,x) = (f(x))\)</span> for some polynomial <span class="process-math">\(f(x)\in\Z[x]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_nonPrincipalIdeal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex_nonPrincipalIdeal-2-2">Since <span class="process-math">\(2 = 1\cdot 2 + 0\cdot x\in (2,x)\text{,}\)</span> we know that <span class="process-math">\(2\in (f(x))\text{.}\)</span> Hence, <span class="process-math">\(2 = f(x)\cdot q(x)\)</span> for some polynomial <span class="process-math">\(q(x)\text{.}\)</span> By comparing degrees, <span class="process-math">\(\deg(f(x)) = 0\text{.}\)</span> In particular, <span class="process-math">\(f(x)\)</span> is a constant that is divides <span class="process-math">\(2\text{.}\)</span> This means that <span class="process-math">\(f(x) = \pm 1\)</span> or <span class="process-math">\(\pm 2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_nonPrincipalIdeal-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex_nonPrincipalIdeal-2-3">It cannot be that <span class="process-math">\(f(x) = \pm 1\)</span> (Exercise???). There will be an easier way to prove this when we learn the Noether Isomorphism Theorem. It follows then that <span class="process-math">\(f(x) = \pm 2\text{.}\)</span> This means that <span class="process-math">\((2,x) = (2)\text{.}\)</span> But this is impossible. Indeed, notice that <span class="process-math">\(x\in (2,x) = (2)\)</span> but every element of <span class="process-math">\((2)\)</span> has even coefficients. This contradiction shows that <span class="process-math">\((2,x)\)</span> is not a principal ideal. In particular, <span class="process-math">\(\Z[x]\)</span> is not a principal ideal domain.<div class="autopermalink" data-description="Paragraph"><a href="#ex_nonPrincipalIdeal-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.2.13: A Non-Principal Ideal"><a href="#ex_nonPrincipalIdeal" title="Copy heading and permalink for Example 3.2.13: A Non-Principal Ideal" aria-label="Copy heading and permalink for Example 3.2.13: A Non-Principal Ideal">🔗</a></div></article><div class="para" id="ssec_idealsGeneratedByASet-8">It turns out that any ideal in <span class="process-math">\(\Z[x]\)</span> can be generated by at most two elements. The proof of this is beyond the scope of this textbook.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_idealsGeneratedByASet-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.2.4: Ideals Generated by a Set"><a href="#ssec_idealsGeneratedByASet" title="Copy heading and permalink for Subsection 3.2.4: Ideals Generated by a Set" aria-label="Copy heading and permalink for Subsection 3.2.4: Ideals Generated by a Set">🔗</a></div></section><section class="exercises" id="exers_ideals"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="exers_ideals-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-1-1-1">Mark the following as true or false.</div> <ol class="lower-alpha" id="exers_ideals-1-1-2">
-<li id="exers_ideals-1-1-2-1"><div class="para" id="exers_ideals-1-1-2-1-1">Ideals are subrings.</div></li>
-<li id="exers_ideals-1-1-2-2"><div class="para" id="exers_ideals-1-1-2-2-1">All rings have ideals.</div></li>
-<li id="exers_ideals-1-1-2-3"><div class="para" id="exers_ideals-1-1-2-3-1">The ideal <span class="process-math">\((2)\subseteq \Z/5\)</span> is a proper ideal.</div></li>
-<li id="exers_ideals-1-1-2-4"><div class="para" id="exers_ideals-1-1-2-4-1">The ideal <span class="process-math">\((2)\subseteq\Z/6\)</span> is a proper ideal.</div></li>
-<li id="exers_ideals-1-1-2-5"><div class="para" id="exers_ideals-1-1-2-5-1">All ideals are principal ideals.</div></li>
-<li id="exers_ideals-1-1-2-6"><div class="para" id="exers_ideals-1-1-2-6-1">All principal ideals are ideals.</div></li>
-<li id="exers_ideals-1-1-2-7"><div class="para" id="exers_ideals-1-1-2-7-1">The kernel of a homomorphism is an ideal.</div></li>
-<li id="exers_ideals-1-1-2-8"><div class="para" id="exers_ideals-1-1-2-8-1">An ideal <span class="process-math">\(I\subseteq R\)</span> is all of <span class="process-math">\(R\)</span> if <span class="process-math">\(I\)</span> contains a zero-divisor.</div></li>
-<li id="exers_ideals-1-1-2-9"><div class="para" id="exers_ideals-1-1-2-9-1">Fields don’t have ideals.</div></li>
-<li id="exers_ideals-1-1-2-10"><div class="para" id="exers_ideals-1-1-2-10-1">Matrix rings have non-trivial ideals.</div></li>
-</ol></article><article class="exercise exercise-like" id="exers_ideals-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-2-1-1">In the Gaussian Integers, prove that the ideal generated by <span class="process-math">\(i\)</span> is all of <span class="process-math">\(\Z[i]\)</span> but the ideal generated by <span class="process-math">\(1+i\)</span> is a proper ideal.</div></article><article class="exercise exercise-like" id="exers_ideals-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-3-1-1">Argue that in <span class="process-math">\(\Z/6\text{,}\)</span> there is an equality of ideals <span class="process-math">\((2) = (4)\text{.}\)</span> In view of <a href="sec_ideals.html#thm_principalGeneratorsUnits" class="xref" data-knowl="./knowl/xref/thm_principalGeneratorsUnits.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.10">Theorem 3.2.10</a>, why does this make sense?</div></article><article class="exercise exercise-like" id="exers_ideals-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-4-1-1">Given <span class="process-math">\(\bar{a}\in \Z/m\text{,}\)</span> when is <span class="process-math">\((\bar{a})\)</span> a proper ideal? Can you describe it’s elements?</div></article><article class="exercise exercise-like" id="exer_subidealsZ12"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="exer_subidealsZ12-1-1">What are all the sub-ideals of <span class="process-math">\((12)\subseteq\Z\text{?}\)</span> That is, what are the ideals <span class="process-math">\(I\subseteq \Z\)</span> such that <span class="process-math">\(I\subseteq (12)\text{?}\)</span>
-</div></article><article class="exercise exercise-like" id="exers_ideals-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-6-1-1">Prove that for any <span class="process-math">\(n\gt 1\text{,}\)</span> there are only finitely many sub-ideals of <span class="process-math">\((n)\subseteq\Z\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exers_ideals-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-7-1-1">Show that not all ideals in <span class="process-math">\(\C[x,y]\)</span> are principal by showing <span class="process-math">\((x,y)\)</span> is not principally generated.</div></article><article class="exercise exercise-like" id="exers_ideals-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-8-1-1">Prove that the ideal <span class="process-math">\((3,x^2)\subseteq\mathbb{Z}[x]\)</span> is not a principal ideal.</div></article><article class="exercise exercise-like" id="exers_ideals-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para logical" id="exers_ideals-9-4-1">
+<article class="exercise exercise-like" id="exers_ideals-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_ideals-1-1-1">Mark the following as true or false.<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="exers_ideals-1-1-2">
+<li id="exers_ideals-1-1-2-1">
+<div class="para" id="exers_ideals-1-1-2-1-1">Ideals are subrings.<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.5.1.a"><a href="#exers_ideals-1-1-2-1" title="Copy heading and permalink for Item 3.2.5.1.a" aria-label="Copy heading and permalink for Item 3.2.5.1.a">🔗</a></div>
+</li>
+<li id="exers_ideals-1-1-2-2">
+<div class="para" id="exers_ideals-1-1-2-2-1">All rings have ideals.<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.5.1.b"><a href="#exers_ideals-1-1-2-2" title="Copy heading and permalink for Item 3.2.5.1.b" aria-label="Copy heading and permalink for Item 3.2.5.1.b">🔗</a></div>
+</li>
+<li id="exers_ideals-1-1-2-3">
+<div class="para" id="exers_ideals-1-1-2-3-1">The ideal <span class="process-math">\((2)\subseteq \Z/5\)</span> is a proper ideal.<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.5.1.c"><a href="#exers_ideals-1-1-2-3" title="Copy heading and permalink for Item 3.2.5.1.c" aria-label="Copy heading and permalink for Item 3.2.5.1.c">🔗</a></div>
+</li>
+<li id="exers_ideals-1-1-2-4">
+<div class="para" id="exers_ideals-1-1-2-4-1">The ideal <span class="process-math">\((2)\subseteq\Z/6\)</span> is a proper ideal.<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-1-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.5.1.d"><a href="#exers_ideals-1-1-2-4" title="Copy heading and permalink for Item 3.2.5.1.d" aria-label="Copy heading and permalink for Item 3.2.5.1.d">🔗</a></div>
+</li>
+<li id="exers_ideals-1-1-2-5">
+<div class="para" id="exers_ideals-1-1-2-5-1">All ideals are principal ideals.<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-1-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.5.1.e"><a href="#exers_ideals-1-1-2-5" title="Copy heading and permalink for Item 3.2.5.1.e" aria-label="Copy heading and permalink for Item 3.2.5.1.e">🔗</a></div>
+</li>
+<li id="exers_ideals-1-1-2-6">
+<div class="para" id="exers_ideals-1-1-2-6-1">All principal ideals are ideals.<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-1-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.5.1.f"><a href="#exers_ideals-1-1-2-6" title="Copy heading and permalink for Item 3.2.5.1.f" aria-label="Copy heading and permalink for Item 3.2.5.1.f">🔗</a></div>
+</li>
+<li id="exers_ideals-1-1-2-7">
+<div class="para" id="exers_ideals-1-1-2-7-1">The kernel of a homomorphism is an ideal.<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-1-1-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.5.1.g"><a href="#exers_ideals-1-1-2-7" title="Copy heading and permalink for Item 3.2.5.1.g" aria-label="Copy heading and permalink for Item 3.2.5.1.g">🔗</a></div>
+</li>
+<li id="exers_ideals-1-1-2-8">
+<div class="para" id="exers_ideals-1-1-2-8-1">An ideal <span class="process-math">\(I\subseteq R\)</span> is all of <span class="process-math">\(R\)</span> if <span class="process-math">\(I\)</span> contains a zero-divisor.<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-1-1-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.5.1.h"><a href="#exers_ideals-1-1-2-8" title="Copy heading and permalink for Item 3.2.5.1.h" aria-label="Copy heading and permalink for Item 3.2.5.1.h">🔗</a></div>
+</li>
+<li id="exers_ideals-1-1-2-9">
+<div class="para" id="exers_ideals-1-1-2-9-1">Fields don’t have ideals.<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-1-1-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.5.1.i"><a href="#exers_ideals-1-1-2-9" title="Copy heading and permalink for Item 3.2.5.1.i" aria-label="Copy heading and permalink for Item 3.2.5.1.i">🔗</a></div>
+</li>
+<li id="exers_ideals-1-1-2-10">
+<div class="para" id="exers_ideals-1-1-2-10-1">Matrix rings have non-trivial ideals.<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-1-1-2-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.5.1.j"><a href="#exers_ideals-1-1-2-10" title="Copy heading and permalink for Item 3.2.5.1.j" aria-label="Copy heading and permalink for Item 3.2.5.1.j">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.2.5.1"><a href="#exers_ideals-1" title="Copy heading and permalink for Exercise 3.2.5.1" aria-label="Copy heading and permalink for Exercise 3.2.5.1">🔗</a></div></article><article class="exercise exercise-like" id="exers_ideals-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_ideals-2-1-1">In the Gaussian Integers, prove that the ideal generated by <span class="process-math">\(i\)</span> is all of <span class="process-math">\(\Z[i]\)</span> but the ideal generated by <span class="process-math">\(1+i\)</span> is a proper ideal.<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.2"><a href="#exers_ideals-2" title="Copy heading and permalink for Exercise 3.2.5.2" aria-label="Copy heading and permalink for Exercise 3.2.5.2">🔗</a></div></article><article class="exercise exercise-like" id="exers_ideals-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_ideals-3-1-1">Argue that in <span class="process-math">\(\Z/6\text{,}\)</span> there is an equality of ideals <span class="process-math">\((2) = (4)\text{.}\)</span> In view of <a href="sec_ideals.html#thm_principalGeneratorsUnits" class="xref" data-knowl="./knowl/xref/thm_principalGeneratorsUnits.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.10">Theorem 3.2.10</a>, why does this make sense?<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.3"><a href="#exers_ideals-3" title="Copy heading and permalink for Exercise 3.2.5.3" aria-label="Copy heading and permalink for Exercise 3.2.5.3">🔗</a></div></article><article class="exercise exercise-like" id="exers_ideals-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_ideals-4-1-1">Given <span class="process-math">\(\bar{a}\in \Z/m\text{,}\)</span> when is <span class="process-math">\((\bar{a})\)</span> a proper ideal? Can you describe it’s elements?<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.4"><a href="#exers_ideals-4" title="Copy heading and permalink for Exercise 3.2.5.4" aria-label="Copy heading and permalink for Exercise 3.2.5.4">🔗</a></div></article><article class="exercise exercise-like" id="exer_subidealsZ12"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exer_subidealsZ12-1-1">What are all the sub-ideals of <span class="process-math">\((12)\subseteq\Z\text{?}\)</span> That is, what are the ideals <span class="process-math">\(I\subseteq \Z\)</span> such that <span class="process-math">\(I\subseteq (12)\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exer_subidealsZ12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.5"><a href="#exer_subidealsZ12" title="Copy heading and permalink for Exercise 3.2.5.5" aria-label="Copy heading and permalink for Exercise 3.2.5.5">🔗</a></div></article><article class="exercise exercise-like" id="exers_ideals-6"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_ideals-6-1-1">Prove that for any <span class="process-math">\(n\gt 1\text{,}\)</span> there are only finitely many sub-ideals of <span class="process-math">\((n)\subseteq\Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.6"><a href="#exers_ideals-6" title="Copy heading and permalink for Exercise 3.2.5.6" aria-label="Copy heading and permalink for Exercise 3.2.5.6">🔗</a></div></article><article class="exercise exercise-like" id="exers_ideals-7"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_ideals-7-1-1">Show that not all ideals in <span class="process-math">\(\C[x,y]\)</span> are principal by showing <span class="process-math">\((x,y)\)</span> is not principally generated.<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.7"><a href="#exers_ideals-7" title="Copy heading and permalink for Exercise 3.2.5.7" aria-label="Copy heading and permalink for Exercise 3.2.5.7">🔗</a></div></article><article class="exercise exercise-like" id="exers_ideals-8"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_ideals-8-1-1">Prove that the ideal <span class="process-math">\((3,x^2)\subseteq\mathbb{Z}[x]\)</span> is not a principal ideal.<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.8"><a href="#exers_ideals-8" title="Copy heading and permalink for Exercise 3.2.5.8" aria-label="Copy heading and permalink for Exercise 3.2.5.8">🔗</a></div></article><article class="exercise exercise-like" id="exers_ideals-9"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="exers_ideals-9-3-1">
 <div class="para">Suppose <span class="process-math">\(I,J\subseteq R\)</span> are ideals of the ring <span class="process-math">\(R\text{.}\)</span> Define</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -950,9 +921,13 @@ I+J = \{i+j\mid i\in I, j\in J\}.
 \end{equation*}
 </div>
 <div class="para">Show that <span class="process-math">\(I+J\)</span> is an ideal.</div>
-</div></article><article class="exercise exercise-like" id="exers_ideals-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-10-1-1">In the notation of the previous exercise, consider <span class="process-math">\((4),(6)\subseteq\Z\text{.}\)</span> What familiar ideal is <span class="process-math">\((4)+(6)\text{?}\)</span> Can you generalize?</div></article><article class="exercise exercise-like" id="exers_ideals-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="para logical" id="exers_ideals-11-4-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.9"><a href="#exers_ideals-9" title="Copy heading and permalink for Exercise 3.2.5.9" aria-label="Copy heading and permalink for Exercise 3.2.5.9">🔗</a></div></article><article class="exercise exercise-like" id="exers_ideals-10"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_ideals-10-1-1">In the notation of the previous exercise, consider <span class="process-math">\((4),(6)\subseteq\Z\text{.}\)</span> What familiar ideal is <span class="process-math">\((4)+(6)\text{?}\)</span> Can you generalize?<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.10"><a href="#exers_ideals-10" title="Copy heading and permalink for Exercise 3.2.5.10" aria-label="Copy heading and permalink for Exercise 3.2.5.10">🔗</a></div></article><article class="exercise exercise-like" id="exers_ideals-11"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="exers_ideals-11-3-1">
 <div class="para">Suppose <span class="process-math">\(I,J\subseteq R\)</span> are ideals of the ring <span class="process-math">\(R\text{.}\)</span> Define</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -960,8 +935,12 @@ I\cdot J = \left\{\sum_{k=1}^mi_k\cdot j_k\mid i_k\in I, j_k\in J\}
 \end{equation*}
 </div>
 <div class="para">to be the set of finite sums of products of elements of <span class="process-math">\(I\)</span> and <span class="process-math">\(J\text{.}\)</span> Show that <span class="process-math">\(I\cdot J\)</span> is an ideal.</div>
-</div></article><article class="exercise exercise-like" id="exers_ideals-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-12-1-1">In the notation of the previous exercise, consider <span class="process-math">\((4),(6)\subseteq\Z\text{.}\)</span> What familiar ideal is <span class="process-math">\((4)\cdot (6)\text{?}\)</span> Can you generalize?</div></article><article class="exercise exercise-like" id="exers_ideals-13"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-11-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.11"><a href="#exers_ideals-11" title="Copy heading and permalink for Exercise 3.2.5.11" aria-label="Copy heading and permalink for Exercise 3.2.5.11">🔗</a></div></article><article class="exercise exercise-like" id="exers_ideals-12"><h4 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_ideals-12-1-1">In the notation of the previous exercise, consider <span class="process-math">\((4),(6)\subseteq\Z\text{.}\)</span> What familiar ideal is <span class="process-math">\((4)\cdot (6)\text{?}\)</span> Can you generalize?<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.12"><a href="#exers_ideals-12" title="Copy heading and permalink for Exercise 3.2.5.12" aria-label="Copy heading and permalink for Exercise 3.2.5.12">🔗</a></div></article><article class="exercise exercise-like" id="exers_ideals-13"><h4 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para logical" id="exers_ideals-13-2-1">
 <div class="para">An important ideal that arises in commutative algebra are <dfn class="terminology">annihilator ideals</dfn>. Let <span class="process-math">\(R\)</span> be a commutative ring and <span class="process-math">\(r\in R\)</span> an element. Define the annihilator of <span class="process-math">\(r\)</span> to be the set</div>
 <div class="displaymath process-math">
@@ -970,12 +949,16 @@ I\cdot J = \left\{\sum_{k=1}^mi_k\cdot j_k\mid i_k\in I, j_k\in J\}
 \end{equation*}
 </div>
 <div class="para">Prove that <span class="process-math">\(\mathrm{Ann}_R(r)\)</span> is always an ideal.</div>
-</div></article><article class="exercise exercise-like" id="exers_ideals-14"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-14-1-1">In the notation of the previous exercise, what is <span class="process-math">\(\mathrm{Ann}_{\Z/6}(\bar{3})\text{?}\)</span> What about <span class="process-math">\(\mathrm{Ann}_{\Z}(3)\text{?}\)</span>
-</div></article><article class="exercise exercise-like" id="exers_ideals-15"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-15-1-1">Prove that if <span class="process-math">\(R\)</span> is a domain and <span class="process-math">\(s\in R\text{,}\)</span> then <span class="process-math">\(\mathrm{Ann}_R(s) = \{0\}\)</span> unless <span class="process-math">\(s=0\)</span> in which case the annihilator is all of <span class="process-math">\(R\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exers_ideals-16"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
-<div class="para logical" id="exers_ideals-16-3-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.13"><a href="#exers_ideals-13" title="Copy heading and permalink for Exercise 3.2.5.13" aria-label="Copy heading and permalink for Exercise 3.2.5.13">🔗</a></div></article><article class="exercise exercise-like" id="exers_ideals-14"><h4 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_ideals-14-1-1">In the notation of the previous exercise, what is <span class="process-math">\(\mathrm{Ann}_{\Z/6}(\bar{3})\text{?}\)</span> What about <span class="process-math">\(\mathrm{Ann}_{\Z}(3)\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.14"><a href="#exers_ideals-14" title="Copy heading and permalink for Exercise 3.2.5.14" aria-label="Copy heading and permalink for Exercise 3.2.5.14">🔗</a></div></article><article class="exercise exercise-like" id="exers_ideals-15"><h4 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_ideals-15-1-1">Prove that if <span class="process-math">\(R\)</span> is a domain and <span class="process-math">\(s\in R\text{,}\)</span> then <span class="process-math">\(\mathrm{Ann}_R(s) = \{0\}\)</span> unless <span class="process-math">\(s=0\)</span> in which case the annihilator is all of <span class="process-math">\(R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.15"><a href="#exers_ideals-15" title="Copy heading and permalink for Exercise 3.2.5.15" aria-label="Copy heading and permalink for Exercise 3.2.5.15">🔗</a></div></article><article class="exercise exercise-like" id="exers_ideals-16"><h4 class="heading"><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="exers_ideals-16-2-1">
 <div class="para">Another important ideal that arises in commutative algebra are <dfn class="terminology">radical ideals</dfn>. Let <span class="process-math">\(I\subseteq R\)</span> be an ideal in a commutative ring. Define the radica of <span class="process-math">\(r\)</span> to be the set</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -983,16 +966,21 @@ I\cdot J = \left\{\sum_{k=1}^mi_k\cdot j_k\mid i_k\in I, j_k\in J\}
 \end{equation*}
 </div>
 <div class="para">Prove that <span class="process-math">\(\sqrt{I}\)</span> is an ideal.</div>
-</div></article><article class="exercise exercise-like" id="exers_ideals-17"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-17-1-1">In the notation of the previous exercise, prove that the radical of <span class="process-math">\((4)\)</span> in <span class="process-math">\(\Z\)</span> is <span class="process-math">\((2)\text{.}\)</span> Hint: <span class="process-math">\((2)\subseteq \sqrt{(4)}\)</span> should be simple. For the reverse containment, if <span class="process-math">\(a\in\Z\)</span> is not in <span class="process-math">\((2)\text{,}\)</span> then it is odd. Argue that the radical cannot have an odd number.</div></article><article class="exercise exercise-like" id="exers_ideals-18"><h4 class="heading"><span class="codenumber">18<span class="period">.</span></span></h4>
-<div class="para" id="exers_ideals-18-1-1">Given any ideal <span class="process-math">\((n)\subseteq \Z\text{,}\)</span> what is <span class="process-math">\(\sqrt{(n)}\text{?}\)</span>
-</div></article></section></section></div>
-<div class="ptx-content-footer">
+<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-16-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.16"><a href="#exers_ideals-16" title="Copy heading and permalink for Exercise 3.2.5.16" aria-label="Copy heading and permalink for Exercise 3.2.5.16">🔗</a></div></article><article class="exercise exercise-like" id="exers_ideals-17"><h4 class="heading"><span class="codenumber">17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_ideals-17-1-1">In the notation of the previous exercise, prove that the radical of <span class="process-math">\((4)\)</span> in <span class="process-math">\(\Z\)</span> is <span class="process-math">\((2)\text{.}\)</span> Hint: <span class="process-math">\((2)\subseteq \sqrt{(4)}\)</span> should be simple. For the reverse containment, if <span class="process-math">\(a\in\Z\)</span> is not in <span class="process-math">\((2)\text{,}\)</span> then it is odd. Argue that the radical cannot have an odd number.<div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.17"><a href="#exers_ideals-17" title="Copy heading and permalink for Exercise 3.2.5.17" aria-label="Copy heading and permalink for Exercise 3.2.5.17">🔗</a></div></article><article class="exercise exercise-like" id="exers_ideals-18"><h4 class="heading"><span class="codenumber">18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_ideals-18-1-1">Given any ideal <span class="process-math">\((n)\subseteq \Z\text{,}\)</span> what is <span class="process-math">\(\sqrt{(n)}\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exers_ideals-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.5.18"><a href="#exers_ideals-18" title="Copy heading and permalink for Exercise 3.2.5.18" aria-label="Copy heading and permalink for Exercise 3.2.5.18">🔗</a></div></article><div class="autopermalink" data-description="Exercises 3.2.5"><a href="#exers_ideals" title="Copy heading and permalink for Exercises 3.2.5" aria-label="Copy heading and permalink for Exercises 3.2.5">🔗</a></div></section><div class="autopermalink" data-description="Section 3.2: Ideals"><a href="#sec_ideals" title="Copy heading and permalink for Section 3.2: Ideals" aria-label="Copy heading and permalink for Section 3.2: Ideals">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec_homomorphisms.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_quotientRings.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>

@@ -6,14 +6,19 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Homomorphisms</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Rings First">
-<meta property="book:author" content="Bronson Lim">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,26 +74,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/style_oscarlevin.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/colors_blue_grey.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Rings First">
+<meta property="book:author" content="Bronson Morningstar">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -110,283 +101,24 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.4.4';
+eBookConfig.runestone_version = '7.9.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.00db6230172ad960.bundle.js"></script><script src="_static/prefix-347.8328b60515045466.bundle.js"></script><script src="_static/prefix-runestone.aa624e4071d017c3.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.51d479d87f8466bb.css">
-<style>
-#ssec_wellordering-8-1-3 { counter-set: ssec_wellordering-8-1-3 0; }
-#ssec_wellordering-8-1-3 > li::marker { content: ""counter(ssec_wellordering-8-1-3,decimal)"."; }
-#ssec_wellordering-8-1-3 > li { counter-increment: ssec_wellordering-8-1-3; }
-#ssec_wellordering-8-2-1 { counter-set: ssec_wellordering-8-2-1 0; }
-#ssec_wellordering-8-2-1 > li::marker { content: ""counter(ssec_wellordering-8-2-1,decimal)"."; }
-#ssec_wellordering-8-2-1 > li { counter-increment: ssec_wellordering-8-2-1; }
-#thm_mathematical_induction-2-3 { counter-set: thm_mathematical_induction-2-3 0; }
-#thm_mathematical_induction-2-3 > li::marker { content: ""counter(thm_mathematical_induction-2-3,decimal)"."; }
-#thm_mathematical_induction-2-3 > li { counter-increment: thm_mathematical_induction-2-3; }
-#sec-induction-tf-1-2 { counter-set: sec-induction-tf-1-2 0; }
-#sec-induction-tf-1-2 > li::marker { content: "("counter(sec-induction-tf-1-2,lower-alpha)")"; }
-#sec-induction-tf-1-2 > li { counter-increment: sec-induction-tf-1-2; }
-#sec-induction-smallest-elements1-1-2 { counter-set: sec-induction-smallest-elements1-1-2 0; }
-#sec-induction-smallest-elements1-1-2 > li::marker { content: "("counter(sec-induction-smallest-elements1-1-2,lower-alpha)")"; }
-#sec-induction-smallest-elements1-1-2 > li { counter-increment: sec-induction-smallest-elements1-1-2; }
-#sec-induction-smallest-elements2-1-2 { counter-set: sec-induction-smallest-elements2-1-2 0; }
-#sec-induction-smallest-elements2-1-2 > li::marker { content: "("counter(sec-induction-smallest-elements2-1-2,lower-alpha)")"; }
-#sec-induction-smallest-elements2-1-2 > li { counter-increment: sec-induction-smallest-elements2-1-2; }
-#sec-divisibility-gcd-3-5-1-1-2 { counter-set: sec-divisibility-gcd-3-5-1-1-2 0; }
-#sec-divisibility-gcd-3-5-1-1-2 > li::marker { content: ""counter(sec-divisibility-gcd-3-5-1-1-2,decimal)"."; }
-#sec-divisibility-gcd-3-5-1-1-2 > li { counter-increment: sec-divisibility-gcd-3-5-1-1-2; }
-#def_gcdZ-3-1-9 { counter-set: def_gcdZ-3-1-9 0; }
-#def_gcdZ-3-1-9 > li::marker { content: ""counter(def_gcdZ-3-1-9,decimal)"."; }
-#def_gcdZ-3-1-9 > li { counter-increment: def_gcdZ-3-1-9; }
-#act-gcdcomputations-1-1-2 { counter-set: act-gcdcomputations-1-1-2 0; }
-#act-gcdcomputations-1-1-2 > li::marker { content: ""counter(act-gcdcomputations-1-1-2,decimal)"."; }
-#act-gcdcomputations-1-1-2 > li { counter-increment: act-gcdcomputations-1-1-2; }
-#sec-divisibility-gcd-tf-1-2 { counter-set: sec-divisibility-gcd-tf-1-2 0; }
-#sec-divisibility-gcd-tf-1-2 > li::marker { content: "("counter(sec-divisibility-gcd-tf-1-2,lower-alpha)")"; }
-#sec-divisibility-gcd-tf-1-2 > li { counter-increment: sec-divisibility-gcd-tf-1-2; }
-#sec-divisibility-gcd-quorem-1-2 { counter-set: sec-divisibility-gcd-quorem-1-2 0; }
-#sec-divisibility-gcd-quorem-1-2 > li::marker { content: "("counter(sec-divisibility-gcd-quorem-1-2,lower-alpha)")"; }
-#sec-divisibility-gcd-quorem-1-2 > li { counter-increment: sec-divisibility-gcd-quorem-1-2; }
-#exer_primesFactorizationTF-1-2 { counter-set: exer_primesFactorizationTF-1-2 0; }
-#exer_primesFactorizationTF-1-2 > li::marker { content: "("counter(exer_primesFactorizationTF-1-2,lower-alpha)")"; }
-#exer_primesFactorizationTF-1-2 > li { counter-increment: exer_primesFactorizationTF-1-2; }
-#exer-primes-factorization-factorizations-1-2 { counter-set: exer-primes-factorization-factorizations-1-2 0; }
-#exer-primes-factorization-factorizations-1-2 > li::marker { content: "("counter(exer-primes-factorization-factorizations-1-2,lower-alpha)")"; }
-#exer-primes-factorization-factorizations-1-2 > li { counter-increment: exer-primes-factorization-factorizations-1-2; }
-#exer-primes-factorization-isprime-1-1-1 { counter-set: exer-primes-factorization-isprime-1-1-1 0; }
-#exer-primes-factorization-isprime-1-1-1 > li::marker { content: "("counter(exer-primes-factorization-isprime-1-1-1,lower-alpha)")"; }
-#exer-primes-factorization-isprime-1-1-1 > li { counter-increment: exer-primes-factorization-isprime-1-1-1; }
-#ssec_congruenceModm-4-1-1-1 { counter-set: ssec_congruenceModm-4-1-1-1 0; }
-#ssec_congruenceModm-4-1-1-1 > li::marker { content: ""counter(ssec_congruenceModm-4-1-1-1,decimal)"."; }
-#ssec_congruenceModm-4-1-1-1 > li { counter-increment: ssec_congruenceModm-4-1-1-1; }
-#def-arithemticmodm-1-1-3 { counter-set: def-arithemticmodm-1-1-3 0; }
-#def-arithemticmodm-1-1-3 > li::marker { content: ""counter(def-arithemticmodm-1-1-3,decimal)"."; }
-#def-arithemticmodm-1-1-3 > li { counter-increment: def-arithemticmodm-1-1-3; }
-#ssec_integersModm-12-1-2 { counter-set: ssec_integersModm-12-1-2 0; }
-#ssec_integersModm-12-1-2 > li::marker { content: ""counter(ssec_integersModm-12-1-2,decimal)"."; }
-#ssec_integersModm-12-1-2 > li { counter-increment: ssec_integersModm-12-1-2; }
-#invest-tables-1-2 { counter-set: invest-tables-1-2 0; }
-#invest-tables-1-2 > li::marker { content: ""counter(invest-tables-1-2,decimal)"."; }
-#invest-tables-1-2 > li { counter-increment: invest-tables-1-2; }
-#theorem_cancelinZp-1-1-4 { counter-set: theorem_cancelinZp-1-1-4 0; }
-#theorem_cancelinZp-1-1-4 > li::marker { content: ""counter(theorem_cancelinZp-1-1-4,decimal)"."; }
-#theorem_cancelinZp-1-1-4 > li { counter-increment: theorem_cancelinZp-1-1-4; }
-#integers-mod-m-tf-1-2 { counter-set: integers-mod-m-tf-1-2 0; }
-#integers-mod-m-tf-1-2 > li::marker { content: "("counter(integers-mod-m-tf-1-2,lower-alpha)")"; }
-#integers-mod-m-tf-1-2 > li { counter-increment: integers-mod-m-tf-1-2; }
-#exers-integers-mod-m-4-1-2 { counter-set: exers-integers-mod-m-4-1-2 0; }
-#exers-integers-mod-m-4-1-2 > li::marker { content: "("counter(exers-integers-mod-m-4-1-2,lower-alpha)")"; }
-#exers-integers-mod-m-4-1-2 > li { counter-increment: exers-integers-mod-m-4-1-2; }
-#invest-binop-1-1-2 { counter-set: invest-binop-1-1-2 0; }
-#invest-binop-1-1-2 > li::marker { content: ""counter(invest-binop-1-1-2,decimal)"."; }
-#invest-binop-1-1-2 > li { counter-increment: invest-binop-1-1-2; }
-#def_field-2-1-7 { counter-set: def_field-2-1-7 0; }
-#def_field-2-1-7 > li::marker { content: ""counter(def_field-2-1-7,decimal)"."; }
-#def_field-2-1-7 > li { counter-increment: def_field-2-1-7; }
-#exer_fieldexamples-1-1-1 { counter-set: exer_fieldexamples-1-1-1 0; }
-#exer_fieldexamples-1-1-1 > li::marker { content: ""counter(exer_fieldexamples-1-1-1,decimal)"."; }
-#exer_fieldexamples-1-1-1 > li { counter-increment: exer_fieldexamples-1-1-1; }
-#exer_fieldexamples-2-1-1 { counter-set: exer_fieldexamples-2-1-1 0; }
-#exer_fieldexamples-2-1-1 > li::marker { content: ""counter(exer_fieldexamples-2-1-1,decimal)"."; }
-#exer_fieldexamples-2-1-1 > li { counter-increment: exer_fieldexamples-2-1-1; }
-#thm_fieldproperties-2-1-2 { counter-set: thm_fieldproperties-2-1-2 0; }
-#thm_fieldproperties-2-1-2 > li::marker { content: ""counter(thm_fieldproperties-2-1-2,decimal)"."; }
-#thm_fieldproperties-2-1-2 > li { counter-increment: thm_fieldproperties-2-1-2; }
-#subsec-propertiesOfFields-3-1 { counter-set: subsec-propertiesOfFields-3-1 0; }
-#subsec-propertiesOfFields-3-1 > li::marker { content: ""counter(subsec-propertiesOfFields-3-1,decimal)"."; }
-#subsec-propertiesOfFields-3-1 > li { counter-increment: subsec-propertiesOfFields-3-1; }
-#subsec-subfieldsAndExtensions-3-3-1-3 { counter-set: subsec-subfieldsAndExtensions-3-3-1-3 0; }
-#subsec-subfieldsAndExtensions-3-3-1-3 > li::marker { content: ""counter(subsec-subfieldsAndExtensions-3-3-1-3,decimal)"."; }
-#subsec-subfieldsAndExtensions-3-3-1-3 > li { counter-increment: subsec-subfieldsAndExtensions-3-3-1-3; }
-#exer_primesFactorizationTF-1-2 { counter-set: exer_primesFactorizationTF-1-2 0; }
-#exer_primesFactorizationTF-1-2 > li::marker { content: "("counter(exer_primesFactorizationTF-1-2,lower-alpha)")"; }
-#exer_primesFactorizationTF-1-2 > li { counter-increment: exer_primesFactorizationTF-1-2; }
-#exers_primesFactorization-3-1-2 { counter-set: exers_primesFactorization-3-1-2 0; }
-#exers_primesFactorization-3-1-2 > li::marker { content: "("counter(exers_primesFactorization-3-1-2,lower-alpha)")"; }
-#exers_primesFactorization-3-1-2 > li { counter-increment: exers_primesFactorization-3-1-2; }
-#exer_complexNumbersAsMatrices-1-2 { counter-set: exer_complexNumbersAsMatrices-1-2 0; }
-#exer_complexNumbersAsMatrices-1-2 > li::marker { content: "("counter(exer_complexNumbersAsMatrices-1-2,lower-alpha)")"; }
-#exer_complexNumbersAsMatrices-1-2 > li { counter-increment: exer_complexNumbersAsMatrices-1-2; }
-#exers_primesFactorization-10-1-2 { counter-set: exers_primesFactorization-10-1-2 0; }
-#exers_primesFactorization-10-1-2 > li::marker { content: "("counter(exers_primesFactorization-10-1-2,lower-alpha)")"; }
-#exers_primesFactorization-10-1-2 > li { counter-increment: exers_primesFactorization-10-1-2; }
-#exers_primesFactorization-11-3-2 { counter-set: exers_primesFactorization-11-3-2 0; }
-#exers_primesFactorization-11-3-2 > li::marker { content: "("counter(exers_primesFactorization-11-3-2,lower-alpha)")"; }
-#exers_primesFactorization-11-3-2 > li { counter-increment: exers_primesFactorization-11-3-2; }
-#def_ring-3-1-6 { counter-set: def_ring-3-1-6 0; }
-#def_ring-3-1-6 > li::marker { content: ""counter(def_ring-3-1-6,decimal)"."; }
-#def_ring-3-1-6 > li { counter-increment: def_ring-3-1-6; }
-#thm_subringTest-3-1-5 { counter-set: thm_subringTest-3-1-5 0; }
-#thm_subringTest-3-1-5 > li::marker { content: ""counter(thm_subringTest-3-1-5,decimal)"."; }
-#thm_subringTest-3-1-5 > li { counter-increment: thm_subringTest-3-1-5; }
-#ssec_subrings-6-1-1-3 { counter-set: ssec_subrings-6-1-1-3 0; }
-#ssec_subrings-6-1-1-3 > li::marker { content: ""counter(ssec_subrings-6-1-1-3,decimal)"."; }
-#ssec_subrings-6-1-1-3 > li { counter-increment: ssec_subrings-6-1-1-3; }
-#exers_rings-1-1-2 { counter-set: exers_rings-1-1-2 0; }
-#exers_rings-1-1-2 > li::marker { content: "("counter(exers_rings-1-1-2,lower-alpha)")"; }
-#exers_rings-1-1-2 > li { counter-increment: exers_rings-1-1-2; }
-#exer_gaussianIntegers-2-2 { counter-set: exer_gaussianIntegers-2-2 0; }
-#exer_gaussianIntegers-2-2 > li::marker { content: "("counter(exer_gaussianIntegers-2-2,lower-alpha)")"; }
-#exer_gaussianIntegers-2-2 > li { counter-increment: exer_gaussianIntegers-2-2; }
-#exers_rings-5-2-2 { counter-set: exers_rings-5-2-2 0; }
-#exers_rings-5-2-2 > li::marker { content: "("counter(exers_rings-5-2-2,lower-alpha)")"; }
-#exers_rings-5-2-2 > li { counter-increment: exers_rings-5-2-2; }
-#ssec_integralDomains-5-1-1-1 { counter-set: ssec_integralDomains-5-1-1-1 0; }
-#ssec_integralDomains-5-1-1-1 > li::marker { content: ""counter(ssec_integralDomains-5-1-1-1,decimal)"."; }
-#ssec_integralDomains-5-1-1-1 > li { counter-increment: ssec_integralDomains-5-1-1-1; }
-#exers_integralDomains-1-1-2 { counter-set: exers_integralDomains-1-1-2 0; }
-#exers_integralDomains-1-1-2 > li::marker { content: "("counter(exers_integralDomains-1-1-2,lower-alpha)")"; }
-#exers_integralDomains-1-1-2 > li { counter-increment: exers_integralDomains-1-1-2; }
-#exer_nilpotent-3-2 { counter-set: exer_nilpotent-3-2 0; }
-#exer_nilpotent-3-2 > li::marker { content: "("counter(exer_nilpotent-3-2,lower-alpha)")"; }
-#exer_nilpotent-3-2 > li { counter-increment: exer_nilpotent-3-2; }
-#ssec_divisibilityInDomains-6-1-1-2 { counter-set: ssec_divisibilityInDomains-6-1-1-2 0; }
-#ssec_divisibilityInDomains-6-1-1-2 > li::marker { content: ""counter(ssec_divisibilityInDomains-6-1-1-2,decimal)"."; }
-#ssec_divisibilityInDomains-6-1-1-2 > li { counter-increment: ssec_divisibilityInDomains-6-1-1-2; }
-#expl-unit-prime-irred-1-1-1 { counter-set: expl-unit-prime-irred-1-1-1 0; }
-#expl-unit-prime-irred-1-1-1 > li::marker { content: ""counter(expl-unit-prime-irred-1-1-1,decimal)"."; }
-#expl-unit-prime-irred-1-1-1 > li { counter-increment: expl-unit-prime-irred-1-1-1; }
-#def_gcdDomain-2-1-7 { counter-set: def_gcdDomain-2-1-7 0; }
-#def_gcdDomain-2-1-7 > li::marker { content: ""counter(def_gcdDomain-2-1-7,decimal)"."; }
-#def_gcdDomain-2-1-7 > li { counter-increment: def_gcdDomain-2-1-7; }
-#alg_euclideanAlgorithmPolynomials-2-1-7 { counter-set: alg_euclideanAlgorithmPolynomials-2-1-7 0; }
-#alg_euclideanAlgorithmPolynomials-2-1-7 > li::marker { content: ""counter(alg_euclideanAlgorithmPolynomials-2-1-7,decimal)"."; }
-#alg_euclideanAlgorithmPolynomials-2-1-7 > li { counter-increment: alg_euclideanAlgorithmPolynomials-2-1-7; }
-#exers_divisibilityIntegralDomains-1-1-2 { counter-set: exers_divisibilityIntegralDomains-1-1-2 0; }
-#exers_divisibilityIntegralDomains-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-1-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-1-1-2; }
-#exers_divisibilityIntegralDomains-3-1-2 { counter-set: exers_divisibilityIntegralDomains-3-1-2 0; }
-#exers_divisibilityIntegralDomains-3-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-3-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-3-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-3-1-2; }
-#exers_divisibilityIntegralDomains-4-1-2 { counter-set: exers_divisibilityIntegralDomains-4-1-2 0; }
-#exers_divisibilityIntegralDomains-4-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-4-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-4-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-4-1-2; }
-#exers_divisibilityIntegralDomains-5-1-2 { counter-set: exers_divisibilityIntegralDomains-5-1-2 0; }
-#exers_divisibilityIntegralDomains-5-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-5-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-5-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-5-1-2; }
-#exers_divisibilityIntegralDomains-6-1-2 { counter-set: exers_divisibilityIntegralDomains-6-1-2 0; }
-#exers_divisibilityIntegralDomains-6-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-6-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-6-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-6-1-2; }
-#exers_divisibilityIntegralDomains-8-1-2 { counter-set: exers_divisibilityIntegralDomains-8-1-2 0; }
-#exers_divisibilityIntegralDomains-8-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-8-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-8-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-8-1-2; }
-#expl-homomorphism-examples-1-2 { counter-set: expl-homomorphism-examples-1-2 0; }
-#expl-homomorphism-examples-1-2 > li::marker { content: ""counter(expl-homomorphism-examples-1-2,decimal)"."; }
-#expl-homomorphism-examples-1-2 > li { counter-increment: expl-homomorphism-examples-1-2; }
-#expl-homomorphism-examples-2-1 { counter-set: expl-homomorphism-examples-2-1 0; }
-#expl-homomorphism-examples-2-1 > li::marker { content: ""counter(expl-homomorphism-examples-2-1,decimal)"."; }
-#expl-homomorphism-examples-2-1 > li { counter-increment: expl-homomorphism-examples-2-1; }
-#sec_homomorphismsTF-1-2 { counter-set: sec_homomorphismsTF-1-2 0; }
-#sec_homomorphismsTF-1-2 > li::marker { content: "("counter(sec_homomorphismsTF-1-2,lower-alpha)")"; }
-#sec_homomorphismsTF-1-2 > li { counter-increment: sec_homomorphismsTF-1-2; }
-#exers_homomorphisms-16-1-2 { counter-set: exers_homomorphisms-16-1-2 0; }
-#exers_homomorphisms-16-1-2 > li::marker { content: "("counter(exers_homomorphisms-16-1-2,lower-alpha)")"; }
-#exers_homomorphisms-16-1-2 > li { counter-increment: exers_homomorphisms-16-1-2; }
-#prop_kernelIsIdeal-1-1-5 { counter-set: prop_kernelIsIdeal-1-1-5 0; }
-#prop_kernelIsIdeal-1-1-5 > li::marker { content: ""counter(prop_kernelIsIdeal-1-1-5,decimal)"."; }
-#prop_kernelIsIdeal-1-1-5 > li { counter-increment: prop_kernelIsIdeal-1-1-5; }
-#def_ideal-2-1-4 { counter-set: def_ideal-2-1-4 0; }
-#def_ideal-2-1-4 > li::marker { content: ""counter(def_ideal-2-1-4,decimal)"."; }
-#def_ideal-2-1-4 > li { counter-increment: def_ideal-2-1-4; }
-#ssec_principalIdeals-9-1-1-2 { counter-set: ssec_principalIdeals-9-1-1-2 0; }
-#ssec_principalIdeals-9-1-1-2 > li::marker { content: ""counter(ssec_principalIdeals-9-1-1-2,decimal)"."; }
-#ssec_principalIdeals-9-1-1-2 > li { counter-increment: ssec_principalIdeals-9-1-1-2; }
-#ssec_principalIdeals-9-2-1 { counter-set: ssec_principalIdeals-9-2-1 0; }
-#ssec_principalIdeals-9-2-1 > li::marker { content: ""counter(ssec_principalIdeals-9-2-1,decimal)"."; }
-#ssec_principalIdeals-9-2-1 > li { counter-increment: ssec_principalIdeals-9-2-1; }
-#exers_ideals-1-1-2 { counter-set: exers_ideals-1-1-2 0; }
-#exers_ideals-1-1-2 > li::marker { content: "("counter(exers_ideals-1-1-2,lower-alpha)")"; }
-#exers_ideals-1-1-2 > li { counter-increment: exers_ideals-1-1-2; }
-#ssec_quotientRings-11-1-2 { counter-set: ssec_quotientRings-11-1-2 0; }
-#ssec_quotientRings-11-1-2 > li::marker { content: ""counter(ssec_quotientRings-11-1-2,decimal)"."; }
-#ssec_quotientRings-11-1-2 > li { counter-increment: ssec_quotientRings-11-1-2; }
-#ssec_quotientRings-13-1-2 { counter-set: ssec_quotientRings-13-1-2 0; }
-#ssec_quotientRings-13-1-2 > li::marker { content: ""counter(ssec_quotientRings-13-1-2,decimal)"."; }
-#ssec_quotientRings-13-1-2 > li { counter-increment: ssec_quotientRings-13-1-2; }
-#ssec_quotientRings-14-3-3 { counter-set: ssec_quotientRings-14-3-3 0; }
-#ssec_quotientRings-14-3-3 > li::marker { content: ""counter(ssec_quotientRings-14-3-3,decimal)"."; }
-#ssec_quotientRings-14-3-3 > li { counter-increment: ssec_quotientRings-14-3-3; }
-#subsec--8-1-2 { counter-set: subsec--8-1-2 0; }
-#subsec--8-1-2 > li::marker { content: ""counter(subsec--8-1-2,decimal)"."; }
-#subsec--8-1-2 > li { counter-increment: subsec--8-1-2; }
-#exers_divisibilityIntegralDomains-1-1-2 { counter-set: exers_divisibilityIntegralDomains-1-1-2 0; }
-#exers_divisibilityIntegralDomains-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-1-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-1-1-2; }
-#exers_divisibilityIntegralDomains-2-1-2 { counter-set: exers_divisibilityIntegralDomains-2-1-2 0; }
-#exers_divisibilityIntegralDomains-2-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-2-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-2-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-2-1-2; }
-#exers_divisibilityIntegralDomains-3-1-2 { counter-set: exers_divisibilityIntegralDomains-3-1-2 0; }
-#exers_divisibilityIntegralDomains-3-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-3-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-3-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-3-1-2; }
-#exers_divisibilityIntegralDomains-4-1-2 { counter-set: exers_divisibilityIntegralDomains-4-1-2 0; }
-#exers_divisibilityIntegralDomains-4-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-4-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-4-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-4-1-2; }
-#exers_divisibilityIntegralDomains-8-1-1-2 { counter-set: exers_divisibilityIntegralDomains-8-1-1-2 0; }
-#exers_divisibilityIntegralDomains-8-1-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-8-1-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-8-1-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-8-1-1-2; }
-#exers_divisibilityIntegralDomains-11-1-2 { counter-set: exers_divisibilityIntegralDomains-11-1-2 0; }
-#exers_divisibilityIntegralDomains-11-1-2 > li::marker { content: "("counter(exers_divisibilityIntegralDomains-11-1-2,lower-alpha)")"; }
-#exers_divisibilityIntegralDomains-11-1-2 > li { counter-increment: exers_divisibilityIntegralDomains-11-1-2; }
-#ssec_principalIdealDomains-6-1-1-4 { counter-set: ssec_principalIdealDomains-6-1-1-4 0; }
-#ssec_principalIdealDomains-6-1-1-4 > li::marker { content: ""counter(ssec_principalIdealDomains-6-1-1-4,decimal)"."; }
-#ssec_principalIdealDomains-6-1-1-4 > li { counter-increment: ssec_principalIdealDomains-6-1-1-4; }
-#ssec_polynomialRingsOverAField-9-1-6-2 { counter-set: ssec_polynomialRingsOverAField-9-1-6-2 0; }
-#ssec_polynomialRingsOverAField-9-1-6-2 > li::marker { content: ""counter(ssec_polynomialRingsOverAField-9-1-6-2,decimal)"."; }
-#ssec_polynomialRingsOverAField-9-1-6-2 > li { counter-increment: ssec_polynomialRingsOverAField-9-1-6-2; }
-#ssec_primeIdeals-7-1-1-1 { counter-set: ssec_primeIdeals-7-1-1-1 0; }
-#ssec_primeIdeals-7-1-1-1 > li::marker { content: ""counter(ssec_primeIdeals-7-1-1-1,decimal)"."; }
-#ssec_primeIdeals-7-1-1-1 > li { counter-increment: ssec_primeIdeals-7-1-1-1; }
-#ssec_primeIdeals-7-2-1-1 { counter-set: ssec_primeIdeals-7-2-1-1 0; }
-#ssec_primeIdeals-7-2-1-1 > li::marker { content: ""counter(ssec_primeIdeals-7-2-1-1,decimal)"."; }
-#ssec_primeIdeals-7-2-1-1 > li { counter-increment: ssec_primeIdeals-7-2-1-1; }
-#exers_principalIdealDomains-1-1-2 { counter-set: exers_principalIdealDomains-1-1-2 0; }
-#exers_principalIdealDomains-1-1-2 > li::marker { content: "("counter(exers_principalIdealDomains-1-1-2,lower-alpha)")"; }
-#exers_principalIdealDomains-1-1-2 > li { counter-increment: exers_principalIdealDomains-1-1-2; }
-#exers_principalIdealDomains-2-1-1-3 { counter-set: exers_principalIdealDomains-2-1-1-3 0; }
-#exers_principalIdealDomains-2-1-1-3 > li::marker { content: "("counter(exers_principalIdealDomains-2-1-1-3,lower-alpha)")"; }
-#exers_principalIdealDomains-2-1-1-3 > li { counter-increment: exers_principalIdealDomains-2-1-1-3; }
-#exers_principalIdealDomains-3-1-1-5 { counter-set: exers_principalIdealDomains-3-1-1-5 0; }
-#exers_principalIdealDomains-3-1-1-5 > li::marker { content: "("counter(exers_principalIdealDomains-3-1-1-5,lower-alpha)")"; }
-#exers_principalIdealDomains-3-1-1-5 > li { counter-increment: exers_principalIdealDomains-3-1-1-5; }
-#exers_principalIdealDomains-6-1-2 { counter-set: exers_principalIdealDomains-6-1-2 0; }
-#exers_principalIdealDomains-6-1-2 > li::marker { content: "("counter(exers_principalIdealDomains-6-1-2,lower-alpha)")"; }
-#exers_principalIdealDomains-6-1-2 > li { counter-increment: exers_principalIdealDomains-6-1-2; }
-#exer_divisionAlgorithmGaussianIntegers-2-2 { counter-set: exer_divisionAlgorithmGaussianIntegers-2-2 0; }
-#exer_divisionAlgorithmGaussianIntegers-2-2 > li::marker { content: "("counter(exer_divisionAlgorithmGaussianIntegers-2-2,lower-alpha)")"; }
-#exer_divisionAlgorithmGaussianIntegers-2-2 > li { counter-increment: exer_divisionAlgorithmGaussianIntegers-2-2; }
-#exers_principalIdealDomains-16-1-2 { counter-set: exers_principalIdealDomains-16-1-2 0; }
-#exers_principalIdealDomains-16-1-2 > li::marker { content: "("counter(exers_principalIdealDomains-16-1-2,lower-alpha)")"; }
-#exers_principalIdealDomains-16-1-2 > li { counter-increment: exers_principalIdealDomains-16-1-2; }
-#sec_factoringPolynomials-24-1-2 { counter-set: sec_factoringPolynomials-24-1-2 0; }
-#sec_factoringPolynomials-24-1-2 > li::marker { content: ""counter(sec_factoringPolynomials-24-1-2,decimal)"."; }
-#sec_factoringPolynomials-24-1-2 > li { counter-increment: sec_factoringPolynomials-24-1-2; }
-#sec_factoringPolynomials-24-1-2-1-2 { counter-set: sec_factoringPolynomials-24-1-2-1-2 0; }
-#sec_factoringPolynomials-24-1-2-1-2 > li::marker { content: "("counter(sec_factoringPolynomials-24-1-2-1-2,lower-alpha)")"; }
-#sec_factoringPolynomials-24-1-2-1-2 > li { counter-increment: sec_factoringPolynomials-24-1-2-1-2; }
-#sec_factoringPolynomials-24-1-2-2-2 { counter-set: sec_factoringPolynomials-24-1-2-2-2 0; }
-#sec_factoringPolynomials-24-1-2-2-2 > li::marker { content: "("counter(sec_factoringPolynomials-24-1-2-2-2,lower-alpha)")"; }
-#sec_factoringPolynomials-24-1-2-2-2 > li { counter-increment: sec_factoringPolynomials-24-1-2-2-2; }
-#def-ufd-2-1-4 { counter-set: def-ufd-2-1-4 0; }
-#def-ufd-2-1-4 > li::marker { content: ""counter(def-ufd-2-1-4,decimal)"."; }
-#def-ufd-2-1-4 > li { counter-increment: def-ufd-2-1-4; }
-#sec_nonuniqueFactorization-6-2-3 { counter-set: sec_nonuniqueFactorization-6-2-3 0; }
-#sec_nonuniqueFactorization-6-2-3 > li::marker { content: ""counter(sec_nonuniqueFactorization-6-2-3,decimal)"."; }
-#sec_nonuniqueFactorization-6-2-3 > li { counter-increment: sec_nonuniqueFactorization-6-2-3; }
-</style>
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body id="ringsFirst" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="RFIAA.html"><span class="title">Rings First:</span> <span class="subtitle">An Introduction to Abstract Algebra</span></a></h1>
-<p class="byline">Bronson Lim</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="RFIAA.html"><span class="title">Rings First</span> <span class="subtitle">An Introduction to Abstract Algebra</span></a></h1>
+<p class="byline">Bronson Morningstar</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -397,7 +129,8 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch3-homomorphismsAndIdeals.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch3-homomorphismsAndIdeals.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_ideals.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \newcommand{\C}{\mathbb{C}}
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch3-homomorphismsAndIdeals.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch3-homomorphismsAndIdeals.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_ideals.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \newcommand{\C}{\mathbb{C}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -405,14 +138,14 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Dedication</span></a></div></li>
-<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">Preface</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -423,7 +156,7 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#ssec_wellordering" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Well-Ordering Principle</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#ssec_induction" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Principle of Mathematical Induction</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#sec_inductionWellOrdering-7" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_inductionWellOrdering.html#sec_inductionWellOrdering-6" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -468,7 +201,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#ssec_examplesOfFields" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Examples of Fields</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-propertiesOfFields" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Properties of Fields</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fields.html#subsec-subfieldsAndExtensions" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Subfields and Extensions</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_fields.html#exers_primesFactorization" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_fields.html#exers_fields" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -481,7 +214,6 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="sec_rings.html#ssec_unitsAndAssociates" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Units and Associates in a Ring</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_rings.html#exers_rings" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_rings.html#sec_rings-8" class="internal"><span class="codenumber">2.2.5</span> <span class="title">References</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -491,7 +223,6 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integralDomains.html#ssec_integralDomains" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Integral Domains</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_integralDomains.html#ssec_polynomialRingAreDomains" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Polynomial Rings are Domains</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_integralDomains.html#exers_integralDomains" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="sec_integralDomains.html#sec_integralDomains-8" class="internal"><span class="codenumber">2.3.5</span> <span class="title">References</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -509,9 +240,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch3-homomorphismsAndIdeals.html" class="internal"><span class="codenumber">3</span> <span class="title">Homomorphisms and Ideals</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec_homomorphisms.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Homomorphisms</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_homomorphisms.html#subsec-homomorphisms" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Homomorphisms</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_homomorphisms.html#ssec_propertiesOfHomomorphisms" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Properties of Homomorphisms</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_homomorphisms.html#ssec_kernelOfAHomomorphism" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Kernel of a Homomorphism</span></a></div></li>
@@ -538,7 +269,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#ssec_quotientRings" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Quotient Rings</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#ssec_NoetherIsomorphismTheorem" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Noether Isomorphism Theorem</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_quotientRings.html#subsec-" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Applying the Noether Isomorphism Theorem</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_quotientRings.html#exers_divisibilityIntegralDomains" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_quotientRings.html#exers_quotientRings" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -556,7 +287,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch3-factorization.html" class="internal"><span class="codenumber">4</span> <span class="title">Factorization</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_factoringPolynomials.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Factoring Polynomials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_factoringPolynomials.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Factoring Polynomials</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_factoringPolynomials.html#ssec_polynomialFunctions" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Polynomials As Functions</span></a></div></li></ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec_factorizationEuclideanDomains.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Factorization in Euclidean Domains</span></a></div>
 <ul class="structural toc-item-list">
@@ -578,99 +312,189 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_homomorphisms"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.1</span><span class="space"> </span><span class="title">Homomorphisms</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Homomorphisms</span>
 </h2>
 <article class="objectives goal-like" id="obj_homomorphisms"><h3 class="heading">
-<span class="type">Guiding Questions:</span><span class="space"> </span><span class="title">Guiding Questions</span>
+<span class="type">Guiding Questions<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Guiding Questions</span>
 </h3>
-<div class="introduction" id="obj_homomorphisms-2"><div class="para" id="obj_homomorphisms-2-1">In this section, we’ll seek to answer the questions:</div></div>
+<div class="introduction" id="obj_homomorphisms-2"><div class="para" id="obj_homomorphisms-2-1">In this section, we’ll seek to answer the questions:<div class="autopermalink" data-description="Paragraph"><a href="#obj_homomorphisms-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <ul class="disc" id="obj_homomorphisms-3">
-<li id="obj_homomorphisms-3-1"><div class="para" id="p-derived-obj_homomorphisms-3-1">What is a ring homomorphism?</div></li>
-<li id="obj_homomorphisms-3-2"><div class="para" id="p-derived-obj_homomorphisms-3-2">What are some examples of ring homomorphisms?</div></li>
-<li id="obj_homomorphisms-3-3"><div class="para" id="p-derived-obj_homomorphisms-3-3">What is the kernel and image of a homomorphism?</div></li>
-<li id="obj_homomorphisms-3-4"><div class="para" id="p-derived-obj_homomorphisms-3-4">What are the initial and terminal rings?</div></li>
-</ul></article><section class="introduction" id="sec_homomorphisms-3"><div class="para" id="sec_homomorphisms-3-1">Central to modern mathematics is the notion of <em class="emphasis">function</em><details class="ptx-footnote" aria-live="polite" id="sec_homomorphisms-3-1-2"><summary class="ptx-footnote__number" title="Footnote 3.1.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec_homomorphisms-3-1-2">. This section assumes a familiarity with the idea of function from a set-theoretic point of view, as well as the concepts of injective (one-to-one), surjective (onto), and bijective functions (one-to-one correspondences).</div></details>. Functions arise in all areas of mathematics, each subdiscipline concerned with certain types of functions. In algebra, our concern is with <em class="emphasis">operation-preserving</em> functions, such as the linear transformations <span class="process-math">\(L : V\to W\)</span> of vector spaces you have seen in a course in linear algebra. Those linear transformations had the properties that <span class="process-math">\(L(\mathbf{v}+\mathbf{u}) = L(\mathbf{v})+L(\mathbf{u})\)</span> (addition is preserved) and <span class="process-math">\(L(c\mathbf{u}) = c L(\mathbf{u})\)</span> (scalar multiplication is preserved).</div></section><section class="subsection" id="subsec-homomorphisms"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="space"> </span><span class="title">Homomorphisms</span>
+<li id="obj_homomorphisms-3-1">
+<div class="para" id="p-derived-obj_homomorphisms-3-1">What is a ring homomorphism?</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj_homomorphisms-3-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="obj_homomorphisms-3-2">
+<div class="para" id="p-derived-obj_homomorphisms-3-2">What are some examples of ring homomorphisms?</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj_homomorphisms-3-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="obj_homomorphisms-3-3">
+<div class="para" id="p-derived-obj_homomorphisms-3-3">What is the kernel and image of a homomorphism?</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj_homomorphisms-3-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="obj_homomorphisms-3-4">
+<div class="para" id="p-derived-obj_homomorphisms-3-4">What are the initial and terminal rings?</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj_homomorphisms-3-4" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Guiding Questions 3.1: Guiding Questions"><a href="#obj_homomorphisms" title="Copy heading and permalink for Guiding Questions 3.1: Guiding Questions" aria-label="Copy heading and permalink for Guiding Questions 3.1: Guiding Questions">🔗</a></div></article><section class="introduction" id="sec_homomorphisms-3"><div class="para" id="sec_homomorphisms-3-1">Central to modern mathematics is the notion of <em class="emphasis">function</em><details class="ptx-footnote" aria-live="polite" id="sec_homomorphisms-3-1-2"><summary class="ptx-footnote__number" title="Footnote 3.1.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec_homomorphisms-3-1-2">. This section assumes a familiarity with the idea of function from a set-theoretic point of view, as well as the concepts of injective (one-to-one), surjective (onto), and bijective functions (one-to-one correspondences).</div></details>. Functions arise in all areas of mathematics, each subdiscipline concerned with certain types of functions. In algebra, our concern is with <em class="emphasis">operation-preserving</em> functions, such as the linear transformations <span class="process-math">\(L : V\to W\)</span> of vector spaces you have seen in a course in linear algebra. Those linear transformations had the properties that <span class="process-math">\(L(\mathbf{v}+\mathbf{u}) = L(\mathbf{v})+L(\mathbf{u})\)</span> (addition is preserved) and <span class="process-math">\(L(c\mathbf{u}) = c L(\mathbf{u})\)</span> (scalar multiplication is preserved).<div class="autopermalink" data-description="Paragraph"><a href="#sec_homomorphisms-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="subsec-homomorphisms"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Homomorphisms</span>
 </h3>
-<div class="para" id="subsec-homomorphisms-2">We find something similar at work in the study of homomorphisms of rings, which we define to be functions that preserve both addition and multiplication.</div>
+<div class="para" id="subsec-homomorphisms-2">We find something similar at work in the study of homomorphisms of rings, which we define to be functions that preserve both addition and multiplication.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-homomorphisms-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="def_ringHomomorphism"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
-</h4> <div class="para logical" id="def_ringHomomorphism-6-1">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="def_ringHomomorphism-6-1">
 <div class="para">Let <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> be rings. A function <span class="process-math">\(\varphi : R\to S\)</span> is called a <dfn class="terminology">ring homomorphism</dfn> if it preserves addition, multiplication, and sends the identity of <span class="process-math">\(R\)</span> to the identity of <span class="process-math">\(S\text{.}\)</span> That is, for all <span class="process-math">\(x,y\in R\text{:}\)</span>
 </div>
 <ul class="disc" id="def_ringHomomorphism-6-1-8">
-<li id="def_ringHomomorphism-6-1-8-1"><div class="para" id="p-derived-def_ringHomomorphism-6-1-8-1"><span class="process-math">\(\varphi(x+y) = \varphi(x) + \varphi(y)\text{,}\)</span></div></li>
-<li id="def_ringHomomorphism-6-1-8-2"><div class="para" id="p-derived-def_ringHomomorphism-6-1-8-2">
-<span class="process-math">\(\varphi(xy) = \varphi(x)\varphi(y)\text{,}\)</span> and</div></li>
-<li id="def_ringHomomorphism-6-1-8-3"><div class="para" id="p-derived-def_ringHomomorphism-6-1-8-3"><span class="process-math">\(\varphi(1_R) = 1_S\text{.}\)</span></div></li>
+<li id="def_ringHomomorphism-6-1-8-1">
+<div class="para" id="p-derived-def_ringHomomorphism-6-1-8-1"><span class="process-math">\(\varphi(x+y) = \varphi(x) + \varphi(y)\text{,}\)</span></div>
+<div class="autopermalink" data-description="Item"><a href="#def_ringHomomorphism-6-1-8-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="def_ringHomomorphism-6-1-8-2">
+<div class="para" id="p-derived-def_ringHomomorphism-6-1-8-2">
+<span class="process-math">\(\varphi(xy) = \varphi(x)\varphi(y)\text{,}\)</span> and</div>
+<div class="autopermalink" data-description="Item"><a href="#def_ringHomomorphism-6-1-8-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="def_ringHomomorphism-6-1-8-3">
+<div class="para" id="p-derived-def_ringHomomorphism-6-1-8-3"><span class="process-math">\(\varphi(1_R) = 1_S\text{.}\)</span></div>
+<div class="autopermalink" data-description="Item"><a href="#def_ringHomomorphism-6-1-8-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
 <div class="para">If <span class="process-math">\(\varphi\)</span> is injective (one-to-one), we say that <span class="process-math">\(\varphi\)</span> is a <dfn class="terminology">monomorphism</dfn>. If <span class="process-math">\(\varphi\)</span> is surjective (onto), we say that <span class="process-math">\(\varphi\)</span> is an <dfn class="terminology">epimorphism</dfn>. If <span class="process-math">\(\varphi\)</span> is a bijection (both injective and surjective), we say that <span class="process-math">\(\varphi\)</span> is an <dfn class="terminology">isomorphism</dfn> and write <span class="process-math">\(R\cong S\text{.}\)</span> If <span class="process-math">\(\varphi \colon R\to R\)</span> is an isomorphism, we say <span class="process-math">\(\varphi\)</span> is an <dfn class="terminology">automorphism</dfn> of <span class="process-math">\(R\text{.}\)</span>
 </div>
-</div></article><div class="para" id="subsec-homomorphisms-4">Our first job when glimpsing a new concept is to collect a stock of examples.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def_ringHomomorphism-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.1.1"><a href="#def_ringHomomorphism" title="Copy heading and permalink for Definition 3.1.1" aria-label="Copy heading and permalink for Definition 3.1.1">🔗</a></div></article><div class="para" id="subsec-homomorphisms-4">Our first job when glimpsing a new concept is to collect a stock of examples.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-homomorphisms-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="exploration project-like" id="expl-homomorphism-examples"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
+<span class="type">Exploration</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="expl-homomorphism-examples-1-1">Determine whether the following functions are homomorphisms, monomorphisms, epimorphisms, isomorphisms, automorphisms, or none of these. Note that <span class="process-math">\(R\)</span> denotes an arbitrary ring and <span class="process-math">\(F\)</span> a field.</div> <ol class="decimal" id="expl-homomorphism-examples-1-2">
-<li id="expl-homomorphism-examples-1-2-1"><div class="para" id="p-derived-expl-homomorphism-examples-1-2-1">
+<div class="para logical" id="expl-homomorphism-examples-1-1">
+<div class="para">Determine whether the following functions are homomorphisms, monomorphisms, epimorphisms, isomorphisms, automorphisms, or none of these. Note that <span class="process-math">\(R\)</span> denotes an arbitrary ring and <span class="process-math">\(F\)</span> a field.</div>
+<ol class="decimal" id="expl-homomorphism-examples-1-1-3">
+<li id="expl-homomorphism-examples-1-1-3-1">
+<div class="para" id="p-derived-expl-homomorphism-examples-1-1-3-1">
 <span class="process-math">\(\varphi\colon R\to R\)</span> defined by <span class="process-math">\(\varphi(x)=x\)</span>
-</div></li>
-<li id="expl-homomorphism-examples-1-2-2"><div class="para" id="p-derived-expl-homomorphism-examples-1-2-2">
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#expl-homomorphism-examples-1-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="expl-homomorphism-examples-1-1-3-2">
+<div class="para" id="p-derived-expl-homomorphism-examples-1-1-3-2">
 <span class="process-math">\(\psi\colon R\to R\)</span> defined by <span class="process-math">\(\psi(x)=-x\)</span>
-</div></li>
-<li id="expl-homomorphism-examples-1-2-3"><div class="para" id="p-derived-expl-homomorphism-examples-1-2-3">
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#expl-homomorphism-examples-1-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="expl-homomorphism-examples-1-1-3-3">
+<div class="para" id="p-derived-expl-homomorphism-examples-1-1-3-3">
 <span class="process-math">\(\alpha\colon \Z\to \Z\)</span> defined by <span class="process-math">\(\alpha(x)=5x\)</span>
-</div></li>
-<li id="expl-homomorphism-examples-1-2-4"><div class="para" id="p-derived-expl-homomorphism-examples-1-2-4">
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#expl-homomorphism-examples-1-1-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="expl-homomorphism-examples-1-1-3-4">
+<div class="para" id="p-derived-expl-homomorphism-examples-1-1-3-4">
 <span class="process-math">\(\mathrm{Fr}\colon \mathbb{F}_2[x]\to \mathbb{F}_2[x]\)</span> defined by <span class="process-math">\(\mathrm{Fr}(p) = p^2\)</span>
-</div></li>
-<li id="expl-homomorphism-examples-1-2-5"><div class="para" id="p-derived-expl-homomorphism-examples-1-2-5">
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#expl-homomorphism-examples-1-1-3-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="expl-homomorphism-examples-1-1-3-5">
+<div class="para" id="p-derived-expl-homomorphism-examples-1-1-3-5">
 <span class="process-math">\(\iota\colon \mathbb{C}\to \mathbb{C}\)</span> defined by <span class="process-math">\(\iota(a+bi)=a-bi\text{,}\)</span> where <span class="process-math">\(a,b\in \R, i^2 = -1\)</span>
-</div></li>
-<li id="expl-homomorphism-examples-1-2-6"><div class="para" id="p-derived-expl-homomorphism-examples-1-2-6">
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#expl-homomorphism-examples-1-1-3-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="expl-homomorphism-examples-1-1-3-6">
+<div class="para" id="p-derived-expl-homomorphism-examples-1-1-3-6">
 <span class="process-math">\(\beta\colon\Z\to \Z/5\)</span> defined by <span class="process-math">\(\beta(x) = \overline{x}\)</span>
-</div></li>
-<li id="expl-homomorphism-examples-1-2-7"><div class="para" id="p-derived-expl-homomorphism-examples-1-2-7">
-<span class="process-math">\(\epsilon_r\colon F[x] \to F\)</span> defined by <span class="process-math">\(\epsilon_r(p(x)) = p(r)\text{,}\)</span> where if <span class="process-math">\(p(x) = a_0 + a_1 x + \cdots + a_n x^n\text{,}\)</span> <span class="process-math">\(p(r)\)</span> is the expression obtained by “plugging <span class="process-math">\(r\)</span> into <span class="process-math">\(p\)</span>”: <span class="process-math">\(p(r) = a_0 + a_1 r + \cdots + a_n r^n\)</span> (this is known as the <span class="process-math">\(r\)</span>-evaluation map)</div></li>
-<li id="expl-homomorphism-examples-1-2-8"><div class="para" id="p-derived-expl-homomorphism-examples-1-2-8">
+</div>
+<div class="autopermalink" data-description="Item 6"><a href="#expl-homomorphism-examples-1-1-3-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li id="expl-homomorphism-examples-1-1-3-7">
+<div class="para" id="p-derived-expl-homomorphism-examples-1-1-3-7">
+<span class="process-math">\(\epsilon_r\colon F[x] \to F\)</span> defined by <span class="process-math">\(\epsilon_r(p(x)) = p(r)\text{,}\)</span> where if <span class="process-math">\(p(x) = a_0 + a_1 x + \cdots + a_n x^n\text{,}\)</span> <span class="process-math">\(p(r)\)</span> is the expression obtained by “plugging <span class="process-math">\(r\)</span> into <span class="process-math">\(p\)</span>”: <span class="process-math">\(p(r) = a_0 + a_1 r + \cdots + a_n r^n\)</span> (this is known as the <span class="process-math">\(r\)</span>-evaluation map)</div>
+<div class="autopermalink" data-description="Item 7"><a href="#expl-homomorphism-examples-1-1-3-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+<li id="expl-homomorphism-examples-1-1-3-8">
+<div class="para" id="p-derived-expl-homomorphism-examples-1-1-3-8">
 <span class="process-math">\(\xi\colon \Z/5 \to \Z/10\)</span> defined by <span class="process-math">\(\xi(\overline{x}) = \overline{5x}\)</span>
-</div></li>
+</div>
+<div class="autopermalink" data-description="Item 8"><a href="#expl-homomorphism-examples-1-1-3-8" title="Copy heading and permalink for Item 8" aria-label="Copy heading and permalink for Item 8">🔗</a></div>
+</li>
 </ol>
-<div class="solutions"><details id="expl-homomorphism-examples-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="decimal" id="expl-homomorphism-examples-2-1">
-<li id="expl-homomorphism-examples-2-1-1"><div class="para" id="p-derived-expl-homomorphism-examples-2-1-1">
-<span class="process-math">\(\varphi\colon R\to R\)</span> defined by <span class="process-math">\(\varphi(x)=x\)</span> is called the <dfn class="terminology">identity mapping</dfn>. We in particular have: <span class="process-math">\(\varphi(1_R) = 1_R\text{,}\)</span> <span class="process-math">\(\varphi(x+y) = x+y = \varphi(x)+\varphi(y)\text{,}\)</span> and <span class="process-math">\(\varphi(xy)=xy=\varphi(x)\varphi(y).\)</span> The identity mapping satisfies the criteria for being a ring homomorphism. It is an automorphism.</div></li>
-<li id="expl-homomorphism-examples-2-1-2"><div class="para" id="p-derived-expl-homomorphism-examples-2-1-2">
+<div class="autopermalink" data-description="Paragraph"><a href="#expl-homomorphism-examples-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="expl-homomorphism-examples-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="expl-homomorphism-examples-2-1">
+<ol class="decimal" id="expl-homomorphism-examples-2-1-1">
+<li id="expl-homomorphism-examples-2-1-1-1">
+<div class="para" id="p-derived-expl-homomorphism-examples-2-1-1-1">
+<span class="process-math">\(\varphi\colon R\to R\)</span> defined by <span class="process-math">\(\varphi(x)=x\)</span> is called the <dfn class="terminology">identity mapping</dfn>. We in particular have: <span class="process-math">\(\varphi(1_R) = 1_R\text{,}\)</span> <span class="process-math">\(\varphi(x+y) = x+y = \varphi(x)+\varphi(y)\text{,}\)</span> and <span class="process-math">\(\varphi(xy)=xy=\varphi(x)\varphi(y).\)</span> The identity mapping satisfies the criteria for being a ring homomorphism. It is an automorphism.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#expl-homomorphism-examples-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="expl-homomorphism-examples-2-1-1-2">
+<div class="para" id="p-derived-expl-homomorphism-examples-2-1-1-2">
 <span class="process-math">\(\psi\colon R\to R\)</span> defined by <span class="process-math">\(\psi(x)=-x\)</span> is the negation mapping. Although it is true that<div class="displaymath process-math">
 \begin{equation*}
 \psi(x+y) = -(x+y) = -x+(-y)=\psi(x)+\psi(y)
 \end{equation*}
 </div>it fails the other two properties of a ring homorphism in general (sometimes not though!). Namely, for a general ring <span class="process-math">\(1_R\neq -1_R\)</span> so that <span class="process-math">\(\psi(1_R) = -1_R\neq 1_R\)</span> and also <span class="process-math">\(\psi(xy) = -xy\)</span> but <span class="process-math">\(\psi(x)\psi(y) = (-x)(-y) = xy\text{.}\)</span> In general, <span class="process-math">\(xy\neq -xy\)</span> so <span class="process-math">\(\psi\)</span> is not compatible with multiplication or unity. However, sometimes <span class="process-math">\(-a = a\)</span> is true for every element of the ring, particularly Boolean rings. Examples include <span class="process-math">\(\Z/2, \Z/2[x]\text{.}\)</span>
-</div></li>
-<li id="expl-homomorphism-examples-2-1-3"><div class="para" id="p-derived-expl-homomorphism-examples-2-1-3">
-<span class="process-math">\(\alpha\colon \Z\to \Z\)</span> defined by <span class="process-math">\(\alpha(x)=5x\text{,}\)</span> or the multiplication by <span class="process-math">\(5\)</span> map. The map <span class="process-math">\(\alpha\)</span> does not preserve the unity nor does it preserve multiplication. Check! It is not a ring homomorphism.</div></li>
-<li id="expl-homomorphism-examples-2-1-4"><div class="para" id="p-derived-expl-homomorphism-examples-2-1-4">
-<span class="process-math">\(Fr\colon \Z_2[x]\to \Z_2[x]\)</span> defined by <span class="process-math">\(Fr(p) = p^2\)</span> is sometimes called the Frobenius mapping. It is in fact a ring homomorphism in this case. For the unity and multiplicative compatibility we have <span class="process-math">\(Fr(1) = 1^2 = 1\)</span> and <span class="process-math">\(Fr(pq) = (pq)^2 = p^2q^2=Fr(p)Fr(q)\text{.}\)</span> For compatibility with addition we remind the reader that <span class="process-math">\(2\equiv_20\text{:}\)</span><div class="displaymath process-math" id="expl-homomorphism-examples-2-1-4-6">
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#expl-homomorphism-examples-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="expl-homomorphism-examples-2-1-1-3">
+<div class="para" id="p-derived-expl-homomorphism-examples-2-1-1-3">
+<span class="process-math">\(\alpha\colon \Z\to \Z\)</span> defined by <span class="process-math">\(\alpha(x)=5x\text{,}\)</span> or the multiplication by <span class="process-math">\(5\)</span> map. The map <span class="process-math">\(\alpha\)</span> does not preserve the unity nor does it preserve multiplication. Check! It is not a ring homomorphism.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#expl-homomorphism-examples-2-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="expl-homomorphism-examples-2-1-1-4">
+<div class="para" id="p-derived-expl-homomorphism-examples-2-1-1-4">
+<span class="process-math">\(Fr\colon \Z_2[x]\to \Z_2[x]\)</span> defined by <span class="process-math">\(Fr(p) = p^2\)</span> is sometimes called the Frobenius mapping. It is in fact a ring homomorphism in this case. For the unity and multiplicative compatibility we have <span class="process-math">\(Fr(1) = 1^2 = 1\)</span> and <span class="process-math">\(Fr(pq) = (pq)^2 = p^2q^2=Fr(p)Fr(q)\text{.}\)</span> For compatibility with addition we remind the reader that <span class="process-math">\(2\equiv_20\text{:}\)</span><div class="displaymath process-math" id="expl-homomorphism-examples-2-1-1-4-6">
 \begin{align*}
 Fr(p+q) \amp= (p+q)^2\\
 \amp= p^2+2pq+q^2 \\
 \amp= p^2+q^2 \\
 \amp= Fr(p)+Fr(q).
 \end{align*}
-</div>It is not an automorphism; however, it is a homomorphism. Homomorphisms from a ring to itself are called <dfn class="terminology">endomorphisms</dfn>.</div></li>
-<li id="expl-homomorphism-examples-2-1-5"><div class="para" id="p-derived-expl-homomorphism-examples-2-1-5">
-<span class="process-math">\(\iota\colon \mathbb{C}\to \mathbb{C}\)</span> defined by <span class="process-math">\(\iota(a+bi)=a-bi\text{,}\)</span> where <span class="process-math">\(a,b\in \R, i^2 = -1\)</span> TBD</div></li>
-<li id="expl-homomorphism-examples-2-1-6"><div class="para" id="p-derived-expl-homomorphism-examples-2-1-6">
-<span class="process-math">\(\beta\colon\Z\to \Z/5\)</span> defined by <span class="process-math">\(\beta(x) = \overline{x}\)</span> TBD</div></li>
-<li id="expl-homomorphism-examples-2-1-7"><div class="para" id="p-derived-expl-homomorphism-examples-2-1-7">
-<span class="process-math">\(\epsilon_r\colon F[x] \to F\)</span> defined by <span class="process-math">\(\epsilon_r(p(x)) = p(r)\text{,}\)</span> where if <span class="process-math">\(p(x) = a_0 + a_1 x + \cdots + a_n x^n\text{,}\)</span> <span class="process-math">\(p(r)\)</span> is the expression obtained by “plugging <span class="process-math">\(r\)</span> into <span class="process-math">\(p\)</span>”: <span class="process-math">\(p(r) = a_0 + a_1 r + \cdots + a_n r^n\)</span> (this is known as the <span class="process-math">\(r\)</span>-evaluation map) TBD</div></li>
-<li id="expl-homomorphism-examples-2-1-8"><div class="para" id="p-derived-expl-homomorphism-examples-2-1-8">
-<span class="process-math">\(\xi\colon \Z/5 \to \Z/10\)</span> defined by <span class="process-math">\(\xi(\overline{x}) = \overline{5x}\)</span> TBD.</div></li>
-</ol></div></details></div></article><aside class="historical aside-like" id="subsec-homomorphisms-6"><h4 class="heading"><span class="title">Ferdinand Georg Frobenius.</span></h4>
-<div class="para" id="subsec-homomorphisms-6-2">
-<figure class="figure figure-like" id="subsec-homomorphisms-6-2-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/../images/Frobenius.jpg" class="contained" alt="Portrait of Ferdinand Georg Frobenius"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Ferdinand Georg Frobenius, a student of Weierstrass, (1849-1917) was a German mathematician known for contributions to number theory, group theory, differential equations, and elliptic functions.</div></aside><article class="example example-like" id="ex_frobeniusAffineLine"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">The Frobenius Homomorphism.</span>
+</div>It is not an automorphism; however, it is a homomorphism. Homomorphisms from a ring to itself are called <dfn class="terminology">endomorphisms</dfn>.</div>
+<div class="autopermalink" data-description="Item 4"><a href="#expl-homomorphism-examples-2-1-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="expl-homomorphism-examples-2-1-1-5">
+<div class="para" id="p-derived-expl-homomorphism-examples-2-1-1-5">
+<span class="process-math">\(\iota\colon \mathbb{C}\to \mathbb{C}\)</span> defined by <span class="process-math">\(\iota(a+bi)=a-bi\text{,}\)</span> where <span class="process-math">\(a,b\in \R, i^2 = -1\)</span> TBD</div>
+<div class="autopermalink" data-description="Item 5"><a href="#expl-homomorphism-examples-2-1-1-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="expl-homomorphism-examples-2-1-1-6">
+<div class="para" id="p-derived-expl-homomorphism-examples-2-1-1-6">
+<span class="process-math">\(\beta\colon\Z\to \Z/5\)</span> defined by <span class="process-math">\(\beta(x) = \overline{x}\)</span> TBD</div>
+<div class="autopermalink" data-description="Item 6"><a href="#expl-homomorphism-examples-2-1-1-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li id="expl-homomorphism-examples-2-1-1-7">
+<div class="para" id="p-derived-expl-homomorphism-examples-2-1-1-7">
+<span class="process-math">\(\epsilon_r\colon F[x] \to F\)</span> defined by <span class="process-math">\(\epsilon_r(p(x)) = p(r)\text{,}\)</span> where if <span class="process-math">\(p(x) = a_0 + a_1 x + \cdots + a_n x^n\text{,}\)</span> <span class="process-math">\(p(r)\)</span> is the expression obtained by “plugging <span class="process-math">\(r\)</span> into <span class="process-math">\(p\)</span>”: <span class="process-math">\(p(r) = a_0 + a_1 r + \cdots + a_n r^n\)</span> (this is known as the <span class="process-math">\(r\)</span>-evaluation map) TBD</div>
+<div class="autopermalink" data-description="Item 7"><a href="#expl-homomorphism-examples-2-1-1-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+<li id="expl-homomorphism-examples-2-1-1-8">
+<div class="para" id="p-derived-expl-homomorphism-examples-2-1-1-8">
+<span class="process-math">\(\xi\colon \Z/5 \to \Z/10\)</span> defined by <span class="process-math">\(\xi(\overline{x}) = \overline{5x}\)</span> TBD.</div>
+<div class="autopermalink" data-description="Item 8"><a href="#expl-homomorphism-examples-2-1-1-8" title="Copy heading and permalink for Item 8" aria-label="Copy heading and permalink for Item 8">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#expl-homomorphism-examples-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.1.1.1"><a href="#expl-homomorphism-examples-2" title="Copy heading and permalink for Solution 3.1.1.1" aria-label="Copy heading and permalink for Solution 3.1.1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exploration 3.1.1"><a href="#expl-homomorphism-examples" title="Copy heading and permalink for Exploration 3.1.1" aria-label="Copy heading and permalink for Exploration 3.1.1">🔗</a></div></article><details id="subsec-homomorphisms-6" class="historical aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Historical Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ferdinand Georg Frobenius.</span>
+</h4></summary><aside class="historical aside-like knowl__content"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/../images/Frobenius.jpg" class="contained" alt="Portrait of Ferdinand Georg Frobenius"></div>
+<div class="para" id="subsec-homomorphisms-6-3">Ferdinand Georg Frobenius, a student of Weierstrass, (1849-1917) was a German mathematician known for contributions to number theory, group theory, differential equations, and elliptic functions.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-homomorphisms-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside></details><article class="example example-like" id="ex_frobeniusAffineLine"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Frobenius Homomorphism.</span>
 </h4>
-<div class="para" id="ex_frobeniusAffineLine-3-1">The Frobenius Homomorphism (or just Frobenius) is a homomorphism that exists whenever we are working with a prime. In this example, we look at the Frobenius on a polynomial ring.</div> <div class="para logical" id="ex_frobeniusAffineLine-3-2">
+<div class="para" id="ex_frobeniusAffineLine-3-1">The Frobenius Homomorphism (or just Frobenius) is a homomorphism that exists whenever we are working with a prime. In this example, we look at the Frobenius on a polynomial ring.<div class="autopermalink" data-description="Paragraph"><a href="#ex_frobeniusAffineLine-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex_frobeniusAffineLine-3-2">
 <div class="para">Let <span class="process-math">\(p\)</span> be a prime. Consider the function:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -679,6 +503,7 @@ Fr(p+q) \amp= (p+q)^2\\
 </div>
 <div class="para">defined by <span class="process-math">\(\mathrm{Fr}(f(x)) = (f(x))^p\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_frobeniusAffineLine-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="ex_frobeniusAffineLine-3-3">
 <div class="para">Before we prove that the Frobenius is a homomorphism, let’s recall that whenever <span class="process-math">\(k\neq 0,p\)</span> the binomial coefficient <span class="process-math">\({p\choose k}\)</span> is divisible by <span class="process-math">\(p\text{.}\)</span> Indeed, using the usual formula:</div>
 <div class="displaymath process-math">
@@ -688,7 +513,8 @@ Fr(p+q) \amp= (p+q)^2\\
 </div>
 <div class="para">All of the terms in the denominator are strictly less than <span class="process-math">\(p\)</span> provided <span class="process-math">\(k\ne 0,p\text{.}\)</span> Thus there is no term in the denominator that will cancel the <span class="process-math">\(p\)</span> in the numerator. In particular, the binomial coefficients <span class="process-math">\({p\choose k}\)</span> are <span class="process-math">\(0\)</span> in <span class="process-math">\(\mathbb{F}_p\)</span> whenever <span class="process-math">\(k\ne 0,p\text{.}\)</span>
 </div>
-</div> <div class="para" id="ex_frobeniusAffineLine-3-4">With that done, let’s show <span class="process-math">\(\mathrm{Fr}\)</span> is a homomorphism. It preserves unity: <span class="process-math">\(\mathrm{Fr}(1) = 1^p = 1\text{.}\)</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_frobeniusAffineLine-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex_frobeniusAffineLine-3-4">With that done, let’s show <span class="process-math">\(\mathrm{Fr}\)</span> is a homomorphism. It preserves unity: <span class="process-math">\(\mathrm{Fr}(1) = 1^p = 1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_frobeniusAffineLine-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="ex_frobeniusAffineLine-3-5">
 <div class="para">For compatibility with addition, suppose <span class="process-math">\(f(x),g(x)\in\mathbb{F}_2[x]\text{:}\)</span>
 </div>
@@ -702,6 +528,7 @@ Fr(p+q) \amp= (p+q)^2\\
 \end{align*}
 </div>
 <div class="para">as the cross terms are zero.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_frobeniusAffineLine-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="ex_frobeniusAffineLine-3-6">
 <div class="para">For compatibility with multiplication:</div>
 <div class="displaymath process-math">
@@ -710,47 +537,20 @@ Fr(p+q) \amp= (p+q)^2\\
 \end{equation*}
 </div>
 <div class="para">We conclude that the Frobenius is a homomorphism.</div>
-</div> <div class="para" id="ex_frobeniusAffineLine-3-7">The following checks will be left as an exercise: The Frobenius is a monomorphism, it is not an epimorphism, and hence not an automorphism.</div></article><details id="number-theory-proof" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Parsons Problem, Mathematical Proof.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone parsons_section" style="max-width: none;"><div data-component="parsons" class="parsons" id="number-theory-proof">
-<div class="parsons_question parsons-text"><div class="para" id="number-theory-proof-3-1">Create a proof of the theorem: All automorphisms are monomorphisms.</div></div>
-<pre class="parsonsblocks" data-question_label="" style="visibility: hidden;" data-language="natural" data-adaptive="true" data-noindent="true"><div class="para" id="number-theory-proof-4-1-1">Let <span class="process-math">\(\varphi\colon R\to R\)</span> be an automorphism.</div>
----
-<div class="para" id="number-theory-proof-4-2-2-1">Then there exists an <span class="process-math">\(m\)</span> so that <span class="process-math">\(n = 2m\text{.}\)</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_frobeniusAffineLine-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex_frobeniusAffineLine-3-7">The following checks will be left as an exercise: The Frobenius is a monomorphism, it is not an epimorphism, and hence not an automorphism.<div class="autopermalink" data-description="Paragraph"><a href="#ex_frobeniusAffineLine-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
----
-<div class="para" id="number-theory-proof-4-2-1-1">Then <span class="process-math">\(n\)</span> is a prime number.</div> #paired
----
-<div class="para" id="number-theory-proof-4-2-3-1">Then there exists an <span class="process-math">\(m\)</span> so that <span class="process-math">\(n = 2m + 1\text{.}\)</span>
-</div> #paired
----
-<div class="para" id="number-theory-proof-4-3-1">Click the heels of your ruby slippers together three times.</div> #distractor
----
-<div class="para" id="number-theory-proof-4-4-1">So <span class="process-math">\(n = 2m + 0\text{.}\)</span>
-</div> <div class="para" id="number-theory-proof-4-4-2">This is a superfluous second paragraph in this block.</div>
----
-<div class="para" id="number-theory-proof-4-5-1">Thus <span class="process-math">\(n\equiv 0\mod 2\text{.}\)</span>
-</div>
----
-<div class="para logical" id="number-theory-proof-4-6-1">
-<div class="para">And a little bit of irrelevant multi-line math</div>
-<div class="displaymath process-math" id="number-theory-proof-4-6-1-1">
-\begin{align*}
-c^2&amp;a^2+b^2\\
-&amp;x^2+y^2\text{.}
-\end{align*}
-</div>
-</div> #distractor</pre>
-</div></div></div>
-<div class="solutions"><details id="number-theory-proof-5" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="number-theory-proof-5-1">Dorothy will not be much help with this proof.</div></div></details></div></article></details></section><section class="subsection" id="ssec_propertiesOfHomomorphisms"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="space"> </span><span class="title">Properties of Homomorphisms</span>
+<div class="autopermalink" data-description="Example 3.1.2: The Frobenius Homomorphism"><a href="#ex_frobeniusAffineLine" title="Copy heading and permalink for Example 3.1.2: The Frobenius Homomorphism" aria-label="Copy heading and permalink for Example 3.1.2: The Frobenius Homomorphism">🔗</a></div></article><div class="autopermalink" data-description="Subsection 3.1.1: Homomorphisms"><a href="#subsec-homomorphisms" title="Copy heading and permalink for Subsection 3.1.1: Homomorphisms" aria-label="Copy heading and permalink for Subsection 3.1.1: Homomorphisms">🔗</a></div></section><section class="subsection" id="ssec_propertiesOfHomomorphisms"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Properties of Homomorphisms</span>
 </h3>
-<div class="para" id="ssec_propertiesOfHomomorphisms-2">The sequence of results that follows shows that homomorphisms preserve several of our ring-theoretic notions. This means <a href="sec_homomorphisms.html#def_ringHomomorphism" class="xref" data-knowl="./knowl/xref/def_ringHomomorphism.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1.1">Definition 3.1.1</a> is the <em class="emphasis">right</em> definition. That is, of all the possible functions between rings we isolated a good class to call structure preserving. We begin by showing that homomorphisms preserve the additive identity.</div>
+<div class="para" id="ssec_propertiesOfHomomorphisms-2">The sequence of results that follows shows that homomorphisms preserve several of our ring-theoretic notions. This means <a href="sec_homomorphisms.html#def_ringHomomorphism" class="xref" data-knowl="./knowl/xref/def_ringHomomorphism.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1.1">Definition 3.1.1</a> is the <em class="emphasis">right</em> definition. That is, of all the possible functions between rings we isolated a good class to call structure preserving. We begin by showing that homomorphisms preserve the additive identity.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_propertiesOfHomomorphisms-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="thm_homomorphismsPreserveZero"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="thm_homomorphismsPreserveZero-1-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism. Then <span class="process-math">\(\varphi(0_R) = 0_S\text{.}\)</span>
-</div></article><details id="thm_homomorphismsPreserveZero-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_homomorphismsPreserveZero-2-1">
+<div class="para" id="thm_homomorphismsPreserveZero-1-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism. Then <span class="process-math">\(\varphi(0_R) = 0_S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_homomorphismsPreserveZero-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.1.3"><a href="#thm_homomorphismsPreserveZero" title="Copy heading and permalink for Theorem 3.1.3" aria-label="Copy heading and permalink for Theorem 3.1.3">🔗</a></div></article><details id="thm_homomorphismsPreserveZero-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_homomorphismsPreserveZero-2-1">
 <div class="para">Supppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism. Note that <span class="process-math">\(0_R+0_R=0_R\)</span> and in particular this tells us</div>
 <div class="displaymath process-math" id="thm_homomorphismsPreserveZero-2-1-3">
 \begin{align*}
@@ -761,12 +561,16 @@ c^2&amp;a^2+b^2\\
 \end{align*}
 </div>
 <div class="para">as desired.</div>
-</div></article></details><div class="para" id="ssec_propertiesOfHomomorphisms-4">We now show that homomorphisms preserve units.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_homomorphismsPreserveZero-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.1.3.1"><a href="#thm_homomorphismsPreserveZero-2" title="Copy heading and permalink for Proof 3.1.3.1" aria-label="Copy heading and permalink for Proof 3.1.3.1">🔗</a></div></article></details><div class="para" id="ssec_propertiesOfHomomorphisms-4">We now show that homomorphisms preserve units.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_propertiesOfHomomorphisms-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="thm_homomorphismsPreserveUnits"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="thm_homomorphismsPreserveUnits-1-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism. If <span class="process-math">\(u\in R^\times \text{,}\)</span> then <span class="process-math">\(\varphi(u)\in S^\times\text{.}\)</span>
-</div></article><details id="thm_homomorphismsPreserveUnits-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_homomorphismsPreserveUnits-2-1">
+<div class="para" id="thm_homomorphismsPreserveUnits-1-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism. If <span class="process-math">\(u\in R^\times \text{,}\)</span> then <span class="process-math">\(\varphi(u)\in S^\times\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_homomorphismsPreserveUnits-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.1.4"><a href="#thm_homomorphismsPreserveUnits" title="Copy heading and permalink for Theorem 3.1.4" aria-label="Copy heading and permalink for Theorem 3.1.4">🔗</a></div></article><details id="thm_homomorphismsPreserveUnits-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_homomorphismsPreserveUnits-2-1">
 <div class="para">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism and <span class="process-math">\(u\in R^\times \text{.}\)</span> Then there exists <span class="process-math">\(v\in R\)</span> with <span class="process-math">\(uv=1_R\text{.}\)</span> We compute:</div>
 <div class="displaymath process-math" id="thm_homomorphismsPreserveUnits-2-1-5">
 \begin{align*}
@@ -776,12 +580,18 @@ c^2&amp;a^2+b^2\\
 </div>
 <div class="para">and hence <span class="process-math">\(\varphi(u)\in S^\times\text{.}\)</span>
 </div>
-</div></article></details><div class="para" id="ssec_propertiesOfHomomorphisms-6">Since homomorphisms are compatible with multiplication, and powers of elements are defined with multiplication, they must preserve powers as the next theorem shows.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_homomorphismsPreserveUnits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.1.4.1"><a href="#thm_homomorphismsPreserveUnits-2" title="Copy heading and permalink for Proof 3.1.4.1" aria-label="Copy heading and permalink for Proof 3.1.4.1">🔗</a></div></article></details><div class="para" id="ssec_propertiesOfHomomorphisms-6">Since homomorphisms are compatible with multiplication, and powers of elements are defined with multiplication, they must preserve powers as the next theorem shows.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_propertiesOfHomomorphisms-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="thm_homomorphismsPreservePowers"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="thm_homomorphismsPreservePowers-1-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism. For any <span class="process-math">\(a\in R\)</span> and <span class="process-math">\(n\in\N\text{,}\)</span> we have <span class="process-math">\(\varphi(a)^n = \varphi(a^n)\)</span> in <span class="process-math">\(S\text{.}\)</span>
-</div></article><details id="thm_homomorphismsPreservePowers-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_homomorphismsPreservePowers-2-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism and <span class="process-math">\(a\in R\text{.}\)</span> We now proceed by induction. The base case is <span class="process-math">\(\varphi(a) = \varphi(a)\)</span> which certainly true.</div> <div class="para logical" id="thm_homomorphismsPreservePowers-2-2">
+<div class="para" id="thm_homomorphismsPreservePowers-1-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism. For any <span class="process-math">\(a\in R\)</span> and <span class="process-math">\(n\in\N\text{,}\)</span> we have <span class="process-math">\(\varphi(a)^n = \varphi(a^n)\)</span> in <span class="process-math">\(S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_homomorphismsPreservePowers-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.1.5"><a href="#thm_homomorphismsPreservePowers" title="Copy heading and permalink for Theorem 3.1.5" aria-label="Copy heading and permalink for Theorem 3.1.5">🔗</a></div></article><details id="thm_homomorphismsPreservePowers-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_homomorphismsPreservePowers-2-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism and <span class="process-math">\(a\in R\text{.}\)</span> We now proceed by induction. The base case is <span class="process-math">\(\varphi(a) = \varphi(a)\)</span> which certainly true.<div class="autopermalink" data-description="Paragraph"><a href="#thm_homomorphismsPreservePowers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm_homomorphismsPreservePowers-2-2">
 <div class="para">For the inductive step, suppose that <span class="process-math">\(\varphi(a)^n =\varphi(a^n)\text{.}\)</span> We show <span class="process-math">\(\varphi(a)^{n+1} = \varphi(a^{n+1})\text{:}\)</span>
 </div>
 <div class="displaymath process-math" id="thm_homomorphismsPreservePowers-2-2-3">
@@ -793,13 +603,17 @@ c^2&amp;a^2+b^2\\
 \end{align*}
 </div>
 <div class="para">as desired. This equality completes the proof.</div>
-</div></article></details></section><section class="subsection" id="ssec_kernelOfAHomomorphism"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="space"> </span><span class="title">Kernel of a Homomorphism</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_homomorphismsPreservePowers-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.1.5.1"><a href="#thm_homomorphismsPreservePowers-2" title="Copy heading and permalink for Proof 3.1.5.1" aria-label="Copy heading and permalink for Proof 3.1.5.1">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.1.2: Properties of Homomorphisms"><a href="#ssec_propertiesOfHomomorphisms" title="Copy heading and permalink for Subsection 3.1.2: Properties of Homomorphisms" aria-label="Copy heading and permalink for Subsection 3.1.2: Properties of Homomorphisms">🔗</a></div></section><section class="subsection" id="ssec_kernelOfAHomomorphism"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Kernel of a Homomorphism</span>
 </h3>
-<div class="para" id="ssec_kernelOfAHomomorphism-2">Homomorphisms give rise to a particularly important class of subsets: kernels.</div>
+<div class="para" id="ssec_kernelOfAHomomorphism-2">Homomorphisms give rise to a particularly important class of subsets: kernels.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_kernelOfAHomomorphism-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="ssec_kernelOfAHomomorphism-3"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span>
-</h4> <div class="para logical" id="ssec_kernelOfAHomomorphism-3-2-1">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="ssec_kernelOfAHomomorphism-3-2-1">
 <div class="para">Let <span class="process-math">\(\varphi\colon R \to S\)</span> be a ring homomorphism. Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -808,18 +622,25 @@ c^2&amp;a^2+b^2\\
 </div>
 <div class="para">is the <dfn class="terminology">kernel</dfn> of <span class="process-math">\(\varphi\text{.}\)</span>
 </div>
-</div></article><div class="para" id="ssec_kernelOfAHomomorphism-4">Note that by <a href="sec_homomorphisms.html#thm_homomorphismsPreserveZero" class="xref" data-knowl="./knowl/xref/thm_homomorphismsPreserveZero.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.5">Theorem 3.1.5</a> we know <span class="process-math">\(0_R\in \ker\varphi\)</span> always. In particular, the kernel of a ring homomorphism is always a non-empty subset.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ssec_kernelOfAHomomorphism-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.1.6"><a href="#ssec_kernelOfAHomomorphism-3" title="Copy heading and permalink for Definition 3.1.6" aria-label="Copy heading and permalink for Definition 3.1.6">🔗</a></div></article><div class="para" id="ssec_kernelOfAHomomorphism-4">Note that by <a href="sec_homomorphisms.html#thm_homomorphismsPreserveZero" class="xref" data-knowl="./knowl/xref/thm_homomorphismsPreserveZero.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.3">Theorem 3.1.3</a> we know <span class="process-math">\(0_R\in \ker\varphi\)</span> always. In particular, the kernel of a ring homomorphism is always a non-empty subset.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_kernelOfAHomomorphism-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="activity project-like" id="ssec_kernelOfAHomomorphism-5"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="ssec_kernelOfAHomomorphism-5-1-1">For each homomorphism in <a href="sec_homomorphisms.html#expl-homomorphism-examples" class="xref" data-knowl="./knowl/xref/expl-homomorphism-examples.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 3.1.1">Exploration 3.1.1</a>, find (with justification), the kernel.</div>
-<div class="solutions"><details id="ssec_kernelOfAHomomorphism-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">TBD</div></details></div></article><div class="para" id="ssec_kernelOfAHomomorphism-6">Kernels are a fundamental structure when studying rings. As a first glimpse of their importance, we show that they give a useful way of determining whether their defining homomorphisms are monomorphisms.</div>
+<div class="para" id="ssec_kernelOfAHomomorphism-5-1-1">For each homomorphism in <a href="sec_homomorphisms.html#expl-homomorphism-examples" class="xref" data-knowl="./knowl/xref/expl-homomorphism-examples.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 3.1.1">Exploration 3.1.1</a>, find (with justification), the kernel.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_kernelOfAHomomorphism-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 3.1.2"><a href="#ssec_kernelOfAHomomorphism-5" title="Copy heading and permalink for Activity 3.1.2" aria-label="Copy heading and permalink for Activity 3.1.2">🔗</a></div></article><div class="para" id="ssec_kernelOfAHomomorphism-6">Kernels are a fundamental structure when studying rings. As a first glimpse of their importance, we show that they give a useful way of determining whether their defining homomorphisms are monomorphisms.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_kernelOfAHomomorphism-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="thm_zeroKernelIsInto"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.9</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="thm_zeroKernelIsInto-1-1">Let <span class="process-math">\(\varphi \colon R\to S\)</span> be a homomorphism. Then <span class="process-math">\(\varphi\)</span> is a monomorphism if and only if <span class="process-math">\(\ker\varphi = \{0\}\text{.}\)</span>
-</div></article><details id="ssec_kernelOfAHomomorphism-8" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_kernelOfAHomomorphism-8-1">Supppose <span class="process-math">\(\varphi\)</span> is a monomomorphism. Since <span class="process-math">\(\varphi\)</span> is a homomorphism we know <span class="process-math">\(\varphi(0) = 0\text{.}\)</span> Suppose now that <span class="process-math">\(x\in\ker\varphi\)</span> so that <span class="process-math">\(\varphi(x)=0\text{.}\)</span> Since <span class="process-math">\(\varphi\)</span> is injective and <span class="process-math">\(\varphi(x)=\varphi(0)\text{,}\)</span> we conclude that <span class="process-math">\(x=0\text{.}\)</span> In particular, <span class="process-math">\(\ker\varphi=\{0\}\text{.}\)</span>
-</div> <div class="para logical" id="ssec_kernelOfAHomomorphism-8-2">
+<div class="para" id="thm_zeroKernelIsInto-1-1">Let <span class="process-math">\(\varphi \colon R\to S\)</span> be a homomorphism. Then <span class="process-math">\(\varphi\)</span> is a monomorphism if and only if <span class="process-math">\(\ker\varphi = \{0\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_zeroKernelIsInto-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.1.7"><a href="#thm_zeroKernelIsInto" title="Copy heading and permalink for Theorem 3.1.7" aria-label="Copy heading and permalink for Theorem 3.1.7">🔗</a></div></article><details id="ssec_kernelOfAHomomorphism-8" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_kernelOfAHomomorphism-8-1">Supppose <span class="process-math">\(\varphi\)</span> is a monomomorphism. Since <span class="process-math">\(\varphi\)</span> is a homomorphism we know <span class="process-math">\(\varphi(0) = 0\text{.}\)</span> Suppose now that <span class="process-math">\(x\in\ker\varphi\)</span> so that <span class="process-math">\(\varphi(x)=0\text{.}\)</span> Since <span class="process-math">\(\varphi\)</span> is injective and <span class="process-math">\(\varphi(x)=\varphi(0)\text{,}\)</span> we conclude that <span class="process-math">\(x=0\text{.}\)</span> In particular, <span class="process-math">\(\ker\varphi=\{0\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_kernelOfAHomomorphism-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ssec_kernelOfAHomomorphism-8-2">
 <div class="para">For the converse, suppose that <span class="process-math">\(\ker\varphi=\{0\}\text{.}\)</span> Suppose <span class="process-math">\(x,y\in R\)</span> are such that <span class="process-math">\(\varphi(x) = \varphi(y)\text{.}\)</span> Then we have:</div>
 <div class="displaymath process-math" id="ssec_kernelOfAHomomorphism-8-2-4">
 \begin{align*}
@@ -829,18 +650,24 @@ c^2&amp;a^2+b^2\\
 \end{align*}
 </div>
 <div class="para">and so <span class="process-math">\(y-x\in\ker\varphi\text{.}\)</span> Since the only element here is <span class="process-math">\(0\text{,}\)</span> we conclude that <span class="process-math">\(y-x=0\)</span> or that <span class="process-math">\(y=x\text{.}\)</span> Thus <span class="process-math">\(\varphi\)</span> is a monomorphism.</div>
-</div></article></details><div class="para" id="ssec_kernelOfAHomomorphism-9">A nice application of this theorem is the following result that shows that homomorphisms from a field are always monomorphisms. They will never fail to be injective!</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ssec_kernelOfAHomomorphism-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.1.3.1"><a href="#ssec_kernelOfAHomomorphism-8" title="Copy heading and permalink for Proof 3.1.3.1" aria-label="Copy heading and permalink for Proof 3.1.3.1">🔗</a></div></article></details><div class="para" id="ssec_kernelOfAHomomorphism-9">A nice application of this theorem is the following result that shows that homomorphisms from a field are always monomorphisms. They will never fail to be injective!<div class="autopermalink" data-description="Paragraph"><a href="#ssec_kernelOfAHomomorphism-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="thm-homomorphismsFromFieldsInjective"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.10</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="thm-homomorphismsFromFieldsInjective-1-1">Suppose <span class="process-math">\(\varphi\colon F\to S\)</span> is a ring homomorphism where <span class="process-math">\(F\)</span> is a field. Then <span class="process-math">\(\varphi\)</span> is a monomorphism.</div></article><details id="ssec_kernelOfAHomomorphism-11" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_kernelOfAHomomorphism-11-1">Suppose <span class="process-math">\(\varphi\colon F\to S\)</span> is a ring homomorphism where <span class="process-math">\(F\)</span> is a field. We show <span class="process-math">\(\varphi\)</span> is a monomorphism by applying <a href="sec_homomorphisms.html#thm_zeroKernelIsInto" class="xref" data-knowl="./knowl/xref/thm_zeroKernelIsInto.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.9">Theorem 3.1.9</a>. Suppose that there is <span class="process-math">\(x\in F\text{,}\)</span> with <span class="process-math">\(\varphi(x) = 0\text{.}\)</span> If <span class="process-math">\(x\neq 0\text{,}\)</span> then there <span class="process-math">\(x\)</span> is a unit. By <a href="sec_homomorphisms.html#thm_homomorphismsPreserveUnits" class="xref" data-knowl="./knowl/xref/thm_homomorphismsPreserveUnits.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.6">Theorem 3.1.6</a>, <span class="process-math">\(\varphi(x)\)</span> is also a unit and in particular is not <span class="process-math">\(0\text{.}\)</span> Thus the only element of <span class="process-math">\(\ker\varphi\)</span> is <span class="process-math">\(0\text{.}\)</span>
-</div></article></details></section><section class="subsection" id="ssec_imageOfAHomomorphism"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="space"> </span><span class="title">Image of a Homomorphism</span>
+<div class="para" id="thm-homomorphismsFromFieldsInjective-1-1">Suppose <span class="process-math">\(\varphi\colon F\to S\)</span> is a ring homomorphism where <span class="process-math">\(F\)</span> is a field. Then <span class="process-math">\(\varphi\)</span> is a monomorphism.<div class="autopermalink" data-description="Paragraph"><a href="#thm-homomorphismsFromFieldsInjective-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.1.8"><a href="#thm-homomorphismsFromFieldsInjective" title="Copy heading and permalink for Theorem 3.1.8" aria-label="Copy heading and permalink for Theorem 3.1.8">🔗</a></div></article><details id="ssec_kernelOfAHomomorphism-11" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ssec_kernelOfAHomomorphism-11-1">Suppose <span class="process-math">\(\varphi\colon F\to S\)</span> is a ring homomorphism where <span class="process-math">\(F\)</span> is a field. We show <span class="process-math">\(\varphi\)</span> is a monomorphism by applying <a href="sec_homomorphisms.html#thm_zeroKernelIsInto" class="xref" data-knowl="./knowl/xref/thm_zeroKernelIsInto.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.7">Theorem 3.1.7</a>. Suppose that there is <span class="process-math">\(x\in F\text{,}\)</span> with <span class="process-math">\(\varphi(x) = 0\text{.}\)</span> If <span class="process-math">\(x\neq 0\text{,}\)</span> then there <span class="process-math">\(x\)</span> is a unit. By <a href="sec_homomorphisms.html#thm_homomorphismsPreserveUnits" class="xref" data-knowl="./knowl/xref/thm_homomorphismsPreserveUnits.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.4">Theorem 3.1.4</a>, <span class="process-math">\(\varphi(x)\)</span> is also a unit and in particular is not <span class="process-math">\(0\text{.}\)</span> Thus the only element of <span class="process-math">\(\ker\varphi\)</span> is <span class="process-math">\(0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_kernelOfAHomomorphism-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.1.3.2"><a href="#ssec_kernelOfAHomomorphism-11" title="Copy heading and permalink for Proof 3.1.3.2" aria-label="Copy heading and permalink for Proof 3.1.3.2">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.1.3: Kernel of a Homomorphism"><a href="#ssec_kernelOfAHomomorphism" title="Copy heading and permalink for Subsection 3.1.3: Kernel of a Homomorphism" aria-label="Copy heading and permalink for Subsection 3.1.3: Kernel of a Homomorphism">🔗</a></div></section><section class="subsection" id="ssec_imageOfAHomomorphism"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Image of a Homomorphism</span>
 </h3>
-<div class="para" id="ssec_imageOfAHomomorphism-2">The image of a homomorphism <span class="process-math">\(\varphi\colon R\to S\)</span> is just different terminology for the range. One reason to use different language is that we will see the image is not just a subset of <span class="process-math">\(S\text{,}\)</span> it is a subring of <span class="process-math">\(S\text{!}\)</span>
+<div class="para" id="ssec_imageOfAHomomorphism-2">The image of a homomorphism <span class="process-math">\(\varphi\colon R\to S\)</span> is just different terminology for the range. One reason to use different language is that we will see the image is not just a subset of <span class="process-math">\(S\text{,}\)</span> it is a subring of <span class="process-math">\(S\text{!}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_imageOfAHomomorphism-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def_imageOfAHomomorphism"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.11</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="def_imageOfAHomomorphism-1-1">
 <div class="para">Suppose <span class="process-math">\(\varphi\colon R\to S\text{,}\)</span> the image of the <span class="process-math">\(\varphi\text{,}\)</span> denoted <span class="process-math">\(\mathrm{im}\varphi\)</span> is the range of <span class="process-math">\(\varphi\text{:}\)</span>
@@ -850,29 +677,39 @@ c^2&amp;a^2+b^2\\
 \mathrm{im}\varphi = \{\varphi(r)\mid r\in R\}.
 \end{equation*}
 </div>
-</div></article><article class="activity project-like" id="ssec_imageOfAHomomorphism-4"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#def_imageOfAHomomorphism-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.1.9"><a href="#def_imageOfAHomomorphism" title="Copy heading and permalink for Definition 3.1.9" aria-label="Copy heading and permalink for Definition 3.1.9">🔗</a></div></article><article class="activity project-like" id="ssec_imageOfAHomomorphism-4"><h4 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="ssec_imageOfAHomomorphism-4-1-1">Compute the image of the homomorphisms <a href="sec_homomorphisms.html#expl-homomorphism-examples" class="xref" data-knowl="./knowl/xref/expl-homomorphism-examples.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 3.1.1">Exploration 3.1.1</a>.</div></article><div class="para logical" id="ssec_imageOfAHomomorphism-5">
+<div class="para" id="ssec_imageOfAHomomorphism-4-1-1">Compute the image of the homomorphisms <a href="sec_homomorphisms.html#expl-homomorphism-examples" class="xref" data-knowl="./knowl/xref/expl-homomorphism-examples.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 3.1.1">Exploration 3.1.1</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_imageOfAHomomorphism-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 3.1.3"><a href="#ssec_imageOfAHomomorphism-4" title="Copy heading and permalink for Activity 3.1.3" aria-label="Copy heading and permalink for Activity 3.1.3">🔗</a></div></article><div class="para logical" id="ssec_imageOfAHomomorphism-5">
 <div class="para">Before we prove that the image of a homomorphism is a subring, let’s note that homomorphisms preserve most ring-axioms. In particular, we have defined subtraction of two ring elements <span class="process-math">\(a,b\in R\)</span> as <span class="process-math">\(a-b:=a+(-b)\text{,}\)</span> where <span class="process-math">\(-b\)</span> is the additive inverse of <span class="process-math">\(b\text{.}\)</span> In <a href="sec_homomorphisms.html#exer_homomorphismPreserveAdditiveInverse" class="xref" data-knowl="./knowl/xref/exer_homomorphismPreserveAdditiveInverse.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.1.7.14">Exercise 3.1.7.14</a> you will prove that homorphisms preserve additive inverses, namely: <span class="process-math">\(\varphi(-r) =-\varphi(r)\text{.}\)</span> In particular,</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exer_homomorphismPreserveAdditiveInverse.html">
 \begin{equation*}
 \varphi(a)-\varphi(b) = \varphi(a)+\varphi(-b) = \varphi(a-b).
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ssec_imageOfAHomomorphism-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm_imageIsASubring"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.12</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="thm_imageIsASubring-1-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a homomorphism. Then <span class="process-math">\(\mathrm{im}\varphi\)</span> is a subring of <span class="process-math">\(S\text{.}\)</span>
-</div></article><details id="thm_imageIsASubring-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_imageIsASubring-2-1">Since <span class="process-math">\(\varphi(1_R) = 1_S\text{,}\)</span> we know that <span class="process-math">\(1_S\in\mathrm{im}\varphi\text{.}\)</span> We just need to show it is closed under subtraction and multiplication:</div> <div class="para logical" id="thm_imageIsASubring-2-2">
+<div class="para" id="thm_imageIsASubring-1-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a homomorphism. Then <span class="process-math">\(\mathrm{im}\varphi\)</span> is a subring of <span class="process-math">\(S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_imageIsASubring-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.1.10"><a href="#thm_imageIsASubring" title="Copy heading and permalink for Theorem 3.1.10" aria-label="Copy heading and permalink for Theorem 3.1.10">🔗</a></div></article><details id="thm_imageIsASubring-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_imageIsASubring-2-1">Since <span class="process-math">\(\varphi(1_R) = 1_S\text{,}\)</span> we know that <span class="process-math">\(1_S\in\mathrm{im}\varphi\text{.}\)</span> We just need to show it is closed under subtraction and multiplication:<div class="autopermalink" data-description="Paragraph"><a href="#thm_imageIsASubring-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm_imageIsASubring-2-2">
 <div class="para">For subtraction, take <span class="process-math">\(\varphi(r_1),\varphi(r_2)\in\mathrm{im}\varphi\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \varphi(r_1)-\varphi(r_2) = \varphi(r_1-r_2)\in\mathrm{im}\varphi.
 \end{equation*}
 </div>
-</div> <div class="para logical" id="thm_imageIsASubring-2-3">
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_imageIsASubring-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm_imageIsASubring-2-3">
 <div class="para">For multiplication, we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -881,10 +718,13 @@ c^2&amp;a^2+b^2\\
 </div>
 <div class="para">We conclude that <span class="process-math">\(\mathrm{im}\varphi\)</span> is a subring of <span class="process-math">\(S\text{.}\)</span>
 </div>
-</div></article></details></section><section class="subsection" id="ssec_initialRing"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="space"> </span><span class="title">The Initial Ring</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_imageIsASubring-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.1.10.1"><a href="#thm_imageIsASubring-2" title="Copy heading and permalink for Proof 3.1.10.1" aria-label="Copy heading and permalink for Proof 3.1.10.1">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.1.4: Image of a Homomorphism"><a href="#ssec_imageOfAHomomorphism" title="Copy heading and permalink for Subsection 3.1.4: Image of a Homomorphism" aria-label="Copy heading and permalink for Subsection 3.1.4: Image of a Homomorphism">🔗</a></div></section><section class="subsection" id="ssec_initialRing"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Initial Ring</span>
 </h3>
-<div class="para" id="ssec_initialRing-2"> We now return to <span class="process-math">\(\Z\)</span> and investigate homomorphisms <span class="process-math">\(\varphi\colon \Z\to R\text{,}\)</span> where <span class="process-math">\(R\)</span> is an arbitrary ring. We will prove that there is one and only one homomorphism. This shows that <span class="process-math">\(\Z\)</span> is the <dfn class="terminology">initial ring</dfn>. It is the unique ring (up to isomorphism) that has this property.</div>
+<div class="para" id="ssec_initialRing-2"> We now return to <span class="process-math">\(\Z\)</span> and investigate homomorphisms <span class="process-math">\(\varphi\colon \Z\to R\text{,}\)</span> where <span class="process-math">\(R\)</span> is an arbitrary ring. We will prove that there is one and only one homomorphism. This shows that <span class="process-math">\(\Z\)</span> is the <dfn class="terminology">initial ring</dfn>. It is the unique ring (up to isomorphism) that has this property.<div class="autopermalink" data-description="Paragraph"><a href="#ssec_initialRing-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="ssec_initialRing-3">
 <div class="para"> Before we prove this, let’s introduce some notation. Take a ring element <span class="process-math">\(a\in R\text{.}\)</span> For <span class="process-math">\(n\in\N\)</span> we can define</div>
 <div class="displaymath process-math">
@@ -899,54 +739,104 @@ n\cdot a = a + a + \cdots + a
 \end{equation*}
 </div>
 <div class="para">where the right hand sum has <span class="process-math">\(n\)</span> terms. And <span class="process-math">\(0\cdot a=0\text{.}\)</span> We leave it to the reader to check that this is well-defined.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ssec_initialRing-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm_initialRing"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.13</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="thm_initialRing-1-1">For any ring <span class="process-math">\(R\text{,}\)</span> there is a unique homomorphism <span class="process-math">\(\varphi\colon \Z\to R\text{.}\)</span>
-</div></article><details id="thm_initialRing-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_initialRing-2-1">Let <span class="process-math">\(\varphi\colon \Z\to R\)</span> be an arbitrary homomorphism. Since the image of unity is unity we have <span class="process-math">\(\varphi(1) = 1_R\text{.}\)</span> Since the image of the additive identity is the additive identity, we have <span class="process-math">\(\varphi(0) = 0_R\text{.}\)</span> By induction, we conclude that <span class="process-math">\(\varphi(n) = n\cdot 1_R\)</span> for any <span class="process-math">\(n\in\N_0\text{.}\)</span> Similarly <span class="process-math">\(\varphi(-n) = (-n)\cdot 1_R\)</span> for any <span class="process-math">\(n\in\N\text{.}\)</span>
-</div> <div class="para" id="thm_initialRing-2-2">Since <span class="process-math">\(\varphi\)</span> was arbitrary, we have seen that any homomorphism is the homomorphism <span class="process-math">\(\varphi(a) = a\cdot 1_R\text{.}\)</span> This proves uniqueness.</div></article></details></section><section class="subsection" id="ssec_terminalRing"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="space"> </span><span class="title">The Terminal Ring</span>
+<div class="para" id="thm_initialRing-1-1">For any ring <span class="process-math">\(R\text{,}\)</span> there is a unique homomorphism <span class="process-math">\(\varphi\colon \Z\to R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_initialRing-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.1.11"><a href="#thm_initialRing" title="Copy heading and permalink for Theorem 3.1.11" aria-label="Copy heading and permalink for Theorem 3.1.11">🔗</a></div></article><details id="thm_initialRing-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_initialRing-2-1">Let <span class="process-math">\(\varphi\colon \Z\to R\)</span> be an arbitrary homomorphism. Since the image of unity is unity we have <span class="process-math">\(\varphi(1) = 1_R\text{.}\)</span> Since the image of the additive identity is the additive identity, we have <span class="process-math">\(\varphi(0) = 0_R\text{.}\)</span> By induction, we conclude that <span class="process-math">\(\varphi(n) = n\cdot 1_R\)</span> for any <span class="process-math">\(n\in\N_0\text{.}\)</span> Similarly <span class="process-math">\(\varphi(-n) = (-n)\cdot 1_R\)</span> for any <span class="process-math">\(n\in\N\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_initialRing-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm_initialRing-2-2">Since <span class="process-math">\(\varphi\)</span> was arbitrary, we have seen that any homomorphism is the homomorphism <span class="process-math">\(\varphi(a) = a\cdot 1_R\text{.}\)</span> This proves uniqueness.<div class="autopermalink" data-description="Paragraph"><a href="#thm_initialRing-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.1.11.1"><a href="#thm_initialRing-2" title="Copy heading and permalink for Proof 3.1.11.1" aria-label="Copy heading and permalink for Proof 3.1.11.1">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.1.5: The Initial Ring"><a href="#ssec_initialRing" title="Copy heading and permalink for Subsection 3.1.5: The Initial Ring" aria-label="Copy heading and permalink for Subsection 3.1.5: The Initial Ring">🔗</a></div></section><section class="subsection" id="ssec_terminalRing"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Terminal Ring</span>
 </h3>
-<div class="para" id="ssec_terminalRing-2"> In this last part of the section, we ask the question: Is there a ring <span class="process-math">\(S\)</span> such that for any ring <span class="process-math">\(R\text{,}\)</span> there exists one and only one homomorphism <span class="process-math">\(\varphi\colon R\to S\text{.}\)</span> That is to say, is there a <span class="process-math">\(terminal ring\text{?}\)</span> One guess might be <span class="process-math">\(\Z\text{.}\)</span> It turns out this is not the case!</div>
+<div class="para" id="ssec_terminalRing-2"> In this last part of the section, we ask the question: Is there a ring <span class="process-math">\(S\)</span> such that for any ring <span class="process-math">\(R\text{,}\)</span> there exists one and only one homomorphism <span class="process-math">\(\varphi\colon R\to S\text{.}\)</span> That is to say, is there a <span class="process-math">\(terminal ring\text{?}\)</span> One guess might be <span class="process-math">\(\Z\text{.}\)</span> It turns out this is not the case!<div class="autopermalink" data-description="Paragraph"><a href="#ssec_terminalRing-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="activity project-like" id="ssec_terminalRing-3"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="ssec_terminalRing-3-1-1">Verify the terminal ring, if it exists, cannot be <span class="process-math">\(\Z\text{.}\)</span> Do so by showing there is no homomorphism <span class="process-math">\(\varphi\colon \Z/2\to \Z\text{.}\)</span> What about <span class="process-math">\(\Z/2\text{?}\)</span> Can it be terminal?</div></article><div class="para" id="ssec_terminalRing-4">The right choice happens to be zero!</div>
+<div class="para" id="ssec_terminalRing-3-1-1">Verify the terminal ring, if it exists, cannot be <span class="process-math">\(\Z\text{.}\)</span> Do so by showing there is no homomorphism <span class="process-math">\(\varphi\colon \Z/2\to \Z\text{.}\)</span> What about <span class="process-math">\(\Z/2\text{?}\)</span> Can it be terminal?<div class="autopermalink" data-description="Paragraph"><a href="#ssec_terminalRing-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 3.1.4"><a href="#ssec_terminalRing-3" title="Copy heading and permalink for Activity 3.1.4" aria-label="Copy heading and permalink for Activity 3.1.4">🔗</a></div></article><div class="para" id="ssec_terminalRing-4">The right choice happens to be zero!<div class="autopermalink" data-description="Paragraph"><a href="#ssec_terminalRing-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="thm_terminalRing"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.14</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="thm_terminalRing-1-1">For any ring <span class="process-math">\(R\text{,}\)</span> there is one and only one homomorphism <span class="process-math">\(\varphi\colon R\to \{0\}\text{.}\)</span>
-</div></article><details id="thm_terminalRing-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_terminalRing-2-1">This is an exercise. There is only one set-theoretic mapping: the zero map. In this case, we just need to see that the zero map is a homomorphism. This is the case if and only if the codomain is <span class="process-math">\(\{0\}\text{.}\)</span>
-</div></article></details><div class="para" id="ssec_terminalRing-6">We now have two very special rings: <span class="process-math">\(\Z\)</span> and <span class="process-math">\(\{0\}\text{.}\)</span> A natural question is to ask how they interact with each other. In particular, we know there exists a unique homomorphism <span class="process-math">\(\Z\to\{0\}\text{.}\)</span> What about the other way around?</div>
+<div class="para" id="thm_terminalRing-1-1">For any ring <span class="process-math">\(R\text{,}\)</span> there is one and only one homomorphism <span class="process-math">\(\varphi\colon R\to \{0\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_terminalRing-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.1.12"><a href="#thm_terminalRing" title="Copy heading and permalink for Theorem 3.1.12" aria-label="Copy heading and permalink for Theorem 3.1.12">🔗</a></div></article><details id="thm_terminalRing-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_terminalRing-2-1">This is an exercise. There is only one set-theoretic mapping: the zero map. In this case, we just need to see that the zero map is a homomorphism. This is the case if and only if the codomain is <span class="process-math">\(\{0\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_terminalRing-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.1.12.1"><a href="#thm_terminalRing-2" title="Copy heading and permalink for Proof 3.1.12.1" aria-label="Copy heading and permalink for Proof 3.1.12.1">🔗</a></div></article></details><div class="para" id="ssec_terminalRing-6">We now have two very special rings: <span class="process-math">\(\Z\)</span> and <span class="process-math">\(\{0\}\text{.}\)</span> A natural question is to ask how they interact with each other. In particular, we know there exists a unique homomorphism <span class="process-math">\(\Z\to\{0\}\text{.}\)</span> What about the other way around?<div class="autopermalink" data-description="Paragraph"><a href="#ssec_terminalRing-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="exploration project-like" id="ssec_terminalRing-7"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
+<span class="type">Exploration</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="ssec_terminalRing-7-1-1">How many homomorphisms are there <span class="process-math">\(\{0\}\to\Z\text{?}\)</span>
-</div></article></section><section class="exercises" id="exers_homomorphisms"><h3 class="heading hide-type">
-<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="space"> </span><span class="title">Exercises</span>
+<div class="para" id="ssec_terminalRing-7-1-1">How many homomorphisms are there <span class="process-math">\(\{0\}\to\Z\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec_terminalRing-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exploration 3.1.5"><a href="#ssec_terminalRing-7" title="Copy heading and permalink for Exploration 3.1.5" aria-label="Copy heading and permalink for Exploration 3.1.5">🔗</a></div></article><div class="autopermalink" data-description="Subsection 3.1.6: The Terminal Ring"><a href="#ssec_terminalRing" title="Copy heading and permalink for Subsection 3.1.6: The Terminal Ring" aria-label="Copy heading and permalink for Subsection 3.1.6: The Terminal Ring">🔗</a></div></section><section class="exercises" id="exers_homomorphisms"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="sec_homomorphismsTF"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="sec_homomorphismsTF-1-1">Mark the following as true or false.</div> <ol class="lower-alpha" id="sec_homomorphismsTF-1-2">
-<li id="sec_homomorphismsTF-1-2-1"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-1">Suppose <span class="process-math">\(R,S\)</span> are rings. Any function <span class="process-math">\(f\colon R\to S\)</span> is a ring homomorphism.</div></li>
-<li id="sec_homomorphismsTF-1-2-2"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-2">The identity map on a ring is a ring homomorphism.</div></li>
-<li id="sec_homomorphismsTF-1-2-3"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-3">The zero map <span class="process-math">\(0\colon R\to R\)</span> defined by <span class="process-math">\(0(r) = 0\)</span> is a ring homomorphism.</div></li>
-<li id="sec_homomorphismsTF-1-2-4"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-4">If <span class="process-math">\(\varphi\colon R\to F\)</span> is a ring homomorphism and <span class="process-math">\(F\)</span> is a field, then <span class="process-math">\(R\)</span> is a field.</div></li>
-<li id="sec_homomorphismsTF-1-2-5"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-5">If <span class="process-math">\(\varphi\colon F\to R\)</span> is a ring homomorphism and <span class="process-math">\(F\)</span> is a field, then <span class="process-math">\(R\)</span> is a field.</div></li>
-<li id="sec_homomorphismsTF-1-2-6"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-6">If <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism and <span class="process-math">\(R\)</span> is a finite ring, then <span class="process-math">\(S\)</span> is a finite ring.</div></li>
-<li id="sec_homomorphismsTF-1-2-7"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-7">If <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism and <span class="process-math">\(S\)</span> is a finite ring, then <span class="process-math">\(R\)</span> is a finite ring.</div></li>
-<li id="sec_homomorphismsTF-1-2-8"><div class="para" id="p-derived-sec_homomorphismsTF-1-2-8">If <span class="process-math">\(\varphi\colon R\to S\)</span> is an injective ring homomorphism and <span class="process-math">\(S\)</span> is a finite ring, then <span class="process-math">\(R\)</span> is a finite ring.</div></li>
-</ol></article><article class="exercise exercise-like" id="evaluationHomomorphismIntegral"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="evaluationHomomorphismIntegral-1-1">Fix <span class="process-math">\(a\in\Z\text{.}\)</span> Let <span class="process-math">\(\mathrm{ev}_a\colon\mathbb{Z}[x]\to\mathbb{R}\)</span> be defined by <span class="process-math">\(\mathrm{ev}_a(p(x)) = p(a)\text{.}\)</span> Prove that <span class="process-math">\(\mathrm{ev}_a\)</span> is a ring homomorphism. Then show that <span class="process-math">\(\mathrm{ev}_a\)</span> is neither injective nor surjective.</div></article><article class="exercise exercise-like" id="exers_homomorphisms-4"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="exers_homomorphisms-4-1-1">Define <span class="process-math">\(\iota\colon\Z\to \Q\)</span> by <span class="process-math">\(\iota(a) = \frac{a}{1}\text{.}\)</span> Prove that <span class="process-math">\(\iota\)</span> is an injective ring homomorphism.</div></article><article class="exercise exercise-like" id="exers_homomorphisms-5"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="exers_homomorphisms-5-1-1">Let <span class="process-math">\(R\)</span> be any ring and <span class="process-math">\(\mathcal{M}_n(R)\)</span> be the set of <span class="process-math">\(n\times n\)</span> matries with entries in <span class="process-math">\(R\text{.}\)</span> Define <span class="process-math">\(\iota\colon R\to M_n(R)\)</span> by <span class="process-math">\(\iota(r) = r\cdot I_n\text{,}\)</span> where <span class="process-math">\(I_n\)</span> is the identity matrix. Prove that <span class="process-math">\(\iota\)</span> is an injective ring homomorphism.</div></article><article class="exercise exercise-like" id="exer_evaluationHomomorphismGeneralR"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="exer_evaluationHomomorphismGeneralR-1-1">Suppose <span class="process-math">\(R\)</span> is a commutative ring. Fix <span class="process-math">\(a\in R\text{.}\)</span> Let <span class="process-math">\(\mathrm{ev}_a\colon R[x]\to R\)</span> be defined by <span class="process-math">\(\mathrm{ev}_a(p(x)) = p(a)\text{.}\)</span> Prove that <span class="process-math">\(\mathrm{ev}_a\)</span> is a ring homomorphism. Is the evaluation homomorphism injective, surjective, and/or bijective?</div></article><article class="exercise exercise-like" id="exers_homomorphisms-7"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="exers_homomorphisms-7-1-1">Gemini, Google’s LLM, has claimed that for any ring <span class="process-math">\(R\text{,}\)</span> the trace map <span class="process-math">\(\mathrm{tr}\colon M_n(R)\to R\)</span> defined by <span class="process-math">\(\mathrm{tr}(A) = \sum_{i=1}^n a_{ii}\)</span> where <span class="process-math">\(A=(a_{ij})\text{,}\)</span> is a ring homomorphism. This is true for exactly one <span class="process-math">\(n_0\in\N\text{.}\)</span> Find it, prove it is a homomorphism for that <span class="process-math">\(n_0\text{,}\)</span> then show it is not a homomorphism for any <span class="process-math">\(n\neq n_0\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exers_homomorphisms-8"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="exers_homomorphisms-8-1-1">Consider the function <span class="process-math">\(\mathrm{ev}_{\sqrt{2}}\colon \Z[x]\to\R\)</span> defined by <span class="process-math">\(\mathrm{ev}_{\sqrt{2}}(p(x)) = p(\sqrt{2})\text{.}\)</span> Prove that this mapping is a homomorphism. Then show it is neither injective nor bijective. What is it’s image?</div></article><article class="exercise exercise-like" id="exer_evaluationHomomorphism"><h4 class="heading">
-<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Evaluation Homomorphism.</span>
+<article class="exercise exercise-like" id="sec_homomorphismsTF"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="sec_homomorphismsTF-1-1">Mark the following as true or false.<div class="autopermalink" data-description="Paragraph"><a href="#sec_homomorphismsTF-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="sec_homomorphismsTF-1-2">
+<li id="sec_homomorphismsTF-1-2-1">
+<div class="para" id="p-derived-sec_homomorphismsTF-1-2-1">Suppose <span class="process-math">\(R,S\)</span> are rings. Any function <span class="process-math">\(f\colon R\to S\)</span> is a ring homomorphism.</div>
+<div class="autopermalink" data-description="Item 3.1.7.1.a"><a href="#sec_homomorphismsTF-1-2-1" title="Copy heading and permalink for Item 3.1.7.1.a" aria-label="Copy heading and permalink for Item 3.1.7.1.a">🔗</a></div>
+</li>
+<li id="sec_homomorphismsTF-1-2-2">
+<div class="para" id="p-derived-sec_homomorphismsTF-1-2-2">The identity map on a ring is a ring homomorphism.</div>
+<div class="autopermalink" data-description="Item 3.1.7.1.b"><a href="#sec_homomorphismsTF-1-2-2" title="Copy heading and permalink for Item 3.1.7.1.b" aria-label="Copy heading and permalink for Item 3.1.7.1.b">🔗</a></div>
+</li>
+<li id="sec_homomorphismsTF-1-2-3">
+<div class="para" id="p-derived-sec_homomorphismsTF-1-2-3">The zero map <span class="process-math">\(0\colon R\to R\)</span> defined by <span class="process-math">\(0(r) = 0\)</span> is a ring homomorphism.</div>
+<div class="autopermalink" data-description="Item 3.1.7.1.c"><a href="#sec_homomorphismsTF-1-2-3" title="Copy heading and permalink for Item 3.1.7.1.c" aria-label="Copy heading and permalink for Item 3.1.7.1.c">🔗</a></div>
+</li>
+<li id="sec_homomorphismsTF-1-2-4">
+<div class="para" id="p-derived-sec_homomorphismsTF-1-2-4">If <span class="process-math">\(\varphi\colon R\to F\)</span> is a ring homomorphism and <span class="process-math">\(F\)</span> is a field, then <span class="process-math">\(R\)</span> is a field.</div>
+<div class="autopermalink" data-description="Item 3.1.7.1.d"><a href="#sec_homomorphismsTF-1-2-4" title="Copy heading and permalink for Item 3.1.7.1.d" aria-label="Copy heading and permalink for Item 3.1.7.1.d">🔗</a></div>
+</li>
+<li id="sec_homomorphismsTF-1-2-5">
+<div class="para" id="p-derived-sec_homomorphismsTF-1-2-5">If <span class="process-math">\(\varphi\colon F\to R\)</span> is a ring homomorphism and <span class="process-math">\(F\)</span> is a field, then <span class="process-math">\(R\)</span> is a field.</div>
+<div class="autopermalink" data-description="Item 3.1.7.1.e"><a href="#sec_homomorphismsTF-1-2-5" title="Copy heading and permalink for Item 3.1.7.1.e" aria-label="Copy heading and permalink for Item 3.1.7.1.e">🔗</a></div>
+</li>
+<li id="sec_homomorphismsTF-1-2-6">
+<div class="para" id="p-derived-sec_homomorphismsTF-1-2-6">If <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism and <span class="process-math">\(R\)</span> is a finite ring, then <span class="process-math">\(S\)</span> is a finite ring.</div>
+<div class="autopermalink" data-description="Item 3.1.7.1.f"><a href="#sec_homomorphismsTF-1-2-6" title="Copy heading and permalink for Item 3.1.7.1.f" aria-label="Copy heading and permalink for Item 3.1.7.1.f">🔗</a></div>
+</li>
+<li id="sec_homomorphismsTF-1-2-7">
+<div class="para" id="p-derived-sec_homomorphismsTF-1-2-7">If <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring homomorphism and <span class="process-math">\(S\)</span> is a finite ring, then <span class="process-math">\(R\)</span> is a finite ring.</div>
+<div class="autopermalink" data-description="Item 3.1.7.1.g"><a href="#sec_homomorphismsTF-1-2-7" title="Copy heading and permalink for Item 3.1.7.1.g" aria-label="Copy heading and permalink for Item 3.1.7.1.g">🔗</a></div>
+</li>
+<li id="sec_homomorphismsTF-1-2-8">
+<div class="para" id="p-derived-sec_homomorphismsTF-1-2-8">If <span class="process-math">\(\varphi\colon R\to S\)</span> is an injective ring homomorphism and <span class="process-math">\(S\)</span> is a finite ring, then <span class="process-math">\(R\)</span> is a finite ring.</div>
+<div class="autopermalink" data-description="Item 3.1.7.1.h"><a href="#sec_homomorphismsTF-1-2-8" title="Copy heading and permalink for Item 3.1.7.1.h" aria-label="Copy heading and permalink for Item 3.1.7.1.h">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.1.7.1"><a href="#sec_homomorphismsTF" title="Copy heading and permalink for Exercise 3.1.7.1" aria-label="Copy heading and permalink for Exercise 3.1.7.1">🔗</a></div></article><article class="exercise exercise-like" id="evaluationHomomorphismIntegral"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="evaluationHomomorphismIntegral-1-1">Fix <span class="process-math">\(a\in\Z\text{.}\)</span> Let <span class="process-math">\(\mathrm{ev}_a\colon\mathbb{Z}[x]\to\mathbb{R}\)</span> be defined by <span class="process-math">\(\mathrm{ev}_a(p(x)) = p(a)\text{.}\)</span> Prove that <span class="process-math">\(\mathrm{ev}_a\)</span> is a ring homomorphism. Then show that <span class="process-math">\(\mathrm{ev}_a\)</span> is neither injective nor surjective.<div class="autopermalink" data-description="Paragraph"><a href="#evaluationHomomorphismIntegral-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.7.2"><a href="#evaluationHomomorphismIntegral" title="Copy heading and permalink for Exercise 3.1.7.2" aria-label="Copy heading and permalink for Exercise 3.1.7.2">🔗</a></div></article><article class="exercise exercise-like" id="exers_homomorphisms-4"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_homomorphisms-4-1-1">Define <span class="process-math">\(\iota\colon\Z\to \Q\)</span> by <span class="process-math">\(\iota(a) = \frac{a}{1}\text{.}\)</span> Prove that <span class="process-math">\(\iota\)</span> is an injective ring homomorphism.<div class="autopermalink" data-description="Paragraph"><a href="#exers_homomorphisms-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.7.3"><a href="#exers_homomorphisms-4" title="Copy heading and permalink for Exercise 3.1.7.3" aria-label="Copy heading and permalink for Exercise 3.1.7.3">🔗</a></div></article><article class="exercise exercise-like" id="exers_homomorphisms-5"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_homomorphisms-5-1-1">Let <span class="process-math">\(R\)</span> be any ring and <span class="process-math">\(\mathcal{M}_n(R)\)</span> be the set of <span class="process-math">\(n\times n\)</span> matries with entries in <span class="process-math">\(R\text{.}\)</span> Define <span class="process-math">\(\iota\colon R\to M_n(R)\)</span> by <span class="process-math">\(\iota(r) = r\cdot I_n\text{,}\)</span> where <span class="process-math">\(I_n\)</span> is the identity matrix. Prove that <span class="process-math">\(\iota\)</span> is an injective ring homomorphism.<div class="autopermalink" data-description="Paragraph"><a href="#exers_homomorphisms-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.7.4"><a href="#exers_homomorphisms-5" title="Copy heading and permalink for Exercise 3.1.7.4" aria-label="Copy heading and permalink for Exercise 3.1.7.4">🔗</a></div></article><article class="exercise exercise-like" id="exer_evaluationHomomorphismGeneralR"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exer_evaluationHomomorphismGeneralR-1-1">Suppose <span class="process-math">\(R\)</span> is a commutative ring. Fix <span class="process-math">\(a\in R\text{.}\)</span> Let <span class="process-math">\(\mathrm{ev}_a\colon R[x]\to R\)</span> be defined by <span class="process-math">\(\mathrm{ev}_a(p(x)) = p(a)\text{.}\)</span> Prove that <span class="process-math">\(\mathrm{ev}_a\)</span> is a ring homomorphism. Is the evaluation homomorphism injective, surjective, and/or bijective?<div class="autopermalink" data-description="Paragraph"><a href="#exer_evaluationHomomorphismGeneralR-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.7.5"><a href="#exer_evaluationHomomorphismGeneralR" title="Copy heading and permalink for Exercise 3.1.7.5" aria-label="Copy heading and permalink for Exercise 3.1.7.5">🔗</a></div></article><article class="exercise exercise-like" id="exers_homomorphisms-7"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_homomorphisms-7-1-1">Gemini, Google’s LLM, has claimed that for any ring <span class="process-math">\(R\text{,}\)</span> the trace map <span class="process-math">\(\mathrm{tr}\colon M_n(R)\to R\)</span> defined by <span class="process-math">\(\mathrm{tr}(A) = \sum_{i=1}^n a_{ii}\)</span> where <span class="process-math">\(A=(a_{ij})\text{,}\)</span> is a ring homomorphism. This is true for exactly one <span class="process-math">\(n_0\in\N\text{.}\)</span> Find it, prove it is a homomorphism for that <span class="process-math">\(n_0\text{,}\)</span> then show it is not a homomorphism for any <span class="process-math">\(n\neq n_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exers_homomorphisms-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.7.6"><a href="#exers_homomorphisms-7" title="Copy heading and permalink for Exercise 3.1.7.6" aria-label="Copy heading and permalink for Exercise 3.1.7.6">🔗</a></div></article><article class="exercise exercise-like" id="exers_homomorphisms-8"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_homomorphisms-8-1-1">Consider the function <span class="process-math">\(\mathrm{ev}_{\sqrt{2}}\colon \Z[x]\to\R\)</span> defined by <span class="process-math">\(\mathrm{ev}_{\sqrt{2}}(p(x)) = p(\sqrt{2})\text{.}\)</span> Prove that this mapping is a homomorphism. Then show it is neither injective nor bijective. What is it’s image?<div class="autopermalink" data-description="Paragraph"><a href="#exers_homomorphisms-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.7.7"><a href="#exers_homomorphisms-8" title="Copy heading and permalink for Exercise 3.1.7.7" aria-label="Copy heading and permalink for Exercise 3.1.7.7">🔗</a></div></article><article class="exercise exercise-like" id="exer_evaluationHomomorphism"><h4 class="heading">
+<span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluation Homomorphism.</span>
 </h4>
-<div class="para logical" id="exer_evaluationHomomorphism-4-1">
+<div class="para logical" id="exer_evaluationHomomorphism-3-1">
 <div class="para">Let <span class="process-math">\(R\)</span> be a ring. Consider the polynomial ring <span class="process-math">\(R[x]\)</span> over <span class="process-math">\(R\text{.}\)</span> For any <span class="process-math">\(a\in R\text{,}\)</span> define the evaluation function:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -954,25 +844,55 @@ n\cdot a = a + a + \cdots + a
 \end{equation*}
 </div>
 <div class="para">by <span class="process-math">\(\mathrm{ev}_a(p(x)) = p(a)\text{.}\)</span> Prove that <span class="process-math">\(\mathrm{ev}_a\)</span> is always an epimorphism. That is, it is a homomorphism which is always surjective.</div>
-</div> <div class="para" id="exer_evaluationHomomorphism-4-2">Why does this exercise not contradict the previous exercise?</div></article><article class="exercise exercise-like" id="exers_homomorphisms-10"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="exers_homomorphisms-10-1-1">Let <span class="process-math">\(\mathrm{Fr}\colon \mathbb{F}_p[x]\to \mathbb{F}_p[x]\)</span> be the Frobenius of <a href="sec_homomorphisms.html#ex_frobeniusAffineLine" class="xref" data-knowl="./knowl/xref/ex_frobeniusAffineLine.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.1.3: The Frobenius Homomorphism">Example 3.1.3</a>. Show that <span class="process-math">\(\mathrm{Fr}\)</span> is a monomorphism. Show it is not an epimorphism. Describe <span class="process-math">\(\mathrm{im}\mathrm{Fr}\)</span> as a subring of <span class="process-math">\(\mathbb{F}_p[x]\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exers_homomorphisms-11"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="exers_homomorphisms-11-1-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a homomorphism. Prove <span class="process-math">\(\varphi(-a) = -\varphi(a)\)</span> for all <span class="process-math">\(a\in R\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exers_homomorphisms-12"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="para" id="exers_homomorphisms-12-1-1">Let <span class="process-math">\(\varphi\colon \Z/6\to \Z/3\)</span> be the <em class="emphasis">further reduce modulo three</em> map. Show that <span class="process-math">\(\varphi\)</span> is well-defined and an epimorphism. Then show that <span class="process-math">\(\varphi(\bar{3})\)</span> is not a zero-divisor. That is, homomorphisms need not preserve zero-divisors.</div></article><article class="exercise exercise-like" id="exers_homomorphisms-13"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<div class="para" id="exers_homomorphisms-13-1-1">Let <span class="process-math">\(\varphi\colon R\to S\)</span> and <span class="process-math">\(\psi\colon S\to T\)</span> be ring homomorphisms. Prove <span class="process-math">\(\psi\circ \varphi\colon R\to T\)</span> defined by <span class="process-math">\((\psi\circ \varphi)(r) = \psi(\varphi(r))\)</span> is again a ring homomorphism.</div></article><article class="exercise exercise-like" id="exers_homomorphisms-14"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
-<div class="para" id="exers_homomorphisms-14-1-1">Which of the properties one-to-one, onto, bijective are stable under composition of ring homomorphisms? That is, if <span class="process-math">\(\varphi,\psi\)</span> both have one of these properties, must <span class="process-math">\(\psi\circ\varphi\)</span> also have it?</div></article><article class="exercise exercise-like" id="exer_homomorphismPreserveAdditiveInverse"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
-<div class="para" id="exer_homomorphismPreserveAdditiveInverse-1-1">Let <span class="process-math">\(\varphi\colon R\to S\)</span> is a homomorphism, prove that <span class="process-math">\(\varphi(-r) = -\varphi(r)\text{.}\)</span> That is, the additive inverse of the image is the image of the additive inverse.</div></article><article class="exercise exercise-like" id="exers_homomorphisms-16"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
-<div class="para" id="exers_homomorphisms-16-1-1">Suppose <span class="process-math">\(R\)</span> is a ring satisfying the initial property: For all rings <span class="process-math">\(S\text{,}\)</span> there is a unique homomorphism <span class="process-math">\(\varphi\colon R\to S\text{.}\)</span> Prove <span class="process-math">\(R\)</span> is isomorphic to <span class="process-math">\(\Z\)</span> as follows.</div> <ol class="lower-alpha" id="exers_homomorphisms-16-1-2">
-<li id="exers_homomorphisms-16-1-2-1"><div class="para" id="exers_homomorphisms-16-1-2-1-1">Show that there are unique homomorphisms <span class="process-math">\(\varphi_\Z\colon R\to \Z\)</span> and <span class="process-math">\(\varphi_R\colon \Z\to R\)</span>
-</div></li>
-<li id="exers_homomorphisms-16-1-2-2"><div class="para" id="exers_homomorphisms-16-1-2-2-1">Use <a href="sec_homomorphisms.html#thm_initialRing" class="xref" data-knowl="./knowl/xref/thm_initialRing.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.13">Theorem 3.1.13</a> to prove that <span class="process-math">\(\varphi_\Z\circ \varphi_R = \mathrm{Id}_\Z\text{.}\)</span>
-</div></li>
-<li id="exers_homomorphisms-16-1-2-3"><div class="para" id="exers_homomorphisms-16-1-2-3-1">Use that <span class="process-math">\(R\)</span> satisfies the initial property to prove <span class="process-math">\(\varphi_R\circ \varphi_\Z = \mathrm{Id}_R\text{.}\)</span>
-</div></li>
-<li id="exers_homomorphisms-16-1-2-4"><div class="para" id="exers_homomorphisms-16-1-2-4-1">Deduce that <span class="process-math">\(\Z\cong R\text{.}\)</span> How might your proof change if you were to show that there is a unique terminal ring instead?</div></li>
-</ol></article><article class="exercise exercise-like" id="exers_homomorphisms-17"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
-<div class="para" id="exers_homomorphisms-17-1-1">Prove that the zero map <span class="process-math">\(0\colon R\to S\)</span> is a homomorphism if and only <span class="process-math">\(S\)</span> is the zero ring.</div></article><article class="exercise exercise-like" id="exers_homomorphisms-18"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>
+<div class="autopermalink" data-description="Paragraph"><a href="#exer_evaluationHomomorphism-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="exer_evaluationHomomorphism-3-2">Why does this exercise not contradict the previous exercise?<div class="autopermalink" data-description="Paragraph"><a href="#exer_evaluationHomomorphism-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.7.8: Evaluation Homomorphism"><a href="#exer_evaluationHomomorphism" title="Copy heading and permalink for Exercise 3.1.7.8: Evaluation Homomorphism" aria-label="Copy heading and permalink for Exercise 3.1.7.8: Evaluation Homomorphism">🔗</a></div></article><article class="exercise exercise-like" id="exers_homomorphisms-10"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_homomorphisms-10-1-1">Let <span class="process-math">\(\mathrm{Fr}\colon \mathbb{F}_p[x]\to \mathbb{F}_p[x]\)</span> be the Frobenius of <a href="sec_homomorphisms.html#ex_frobeniusAffineLine" class="xref" data-knowl="./knowl/xref/ex_frobeniusAffineLine.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.1.2: The Frobenius Homomorphism">Example 3.1.2</a>. Show that <span class="process-math">\(\mathrm{Fr}\)</span> is a monomorphism. Show it is not an epimorphism. Describe <span class="process-math">\(\mathrm{im}\mathrm{Fr}\)</span> as a subring of <span class="process-math">\(\mathbb{F}_p[x]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exers_homomorphisms-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.7.9"><a href="#exers_homomorphisms-10" title="Copy heading and permalink for Exercise 3.1.7.9" aria-label="Copy heading and permalink for Exercise 3.1.7.9">🔗</a></div></article><article class="exercise exercise-like" id="exers_homomorphisms-11"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_homomorphisms-11-1-1">Suppose <span class="process-math">\(\varphi\colon R\to S\)</span> is a homomorphism. Prove <span class="process-math">\(\varphi(-a) = -\varphi(a)\)</span> for all <span class="process-math">\(a\in R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exers_homomorphisms-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.7.10"><a href="#exers_homomorphisms-11" title="Copy heading and permalink for Exercise 3.1.7.10" aria-label="Copy heading and permalink for Exercise 3.1.7.10">🔗</a></div></article><article class="exercise exercise-like" id="exers_homomorphisms-12"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_homomorphisms-12-1-1">Let <span class="process-math">\(\varphi\colon \Z/6\to \Z/3\)</span> be the <em class="emphasis">further reduce modulo three</em> map. Show that <span class="process-math">\(\varphi\)</span> is well-defined and an epimorphism. Then show that <span class="process-math">\(\varphi(\bar{3})\)</span> is not a zero-divisor. That is, homomorphisms need not preserve zero-divisors.<div class="autopermalink" data-description="Paragraph"><a href="#exers_homomorphisms-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.7.11"><a href="#exers_homomorphisms-12" title="Copy heading and permalink for Exercise 3.1.7.11" aria-label="Copy heading and permalink for Exercise 3.1.7.11">🔗</a></div></article><article class="exercise exercise-like" id="exers_homomorphisms-13"><h4 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_homomorphisms-13-1-1">Let <span class="process-math">\(\varphi\colon R\to S\)</span> and <span class="process-math">\(\psi\colon S\to T\)</span> be ring homomorphisms. Prove <span class="process-math">\(\psi\circ \varphi\colon R\to T\)</span> defined by <span class="process-math">\((\psi\circ \varphi)(r) = \psi(\varphi(r))\)</span> is again a ring homomorphism.<div class="autopermalink" data-description="Paragraph"><a href="#exers_homomorphisms-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.7.12"><a href="#exers_homomorphisms-13" title="Copy heading and permalink for Exercise 3.1.7.12" aria-label="Copy heading and permalink for Exercise 3.1.7.12">🔗</a></div></article><article class="exercise exercise-like" id="exers_homomorphisms-14"><h4 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_homomorphisms-14-1-1">Which of the properties one-to-one, onto, bijective are stable under composition of ring homomorphisms? That is, if <span class="process-math">\(\varphi,\psi\)</span> both have one of these properties, must <span class="process-math">\(\psi\circ\varphi\)</span> also have it?<div class="autopermalink" data-description="Paragraph"><a href="#exers_homomorphisms-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.7.13"><a href="#exers_homomorphisms-14" title="Copy heading and permalink for Exercise 3.1.7.13" aria-label="Copy heading and permalink for Exercise 3.1.7.13">🔗</a></div></article><article class="exercise exercise-like" id="exer_homomorphismPreserveAdditiveInverse"><h4 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exer_homomorphismPreserveAdditiveInverse-1-1">Let <span class="process-math">\(\varphi\colon R\to S\)</span> is a homomorphism, prove that <span class="process-math">\(\varphi(-r) = -\varphi(r)\text{.}\)</span> That is, the additive inverse of the image is the image of the additive inverse.<div class="autopermalink" data-description="Paragraph"><a href="#exer_homomorphismPreserveAdditiveInverse-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.7.14"><a href="#exer_homomorphismPreserveAdditiveInverse" title="Copy heading and permalink for Exercise 3.1.7.14" aria-label="Copy heading and permalink for Exercise 3.1.7.14">🔗</a></div></article><article class="exercise exercise-like" id="exers_homomorphisms-16"><h4 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_homomorphisms-16-1-1">Suppose <span class="process-math">\(R\)</span> is a ring satisfying the initial property: For all rings <span class="process-math">\(S\text{,}\)</span> there is a unique homomorphism <span class="process-math">\(\varphi\colon R\to S\text{.}\)</span> Prove <span class="process-math">\(R\)</span> is isomorphic to <span class="process-math">\(\Z\)</span> as follows.<div class="autopermalink" data-description="Paragraph"><a href="#exers_homomorphisms-16-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="exers_homomorphisms-16-1-2">
+<li id="exers_homomorphisms-16-1-2-1">
+<div class="para" id="exers_homomorphisms-16-1-2-1-1">Show that there are unique homomorphisms <span class="process-math">\(\varphi_\Z\colon R\to \Z\)</span> and <span class="process-math">\(\varphi_R\colon \Z\to R\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exers_homomorphisms-16-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.7.15.a"><a href="#exers_homomorphisms-16-1-2-1" title="Copy heading and permalink for Item 3.1.7.15.a" aria-label="Copy heading and permalink for Item 3.1.7.15.a">🔗</a></div>
+</li>
+<li id="exers_homomorphisms-16-1-2-2">
+<div class="para" id="exers_homomorphisms-16-1-2-2-1">Use <a href="sec_homomorphisms.html#thm_initialRing" class="xref" data-knowl="./knowl/xref/thm_initialRing.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.11">Theorem 3.1.11</a> to prove that <span class="process-math">\(\varphi_\Z\circ \varphi_R = \mathrm{Id}_\Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exers_homomorphisms-16-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.7.15.b"><a href="#exers_homomorphisms-16-1-2-2" title="Copy heading and permalink for Item 3.1.7.15.b" aria-label="Copy heading and permalink for Item 3.1.7.15.b">🔗</a></div>
+</li>
+<li id="exers_homomorphisms-16-1-2-3">
+<div class="para" id="exers_homomorphisms-16-1-2-3-1">Use that <span class="process-math">\(R\)</span> satisfies the initial property to prove <span class="process-math">\(\varphi_R\circ \varphi_\Z = \mathrm{Id}_R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exers_homomorphisms-16-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.7.15.c"><a href="#exers_homomorphisms-16-1-2-3" title="Copy heading and permalink for Item 3.1.7.15.c" aria-label="Copy heading and permalink for Item 3.1.7.15.c">🔗</a></div>
+</li>
+<li id="exers_homomorphisms-16-1-2-4">
+<div class="para" id="exers_homomorphisms-16-1-2-4-1">Deduce that <span class="process-math">\(\Z\cong R\text{.}\)</span> How might your proof change if you were to show that there is a unique terminal ring instead?<div class="autopermalink" data-description="Paragraph"><a href="#exers_homomorphisms-16-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.7.15.d"><a href="#exers_homomorphisms-16-1-2-4" title="Copy heading and permalink for Item 3.1.7.15.d" aria-label="Copy heading and permalink for Item 3.1.7.15.d">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.1.7.15"><a href="#exers_homomorphisms-16" title="Copy heading and permalink for Exercise 3.1.7.15" aria-label="Copy heading and permalink for Exercise 3.1.7.15">🔗</a></div></article><article class="exercise exercise-like" id="exers_homomorphisms-17"><h4 class="heading"><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exers_homomorphisms-17-1-1">Prove that the zero map <span class="process-math">\(0\colon R\to S\)</span> is a homomorphism if and only <span class="process-math">\(S\)</span> is the zero ring.<div class="autopermalink" data-description="Paragraph"><a href="#exers_homomorphisms-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.7.16"><a href="#exers_homomorphisms-17" title="Copy heading and permalink for Exercise 3.1.7.16" aria-label="Copy heading and permalink for Exercise 3.1.7.16">🔗</a></div></article><article class="exercise exercise-like" id="exers_homomorphisms-18"><h4 class="heading"><span class="codenumber">17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para logical" id="exers_homomorphisms-18-1-1">
 <div class="para">Revisiting upper triangular matrices from <a href="sec_rings.html#exer_upperTriangularMatrices" class="xref" data-knowl="./knowl/xref/exer_upperTriangularMatrices.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 2.2.4.10: Upper Triangular Matrices">Exercise 2.2.4.10</a>. Consider the projection onto the entry maps: <span class="process-math">\(\pi_{ij}\colon UT_2(\Q)\to \Q\)</span> defined by</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exer_upperTriangularMatrices.html" id="exers_homomorphisms-18-1-1-3">
@@ -984,25 +904,27 @@ n\cdot a = a + a + \cdots + a
 \end{align*}
 </div>
 <div class="para">Prove that <span class="process-math">\(\pi_{11}\)</span> and <span class="process-math">\(\pi_{22}\)</span> are homomorphisms; however, <span class="process-math">\(\pi_{12}\)</span> and <span class="process-math">\(\pi_{21}\)</span> are not homomorphisms.</div>
-</div></article><article class="exercise exercise-like" id="matching-dates"><h4 class="heading">
-<span class="codenumber">18<span class="period">.</span></span><span class="space"> </span><span class="title">Matching Problem, Dates.</span>
-</h4>
-<div class="ptx-runestone-container"><div class="runestone matching_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="matching-dates">
-<span data-subcomponent="question"><div class="para" id="matching-dates-3-1">Match each type of (blank)-morphism with its definition</div></span><li data-subcomponent="draggable" id="matching-dates_drag1">epimorphism</li>
-<li data-subcomponent="dropzone" for="matching-dates_drag1">An onto homomorphism</li>
-<li data-subcomponent="draggable" id="matching-dates_drag2">monomorphism</li>
-<li data-subcomponent="dropzone" for="matching-dates_drag2">An into homomorphism</li>
-<li data-subcomponent="draggable" id="matching-dates_drag3">isomorphism</li>
-<li data-subcomponent="dropzone" for="matching-dates_drag3">An onto and into homomorphism</li>
-<li data-subcomponent="draggable" id="matching-dates_drag4">automorphism</li>
-<li data-subcomponent="dropzone" for="matching-dates_drag4">An isomorphism where codomain is domain</li>
-</ul></div></div></article></section></section></div>
-<div class="ptx-content-footer">
+<div class="autopermalink" data-description="Paragraph"><a href="#exers_homomorphisms-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.7.17"><a href="#exers_homomorphisms-18" title="Copy heading and permalink for Exercise 3.1.7.17" aria-label="Copy heading and permalink for Exercise 3.1.7.17">🔗</a></div></article><article class="exercise exercise-like" id="matching-dates"><h4 class="heading"><span class="codenumber">18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone cardsort_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="rs-matching-dates">
+<span data-subcomponent="question"><div class="para" id="matching-dates-1-1">Match each type of (blank)-morphism with its definition<div class="autopermalink" data-description="Paragraph"><a href="#matching-dates-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></span><li data-subcomponent="draggable" id="rs-matching-dates_drag1" data-category="1">epimorphism</li>
+<li data-subcomponent="dropzone" for="rs-matching-dates_drag1" data-category="1">An onto homomorphism</li>
+<li data-subcomponent="draggable" id="rs-matching-dates_drag2" data-category="2">monomorphism</li>
+<li data-subcomponent="dropzone" for="rs-matching-dates_drag2" data-category="2">An into homomorphism</li>
+<li data-subcomponent="draggable" id="rs-matching-dates_drag3" data-category="3">isomorphism</li>
+<li data-subcomponent="dropzone" for="rs-matching-dates_drag3" data-category="3">An onto and into homomorphism</li>
+<li data-subcomponent="draggable" id="rs-matching-dates_drag4" data-category="4">automorphism</li>
+<li data-subcomponent="dropzone" for="rs-matching-dates_drag4" data-category="4">An isomorphism where codomain is domain</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 3.1.7.18"><a href="#matching-dates" title="Copy heading and permalink for Exercise 3.1.7.18" aria-label="Copy heading and permalink for Exercise 3.1.7.18">🔗</a></div></article><div class="autopermalink" data-description="Exercises 3.1.7: Exercises"><a href="#exers_homomorphisms" title="Copy heading and permalink for Exercises 3.1.7: Exercises" aria-label="Copy heading and permalink for Exercises 3.1.7: Exercises">🔗</a></div></section><div class="autopermalink" data-description="Section 3.1: Homomorphisms"><a href="#sec_homomorphisms" title="Copy heading and permalink for Section 3.1: Homomorphisms" aria-label="Copy heading and permalink for Section 3.1: Homomorphisms">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch3-homomorphismsAndIdeals.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_ideals.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>

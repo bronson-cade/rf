@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Complex Numbers Form a Field.</span>
+</h4>
+<div class="para">The Complex Numbers <a href="sec_fields.html#def_complexNumbers" class="xref" data-knowl="./knowl/xref/def_complexNumbers.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.3">Definition 2.1.3</a> form a field under their usual multiplication and addition. The operations are well-defined and so now we need to check all ten axioms. We leave a handful of them to the reader as they are not necessarily difficult but they are tedious. Take <span class="process-math">\(a+bi, c+di, e+fi\in\C\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_complexAreField-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical">
+<div class="para">We leave the proof of associativity as an exercise, as well as the proof that the additive identity is <span class="process-math">\(0+0i\)</span> and the additive inverse of <span class="process-math">\(a+bi\)</span> is <span class="process-math">\((-a)+(-b)i\text{.}\)</span> We will prove that addition is commutative:</div>
+<div class="displaymath process-math">
+\begin{align*}
+(a+bi) + (c+di) \amp= (a+c) + (b+d)i \\
+(c+di) + (a+bi) \amp= (c+a) + (d+b)i \\
+\amp= (a+c) + (b+d)i
+\end{align*}
+</div>
+<div class="para">as <span class="process-math">\(a,b,c,d\in \R\)</span> and addition of real numbers is commutative.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_complexAreField-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical">
+<div class="para">We leave the proof of associativity as a worthy yet tedious exercise. We will prove the remaining axioms. For commutativity:</div>
+<div class="displaymath process-math">
+\begin{align*}
+(a+bi)\cdot(c+di) \amp= (ac-bd) + (ad+bc)i \\
+(c+di)\cdot (a+bi) \amp= (ca-db) + (cb+da)i \\
+\amp= (ac-bd) + (ad+bc)i 
+\end{align*}
+</div>
+<div class="para">where have used the multiplication of real numbers is commutative.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_complexAreField-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical">
+<div class="para">The multiplicative identity is <span class="process-math">\(1+0i\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a+bi)\cdot(1+0i) = (a\cdot 1-b\cdot 0) + (a\cdot 0 + b\cdot 1)i = a+bi
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_complexAreField-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical">
+<div class="para">The multiplicative inverse of a non-zero <span class="process-math">\(a+bi\)</span> is <span class="process-math">\(\frac{a}{a^2+b^2} + \frac{-b}{a^2+b^2}i\text{.}\)</span> Since <span class="process-math">\(a+bi\neq 0+0i\text{,}\)</span> <span class="process-math">\(a^2+b^2&gt;0\)</span> and so this complex number is well-defined. We leave it as an exercise to verify:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a+bi)\cdot \left(\frac{a}{a^2+b^2} + \frac{-b}{a^2+b^2}i\right) = 1 + 0i
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_complexAreField-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical">
+<div class="para">We’ve already seen an instance of the left-distributive property implying the right-distributive property. Since you will prove this in Exer???? we only show the left-distributive property:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp (a+bi)\cdot( (c+di) + (e+fi))\\
+\amp= (a+bi)\cdot( (c+e)+(d+f)i)\\
+\amp= (a(c+e)-b(d+f)) + (a(d+f)+b(c+e))i\\
+\amp= (ac+ae-bd-bf) + (ad+af+bc+be)i
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp (a+bi)\cdot (c+di) + (a+bi)\cdot (e+fi)\\
+\amp= ((ac-bd)+(ad+bc)i) + ((ae-bf) + (af+be)i)\\
+\amp= (ac-bd) + (ae-bf) + ( (ad+bc) + (af+be))i\\
+\amp= (ac+ae-bd-bf) + (ad+af+bc+be)i
+\end{align*}
+</div>
+<div class="para">These agree and completes the proof of the left-distributive property and that <span class="process-math">\(\C\)</span> is a field.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_complexAreField-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.1.7: Complex Numbers Form a Field"><a href="#ex_complexAreField" title="Copy heading and permalink for Example 2.1.7: Complex Numbers Form a Field" aria-label="Copy heading and permalink for Example 2.1.7: Complex Numbers Form a Field">🔗</a></div></article><span class="incontext"><a class="internal" href="sec_fields.html#ex_complexAreField">in-context</a></span>
+</body>
+</html>
